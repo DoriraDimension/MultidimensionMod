@@ -1,0 +1,17 @@
+The Multidimension Mod is a small content mod rn but will grow bigger as I gain experience and team members.
+
+Dimensions arent included yet but there are several planned that will be implemented in the future.
+
+The mod currently adds:
+
+- 44 Weapons
+- 18 Accessories
+- 10 Placeable furniture items
+- 12 Potions
+- 2 Pets
+- 11 Enemies
+- Some changes to vanilla enemy lootpools and recipes for normally not craftable items.
+
+I'm currently almost alone with my mod, I'm not really the best coder and have some bigger planned content,
+so if you are a coder, spriter or musician (preferred coder or music person) and you are interested in my work and want to help me, join my discord server
+Or just do it for news ig, lol.

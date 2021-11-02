@@ -1,0 +1,4 @@
+displayName = Multidimension Mod
+author = Dorira
+version = 0.5.1
+homepage = https://discord.gg/jWXCuJAMJM
