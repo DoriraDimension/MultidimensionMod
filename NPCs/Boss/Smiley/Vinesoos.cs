@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 //if you see base.velocity.Y += -7f that means theres a jump
 
-namespace namespace MultidimensionMod.NPCs.Boss.Smiley
+namespace MultidimensionMod.NPCs.Boss.Smiley
 
 {
 	[AutoloadBossHead]
