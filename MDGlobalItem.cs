@@ -1,7 +1,7 @@
 ﻿using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Items.Weapons.Meele.Boomerangs;
-using MultidimensionMod.Items.Weapons.Meele.Broadswords;
+using MultidimensionMod.Items.Weapons.Melee.Boomerangs;
+using MultidimensionMod.Items.Weapons.Melee.Swords;
 using MultidimensionMod.Items.Weapons.Magic.Guns;
 using MultidimensionMod.Items.Weapons.Ranged;
 using System;
@@ -20,6 +20,13 @@ namespace MultidimensionMod
 {
 	public class MDGlobalItem : GlobalItem
 	{
-
+		public override void SetDefaults(Item item)
+		{
+			Mod calamityMod = ModLoader.GetMod("CalamityMod");
+			if (calamityMod != null)
+			{
+				calamityMod.GetItem("GrandDad").DisplayName.AddTranslation(GameCulture.English, "Grand Daddy");
+			}
+		}
 	}
 }
