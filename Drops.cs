@@ -18,14 +18,12 @@ namespace MultidimensionMod
 
             if (npc.type == NPCID.KingSlime)
             {
-                Item.NewItem(npc.getRect(), ItemID.SlimeCrown);
                 if (Main.rand.NextFloat() < .3300f)
                     Item.NewItem(npc.getRect(), mod.ItemType("RoyalBelt"));
             }
 
             if (npc.type == NPCID.EyeofCthulhu)
             {
-                Item.NewItem(npc.getRect(), ItemID.SuspiciousLookingEye);
                 if (Main.rand.NextFloat() < .2500f)
                     Item.NewItem(npc.getRect(), mod.ItemType("EyeoftheNightwalker"));
                 if (Main.rand.NextFloat() < .2500f)
@@ -39,26 +37,8 @@ namespace MultidimensionMod
                     Item.NewItem(npc.getRect(), mod.ItemType("EyeoftheNightwalker"));
             }
 
-            if (npc.boss && System.Array.IndexOf(new int[] { NPCID.EaterofWorldsBody, NPCID.EaterofWorldsHead, NPCID.EaterofWorldsTail }, npc.type) > -1)
-            {
-                Item.NewItem(npc.getRect(), ItemID.WormFood);
-            }
-
-
-            if (npc.type == NPCID.BrainofCthulhu)
-            {
-                Item.NewItem(npc.getRect(), ItemID.BloodySpine);
-
-            }
-
-            if (npc.type == NPCID.QueenBee)
-            {
-                Item.NewItem(npc.getRect(), ItemID.Abeemination);
-            }
-
             if (npc.type == NPCID.SkeletronHead)
             {
-                Item.NewItem(npc.getRect(), ItemID.ClothierVoodooDoll);
                 if (Main.rand.NextFloat() < .0001f)
                     Item.NewItem(npc.getRect(), ItemID.BoneKey);
                 Item.NewItem(npc.getRect(), ItemID.Bone, Main.rand.Next(25, 36));
@@ -66,27 +46,15 @@ namespace MultidimensionMod
 
             if (npc.type == NPCID.WallofFlesh)
             {
-                Item.NewItem(npc.getRect(), ItemID.GuideVoodooDoll);
                 Item.NewItem(npc.getRect(), ItemID.FleshBlock, Main.rand.Next(40, 51));
             }
 
             if ((npc.type == NPCID.Retinazer && !NPC.AnyNPCs(NPCID.Spazmatism)) || (npc.type == NPCID.Spazmatism && !NPC.AnyNPCs(NPCID.Retinazer)))
             {
-                Item.NewItem(npc.getRect(), ItemID.MechanicalEye);
                 if (Main.rand.NextFloat() < .2500f)
                     Item.NewItem(npc.getRect(), mod.ItemType("Retilazor"));
                 if (Main.rand.NextFloat() < .2500f)
                     Item.NewItem(npc.getRect(), mod.ItemType("Spazmelter"));
-            }
-
-            if (npc.type == NPCID.TheDestroyer)
-            {
-                Item.NewItem(npc.getRect(), ItemID.MechanicalWorm);
-            }
-
-            if (npc.type == NPCID.SkeletronPrime)
-            {
-                Item.NewItem(npc.getRect(), ItemID.MechanicalSkull);
             }
 
             if (npc.type == NPCID.Plantera)
@@ -95,22 +63,11 @@ namespace MultidimensionMod
                     Item.NewItem(npc.getRect(), mod.ItemType("BlackRoseScarf"));
             }
 
-            if (npc.type == NPCID.Golem)
-            {
-                Item.NewItem(npc.getRect(), ItemID.LihzahrdPowerCell);
-            }
-
             if (npc.type == NPCID.DukeFishron)
             {
-                Item.NewItem(npc.getRect(), ItemID.TruffleWorm);
                 Item.NewItem(npc.getRect(), mod.ItemType("TidalQuartz"), Main.rand.Next(10, 16));
                 if (Main.rand.NextFloat() < .0300f)
                     Item.NewItem(npc.getRect(), mod.ItemType("TyphoonDragon"));
-            }
-
-            if (npc.type == NPCID.MoonLordCore)
-            {
-                Item.NewItem(npc.getRect(), ItemID.CelestialSigil);
             }
 
             if (npc.type == NPCID.MartianSaucerCore)
