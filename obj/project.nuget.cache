@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "d2cwc29iiQuFc6kIdpuav21f78SNTY0OtSJA3GBV3j+MImvvZu4P3Xu3KQKYTJvqDGA5jAqBrf2bnpY6V2YgRg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\23JFurniss-Roe\\GitHub\\MultidimensionMod\\MultidimensionMod.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\23JFurniss-Roe\\.nuget\\packages\\tmodloader.codeassist\\0.1.3\\tmodloader.codeassist.0.1.3.nupkg.sha512"
+  ],
+  "logs": []
+}
