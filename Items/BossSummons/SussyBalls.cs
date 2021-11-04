@@ -1,4 +1,4 @@
-﻿using ReplaceThisName;
+﻿using MultidimensionMod.NPCs.Boss.Smiley;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

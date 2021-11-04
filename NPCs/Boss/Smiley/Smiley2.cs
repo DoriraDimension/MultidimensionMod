@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using MultidimensionMod.Projectiles.Boss.Smiley;
 using System;
 using Terraria;
 using Terraria.ID;
