@@ -16,9 +16,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Omni Eye");
-			Tooltip.SetDefault("You... can... see. \nHighlights danger sources, enemies and treasures, also gives nightvision");
+			Tooltip.SetDefault("You... can... see. Beware not to get blinded by it's forbidden magic. \nHighlights danger sources, enemies and treasures, also gives nightvision");
 			DisplayName.AddTranslation(GameCulture.German, "Omni Auge");
-			Tooltip.AddTranslation(GameCulture.German, "Du... kannst... sehen. \nGefahrenquellen, Gegner und Schätze werden hervorgehoben, außerdem gibt es Nachtsicht.");
+			Tooltip.AddTranslation(GameCulture.German, "Du... kannst... sehen. Pass auf das du nicht von seiner verbotenen Magie geblendet wirst. \nGefahrenquellen, Gegner und Schätze werden hervorgehoben, außerdem gibt es Nachtsicht.");
 		}
 
 		public override void SetDefaults()
@@ -41,7 +41,7 @@ namespace MultidimensionMod.Items.Accessories
 
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			OmniRecipeFunny recipe = new OmniRecipeFunny(mod);
 			recipe.AddIngredient(ModContent.ItemType<EyeoftheExplorer>());
 			recipe.AddIngredient(ModContent.ItemType<EyeoftheHunter>());
 			recipe.AddIngredient(ModContent.ItemType<EyeoftheNightwalker>());
@@ -71,6 +71,19 @@ namespace MultidimensionMod.Items.Accessories
 				SpriteEffects.None,
 				0f
 			);
+		}
+	}
+
+	public class OmniRecipeFunny : ModRecipe
+    {
+		public OmniRecipeFunny(Mod mod) : base(mod)
+		{
+
+		}
+
+		public override void OnCraft(Item item)
+		{
+			Main.LocalPlayer.AddBuff(BuffID.Obstructed, 6000);
 		}
 	}
 }
