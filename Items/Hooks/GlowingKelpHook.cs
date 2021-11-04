@@ -84,7 +84,7 @@ namespace MultidimensionMod.Items.Hooks
 
 		public override void GrapplePullSpeed(Player player, ref float speed)
 		{
-			speed = 24;
+			speed = 10;
 		}
 
 		public override void GrappleTargetPoint(Player player, ref float grappleX, ref float grappleY)
