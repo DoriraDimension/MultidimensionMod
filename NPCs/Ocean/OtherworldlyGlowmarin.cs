@@ -29,7 +29,7 @@ namespace MultidimensionMod.NPCs.Ocean
 			npc.lifeMax = 350;
 			npc.HitSound = SoundID.NPCHit51;
 			npc.DeathSound = SoundID.NPCDeath1;
-			npc.value = 60f;
+			npc.value = Item.buyPrice(0, 0, 11);
 			npc.knockBackResist = 0.3f;
 			npc.aiStyle = 16;
 			aiType = NPCID.Shark;
