@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ReplaceThisName
+namespace MultidimensionMod.Projectiles.Boss.Smiley
 {
 
     public class Baller2 : ModProjectile

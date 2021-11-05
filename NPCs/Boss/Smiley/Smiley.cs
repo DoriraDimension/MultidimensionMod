@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using MultidimensionMod.Projectiles.Boss.Smiley;
 using System;
 using Terraria;
 using Terraria.ID;
@@ -7,12 +8,14 @@ using Terraria.ModLoader;
 //if you see base.velocity.Y += -7f that means theres a jump
 
 namespace MultidimensionMod.NPCs.Boss.Smiley
+
 {
 	[AutoloadBossHead]
 
-	public class Smiley2 : ModNPC
+	public class Smiley : ModNPC
 	{
 		Vector2 moveTo;
+		bool phase2 = false;
 		Vector2 dashPos;
 		bool animatedStart = false;
 		int charges = 0;
@@ -54,7 +57,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Smiley");
-			Main.npcFrameCount[npc.type] = 6;
+			Main.npcFrameCount[npc.type] = 11;
 		}
 
 		public override void SetDefaults()
@@ -65,8 +68,8 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 			npc.damage = 20;
 			npc.defense = 0;
 			npc.knockBackResist = 0f;
-			npc.dontTakeDamage = false;
-			npc.alpha = 0;
+			npc.dontTakeDamage = true;
+			npc.alpha = 255;
 			
 			npc.width = 88;
 			npc.height = 88;
@@ -76,7 +79,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 			npc.lavaImmune = true;
 			npc.noGravity = true;
 			npc.noTileCollide = true;
-			npc.HitSound = SoundID.NPCHit5;
+			npc.HitSound = (mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/smileHit").WithVolume(0.7f).WithPitchVariance(2f));
 			npc.DeathSound = SoundID.NPCDeath7;
 			music = MusicID.Boss2;
 		}
@@ -102,10 +105,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 			{
 				if (!animatedStart)
 				{
-					animatedStart = true;
-					bossMode = 0;
-					npc.life = npc.lifeMax / 2;
-					//bossMode = -1;
+					bossMode = -1;
 
 				}
 
@@ -118,7 +118,6 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 						npc.dontTakeDamage = true;
 						nextTimeStamp = bossTime + 120;
 						bossMode = 9;
-						Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/SmileLaugh").WithVolume(1.2f).WithPitchVariance(-1.9f));
 
 
 					}
@@ -137,6 +136,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 								npc.Center = player.Center + new Vector2(100, 600);
 
 							}
+							npc.alpha = 0;
 							charges = 1;
 
 						}
@@ -158,6 +158,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 							charges = 0;
 							bossMode = 0;
 							animatedStart = true;
+							npc.dontTakeDamage = false;
 						}
 
 					}
@@ -295,24 +296,47 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 
 					}
 				}
-                if (!phase1)
+                if (!phase1 && !phase2)
                 {
 				
 						npc.rotation *= 1.01f;
-						npc.velocity *= 0.97f;
+						npc.velocity *= 0.85f;
 					if(nextTimeStamp <= bossTime)
                     {
+						if(bossMode == 9)
+                        {
+							Vector2 center = npc.Center;
+							center.X -= 1;
+							npc.velocity *= 0;
+							npc.ai[3] = Projectile.NewProjectile(center, new Vector2(0, 0), ModContent.ProjectileType<Projectiles.Boss.Smiley.SmileyPhase2>(), 0, 0, 0);
+							npc.frame.Y = 90 * 7;
+							npc.alpha = 255;
+							bossMode = -5;
+						}
+						if (Main.projectile[(int)npc.ai[3]].ai[1] == 1)
+						{
+							phase2 = true;
 
-						for(int i = 0; i < 4; i++)
+
+						}
+						/*for(int i = 0; i < 4; i++)
                         {
 							//Gore.NewGore(npc.Center, Utils.RandomVector2(new Terraria.Utilities.UnifiedRandom(), 1, 10), mod.GetGoreSlot("Gores/P1gore"));
-						}
-						//NPC.NewNPC((int)npc.Center.X,(int)npc.Center.Y-1, ModContent.NPCType<Transition>());
-						npc.active = false;
+						}*/
 
-                    }
+
+					}
 
 				}
+				if (phase2)
+                {
+					bossMode = 0;
+					npc.dontTakeDamage = false;
+					npc.alpha = 0;
+					npc.rotation += 0.1f;
+					npc.velocity = player.velocity;
+					//Main.NewText("you're not ready for my SPIN MOVE");
+                }
 			}
 			else
 			{
@@ -335,7 +359,8 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 
 		public override bool CheckDead()
 		{
-			return true;
+			bossMode = 99;
+			return false;
 
 		}
 		public override bool PreNPCLoot()
@@ -363,22 +388,42 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 		public override void FindFrame(int frameHeight)
 		{
 
-            if (bossMode == 0 || bossMode == 1 || bossMode == 2)
+			if(bossMode == 5 || bossMode == -5)
             {
-				if (bossTime % 5 == 0)
+				npc.frame.Y = frameHeight * 7;
+			}
+            if (!phase2)
+            {
+				if (bossMode == 0 || bossMode == 1 || bossMode == 2)
+				{
+					if (bossTime % 5 == 0)
+					{
+						npc.frame.Y += frameHeight;
+						if (npc.frame.Y == frameHeight * 6)
+						{
+							npc.frame.Y = 0;
+
+						}
+
+					}
+				}
+				if (bossMode == -1)
+				{
+					npc.frame.Y = frameHeight * 3;
+				}
+			}
+            if (phase2)
+            {
+				if (bossTime % 10 == 0)
 				{
 					npc.frame.Y += frameHeight;
-					if (npc.frame.Y == frameHeight * 6)
+					if (npc.frame.Y == frameHeight * 11)
 					{
-						npc.frame.Y = 0;
+						npc.frame.Y = frameHeight*7;
 
 					}
 
 				}
-			}
-			if(bossMode == -1)
-            {
-				npc.frame.Y = frameHeight * 3;
 			}
 			
 			

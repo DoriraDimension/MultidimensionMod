@@ -1,4 +1,4 @@
-﻿using ReplaceThisName;
+﻿using MultidimensionMod.NPCs.Boss.Smiley;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -30,12 +30,12 @@ namespace MultidimensionMod.Items.BossSummons
 		// We use the CanUseItem hook to prevent a player from using this item while the boss is present in the world.
 		public override bool CanUseItem(Player player)
 		{
-			return !Main.dayTime && !NPC.AnyNPCs(ModContent.NPCType<Vinesoos>());
+			return !Main.dayTime && !NPC.AnyNPCs(ModContent.NPCType<Smiley>());
 		}
 
 		public override bool UseItem(Player player)
 		{
-			NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<Vinesoos>());
+			NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<Smiley>());
 			Main.PlaySound(SoundID.Roar, player.position, 0);
 			return true;
 		}

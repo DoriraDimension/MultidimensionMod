@@ -36,11 +36,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\23JFurniss-Roe\\GitHub\\MultidimensionMod\\MultidimensionMod.csproj",
+      "projectUniqueName": "C:\\Users\\REuser\\source\\repos\\steamapps\\common\\tModLoader\\My Games\\Terraria\\ModLoader\\Mod Sources\\MultidimensionMod\\MultidimensionMod.csproj",
       "projectName": "MultidimensionMod",
-      "projectPath": "C:\\Users\\23JFurniss-Roe\\GitHub\\MultidimensionMod\\MultidimensionMod.csproj",
+      "projectPath": "C:\\Users\\REuser\\source\\repos\\steamapps\\common\\tModLoader\\My Games\\Terraria\\ModLoader\\Mod Sources\\MultidimensionMod\\MultidimensionMod.csproj",
       "packagesPath": "C:\\Users\\23JFurniss-Roe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\23JFurniss-Roe\\GitHub\\MultidimensionMod\\obj\\",
+      "outputPath": "C:\\Users\\REuser\\source\\repos\\steamapps\\common\\tModLoader\\My Games\\Terraria\\ModLoader\\Mod Sources\\MultidimensionMod\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\23JFurniss-Roe\\AppData\\Roaming\\NuGet\\NuGet.Config",
