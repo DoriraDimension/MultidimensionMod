@@ -40,7 +40,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 		{
 			return player.ownedProjectileCounts[item.shoot] < 1;
 		}
-			public override void AddRecipes()
+
+		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.DemoniteBar, 15);
