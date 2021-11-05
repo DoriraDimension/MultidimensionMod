@@ -1,3 +1,4 @@
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
 displayName = Multidimension Mod
 author = Dorira
 version = 0.5.1
