@@ -7,14 +7,12 @@ using Terraria.ModLoader;
 
 namespace MultidimensionMod.Projectiles.Boss.Smiley
 {
-
-    public class Baller2 : ModProjectile
+    public class Baller4 : ModProjectile
     {
-        private int bounces;
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("SMILE!");
-            Main.projFrames[projectile.type] = 1; //This is an animated projectile
+            Main.projFrames[projectile.type] = 3; //This is an animated projectile
 
         }
         public override void SetDefaults()
@@ -25,7 +23,7 @@ namespace MultidimensionMod.Projectiles.Boss.Smiley
             projectile.penetrate = 5;                       //this is the projectile penetration
             projectile.hostile = true;
             projectile.magic = true;                        //this make the projectile do magic damage
-            projectile.tileCollide = true;                 //this make that the projectile does not go thru walls
+            projectile.tileCollide = false;                 //this make that the projectile does not go thru walls
             projectile.ignoreWater = false;
             projectile.light = 0.4f;    // projectile light
 
@@ -38,30 +36,11 @@ namespace MultidimensionMod.Projectiles.Boss.Smiley
 
                 Main.PlaySound(SoundID.Item93, projectile.position);
 
-                Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Clentaminator_Red, (float)((a.Next() % 100) / 100), (float)((a.Next() % 100) / 100), 0, default, 1.5f);   //spawns dust behind it, this is a spectral light blue dust. 15 is the dust, change that to what you want.
+                Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Blood, (float)((a.Next() % 100) / 100), (float)((a.Next() % 100) / 100), 0, default, 1.5f);   //spawns dust behind it, this is a spectral light blue dust. 15 is the dust, change that to what you want.
 
 
             }
 
-        }
-        public override bool OnTileCollide(Vector2 oldVelocity)
-        {
-            if (projectile.velocity.X != oldVelocity.X)
-            {
-                projectile.position.X = projectile.position.X + projectile.velocity.X;
-                projectile.velocity.X = -oldVelocity.X;
-            }
-            if (projectile.velocity.Y != oldVelocity.Y)
-            {
-                projectile.position.Y = projectile.position.Y + projectile.velocity.Y;
-                projectile.velocity.Y = -oldVelocity.Y;
-            }
-            bounces++;
-            if(bounces >6)
-            {
-                projectile.Kill();
-            }
-            return false; // return false because we are handling collision
         }
         public override void OnHitPlayer(Player target, int damage, bool crit)
         {
@@ -71,14 +50,12 @@ namespace MultidimensionMod.Projectiles.Boss.Smiley
 
         public override void AI()
         {
+            projectile.velocity *= 1.01f;
             projectile.spriteDirection = -1 * projectile.direction;
 
             //this is projectile dust
-            if (projectile.tileCollide)
-            {
-             //   projectile.velocity *= -1;
-            }
-            int DustID2 = Dust.NewDust(projectile.position + projectile.velocity, projectile.width, projectile.height, DustID.DungeonSpirit, projectile.velocity.X * -0.1f, projectile.velocity.Y * -0.1f, 0, default, 1.25f);   //spawns dust behind it, this is a spectral light blue dust lol
+
+            int DustID2 = Dust.NewDust(projectile.position + projectile.velocity, projectile.width, projectile.height, DustID.Clentaminator_Purple, projectile.velocity.X * -0.1f, projectile.velocity.Y * -0.1f, 0, default, 1.25f);   //spawns dust behind it, this is a spectral light blue dust lol
             Main.dust[DustID2].noGravity = true;
 
 
@@ -89,16 +66,19 @@ namespace MultidimensionMod.Projectiles.Boss.Smiley
             projectile.localAI[0] += 1f;
             //projectile.alpha = (int)projectile.localAI[0] * 2;
 
-            if (projectile.localAI[0] > 5 * 60f) //projectile time left before disappears
+            if (projectile.localAI[0] > 10 * 60f) //projectile time left before disappears
             {
 
                 projectile.Kill();
             }
             // Loop through the 20 animation frames, spending 15 ticks on each.
-            if (++projectile.frameCounter >= 30)
+            int frameSpeed = 16;
+            projectile.frameCounter++;
+            if (projectile.frameCounter >= frameSpeed)
             {
                 projectile.frameCounter = 0;
-                if (++projectile.frame >= 20)
+                projectile.frame++;
+                if (projectile.frame >= Main.projFrames[projectile.type])
                 {
                     projectile.frame = 0;
                 }
