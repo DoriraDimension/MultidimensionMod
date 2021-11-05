@@ -50,7 +50,7 @@ namespace MultidimensionMod.Items.Bags
 
 		public override void RightClick(Player player)
 		{
-			player.QuickSpawnItem(ItemID.CopperBroadsword);
+			player.QuickSpawnItem(ModContent.ItemType<WoodenBat>());
 			player.QuickSpawnItem(ItemID.CopperBow);
 			player.QuickSpawnItem(ItemID.WoodenArrow, 75);
 			player.QuickSpawnItem(ItemID.WandofSparking);
