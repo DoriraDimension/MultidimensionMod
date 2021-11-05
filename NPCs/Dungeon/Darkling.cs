@@ -28,7 +28,7 @@ namespace MultidimensionMod.NPCs.Dungeon
 			npc.lifeMax = 60;
 			npc.HitSound = SoundID.NPCHit54;
 			npc.DeathSound = SoundID.NPCDeath52;
-			npc.value = 60f;
+			npc.value = Item.buyPrice(0, 0, 1, 40);
 			npc.knockBackResist = 0.6f;
 			npc.aiStyle = 10;
 			aiType = NPCID.CursedSkull;
