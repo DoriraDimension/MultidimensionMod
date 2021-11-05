@@ -27,7 +27,7 @@ namespace MultidimensionMod.NPCs.Tundra
 			npc.lifeMax = 50;
 			npc.HitSound = SoundID.NPCHit1;
 			npc.DeathSound = SoundID.NPCDeath1;
-			npc.value = 60f;
+			npc.value = Item.buyPrice(0, 0, 0, 90);
 			npc.knockBackResist = 0.6f;
 			npc.aiStyle = 14;
 			aiType = NPCID.FlyingSnake;
