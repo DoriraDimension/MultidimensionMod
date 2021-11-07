@@ -69,6 +69,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
 			type = ModContent.ProjectileType<DestroyerDualLaser>();
+			return Shoot(player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
 		}
 	}
 }
