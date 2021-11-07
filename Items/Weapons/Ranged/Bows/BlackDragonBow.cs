@@ -12,9 +12,9 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 	public class BlackDragonBow : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Shoots a line of Hellfire arrows.\nFatalis, Fatalis, heaven and earth are yours.");
+			Tooltip.SetDefault("Fires a high damage Dragonpiercer.\nRight click to shoot a wide spread of flames to incinerate your enemies.\nFatalis, Fatalis, heaven and earth are yours.");
 			DisplayName.AddTranslation(GameCulture.German, "Schwarzer Drachen Bogen");
-			Tooltip.AddTranslation(GameCulture.German, "Verschießt eine Reihe von Höllenfeuer pfeilen. \nFatalis, Fatalis, heaven and earth are yours.");
+			Tooltip.AddTranslation(GameCulture.German, "Verschießt einen mächtigen Drachentöter pfeil.\nRechtsklicke um einen weiten Schwall aus Flammen zu schießen der deine Feinde einäschert.\nFatalis, Fatalis, heaven and earth are yours.");
 		}
 
 		public override void SetDefaults() {
@@ -88,56 +88,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 		{
 			if (player.altFunctionUse == 2)
             {
-                {
-					if (type == ProjectileID.WoodenArrowFriendly)
-					{
-						type = ModContent.ProjectileType<ShradesDemise>();
-					}
-					else if (type == ProjectileID.CursedArrow)
-                    {
-						type = ModContent.ProjectileType<ShradesDemise>();
-                    }
-					else if (type == ProjectileID.FlamingArrow)
-					{
-						type = ModContent.ProjectileType<ShradesDemise>();
-					}
-					else if (type == ProjectileID.UnholyArrow)
-					{
-						type = ModContent.ProjectileType<ShradesDemise>();
-					}
-					else if (type == ProjectileID.JestersArrow)
-					{
-						type = ModContent.ProjectileType<ShradesDemise>();
-					}
-					else if (type == ProjectileID.HellfireArrow)
-					{
-						type = ModContent.ProjectileType<ShradesDemise>();
-					}
-					else if (type == ProjectileID.HolyArrow)
-					{
-						type = ModContent.ProjectileType<ShradesDemise>();
-					}
-					else if (type == ProjectileID.FrostburnArrow)
-					{
-						type = ModContent.ProjectileType<ShradesDemise>();
-					}
-					else if (type == ProjectileID.ChlorophyteArrow)
-					{
-						type = ModContent.ProjectileType<ShradesDemise>();
-					}
-					else if (type == ProjectileID.IchorArrow)
-					{
-						type = ModContent.ProjectileType<ShradesDemise>();
-					}
-					else if (type == ProjectileID.VenomArrow)
-					{
-						type = ModContent.ProjectileType<ShradesDemise>();
-					}
-					else if (type == ProjectileID.BoneArrow)
-					{
-						type = ModContent.ProjectileType<ShradesDemise>();
-					}
-				}
+				type = ModContent.ProjectileType<ShradesDemise>();
 
 				Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 30f;
 				if (Collision.CanHit(position, 3, 3, position + muzzleOffset, -6, 6))
@@ -159,11 +110,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 			}
 			else
             {
-				if (type == ProjectileID.WoodenArrowFriendly)
-				{
-					type = ModContent.ProjectileType<Dragonpiercer>();
-				}
-				return true;
+				type = ModContent.ProjectileType<Dragonpiercer>();
 			}
 		}
 	}

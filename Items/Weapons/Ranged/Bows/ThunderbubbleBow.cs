@@ -41,55 +41,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
 			{
-				if (type == ProjectileID.WoodenArrowFriendly)
-				{
-					type = ModContent.ProjectileType<Thunderbubble>();
-				}
-				else if (type == ProjectileID.CursedArrow)
-				{
-					type = ModContent.ProjectileType<Thunderbubble>();
-				}
-				else if (type == ProjectileID.FlamingArrow)
-				{
-					type = ModContent.ProjectileType<Thunderbubble>();
-				}
-				else if (type == ProjectileID.UnholyArrow)
-				{
-					type = ModContent.ProjectileType<Thunderbubble>();
-				}
-				else if (type == ProjectileID.JestersArrow)
-				{
-					type = ModContent.ProjectileType<Thunderbubble>();
-				}
-				else if (type == ProjectileID.HellfireArrow)
-				{
-					type = ModContent.ProjectileType<Thunderbubble>();
-				}
-				else if (type == ProjectileID.HolyArrow)
-				{
-					type = ModContent.ProjectileType<Thunderbubble>();
-				}
-				else if (type == ProjectileID.FrostburnArrow)
-				{
-					type = ModContent.ProjectileType<Thunderbubble>();
-				}
-				else if (type == ProjectileID.ChlorophyteArrow)
-				{
-					type = ModContent.ProjectileType<Thunderbubble>();
-				}
-				else if (type == ProjectileID.IchorArrow)
-				{
-					type = ModContent.ProjectileType<Thunderbubble>();
-				}
-				else if (type == ProjectileID.VenomArrow)
-				{
-					type = ModContent.ProjectileType<Thunderbubble>();
-				}
-				else if (type == ProjectileID.BoneArrow)
-				{
-					type = ModContent.ProjectileType<Thunderbubble>();
-				}
-				return true;
+				type = ModContent.ProjectileType<Thunderbubble>();
 			}
 		}
 	}
