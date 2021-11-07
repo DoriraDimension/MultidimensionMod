@@ -105,13 +105,13 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 						Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))) * .2f;
 						Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
 					}
-					return Shoot(player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
+					return true;
 				}
 			}
 			else
             {
 				type = ModContent.ProjectileType<Dragonpiercer>();
-				return Shoot(player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
+				return true;
 			}
 		}
 	}
