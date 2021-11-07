@@ -13,9 +13,9 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Snipe Worm");
-			Tooltip.SetDefault("A sniper rifle that was restored from old relics, it has rotten skin around its metal.");
+			Tooltip.SetDefault("A sniper rifle that was restored from old relics, it has rotten skin around its metal.\nConverts normal bullets into Cursed Bullets.");
 			DisplayName.AddTranslation(GameCulture.German, "Snipe Wurm");
-			Tooltip.AddTranslation(GameCulture.German, "Ein Snipergewehr das aus alten Relikten restauriert wurde, es hat verottetes Fleisch um seine Metall.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein Snipergewehr das aus alten Relikten restauriert wurde, es hat verottetes Fleisch um seine Metall.\nKonvertiert normale Kugeln zu Verfluchten Kugeln.");
 		}
 
 		public override void SetDefaults()
