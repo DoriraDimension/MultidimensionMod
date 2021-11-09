@@ -34,7 +34,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Others
 			item.rare = -12;
 			item.UseSound = SoundID.Item23;
 			item.autoReuse = true;
-			//item.shoot = ModContent.ProjectileType<Projectiles.DataMinerProj>();
+			item.shoot = ModContent.ProjectileType<DataMinerProj>();
 			item.shootSpeed = 20f;
 			item.crit = 77;
 		}
