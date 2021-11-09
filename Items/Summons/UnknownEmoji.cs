@@ -44,7 +44,7 @@ namespace MultidimensionMod.Items.Summons
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 10);
-			recipe.AddTile(16);
+			recipe.AddTile(26);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
