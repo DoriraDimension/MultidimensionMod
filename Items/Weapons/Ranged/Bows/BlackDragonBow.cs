@@ -14,7 +14,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("Fires a high damage Dragonpiercer.\nRight click to shoot a wide spread of flames to incinerate your enemies.\nFatalis, Fatalis, heaven and earth are yours.");
 			DisplayName.AddTranslation(GameCulture.German, "Schwarzer Drachen Bogen");
-			Tooltip.AddTranslation(GameCulture.German, "Verschieﬂt einen m‰chtigen Drachentˆter pfeil.\nRechtsklicke um einen weiten Schwall aus Flammen zu schieﬂen der deine Feinde ein‰schert.\nFatalis, Fatalis, heaven and earth are yours.");
+			Tooltip.AddTranslation(GameCulture.German, "Verschie√üt einen m√§chtigen Drachent√∂ter pfeil.\nRechtsklicke um einen weiten Schwall aus Flammen zu schie√üen der deine Feinde ein√§schert.\nFatalis, Fatalis, heaven and earth are yours.");
 		}
 
 		public override void SetDefaults() {

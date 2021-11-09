@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wCVyV2ZlcDqfM1LkQ4q573rL95a4sgAax6B9fKTodRhFTdY7YuE9Be68d8+OShC/nWeAMy4a+lmaR28UE8hj0w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\REuser\\source\\repos\\steamapps\\common\\tModLoader\\My Games\\Terraria\\ModLoader\\Mod Sources\\MultidimensionMod\\MultidimensionMod.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\23JFurniss-Roe\\.nuget\\packages\\tmodloader.codeassist\\0.1.3\\tmodloader.codeassist.0.1.3.nupkg.sha512"
+  ],
+  "logs": []
+}
