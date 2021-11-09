@@ -39,7 +39,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
 		{
-			Texture2D texture = mod.GetTexture("Items/Weapons/Melee/Broadswords/OceanicGlowshard_Glow");
+			Texture2D texture = mod.GetTexture("Items/Weapons/Melee/Swords/OceanicGlowshard_Glow");
 			spriteBatch.Draw
 			(
 				texture,
