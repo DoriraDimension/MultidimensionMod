@@ -27,7 +27,7 @@ namespace MultidimensionMod.NPCs.Desert
 			npc.lifeMax = 210;
 			npc.HitSound = SoundID.NPCHit1;
 			npc.DeathSound = SoundID.NPCDeath1;
-			npc.value = 60f;
+			npc.value = Item.buyPrice(0, 0, 6, 25);
 			npc.knockBackResist = 0.5f;
 			npc.aiStyle = 3;
 			aiType = NPCID.Crab;

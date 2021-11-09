@@ -24,7 +24,7 @@ namespace MultidimensionMod.NPCs.Corruption
 			npc.lifeMax = 10;
 			npc.HitSound = SoundID.NPCHit1;
 			npc.DeathSound = SoundID.NPCDeath1;
-			npc.value = 60f;
+			npc.value = Item.buyPrice(0, 0, 0, 10);
 			npc.knockBackResist = 0.5f;
 			npc.aiStyle = 5;
 			aiType = NPCID.Bee;

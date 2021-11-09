@@ -4,13 +4,15 @@ using Terraria.ModLoader;
 
 namespace MultidimensionMod.Projectiles.Spears
 {
-	public class WingedNuisanceProj : ModProjectile
+	public class WingedAnnoyanceProj : ModProjectile
 	{
-		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Winged Nuisance");
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Winged Annoyance");
 		}
 
-		public override void SetDefaults() {
+		public override void SetDefaults()
+		{
 			projectile.width = 18;
 			projectile.height = 18;
 			projectile.aiStyle = 19;
@@ -34,7 +36,8 @@ namespace MultidimensionMod.Projectiles.Spears
 		}
 
 		// It appears that for this AI, only the ai0 field is used!
-		public override void AI() {
+		public override void AI()
+		{
 			// Since we access the owner player instance so much, it's useful to create a helper local variable for this
 			// Sadly, Projectile/ModProjectile does not have its own
 			Player projOwner = Main.player[projectile.owner];
@@ -46,7 +49,8 @@ namespace MultidimensionMod.Projectiles.Spears
 			projectile.position.X = ownerMountedCenter.X - (float)(projectile.width / 2);
 			projectile.position.Y = ownerMountedCenter.Y - (float)(projectile.height / 2);
 			// As long as the player isn't frozen, the spear can move
-			if (!projOwner.frozen) {
+			if (!projOwner.frozen)
+			{
 				if (movementFactor == 0f) // When initially thrown out, the ai0 will be 0f
 				{
 					movementFactor = 3f; // Make sure the spear moves forward when initially thrown out
@@ -64,14 +68,16 @@ namespace MultidimensionMod.Projectiles.Spears
 			// Change the spear position based off of the velocity and the movementFactor
 			projectile.position += projectile.velocity * movementFactor;
 			// When we reach the end of the animation, we can kill the spear projectile
-			if (projOwner.itemAnimation == 0) {
+			if (projOwner.itemAnimation == 0)
+			{
 				projectile.Kill();
 			}
 			// Apply proper rotation, with an offset of 135 degrees due to the sprite's rotation, notice the usage of MathHelper, use this class!
 			// MathHelper.ToRadians(xx degrees here)
 			projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(135f);
 			// Offset by 90 degrees here
-			if (projectile.spriteDirection == -1) {
+			if (projectile.spriteDirection == -1)
+			{
 				projectile.rotation -= MathHelper.ToRadians(90f);
 			}
 		}

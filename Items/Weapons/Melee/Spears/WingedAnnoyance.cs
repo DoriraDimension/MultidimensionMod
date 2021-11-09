@@ -6,16 +6,18 @@ using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Spears
 {
-	public class WingedNuisance : ModItem
+	public class WingedAnnoyance : ModItem
 	{
-		public override void SetStaticDefaults() {
+		public override void SetStaticDefaults()
+		{
 			Tooltip.SetDefault("Annoy your enemies until they go away.");
-			DisplayName.AddTranslation(GameCulture.German, "Geflügelte Nervensäge");
+			DisplayName.AddTranslation(GameCulture.German, "Geflügelte Belästigung");
 			Tooltip.AddTranslation(GameCulture.German, "Nerve deine gegner bis sie verschwinden");
 		}
 
-		public override void SetDefaults() {
-			item.damage = 9;
+		public override void SetDefaults()
+		{
+			item.damage = 10;
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.useAnimation = 33;
 			item.useTime = 33;
@@ -28,12 +30,12 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 			item.value = Item.sellPrice(silver: 2);
 
 			item.melee = true;
-			item.noMelee = true; 
-			item.noUseGraphic = true; 
-			item.autoReuse = false; 
+			item.noMelee = true;
+			item.noUseGraphic = true;
+			item.autoReuse = false;
 
 			item.UseSound = SoundID.Item1;
-			item.shoot = ModContent.ProjectileType<WingedNuisanceProj>();
+			item.shoot = ModContent.ProjectileType<WingedAnnoyanceProj>();
 		}
 
 		public override bool CanUseItem(Player player)
@@ -43,7 +45,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.IronBar, 15);
+			recipe.AddIngredient(ItemID.LeadBar, 15);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

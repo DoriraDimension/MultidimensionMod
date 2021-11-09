@@ -6,17 +6,18 @@ using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Spears
 {
-	public class GildedRejection : ModItem
+	public class ShiningRejection : ModItem
 	{
-		public override void SetStaticDefaults() 
+		public override void SetStaticDefaults()
 		{
 			Tooltip.SetDefault("Reject your enemies until they go away.");
-			DisplayName.AddTranslation(GameCulture.German, "Vergoldete Ablehnung");
+			DisplayName.AddTranslation(GameCulture.German, "Scheinende Ablehnung");
 			Tooltip.AddTranslation(GameCulture.German, "Lehne deine Gegner ab bis sie verschwinden.");
 		}
 
-		public override void SetDefaults() {
-			item.damage = 13;
+		public override void SetDefaults()
+		{
+			item.damage = 14;
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.useAnimation = 30;
 			item.useTime = 30;
@@ -28,11 +29,11 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 			item.rare = ItemRarityID.Blue;
 			item.value = Item.sellPrice(silver: 10);
 			item.melee = true;
-			item.noMelee = true; 
-			item.noUseGraphic = true; 
-			item.autoReuse = false; 
+			item.noMelee = true;
+			item.noUseGraphic = true;
+			item.autoReuse = false;
 			item.UseSound = SoundID.Item1;
-			item.shoot = ModContent.ProjectileType<GildedRejectionProj>();
+			item.shoot = ModContent.ProjectileType<ShiningRejectionProj>();
 		}
 
 		public override bool CanUseItem(Player player)
@@ -42,7 +43,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.GoldBar, 15);
+			recipe.AddIngredient(ItemID.PlatinumBar, 15);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -54,11 +54,11 @@ namespace MultidimensionMod.Projectiles.Spears
 				}
 				if (projOwner.itemAnimation < projOwner.itemAnimationMax / 3) // Somewhere along the item animation, make sure the spear moves back
 				{
-					movementFactor -= 2.4f;
+					movementFactor -= 1.3f;
 				}
 				else // Otherwise, increase the movement factor
 				{
-					movementFactor += 1.1f;
+					movementFactor += 0.7f;
 				}
 			}
 			// Change the spear position based off of the velocity and the movementFactor

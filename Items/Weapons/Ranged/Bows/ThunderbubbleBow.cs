@@ -42,6 +42,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 		{
 			{
 				type = ModContent.ProjectileType<Thunderbubble>();
+				return true;
 			}
 		}
 	}
