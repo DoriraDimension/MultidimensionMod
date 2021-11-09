@@ -1,6 +1,6 @@
 ﻿using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Items.Weapons.Meele.Broadswords;
+using MultidimensionMod.Items.Weapons.Meele.Swords;
 using MultidimensionMod.Items.Weapons.Magic.Guns;
 using MultidimensionMod.Items.Weapons.Ranged;
 using Terraria;
@@ -84,13 +84,13 @@ namespace MultidimensionMod
 
             if (npc.type == NPCID.FlyingFish)
             {
-                if (Main.rand.NextFloat() < .1500f)
+                if (Main.rand.NextFloat() < .0300f)
                     Item.NewItem(npc.getRect(), ItemID.ZephyrFish);
             }
 
             if (npc.type == NPCID.ZombieEskimo)
             {
-                if (Main.rand.NextFloat() < .2500f)
+                if (Main.rand.NextFloat() < .0400f)
                     Item.NewItem(npc.getRect(), ItemID.HandWarmer);
             }
 
@@ -104,7 +104,7 @@ namespace MultidimensionMod
             if (npc.type == NPCID.Shark)
             {
 
-                if (Main.rand.NextFloat() < .1000f)
+                if (Main.rand.NextFloat() < .0800f)
                     Item.NewItem(npc.getRect(), ItemID.SharkToothNecklace);
             }
 
@@ -356,7 +356,7 @@ namespace MultidimensionMod
             {
                 if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneRockLayerHeight)
                 {
-                    if (Main.rand.NextFloat() < .0500f)
+                    if (Main.rand.NextFloat() < .0400f)
                         Item.NewItem(npc.getRect(), mod.ItemType("Geode"));
                 }
             }
@@ -365,7 +365,7 @@ namespace MultidimensionMod
             {
                 if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneSnow)
                 {
-                    if (Main.rand.NextFloat() < .0500f)
+                    if (Main.rand.NextFloat() < .0400f)
                         Item.NewItem(npc.getRect(), mod.ItemType("FrozenGeode"));
                 }
             }
@@ -374,7 +374,7 @@ namespace MultidimensionMod
             {
                 if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneUnderworldHeight)
                 {
-                    if (Main.rand.NextFloat() < .0500f)
+                    if (Main.rand.NextFloat() < .0400f)
                         Item.NewItem(npc.getRect(), mod.ItemType("MagmaGeode"));
                 }
             }
@@ -383,7 +383,7 @@ namespace MultidimensionMod
             {
                 if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneRockLayerHeight)
                 {
-                    if (Main.rand.NextFloat() < .0500f)
+                    if (Main.rand.NextFloat() < .0400f)
                         Item.NewItem(npc.getRect(), mod.ItemType("OmniGeode"));
                 }
             }
@@ -392,7 +392,7 @@ namespace MultidimensionMod
             {
                 if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneDesert)
                 {
-                    if (Main.rand.NextFloat() < .0500f)
+                    if (Main.rand.NextFloat() < .0400f)
                         Item.NewItem(npc.getRect(), mod.ItemType("SandstoneGeode"));
                 }
             }
@@ -401,7 +401,7 @@ namespace MultidimensionMod
             {
                 if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneHoly)
                 {
-                    if (Main.rand.NextFloat() < .0500f)
+                    if (Main.rand.NextFloat() < .0400f)
                         Item.NewItem(npc.getRect(), mod.ItemType("FairyGeode"));
                 }
             }
@@ -410,7 +410,7 @@ namespace MultidimensionMod
             {
                 if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneCorrupt)
                 {
-                    if (Main.rand.NextFloat() < .0500f)
+                    if (Main.rand.NextFloat() < .0400f)
                         Item.NewItem(npc.getRect(), mod.ItemType("DecayGeode"));
                 }
             }
@@ -419,7 +419,7 @@ namespace MultidimensionMod
             {
                 if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneCrimson)
                 {
-                    if (Main.rand.NextFloat() < .0500f)
+                    if (Main.rand.NextFloat() < .0400f)
                         Item.NewItem(npc.getRect(), mod.ItemType("BloodGeode"));
                 }
             }
@@ -428,7 +428,7 @@ namespace MultidimensionMod
             {
                 if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneJungle)
                 {
-                    if (Main.rand.NextFloat() < .0500f)
+                    if (Main.rand.NextFloat() < .0400f)
                         Item.NewItem(npc.getRect(), mod.ItemType("MuddyGeode"));
                 }
 
