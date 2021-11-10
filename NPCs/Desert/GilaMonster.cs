@@ -1,4 +1,4 @@
-﻿using MultidimensionMod.Items.Banners;
+﻿using MultidimensionMod.Items.Placeables.Banners;
 using System;
 using Microsoft.Xna.Framework;
 using Terraria;

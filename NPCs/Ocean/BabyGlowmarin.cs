@@ -1,6 +1,7 @@
-﻿using MultidimensionMod.Items.Banners;
+﻿using MultidimensionMod.Items.Placeables.Banners;
 using MultidimensionMod.Items.Critters;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using Terraria;
 using Terraria.ID;
