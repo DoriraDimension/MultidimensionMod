@@ -11,7 +11,7 @@ namespace MultidimensionMod.Items.Summons
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Unknown Emoji");
-			Tooltip.SetDefault("A weird smiling pile of dark matter pulsing with energy.\nSummons Smiley.");
+			Tooltip.SetDefault("A weird smiling pile of dark matter pulsing with energy.\nSummons Smiley at night.");
 			ItemID.Sets.SortingPriorityBossSpawns[item.type] = 13;
 		}
 
