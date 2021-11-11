@@ -14,6 +14,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 
 	public class Smiley : ModNPC
 	{
+		int backupTimer = 0;
 		bool canDie = false;
 		int darkling;
 		int expertDarkling;
@@ -39,7 +40,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 			set => npc.ai[1] = value;
 		}
 		private void SmileyLoot()
-        {
+		{
 			for (int i = 0; i < 15; i++)
 			{
 				Item.NewItem(npc.getRect(), ItemID.Heart);
@@ -81,7 +82,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 			npc.knockBackResist = 0f;
 			npc.dontTakeDamage = true;
 			npc.alpha = 255;
-			
+
 			npc.width = 88;
 			npc.height = 88;
 			npc.value = Item.buyPrice(0, 10, 0, 0);
@@ -106,9 +107,9 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 			bossTime++;
 
 
-			
+
 			Vector2 desVel = new Vector2(0f, -0.05f);
-			
+
 			Player player = Main.player[npc.target];
 
 			//Main.NewText(bossTime,default,true);
@@ -117,7 +118,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 				if (!canDie)
 				{
 
-					
+
 
 
 
@@ -323,6 +324,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 							npc.velocity *= 0.85f;
 							if (nextTimeStamp <= bossTime)
 							{
+								backupTimer++;
 								if (bossMode == 9)
 								{
 									Vector2 center = npc.Center;
@@ -333,7 +335,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 									npc.alpha = 255;
 									bossMode = -5;
 								}
-								if (Main.projectile[(int)npc.ai[3]].ai[1] == 1)
+								if (Main.projectile[(int)npc.ai[3]].ai[1] == 1 || backupTimer >= 6 * 60)
 								{
 									phase2 = true;
 									npc.dontTakeDamage = false;
@@ -343,6 +345,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 
 
 									bossMode = 0;
+									backupTimer = 0;
 
 
 								}
@@ -499,8 +502,11 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 				}
 				else
 				{
-					if(bossMode == 56)
-                    {
+					backupTimer++;
+					if (bossMode == 56)
+					{
+						Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/SmileLaugh").WithVolume(1.2f).WithPitchVariance(3f));
+
 						Main.projectile[darkling].Kill();
 						if (Main.expertMode) Main.projectile[expertDarkling].Kill();
 						Vector2 center = npc.Center;
@@ -511,21 +517,20 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 						npc.alpha = 255;
 						bossMode = 57;
 					}
-					
 
-					if (Main.projectile[fuckYou].ai[1] == 1 && bossMode == 57)
+
+					if ((Main.projectile[fuckYou].ai[1] == 1 && bossMode == 57) || backupTimer >= 6 * 60)
 					{
-						Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/SmileLaugh").WithVolume(1.2f).WithPitchVariance(3f));
 
 						SmileyLoot();
-						
+
 						npc.active = false;
 						npc.life = 0;
-					
+
 					}
 				}
 			}
-               
+
 			else
 			{
 				if (!player.active || player.dead)
@@ -551,7 +556,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 			npc.dontTakeDamage = true;
 			npc.life = 1;
 			bossMode = 56;
-			
+
 			return false;
 
 		}
@@ -559,12 +564,12 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 		{
 			return true;
 		}
-        public override void BossLoot(ref string name, ref int potionType)
-        {
-            base.BossLoot(ref name, ref potionType);
-        }
+		public override void BossLoot(ref string name, ref int potionType)
+		{
+			base.BossLoot(ref name, ref potionType);
+		}
 
-        public override bool CanHitPlayer(Player target, ref int cooldownSlot)
+		public override bool CanHitPlayer(Player target, ref int cooldownSlot)
 		{
 
 			return true;
@@ -584,12 +589,12 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 		public override void FindFrame(int frameHeight)
 		{
 
-			if(bossMode == 5 || bossMode == -5)
-            {
+			if (bossMode == 5 || bossMode == -5)
+			{
 				npc.frame.Y = frameHeight * 7;
 			}
-            if (!phase2)
-            {
+			if (!phase2)
+			{
 				if (bossMode == 0 || bossMode == 1 || bossMode == 2)
 				{
 					if (bossTime % 5 == 0)
@@ -608,22 +613,22 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 					npc.frame.Y = frameHeight * 3;
 				}
 			}
-            if (phase2)
-            {
+			if (phase2)
+			{
 				if (bossTime % 10 == 0)
 				{
 					npc.frame.Y += frameHeight;
 					if (npc.frame.Y == frameHeight * 11)
 					{
-						npc.frame.Y = frameHeight*7;
+						npc.frame.Y = frameHeight * 7;
 
 					}
 
 				}
 			}
-			
-			
-			
+
+
+
 		}
 		public int GetDebuff()
 		{
