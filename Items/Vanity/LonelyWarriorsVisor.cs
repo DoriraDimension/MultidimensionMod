@@ -29,7 +29,6 @@ namespace MultidimensionMod.Items.Vanity
 		public override void DrawHair(ref bool drawHair, ref bool drawAltHair)
 		{
 			drawHair = true;
-			drawAltHair = true;
 		}
 	}
 }
