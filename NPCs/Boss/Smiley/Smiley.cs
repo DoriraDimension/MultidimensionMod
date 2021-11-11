@@ -46,6 +46,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 				Item.NewItem(npc.getRect(), ItemID.Heart);
 			}
 			Main.NewText("Smiley has been defeated!", Color.Purple);
+			Item.NewItem(npc.getRect(), ItemID.GoldCoin, 11);
 		}
 		private void shootTrackedProjAtPlayer(int type, int projAngle, float projSpeed, int damage, Vector2 position, Vector2 targetPosition, Player player)
 		{
