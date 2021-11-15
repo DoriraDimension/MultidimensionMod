@@ -12,9 +12,9 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Corpse Swarmer");
-			Tooltip.SetDefault("a");
+			Tooltip.SetDefault("Control the perfect swarm of rot loving flies.");
 			DisplayName.AddTranslation(GameCulture.German, "Leichenschwärmer");
-			Tooltip.AddTranslation(GameCulture.German, "a");
+			Tooltip.AddTranslation(GameCulture.German, "Kontrolliere den perfekten Schwarm, verwesungs liebender Fliegen.");
 		}
 
 		public override void SetDefaults()

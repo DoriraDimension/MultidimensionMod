@@ -21,12 +21,13 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			item.melee = true;
 			item.width = 86;
 			item.height = 86;
-			item.useTime = 26;
-			item.useAnimation = 26;
+			item.useTime = 30;
+			item.useAnimation =30;
 			item.useStyle = 1;
 			item.knockBack = 6;
 			item.value = Item.sellPrice(silver: 70);
 			item.rare = 4;
+			item.autoReuse = true;
 			item.UseSound = SoundID.Item1;
 			item.crit = 8;
 		}

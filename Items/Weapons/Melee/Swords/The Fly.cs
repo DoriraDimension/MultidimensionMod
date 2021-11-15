@@ -27,6 +27,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			item.melee = true;
 			item.value = Item.sellPrice(silver: 15);
 			item.rare = ItemRarityID.Green;
+			item.autoReuse = true;
 			item.UseSound = SoundID.Item1;
 
 		}
