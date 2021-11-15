@@ -27,6 +27,25 @@ namespace MultidimensionMod
 			{
 				calamityMod.GetItem("GrandDad").DisplayName.AddTranslation(GameCulture.English, "Grand Daddy");
 			}
+			if (item.type == ItemID.SpiritFlame)
+			{
+				item.UseSound = SoundID.Item103;
+			}
+
+			if (item.type == ItemID.NightsEdge)
+			{
+				item.autoReuse = true;
+			}
+
+			if (item.type == ItemID.TrueNightsEdge)
+			{
+				item.autoReuse = true;
+			}
+
+			if (item.type == ItemID.TrueExcalibur)
+			{
+				item.autoReuse = true;
+			}
 		}
 	}
 }
