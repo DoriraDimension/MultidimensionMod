@@ -21,7 +21,7 @@ namespace MultidimensionMod.Projectiles.Magic
 			projectile.width = 14;
 			projectile.height = 14;
 			projectile.friendly = true;
-			projectile.ranged = true;
+			projectile.magic = true;
 			projectile.ignoreWater = true;
 			projectile.tileCollide = true;
 		}
