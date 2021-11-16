@@ -19,5 +19,7 @@ namespace MultidimensionMod
 		public static Color Eleanora => new Color(247, 171, 18);
 
 		public static Color Dorira => new Color(18, 279, 247);
+
+		public static Color Souls => new Color(208, 122, 171);
 	}
 }
