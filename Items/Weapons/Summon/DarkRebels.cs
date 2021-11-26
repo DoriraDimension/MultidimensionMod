@@ -49,14 +49,5 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			position = Main.MouseWorld;
 			return true;
 		}
-
-		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 15);
-			recipe.AddTile(26);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-		}
 	}
 }
