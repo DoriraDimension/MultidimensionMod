@@ -42,14 +42,5 @@ namespace MultidimensionMod.Items.Placeables
 				}
 			}
 		}
-
-		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Furnace, 2);
-			recipe.AddIngredient(ModContent.ItemType<Dimensium>(), 10);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-		}
 	}
 }
