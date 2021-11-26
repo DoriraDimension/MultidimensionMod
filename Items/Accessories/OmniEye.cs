@@ -84,6 +84,8 @@ namespace MultidimensionMod.Items.Accessories
 		public override void OnCraft(Item item)
 		{
 			Main.LocalPlayer.AddBuff(BuffID.Obstructed, 6000);
+			Main.PlaySound(SoundID.DD2_EtherianPortalIdleLoop.WithVolume(3f), item.position);
+			Main.PlaySound(SoundID.DD2_BetsyDeath.WithVolume(3f), item.position);
 		}
 	}
 }
