@@ -30,5 +30,14 @@ namespace MultidimensionMod.Items.Accessories
 			player.endurance -= 1f;
 
 		}
+
+		public override void AddRecipes()
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(2);
+			recipe.AddTile(26);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
 	}
 }
