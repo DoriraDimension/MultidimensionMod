@@ -60,7 +60,6 @@ namespace MultidimensionMod.Items.Bags
 			player.QuickSpawnItem(ItemID.Torch, 30);
 			player.QuickSpawnItem(ItemID.RecallPotion, 5);
 			player.QuickSpawnItem(ModContent.ItemType<CalamityRing>());
-			player.QuickSpawnItem(ModContent.ItemType<Dimensium>(), 3);
 			switch (player.name)
 			{
 				case "Dorira":
