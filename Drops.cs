@@ -3,6 +3,7 @@ using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Weapons.Melee.Swords;
 using MultidimensionMod.Items.Weapons.Magic.Guns;
 using MultidimensionMod.Items.Weapons.Ranged;
+using MultidimensionMod.Items.Souls;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -232,6 +233,8 @@ namespace MultidimensionMod
             {
                 if (Main.rand.NextFloat() < .1000f)
                     Item.NewItem(npc.getRect(), mod.ItemType("KFC"));
+                if (Main.rand.NextFloat() < .0500f)
+                    Item.NewItem(npc.getRect(), mod.ItemType("DesertEagle"));
             }
 
             if (npc.type == NPCID.BoneSerpentHead && NPC.downedBoss3)
