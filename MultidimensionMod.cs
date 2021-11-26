@@ -9,10 +9,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Graphics;
 using Terraria;
+using Terraria.GameContent.Dyes;
+using Terraria.GameContent.UI;
+using Terraria.Graphics.Effects;
+using Terraria.Graphics.Shaders;
 using Terraria.ID;
-using Terraria.ModLoader;
 using Terraria.Localization;
+using Terraria.ModLoader;
+using Terraria.UI;
 
 namespace MultidimensionMod
 {
@@ -21,6 +28,8 @@ namespace MultidimensionMod
 		internal static MultidimensionMod Instance;
 
 		internal bool vanillaLoaded = true;
+
+		public static int DimensiumEuronen;
 
 		public override void AddRecipeGroups()
 		{
@@ -89,6 +98,11 @@ namespace MultidimensionMod
 			Recipes.AddAnkhCharmMatsRecipes(this);
 			Recipes.AddCellPhoneMatsRecipes(this);
 			Recipes.AddTransmutationRecipes(this);
+		}
+
+		public override void Load()
+		{
+			DimensiumEuronen = CustomCurrencyManager.RegisterCurrency(new MDCurrency(ModContent.ItemType<Dimensium>(), 999L));
 		}
 
 		private static void AddLoot(Mod bossChecklist, string bossName, List<int> loot = null, List<int> collection = null)
