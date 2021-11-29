@@ -10,7 +10,7 @@ using Terraria.Utilities;
 
 namespace MultidimensionMod.Items.Accessories
 {
-	[AutoloadEquip(EquipType.Shield)]
+	[AutoloadEquip(EquipType.Face)]
 	public class OmniEye : ModItem
 	{
 		public override void SetStaticDefaults()

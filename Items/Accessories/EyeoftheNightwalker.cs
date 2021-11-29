@@ -10,7 +10,7 @@ using MultidimensionMod.Items.Accessories;
 
 namespace MultidimensionMod.Items.Accessories
 {
-	[AutoloadEquip(EquipType.Shield)]
+	[AutoloadEquip(EquipType.Face)]
 	public class EyeoftheNightwalker : ModItem
 	{
 		public override void SetStaticDefaults()

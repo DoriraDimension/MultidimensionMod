@@ -6,7 +6,7 @@ using Terraria.Utilities;
 
 namespace MultidimensionMod.Items.Accessories
 {
-	[AutoloadEquip(EquipType.Shield)]
+	[AutoloadEquip(EquipType.Face)]
 	public class EyeofDesire : ModItem
 	{
 		public override void SetStaticDefaults()
