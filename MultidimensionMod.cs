@@ -1,9 +1,9 @@
 using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Materials;
-//using MultidimensionMod.Items.Weapons.Meele.Boomerangs;
-//using MultidimensionMod.Items.Weapons.Meele.Broadswords;
+using MultidimensionMod.Items.Weapons.Melee.Boomerangs;
+using MultidimensionMod.Items.Weapons.Melee.Swords;
 using MultidimensionMod.Items.Weapons.Magic.Guns;
-using MultidimensionMod.Items.Weapons.Ranged;
+using MultidimensionMod.Items.Weapons.Ranged.Flamethrowers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -135,7 +135,7 @@ namespace MultidimensionMod
 				{
 					ModContent.ItemType<EyeTendril>(),
 					ModContent.ItemType<EyeoftheNightwalker>(),
-					//ModContent.ItemType<Iris>()
+					ModContent.ItemType<Iris>()
 				});
 				MultidimensionMod.AddLoot(bossChecklist, "SkeletronHead", new List<int>
 				{
@@ -149,7 +149,7 @@ namespace MultidimensionMod
 				MultidimensionMod.AddLoot(bossChecklist, "TheTwins", new List<int>
 				{
 					ModContent.ItemType<Retilazor>(),
-					//ModContent.ItemType<Spazmelter>()
+					ModContent.ItemType<Spazmelter>()
 				});
 				MultidimensionMod.AddLoot(bossChecklist, "Plantera", new List<int>
 				{
@@ -158,11 +158,11 @@ namespace MultidimensionMod
 				MultidimensionMod.AddLoot(bossChecklist, "DukeFishron", new List<int>
 				{
 					ModContent.ItemType<TidalQuartz>(),
-					//ModContent.ItemType<TyphoonDragon>()
+					ModContent.ItemType<TyphoonDragon>()
 				});
 				MultidimensionMod.AddLoot(bossChecklist, "Solar Eclipse", new List<int>
 				{
-					//ModContent.ItemType<EclipseReaper>()
+					ModContent.ItemType<EclipseReaper>()
 				});
 				MultidimensionMod.AddLoot(bossChecklist, "Frost Moon", new List<int>
 				{
