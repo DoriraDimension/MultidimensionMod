@@ -22,8 +22,8 @@ namespace MultidimensionMod.NPCs.Ocean
 		public override void SetDefaults()
 		{
 			npc.CloneDefaults(NPCID.Shark);
-			npc.width = 80;
-			npc.height = 80;
+			npc.width = 134;
+			npc.height = 38;
 			npc.damage = 120;
 			npc.defense = 30;
 			npc.lifeMax = 350;
@@ -48,6 +48,11 @@ namespace MultidimensionMod.NPCs.Ocean
 			if (Main.rand.NextFloat() < .1500f)
             {
 				Item.NewItem(npc.getRect(), mod.ItemType("OceanicGlowshard"));
+			}
+
+			if (Main.rand.NextFloat() < .3500f)
+			{
+				Item.NewItem(npc.getRect(), mod.ItemType("Glowseed"));
 			}
 		}
 
