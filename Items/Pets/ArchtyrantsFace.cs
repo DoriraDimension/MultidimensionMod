@@ -27,16 +27,6 @@ namespace MultidimensionMod.Items.Pets
 			item.rare = ItemRarityID.Orange;
 		}
 
-		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.HellstoneBar, 10);
-			recipe.AddIngredient(ItemID.InfernoPotion);
-			recipe.AddTile(77);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-		}
-
 		public override void UseStyle(Player player)
 		{
 			if (player.whoAmI == Main.myPlayer && player.itemTime == 0)
