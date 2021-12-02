@@ -1,5 +1,15 @@
 ﻿using Microsoft.Xna.Framework;
 using MultidimensionMod.Projectiles.Boss.Smiley;
+using MultidimensionMod.Items.Vanity;
+using MultidimensionMod.Items.Bags;
+using MultidimensionMod.Items.Pets;
+using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Items.Placeables.Trophies;
+using MultidimensionMod.Items.Souls;
+using MultidimensionMod.Items.Weapons.Melee.Swords;
+using MultidimensionMod.Items.Weapons.Ranged.Guns;
+using MultidimensionMod.Items.Weapons.Magic.Other;
+using MultidimensionMod.Items.Weapons.Summon;
 using System;
 using Terraria;
 using Terraria.ID;
@@ -45,8 +55,51 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 			{
 				Item.NewItem(npc.getRect(), ItemID.Heart);
 			}
-			Main.NewText("Smiley has been defeated!", Color.Purple);
+			Main.NewText("Smiley has been defeated!", Color.Black);
 			Item.NewItem(npc.getRect(), ItemID.GoldCoin, 11);
+			Item.NewItem(npc.getRect(), ModContent.ItemType<DarkMatterClump>(), Main.rand.Next(15, 21));
+			Item.NewItem(npc.getRect(), ModContent.ItemType<SmileySoulshard>());
+			if (Main.expertMode)
+			{
+				npc.DropBossBags();
+			}
+			else
+			{
+				if (Main.rand.Next(7) == 0)
+				{
+					Item.NewItem(npc.getRect(), ModContent.ItemType<SmileyMask>());
+				}
+				if (Main.rand.Next(10) == 0)
+				{
+					Item.NewItem(npc.getRect(), ModContent.ItemType<SmileyTrophy>());
+				}
+				if (Main.rand.Next(10) == 0)
+				{
+					Item.NewItem(npc.getRect(), ModContent.ItemType<LonelyWarriorsVisor>());
+					Item.NewItem(npc.getRect(), ModContent.ItemType<DarkCloak>());
+				}
+				if (Main.rand.Next(8) == 0)
+				{
+					Item.NewItem(npc.getRect(), ModContent.ItemType<CuteEmoji>());
+				}
+				int choice = Main.rand.Next(4);
+				if (choice == 0)
+                {
+					Item.NewItem(npc.getRect(), ModContent.ItemType<LonelySword>());
+				}
+				if (choice == 1)
+				{
+					Item.NewItem(npc.getRect(), ModContent.ItemType<DarkMatterLauncher>());
+				}
+				if (choice == 2)
+				{
+					Item.NewItem(npc.getRect(), ModContent.ItemType<SmileySmile>());
+				}
+				if (choice == 3)
+				{
+					Item.NewItem(npc.getRect(), ModContent.ItemType<DarkRebels>());
+				}
+			}
 		}
 		private void shootTrackedProjAtPlayer(int type, int projAngle, float projSpeed, int damage, Vector2 position, Vector2 targetPosition, Player player)
 		{
@@ -95,6 +148,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 			npc.HitSound = (mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/smileHit").WithVolume(0.7f).WithPitchVariance(2f));
 			npc.DeathSound = SoundID.NPCDeath7;
 			music = MusicID.Boss2;
+			bossBag = ModContent.ItemType<SmileyBag>();
 		}
 
 		public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
