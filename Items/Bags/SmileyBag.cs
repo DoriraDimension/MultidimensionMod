@@ -7,6 +7,7 @@ using MultidimensionMod.Items.Vanity;
 using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Placeables.Trophies;
 using MultidimensionMod.Items.Pets;
+using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
@@ -39,77 +40,43 @@ namespace MultidimensionMod.Items.Bags
 
 		public override void OpenBossBag(Player player)
 		{
+			if (Main.rand.Next(7) == 0)
+			{
+				player.QuickSpawnItem(ModContent.ItemType<SmileyMask>());
+			}
+			if (Main.rand.Next(10) == 0)
+			{
+				player.QuickSpawnItem(ModContent.ItemType<SmileyTrophy>());
+			}
+			if (Main.rand.Next(10) == 0)
+			{
+				player.QuickSpawnItem(ModContent.ItemType<LonelyWarriorsVisor>());
+				player.QuickSpawnItem(ModContent.ItemType<DarkCloak>());
+			}
+			if (Main.rand.Next(8) == 0)
+			{
+				player.QuickSpawnItem(ModContent.ItemType<CuteEmoji>());
+			}
 			int choice = Main.rand.Next(4);
 			if (choice == 0)
 			{
 				player.QuickSpawnItem(ModContent.ItemType<LonelySword>());
-				if (Main.rand.NextFloat() < .0100f)
-				{
-					player.QuickSpawnItem(ModContent.ItemType<LonelyWarriorsVisor>());
-					player.QuickSpawnItem(ModContent.ItemType<DarkCloak>());
-				}
-				if (Main.rand.NextFloat() < .0140f)
-				{
-					player.QuickSpawnItem(ModContent.ItemType<SmileyMask>());
-				}
-				if (Main.rand.NextFloat() < .0080f)
-				{
-					player.QuickSpawnItem(ModContent.ItemType<CuteEmoji>());
-				}
 			}
-			else if (choice == 1)
+			if (choice == 1)
 			{
 				player.QuickSpawnItem(ModContent.ItemType<DarkMatterLauncher>());
-				if (Main.rand.NextFloat() < .0100f)
-				{
-					player.QuickSpawnItem(ModContent.ItemType<LonelyWarriorsVisor>());
-					player.QuickSpawnItem(ModContent.ItemType<DarkCloak>());
-				}
-				if (Main.rand.NextFloat() < .0140f)
-				{
-					player.QuickSpawnItem(ModContent.ItemType<SmileyMask>());
-				}
-				if (Main.rand.NextFloat() < .0080f)
-				{
-					player.QuickSpawnItem(ModContent.ItemType<CuteEmoji>());
-				}
 			}
-			else if (choice == 2)
+			if (choice == 2)
 			{
 				player.QuickSpawnItem(ModContent.ItemType<SmileySmile>());
-				if (Main.rand.NextFloat() < .0100f)
-				{
-					player.QuickSpawnItem(ModContent.ItemType<LonelyWarriorsVisor>());
-					player.QuickSpawnItem(ModContent.ItemType<DarkCloak>());
-				}
-				if (Main.rand.NextFloat() < .0140f)
-				{
-					player.QuickSpawnItem(ModContent.ItemType<SmileyMask>());
-				}
-				if (Main.rand.NextFloat() < .0080f)
-				{
-					player.QuickSpawnItem(ModContent.ItemType<CuteEmoji>());
-				}
 			}
-			else if (choice == 3)
+			if (choice == 3)
 			{
 				player.QuickSpawnItem(ModContent.ItemType<DarkRebels>());
-				if (Main.rand.NextFloat() < .0100f)
-				{
-					player.QuickSpawnItem(ModContent.ItemType<LonelyWarriorsVisor>());
-					player.QuickSpawnItem(ModContent.ItemType<DarkCloak>());
-				}
-				if (Main.rand.NextFloat() < .0140f)
-				{
-					player.QuickSpawnItem(ModContent.ItemType<SmileyMask>());
-				}
-				if (Main.rand.NextFloat() < .0080f)
-				{
-					player.QuickSpawnItem(ModContent.ItemType<CuteEmoji>());
-				}
 			}
 			player.QuickSpawnItem(ModContent.ItemType<DarkMatterClump>(), Main.rand.Next(20, 26));
 			player.QuickSpawnItem(ModContent.ItemType<ShadowEmoji>());
+			player.QuickSpawnItem(ModContent.ItemType<SmileySoulshard>());
 		}
 
 		public override int BossBagNPC => ModContent.NPCType<Smiley>();
