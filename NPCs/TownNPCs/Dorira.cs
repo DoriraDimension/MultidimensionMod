@@ -1,5 +1,8 @@
 ﻿using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Placeables;
+using MultidimensionMod.Items.Pets;
+using MultidimensionMod.Items.Summons;
+using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Weapons.Melee.Others;
 using MultidimensionMod.Projectiles.Ranged;
 using System;
@@ -75,34 +78,57 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
 		public override string GetChat()
 		{
-			int partyGirl = NPC.FindFirstNPC(NPCID.PartyGirl);
-			if (partyGirl >= 0 && Main.rand.NextBool(4))
+			int Gobfuck = NPC.FindFirstNPC(NPCID.GoblinTinkerer);
+			if (Gobfuck >= 0 && Main.rand.NextBool(4))
 			{
-				return "Can you please tell " + Main.npc[partyGirl].GivenName + " to stop decorating my house with colors?";
+				return "I came to this dimension because I heard of dimensional anomalies and " + Main.npc[Gobfuck].GivenName + "'s money sucking service is DEFINETILY one";
 			}
 			int merchant = NPC.FindFirstNPC(NPCID.Merchant);
 			if (merchant >= 0 && Main.rand.NextBool(4))
 			{
 				return "I bought one of " + Main.npc[merchant].GivenName + " 's dirt blocks, can you tell him that it doesnt work";
 			}
-			if (Main.dayTime)
-            {
-				return "Birds are singing, flowers are blooming, on days like these... I should stop with this phylosophy crap.";
+			int BoomBoomMan = NPC.FindFirstNPC(NPCID.Demolitionist);
+			if (BoomBoomMan >= 0 && Main.rand.NextBool(4))
+			{
+				return "When I go monster hunting, I will always buy " + Main.npc[BoomBoomMan].GivenName + "'s explosives from now on. Why I need bombs for hunting? *Insane stare*";
 			}
-			if (!Main.dayTime)
+			int PewPew = NPC.FindFirstNPC(NPCID.ArmsDealer);
+			if (PewPew >= 0 && Main.rand.NextBool(4))
+			{
+				return "Just between us two, but I think " + Main.npc[PewPew].GivenName + " is selling illegal stuff. AMAZING";
+			}
+			if (Main.dayTime)
 			{
 				switch (Main.rand.Next(4))
 				{
 					case 0:
+						return "Birds are singing, flowers are blooming, on days like these... I should stop with this phylosophy crap.";
+					case 1:
+						return "When you are going to the underworld dont run into a wall.";
+					case 2:
+						return "I wonder when the others will arrive.";
+					case 3:
+						return "serglhw3o85zhp35ognpügdmfghödfdlhgftzjmdzinhwüß046ihn";
+
+				}
+			}
+			if (!Main.dayTime)
+			{
+				switch (Main.rand.Next(6))
+				{
+					case 0:
 						return "Are you sleeping at night? I'm not, my motivation is fired up in the night.";
 					case 1:
-						return "Why are there zombies at night? Where are they come from? And why do they knock on my door? I DONT WANT TO BUY ANYTHING";
+						return "Why are there zombies at night? Where do they come from? And why do they knock on my door? I DONT WANT TO BUY ANYTHING";
 					case 2:
-						{
-							return "*Glares creepily*";
-						}
-					default:
-						return "What?";
+						return "*Glares creepily*";
+					case 3:
+						return "When you are going to the underworld dont run into a wall.";
+					case 4:
+						return "I wonder when the others will arrive.";
+					case 5:
+						return "serglhw3o85zhp35ognpügdmfghödfdlhgftzjmdzinhwüß046ihn";
 				}
 			}
 			switch (Main.rand.Next(4))
@@ -139,6 +165,27 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			shop.item[nextSlot].shopCustomPrice = 10;
 			shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
 			nextSlot++;
+			if (NPC.downedBoss3)
+            {
+				shop.item[nextSlot].SetDefaults(ModContent.ItemType<ArchtyrantsFace>());
+				shop.item[nextSlot].shopCustomPrice = 15;
+				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
+				nextSlot++;
+			}
+			if (Main.hardMode)
+            {
+				shop.item[nextSlot].SetDefaults(ModContent.ItemType<UnknownEmoji>());
+				shop.item[nextSlot].shopCustomPrice = 5;
+				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
+				nextSlot++;
+			}
+			if (NPC.downedPlantBoss)
+			{
+				shop.item[nextSlot].SetDefaults(ModContent.ItemType<CheliaPlushiePlaceable>());
+				shop.item[nextSlot].shopCustomPrice = 16;
+				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
+				nextSlot++;
+			}
 			if (NPC.downedMoonlord)
 			{
 				shop.item[nextSlot].SetDefaults(ModContent.ItemType<DataMiner>());
@@ -151,9 +198,12 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		public override void NPCLoot()
 		{
 			Item.NewItem(npc.getRect(), ModContent.ItemType<DataMiner>());
+			Item.NewItem(npc.getRect(), ModContent.ItemType<EleanoraBodypillow>());
+			Item.NewItem(npc.getRect(), ModContent.ItemType<EleanoraPlushie>());
+			Item.NewItem(npc.getRect(), ModContent.ItemType<EleanoraPlushiePlaceable>());
+			Item.NewItem(npc.getRect(), ModContent.ItemType<October1Item>());
 		}
 
-		// Make this Town NPC teleport to the King and/or Queen statue when triggered.
 		public override bool CanGoToStatue(bool toKingStatue)
 		{
 			return false;
