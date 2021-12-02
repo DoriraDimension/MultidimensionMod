@@ -139,6 +139,16 @@ namespace MultidimensionMod
 					nextSlot++;
 				}
 			}
+
+			if (type == NPCID.Cyborg)
+			{
+				if (NPC.downedMartians && ModContent.GetInstance<MDConfig>().DisableNPCItemSelling)
+				{
+					shop.item[nextSlot].SetDefaults(ModContent.ItemType<MartianCellphone>());
+					shop.item[nextSlot].shopCustomPrice = Item.buyPrice(0, 12);
+					nextSlot++;
+				}
+			}
 		}
 	}
 }	
