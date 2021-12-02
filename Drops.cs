@@ -21,6 +21,7 @@ namespace MultidimensionMod
             {
                 if (Main.rand.NextFloat() < .3300f)
                     Item.NewItem(npc.getRect(), mod.ItemType("RoyalBelt"));
+                Item.NewItem(npc.getRect(), mod.ItemType("KingSlimeSoul"));
             }
 
             if (npc.type == NPCID.EyeofCthulhu)
