@@ -23,7 +23,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
 			item.shootSpeed *= 0.75f;
 			item.width = 26;
 			item.height = 26;
-			item.damage = 18;
+			item.damage = 21;
 			item.useTime = 25;
 			item.useAnimation = 25;
 			item.value = Item.sellPrice(silver: 25);
