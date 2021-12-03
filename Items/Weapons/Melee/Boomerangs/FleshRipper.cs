@@ -25,7 +25,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
 			item.shootSpeed *= 2f;
 			item.width = 30;
 			item.height = 42;
-			item.damage = 37;
+			item.damage = 29;
 			item.value = Item.sellPrice(silver: 25);
 			item.rare = ItemRarityID.Green;
 		}
