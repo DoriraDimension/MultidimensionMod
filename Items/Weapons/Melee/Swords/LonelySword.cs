@@ -21,7 +21,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void SetDefaults()
 		{
-			item.damage = 38;
+			item.damage = 32;
 			item.melee = true;
 			item.width = 46;
 			item.height = 46;
