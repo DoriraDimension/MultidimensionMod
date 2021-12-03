@@ -21,7 +21,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void SetDefaults()
 		{
 			item.CloneDefaults(ItemID.EnchantedSword);
-			item.damage = 65;
+			item.damage = 71;
 			item.melee = true;
 			item.width = 70;
 			item.height = 70;
