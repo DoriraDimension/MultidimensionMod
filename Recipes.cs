@@ -580,7 +580,7 @@ namespace MultidimensionMod
 			recipe = new ModRecipe(mod); //Heart Crystal
 			recipe.AddIngredient(1134);
 			recipe.AddIngredient(178, 2);
-			recipe.AddRecipeGroup("EvilSample", 3);
+			recipe.AddIngredient(ModContent.ItemType<Mushmatter>(), 3);
 			recipe.AddTile(16);
 			recipe.SetResult(29);
 			recipe.AddRecipe();
