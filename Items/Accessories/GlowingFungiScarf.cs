@@ -31,7 +31,7 @@ namespace MultidimensionMod.Items.Accessories
 		    if (player.ZoneGlowshroom && Main.hardMode)
 			{
 				player.statLifeMax2 += 25;
-				player.endurance += 5f;
+				player.endurance += 0.05f;
 			}
 			else if (player.ZoneGlowshroom)
             {
