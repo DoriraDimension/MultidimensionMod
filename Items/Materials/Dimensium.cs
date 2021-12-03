@@ -12,7 +12,7 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dimensuim");
+			DisplayName.SetDefault("Dimensium");
 			Tooltip.SetDefault("The most common dimensional energy in form of a crystal, mostly found when a being crosses the dimensional wall through an unstable rift.\nA certain dimensional traveler might want this.");
 			DisplayName.AddTranslation(GameCulture.German, "Dimensium");
 			Tooltip.AddTranslation(GameCulture.German, "Die häufigste dimensionale Energie in Form eines Kristalls, meisten gefunden wenn ein Wesen die Dimensionswand durch einen instabilen Riss durchquert.\nEin bestimmter dimensionaler Reisender möchte das vielleicht haben.");
