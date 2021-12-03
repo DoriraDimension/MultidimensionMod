@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using MultidimensionMod.Items.Materials;
+using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -39,10 +40,10 @@ namespace MultidimensionMod.Items.ToolsEnviromentChange
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.SoulofLight, 10);
-			recipe.AddIngredient(ItemID.Daybloom, 2);
-			recipe.AddIngredient(ItemID.PixieDust, 10);
-			recipe.AddTile(134);
+			recipe.AddIngredient(ModContent.ItemType<ManaInfusedSandstone>(), 8);
+			recipe.AddIngredient(ItemID.Daybloom, 3);
+			recipe.AddRecipeGroup("EvilSample", 6);
+			recipe.AddTile(16);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

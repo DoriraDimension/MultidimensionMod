@@ -1,4 +1,6 @@
-﻿using Terraria;
+﻿using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Tiles;
+using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -45,9 +47,12 @@ namespace MultidimensionMod.Items.ToolsEnviromentChange
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ModContent.ItemType<SunlightButterfly>());
 			recipe.AddIngredient(ModContent.ItemType<MoonlightMoth>());
+			recipe.AddIngredient(ItemID.SoulofLight, 5);
+			recipe.AddIngredient(ItemID.SoulofNight, 5);
 			recipe.AddIngredient(ItemID.AncientBattleArmorMaterial);
 			recipe.AddIngredient(ItemID.FrostCore);
-			recipe.AddTile(134);
+			recipe.AddIngredient(ModContent.ItemType<Dimensium>(), 6);
+			recipe.AddTile(ModContent.TileType<DimensionalForge>());
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

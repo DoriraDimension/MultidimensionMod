@@ -40,10 +40,10 @@ namespace MultidimensionMod.Items.ToolsEnviromentChange
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.SoulofNight, 10);
-			recipe.AddIngredient(ItemID.Moonglow, 2);
-			recipe.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 10);
-			recipe.AddTile(134);
+			recipe.AddIngredient(ModContent.ItemType<FrostScale>(), 8);
+			recipe.AddIngredient(ItemID.Moonglow, 3);
+			recipe.AddRecipeGroup("EvilSample", 6);
+			recipe.AddTile(16);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
