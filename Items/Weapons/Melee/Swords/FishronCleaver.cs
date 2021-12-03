@@ -23,8 +23,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			item.melee = true;
 			item.width = 98;
 			item.height = 94;
-			item.useTime = 24;
-			item.useAnimation = 24;
+			item.useTime = 28;
+			item.useAnimation = 28;
 			item.useStyle = 1;
 			item.knockBack = 6;
 			item.value = Item.sellPrice(gold: 2);
