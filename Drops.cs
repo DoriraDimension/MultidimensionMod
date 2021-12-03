@@ -469,6 +469,15 @@ namespace MultidimensionMod
                         Item.NewItem(npc.getRect(), mod.ItemType("BrokenAncientDepictionItem"));
                 }
             }
+
+            if (NPC.downedBoss1 && !npc.boss && npc.lifeMax > 1 && npc.damage > 0 && !npc.friendly)
+            {
+                if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneGlowshroom)
+                {
+                    if (Main.rand.NextFloat() < .5000f)
+                        Item.NewItem(npc.getRect(), mod.ItemType("Mushmatter"));
+                }
+            }
         }
     }
 }
