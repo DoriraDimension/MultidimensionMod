@@ -165,6 +165,10 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			shop.item[nextSlot].shopCustomPrice = 10;
 			shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
 			nextSlot++;
+			shop.item[nextSlot].SetDefaults(ModContent.ItemType<BaitLeaf>());
+			shop.item[nextSlot].shopCustomPrice = 7;
+			shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
+			nextSlot++;
 			if (NPC.downedBoss3)
             {
 				shop.item[nextSlot].SetDefaults(ModContent.ItemType<ArchtyrantsFace>());
@@ -175,7 +179,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			if (Main.hardMode)
             {
 				shop.item[nextSlot].SetDefaults(ModContent.ItemType<UnknownEmoji>());
-				shop.item[nextSlot].shopCustomPrice = 5;
+				shop.item[nextSlot].shopCustomPrice = 3;
 				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
 				nextSlot++;
 			}
