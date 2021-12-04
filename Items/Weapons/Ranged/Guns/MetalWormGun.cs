@@ -25,8 +25,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			item.ranged = true;
 			item.width = 68;
 			item.height = 22;
-			item.useTime = 42;
-			item.useAnimation = 42;
+			item.useTime = 47;
+			item.useAnimation = 47;
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.knockBack = 4;

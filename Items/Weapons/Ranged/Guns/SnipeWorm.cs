@@ -20,12 +20,12 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 
 		public override void SetDefaults()
 		{
-			item.damage = 54;
+			item.damage = 43;
 			item.ranged = true;
 			item.width = 64;
 			item.height = 22;
-			item.useTime = 46;
-			item.useAnimation = 46;
+			item.useTime = 52;
+			item.useAnimation = 52;
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.knockBack = 4;
