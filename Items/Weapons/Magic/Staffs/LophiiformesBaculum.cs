@@ -25,7 +25,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 		{
 			item.damage = 76;
 			item.magic = true;
-			item.mana = 20;
+			item.mana = 16;
 			item.width = 52;
 			item.height = 52;
 			item.useTime = 32;
