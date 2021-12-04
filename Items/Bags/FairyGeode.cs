@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using MultidimensionMod.Items.Accessories;
+using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -30,7 +31,7 @@ namespace MultidimensionMod.Items.Bags
 
 		public override void RightClick(Player player)
 		{
-			int choice = Main.rand.Next(2);
+			int choice = Main.rand.Next(3);
 			if (choice == 0)
 			{
 				player.QuickSpawnItem(ItemID.CrystalShard, 15);
@@ -38,6 +39,10 @@ namespace MultidimensionMod.Items.Bags
 			else if (choice == 1)
 			{
 				player.QuickSpawnItem(ItemID.PearlstoneBlock, 50);
+			}
+			else if (choice == 2)
+			{
+				player.QuickSpawnItem(ModContent.ItemType<MysticStone>());
 			}
 		}
 	}
