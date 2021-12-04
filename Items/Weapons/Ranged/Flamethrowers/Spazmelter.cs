@@ -16,7 +16,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 
 		public override void SetDefaults()
 		{
-			item.damage = 68; 
+			item.damage = 46; 
 			item.ranged = true;
 			item.width = 42;
 			item.height = 26;
