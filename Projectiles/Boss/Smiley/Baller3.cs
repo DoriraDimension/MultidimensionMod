@@ -39,7 +39,7 @@ namespace MultidimensionMod.Projectiles.Boss.Smiley
 
                 Main.PlaySound(SoundID.Item93, projectile.position);
 
-                Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Clentaminator_Red, (float)((a.Next() % 100) / 100), (float)((a.Next() % 100) / 100), 0, default, 1.5f);   //spawns dust behind it, this is a spectral light blue dust. 15 is the dust, change that to what you want.
+                Dust.NewDust(projectile.position, projectile.width, projectile.height, 114, (float)((a.Next() % 100) / 100), (float)((a.Next() % 100) / 100), 0, default, 1.5f);   //spawns dust behind it, this is a spectral light blue dust. 15 is the dust, change that to what you want.
 
 
             }
@@ -85,7 +85,7 @@ namespace MultidimensionMod.Projectiles.Boss.Smiley
             {
                 //   projectile.velocity *= -1;
             }
-            int DustID2 = Dust.NewDust(projectile.position + projectile.velocity, projectile.width, projectile.height, DustID.DungeonSpirit, projectile.velocity.X * -0.1f, projectile.velocity.Y * -0.1f, 0, default, 1.25f);   //spawns dust behind it, this is a spectral light blue dust lol
+            int DustID2 = Dust.NewDust(projectile.position + projectile.velocity, projectile.width, projectile.height, 118, projectile.velocity.X * -0.1f, projectile.velocity.Y * -0.1f, 0, default, 1.25f);   //spawns dust behind it, this is a spectral light blue dust lol
             Main.dust[DustID2].noGravity = true;
 
 
@@ -96,7 +96,7 @@ namespace MultidimensionMod.Projectiles.Boss.Smiley
             projectile.localAI[0] += 1f;
             //projectile.alpha = (int)projectile.localAI[0] * 2;
 
-            if (projectile.localAI[0] > 10 * 60f) //projectile time left before disappears
+            if (projectile.localAI[0] > 6 * 60f) //projectile time left before disappears
             {
 
                 projectile.Kill();
