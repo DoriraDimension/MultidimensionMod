@@ -4,6 +4,8 @@ using MultidimensionMod.Items.Pets;
 using MultidimensionMod.Items.Summons;
 using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Weapons.Melee.Others;
+using MultidimensionMod.Items.Weapons.Melee.Swords;
+using MultidimensionMod.Items;
 using MultidimensionMod.Projectiles.Ranged;
 using System;
 using Microsoft.Xna.Framework;
@@ -194,6 +196,13 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			{
 				shop.item[nextSlot].SetDefaults(ModContent.ItemType<DataMiner>());
 				shop.item[nextSlot].shopCustomPrice = 40;
+				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
+				nextSlot++;
+			}
+			if (Main.LocalPlayer.HasItem(ModContent.ItemType<Shinorian>()) && Main.LocalPlayer.HasItem(ModContent.ItemType<ArchtyrantsFace>()) && !Main.dayTime)
+			{
+				shop.item[nextSlot].SetDefaults(ModContent.ItemType<WeirdStone>());
+				shop.item[nextSlot].shopCustomPrice = 100;
 				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
 				nextSlot++;
 			}
