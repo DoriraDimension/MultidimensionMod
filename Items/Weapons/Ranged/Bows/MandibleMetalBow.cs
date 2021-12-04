@@ -19,7 +19,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 
 		public override void SetDefaults()
 		{
-			item.damage = 30;
+			item.damage = 19;
 			item.ranged = true;
 			item.width = 22;
 			item.height = 38;
