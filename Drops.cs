@@ -31,6 +31,7 @@ namespace MultidimensionMod
                 if (Main.rand.NextFloat() < .2500f)
                     Item.NewItem(npc.getRect(), mod.ItemType("Iris"));
                 Item.NewItem(npc.getRect(), mod.ItemType("EyeTendril"), Main.rand.Next(3, 6));
+                Item.NewItem(npc.getRect(), mod.ItemType("EyeSoul"));
             }
 
             if (npc.type == NPCID.ServantofCthulhu)
