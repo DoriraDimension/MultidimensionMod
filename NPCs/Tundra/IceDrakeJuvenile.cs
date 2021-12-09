@@ -45,7 +45,7 @@ namespace MultidimensionMod.NPCs.Tundra
         {
 			if (spawnInfo.player.ZoneSnow && spawnInfo.spawnTileY <= Main.maxTilesY - 200 && spawnInfo.spawnTileY > Main.rockLayer)
             {
-				return 0.20f;
+				return 0.13f;
             }
 			return 0f;
 		}

@@ -59,7 +59,7 @@ namespace MultidimensionMod.NPCs.Tundra
 		{
 			if (spawnInfo.player.ZoneSnow && Main.hardMode)
 			{
-				return 0.25f;
+				return 0.15f;
 			}
 			else return 0f;
 		}
