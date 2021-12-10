@@ -9,34 +9,37 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Great Toothsword");
-			Tooltip.SetDefault("A big tooth on a stick acting as a blade, there is still flesh on it.");
-			DisplayName.AddTranslation(GameCulture.German, "Großes Zahnschwert");
-			Tooltip.AddTranslation(GameCulture.German, "Ein großer Zahn an einem Stock der wie eine Klinge funktioniert, da ist immer noch Fleisch an dem Zahn.");
+			DisplayName.SetDefault("Skeletal Greatsword");
+			Tooltip.SetDefault("Ever thought about taking a skeleton and force it into a blade shape, well here you go.");
+			DisplayName.AddTranslation(GameCulture.German, "Skelett Großschwert");
+			Tooltip.AddTranslation(GameCulture.German, "Jemals darüber nachgedacht ein Skelett zu nehmen und in eine Klingenform zu zwingen, nun bitte schön.");
 		}
 
 		public override void SetDefaults()
 		{
-			item.damage = 34;
+			item.damage = 96;
 			item.melee = true;
-			item.width = 58;
-			item.height = 68;
-			item.useTime = 41;
-			item.useAnimation = 27;
+			item.width = 78;
+			item.height = 82;
+			item.useTime = 29;
+			item.useAnimation = 29;
 			item.useStyle = 1;
 			item.knockBack = 4;
 			item.autoReuse = true;
-			item.value = Item.sellPrice(silver: 25);
-			item.rare = 3;
+			item.value = Item.sellPrice(gold: 11);
+			item.rare = ItemRarityID.Lime;
 			item.UseSound = SoundID.Item1;
+			item.shoot = ProjectileID.BoneGloveProj;
+			item.shootSpeed = 10f;
 		}
 
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.TissueSample, 15);
-			recipe.AddIngredient(ItemID.Bone, 50);
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddIngredient(ItemID.BoneSword);
+			recipe.AddIngredient(ItemID.Bone, 150);
+			recipe.AddIngredient(ItemID.BoneFeather);
+			recipe.AddTile(300);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
