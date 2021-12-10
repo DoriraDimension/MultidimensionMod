@@ -31,19 +31,21 @@ namespace MultidimensionMod
 			{
 				item.UseSound = SoundID.Item103;
 			}
-
 			if (item.type == ItemID.NightsEdge)
 			{
 				item.autoReuse = true;
 			}
-
 			if (item.type == ItemID.TrueNightsEdge)
 			{
 				item.autoReuse = true;
 			}
-
 			if (item.type == ItemID.TrueExcalibur)
 			{
+				item.autoReuse = true;
+			}
+			if (item.type == ItemID.BoneSword)
+			{
+				item.damage = 31;
 				item.autoReuse = true;
 			}
 		}

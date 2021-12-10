@@ -497,6 +497,12 @@ namespace MultidimensionMod
 			recipe.AddTile(26);
 			recipe.SetResult(3014);
 			recipe.AddRecipe();
+
+			recipe = new ModRecipe(mod); //Bone Schwort
+			recipe.AddIngredient(154, 46);
+			recipe.AddTile(300);
+			recipe.SetResult(1166);
+			recipe.AddRecipe();
 		}
 
 		public static void AddToolRecipes(Mod mod)
