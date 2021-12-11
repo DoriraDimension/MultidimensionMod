@@ -128,7 +128,6 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 
 		public override void SetDefaults()
 		{
-
 			npc.aiStyle = -1;
 			npc.lifeMax = 10000;
 			npc.damage = 20;
@@ -145,8 +144,12 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 			npc.lavaImmune = true;
 			npc.noGravity = true;
 			npc.noTileCollide = true;
-			npc.HitSound = (mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/smileHit").WithVolume(0.7f).WithPitchVariance(2f));
+			if (!Main.dedServ)
+			{
+				npc.HitSound = (mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/smileHit").WithVolume(0.7f).WithPitchVariance(2f));
+			}
 			npc.DeathSound = SoundID.NPCDeath7;
+			npc.netUpdate = true;
 			music = MusicID.Boss2;
 			bossBag = ModContent.ItemType<SmileyBag>();
 		}
