@@ -14,7 +14,7 @@ namespace MultidimensionMod.Projectiles.Minions
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Dark Rebel");
-			Main.projFrames[projectile.type] = 3;
+			Main.projFrames[projectile.type] = 4;
 			ProjectileID.Sets.MinionTargettingFeature[projectile.type] = true;
 			Main.projPet[projectile.type] = true;
 			ProjectileID.Sets.MinionSacrificable[projectile.type] = true;
@@ -23,8 +23,8 @@ namespace MultidimensionMod.Projectiles.Minions
 
 		public sealed override void SetDefaults()
 		{
-			projectile.width = 18;
-			projectile.height = 28;
+			projectile.width = 46;
+			projectile.height = 46;
 			projectile.tileCollide = false;
 			projectile.friendly = true;
 			projectile.minion = true;
@@ -149,7 +149,7 @@ namespace MultidimensionMod.Projectiles.Minions
 			{
 				if (distanceToIdlePosition > 600f)
 				{
-					speed = 12f;
+					speed = 16f;
 					inertia = 60f;
 				}
 				else
@@ -178,7 +178,7 @@ namespace MultidimensionMod.Projectiles.Minions
 			#endregion
 
 			#region Animation and visuals
-			projectile.rotation = projectile.velocity.X * 0.05f;
+			projectile.rotation = projectile.velocity.X * 0.03f;
 
 			int frameSpeed = 8;
 			projectile.frameCounter++;
@@ -190,6 +190,19 @@ namespace MultidimensionMod.Projectiles.Minions
 				{
 					projectile.frame = 0;
 				}
+			}
+
+
+			projectile.direction = projectile.spriteDirection = projectile.velocity.X > 0f ? 1 : -1;
+			projectile.rotation = projectile.velocity.ToRotation();
+			if (projectile.velocity.Y > 16f)
+			{
+				projectile.velocity.Y = 16f;
+			}
+
+			if (projectile.spriteDirection == -1)
+			{
+				projectile.rotation += MathHelper.Pi;
 			}
 
 			Lighting.AddLight(projectile.Center, Color.White.ToVector3() * 0.78f);
