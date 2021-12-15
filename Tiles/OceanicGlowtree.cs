@@ -15,9 +15,13 @@ namespace MultidimensionMod.Tiles
 		{
 			Main.tileFrameImportant[Type] = true;
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
+			TileObjectData.newTile.LavaDeath = true;
 			TileObjectData.newTile.Height = 4;
 			TileObjectData.newTile.Width = 2;
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 18 };
+			TileObjectData.newTile.CoordinateWidth = 16;
+			TileObjectData.newTile.CoordinatePadding = 2;
+			TileObjectData.newTile.RandomStyleRange = 3;
 			TileObjectData.addTile(Type);
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Oceanic Glowtree");
