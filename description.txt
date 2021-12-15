@@ -13,6 +13,7 @@ The mod currently adds:
 - 4 Vanity Items
 - 11 Enemies
 - 1 Boss
+- Boss Souls acting as lore items.
 - Some changes to vanilla enemy lootpools and recipes for normally not craftable items.
 
 I'm not really the best coder and have some bigger planned content,
@@ -33,3 +34,7 @@ Yhariel  coder
 Contributor:
 
 RAZOR  spriting
+
+
+
+The Weird Stone is trembling...

@@ -1,5 +1,5 @@
 buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
 displayName = Multidimension Mod
 author = Dorira
-version = 0.6
+version = 0.6.0.1
 homepage = https://discord.gg/jWXCuJAMJM
