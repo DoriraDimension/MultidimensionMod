@@ -24,20 +24,19 @@ namespace MultidimensionMod.Items.Weapons.Summon
 
 		public override void SetDefaults()
 		{
-			item.damage = 27;
-			item.knockBack = 3f;
+			item.damage = 32;
+			item.summon = true;
+			item.knockBack = 1f;
 			item.mana = 10;
 			item.width = 58;
 			item.height = 54;
 			item.useTime = 36;
 			item.useAnimation = 36;
-			item.useStyle = ItemUseStyleID.SwingThrow;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.value = Item.sellPrice(silver: 10);
 			item.rare = ItemRarityID.LightRed;
-			item.UseSound = SoundID.Item34;
-
+			item.UseSound = SoundID.NPCHit54;
 			item.noMelee = true;
-			item.summon = true;
 			item.buffType = ModContent.BuffType<DarkRebelsBuff>();
 			item.shoot = ModContent.ProjectileType<DarkRebelsMinion>();
 		}
