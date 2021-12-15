@@ -192,17 +192,14 @@ namespace MultidimensionMod.Projectiles.Minions
 				}
 			}
 
-
-			projectile.direction = projectile.spriteDirection = projectile.velocity.X > 0f ? 1 : -1;
-			projectile.rotation = projectile.velocity.ToRotation();
-			if (projectile.velocity.Y > 16f)
+			if (projectile.velocity.X > -0.1)
 			{
-				projectile.velocity.Y = 16f;
+				projectile.spriteDirection = -1;
+
 			}
-
-			if (projectile.spriteDirection == -1)
+			else if (projectile.velocity.X < 0.1)
 			{
-				projectile.rotation += MathHelper.Pi;
+				projectile.spriteDirection = 1;
 			}
 
 			Lighting.AddLight(projectile.Center, Color.White.ToVector3() * 0.78f);
