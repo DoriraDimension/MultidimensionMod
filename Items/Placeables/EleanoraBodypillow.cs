@@ -46,9 +46,9 @@ namespace MultidimensionMod.Items.Placeables
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Silk, 200);
+			recipe.AddIngredient(ItemID.Silk, 69);
 			recipe.AddIngredient(ItemID.LivingFireBlock, 69);
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddTile(TileID.Loom);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
