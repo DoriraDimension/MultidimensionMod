@@ -20,7 +20,7 @@ namespace MultidimensionMod.Items.ToolsEnviromentChange
 		{
 			item.width = 66;
 			item.height = 54;
-			item.rare = ItemRarityID.LightRed;
+			item.rare = ItemRarityID.Orange;
 			item.useAnimation = 20;
 			item.useTime = 20;
 			item.useStyle = 4;
