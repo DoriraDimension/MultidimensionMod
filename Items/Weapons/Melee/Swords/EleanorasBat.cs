@@ -27,7 +27,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			item.useTime = 15;
 			item.useAnimation = 15;
 			item.knockBack = 15;
-			item.value = Item.buyPrice(gold: 69);
+			item.value = Item.sellPrice(gold: 69);
 			item.rare = ItemRarityID.Purple;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;

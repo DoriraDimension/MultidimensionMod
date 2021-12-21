@@ -28,12 +28,17 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			item.useStyle = 1;
 			item.knockBack = 5;
 			item.autoReuse = true;
-			item.value = Item.sellPrice(gold: 5);
+			item.value = Item.sellPrice(gold: 3);
 			item.rare = ItemRarityID.Lime;
 			item.UseSound = SoundID.Item1;
 			item.shoot = ProjectileID.ShadowFlame;
 			item.shootSpeed = 10f;
 			item.crit = 12;
+		}
+
+		public override void MeleeEffects(Player player, Rectangle hitbox)
+		{
+			Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, (27));
 		}
 
 		public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)

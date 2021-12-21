@@ -30,7 +30,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			item.useStyle = 1;
 			item.knockBack = 4;
 			item.autoReuse = true;
-			item.value = Item.sellPrice(gold: 5);
+			item.value = Item.sellPrice(gold: 2);
 			item.rare = ItemRarityID.Pink;
 			item.UseSound = SoundID.Item1;
 			item.shoot = ModContent.ProjectileType<Glowshard>();
