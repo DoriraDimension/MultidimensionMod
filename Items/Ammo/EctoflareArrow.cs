@@ -35,10 +35,10 @@ namespace MultidimensionMod.Items.Ammo
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.WoodenArrow, 20);
+			recipe.AddIngredient(ItemID.WoodenArrow, 150);
 			recipe.AddIngredient(ItemID.Ectoplasm);
 			recipe.AddTile(134);
-			recipe.SetResult(this, 20);
+			recipe.SetResult(this, 150);
 			recipe.AddRecipe();
 		}
 	}
