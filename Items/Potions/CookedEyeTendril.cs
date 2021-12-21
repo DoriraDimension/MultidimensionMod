@@ -29,7 +29,7 @@ namespace MultidimensionMod.Items.Potions
             item.maxStack = 999;
             item.consumable = true;
             item.rare = ItemRarityID.Green;
-            item.value = Item.sellPrice(copper: 40);
+            item.value = Item.sellPrice(copper: 23);
             item.buffType = (BuffID.WellFed);
             item.buffTime = 18000; 
         }

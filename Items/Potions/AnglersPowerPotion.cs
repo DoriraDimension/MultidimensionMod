@@ -28,7 +28,7 @@ namespace MultidimensionMod.Items.Potions
             item.maxStack = 30;
             item.consumable = true;
             item.rare = ItemRarityID.Orange;
-            item.value = Item.sellPrice(silver: 70);
+            item.value = Item.sellPrice(silver: 23);
             item.buffType = ModContent.BuffType<AnglersPower>();
             item.buffTime = 36000;
         }

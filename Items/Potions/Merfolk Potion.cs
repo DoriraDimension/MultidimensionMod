@@ -27,7 +27,7 @@ namespace MultidimensionMod.Items.Potions
             item.maxStack = 30;
             item.consumable = true;
             item.rare = ItemRarityID.Orange;
-            item.value = Item.sellPrice(silver: 5);
+            item.value = Item.sellPrice(silver: 21);
             item.buffType = ModContent.BuffType<OceansBlessing>();
             item.buffTime = 36000;
         }

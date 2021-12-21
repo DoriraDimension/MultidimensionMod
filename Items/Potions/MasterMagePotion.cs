@@ -28,7 +28,7 @@ namespace MultidimensionMod.Items.Potions
             item.maxStack = 30;
             item.consumable = true;
             item.rare = ItemRarityID.LightRed;
-            item.value = Item.sellPrice(silver: 30);
+            item.value = Item.sellPrice(silver: 34);
             item.buffType = ModContent.BuffType<MasterMage>();
             item.buffTime = 26000;
         }

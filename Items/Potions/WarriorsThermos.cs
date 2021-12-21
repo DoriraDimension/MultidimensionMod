@@ -28,7 +28,7 @@ namespace MultidimensionMod.Items.Potions
             item.maxStack = 30;
             item.consumable = true;
             item.rare = ItemRarityID.Blue;
-            item.value = Item.sellPrice(silver: 2);
+            item.value = Item.sellPrice(silver: 5);
             item.buffType = ModContent.BuffType<WarriorsHeart>();
             item.buffTime = 18000;
         }
