@@ -2,6 +2,7 @@
 using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Summons
