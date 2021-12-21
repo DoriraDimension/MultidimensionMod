@@ -27,7 +27,7 @@ namespace MultidimensionMod.Items.Placeables
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.rare = ItemRarityID.Expert;
-			item.value = Item.buyPrice(1, 0, 0, 0);
+			item.value = Item.sellPrice(gold: 1);
 			item.createTile = ModContent.TileType<Tiles.October1>();
 		}
 

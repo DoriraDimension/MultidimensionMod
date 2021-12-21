@@ -28,7 +28,7 @@ namespace MultidimensionMod.Items.Placeables
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.rare = ItemRarityID.White;
-			item.value = Item.buyPrice(1, 0, 0, 0);
+			item.value = Item.sellPrice(silver: 20);
 			item.createTile = ModContent.TileType<Tiles.BrokenAncientDepiction>();
 		}
 

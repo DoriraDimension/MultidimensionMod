@@ -28,7 +28,7 @@ namespace MultidimensionMod.Items.Placeables
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.rare = ItemRarityID.Red;
-			item.value = Item.sellPrice(silver: 69);
+			item.value = Item.sellPrice(copper: 0);
 			item.createTile = ModContent.TileType<Tiles.EleanoraPlushiePlaced>();
 		}
 
