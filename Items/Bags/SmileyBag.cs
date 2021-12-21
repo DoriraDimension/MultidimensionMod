@@ -76,7 +76,6 @@ namespace MultidimensionMod.Items.Bags
 			}
 			player.QuickSpawnItem(ModContent.ItemType<DarkMatterClump>(), Main.rand.Next(20, 26));
 			player.QuickSpawnItem(ModContent.ItemType<ShadowEmoji>());
-			player.QuickSpawnItem(ModContent.ItemType<SmileySoulshard>());
 		}
 
 		public override int BossBagNPC => ModContent.NPCType<Smiley>();
