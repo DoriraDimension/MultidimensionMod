@@ -26,6 +26,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			item.damage = 8;
 			item.magic = true;
 			item.noMelee = true;
+			Items.value = Item.sellPrice(copper: 67);
 			item.mana = 4;
 			item.rare = ItemRarityID.Blue;
 		}

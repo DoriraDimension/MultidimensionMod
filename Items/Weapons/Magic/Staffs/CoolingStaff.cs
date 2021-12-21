@@ -34,7 +34,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.knockBack = 2;
-			item.value = 10000;
+			item.value = Item.sellPrice(gold: 26);
 			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item20;
 			item.autoReuse = true;
