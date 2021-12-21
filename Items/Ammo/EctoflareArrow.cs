@@ -25,7 +25,7 @@ namespace MultidimensionMod.Items.Ammo
 			item.maxStack = 999;
 			item.consumable = true;
 			item.knockBack = 1.5f;
-			item.value = 10;
+			item.value = Item.sellPrice(copper: 24);
 			item.rare = ItemRarityID.Yellow;
 			item.shoot = ModContent.ProjectileType<Projectiles.Ammo.EctoflareArrow>();
 			item.shootSpeed = 5f;              
