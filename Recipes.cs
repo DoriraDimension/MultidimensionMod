@@ -18,13 +18,14 @@ namespace MultidimensionMod
         {
 			ModRecipe recipe = new ModRecipe(mod); //Aglet
 			recipe.AddRecipeGroup("IronBar", 5);
-			recipe.SetResult(285);
+			recipe.AddTile(16);
+			recipe.SetResult(285); 
 			recipe.AddRecipe();
 
 			recipe = new ModRecipe(mod); //Anklet of the Wind
 			recipe.AddIngredient(331, 10);
 			recipe.AddIngredient(210, 2);
-			recipe.AddTile(16);
+			recipe.AddTile(304);
 			recipe.SetResult(212);
 			recipe.AddRecipe();
 
@@ -69,10 +70,10 @@ namespace MultidimensionMod
 			recipe.AddRecipe();
 
 			recipe = new ModRecipe(mod); //FlyingCarpet
-			recipe.AddIngredient(3794, 10);
+			recipe.AddIngredient(3794, 6);
 			recipe.AddIngredient(575, 5);
 			recipe.AddIngredient(ModContent.ItemType<ManaInfusedSandstone>(), 3);
-			recipe.AddTile(16);
+			recipe.AddTile(86);
 			recipe.SetResult(934);
 			recipe.AddRecipe();
 
@@ -86,7 +87,7 @@ namespace MultidimensionMod
 			recipe = new ModRecipe(mod); //Ice Skates
 			recipe.AddIngredient(259, 10);
 			recipe.AddRecipeGroup("IronBar", 5);
-			recipe.AddTile(16);
+			recipe.AddTile(18);
 			recipe.SetResult(950);
 			recipe.AddRecipe();
 
@@ -101,7 +102,7 @@ namespace MultidimensionMod
 			recipe.AddIngredient(207, 2);
 			recipe.AddIngredient(318, 3);
 			recipe.AddIngredient(173, 15);
-			recipe.AddTile(18);
+			recipe.needLava = true;
 			recipe.SetResult(906);
 			recipe.AddRecipe();
 
@@ -135,7 +136,7 @@ namespace MultidimensionMod
 			recipe.AddRecipe();
 
 			recipe = new ModRecipe(mod); //Celestial Magnet
-			recipe.AddIngredient(109, 3);
+			recipe.AddIngredient(109);
 			recipe.AddRecipeGroup("IronBar", 10);
 			recipe.AddIngredient(154, 15);
 			recipe.AddTile(16);
@@ -144,6 +145,7 @@ namespace MultidimensionMod
 
 			recipe = new ModRecipe(mod); //Potion Stone
 			recipe.AddIngredient(29, 2);
+			recipe.AddIngredient(499, 5);
 			recipe.AddIngredient(520, 10);
 			recipe.AddTile(134);
 			recipe.SetResult(535);
@@ -160,7 +162,7 @@ namespace MultidimensionMod
 			recipe = new ModRecipe(mod); //Obsidian Rose
 			recipe.AddIngredient(208);
 			recipe.AddIngredient(173, 20);
-			recipe.AddTile(16);
+			recipe.needLava = true;
 			recipe.SetResult(1323);
 			recipe.AddRecipe();
 
@@ -177,12 +179,14 @@ namespace MultidimensionMod
 			ModRecipe recipe = new ModRecipe(mod); //Pflaster
 			recipe.AddIngredient(225, 10);
 			recipe.AddIngredient(23, 5);
-			recipe.AddTile(134);
+			recipe.AddIngredient(269);
+			recipe.AddTile(18);
 			recipe.SetResult(885);
 			recipe.AddRecipe();
 
 		    recipe = new ModRecipe(mod); //Armor Polish
-			recipe.AddIngredient(154, 10);
+			recipe.AddIngredient(154, 6);
+			recipe.AddIngredient(2431, 10);
 			recipe.AddTile(134);
 			recipe.SetResult(886);
 			recipe.AddRecipe();
@@ -196,7 +200,7 @@ namespace MultidimensionMod
 
 			recipe = new ModRecipe(mod); //Blindfold
 			recipe.AddIngredient(225, 10);
-			recipe.AddTile(134);
+			recipe.AddTile(86);
 			recipe.SetResult(888);
 			recipe.AddRecipe();
 
@@ -231,13 +235,13 @@ namespace MultidimensionMod
 			recipe.AddIngredient(521, 10);
 			recipe.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 5);
 			recipe.AddIngredient(38, 3);
-			recipe.AddTile(134);
+			recipe.AddTile(26);
 			recipe.SetResult(891);
 			recipe.AddRecipe();
 
 			recipe = new ModRecipe(mod); //Trifold Map
 			recipe.AddIngredient(225, 10);
-			recipe.AddTile(134);
+			recipe.AddTile(18);
 			recipe.SetResult(893);
 			recipe.AddRecipe();
 
@@ -245,7 +249,8 @@ namespace MultidimensionMod
 			recipe.AddIngredient(1134, 5);
 			recipe.AddIngredient(23, 10);
 			recipe.AddIngredient(317, 2);
-			recipe.AddTile(134);
+			recipe.AddIngredient(269, 4);
+			recipe.AddTile(355);
 			recipe.SetResult(892);
 			recipe.AddRecipe();
 		}
@@ -364,7 +369,7 @@ namespace MultidimensionMod
 
 			recipe = new ModRecipe(mod); //Enchanted Sword
 			recipe.AddIngredient(3520);
-			recipe.AddIngredient(109, 2);
+			recipe.AddIngredient(75, 8);
 			recipe.AddRecipeGroup("EvilSample", 5);
 			recipe.AddTile(16);
 			recipe.SetResult(989);
@@ -393,15 +398,7 @@ namespace MultidimensionMod
 			recipe.AddRecipe();
 
 			recipe = new ModRecipe(mod); //Ice Blade
-			recipe.AddIngredient(3520);
-			recipe.AddIngredient(2358, 2);
-			recipe.AddIngredient(ModContent.ItemType<FrostScale>(), 4);
-			recipe.AddTile(16);
-			recipe.SetResult(724);
-			recipe.AddRecipe();
-
-			recipe = new ModRecipe(mod); //Ice Blade 2
-			recipe.AddIngredient(3484);
+			recipe.AddRecipeGroup("IceBlocks", 43);
 			recipe.AddIngredient(2358, 2);
 			recipe.AddIngredient(ModContent.ItemType<FrostScale>(), 4);
 			recipe.AddTile(16);
@@ -552,7 +549,7 @@ namespace MultidimensionMod
 			recipe.AddIngredient(520, 5);
 			recipe.AddIngredient(521, 5);
 			recipe.AddIngredient(ModContent.ItemType<Blight2>(), 3);
-			recipe.AddTile(134);
+			recipe.AddTile(18);
 			recipe.SetResult(3032);
 			recipe.AddRecipe();
 		}
@@ -572,6 +569,13 @@ namespace MultidimensionMod
 			recipe.AddTile(283);
 			recipe.SetResult(3198);
 			recipe.AddRecipe();
+
+			recipe = new ModRecipe(mod); //Living Looooooooooooooooooooooooooom
+			recipe.AddIngredient(210, 5);
+			recipe.AddRecipeGroup("Wood", 34);
+			recipe.AddTile(18);
+			recipe.SetResult(2196);
+			recipe.AddRecipe();
 		}
 
 		public static void AddConsumablesRecipes(Mod mod)
@@ -579,7 +583,7 @@ namespace MultidimensionMod
 			ModRecipe recipe = new ModRecipe(mod); //Truffle Worm
 			recipe.AddIngredient(2002);
 			recipe.AddIngredient(183, 20);
-			recipe.AddTile(16);
+			recipe.AddTile(247);
 			recipe.SetResult(2673);
 			recipe.AddRecipe();
 
@@ -587,7 +591,6 @@ namespace MultidimensionMod
 			recipe.AddIngredient(1134);
 			recipe.AddIngredient(178, 2);
 			recipe.AddIngredient(ModContent.ItemType<Mushmatter>(), 3);
-			recipe.AddTile(16);
 			recipe.SetResult(29);
 			recipe.AddRecipe();
 		}
