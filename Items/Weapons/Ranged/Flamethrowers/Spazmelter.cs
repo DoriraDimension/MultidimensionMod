@@ -12,6 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 		{
 			DisplayName.SetDefault("Spmazmelter");
 			Tooltip.SetDefault("Shoots cursed flames.");
+			DisplayName.AddTranslation(GameCulture.German, "Spazchmelzer");
+			Tooltip.AddTranslation(GameCulture.German, "Schießt verfluchte Flammen.");
 		}
 
 		public override void SetDefaults()
