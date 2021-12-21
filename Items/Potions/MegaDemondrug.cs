@@ -11,9 +11,9 @@ namespace MultidimensionMod.Items.Potions
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Mega Demondrug");
-            Tooltip.SetDefault("Increases all damage by 12%, crit chance by 12 and increases knockback.");
+            Tooltip.SetDefault("Increases all damage and crit chance by 12% and increases knockback.");
             DisplayName.AddTranslation(GameCulture.German, "Mega Dämonenmittel");
-            Tooltip.AddTranslation(GameCulture.German, "Erhöht allen schaden um 12%, kritische Trefferchance um 12 und erhöht Rückstoß.");
+            Tooltip.AddTranslation(GameCulture.German, "Erhöht allen schaden und kritische Trefferchance um 12% um 12 und erhöht Rückstoß.");
         }
 
         public override void SetDefaults()
