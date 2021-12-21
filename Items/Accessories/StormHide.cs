@@ -21,7 +21,7 @@ namespace MultidimensionMod.Items.Accessories
 			item.width = 26;
 			item.height = 22;
 			item.accessory = true;
-			item.value = Item.sellPrice(gold: 3);
+			item.value = Item.sellPrice(gold: 5);
 			item.rare = ItemRarityID.Lime;
 			item.defense = 5;
 		}

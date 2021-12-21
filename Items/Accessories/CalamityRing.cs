@@ -34,7 +34,6 @@ namespace MultidimensionMod.Items.Accessories
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(2);
 			recipe.AddTile(26);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
