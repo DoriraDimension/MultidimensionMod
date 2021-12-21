@@ -21,7 +21,7 @@ namespace MultidimensionMod.Items.Armor
 		{
 			item.width = 22;
 			item.height = 14;
-			item.value = Item.sellPrice(gold: 7);
+			item.value = Item.sellPrice(gold: 5);
 		    item.rare = ItemRarityID.Yellow;
 			item.defense = 15;
 		}
