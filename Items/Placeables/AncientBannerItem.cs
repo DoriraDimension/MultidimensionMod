@@ -10,7 +10,9 @@ namespace MultidimensionMod.Items.Placeables
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Ancient Banner");
+			Tooltip.SetDefault("A ancient banner, it was was maybe used in ceremonial activity.")
 			DisplayName.AddTranslation(GameCulture.German, "Uraltes Banner");
+			Tooltip.AddTranslation(GameCulture.German, "Ein uraltes banner, es wurde vielleicht in zeremoniellen Aktivitäten verwendet.");
 		}
 
 		public override void SetDefaults()
