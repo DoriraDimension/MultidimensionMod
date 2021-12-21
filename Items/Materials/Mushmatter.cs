@@ -18,6 +18,7 @@ namespace MultidimensionMod.Items.Materials
 			item.width = 22;
 			item.height = 30;
 			item.maxStack = 999;
+			item.value = Item.sellPrice(copper: 8);
 			item.rare = ItemRarityID.Blue;
 		}
 	}

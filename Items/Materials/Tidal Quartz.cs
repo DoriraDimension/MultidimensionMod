@@ -20,7 +20,7 @@ namespace MultidimensionMod.Items.Materials
 			item.width = 20;
 			item.height = 24;
 			item.maxStack = 999;
-			item.value = Item.sellPrice(silver: 80);
+			item.value = Item.sellPrice(silver: 18);
 			item.rare = ItemRarityID.Yellow;
 		}
 	}
