@@ -31,7 +31,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 			item.height = 70;
 			item.scale = 1f;
 			item.rare = ItemRarityID.Yellow;
-			item.value = Item.sellPrice(gold: 4);
+			item.value = Item.sellPrice(gold: 1);
 			item.melee = true;
 			item.noMelee = true;
 			item.noUseGraphic = true;
