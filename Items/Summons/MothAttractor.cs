@@ -68,7 +68,7 @@ namespace MultidimensionMod.Items.Summons
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddRecipeGroup("IronBar", 6);
+			recipe.AddRecipeGroup("IronBar", 3);
 			recipe.AddIngredient(ItemID.SoulofLight, 3);
 			recipe.AddTile(134);
 			recipe.SetResult(this);
