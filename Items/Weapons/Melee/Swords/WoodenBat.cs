@@ -37,7 +37,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddRecipeGroup("Wood", 50);;
-			recipe.AddTile(16);
+			recipe.AddTile(18);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
