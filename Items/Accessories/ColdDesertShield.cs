@@ -47,7 +47,7 @@ namespace MultidimensionMod.Items.Accessories
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ModContent.ItemType<DrakescaleShield>());
 			recipe.AddIngredient(ModContent.ItemType<DesertNecklace>());
-			recipe.AddTile(16);
+			recipe.AddTile(114);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

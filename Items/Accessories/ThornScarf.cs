@@ -38,7 +38,7 @@ namespace MultidimensionMod.Items.Accessories
 			recipe.AddIngredient(ItemID.Stinger, 5);
             recipe.AddIngredient(ItemID.Vine, 1);
 			recipe.AddIngredient(ItemID.JungleSpores, 8);
-			recipe.AddTile(16);
+			recipe.AddTile(18);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
