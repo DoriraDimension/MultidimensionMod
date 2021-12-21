@@ -28,7 +28,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.knockBack = 5;
-			item.value = Item.sellPrice(gold: 5);
+			item.value = Item.sellPrice(gold: 2);
 			item.rare = ItemRarityID.Yellow;
 			item.UseSound = SoundID.Item5;
 			item.autoReuse = true;
