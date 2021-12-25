@@ -15,7 +15,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 			DisplayName.SetDefault("Gel Vac");
 			Tooltip.SetDefault("Normally not used for combat, more of a rancher tool.\nShoots different kind of adorable slimes.");
 			DisplayName.AddTranslation(GameCulture.German, "Gel Vac");
-			Tooltip.AddTranslation(GameCulture.German, "Normalerweise nicht für den Kampf genutzt, ist mehr ein Rancher Werkzeug.\nVerscgießt verschiedene Schleime");
+			Tooltip.AddTranslation(GameCulture.German, "Normalerweise nicht für den Kampf genutzt, ist mehr ein Rancher Werkzeug.\nVerschießt verschiedene niedliche Schleime");
 		}
 
 		public override void SetDefaults()
@@ -46,8 +46,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Gel, 100);
 			recipe.AddIngredient(ItemID.SlimeGun);
+			recipe.AddIngredient(ItemID.Gel, 100);
 			recipe.AddIngredient(ItemID.Cloud, 25);
 			recipe.AddTile(220);
 			recipe.SetResult(this);
