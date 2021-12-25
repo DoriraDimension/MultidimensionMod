@@ -47,6 +47,10 @@ namespace MultidimensionMod.NPCs.Tundra
             {
 				return 0.13f;
             }
+			else if (spawnInfo.player.ZoneSnow && spawnInfo.player.ZoneRain)
+			{
+				return 0.80f;
+			}
 			return 0f;
 		}
 
