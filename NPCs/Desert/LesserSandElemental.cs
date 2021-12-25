@@ -22,7 +22,7 @@ namespace MultidimensionMod.NPCs.Desert
 			npc.CloneDefaults(NPCID.FlyingSnake);
 			npc.width = 36;
 			npc.height = 36;
-			npc.damage = 28;
+			npc.damage = 18;
 			npc.defense = 7;
 			npc.lifeMax = 60;
 			npc.HitSound = SoundID.NPCHit23;
