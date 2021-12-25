@@ -10,7 +10,7 @@ namespace MultidimensionMod.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dimensional Goddess Plushie");
+			DisplayName.SetDefault("Dimensional Goddess Plushie (placeable)");
 			Tooltip.SetDefault("The adorable goddess now exists as a marketable plushie.");
 			DisplayName.AddTranslation(GameCulture.German, "Dimensionsgötting Plüschtier");
 			Tooltip.AddTranslation(GameCulture.German, "Die bezaubernde Göttin existiert jetzt als ein marktfähiges Pluschtier.");
