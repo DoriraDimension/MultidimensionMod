@@ -22,7 +22,7 @@ namespace MultidimensionMod.NPCs.Tundra
 			npc.CloneDefaults(NPCID.FlyingSnake);
 			npc.width = 44;
 			npc.height = 34;
-			npc.damage = 24;
+			npc.damage = 16;
 			npc.defense = 13;
 			npc.lifeMax = 50;
 			npc.HitSound = SoundID.NPCHit1;
