@@ -773,6 +773,34 @@ namespace MultidimensionMod
 			recipe.AddTile(ModContent.TileType<DimensionalForge>());
 			recipe.SetResult(522);
 			recipe.AddRecipe();
+
+			recipe = new ModRecipe(mod); //Ebonstone Block
+			recipe.AddIngredient(836);
+			recipe.AddIngredient(ModContent.ItemType<Dimensium>());
+			recipe.AddTile(ModContent.TileType<DimensionalForge>());
+			recipe.SetResult(61);
+			recipe.AddRecipe();
+
+			recipe = new ModRecipe(mod); //Crimstone Block
+			recipe.AddIngredient(61);
+			recipe.AddIngredient(ModContent.ItemType<Dimensium>());
+			recipe.AddTile(ModContent.TileType<DimensionalForge>());
+			recipe.SetResult(836);
+			recipe.AddRecipe();
+
+			recipe = new ModRecipe(mod); //Gayruption Seed
+			recipe.AddIngredient(2171);
+			recipe.AddIngredient(ModContent.ItemType<Dimensium>());
+			recipe.AddTile(ModContent.TileType<DimensionalForge>());
+			recipe.SetResult(59);
+			recipe.AddRecipe();
+
+			recipe = new ModRecipe(mod); //Crimson seed
+			recipe.AddIngredient(59);
+			recipe.AddIngredient(ModContent.ItemType<Dimensium>());
+			recipe.AddTile(ModContent.TileType<DimensionalForge>());
+			recipe.SetResult(2171);
+			recipe.AddRecipe();
 		}
 	}
 }
