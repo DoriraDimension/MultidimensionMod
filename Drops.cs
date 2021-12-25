@@ -339,12 +339,6 @@ namespace MultidimensionMod
                     Item.NewItem(npc.getRect(), ItemID.Stinger);
             }
 
-            if (npc.type == NPCID.BigMimicCrimson)
-            {
-                if (Main.rand.NextFloat() < .2000f)
-                    Item.NewItem(npc.getRect(), ItemID.Bladetongue);
-            }
-
             if (npc.type == NPCID.Mothron && NPC.downedPlantBoss)
             {
                 if (Main.rand.NextFloat() < .0500f)
