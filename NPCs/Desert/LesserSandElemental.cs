@@ -47,6 +47,11 @@ namespace MultidimensionMod.NPCs.Desert
 			{
 				return 0.05f;
 			}
+
+			if (spawnInfo.player.ZoneDesert && spawnInfo.player.ZoneSandstorm)
+			{
+				return 0.30f;
+			}
 			return 0f;
 		}
 

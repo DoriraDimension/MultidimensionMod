@@ -20,8 +20,8 @@ namespace MultidimensionMod.NPCs.Desert
 		public override void SetDefaults()
 		{
 			npc.CloneDefaults(NPCID.Crab);
-			npc.width = 75;
-			npc.height = 70;
+			npc.width = 70;
+			npc.height = 26;
 			npc.damage = 26;
 			npc.defense = 20;
 			npc.lifeMax = 210;
