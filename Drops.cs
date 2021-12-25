@@ -144,11 +144,6 @@ namespace MultidimensionMod
 
             if (npc.type == NPCID.GreenSlime)
             {
-
-                if (Main.rand.NextFloat() < .0001f)
-                    Item.NewItem(npc.getRect(), ItemID.LastPrism);
-                if (Main.rand.NextFloat() < .0001f)
-                    Item.NewItem(npc.getRect(), ItemID.SoulofFright, 7);
                 if (Main.rand.NextFloat() < .00001f)
                     Item.NewItem(npc.getRect(), mod.ItemType("Rambam"));
             }
