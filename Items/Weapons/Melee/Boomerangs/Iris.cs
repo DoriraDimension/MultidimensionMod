@@ -12,9 +12,9 @@ namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("The Iris");
-			Tooltip.SetDefault("Shoots a homing Iris Disc.");
+			Tooltip.SetDefault("Throws a homing Iris Disc.");
 			DisplayName.AddTranslation(GameCulture.German, "Die Iris");
-			Tooltip.AddTranslation(GameCulture.German, "Schießt eine verfolgene Iris Scheibe.");
+			Tooltip.AddTranslation(GameCulture.German, "Wirft eine verfolgene Iris Scheibe.");
 		}
 
 		public override void SetDefaults()
