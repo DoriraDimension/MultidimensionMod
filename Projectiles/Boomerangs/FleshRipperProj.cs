@@ -9,7 +9,7 @@ namespace MultidimensionMod.Projectiles.Boomerangs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Fleshho");
+			DisplayName.SetDefault("Flesh Ripper");
 		}
 
 		public override void SetDefaults()
