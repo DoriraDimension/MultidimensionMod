@@ -11,7 +11,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("lioololol");
+			DisplayName.SetDefault("Sand Ball");
 		}
 
 		public override void SetDefaults()
