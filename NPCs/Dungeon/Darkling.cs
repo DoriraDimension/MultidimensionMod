@@ -25,7 +25,7 @@ namespace MultidimensionMod.NPCs.Dungeon
 			npc.height = 46;
 			npc.damage = 45;
 			npc.defense = 3;
-			npc.lifeMax = 60;
+			npc.lifeMax = 120;
 			npc.HitSound = SoundID.NPCHit54;
 			npc.DeathSound = SoundID.NPCDeath52;
 			npc.value = Item.buyPrice(0, 0, 1, 40);
