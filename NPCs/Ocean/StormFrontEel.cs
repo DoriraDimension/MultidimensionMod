@@ -30,7 +30,7 @@ namespace MultidimensionMod.NPCs.Ocean
 			npc.HitSound = SoundID.NPCHit9;
 			npc.DeathSound = SoundID.NPCDeath33;
 			npc.value = Item.buyPrice(2, 50, 7);
-			npc.knockBackResist = 0.3f;
+			npc.knockBackResist = 0f;
 			npc.aiStyle = 56;
 			aiType = NPCID.DungeonSpirit;
 			animationType = NPCID.Bird;

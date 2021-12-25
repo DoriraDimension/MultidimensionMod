@@ -21,9 +21,9 @@ namespace MultidimensionMod.NPCs.Ocean
 			npc.CloneDefaults(NPCID.WalkingAntlion);
 			npc.width = 80;
 			npc.height = 36;
-			npc.damage = 28;
+			npc.damage = 21;
 			npc.defense = 5;
-			npc.lifeMax = 150;
+			npc.lifeMax = 100;
 			npc.HitSound = SoundID.NPCHit46;
 			npc.DeathSound = SoundID.NPCDeath48;
 			npc.value = Item.buyPrice(0, 0, 78);
