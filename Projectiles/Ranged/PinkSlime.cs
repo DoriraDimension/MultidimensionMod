@@ -56,7 +56,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 		{
 			Main.PlaySound(SoundID.NPCDeath1, projectile.position);
 
-			int dustIndex = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, ModContent.DustType<DarkDust>(), 0f, 0f, 69, default(Color), 2f);
+			int dustIndex = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, ModContent.DustType<PinkSlimeDust>(), 0f, 0f, 69, default(Color), 2f);
 			Main.dust[dustIndex].velocity *= 1.4f;
 		}
 	}
