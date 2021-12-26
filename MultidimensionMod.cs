@@ -138,7 +138,8 @@ namespace MultidimensionMod
 					ModContent.ItemType<Items.Summons.UnknownEmoji>(),
 					new List<int> { ModContent.ItemType<Items.Vanity.SmileyMask>(), ModContent.ItemType<Items.Placeables.Trophies.SmileyTrophy>() },
 					new List<int> { ModContent.ItemType<Items.Accessories.ShadowEmoji>(), ModContent.ItemType<Items.Materials.DarkMatterClump>(), ModContent.ItemType<Items.Weapons.Melee.Swords.LonelySword>(), ModContent.ItemType<Items.Weapons.Ranged.Guns.DarkMatterLauncher>(), ModContent.ItemType<Items.Weapons.Magic.Other.SmileySmile>(), ModContent.ItemType<Items.Weapons.Summon.DarkRebels>(), ModContent.ItemType<Items.Vanity.LonelyWarriorsVisor>(), ModContent.ItemType<Items.Vanity.DarkCloak>(), ModContent.ItemType<Items.Pets.CuteEmoji>(), ModContent.ItemType<Items.Souls.SmileySoulshard>() },
-					"Use a Unknown Emoji at night"
+					"Use a Unknown Emoji at night",
+					"Smiley vanishes into the darkness, seeking another strong being"
 				);
 			}
 			if (bossChecklist != null)
