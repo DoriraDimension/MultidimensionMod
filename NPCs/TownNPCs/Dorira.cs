@@ -194,7 +194,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
 				nextSlot++;
 			}
-			if (Main.hardMode)
+			if (MDWorld.downedSmiley)
             {
 				shop.item[nextSlot].SetDefaults(ModContent.ItemType<UnknownEmoji>());
 				shop.item[nextSlot].shopCustomPrice = 3;
