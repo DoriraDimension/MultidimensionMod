@@ -102,7 +102,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			}
 			if (Main.dayTime)
 			{
-				switch (Main.rand.Next(4))
+				switch (Main.rand.Next(7))
 				{
 					case 0:
 						return "Birds are singing, flowers are blooming, on days like these... I should stop with this phylosophy crap.";
@@ -112,12 +112,18 @@ namespace MultidimensionMod.NPCs.TownNPCs
 						return "I wonder when the others will arrive.";
 					case 3:
 						return "serglhw3o85zhp35ognpügdmfghödfdlhgftzjmdzinhwüß046ihn";
+					case 4:
+						return "Some weirdo blocked my Hyperlink.";
+					case 5:
+						return "Do you know how FUCKING painful it is to learn programming? It's like you are thrown into a pit full of puzzles, but the puzzles are in japanese.";
+					case 6:
+						return "I once saw a fucking big ass serpent flying past me, ripping through the dimensions. I teleported behind him and then slapped him, but I told him that it's nothing personal.";
 
 				}
 			}
 			if (!Main.dayTime)
 			{
-				switch (Main.rand.Next(6))
+				switch (Main.rand.Next(9))
 				{
 					case 0:
 						return "Are you sleeping at night? I'm not, my motivation is fired up in the night.";
@@ -131,6 +137,12 @@ namespace MultidimensionMod.NPCs.TownNPCs
 						return "I wonder when the others will arrive.";
 					case 5:
 						return "serglhw3o85zhp35ognpügdmfghödfdlhgftzjmdzinhwüß046ihn";
+					case 6:
+						return "Some weirdo blocked my Hyperlink.";
+					case 7:
+						return "Do you know how FUCKING painful it is to learn programming? It's like you are thrown into a pit full of puzzles, but the puzzles are in japanese.";
+					case 8:
+						return "I once saw a fucking big ass serpent flying past me, ripping through the dimensions. I teleported behind him and then slapped him, but I told him that it's nothing personal.";
 				}
 			}
 			switch (Main.rand.Next(4))
