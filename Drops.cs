@@ -346,6 +346,21 @@ namespace MultidimensionMod
                     Item.NewItem(npc.getRect(), mod.ItemType("Shinorian"));
             }
 
+            if (npc.type == NPCID.BigMimicHallow)
+            {
+                Item.NewItem(npc.getRect(), ItemID.LightShard, Main.rand.Next(1, 4));
+            }
+
+            if (npc.type == NPCID.BigMimicCrimson)
+            {
+                Item.NewItem(npc.getRect(), ItemID.DarkShard, Main.rand.Next(1, 4));
+            }
+
+            if (npc.type == NPCID.BigMimicCorruption)
+            {
+                Item.NewItem(npc.getRect(), ItemID.DarkShard, Main.rand.Next(1, 4));
+            }
+
             if (!npc.boss && npc.lifeMax > 1 && npc.damage > 0 && !npc.friendly && npc.position.Y > Main.rockLayer * 16.0 && npc.value > 0f)
             {
                 if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneRockLayerHeight)
