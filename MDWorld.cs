@@ -16,6 +16,55 @@ namespace MultidimensionMod
 {
 	public class MDWorld : ModWorld
 	{
+		public static bool downedSmiley;
+
+		public override void Initialize()
+		{
+			downedSmiley = false;
+		}
+		public override TagCompound Save()
+		{
+			var downed = new List<string>();
+			if (downedSmiley)
+			{
+				downed.Add("smiley");
+			}
+
+			return new TagCompound
+			{
+				["downed"] = downed
+			};
+		}
+		public override void Load(TagCompound tag)
+		{
+			var downed = tag.GetList<string>("downed");
+			downedSmiley = downed.Contains("smiley");
+		}
+		public override void LoadLegacy(BinaryReader reader)
+		{
+			int loadVersion = reader.ReadInt32();
+			if (loadVersion == 0)
+			{
+				BitsByte flags = reader.ReadByte();
+				downedSmiley = flags[0];
+			}
+			else
+			{
+				ErrorLogger.Log("Multidimension Mod: Unknown loadVersion: " + loadVersion);
+			}
+		}
+		public override void NetSend(BinaryWriter writer)
+		{
+			BitsByte flags = new BitsByte();
+			flags[0] = downedSmiley;
+			writer.Write(flags);
+		}
+		public override void NetReceive(BinaryReader reader)
+		{
+			BitsByte flags = reader.ReadByte();
+			downedSmiley = flags[0];
+		}
+
 		public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
 		{
 			// Because world generation is like layering several images ontop of each other, we need to do some steps between the original world generation steps.

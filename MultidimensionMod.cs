@@ -124,7 +124,23 @@ namespace MultidimensionMod
 
 		public override void PostSetupContent()
 		{
+
 			Mod bossChecklist = ModLoader.GetMod("BossChecklist");
+			if (bossChecklist != null)
+			{
+				bossChecklist.Call(
+					"AddBoss",
+					5.5f,
+					new List<int> { ModContent.NPCType<NPCs.Boss.Smiley.Smiley>() },
+					this, // Mod
+					"Smiley",
+					(Func<bool>)(() => MDWorld.downedSmiley),
+					ModContent.ItemType<Items.Summons.UnknownEmoji>(),
+					new List<int> { ModContent.ItemType<Items.Vanity.SmileyMask>(), ModContent.ItemType<Items.Placeables.Trophies.SmileyTrophy>() },
+					new List<int> { ModContent.ItemType<Items.Accessories.ShadowEmoji>(), ModContent.ItemType<Items.Materials.DarkMatterClump>(), ModContent.ItemType<Items.Weapons.Melee.Swords.LonelySword>(), ModContent.ItemType<Items.Weapons.Ranged.Guns.DarkMatterLauncher>(), ModContent.ItemType<Items.Weapons.Magic.Other.SmileySmile>(), ModContent.ItemType<Items.Weapons.Summon.DarkRebels>(), ModContent.ItemType<Items.Vanity.LonelyWarriorsVisor>(), ModContent.ItemType<Items.Vanity.DarkCloak>(), ModContent.ItemType<Items.Pets.CuteEmoji>(), ModContent.ItemType<Items.Souls.SmileySoulshard>() },
+					"Use a Unknown Emoji at night"
+				);
+			}
 			if (bossChecklist != null)
 			{
 				MultidimensionMod.AddLoot(bossChecklist, "KingSlime", new List<int>
