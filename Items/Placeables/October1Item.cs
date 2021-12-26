@@ -1,4 +1,7 @@
-﻿using Terraria;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework;
+using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -29,6 +32,25 @@ namespace MultidimensionMod.Items.Placeables
 			item.rare = ItemRarityID.Expert;
 			item.value = Item.sellPrice(gold: 1);
 			item.createTile = ModContent.TileType<Tiles.October1>();
+		}
+
+		public override void ModifyTooltips(List<TooltipLine> list)
+		{
+			foreach (TooltipLine item in list)
+			{
+				if (item.mod == "Terraria" && item.Name == "ItemName")
+				{
+					switch (Main.GameUpdateCount / 60 % 2)
+					{
+						case 0:
+							item.overrideColor = new Color(18, 279, 247);
+							break;
+						case 1:
+							item.overrideColor = new Color(247, 171, 18);
+							break;
+					}
+				}
+			}
 		}
 
 		public override void AddRecipes()
