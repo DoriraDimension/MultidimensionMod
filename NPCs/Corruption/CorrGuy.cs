@@ -19,8 +19,8 @@ namespace MultidimensionMod.NPCs.Corruption
 
 		public override void SetDefaults()
 		{
-			npc.width = 18;
-			npc.height = 40;
+			npc.width = 44;
+			npc.height = 46;
 			npc.damage = 23;
 			npc.defense = 12;
 			npc.lifeMax = 100;
@@ -44,6 +44,10 @@ namespace MultidimensionMod.NPCs.Corruption
 			if (Main.rand.NextFloat() < .0300f)
 			{
 				Item.NewItem(npc.getRect(), mod.ItemType("TheFly"));
+			}
+			if (Main.rand.NextFloat() < .0300f)
+			{
+				Item.NewItem(npc.getRect(), mod.ItemType("CorrGuyMask"));
 			}
 
 		}
