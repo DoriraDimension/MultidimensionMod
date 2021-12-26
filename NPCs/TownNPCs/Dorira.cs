@@ -167,6 +167,10 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			shop.item[nextSlot].shopCustomPrice = 10;
 			shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
 			nextSlot++;
+			shop.item[nextSlot].SetDefaults(ModContent.ItemType<IronUndies>());
+			shop.item[nextSlot].shopCustomPrice = 5;
+			shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
+			nextSlot++;
 			shop.item[nextSlot].SetDefaults(ModContent.ItemType<BaitLeaf>());
 			shop.item[nextSlot].shopCustomPrice = 7;
 			shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
