@@ -105,7 +105,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 			{
 				Main.NewText("I see...", MDRarity.Dorira);
 				Main.NewText("You defeated the exiled soldier of darkness...", MDRarity.Dorira);
-				Main.NewText("You may be the one who he AND me were looking for.", MDRarity.Dorira);
+				Main.NewText("You may be the one who he AND I were looking for.", MDRarity.Dorira);
 				MDWorld.downedSmiley = true;
 				if (Main.netMode == NetmodeID.Server)
 				{
