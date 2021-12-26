@@ -24,6 +24,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 
 	public class Smiley : ModNPC
 	{
+		public float Timer;
 		int backupTimer = 0;
 		bool canDie = false;
 		int darkling;
@@ -55,7 +56,7 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 			{
 				Item.NewItem(npc.getRect(), ItemID.Heart);
 			}
-			Main.NewText("Smiley has been defeated!", Color.Black);
+			Main.NewText("Smiley has been defeated!", Color.Purple);
 			Item.NewItem(npc.getRect(), ItemID.GoldCoin, 11);
 			Item.NewItem(npc.getRect(), ModContent.ItemType<DarkMatterClump>(), Main.rand.Next(15, 21));
 			Item.NewItem(npc.getRect(), ModContent.ItemType<SmileySoulshard>());
@@ -98,6 +99,17 @@ namespace MultidimensionMod.NPCs.Boss.Smiley
 				if (choice == 3)
 				{
 					Item.NewItem(npc.getRect(), ModContent.ItemType<DarkRebels>());
+				}
+			}
+			if (!MDWorld.downedSmiley)
+			{
+				Main.NewText("I see...", MDRarity.Dorira);
+				Main.NewText("You defeated the exiled soldier of darkness...", MDRarity.Dorira);
+				Main.NewText("You may be the one who he AND me were looking for.", MDRarity.Dorira);
+				MDWorld.downedSmiley = true;
+				if (Main.netMode == NetmodeID.Server)
+				{
+					NetMessage.SendData(MessageID.WorldData); // Immediately inform clients of new world state.
 				}
 			}
 		}
