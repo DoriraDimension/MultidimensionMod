@@ -39,6 +39,11 @@ namespace MultidimensionMod.NPCs.Tundra
 		public override void NPCLoot()
 		{
 			Item.NewItem(npc.getRect(), mod.ItemType("FrostScale"), Main.rand.Next(1, 3));
+
+			if (Main.rand.NextFloat() < .0300f)
+			{
+				Item.NewItem(npc.getRect(), mod.ItemType("DrakeCrystal");
+			}
 		}
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
