@@ -42,7 +42,7 @@ namespace MultidimensionMod.NPCs.Tundra
 
 			if (Main.rand.NextFloat() < .0300f)
 			{
-				Item.NewItem(npc.getRect(), mod.ItemType("DrakeCrystal");
+				Item.NewItem(npc.getRect(), mod.ItemType("DrakeCrystal"));
 			}
 		}
 
