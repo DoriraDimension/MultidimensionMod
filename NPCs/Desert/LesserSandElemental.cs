@@ -39,6 +39,11 @@ namespace MultidimensionMod.NPCs.Desert
 		public override void NPCLoot()
 		{
 			Item.NewItem(npc.getRect(), mod.ItemType("ManaInfusedSandstone"), Main.rand.Next(1, 3));
+
+			if (Main.rand.NextFloat() < .8000f)
+			{
+				Item.NewItem(npc.getRect(), mod.ItemType("SandBun"));
+			}
 		}
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
