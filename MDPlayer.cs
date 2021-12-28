@@ -109,6 +109,25 @@ namespace MultidimensionMod
             {
                 target.AddBuff(ModContent.BuffType<BlazingSuffering>(), 180);
             }
+            if (RaitolgurRune)
+            {
+                target.AddBuff(BuffID.Electrified, 180);
+            }
+            if (KegakumoRune)
+            {
+                target.AddBuff(BuffID.Poisoned, 180);
+                target.AddBuff(BuffID.Venom, 180);
+                target.AddBuff(BuffID.Ichor, 180);
+            }
+            if (KiminoRune)
+            {
+                if (Main.rand.NextFloat() < .0500f)
+                    target.AddBuff(BuffID.Confused, 60);
+            }
+            if (KushoRune)
+            {
+                target.AddBuff(BuffID.Slow, 120);
+            }
         }
     }
 }
