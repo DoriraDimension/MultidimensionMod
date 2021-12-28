@@ -215,10 +215,10 @@ namespace MultidimensionMod.NPCs.TownNPCs
 				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
 				nextSlot++;
 			}
-			if (Main.LocalPlayer.HasItem(ModContent.ItemType<Shinorian>()) && Main.LocalPlayer.HasItem(ModContent.ItemType<ArchtyrantsFace>()) && !Main.dayTime)
+			if (Main.LocalPlayer.HasItem(ModContent.ItemType<Shinorian>()) || Main.LocalPlayer.HasItem(ModContent.ItemType<ArchtyrantsFace>()))
 			{
 				shop.item[nextSlot].SetDefaults(ModContent.ItemType<WeirdStone>());
-				shop.item[nextSlot].shopCustomPrice = 100;
+				shop.item[nextSlot].shopCustomPrice = 25;
 				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
 				nextSlot++;
 			}
