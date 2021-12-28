@@ -13,9 +13,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Archrune of Knowledge");
-			Tooltip.SetDefault("A rune stone imbued with the power of Archdevil Shinoro, it grants his immense magical knowledge and control over mana.\nIncreases magic damage by 10%, mana regen by 2 and max mana by 50, all projectiles inflict Shadow Flame.");
+			Tooltip.SetDefault("A rune stone imbued with the power of Archdevil Shinoro, it grants his immense magical knowledge and control over mana.\nIncreases magic damage by 10%, mana regen by 2 and max mana by 50.\nAll projectiles inflict Shadow Flame.");
 			DisplayName.AddTranslation(GameCulture.German, "Erzrune des Wissens");
-			Tooltip.AddTranslation(GameCulture.German, "Ein Runenstein durchtränkt mit der Kraft des Erzteufels Shinoro, es  gewährt sein immenses Wissen und Kontrolle über Mana.\nErhöht Magieschaden um 10%, mana regeneration um 2 und maximales Mana um 50, alle Projektile verursachen Schattenflammen.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein Runenstein durchtränkt mit der Kraft des Erzteufels Shinoro, es  gewährt sein immenses Wissen und Kontrolle über Mana.\nErhöht Magieschaden um 10%, mana regeneration um 2 und maximales Mana um 50.\nAlle Projektile verursachen Schattenflammen.");
 		}
 
 		public override void SetDefaults()
