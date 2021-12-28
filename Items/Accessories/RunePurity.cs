@@ -39,7 +39,6 @@ namespace MultidimensionMod.Items.Accessories
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.GetModPlayer<MDPlayer>().ShinoroRune = true;
 			player.lifeRegen += 2;
 			player.statLifeMax2 += 50;
 			player.wingTimeMax = 180;
