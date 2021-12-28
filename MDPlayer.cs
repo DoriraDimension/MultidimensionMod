@@ -22,11 +22,32 @@ namespace MultidimensionMod
 
         public bool Blaze;
 
+        public bool ShinoroRune;
+
+        public bool IgnaenRune;
+
+        public bool RaitolgurRune;
+
+        public bool KegakumoRune;
+
+        public bool KiminoRune;
+
+        public bool KushoRune;
+
+        public bool PrismaRune;
+
         public override void ResetEffects()
         {
             SmileyJr = false;
             IgnaenHead = false;
             Blaze = false;
+            ShinoroRune = false;
+            IgnaenRune = false;
+            RaitolgurRune = false;
+            KegakumoRune = false;
+            KiminoRune = false;
+            KushoRune = false;
+            PrismaRune = false;
         }
 
         public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath)
@@ -74,6 +95,14 @@ namespace MultidimensionMod
                 g *= 0.2f;
                 b *= 0.7f;
                 fullBright = true;
+            }
+        }
+
+        public override void OnHitNPCWithProj(Projectile proj, NPC target, int damage, float knockback, bool crit)
+        {
+            if (ShinoroRune)
+            {
+                target.AddBuff(BuffID.ShadowFlame, 180);
             }
         }
     }
