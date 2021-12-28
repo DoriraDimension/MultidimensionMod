@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Items.Bags;
+using MultidimensionMod.Buffs.Debuffs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -103,6 +104,10 @@ namespace MultidimensionMod
             if (ShinoroRune)
             {
                 target.AddBuff(BuffID.ShadowFlame, 180);
+            }
+            if (IgnaenRune)
+            {
+                target.AddBuff(ModContent.BuffType<BlazingSuffering>(), 180);
             }
         }
     }
