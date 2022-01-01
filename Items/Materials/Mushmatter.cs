@@ -16,7 +16,7 @@ namespace MultidimensionMod.Items.Materials
 		public override void SetDefaults()
 		{
 			item.width = 22;
-			item.height = 30;
+			item.height = 32;
 			item.maxStack = 999;
 			item.value = Item.sellPrice(copper: 8);
 			item.rare = ItemRarityID.Blue;
