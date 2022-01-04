@@ -27,11 +27,15 @@ namespace MultidimensionMod
             if (npc.type == NPCID.EyeofCthulhu)
             {
                 if (Main.rand.NextFloat() < .2500f)
-                    Item.NewItem(npc.getRect(), mod.ItemType("EyeoftheNightwalker"));
-                if (Main.rand.NextFloat() < .2500f)
                     Item.NewItem(npc.getRect(), mod.ItemType("Iris"));
                 Item.NewItem(npc.getRect(), mod.ItemType("EyeTendril"), Main.rand.Next(3, 6));
                 Item.NewItem(npc.getRect(), mod.ItemType("EyeSoul"));
+            }
+
+            if ((npc.type == NPCID.DemonEye) || (npc.type == NPCID.DemonEye2) || (npc.type == NPCID.PurpleEye) || (npc.type == NPCID.PurpleEye2) || (npc.type == NPCID.GreenEye) || (npc.type == NPCID.GreenEye2) || (npc.type == NPCID.DialatedEye) || (npc.type == NPCID.DialatedEye2) || (npc.type == NPCID.CataractEye) || (npc.type == NPCID.CataractEye2) || (npc.type == NPCID.SleepyEye) || (npc.type == NPCID.SleepyEye2) || (npc.type == NPCID.DemonEyeOwl) || (npc.type == NPCID.DemonEyeSpaceship))
+            {
+                if (Main.rand.NextFloat() < .0300f)
+                    Item.NewItem(npc.getRect(), mod.ItemType("EyeoftheNightwalker"));
             }
 
             if (npc.type == NPCID.ServantofCthulhu)
@@ -154,49 +158,13 @@ namespace MultidimensionMod
                     Item.NewItem(npc.getRect(), mod.ItemType("AncientDragonSkull"));
             }
 
-            if (npc.type == NPCID.CaveBat)
+            if ((npc.type == NPCID.CaveBat) || (npc.type == NPCID.GiantBat))
             {
                 if (Main.rand.NextFloat() < .0300f)
                     Item.NewItem(npc.getRect(), mod.ItemType("EyeoftheExplorer"));
             }
 
-            if (npc.type == NPCID.GiantBat)
-            {
-                if (Main.rand.NextFloat() < .0300f)
-                    Item.NewItem(npc.getRect(), mod.ItemType("EyeoftheExplorer"));
-            }
-
-            if (npc.type == NPCID.EaterofSouls)
-            {
-                if (Main.rand.NextFloat() < .0500f)
-                    Item.NewItem(npc.getRect(), mod.ItemType("EyeoftheHunter"));
-            }
-
-            if (npc.type == NPCID.LittleEater)
-            {
-                if (Main.rand.NextFloat() < .0500f)
-                    Item.NewItem(npc.getRect(), mod.ItemType("EyeoftheHunter"));
-            }
-
-            if (npc.type == NPCID.BigEater)
-            {
-                if (Main.rand.NextFloat() < .0500f)
-                    Item.NewItem(npc.getRect(), mod.ItemType("EyeoftheHunter"));
-            }
-
-            if (npc.type == NPCID.Crimera)
-            {
-                if (Main.rand.NextFloat() < .0500f)
-                    Item.NewItem(npc.getRect(), mod.ItemType("EyeoftheHunter"));
-            }
-
-            if (npc.type == NPCID.LittleCrimera)
-            {
-                if (Main.rand.NextFloat() < .0500f)
-                    Item.NewItem(npc.getRect(), mod.ItemType("EyeoftheHunter"));
-            }
-
-            if (npc.type == NPCID.BigCrimera)
+            if ((npc.type == NPCID.EaterofSouls) || (npc.type == NPCID.LittleEater) || (npc.type == NPCID.BigEater) || (npc.type == NPCID.Crimera) || (npc.type == NPCID.LittleCrimera) || (npc.type == NPCID.BigCrimera))
             {
                 if (Main.rand.NextFloat() < .0500f)
                     Item.NewItem(npc.getRect(), mod.ItemType("EyeoftheHunter"));
@@ -208,13 +176,7 @@ namespace MultidimensionMod
                     Item.NewItem(npc.getRect(), mod.ItemType("EyeofDesire"));
             }
 
-            if (npc.type == NPCID.BlackRecluse)
-            {
-                if (Main.rand.NextFloat() < .0500f)
-                    Item.NewItem(npc.getRect(), mod.ItemType("SpiderCurse"));
-            }
-
-            if (npc.type == NPCID.BlackRecluseWall)
+            if ((npc.type == NPCID.BlackRecluse) || (npc.type == NPCID.BlackRecluseWall))
             {
                 if (Main.rand.NextFloat() < .0500f)
                     Item.NewItem(npc.getRect(), mod.ItemType("SpiderCurse"));
@@ -234,101 +196,12 @@ namespace MultidimensionMod
                     Item.NewItem(npc.getRect(), mod.ItemType("DesertEagle"));
             }
 
-            if (npc.type == NPCID.BoneSerpentHead && NPC.downedBoss3)
+            if ((npc.type == NPCID.BoneSerpentHead && NPC.downedBoss3) || (npc.type == NPCID.BigPantlessSkeleton && NPC.downedBoss3) || (npc.type == NPCID.SmallPantlessSkeleton && NPC.downedBoss3) || (npc.type == NPCID.PantlessSkeleton && NPC.downedBoss3) || (npc.type == NPCID.BigMisassembledSkeleton && NPC.downedBoss3) || (npc.type == NPCID.SmallMisassembledSkeleton && NPC.downedBoss3) || (npc.type == NPCID.MisassembledSkeleton && NPC.downedBoss3) || (npc.type == NPCID.BigSkeleton && NPC.downedBoss3) || (npc.type == NPCID.SmallSkeleton && NPC.downedBoss3) || (npc.type == NPCID.Skeleton && NPC.downedBoss3) || (npc.type == NPCID.Skeleton && NPC.downedBoss3) || (npc.type == NPCID.BigHeadacheSkeleton && NPC.downedBoss3) || (npc.type == NPCID.SmallHeadacheSkeleton && NPC.downedBoss3) || (npc.type == NPCID.HeadacheSkeleton && NPC.downedBoss3))
             {
                 Item.NewItem(npc.getRect(), ItemID.Bone, Main.rand.Next(3, 7));
             }
 
-            if (npc.type == NPCID.BigPantlessSkeleton && NPC.downedBoss3)
-            {
-                Item.NewItem(npc.getRect(), ItemID.Bone, Main.rand.Next(1, 4));
-            }
-
-            if (npc.type == NPCID.SmallPantlessSkeleton && NPC.downedBoss3)
-            {
-                Item.NewItem(npc.getRect(), ItemID.Bone, Main.rand.Next(1, 4));
-            }
-
-            if (npc.type == NPCID.PantlessSkeleton && NPC.downedBoss3)
-            {
-                Item.NewItem(npc.getRect(), ItemID.Bone, Main.rand.Next(1, 4));
-            }
-
-            if (npc.type == NPCID.BigMisassembledSkeleton && NPC.downedBoss3)
-            {
-                Item.NewItem(npc.getRect(), ItemID.Bone, Main.rand.Next(1, 4));
-            }
-
-            if (npc.type == NPCID.SmallMisassembledSkeleton && NPC.downedBoss3)
-            {
-                Item.NewItem(npc.getRect(), ItemID.Bone, Main.rand.Next(1, 4));
-            }
-
-            if (npc.type == NPCID.MisassembledSkeleton && NPC.downedBoss3)
-            {
-                Item.NewItem(npc.getRect(), ItemID.Bone, Main.rand.Next(1, 4));
-            }
-
-            if (npc.type == NPCID.BigSkeleton && NPC.downedBoss3)
-            {
-                Item.NewItem(npc.getRect(), ItemID.Bone, Main.rand.Next(1, 4));
-            }
-
-            if (npc.type == NPCID.SmallSkeleton && NPC.downedBoss3)
-            {
-                Item.NewItem(npc.getRect(), ItemID.Bone, Main.rand.Next(1, 4));
-            }
-
-            if (npc.type == NPCID.Skeleton && NPC.downedBoss3)
-            {
-                Item.NewItem(npc.getRect(), ItemID.Bone, Main.rand.Next(1, 4));
-            }
-
-            if (npc.type == NPCID.Skeleton && NPC.downedBoss3)
-            {
-                Item.NewItem(npc.getRect(), ItemID.Bone, Main.rand.Next(1, 4));
-            }
-
-            if (npc.type == NPCID.BigHeadacheSkeleton && NPC.downedBoss3)
-            {
-                Item.NewItem(npc.getRect(), ItemID.Bone, Main.rand.Next(1, 4));
-            }
-
-            if (npc.type == NPCID.SmallHeadacheSkeleton && NPC.downedBoss3)
-            {
-                Item.NewItem(npc.getRect(), ItemID.Bone, Main.rand.Next(1, 4));
-            }
-
-            if (npc.type == NPCID.HeadacheSkeleton && NPC.downedBoss3)
-            {
-                Item.NewItem(npc.getRect(), ItemID.Bone, Main.rand.Next(1, 4));
-            }
-
-            if (npc.type == NPCID.TinyMossHornet)
-            {
-                if (Main.rand.NextFloat() < .6600f)
-                    Item.NewItem(npc.getRect(), ItemID.Stinger);
-            }
-
-            if (npc.type == NPCID.LittleMossHornet)
-            {
-                if (Main.rand.NextFloat() < .6600f)
-                    Item.NewItem(npc.getRect(), ItemID.Stinger);
-            }
-
-            if (npc.type == NPCID.BigMossHornet)
-            {
-                if (Main.rand.NextFloat() < .6600f)
-                    Item.NewItem(npc.getRect(), ItemID.Stinger);
-            }
-
-            if (npc.type == NPCID.GiantMossHornet)
-            {
-                if (Main.rand.NextFloat() < .6600f)
-                    Item.NewItem(npc.getRect(), ItemID.Stinger);
-            }
-
-            if (npc.type == NPCID.MossHornet)
+            if ((npc.type == NPCID.TinyMossHornet) || (npc.type == NPCID.LittleMossHornet) || (npc.type == NPCID.BigMossHornet) || (npc.type == NPCID.GiantMossHornet) || (npc.type == NPCID.MossHornet))
             {
                 if (Main.rand.NextFloat() < .6600f)
                     Item.NewItem(npc.getRect(), ItemID.Stinger);
@@ -351,12 +224,7 @@ namespace MultidimensionMod
                 Item.NewItem(npc.getRect(), ItemID.LightShard, Main.rand.Next(1, 4));
             }
 
-            if (npc.type == NPCID.BigMimicCrimson)
-            {
-                Item.NewItem(npc.getRect(), ItemID.DarkShard, Main.rand.Next(1, 4));
-            }
-
-            if (npc.type == NPCID.BigMimicCorruption)
+            if ((npc.type == NPCID.BigMimicCrimson) || (npc.type == NPCID.BigMimicCorruption))
             {
                 Item.NewItem(npc.getRect(), ItemID.DarkShard, Main.rand.Next(1, 4));
             }
