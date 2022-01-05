@@ -186,6 +186,8 @@ namespace MultidimensionMod
             {
                 if (Main.rand.NextFloat() < .0500f)
                     Item.NewItem(npc.getRect(), mod.ItemType("SpiderCurse"));
+                if (Main.rand.NextFloat() < .0200f)
+                    Item.NewItem(npc.getRect(), mod.ItemType("SpooderLexicon"));
             }
 
             if (npc.type == NPCID.Demon)
