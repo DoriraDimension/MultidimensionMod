@@ -34,7 +34,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 			item.knockBack = 2;
 			item.value = Item.sellPrice(silver: 12);
 			item.rare = ItemRarityID.Green;
-			item.UseSound = SoundID.Item20;
+			item.UseSound = SoundID.Item83;
 			item.autoReuse = true;
 			item.shoot = ModContent.ProjectileType<Spooder>();
 			item.shootSpeed = 9f;
