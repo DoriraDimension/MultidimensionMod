@@ -26,7 +26,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void Kill(int timeLeft)
 		{
-			Main.PlaySound(SoundID.Item8, projectile.position);
+			Main.PlaySound(SoundID.NPCHit29, projectile.position);
 
 			for (int i = 0; i < 6; i++)
 			{
