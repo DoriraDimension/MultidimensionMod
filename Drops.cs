@@ -176,6 +176,12 @@ namespace MultidimensionMod
                     Item.NewItem(npc.getRect(), mod.ItemType("EyeofDesire"));
             }
 
+            if ((npc.type == NPCID.WallCreeper) || (npc.type == NPCID.WallCreeperWall))
+            {
+                if (Main.rand.NextFloat() < .0200f)
+                    Item.NewItem(npc.getRect(), mod.ItemType("SpooderLexicon"));
+            }
+
             if ((npc.type == NPCID.BlackRecluse) || (npc.type == NPCID.BlackRecluseWall))
             {
                 if (Main.rand.NextFloat() < .0500f)
