@@ -14,7 +14,7 @@ namespace MultidimensionMod.Projectiles.Minions
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Dark Rebel");
-			Main.projFrames[projectile.type] = 4;
+			Main.projFrames[projectile.type] = 6;
 			ProjectileID.Sets.MinionTargettingFeature[projectile.type] = true;
 			Main.projPet[projectile.type] = true;
 			ProjectileID.Sets.MinionSacrificable[projectile.type] = true;
