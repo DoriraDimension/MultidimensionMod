@@ -28,8 +28,8 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			item.summon = true;
 			item.knockBack = 1f;
 			item.mana = 10;
-			item.width = 58;
-			item.height = 54;
+			item.width = 40;
+			item.height = 38;
 			item.useTime = 36;
 			item.useAnimation = 36;
 			item.useStyle = ItemUseStyleID.HoldingOut;
