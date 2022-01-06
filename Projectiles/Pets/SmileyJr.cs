@@ -9,13 +9,13 @@ namespace MultidimensionMod.Projectiles.Pets
 	{
 		public override void SetStaticDefaults() {
 			DisplayName.SetDefault("Smiley Jr");
-			Main.projFrames[projectile.type] = 4;
+			Main.projFrames[projectile.type] = 14;
 			Main.projPet[projectile.type] = true;
 		}
 
 		public override void SetDefaults() {
-			projectile.width = 46;
-			projectile.height = 46;
+			projectile.width = 32;
+			projectile.height = 32;
 			projectile.tileCollide = false;
 			projectile.friendly = true;
 		}
@@ -34,16 +34,45 @@ namespace MultidimensionMod.Projectiles.Pets
 			}
 
 			int frameSpeed = 7;
+			Player projOwner = Main.player[projectile.owner];
 			projectile.frameCounter++;
-			if (projectile.frameCounter >= frameSpeed)
+			if (projOwner.statLife >= projOwner.statLifeMax2 / 4)
 			{
-				projectile.frameCounter = 0;
-				projectile.frame++;
-				if (projectile.frame >= Main.projFrames[projectile.type])
+				if (projectile.frameCounter > 5)
+				{
+					projectile.frame++;
+					projectile.frameCounter = 0;
+				}
+				if (projectile.frame > 3)
 				{
 					projectile.frame = 0;
 				}
 			}
+			else if (projOwner.statLife <= projOwner.statLifeMax2 / 4)
+			{
+				if (projectile.frameCounter > 5)
+				{
+					projectile.frame++;
+					projectile.frameCounter = 0;
+				}
+				if (projectile.frame > 7)
+				{
+					projectile.frame = 4;
+				}
+			}
+			else if (!Main.dayTime)
+			{
+				if (projectile.frameCounter > 5)
+				{
+					projectile.frame++;
+					projectile.frameCounter = 0;
+				}
+				if (projectile.frame > 13)
+				{
+					projectile.frame = 8;
+				}
+			}
+
 
 			if (projectile.velocity.X > -0.1)
             {
