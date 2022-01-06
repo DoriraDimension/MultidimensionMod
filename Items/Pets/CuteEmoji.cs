@@ -19,8 +19,8 @@ namespace MultidimensionMod.Items.Pets
 			item.CloneDefaults(ItemID.ZephyrFish);
 			item.shoot = ModContent.ProjectileType<Projectiles.Pets.SmileyJr>();
 			item.buffType = ModContent.BuffType<SmileyJrBuff>();
-			item.width = 32;
-			item.height = 32;
+			item.width = 22;
+			item.height = 22;
 			item.value = Item.sellPrice(silver: 25);
 			item.rare = ItemRarityID.Orange;
 		}
