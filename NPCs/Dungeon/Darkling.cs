@@ -15,7 +15,7 @@ namespace MultidimensionMod.NPCs.Dungeon
 		{
 			DisplayName.SetDefault("Darkling");
 			DisplayName.AddTranslation(GameCulture.German, "Dunkelling");
-			Main.npcFrameCount[npc.type] = 4;
+			Main.npcFrameCount[npc.type] = 6;
 		}
 
 		public override void SetDefaults()
@@ -32,7 +32,6 @@ namespace MultidimensionMod.NPCs.Dungeon
 			npc.knockBackResist = 0.6f;
 			npc.aiStyle = 10;
 			aiType = NPCID.CursedSkull;
-			animationType = NPCID.Harpy;
 			banner = npc.type;
 			bannerItem = ModContent.ItemType<DarklingBanner>();
 		}
@@ -60,6 +59,20 @@ namespace MultidimensionMod.NPCs.Dungeon
 				dust.velocity.X = dust.velocity.X + Main.rand.Next(-50, 51) * 0.01f;
 				dust.velocity.Y = dust.velocity.Y + Main.rand.Next(-50, 51) * 0.01f;
 				dust.scale *= 1f + Main.rand.Next(-30, 31) * 0.01f;
+			}
+		}
+
+		public override void FindFrame(int frameHeight)
+		{
+			npc.frameCounter += 1.0;
+			if (npc.frameCounter >= 5.0)
+			{
+				npc.frameCounter = 0.0;
+				npc.frame.Y += frameHeight;
+				if (npc.frame.Y >= Main.npcFrameCount[npc.type] * frameHeight)
+				{
+					npc.frame.Y = 0;
+				}
 			}
 		}
 	}
