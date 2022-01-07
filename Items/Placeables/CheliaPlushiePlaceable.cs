@@ -10,7 +10,7 @@ namespace MultidimensionMod.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Shapeshifter Plushie (placable)");
+			DisplayName.SetDefault("Shapeshifter Plushie (placeable)");
 			Tooltip.SetDefault("A cuddly plushie that looks like a unknown friend of the Dimensional God.\nWhy is he selling these?");
 			DisplayName.AddTranslation(GameCulture.German, "Gestaltwandlerin Plüschtier");
 			Tooltip.AddTranslation(GameCulture.German, "Ein kuschliges Plüschtier das wie ein unbekannter Freund des dimensionalen Gottess aussieht.\nWarum verkauft er die?");
