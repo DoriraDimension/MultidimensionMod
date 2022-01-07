@@ -41,23 +41,49 @@ namespace MultidimensionMod.Items.Accessories
 		{
 			player.lifeRegen += 2;
 			player.statLifeMax2 += 50;
-			player.wingTimeMax = 180;
+			if (NPC.downedGolemBoss)
+			{
+				player.wingTimeMax = 160;
+			}
+			else
+            {
+				player.wingTimeMax = 120;
+            }
 		}
 
 		public override void VerticalWingSpeeds(Player player, ref float ascentWhenFalling, ref float ascentWhenRising,
 	ref float maxCanAscendMultiplier, ref float maxAscentMultiplier, ref float constantAscend)
 		{
-			ascentWhenFalling = 0.50f;
-			ascentWhenRising = 0.20f;
-			maxCanAscendMultiplier = 2f;
-			maxAscentMultiplier = 4f;
-			constantAscend = 0.100f;
+			if (NPC.downedGolemBoss)
+			{
+				ascentWhenFalling = 0.35f;
+				ascentWhenRising = 0.10f;
+				maxCanAscendMultiplier = 1.5f;
+				maxAscentMultiplier = 3f;
+				constantAscend = 0.100f;
+			}
+			else
+            {
+				ascentWhenFalling = 0.50f;
+				ascentWhenRising = 0.20f;
+				maxCanAscendMultiplier = 2f;
+				maxAscentMultiplier = 2f;
+				constantAscend = 0.100f;
+			}
 		}
 
 		public override void HorizontalWingSpeeds(Player player, ref float speed, ref float acceleration)
 		{
-			speed = 10f;
-			acceleration *= 3.0f;
+			if (NPC.downedGolemBoss)
+			{
+				speed = 10f;
+				acceleration *= 3.0f;
+			}
+			else
+            {
+				speed = 5;
+				acceleration *= 1.8f;
+            }
 		}
 
 		public override void AddRecipes()
