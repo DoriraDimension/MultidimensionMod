@@ -13,7 +13,7 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Cold Desert Shield");
-			Tooltip.SetDefault("Combining both, desert and frost magic results in a strong protecting shield.\nIncreases defense by 6 and damage reduction by 4% when in the Desert or Snow biome.\nIncreases defense by 4 when under 50% life");
+			Tooltip.SetDefault("Combining both, desert and frost magic results in a strong protecting shield.\nIncreases all damage and crit chance by 4%, increases defense by 6 and damage reduction by 4% when in the Desert or Snow biome.\nIncreases defense by 4 when under 50% life");
 			DisplayName.AddTranslation(GameCulture.German, "Kalter Wüstenschild");
 			Tooltip.AddTranslation(GameCulture.German, "Wenn Wüsten und Frost Magie kombiniert werden wird ein starker beschützender Schild erschaffen.\nErhöht verteidigung um 6 und Schadensreduzierung um 4% wenn im Wüsten oder Schnee Biom.\nErhöht Verteidigung um 4 wenn Leben ist unter 50%.");
 		}
@@ -32,6 +32,11 @@ namespace MultidimensionMod.Items.Accessories
 		{
 			if (player.ZoneSnow || player.ZoneDesert)
 			{
+				player.allDamage += 0.4f;
+				player.meleeCrit += 4;
+				player.rangedCrit += 4;
+				player.magicCrit += 4;
+				player.thrownCrit += 4;
 				player.statDefense += 6;
 				player.endurance += 0.04f;
 			}
