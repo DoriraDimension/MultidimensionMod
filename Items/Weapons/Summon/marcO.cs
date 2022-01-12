@@ -34,7 +34,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			item.useAnimation = 36;
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.value = Item.sellPrice(silver: 10);
-			item.rare = ItemRarityID.Green;
+			item.rare = ItemRarityID.Yellow;
 			item.UseSound = SoundID.NPCHit23;
 			item.autoReuse = true;
 			item.noMelee = true;
