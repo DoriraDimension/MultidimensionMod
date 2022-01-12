@@ -40,7 +40,7 @@ namespace MultidimensionMod.NPCs.Desert
 		{
 			Item.NewItem(npc.getRect(), mod.ItemType("ManaInfusedSandstone"), Main.rand.Next(1, 3));
 
-			if (Main.rand.NextFloat() < .8000f)
+			if (Main.rand.NextFloat() < .0300f)
 			{
 				Item.NewItem(npc.getRect(), mod.ItemType("SandBun"));
 			}
