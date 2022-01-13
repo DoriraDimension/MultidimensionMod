@@ -33,7 +33,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.shoot = ProjectileID.MiniSharkron;
-			item.shootSpeed = 6f;
+			item.shootSpeed = 11f;
 			item.crit = 12;
 		}
 
