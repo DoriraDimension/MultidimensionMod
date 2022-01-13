@@ -40,7 +40,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<EyeTendril>(), 12);
+			recipe.AddIngredient(ModContent.ItemType<EyeTendril>(), 5);
 			recipe.AddTile(16);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
