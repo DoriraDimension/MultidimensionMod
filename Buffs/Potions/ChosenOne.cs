@@ -9,10 +9,10 @@ namespace MultidimensionMod.Buffs.Potions
     {
         public override void SetDefaults()
         {
-            DisplayName.SetDefault("Chosen One");
-            Description.SetDefault("You are filled with the power of a former hero.");
-            DisplayName.AddTranslation(GameCulture.German, "Auserwählter");
-            Description.AddTranslation(GameCulture.German, "Du bist erfüllt von der Kraft eines ehemaligen Helden.");
+            DisplayName.SetDefault("Weird Essence");
+            Description.SetDefault("You are filled with the power of a ancient being.");
+            DisplayName.AddTranslation(GameCulture.German, "Seltsame Essenz");
+            Description.AddTranslation(GameCulture.German, "Du bist erfüllt von der Kraft eines uralten Wesens.");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = false;
         }
