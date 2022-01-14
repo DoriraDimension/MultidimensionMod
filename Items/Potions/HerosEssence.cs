@@ -1,4 +1,6 @@
 ﻿using MultidimensionMod.Buffs.Potions;
+using MultidimensionMod.Tiles;
+using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -10,17 +12,17 @@ namespace MultidimensionMod.Items.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Hero's Essence");
-            Tooltip.SetDefault("Gives you the powers of a former hero.");
-            DisplayName.AddTranslation(GameCulture.German, "Essenz des Helden");
-            Tooltip.AddTranslation(GameCulture.German, "Gibt dir die Kraft eines ehemaligen Helden.");
+            DisplayName.SetDefault("Eternal's Essence");
+            Tooltip.SetDefault("Grants temporary a tiny bit of weird power.");
+            DisplayName.AddTranslation(GameCulture.German, "Essenz des Eternals");
+            Tooltip.AddTranslation(GameCulture.German, "Gewährt temporär ein winziges stück seltsame Kraft.");
         }
 
         public override void SetDefaults()
         {
-            item.width = 22;
-            item.height = 26;
-            item.useStyle = ItemUseStyleID.HoldingOut;
+            item.width = 20;
+            item.height = 30;
+            item.useStyle = ItemUseStyleID.EatingUsing;
             item.useAnimation = 15;
             item.useTime = 15;
             item.useTurn = true;
@@ -39,8 +41,8 @@ namespace MultidimensionMod.Items.Potions
             recipe.AddIngredient(ModContent.ItemType<Potions.MegaDemondrug>());
             recipe.AddIngredient(ModContent.ItemType<Potions.PotionofLife>());
             recipe.AddIngredient(ModContent.ItemType<Potions.DimensionalShieldPotion>());
-            recipe.AddIngredient(ItemID.Ectoplasm);
-            recipe.AddTile(355);
+            recipe.AddIngredient(ModContent.ItemType<Dimensium>(), 3);
+            recipe.AddTile(ModContent.TileType<DimensionalForge>());
             recipe.SetResult(this);
             recipe.AddRecipe();
 
