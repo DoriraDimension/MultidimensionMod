@@ -4,6 +4,7 @@ using MultidimensionMod.Items.Weapons.Melee.Boomerangs;
 using MultidimensionMod.Items.Weapons.Melee.Swords;
 using MultidimensionMod.Items.Weapons.Magic.Guns;
 using MultidimensionMod.Items.Weapons.Ranged;
+using MultidimensionMod;
 using System;
 using System.Collections.Generic;
 using System.Linq;
