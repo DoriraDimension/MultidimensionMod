@@ -12,9 +12,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Healthy Cap");
-			Tooltip.SetDefault("A healthy mushroom filled with healing potion liquid.\nIncreases the amount of health, healed by mushrooms by 60.");
+			Tooltip.SetDefault("A healthy mushroom filled with healing potion liquid.\nIncreases max HP by 35.");
 			DisplayName.AddTranslation(GameCulture.German, "Gesunde Kappe");
-			Tooltip.AddTranslation(GameCulture.German, "Ein gesunder Pilz der mit Heiltrank Flüssigkeit gefüllt ist.\nErhöht die Heilkraft von Pilzen um 60.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein gesunder Pilz der mit Heiltrank Flüssigkeit gefüllt ist.\nErhöht die maximalen Lebenspunkte um 35.");
 		}
 
 		public override void SetDefaults()
@@ -28,7 +28,7 @@ namespace MultidimensionMod.Items.Accessories
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.GetModPlayer<MDPlayer>().HealthCap = true;
+			player.statLifeMax2 += 35;
 		}
 
 		public override void AddRecipes()
