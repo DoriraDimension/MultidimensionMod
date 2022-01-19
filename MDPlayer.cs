@@ -37,6 +37,10 @@ namespace MultidimensionMod
 
         public bool PrismaRune;
 
+        public bool HealthCap;
+
+        public bool ZoneColdHell;
+
         public override void ResetEffects()
         {
             SmileyJr = false;
@@ -49,6 +53,7 @@ namespace MultidimensionMod
             KiminoRune = false;
             KushoRune = false;
             PrismaRune = false;
+            HealthCap = false;
         }
 
         public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath)
@@ -128,6 +133,26 @@ namespace MultidimensionMod
             {
                 target.AddBuff(BuffID.Slow, 120);
             }
+        }
+
+        public override void UpdateBiomes()
+        {
+            ZoneColdHell = MDWorld.ColdHellTiles > 100;
+        }
+
+        public override void CopyCustomBiomesTo(Player other)
+        {
+            MDPlayer modOther = other.GetModPlayer<MDPlayer>();
+            modOther.ZoneColdHell = ZoneColdHell;
+        }
+
+        public override Texture2D GetMapBackgroundImage()
+        {
+            if (ZoneColdHell)
+            {
+                return mod.GetTexture("Backgrounds/MapBackgrounds/ColdHellMapBackground");
+            }
+            return null;
         }
     }
 }
