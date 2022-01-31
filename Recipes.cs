@@ -249,7 +249,7 @@ namespace MultidimensionMod
 			recipe.AddIngredient(1134, 5);
 			recipe.AddIngredient(23, 10);
 			recipe.AddIngredient(317, 2);
-			recipe.AddIngredient(269, 4);
+			recipe.AddIngredient(369, 4);
 			recipe.AddTile(355);
 			recipe.SetResult(892);
 			recipe.AddRecipe();
