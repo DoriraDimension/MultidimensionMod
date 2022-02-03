@@ -49,6 +49,75 @@ namespace MultidimensionMod
 				item.damage = 31;
 				item.autoReuse = true;
 			}
+			if (item.type == ItemID.Blinkroot)
+            {
+				item.useStyle = ItemUseStyleID.EatingUsing;
+				item.useAnimation = 15;
+				item.useTime = 15;
+				item.UseSound = SoundID.Item2;
+				item.consumable = true;
+				item.buffType = (11); //Shine
+				item.buffTime = 1800;
+            }
+			if (item.type == ItemID.Deathweed)
+			{
+				item.useStyle = ItemUseStyleID.EatingUsing;
+				item.useAnimation = 15;
+				item.useTime = 15;
+				item.UseSound = SoundID.Item2;
+				item.consumable = true;
+				item.buffType = (70); //Venom
+				item.buffTime = 1800;
+			}
+			if (item.type == ItemID.Fireblossom)
+			{
+				item.useStyle = ItemUseStyleID.EatingUsing;
+				item.useAnimation = 15;
+				item.useTime = 15;
+				item.UseSound = SoundID.Item2;
+				item.consumable = true;
+				item.buffType = (124); //Warmth
+				item.buffTime = 1800;
+			}
+			if (item.type == ItemID.Daybloom)
+			{
+				item.useStyle = ItemUseStyleID.EatingUsing;
+				item.useAnimation = 15;
+				item.useTime = 15;
+				item.UseSound = SoundID.Item2;
+				item.consumable = true;
+				item.buffType = (2); //Life Regen
+				item.buffTime = 1800;
+			}
+			if (item.type == ItemID.Moonglow)
+			{
+				item.useStyle = ItemUseStyleID.EatingUsing;
+				item.useAnimation = 15;
+				item.useTime = 15;
+				item.UseSound = SoundID.Item2;
+				item.consumable = true;
+				item.buffType = (20); //Poison
+				item.buffTime = 1800;
+			}
+			if (item.type == ItemID.Shiverthorn)
+			{
+				item.useStyle = ItemUseStyleID.EatingUsing;
+				item.useAnimation = 15;
+				item.useTime = 15;
+				item.UseSound = SoundID.Item2;
+				item.consumable = true;
+				item.buffType = (46); //Chilled
+				item.buffTime = 1800;
+			}
+			if (item.type == ItemID.Waterleaf)
+			{
+				item.useStyle = ItemUseStyleID.EatingUsing;
+				item.useAnimation = 15;
+				item.useTime = 15;
+				item.UseSound = SoundID.Item2;
+				item.consumable = true;
+				item.healLife = 10;
+			}
 		}
 	}
 }
