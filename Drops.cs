@@ -359,6 +359,12 @@ namespace MultidimensionMod
                         Item.NewItem(npc.getRect(), mod.ItemType("Mushmatter"));
                 }
             }
+
+            if (npc.type == NPCID.SpikedJungleSlime)
+            {
+                if (Main.rand.NextFloat() < .0800f)
+                    Item.NewItem(npc.getRect(), mod.ItemType("StinkyPaste"));
+            }
         }
     }
 }
