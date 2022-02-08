@@ -13,9 +13,9 @@ namespace MultidimensionMod.Items.Potions
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Eternal's Essence");
-            Tooltip.SetDefault("Grants temporary a tiny bit of weird power.");
+            Tooltip.SetDefault("Grants temporary a tiny bit of weird power.\nThe weird essence inside this container is very potent and yet seems to be nothing more than just a tiny shard.");
             DisplayName.AddTranslation(GameCulture.German, "Essenz des Eternals");
-            Tooltip.AddTranslation(GameCulture.German, "Gewährt temporär ein winziges stück seltsame Kraft.");
+            Tooltip.AddTranslation(GameCulture.German, "Gewährt temporär ein winziges stück seltsame Kraft.\nDie seltsame Essenz in diesem Kontainer ist sehr potent und ist trozdem nichts weiter als ein winziger Splitter.");
         }
 
         public override void SetDefaults()
