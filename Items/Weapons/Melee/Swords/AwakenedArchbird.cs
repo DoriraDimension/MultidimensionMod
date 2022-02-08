@@ -12,9 +12,9 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Awakened Archbird");
-			Tooltip.SetDefault("A sword shaped like a legendary bird found in ancient depictions in the desert, it is full of dark flames.\nShoots shadowflame tentacles when swung and slows enemies when hit for 5 seconds.");
+			Tooltip.SetDefault("A sword shaped like a legendary bird found in ancient depictions in the desert, it is full of dark flames.\nShoots shadowflame tentacles when swung and slows enemies when hit for 5 seconds.\nInscriptions say that one day the archbird will swoop down and bathe the earth in it's dark flames.");
 			DisplayName.AddTranslation(GameCulture.German, "Erwachter Erzvogel");
-			Tooltip.AddTranslation(GameCulture.German, "Ein Schwert geformt wie ein legendärer Vogel aus alten Abbildungen in der Wüste, es ist voll von dunklen Flammen\nSchießt Schattenflammen Tentakel wenn geschwungen und verlangsamt Gegner wenn getroffen für 5 Sekunden.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein Schwert geformt wie ein legendärer Vogel aus alten Abbildungen in der Wüste, es ist voll von dunklen Flammen\nSchießt Schattenflammen Tentakel wenn geschwungen und verlangsamt Gegner wenn getroffen für 5 Sekunden.\nInschriften besagen das eines Tages der Erzvogel hinabgleiten wird und die Erde in seinen dunklen Flammen badet.");
 		}
 
 		public override void SetDefaults()

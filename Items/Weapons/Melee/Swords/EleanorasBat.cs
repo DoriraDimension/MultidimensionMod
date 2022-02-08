@@ -11,10 +11,10 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dimensional Goddess's Bat");
-			Tooltip.SetDefault("Enemies will Bleed and burn on hit. \nDa Bat.");
+			DisplayName.SetDefault("Dimensional Goddess' Bat");
+			Tooltip.SetDefault("Enemies will Bleed and burn on hit.\nDa Bat.");
 			DisplayName.AddTranslation(GameCulture.German, "Baseballschläger der Dimensions Göttin");
-			Tooltip.AddTranslation(GameCulture.German, "Gegner werden bluten und brennen wenn getroffen. \nDa Bat");
+			Tooltip.AddTranslation(GameCulture.German, "Gegner werden bluten und brennen wenn getroffen.\nDa Bat");
 		}
 
 		public override void SetDefaults()

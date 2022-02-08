@@ -13,9 +13,9 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Eclipse Reaper");
-			Tooltip.SetDefault("A scythe said to bear incredible power, it was sealed away and hoped to be forgotten.");
+			Tooltip.SetDefault("The reapers that appear during the eclipse are followers of the Dimensional Death,\nfar down the line as the most unimportant servants,\nthough some of them have the honor to wield a scythe with incredible power");
 			DisplayName.AddTranslation(GameCulture.German, "Eklipsen Schnitter");
-			Tooltip.AddTranslation(GameCulture.German, "Eine Sense von der gesagt wird das sie unglaubliche Kraft besitzt, sie wurde versiegelt mit der Hoffnung das sie vergessen wird.");
+			Tooltip.AddTranslation(GameCulture.German, "Die Sensenmänner die während der Sonnenfinsternis erscheinen sind anhänger des Dimensionalen Tods,\nganz weit unten auf der Liste der relevanz,\nallerdings haben manche von ihnen die Ehre eine Sense mit unglaublicher Kraft zu halten.");
 		}
 
 		public override void SetDefaults()
