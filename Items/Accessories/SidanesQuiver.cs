@@ -13,9 +13,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Sidane's Quiver");
-			Tooltip.SetDefault("The magitech quiver owned by the creator Sidane. \nIncreases arrow damage by 10%, ranged damage by 10% and greatly increases arrow speed \n20% chance to not consume arrows.");
+			Tooltip.SetDefault("The magitech quiver owned by the creator Sidane.\nSidane is one of the less serious members of the creator council, he would sometimes fly around on a hoverboard and use others inventions as targets for training.\nIncreases arrow damage by 10%, ranged damage by 10% and greatly increases arrow speed \n20% chance to not consume arrows.");
 			DisplayName.AddTranslation(GameCulture.German, "Sidane's Köcher");
-			Tooltip.AddTranslation(GameCulture.German, "Der Magitech Köcher welcher dem Schöpfer Sidane gehört. \nErhöt Pfeil und fernkampfschaden um 10% und erhöht Pfeilgeschwindigkeit stark. \n20% Chance keine Pfeile zu verbrauchen. \nErhöt Rüstungsdurchdringung um 10.");
+			Tooltip.AddTranslation(GameCulture.German, "Der Magitech Köcher welcher dem Schöpfer Sidane gehört.\nSidane ist einer der weniger ernsten mitglieder des Rats der Schöpfer,\ner würde manchmal auf einem Hoverboard herumfliegen und anderer Leute erfindungen als Zielscheiben werwenden.\nErhöt Pfeil und fernkampfschaden um 10% und erhöht Pfeilgeschwindigkeit stark. \n20% Chance keine Pfeile zu verbrauchen. \nErhöt Rüstungsdurchdringung um 10.");
 		}
 
 		public override void SetDefaults()

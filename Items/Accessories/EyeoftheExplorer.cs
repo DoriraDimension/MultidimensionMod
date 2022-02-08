@@ -12,9 +12,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Eye of the Explorer");
-			Tooltip.SetDefault("Always be careful when you explore a new area. \nYou can see danger sources.");
+			Tooltip.SetDefault("A true adventurer can sense traps and danger.\nOne of the forbidden eyes.\nYou can see danger sources.");
 			DisplayName.AddTranslation(GameCulture.German, "Auge des Erkunders");
-			Tooltip.AddTranslation(GameCulture.German, "Sei immer vorsichtig wenn du ein neues Gebiet erkundest. \nDu kannst jetzt Gefahrenquellen sehen.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein wahrer Abenteurer kann Fallen und Gefahren spüren.\nEins der verbotenen Augen.\nDu kannst jetzt Gefahrenquellen sehen.");
 		}
 
 		public override void SetDefaults()

@@ -12,9 +12,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Desert Necklace");
-			Tooltip.SetDefault("A magical necklace, created with the mana infused sand from a Lesser Sand Elemental.\nIncreases all damage and crit chance by 4% when in the Desert.");
+			Tooltip.SetDefault("A magical necklace, created with the mana infused sand from a Lesser Sand Elemental.\nIt is unknown why the gem only reacts to the dry aura of deserts so are its actual origins.\nIncreases all damage and crit chance by 4% when in the Desert.");
 			DisplayName.AddTranslation(GameCulture.German, "Wüsten Halskette");
-			Tooltip.AddTranslation(GameCulture.German, "Eine magische Halskette, geschaffen mit dem mana durchwirkten Sand eines Niederen Sand Elementars.\nErhöht allen Schaden und Kritische Trefferchance um 4% wenn in der Wüste.");
+			Tooltip.AddTranslation(GameCulture.German, "Eine magische Halskette, geschaffen mit dem mana durchwirkten Sand eines Niederen Sand Elementars.\nEs ist nicht bekannt warum der Edelstein nur auf die trockene Aura von Wüsten reagiert und so sind seine Ursprünge.\nErhöht allen Schaden und Kritische Trefferchance um 4% wenn in der Wüste.");
 		}
 
 		public override void SetDefaults()

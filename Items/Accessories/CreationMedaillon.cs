@@ -11,9 +11,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Creation Medaillon");
-			Tooltip.SetDefault("The creation Titan's medaillon, very powerful and full of energy.\nIncreases all damage by 10% and crit chance by 10%.\nDecreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen by 2.\nIncreases invincibility time and rains down stars after getting hit. \nGives a variety of additional stat bonuses.");
+			Tooltip.SetDefault("A replica of the creation medaillon, not as powerful as the original but often used as a talisman for good fortune.\nThe medaillon resembles the deity circle, a group of powerful beings where every triangle stands for one deity while the eye resembles the creation titan.\nIncreases all damage by 10% and crit chance by 10%.\nDecreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen by 2.\nIncreases invincibility time and rains down stars after getting hit. \nGives a variety of additional stat bonuses.");
 			DisplayName.AddTranslation(GameCulture.German, "Schöpfungs Medaillon");
-			Tooltip.AddTranslation(GameCulture.German, "Das Medaillon des Schöpfungstitanen, sehr mächtig und voll mit Energie. \nErhöht allen schaden und Kritische Trefferchance um 10% \nVerringert die dauer der Tränkekrankheit zu 45 Sekunden und erhöht Lebenregeneration um 2. \nVerlängert Unverwundbarkeit und es regnen sterne vom Himmel when getroffen. \nGibt ein paar weitere stat erhöhungen.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein Replikat des Schöpfungs Medaillon, nicht so machtvoll wird aber oft als Talisman für Glück benutzt.\nDas Medaillon stellt den Götterkreis dar, eine Gruppe von mächtigen Wesen wo jedes Dreieck für eine Gottheit steht während das Auge für den Schöpfungstitanen steht.\nErhöht allen schaden und Kritische Trefferchance um 10% \nVerringert die dauer der Tränkekrankheit zu 45 Sekunden und erhöht Lebenregeneration um 2. \nVerlängert Unverwundbarkeit und es regnen sterne vom Himmel when getroffen. \nGibt ein paar weitere stat erhöhungen.");
 		}
 
 		public override void SetDefaults()

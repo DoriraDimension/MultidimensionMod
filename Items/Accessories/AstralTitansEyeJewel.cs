@@ -12,9 +12,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Astral Titan's Eye Jewel");
-			Tooltip.SetDefault("Part of the medallion of the dimensional god's envoy. \nDecreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen by 2. \nIncreases invincibility time and rains down stars after getting hit.");
+			Tooltip.SetDefault("A jewel made to look like the eyes of the creation titan.\nDecreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen by 2. \nIncreases invincibility time and rains down stars after getting hit.");
 			DisplayName.AddTranslation(GameCulture.German, "Augenjuwel des Astral Titanen");
-			Tooltip.AddTranslation(GameCulture.German, "Teil des Medaillons des gesandten des Dimensionsgottes. \nVerringert die dauer der Tränkekrankheit zu 45 Sekunden und erhöht Lebenregeneration um 2. \nVerlängert Unverwundbarkeit und es regnen sterne vom Himmel when getroffen.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein Juwel gemacht um wie die Augen des Schöpfungstitanen auszusehen. \nVerringert die dauer der Tränkekrankheit zu 45 Sekunden und erhöht Lebenregeneration um 2. \nVerlängert Unverwundbarkeit und es regnen sterne vom Himmel when getroffen.");
 		}
 
 		public override void SetDefaults()

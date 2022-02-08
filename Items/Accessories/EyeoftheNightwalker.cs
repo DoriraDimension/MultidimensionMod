@@ -16,9 +16,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Eye of the Nightwalker");
-			Tooltip.SetDefault("So you wont trip over something again while going to the bathroom. \nYou now have improved vision at night.");
+			Tooltip.SetDefault("A true resident of the night can see through the darkness.\nOne of the forbidden eyes.\nYou now have improved vision at night.");
 			DisplayName.AddTranslation(GameCulture.German, "Auge des Nachtläufers");
-			Tooltip.AddTranslation(GameCulture.German, "So das du nicht wieder über irgendetwas stolperst wenn du zum Badezimmer musst. \nDu hast verbesserte Nachtsicht in der Nacht.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein wahrer bewohner der Nacht kann durch die Dunkelheit sehen.\nEins der verbotenen Augen.\nDu hast verbesserte Nachtsicht in der Nacht.");
 		}
 
 		public override void SetDefaults()

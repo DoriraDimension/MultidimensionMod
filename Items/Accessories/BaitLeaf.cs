@@ -11,9 +11,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Bait Leaf");
-			Tooltip.SetDefault("A aromatic leaf, perfect to get in more followers.\nGives +1 minion slot");
+			Tooltip.SetDefault("A aromatic leaf from another dimension, its strong scent can even lure in bigger predators.\nThese might be useful to attract helpers, but be aware of possible stronger foes getting attracted too.\nGives +1 minion slot");
 			DisplayName.AddTranslation(GameCulture.German, "Köderblatt");
-			Tooltip.AddTranslation(GameCulture.German, "Ein aromatisches Blatt, perfekt um neue anhänger zu bekommen.\nGibt +1 Minion Slot.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein aromatisches Blatt aus einer anderen Dimension, sein starker Geruch kann selbst große Raubtiere anlocken.\nDiese Blätter mögen zwar hilfreich sein um Helfer anzulocken, aber sei vorsichtig das keine möglichen stärkeren Feinde angelockt werden.\nGibt +1 Minion Slot.");
 		}
 
 		public override void SetDefaults()

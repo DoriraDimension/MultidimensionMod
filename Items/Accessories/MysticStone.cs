@@ -12,9 +12,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Mystic Stone");
-			Tooltip.SetDefault("This stone pulses with magical energy and increases max mana by 40.");
+			Tooltip.SetDefault("This stone pulses with magical energy and increases max mana by 40.\nThe energy that surrounds the hallow has very potent magical capabilities,\nthe growing crystal shards can sometimes turn into even bigger crystals filled to the brim with magic.");
 			DisplayName.AddTranslation(GameCulture.German, "Mystischer Stein");
-			Tooltip.AddTranslation(GameCulture.German, "Dieser Stein pulsiert mit magischer Energy und erhöht maximales Mana um 40.");
+			Tooltip.AddTranslation(GameCulture.German, "Dieser Stein pulsiert mit magischer Energie und erhöht maximales Mana um 40.\nDie Energie die das Heilige umgibt hat sehr potente magische Eigenschaften,\ndie wachsenden Kristallscherben können manchmal viel größer werden, gefüllt bis zum Rand mit magischer Energie.");
 		}
 
 		public override void SetDefaults()

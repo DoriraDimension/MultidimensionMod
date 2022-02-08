@@ -12,9 +12,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Eye of the Hunter");
-			Tooltip.SetDefault("A true hunter can sense its prey. \nYou can now sense your enemies everywhere.");
+			Tooltip.SetDefault("A true hunter can sense its prey.\nOne of the forbidden eyes.\nYou can now sense your enemies everywhere.");
 			DisplayName.AddTranslation(GameCulture.German, "Auge des Jägers");
-			Tooltip.AddTranslation(GameCulture.German, "Ein wahrer Jäger kann seine Beute spüren. \nDu kannst deine Gegner jetzt überall spüren.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein wahrer Jäger kann seine Beute spüren.\nEins der verbotenen Augen.\nDu kannst deine Gegner jetzt überall spüren.");
 		}
 
 		public override void SetDefaults()

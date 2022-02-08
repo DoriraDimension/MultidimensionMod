@@ -12,9 +12,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Eye of Desire");
-			Tooltip.SetDefault("The true greed can find every treasure. \nYour greedy eyes can now see treasures.");
+			Tooltip.SetDefault("A true greed can find every treasure.\nOne of the forbidden eyes.\nYour greedy eyes can now see treasures.");
 			DisplayName.AddTranslation(GameCulture.German, "Auge des Verlangens");
-			Tooltip.AddTranslation(GameCulture.German, "Ein wahrer Gierschlund kann jeden Schatz finden. \nDeine gierigen Augen können jetzt Schätze sehen.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein wahrer Gierschlund kann jeden Schatz finden.\nEins der verbotenen Augen.\nDeine gierigen Augen können jetzt Schätze sehen.");
 		}
 
 		public override void SetDefaults()

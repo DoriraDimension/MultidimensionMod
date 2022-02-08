@@ -12,9 +12,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Shadow Emoji");
-			Tooltip.SetDefault("A shady smile gives you power.\nGrants +2 minion slots and increases minion damage by 5%.\nIncreases movement speed by 15% when below 30% health.");
+			Tooltip.SetDefault("A shady smile gives you power.\nSmiley's ability to smile, even in the darkest days is truly inspiring.\nGrants +2 minion slots and increases minion damage by 5%.\nIncreases movement speed by 15% when below 30% health.");
 			DisplayName.AddTranslation(GameCulture.German, "Schattenemoji");
-			Tooltip.AddTranslation(GameCulture.German, "Ein schattiges Lächeln gibt dir Kraft.\nGibt +2 Minion Slots und erhöht Günstlingsschaden um 5%.\nErhöht Bewegungsgeschwindigkeit um 15% wenn unter 30% Leben.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein schattiges Lächeln gibt dir Kraft.\nSmileys fähigkeit, selbst in den dunkelsten Stunden zu lächeln ist wahrlich inspirierend.\nGibt +2 Minion Slots und erhöht Günstlingsschaden um 5%.\nErhöht Bewegungsgeschwindigkeit um 15% wenn unter 30% Leben.");
 			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 5));
 			ItemID.Sets.ItemNoGravity[item.type] = true;
 		}

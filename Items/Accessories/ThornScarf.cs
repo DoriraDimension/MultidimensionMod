@@ -12,9 +12,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Thorn Scarf");
-			Tooltip.SetDefault("Why would you wear this? \nHurts enemies when they touch you");
+			Tooltip.SetDefault("Old natives of the jungle would wear this to hurt animals that attack them but would also hurt themself,\na small price to pay to be able to escape a attacking predator.\nHurts enemies when they touch you");
 			DisplayName.AddTranslation(GameCulture.German, "Dornenschal");
-			Tooltip.AddTranslation(GameCulture.German, "Warum würdest du sowas tragen? \nSchadet Gegnern wenn sie dich berühren.");
+			Tooltip.AddTranslation(GameCulture.German, "Alte Einwohner des Dschungels trugen diesen Schal um Tieren zu schaden die sie attackieren würden aber auch sich slebst schaden,\nein kleiner Preis um einem Angriff eines Raubtiers zu entkommen.\nSchadet Gegnern wenn sie dich berühren.");
 		}
 
 		public override void SetDefaults()

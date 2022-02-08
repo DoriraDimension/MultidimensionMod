@@ -11,9 +11,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Calamity Ring");
-			Tooltip.SetDefault("The eye of a black dragon.\nAll damage you receive is doubled.");
+			Tooltip.SetDefault("This ring contains the eye of a calamitous dragon and doubles all damage taken.\nOnly a fool would consider wearing such a cursed artifact.");
 			DisplayName.AddTranslation(GameCulture.German, "Ring des Unheils");
-			Tooltip.AddTranslation(GameCulture.German, "Das Auge eines Schwarzen Drachen. \nJeder erhaltene Schaden ist verdoppelt.");
+			Tooltip.AddTranslation(GameCulture.German, "Dieser Ring enthält das Auge eines Drachen des Unheil und verdoppelt allen erhaltenen Schaden.\nNur ein Narr würde solch ein verfluchtes Artefakt tragen.");
 		}
 
 		public override void SetDefaults()

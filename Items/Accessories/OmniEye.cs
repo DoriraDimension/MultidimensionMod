@@ -16,9 +16,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Omni Eye");
-			Tooltip.SetDefault("You... can... see. Beware not to get blinded by it's forbidden magic. \nHighlights danger sources, enemies and treasures, also gives nightvision");
+			Tooltip.SetDefault("You... can... see. Beware not to get blinded by it's forbidden magic.\nA old magician once created the Omni Eye, a magical object with big potential, but his experiments cursed it.\nWhen the curse started to consume the magician, he split the eye into 4 fragments so that it will never be used again.\nBut with all forbidden things, curiosity will take over ones mind, resulting in copies of the forbidden eyes.\nHighlights danger sources, enemies and treasures, also gives nightvision");
 			DisplayName.AddTranslation(GameCulture.German, "Omni Auge");
-			Tooltip.AddTranslation(GameCulture.German, "Du... kannst... sehen. Pass auf das du nicht von seiner verbotenen Magie geblendet wirst. \nGefahrenquellen, Gegner und Schätze werden hervorgehoben, außerdem gibt es Nachtsicht.");
+			Tooltip.AddTranslation(GameCulture.German, "Du... kannst... sehen. Pass auf das du nicht von seiner verbotenen Magie geblendet wirst.\nEin alter Magier erschuf einst das Omni Auge, ein magisches Objekt mit großem Potential, aber seine Experimente verfluchten es\nWenn der Fluch anfing den Magier zu verzehren, spaltete er das Auge in 4 Fragmente sodass es nie wieder verwendet wird.\nAber wie es mit allen verbotenen Dingen ist, neugier wird den Verstand übernehmen, was in Kopien der verbotenen AUgen resultiert.\nGefahrenquellen, Gegner und Schätze werden hervorgehoben, außerdem gibt es Nachtsicht.");
 		}
 
 		public override void SetDefaults()
