@@ -11,9 +11,9 @@ namespace MultidimensionMod.Items.Summons
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Moon Rune Stone");
-			Tooltip.SetDefault("A rune only known inside the moon cult, it calls forth their insane leader.");
+			Tooltip.SetDefault("A rune only known inside the moon cult, it calls forth their insane leader.\nThis must be a very important artifact for the moon cult or else their leader wouldnt be so angry about you taking it.");
 			DisplayName.AddTranslation(GameCulture.German, "Mondrunen Stein");
-			Tooltip.AddTranslation(GameCulture.German, "Eine Rune di nur innerhalb des Mond Kults bekannt ist, sie ruft ihren verrückten Anführer herbei.");
+			Tooltip.AddTranslation(GameCulture.German, "Eine Rune di nur innerhalb des Mond Kults bekannt ist, sie ruft ihren verrückten Anführer herbei.\nDies muss ein sehr wichtiges Artefakt für den Mondkult sein sonst würde ihr Anführer nicht so sauer werden wenn du es an dich nimmst.");
 			ItemID.Sets.SortingPriorityBossSpawns[item.type] = 12;
 		}
 
