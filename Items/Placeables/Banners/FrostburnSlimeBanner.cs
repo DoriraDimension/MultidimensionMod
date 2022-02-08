@@ -1,6 +1,7 @@
 ﻿using MultidimensionMod.Tiles;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Terraria.ID;
 
 namespace MultidimensionMod.Items.Placeables.Banners
