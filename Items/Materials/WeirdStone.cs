@@ -13,9 +13,9 @@ namespace MultidimensionMod.Items.Materials
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Rune Stone");
-			Tooltip.SetDefault("A rune stone with weird markings, it is sturdy enough to withstand the energy of a archruler.");
+			Tooltip.SetDefault("A rune stone with weird markings, it is sturdy enough to withstand a lot of energy.");
 			DisplayName.AddTranslation(GameCulture.German, "Runenstein");
-			Tooltip.AddTranslation(GameCulture.German, "Ein Runenstein mit seltsamen Markierungen, er ist stabil genug um der Energie eines Erzherrschers standzuhalten.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein Runenstein mit seltsamen Markierungen, er ist stabil genug um sehr viel Energie standzuhalten.");
 		}
 
 		public override void SetDefaults()

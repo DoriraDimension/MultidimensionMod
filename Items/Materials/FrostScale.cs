@@ -11,9 +11,9 @@ namespace MultidimensionMod.Items.Materials
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Frost Scale");
-			Tooltip.SetDefault("The scale of a juvenile ice drake, its cold and soft.");
+			Tooltip.SetDefault("The scale of a juvenile ice drake, its cold and soft.\nIce Drake nest underground until they become too big for the small ice caves.");
 			DisplayName.AddTranslation(GameCulture.German, "Frostschuppe");
-			Tooltip.AddTranslation(GameCulture.German, "Die Schuppe eines jungen Eis Draken, sie ist kalt und weich.");
+			Tooltip.AddTranslation(GameCulture.German, "Die Schuppe eines jungen Eis Draken, sie ist kalt und weich.\nEis Draken nisten im Untergrund bis sie zu groß werden für die kleinen Eishöhlen.");
 		}
 
 		public override void SetDefaults()

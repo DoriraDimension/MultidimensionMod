@@ -9,6 +9,7 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
+			DisplayName.SetDefault("Eye Tendril");
 			Tooltip.SetDefault("A tendril from the big eye.");
 			DisplayName.AddTranslation(GameCulture.German, "Augen Tentakel");
 			Tooltip.AddTranslation(GameCulture.German, "Ein Tentakel von dem großen Auge.");

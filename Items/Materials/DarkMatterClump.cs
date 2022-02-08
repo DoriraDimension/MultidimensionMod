@@ -8,9 +8,9 @@ namespace MultidimensionMod.Items.Materials
 	public class DarkMatterClump : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("The essence of Darklings.");
+			Tooltip.SetDefault("The essence of Darklings.\nDarklings are made of pure dark matter, they fled their home together with a new leader to escape their former master.");
 			DisplayName.AddTranslation(GameCulture.German, "Dunkle Materie Klumpen");
-			Tooltip.AddTranslation(GameCulture.German, "Die Essenz von Dunkellingen.");
+			Tooltip.AddTranslation(GameCulture.German, "Die Essenz von Dunkellingen.\nDunkellinge sind aus purer dunklen Materie gemacht, sie flohen aus ihrem Zuhause mit einem neuen Anführer um ihrem alten Meister zu entkommen.");
 		}
 
 		public override void SetDefaults() {
