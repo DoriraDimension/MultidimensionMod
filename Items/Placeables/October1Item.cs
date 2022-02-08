@@ -13,9 +13,9 @@ namespace MultidimensionMod.Items.Placeables
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Monument of the Eternal Bond");
-			Tooltip.SetDefault("A monument, dedicated to the dimensional deities eternal soul bond.\n<3");
+			Tooltip.SetDefault("A monument, dedicated to the dimensional deities eternal soul bond.\nIt is said that soulmates will always find eachother, doesnt matter how far they are away from eachother\n<3");
 			DisplayName.AddTranslation(GameCulture.German, "Monument des ewigen Bunds");
-			Tooltip.AddTranslation(GameCulture.German, "Ein Monument das dem ewigen Seelenbund der Dimensions Gottheiten.\n<3");
+			Tooltip.AddTranslation(GameCulture.German, "Ein Monument das dem ewigen Seelenbund der Dimensions Gottheiten.\nEs wird gesagt das Seelenverwandte sich immer wieder finden werden, es ist egal wie weit sie voneinander entfernt sind\n<3");
 		}
 
 		public override void SetDefaults()
