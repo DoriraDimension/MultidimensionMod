@@ -11,9 +11,9 @@ namespace MultidimensionMod.Items.Pets
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Archtyrant's Face");
-			Tooltip.SetDefault("Summons the head of Archtyrant Ignaen Moyasu.");
+			Tooltip.SetDefault("Summons the head of Archtyrant Ignaen Moyasu.\nIt is nothing more than a magic construct, made to look like Ignaen's head, having his actual head would be cruel.");
 			DisplayName.AddTranslation(GameCulture.German, "Erztyrann's Gesicht");
-			Tooltip.AddTranslation(GameCulture.German, "Beschwört den Kopf von Erztyrann Ignaen Moyasu.");
+			Tooltip.AddTranslation(GameCulture.German, "Beschwört den Kopf von Erztyrann Ignaen Moyasu.\nEs ist nichts weiter als ein magisches Konstrukt, gemacht um wie Ignaens Kopf auszusehen, seinen richtigen Kopf zu haben wäre grausam.");
 		}
 
 		public override void SetDefaults()

@@ -10,9 +10,9 @@ namespace MultidimensionMod.Items.Pets
 	{
 		public override void SetStaticDefaults() {
 			DisplayName.SetDefault("Cute Emoji");
-			Tooltip.SetDefault("Summons Smiley's adopted son.");
+			Tooltip.SetDefault("Summons Smiley's adopted son.\nAt some point a young darkling decided to follow and imitate Smiley, thats when he decided to adopt him as his own child.");
 			DisplayName.AddTranslation(GameCulture.German, "Niedlicher Emoji");
-			Tooltip.AddTranslation(GameCulture.German, "Beschwört Smiley's adoptierten Sohn.");
+			Tooltip.AddTranslation(GameCulture.German, "Beschwört Smiley's adoptierten Sohn.\nAn einem Punkt fing ein junger Dunkelling an Smiley zu folgen und zu imitieren, das ist wenn er entschied ihn als sein Kind zu adoptieren.");
 		}
 
 		public override void SetDefaults() {
