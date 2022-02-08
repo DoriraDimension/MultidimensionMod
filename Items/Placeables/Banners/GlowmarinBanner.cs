@@ -11,6 +11,10 @@ namespace MultidimensionMod.Items.Placeables.Banners
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Otherworldly Glowmarin Banner");
+			Tooltip.SetDefault("A fish from another dimension, they have glowing organs all over their body, suggesting that they originally lived in deeper waters." +
+                "\nDrops:\nGlowing Kelp Hook 15%\nOceanic Glowshard 15%\nGlowseed 35%");
+			DisplayName.AddTranslation(GameCulture.German, "Jenseitiger Leuchtmarin Banner");
+			Tooltip.AddTranslation(GameCulture.German, "Ein Fisch aus einer ander Dimension, sie haben Leuchtorgane üverall an ihrem Körper, was darauf hindeutet das sie eigentlich in tieferen Gewässern gelebt haben.");
 		}
 
 		public override void SetDefaults()

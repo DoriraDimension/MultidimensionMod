@@ -7,6 +7,13 @@ namespace MultidimensionMod.Items.Placeables.Banners
 {
 	public class BabyGlowmarinBanner : ModItem
 	{
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Baby Glowmarin Banner");
+			Tooltip.SetDefault("These small adorable fish are from another dimension, they reproduce really fast.\nIts small glow organs are already developed and work fine.");
+			DisplayName.AddTranslation(GameCulture.German, "Baby Leuchtmarin Banner");
+			Tooltip.AddTranslation(GameCulture.German, "Diese kleinen niedlichen Fische sind aus einer anderen Dimension, sie vermehren sich sehr schnell.\nSeine kleinen Leuchtorgane sind schon entwickelt und funktionieren gut.");
+		}
 		public override void SetDefaults()
 		{
 			item.width = 12;

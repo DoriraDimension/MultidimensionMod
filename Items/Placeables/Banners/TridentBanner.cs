@@ -11,6 +11,10 @@ namespace MultidimensionMod.Items.Placeables.Banners
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Magic Trident Banner");
+			Tooltip.SetDefault("A trident that moves on its own, basically a remnant of the old Sea civilisation.\nNow that their owners are gone they aimlessly roam the ocean with no purpose." +
+                "\nDrops:\nNazar 1%\nOld Sea Crown 4%");
+			DisplayName.AddTranslation(GameCulture.German, "Magischer Dreizack Banner");
+			Tooltip.AddTranslation(GameCulture.German, "Ein Dreizack der sich von alleine bewegt, im grunde genommen ein überrest der alten Meeres Zivilisation.\nNun da ihre besitzer fort sind, durchstreifen sie Ziellos den Ozean.");
 		}
 
 		public override void SetDefaults()

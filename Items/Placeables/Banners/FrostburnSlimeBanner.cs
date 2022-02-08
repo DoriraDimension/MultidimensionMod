@@ -7,6 +7,15 @@ namespace MultidimensionMod.Items.Placeables.Banners
 {
 	public class FrostburnSlimeBanner : ModItem
 	{
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Frostburn Slime Banner");
+			Tooltip.SetDefault("Flying slimes that mastered the power of frostburn, anyone who touches them will be in immense pain." +
+                "\nDrops:\nSlime Staff 0.01%\nFrost Core 2%\nFrostburn Wings 2%");
+			DisplayName.AddTranslation(GameCulture.German, "Frostbrand Schleim Banner");
+			Tooltip.AddTranslation(GameCulture.German, "Fliegende Schleime die die Kraft des Frostbrandes gemeistert haben, jeder der sie berührt wird große Schmerzen erleiden.");
+		}
+
 		public override void SetDefaults()
 		{
 			item.width = 12;

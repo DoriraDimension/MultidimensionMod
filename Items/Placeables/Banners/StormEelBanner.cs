@@ -11,6 +11,10 @@ namespace MultidimensionMod.Items.Placeables.Banners
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Storm Front Eel Banner");
+			Tooltip.SetDefault("The great storm eels, only active during storms, when the sea is harsh and unforgiving.\nMany people believe they are scouts, scouts of someone or something deep under the ocean,\nthat is why these creatures are seen as an omen of even worse to come." +
+                "\nDrops:\nStorm Hide 50%\nThunderbubble Bow 20%\nEel Mask 10%\nTidal Quartz 1-3 100%");
+			DisplayName.AddTranslation(GameCulture.German, "Sturmfront Aal Banner");
+			Tooltip.AddTranslation(GameCulture.German, "Die großen Sturmaale, nur aktiv während eines Sturms, wenn die See rau und tödlich ist.\nViele Leute glauben das sie späher sind, Späher für jemanden ode retwas tief unter dem Ozean,\ndas ist der Grund warum diese Kreaturen als ein Omen für noch schlimmeres angesehen werden.");
 		}
 
 		public override void SetDefaults()
