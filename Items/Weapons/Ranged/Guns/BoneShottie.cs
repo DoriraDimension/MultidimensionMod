@@ -13,7 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Bone Shottie");
-			Tooltip.SetDefault("Spooky Scare Shotgun.");
+			Tooltip.SetDefault("Spooky Scary Shotgun.");
 			DisplayName.AddTranslation(GameCulture.German, "Knochen Schrotze");
 			Tooltip.AddTranslation(GameCulture.German, "Spooky Scary Shotgun.");
 		}
@@ -57,7 +57,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			int numberProjectiles = 4;
 			for (int i = 0; i < numberProjectiles; i++)
 			{
-				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(18));																												
+				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(12));																												
 				Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
 			}
 			return false;
