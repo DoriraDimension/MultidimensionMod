@@ -15,9 +15,9 @@ namespace MultidimensionMod.Items.Weapons.Summon
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Dark Rebels");
-			Tooltip.SetDefault("Summons one of Smiley's trusted soldiers to fight for you.");
+			Tooltip.SetDefault("Summons one of Smiley's trusted soldiers to fight for you.\nThe Darklings who hide in the dungeon are ready to fight whenever they get called to battle.");
 			DisplayName.AddTranslation(GameCulture.German, "Dunkle Rebellen");
-			Tooltip.AddTranslation(GameCulture.German, "Beschwört einen von Smiley's vertrauten Soldaten um für dich zu kämpfen.");
+			Tooltip.AddTranslation(GameCulture.German, "Beschwört einen von Smiley's vertrauten Soldaten um für dich zu kämpfen.\nDie Dunkellinge die sich im Verlies verstecken sind bereit zu kämpfen wann auch immer sie in den Kampf gerufen werden.");
 			ItemID.Sets.GamepadWholeScreenUseRange[item.type] = true;
 			ItemID.Sets.LockOnIgnoresCollision[item.type] = true;
 		}
