@@ -36,8 +36,6 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void Kill(int timeLeft)
 		{
-			Main.PlaySound(SoundID.Item93, projectile.position);
-
 			for (int i = 0; i < 1; i++)
 			{
 				int dustIndex = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, ModContent.DustType<StormDust>(), 0f, 0f, 100, default(Color), 2f);
