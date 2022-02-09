@@ -17,7 +17,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void SetDefaults()
 		{
-			item.damage = 6;
+			item.damage = 8;
 			item.melee = true;
 			item.width = 50;
 			item.height = 50;
@@ -36,14 +36,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.DirtBlock, 100);
-			recipe.AddIngredient(ItemID.IronBar, 5);
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.DirtBlock, 100);
-			recipe.AddIngredient(ItemID.LeadBar, 5);
+			recipe.AddRecipeGroup("IronBar", 5);
+			recipe.AddIngredient(ItemID.GoldBar, 2);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
