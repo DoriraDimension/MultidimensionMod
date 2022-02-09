@@ -27,8 +27,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 			item.mana = 5;
 			item.width = 36;
 			item.height = 32;
-			item.useTime = 54;
-			item.useAnimation = 54;
+			item.useTime = 48;
+			item.useAnimation = 48;
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.knockBack = 2;
