@@ -18,7 +18,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Other
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Great Moonlight");
-			Tooltip.SetDefault("The blue crystal blade is composed only of light.\nThe lunatic Cultist is a insane fanatic of the moon and so stole this legendary blade to use it himself,\ntho the Great Moonlight seems to not belong in this worldand instead obeys an otherworldly moon.");
+			Tooltip.SetDefault("The blue crystal blade is composed only of light.\nThe lunatic Cultist is a insane fanatic of the moon and so stole this legendary blade to use it himself,\ntho the Great Moonlight seems to not belong in this world and instead obeys an otherworldly moon.");
 			DisplayName.AddTranslation(GameCulture.German, "Großes Mondlicht");
 			Tooltip.AddTranslation(GameCulture.German, "Die blaue Kristallklinge ist nur aus Licht zusammengesetzt.\nDer Irre Kultist ist ein Fanatier des Mondes und so stahl er diese Legendäre Klinge um sie selbst zu benutzen,\nallerdings scheint es als gehöre das Große Mondlicht nicht in diese Welt und stattdessen gehorcht einem jenseitigen Mond.");
 		}
