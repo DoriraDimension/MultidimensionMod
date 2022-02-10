@@ -5,6 +5,7 @@ using MultidimensionMod.Projectiles.Magic;
 using MultidimensionMod.Dusts;
 using MultidimensionMod.Tiles;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -31,10 +32,10 @@ namespace MultidimensionMod.Items.Weapons.Magic.Other
 			item.useTime = 61;
 			item.useAnimation = 30;
 			item.useStyle = 1;
-			item.knockBack = 4;
+			item.knockBack = 6;
 			item.autoReuse = true;
-			item.value = Item.sellPrice(gold: 1);
-			item.rare = ItemRarityID.Pink;
+			item.value = Item.sellPrice(gold: 4);
+			item.rare = ItemRarityID.Cyan;
 			item.UseSound = SoundID.Item1;
 			item.shoot = ModContent.ProjectileType<MoonlightWave>();
 			item.shootSpeed = 15f;
@@ -47,6 +48,27 @@ namespace MultidimensionMod.Items.Weapons.Magic.Other
 				int dustIndex = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, (ModContent.DustType<Moondust>()));
 				Main.dust[dustIndex].noGravity = true;
 			}
+		}
+
+		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
+		{
+			Texture2D texture = mod.GetTexture("Items/Weapons/Magic/Other/GreatMoonlight_Glow");
+			spriteBatch.Draw
+			(
+				texture,
+				new Vector2
+				(
+					item.position.X - Main.screenPosition.X + item.width * 0.5f,
+					item.position.Y - Main.screenPosition.Y + item.height - texture.Height * 0.5f + 2f
+				),
+				new Rectangle(0, 0, texture.Width, texture.Height),
+				Color.White,
+				rotation,
+				texture.Size() * 0.5f,
+				scale,
+				SpriteEffects.None,
+				0f
+			);
 		}
 
 		public override void AddRecipes()
