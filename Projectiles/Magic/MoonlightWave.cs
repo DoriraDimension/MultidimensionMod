@@ -49,6 +49,10 @@ namespace MultidimensionMod.Projectiles.Magic
 			{
 				projectile.velocity.Y = 16f;
 			}
+			if (projectile.spriteDirection == -1)
+			{
+				projectile.rotation += MathHelper.Pi;
+			}
 			for (int i = 0; i < 5; i++)
 			{
 				int num104 = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 68, projectile.velocity.X * 0.30f, projectile.velocity.Y * 0.30f, 68, default(Color), 1f);
