@@ -41,6 +41,17 @@ namespace MultidimensionMod.Items.Weapons.Magic.Other
 			item.shootSpeed = 15f;
 		}
 
+		public override void ModifyTooltips(List<TooltipLine> list)
+		{
+			foreach (TooltipLine item in list)
+			{
+				if (item.mod == "Terraria" && item.Name == "ItemName")
+				{
+					item.overrideColor = MDRarity.BossWeapon;
+				}
+			}
+		}
+
 		public override void MeleeEffects(Player player, Rectangle hitbox)
 		{
 			for (int i = 0; i < 6; i++)
