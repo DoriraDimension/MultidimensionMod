@@ -20,6 +20,6 @@ namespace MultidimensionMod
 
 		public static Color Dorira => new Color(18, 279, 247);
 
-		public static Color Souls => new Color(208, 122, 171);
+		public static Color BossWeapon => new Color(130, 0, 0);
 	}
 }
