@@ -12,9 +12,9 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Soul of the Eye of Cthulhu");
+			DisplayName.SetDefault("Soul of the Eye");
 			Tooltip.SetDefault("Yes, this eye actually had a soul on its own.\nThe ever watching eye, true eye or not, it doesnt matter, it was just waiting for another being to grow stronger.\nSome people call it the Eye of Judgement, the first test.");
-			DisplayName.AddTranslation(GameCulture.German, "Seele des Auges von Cthulhu");
+			DisplayName.AddTranslation(GameCulture.German, "Seele des Auges");
 			Tooltip.AddTranslation(GameCulture.German, "Ja, dieses Auge hatte eine eigene Seele.\nDas immer beobachtende Auge, wahres Auge oder nicht, es ist egal, es hat nur darauf gewartet das ein weiters Wesen an stärke gewinnt.\nEinige Leute nennen es das Auge des Urteils, der erste Test.");
 			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 12));
 			ItemID.Sets.ItemIconPulse[item.type] = true;
