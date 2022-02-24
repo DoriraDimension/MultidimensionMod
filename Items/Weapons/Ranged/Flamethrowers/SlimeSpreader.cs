@@ -38,7 +38,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 			item.UseSound = SoundID.Item34;
 			item.autoReuse = true;
 			item.shoot = 10;
-			item.shootSpeed = 9f;
+			item.shootSpeed = 18f;
 			item.useAmmo = AmmoID.Gel;
 		}
 
