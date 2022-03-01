@@ -102,7 +102,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			}
 			if (Main.dayTime)
 			{
-				switch (Main.rand.Next(7))
+				switch (Main.rand.Next(8))
 				{
 					case 0:
 						return "Birds are singing, flowers are blooming, on days like these... I should stop with this phylosophy crap.";
@@ -118,12 +118,14 @@ namespace MultidimensionMod.NPCs.TownNPCs
 						return "Do you know how FUCKING painful it is to learn programming? It's like you are thrown into a pit full of puzzles, but the puzzles are in japanese.";
 					case 6:
 						return "I once saw a fucking big ass serpent flying past me, ripping through the dimensions. I teleported behind him and then slapped him, but I told him that it's nothing personal.";
+					case 7:
+						return "nakasday";
 
 				}
 			}
 			if (!Main.dayTime)
 			{
-				switch (Main.rand.Next(9))
+				switch (Main.rand.Next(10))
 				{
 					case 0:
 						return "Are you sleeping at night? I'm not, my motivation is fired up in the night.";
@@ -143,6 +145,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 						return "Do you know how FUCKING painful it is to learn programming? It's like you are thrown into a pit full of puzzles, but the puzzles are in japanese.";
 					case 8:
 						return "I once saw a fucking big ass serpent flying past me, ripping through the dimensions. I teleported behind him and then slapped him, but I told him that it's nothing personal.";
+					case 9:
+						return "nakasday";
 				}
 			}
 			switch (Main.rand.Next(4))
