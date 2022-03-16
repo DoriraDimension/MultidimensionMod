@@ -9,7 +9,7 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Old Dusty Bow Arm");
+			DisplayName.SetDefault("Old Dusty Bow Arm (Bottom)");
 			Tooltip.SetDefault("A rusty and dusty Bow Arm found inside a Sandstone Geode, who knows what it used to be.\nMaybe it can be repaired");
 			DisplayName.AddTranslation(GameCulture.German, "Alter verstaubter Bogenarm");
 			Tooltip.AddTranslation(GameCulture.German, "Ein rostiger und verstaubter Bogenarm der in einer Sandstein Geode gefunden wurde, wer weiß was er mal war.\nKann vielleicht repariert werden.");
