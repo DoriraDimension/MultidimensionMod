@@ -23,11 +23,6 @@ namespace MultidimensionMod
 	{
 		public override void SetDefaults(Item item)
 		{
-			Mod calamityMod = ModLoader.GetMod("CalamityMod");
-			if (calamityMod != null)
-			{
-				calamityMod.GetItem("GrandDad").DisplayName.AddTranslation(GameCulture.English, "Grand Daddy");
-			}
 			if (item.type == ItemID.SpiritFlame)
 			{
 				item.UseSound = SoundID.Item103;

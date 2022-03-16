@@ -58,44 +58,5 @@ namespace MultidimensionMod
 				Lighting.AddLight(npc.position, 0.1f, 0.2f, 0.7f);
 			}
 		}
-
-		public override void SetDefaults(NPC npc)
-		{
-			Mod calamityMod = ModLoader.GetMod("CalamityMod");
-			if (calamityMod != null)
-			{
-				if (npc.type == calamityMod.NPCType("Leviathan"))
-				{
-					if (!Main.hardMode)
-					{
-						npc.GivenName = "Fat Fuck";
-					}
-				}
-
-				if (npc.type == calamityMod.NPCType("PerforatorHive"))
-				{
-					if (Main.bloodMoon && NPC.downedMoonlord)
-					{
-						npc.GivenName = "Flesh Broccoli";
-					}
-				}
-
-				if (npc.type == calamityMod.NPCType("PlaguebringerGoliath"))
-				{
-					if (Main.LocalPlayer.hornetMinion && Main.LocalPlayer.hornet)
-					{
-						npc.GivenName = "Brazil";
-					}
-				}
-
-				if (npc.type == calamityMod.NPCType("ColossalSquid"))
-				{
-					if (Main.LocalPlayer.lifeMagnet && Main.LocalPlayer.stinky)
-					{
-						npc.GivenName = "Squidward";
-					}
-				}
-			}
-		}
 	}
 }
