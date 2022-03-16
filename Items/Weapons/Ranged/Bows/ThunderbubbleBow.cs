@@ -21,8 +21,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 		{
 			item.damage = 60;
 			item.ranged = true;
-			item.width = 26;
-			item.height = 46;
+			item.width = 28;
+			item.height = 42;
 			item.useTime = 30;
 			item.useAnimation = 30;
 			item.useStyle = ItemUseStyleID.HoldingOut;
