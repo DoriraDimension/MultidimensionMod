@@ -28,8 +28,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			item.CloneDefaults(ItemID.SkyFracture);
 			item.shootSpeed *= 0.75f;
 			item.damage = 60;
-			item.width = 50;
-			item.height = 50;
+			item.width = 64;
+			item.height = 64;
 			item.magic = true;
 			item.value = Item.sellPrice(silver: 90);
 			item.rare = ItemRarityID.LightRed;
