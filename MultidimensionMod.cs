@@ -35,30 +35,30 @@ namespace MultidimensionMod
 		{
 			RecipeGroup group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " ´VilePowder", new int[]
 			{
-		            ItemID.ViciousPowder,
-		            ItemID.VilePowder
+					ItemID.ViciousPowder,
+					ItemID.VilePowder
 			});
 			RecipeGroup.RegisterGroup("EvilPowders", group);
 
-		    group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " ´GoldBar", new int[]
+			group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " ´GoldBar", new int[]
 			{
 					ItemID.GoldBar,
 					ItemID.PlatinumBar
-            });
+			});
 			RecipeGroup.RegisterGroup("GoldBars", group);
 
 			group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " ´IceBlock", new int[]
-            {
-				    ItemID.IceBlock,
+			{
+					ItemID.IceBlock,
 					ItemID.PurpleIceBlock,
 					ItemID.RedIceBlock,
 					ItemID.PinkIceBlock
-            });
+			});
 			RecipeGroup.RegisterGroup("IceBlocks", group);
 
 			group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " ´SandBlock", new int[]
-            {
-				    ItemID.SandBlock,
+			{
+					ItemID.SandBlock,
 					ItemID.EbonsandBlock,
 					ItemID.CrimsandBlock,
 					ItemID.PearlsandBlock
@@ -66,17 +66,17 @@ namespace MultidimensionMod
 			RecipeGroup.RegisterGroup("SandBlocks", group);
 
 			group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " ´CobaltBar", new int[]
-            {
+			{
 					ItemID.CobaltBar,
 					ItemID.PalladiumBar
-            });
+			});
 			RecipeGroup.RegisterGroup("CobaltBars", group);
 
 			group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " ´ShadowScale", new int[]
-            {
+			{
 					ItemID.ShadowScale,
 					ItemID.TissueSample
-            });
+			});
 			RecipeGroup.RegisterGroup("EvilSample", group);
 
 			group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " ´AdamantiteBar", new int[]
@@ -151,7 +151,6 @@ namespace MultidimensionMod
 				MultidimensionMod.AddLoot(bossChecklist, "EyeofCthulhu", new List<int>
 				{
 					ModContent.ItemType<EyeTendril>(),
-					ModContent.ItemType<EyeoftheNightwalker>(),
 					ModContent.ItemType<Iris>()
 				});
 				MultidimensionMod.AddLoot(bossChecklist, "SkeletronHead", new List<int>
@@ -209,6 +208,19 @@ namespace MultidimensionMod
 				{
 					ItemID.CompanionCube,
 				});
+			}
+		}
+
+		public override void UpdateMusic(ref int music, ref MusicPriority priority)
+		{
+			if (Main.myPlayer == -1 || Main.gameMenu || !Main.LocalPlayer.active)
+			{
+				return;
+			}
+			if (Main.LocalPlayer.GetModPlayer<MDPlayer>().ZoneColdHell)
+			{
+				music = GetSoundSlot(SoundType.Music, "Sounds/Music/FrozenUnderworld");
+				priority = MusicPriority.BiomeHigh;
 			}
 		}
 	}
