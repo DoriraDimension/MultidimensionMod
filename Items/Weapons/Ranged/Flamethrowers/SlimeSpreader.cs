@@ -25,8 +25,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 		{
 			item.damage = 15;
 			item.ranged = true;
-			item.width = 42;
-			item.height = 26;
+			item.width = 46;
+			item.height = 20;
 			item.useTime = 2;
 			item.useAnimation = 32;
 			item.reuseDelay = 41;
@@ -84,7 +84,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<KingSlimeSoul>(), 4);
+			recipe.AddIngredient(ModContent.ItemType<KingSlimeSoul>());
 			recipe.AddIngredient(ModContent.ItemType<Dimensium>(), 10);
 			recipe.AddTile(ModContent.TileType<DimensionalForge>());
 			recipe.SetResult(this);
