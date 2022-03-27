@@ -13,7 +13,7 @@ namespace MultidimensionMod.Items.Souls
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Soul of the Lunatic Cultist");
-			Tooltip.SetDefault("The weird cultist who worships the moon wanted to reawaken something that was sealed away for hundreds of years,\nbut he got interrupted and absorbed the energy used for the ritual to fight instead.\nThe absorbed celestial energy smahed his soul into 4 pieces driving him even more insane.\nThere was no hope for this guy anymore, or perhaps never was.");
+			Tooltip.SetDefault("The weird cultist who worships the moon wanted to reawaken something that was sealed away for hundreds of years,\nbut he got interrupted and absorbed the energy used for the ritual to fight instead.\nThe absorbed celestial energy smashed his soul into 4 pieces driving him even more insane.\nThere was no hope for this guy anymore, or perhaps never was.");
 			DisplayName.AddTranslation(GameCulture.German, "Seele des Irren Kultisten");
 			Tooltip.AddTranslation(GameCulture.German, "Der seltsame Kultist der den Mond verehrt wollte etwas wiedererwecken das seit Jahrhunderten versiegelt war\naber er wurde unterbrochen und absorbierte die Energie für das Ritual zum Kämpfen.\nDie absorbierte Energie zerschlug seine Seele in 4 Teil was ihn noch verrückter machte.\nDa war keine Hoffnung mehr für diesen Typen, oder womöglich war da nie welche");
 			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 8));
