@@ -43,6 +43,8 @@ Contributor:
 
 RAZOR  spriting
 
+naka  spriting
+
 HybridDeath  code/spriting
 
 ZSolar1  For making the wiki logo
