@@ -23,8 +23,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		{
 			item.damage = 32;
 			item.melee = true;
-			item.width = 44;
-			item.height = 44;
+			item.width = 46;
+			item.height = 54;
 			item.useTime = 23;
 			item.useAnimation = 23;
 			item.useStyle = 1;
