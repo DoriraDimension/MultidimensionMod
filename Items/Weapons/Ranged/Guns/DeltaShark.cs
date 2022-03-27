@@ -18,8 +18,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 		public override void SetDefaults() {
 			item.damage = 53;
 			item.ranged = true; 
-			item.width = 88;
-			item.height = 46; 
+			item.width = 80;
+			item.height = 36; 
 			item.useTime = 5; 
 			item.useAnimation = 5; 
 			item.useStyle = ItemUseStyleID.HoldingOut; 
