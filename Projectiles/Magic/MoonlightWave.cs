@@ -13,7 +13,6 @@ namespace MultidimensionMod.Projectiles.Magic
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Moonlight Wave");
-			Main.projFrames[projectile.type] = 6;
 		}
 
 		public override void SetDefaults()
@@ -55,7 +54,7 @@ namespace MultidimensionMod.Projectiles.Magic
 			}
 			for (int i = 0; i < 5; i++)
 			{
-				int num104 = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 68, projectile.velocity.X * 0.30f, projectile.velocity.Y * 0.30f, 68, default(Color), 1f);
+				int num104 = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, ModContent.DustType<Moondust>(), projectile.velocity.X * 0.30f, projectile.velocity.Y * 0.30f, 68, default(Color), 1f);
 				Main.dust[num104].noGravity = true;
 				Main.dust[num104].velocity.X *= 0.15f;
 				Main.dust[num104].velocity.Y *= 0.15f;
