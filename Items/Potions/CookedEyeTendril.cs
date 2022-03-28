@@ -46,7 +46,7 @@ namespace MultidimensionMod.Items.Potions
             recipe = new ModRecipe(mod);
             recipe.AddIngredient(ModContent.ItemType<TendrilBow>());
             recipe.AddTile(17);
-            recipe.SetResult(this, 12);
+            recipe.SetResult(this, 5);
             recipe.AddRecipe();
 
         }
