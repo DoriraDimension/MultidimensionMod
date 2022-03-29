@@ -44,16 +44,33 @@ namespace MultidimensionMod
                     Item.NewItem(npc.getRect(), mod.ItemType("EyeoftheNightwalker"));
             }
 
+            if (npc.boss && System.Array.IndexOf(new int[] { NPCID.EaterofWorldsBody, NPCID.EaterofWorldsHead, NPCID.EaterofWorldsTail }, npc.type) > -1)
+            {
+                Item.NewItem(npc.getRect(), mod.ItemType("WormSoul"));
+            }
+
+            if (npc.type == NPCID.BrainofCthulhu)
+            {
+                Item.NewItem(npc.getRect(), mod.ItemType("BrainSoul"));
+            }
+
+            if (npc.type == NPCID.QueenBee)
+            {
+                Item.NewItem(npc.getRect(), mod.ItemType("BeeSoul"));
+            }
+
             if (npc.type == NPCID.SkeletronHead)
             {
                 if (Main.rand.NextFloat() < .0001f)
                     Item.NewItem(npc.getRect(), ItemID.BoneKey);
                 Item.NewItem(npc.getRect(), ItemID.Bone, Main.rand.Next(25, 36));
+                Item.NewItem(npc.getRect(), mod.ItemType("SkeletonSoul"));
             }
 
             if (npc.type == NPCID.WallofFlesh)
             {
                 Item.NewItem(npc.getRect(), ItemID.FleshBlock, Main.rand.Next(40, 51));
+                Item.NewItem(npc.getRect(), mod.ItemType("WallSoul"));
             }
 
             if ((npc.type == NPCID.Retinazer && !NPC.AnyNPCs(NPCID.Spazmatism)) || (npc.type == NPCID.Spazmatism && !NPC.AnyNPCs(NPCID.Retinazer)))
@@ -62,12 +79,29 @@ namespace MultidimensionMod
                     Item.NewItem(npc.getRect(), mod.ItemType("Retilazor"));
                 if (Main.rand.NextFloat() < .2500f)
                     Item.NewItem(npc.getRect(), mod.ItemType("Spazmelter"));
+                Item.NewItem(npc.getRect(), mod.ItemType("TwinSoul"));
+            }
+
+            if (npc.type == NPCID.TheDestroyer)
+            {
+                Item.NewItem(npc.getRect(), mod.ItemType("MetalWormSoul"));
+            }
+
+            if (npc.type == NPCID.SkeletronPrime)
+            {
+                Item.NewItem(npc.getRect(), mod.ItemType("PrimeSoul"));
             }
 
             if (npc.type == NPCID.Plantera)
             {
                 if (Main.rand.NextFloat() < .0300f)
                     Item.NewItem(npc.getRect(), mod.ItemType("BlackRoseScarf"));
+                Item.NewItem(npc.getRect(), mod.ItemType("PlantSoul"));
+            }
+
+            if (npc.type == NPCID.Golem)
+            {
+                Item.NewItem(npc.getRect(), mod.ItemType("GolemSoul"));
             }
 
             if (npc.type == NPCID.DukeFishron)
@@ -75,6 +109,17 @@ namespace MultidimensionMod
                 Item.NewItem(npc.getRect(), mod.ItemType("TidalQuartz"), Main.rand.Next(10, 16));
                 if (Main.rand.NextFloat() < .0300f)
                     Item.NewItem(npc.getRect(), mod.ItemType("TyphoonDragon"));
+                Item.NewItem(npc.getRect(), mod.ItemType("DukeSoul"));
+            }
+
+            if (npc.type == NPCID.CultistBoss)
+            {
+                Item.NewItem(npc.getRect(), mod.ItemType("CultistSoul"));
+            }
+
+            if (npc.type == NPCID.MoonLordCore)
+            {
+                Item.NewItem(npc.getRect(), mod.ItemType("MoonSoul"));
             }
 
             if (npc.type == NPCID.MartianSaucerCore)
@@ -215,7 +260,7 @@ namespace MultidimensionMod
                     Item.NewItem(npc.getRect(), ItemID.Stinger);
             }
 
-            if (npc.type == NPCID.Mothron && NPC.downedPlantBoss)
+            if (npc.type == NPCID.Reaper && NPC.downedMechBoss3)
             {
                 if (Main.rand.NextFloat() < .0500f)
                     Item.NewItem(npc.getRect(), mod.ItemType("EclipseReaper"));
