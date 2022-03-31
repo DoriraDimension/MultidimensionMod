@@ -1,4 +1,5 @@
-﻿using MultidimensionMod.Tiles.Ores;
+﻿using MultidimensionMod.Tiles.FrozenUnderworld;
+using MultidimensionMod.Tiles.Ores;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
@@ -16,6 +17,8 @@ namespace MultidimensionMod
 {
 	public class MDWorld : ModWorld
 	{
+		public static int ColdHellTiles;
+
 		public static bool downedSmiley;
 
 		public override void Initialize()
@@ -97,6 +100,11 @@ namespace MultidimensionMod
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
 				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(3, 6), WorldGen.genRand.Next(2, 6), ModContent.TileType<Dimensium>());
 			}
+		}
+		public override void TileCountsAvailable(int[] tileCounts)
+		{
+			// Here we count various tiles towards ZoneExample
+			ColdHellTiles = tileCounts[ModContent.TileType<ColdAsh>()];
 		}
 	}
 }
