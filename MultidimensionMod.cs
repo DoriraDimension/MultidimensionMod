@@ -103,6 +103,8 @@ namespace MultidimensionMod
 		public override void Load()
 		{
 			DimensiumEuronen = CustomCurrencyManager.RegisterCurrency(new MDCurrency(ModContent.ItemType<Dimensium>(), 999L));
+
+			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/FrozenUnderworld"), ItemType("ColdHellBox"), TileType("ColdHellBoxPlaced"));
 		}
 
 		private static void AddLoot(Mod bossChecklist, string bossName, List<int> loot = null, List<int> collection = null)
