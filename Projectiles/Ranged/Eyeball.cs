@@ -38,6 +38,9 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void AI()
 		{
+			if (projectile.timeLeft > 280)
+				projectile.timeLeft = 280;
+
 			if (++projectile.frameCounter >= 7)
 			{
 				projectile.frameCounter = 0;
