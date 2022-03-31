@@ -29,6 +29,9 @@ namespace MultidimensionMod.Projectiles.SwordProjectiles
 
 		public override void AI()
         {
+			if (projectile.timeLeft > 270)
+				projectile.timeLeft = 270;
+
 			if (++projectile.frameCounter >= 5)
 			{
 				projectile.frameCounter = 0;
