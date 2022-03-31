@@ -38,6 +38,9 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void AI()
 		{
+			if (projectile.timeLeft > 300)
+				projectile.timeLeft = 300;
+
 			if (projectile.ai[0] >= 400f)
 			{
 				projectile.Kill();
