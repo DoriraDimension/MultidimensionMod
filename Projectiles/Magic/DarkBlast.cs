@@ -23,6 +23,8 @@ namespace MultidimensionMod.Projectiles.Magic
 			projectile.magic = true;
 			projectile.ignoreWater = true;
 			projectile.tileCollide = true;
+			projectile.penetrate = -1;
+			projectile.localNPCHitCooldown = -1;
 		}
 
 		public override void AI()
