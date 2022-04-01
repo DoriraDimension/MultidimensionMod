@@ -3,6 +3,7 @@ using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Weapons.Melee.Others;
 using MultidimensionMod.Items.Weapons.Melee.Swords;
 using MultidimensionMod.Items.Weapons.Ranged.Bows;
+using MultidimensionMod.Items.Weapons.Magic.Staffs;
 using MultidimensionMod.Items.Placeables;
 using MultidimensionMod.Items.Potions;
 using MultidimensionMod.Items.Bags;
@@ -53,7 +54,7 @@ namespace MultidimensionMod.Items.Bags
 			player.QuickSpawnItem(ModContent.ItemType<WoodenBat>());
 			player.QuickSpawnItem(ItemID.CopperBow);
 			player.QuickSpawnItem(ItemID.WoodenArrow, 75);
-			player.QuickSpawnItem(ItemID.WandofSparking);
+			player.QuickSpawnItem(ModContent.ItemType<StarRod>());
 			player.QuickSpawnItem(ItemID.ManaCrystal);
 			player.QuickSpawnItem(ItemID.SlimeStaff);
 			player.QuickSpawnItem(ItemID.CopperHammer);
