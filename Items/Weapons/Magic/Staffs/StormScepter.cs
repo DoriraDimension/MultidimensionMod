@@ -12,7 +12,9 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Storm Scepter");
-			Tooltip.SetDefault("Unfinished item, future Storm Eel drop");
+			Tooltip.SetDefault("Call forth a shower from the sky.\nRains Storm Droplets from above the mouse cursor");
+			DisplayName.AddTranslation(GameCulture.German, "Sturm Zeptar");
+			Tooltip.AddTranslation(GameCulture.German, "Rufe eine Dusche vom Himmel.\nRegnet Sturm Tropfen von über dem Maus Cursor");
 			Item.staff[item.type] = true;
 		}
 
