@@ -39,17 +39,6 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			item.crit = 10;
 		}
 
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine item in list)
-			{
-				if (item.mod == "Terraria" && item.Name == "ItemName")
-				{
-					item.overrideColor = MDRarity.RelicWeapon;
-				}
-			}
-		}
-
 		public override Vector2? HoldoutOffset()
 		{
 			return new Vector2(-10, 0);
