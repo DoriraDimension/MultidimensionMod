@@ -36,17 +36,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			item.shootSpeed = 8f;
 		}
 
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine item in list)
-			{
-				if (item.mod == "Terraria" && item.Name == "ItemName")
-				{
-					item.overrideColor = MDRarity.RelicWeapon;
-				}
-			}
-		}
-
 		public override void MeleeEffects(Player player, Rectangle hitbox)
 		{
 			if (Main.rand.NextBool(3))
@@ -58,11 +47,10 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<OldMoltenBlade>());
-			recipe.AddIngredient(ModContent.ItemType<OldMoltenGuard>());
 			recipe.AddIngredient(ItemID.DemoniteBar, 20);
+			recipe.AddIngredient(ItemID.SoulofNight, 5);
 			recipe.AddIngredient(ModContent.ItemType<Blight2>());
-			recipe.AddTile(377);
+			recipe.AddTile(134);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

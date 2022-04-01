@@ -27,21 +27,10 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			item.damage = 45;
 			item.melee = true;
 			item.value = Item.sellPrice(silver: 90);
-			item.rare = ItemRarityID.LightRed;
+			item.rare = ItemRarityID.Orange;
 			item.autoReuse = true;
 			item.UseSound = SoundID.Item1;
 
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine item in list)
-			{
-				if (item.mod == "Terraria" && item.Name == "ItemName")
-				{
-					item.overrideColor = MDRarity.RelicWeapon;
-				}
-			}
 		}
 
 		public override void MeleeEffects(Player player, Rectangle hitbox)
