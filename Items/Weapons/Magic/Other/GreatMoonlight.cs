@@ -54,10 +54,11 @@ namespace MultidimensionMod.Items.Weapons.Magic.Other
 
 		public override void MeleeEffects(Player player, Rectangle hitbox)
 		{
-			for (int i = 0; i < 6; i++)
+			for (int i = 0; i < 3; i++)
 			{
 				int dustIndex = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, (ModContent.DustType<Moondust>()));
 				Main.dust[dustIndex].noGravity = true;
+				Main.dust[dustIndex].alpha = 50;
 			}
 		}
 
