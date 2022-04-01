@@ -48,6 +48,10 @@ namespace MultidimensionMod.NPCs.Ocean
 			{
 				Item.NewItem(npc.getRect(), mod.ItemType("ThunderbubbleBow"));
 			}
+			if (Main.rand.NextFloat() < .2000f)
+			{
+				Item.NewItem(npc.getRect(), mod.ItemType("StormScepter"));
+			}
 			if (Main.rand.NextFloat() < .1000f)
 			{
 				Item.NewItem(npc.getRect(), mod.ItemType("EelMask"));
