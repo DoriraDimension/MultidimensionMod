@@ -24,7 +24,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			item.width = 26;
 			item.height = 26;
 			item.useStyle = 1;
-			item.useTime = 55
+			item.useTime = 55;
 			item.useAnimation = 55;
 			item.knockBack = 2f;
 			item.magic = true;
@@ -64,7 +64,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 				num71 *= num72;
 				float speedX4 = num70 + (float)Main.rand.Next(-40, 41) * 0.02f;
 				float speedY5 = num71 + (float)Main.rand.Next(-40, 41) * 0.02f;
-				Projectile.NewProjectile(position.X, position.Y, speedX4, speedY5, shoot, Damage, KnockBack);
+			    Projectile.NewProjectile(position.X, position.Y, speedX4, speedY5, shoot, Damage, KnockBack, player.whoAmI, 0f, Main.rand.Next(5));
 			return false;
 		}
 
