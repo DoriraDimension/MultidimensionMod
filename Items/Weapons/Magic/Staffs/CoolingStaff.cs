@@ -43,17 +43,6 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			item.crit = 8;
 		}
 
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine item in list)
-			{
-				if (item.mod == "Terraria" && item.Name == "ItemName")
-				{
-					item.overrideColor = MDRarity.RelicWeapon;
-				}
-			}
-		}
-
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

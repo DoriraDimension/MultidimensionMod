@@ -37,17 +37,6 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 
 		}
 
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine item in list)
-			{
-				if (item.mod == "Terraria" && item.Name == "ItemName")
-				{
-					item.overrideColor = MDRarity.RelicWeapon;
-				}
-			}
-		}
-
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
 			type = ProjectileID.FrostBoltSword;
@@ -57,10 +46,10 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<OldFrozenStaffHead>());
-			recipe.AddIngredient(ModContent.ItemType<OldFrozenRod>());
+			recipe.AddIngredient(ModContent.ItemType<CoolingStaff>());
 			recipe.AddIngredient(ItemID.FrostCore);
-			recipe.AddTile(377);
+			recipe.AddIngredient(ModContent.ItemType<IceblossomItem>(), 2);
+			recipe.AddTile(134);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
