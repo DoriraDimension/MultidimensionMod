@@ -30,17 +30,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
 			item.rare = ItemRarityID.Green;
 		}
 
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine item in list)
-			{
-				if (item.mod == "Terraria" && item.Name == "ItemName")
-				{
-					item.overrideColor = MDRarity.RelicWeapon;
-				}
-			}
-		}
-
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
 			type = ModContent.ProjectileType<FleshRipperProj>();
