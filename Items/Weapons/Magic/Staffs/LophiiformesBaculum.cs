@@ -28,8 +28,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			item.mana = 16;
 			item.width = 52;
 			item.height = 52;
-			item.useTime = 32;
-			item.useAnimation = 32;
+			item.useTime = 46;
+			item.useAnimation = 46;
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.knockBack = 2;
@@ -38,7 +38,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			item.UseSound = SoundID.Item20;
 			item.autoReuse = true;
 			item.shoot = ModContent.ProjectileType<Lophiiformes>();
-			item.shootSpeed = 10f;
+			item.shootSpeed = 22f;
 			item.crit = 8;
 		}
 
