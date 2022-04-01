@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using MultidimensionMod.Projectiles;
+using MultidimensionMod.Projectiles.Magic;
 using MultidimensionMod.Items.Materials;
 using System;
 using Microsoft.Xna.Framework;
@@ -16,31 +16,45 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Ice Crystal Staff");
-			Tooltip.SetDefault("A staff that was restored from old relics, it shoots three Frost Bolts.");
+			Tooltip.SetDefault("A staff that was restored from old relics, it shoots 3 icicles that burst into smaller icicles.");
 			DisplayName.AddTranslation(GameCulture.German, "Eis Kristall Stab");
-			Tooltip.AddTranslation(GameCulture.German, "Ein Stab der aus alten Relikten restauriert wurde, er verschießt drei Eis Bolzen.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein Stab der aus alten Relikten restauriert wurde, er schießt 3 Eiszapfen der in kleinere Eiszapfen explodiert.");
 			Item.staff[item.type] = true;
 		}
 
 
 		public override void SetDefaults()
 		{
-			item.CloneDefaults(ItemID.SkyFracture);
-			item.shootSpeed *= 0.75f;
-			item.damage = 60;
-			item.width = 64;
-			item.height = 64;
+			item.damage = 42;
 			item.magic = true;
+			item.mana = 6;
+			item.width = 40;
+			item.height = 40;
+			item.useTime = 47;
+			item.useAnimation = 47;
+			item.useStyle = ItemUseStyleID.HoldingOut;
+			item.noMelee = true;
+			item.knockBack = 2;
 			item.value = Item.sellPrice(silver: 90);
 			item.rare = ItemRarityID.LightRed;
-			item.UseSound = SoundID.Item1;
-
+			item.UseSound = SoundID.Item20;
+			item.autoReuse = true;
+			item.shoot = ModContent.ProjectileType<Icicle>();
+			item.shootSpeed = 15f;
+			item.crit = 8;
 		}
 
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			type = ProjectileID.FrostBoltSword;
-			return base.Shoot(player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
+			float numberProjectiles = 3 + Main.rand.Next(1);
+			float rotation = MathHelper.ToRadians(10);
+			position += Vector2.Normalize(new Vector2(speedX, speedY)) * 45f;
+			for (int i = 0; i < numberProjectiles; i++)
+			{
+				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))) * .5f;
+				Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
+			}
+			return false;
 		}
 
 		public override void AddRecipes()

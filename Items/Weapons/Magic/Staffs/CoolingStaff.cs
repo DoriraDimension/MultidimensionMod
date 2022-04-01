@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using MultidimensionMod.Projectiles;
+using MultidimensionMod.Projectiles.Magic;
 using MultidimensionMod.Items.Materials;
 using System;
 using Microsoft.Xna.Framework;
@@ -16,9 +16,9 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Cooling Staff");
-			Tooltip.SetDefault("A staff that was restored from old relics, it shoots a cold gravity affected ice ball.");
+			Tooltip.SetDefault("A staff that was restored from old relics, it shoots a icicle that bursts into 4 smaller icicles.");
 			DisplayName.AddTranslation(GameCulture.German, "Külender Stab");
-			Tooltip.AddTranslation(GameCulture.German, "Ein Stab der aus alten Relikten restauriert wurde, er schießt von der Schwerkraft betroffene Eisbälle.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein Stab der aus alten Relikten restauriert wurde, er schießt einen Eiszapfen der in kleinere Eiszapfen explodiert.");
 			Item.staff[item.type] = true;
 		}
 
@@ -38,8 +38,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item20;
 			item.autoReuse = true;
-			item.shoot = ProjectileID.BallofFrost;
-			item.shootSpeed = 10f;
+			item.shoot = ModContent.ProjectileType<Icicle>();
+			item.shootSpeed = 15f;
 			item.crit = 8;
 		}
 
