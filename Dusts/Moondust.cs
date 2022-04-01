@@ -14,9 +14,9 @@ namespace MultidimensionMod.Dusts
 		public override bool Update(Dust dust)
 		{
 			dust.position += dust.velocity;
-			dust.rotation += dust.velocity.X;
-			dust.scale -= 0.1f;
-			if (dust.scale < 2.5f)
+			dust.rotation += 6f;
+			dust.scale -= 0.05f;
+			if (dust.scale < 0.1f)
 			{
 				dust.active = false;
 			}
