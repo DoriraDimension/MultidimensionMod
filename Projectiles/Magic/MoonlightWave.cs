@@ -29,10 +29,11 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void Kill(int timeLeft)
 		{
-			for (int i = 0; i < 5; i++)
+			for (int i = 0; i < 10; i++)
 			{
 				int dustIndex = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, ModContent.DustType<Moondust>(), 0f, 0f, 100, default(Color), 2f);
 				Main.dust[dustIndex].velocity *= 1.8f;
+				Main.dust[dustIndex].alpha = 50;
 			}
 		}
 
