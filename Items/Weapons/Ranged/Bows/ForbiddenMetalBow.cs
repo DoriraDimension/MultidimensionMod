@@ -12,7 +12,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Forbidden Metal Bow");
+			DisplayName.SetDefault("Forbidden Dunes");
 			Tooltip.SetDefault("A bow that was restored from old relics, it converts Wooden Arrows into Forbidden Arrows.");
 			DisplayName.AddTranslation(GameCulture.German, "Verbotener Metall Bogen");
 			Tooltip.AddTranslation(GameCulture.German, "Ein Bogen der aus alten Relikten restauriert wurde, er konvertiert Holzpfeile in Verbotene Pfeile.");
@@ -51,10 +51,9 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<OldDustyBowMiddlePiece>());
-			recipe.AddIngredient(ModContent.ItemType<OldDustyBowArm>());
 			recipe.AddIngredient(ItemID.AncientBattleArmorMaterial);
-			recipe.AddTile(377);
+			recipe.AddIngredient(ModContent.ItemType<ManaInfusedSandstone>(), 6);
+			recipe.AddTile(134);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

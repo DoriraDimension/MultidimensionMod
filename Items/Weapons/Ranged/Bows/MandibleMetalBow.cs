@@ -12,7 +12,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Mandible Metal Bow");
+			DisplayName.SetDefault("Antlion Mandible Bow");
 			Tooltip.SetDefault("A bow that was restored from old relics, its a metal base reinforced with Antlion Mandibles.\nShoots two Mandibles.");
 			DisplayName.AddTranslation(GameCulture.German, "Mandible Metall Bogen");
 			Tooltip.AddTranslation(GameCulture.German, "Ein Bogen der aus alten Relikten restauriert wurde, es ist eine Metall BAsis verstärkt mit Ameisenlöwn Kiefern.\nSchießt zwei Mandibeln.");
