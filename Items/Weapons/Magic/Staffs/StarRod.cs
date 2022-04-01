@@ -24,8 +24,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			item.width = 26;
 			item.height = 26;
 			item.useStyle = 1;
-			item.useTime = 20;
-			item.useAnimation = 20;
+			item.useTime = 55
+			item.useAnimation = 55;
 			item.knockBack = 2f;
 			item.magic = true;
 			item.noMelee = true;
