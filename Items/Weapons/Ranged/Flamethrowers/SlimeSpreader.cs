@@ -37,8 +37,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item34;
 			item.autoReuse = true;
-			item.shoot = 10;
-			item.shootSpeed = 18f;
+			item.shoot = ModContent.ProjectileType<GelCloud>();
+			item.shootSpeed = 30f;
 			item.useAmmo = AmmoID.Gel;
 		}
 
