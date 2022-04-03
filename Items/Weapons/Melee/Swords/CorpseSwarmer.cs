@@ -19,7 +19,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void SetDefaults()
 		{
-			item.damage = 46;
+			item.damage = 52;
 			item.melee = true;
 			item.width = 64;
 			item.height = 68;
@@ -28,7 +28,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			item.useStyle = 1;
 			item.knockBack = 3;
 			item.value = Item.sellPrice(gold: 1);
-			item.rare = ItemRarityID.Pink;
+			item.rare = ItemRarityID.LightRed;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.shoot = ModContent.ProjectileType<DecayFlyFriendly>();
