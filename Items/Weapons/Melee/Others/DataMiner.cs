@@ -49,10 +49,5 @@ namespace MultidimensionMod.Items.Weapons.Melee.Others
 				}
 			}
 		}
-
-		public override bool CanUseItem(Player player)
-		{
-			return NPC.downedMoonlord || (player.name == "Dorira") || (player.name == "Marco") || (player.name == "Dorito") || (player.name == "Karl") || (player.name == "Silverking");
-		}
 	}
 }
