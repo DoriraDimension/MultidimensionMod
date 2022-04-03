@@ -16,7 +16,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 		}
 
 		public override void SetDefaults() {
-			item.damage = 53;
+			item.damage = 34;
 			item.ranged = true; 
 			item.width = 80;
 			item.height = 36; 
