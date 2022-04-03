@@ -49,8 +49,8 @@ namespace MultidimensionMod.Items.ToolsEnviromentChange
 			recipe.AddIngredient(ModContent.ItemType<MoonlightMoth>());
 			recipe.AddIngredient(ItemID.SoulofLight, 5);
 			recipe.AddIngredient(ItemID.SoulofNight, 5);
-			recipe.AddIngredient(ItemID.PixieDust, 16);
-			recipe.AddIngredient(ModContent.ItemType<DarkMatterClump>(),16);
+			recipe.AddIngredient(ItemID.PixieDust, 12);
+			recipe.AddIngredient(ModContent.ItemType<DarkMatterClump>(),12);
 			recipe.AddIngredient(ModContent.ItemType<Dimensium>(), 6);
 			recipe.AddTile(ModContent.TileType<DimensionalForge>());
 			recipe.SetResult(this);
