@@ -15,8 +15,8 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetDefaults()
 		{
-			projectile.width = 80;
-			projectile.height = 80;
+			projectile.width = 65;
+			projectile.height = 65;
 			projectile.alpha = 255;
 			projectile.friendly = true;
 			projectile.penetrate = 3;
