@@ -46,8 +46,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			npc.height = 50;
 			npc.aiStyle = 7;
 			npc.damage = 70;
-			npc.defense = 777;
-			npc.lifeMax = 10000000;
+			npc.defense = 77;
+			npc.lifeMax = 10000;
 			npc.HitSound = SoundID.NPCHit1;
 			npc.DeathSound = SoundID.NPCDeath1;
 			npc.knockBackResist = 0f;
@@ -230,9 +230,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
 		public override void NPCLoot()
 		{
-			Item.NewItem(npc.getRect(), ModContent.ItemType<DataMiner>());
 			Item.NewItem(npc.getRect(), ModContent.ItemType<EleanoraBodypillow>());
-			Item.NewItem(npc.getRect(), ModContent.ItemType<EleanoraPlushie>());
 			Item.NewItem(npc.getRect(), ModContent.ItemType<EleanoraPlushiePlaceable>());
 			Item.NewItem(npc.getRect(), ModContent.ItemType<October1Item>());
 		}
