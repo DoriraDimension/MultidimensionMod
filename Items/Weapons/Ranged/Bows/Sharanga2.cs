@@ -19,7 +19,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 
 		public override void SetDefaults()
 		{
-			item.damage = 60;
+			item.damage = 43;
 			item.ranged = true;
 			item.width = 28;
 			item.height = 52;
@@ -51,10 +51,14 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
+			float speedX2 = speedX * 1.5f;
+			float speedY2 = speedY * 1.5f;
 			if (type == ProjectileID.WoodenArrowFriendly)
 			{
 				type = ProjectileID.CursedArrow;
 			}
+			int nah = Projectile.NewProjectile(position.X, position.Y, speedX, speedY, ProjectileID.CursedArrow, damage, knockBack, player.whoAmI);
+			Main.projectile[nah].noDropItem = true;
 			return true;
 		}
 	}
