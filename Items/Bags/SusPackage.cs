@@ -68,7 +68,6 @@ namespace MultidimensionMod.Items.Bags
 				case "Dorito":
 				case "Karl":
 				case "Silverking":
-					player.QuickSpawnItem(ModContent.ItemType<DataMiner>());
 					player.QuickSpawnItem(ModContent.ItemType<EleanoraBodypillow>());
 					player.QuickSpawnItem(ModContent.ItemType<October1Item>());
 					break;
@@ -77,14 +76,12 @@ namespace MultidimensionMod.Items.Bags
 				case "EleanoraKitti":
 				case "Ellie":
 				case "Sunclaw":
-					player.QuickSpawnItem(ModContent.ItemType<EleanorasBat>());
 					player.QuickSpawnItem(ModContent.ItemType<EleanoraPlushie>());
 					player.QuickSpawnItem(ModContent.ItemType<October1Item>());
 					break;
 
 				case "PhiaKitti":
 				case "Dust":
-					player.QuickSpawnItem(ModContent.ItemType<FishCleaver>());
 					player.QuickSpawnItem(ItemID.Bass, 999);
 					player.QuickSpawnItem(ItemID.Worm);
 					break;
@@ -99,15 +96,12 @@ namespace MultidimensionMod.Items.Bags
 
 				case "Rage":
 				case "Josh":
-					player.QuickSpawnItem(ModContent.ItemType<BlackDragonBow>());
 					player.QuickSpawnItem(ModContent.ItemType<MegaDemondrug>(), 10);
-					player.QuickSpawnItem(ItemID.BreakerBlade);
 					break;
 
 				case "Cotton":
 				case "Dynosaur":
 				case "Crabbane":
-					player.QuickSpawnItem(ModContent.ItemType<BlackDragonBow>());
 					player.QuickSpawnItem(ModContent.ItemType<MegaDemondrug>(), 10);
 					player.QuickSpawnItem(ItemID.PinkDye, 3);
 					player.QuickSpawnItem(ItemID.PinkPaint, 999);
