@@ -21,7 +21,7 @@ namespace MultidimensionMod.Buffs.Potions
         {
             player.magicDamage += 0.2f;
             player.manaRegenBonus += 1;
-            player.statManaMax2 += 40;
+            player.statManaMax2 += 10;
             player.manaMagnet = true;
         }
     }
