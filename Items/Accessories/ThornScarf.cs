@@ -36,7 +36,7 @@ namespace MultidimensionMod.Items.Accessories
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Stinger, 5);
-            recipe.AddIngredient(ItemID.Vine, 1);
+            recipe.AddIngredient(ItemID.Vine, 2);
 			recipe.AddIngredient(ItemID.JungleSpores, 8);
 			recipe.AddTile(304);
 			recipe.SetResult(this);
