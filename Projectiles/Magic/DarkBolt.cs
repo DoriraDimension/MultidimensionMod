@@ -35,7 +35,7 @@ namespace MultidimensionMod.Projectiles.Magic
 				int dustIndex = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 27, 0f, 0f, 100, default(Color), 2f);
 				Main.dust[dustIndex].velocity *= 1.4f;
 
-				Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, ModContent.ProjectileType<DarkBlast>(), projectile.damage, projectile.knockBack, projectile.owner);
+				Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, ModContent.ProjectileType<DarkBlast>(), (int)((float)projectile.damage * 0.5f), projectile.knockBack, projectile.owner);
 			}
 		}
 
