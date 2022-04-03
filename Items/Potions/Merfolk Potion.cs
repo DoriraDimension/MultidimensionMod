@@ -37,7 +37,6 @@ namespace MultidimensionMod.Items.Potions
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.GillsPotion);
             recipe.AddIngredient(ItemID.FlipperPotion);
-            recipe.AddIngredient(ItemID.SwiftnessPotion);
             recipe.AddTile(355);
             recipe.SetResult(this);
             recipe.AddRecipe();
