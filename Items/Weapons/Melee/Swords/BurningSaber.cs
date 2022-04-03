@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using MultidimensionMod.Projectiles.SwordProjectiles;
 using MultidimensionMod.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -13,23 +14,25 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Burning Saber");
-			Tooltip.SetDefault("A saber that was restored from old relics, it shoots fireballs and sets enemies on fire.");
+			Tooltip.SetDefault("A saber that was restored from old relics, spawns small fire clouds on hit.");
 			DisplayName.AddTranslation(GameCulture.German, "Brennender Säbel");
-			Tooltip.AddTranslation(GameCulture.German, "Ein Säbel der aus alten Relikten restauriert wurde, es schießt Feuerbälle und setzt Gegner in Brand.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein Säbel der aus alten Relikten restauriert wurde, spawnt kleine Feuerwolken when getroffen.");
 		}
 
 		public override void SetDefaults()
 		{
-			item.CloneDefaults(ItemID.BeamSword);
-			item.shootSpeed *= 0.75f;
-			item.width = 60;
-			item.height = 68;
 			item.damage = 45;
 			item.melee = true;
+			item.width = 60;
+			item.height = 68;
+			item.useTime = 21;
+			item.useAnimation = 21;
+			item.useStyle = 1;
+			item.knockBack = 3;
 			item.value = Item.sellPrice(silver: 90);
 			item.rare = ItemRarityID.Orange;
-			item.autoReuse = true;
 			item.UseSound = SoundID.Item1;
+			item.autoReuse = true;
 
 		}
 
@@ -43,13 +46,10 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
 		{
-			target.AddBuff(BuffID.OnFire, 300);
-		}
-
-		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
-		{
-			type = ProjectileID.BallofFire;
-			return base.Shoot(player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
+			if (player.statLife >= player.statLifeMax2 / 2)
+			{
+				Projectile.NewProjectile(target.Center.X, target.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<Explosion>(), (int)((double)((float)item.damage) * 0.2), 0f, Main.myPlayer);
+			}
 		}
 
 		public override void AddRecipes()
