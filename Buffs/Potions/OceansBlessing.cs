@@ -21,7 +21,6 @@ namespace MultidimensionMod.Buffs.Potions
         {
             player.gills = true;
             player.accFlipper = true;
-            player.moveSpeed += 0.10f;
         }
     }
 }
