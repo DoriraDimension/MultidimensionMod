@@ -29,7 +29,7 @@ namespace MultidimensionMod.Buffs.Potions
             player.statLifeMax2 += 50;
             player.lifeRegen += 2;
             player.statDefense += 12;
-            player.endurance += 0.20f;
+            player.endurance += 0.13f;
         }
     }
 }
