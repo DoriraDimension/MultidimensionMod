@@ -46,7 +46,7 @@ namespace MultidimensionMod.Items.Summons
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.JungleSpores, 8);
+			recipe.AddIngredient(ItemID.JungleSpores, 5);
 			recipe.AddIngredient(ItemID.Vine, 2);
 			recipe.AddIngredient(ItemID.CopperBar);
 			recipe.AddTile(134);
