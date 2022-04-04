@@ -12,9 +12,9 @@ namespace MultidimensionMod.Items.Weapons.Magic.Other
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Smiley's Dark Blast");
-			Tooltip.SetDefault("A smiling stare.\nShoots dark energy beams");
+			Tooltip.SetDefault("A smiling stare.\nShoots dark energy beams that explode on hit");
 			DisplayName.AddTranslation(GameCulture.German, "Smileys dunkler Schuss");
-			Tooltip.AddTranslation(GameCulture.German, "Ein lächelndes starren.\nVerschießt dunkle Energielaser.");
+			Tooltip.AddTranslation(GameCulture.German, "Ein lächelndes starren.\nVerschießt dunkle Energielaser die beim aufprall explodieren.");
 		}
 
 		public override void SetDefaults()
