@@ -14,7 +14,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Lifelight");
-			Tooltip.SetDefault("The awekened form of the Light's Bane that shows that even the most evil being can become good.");
+			Tooltip.SetDefault("The awakened form of the Light's Bane that shows that even the most evil being can become good.");
 			DisplayName.AddTranslation(GameCulture.German, "Lebenslicht");
 			Tooltip.AddTranslation(GameCulture.German, "Die erwachte Version des Schrecken des Tags, es zeigt das selbst die böseste Kreatur gut werden kann.");
 		}

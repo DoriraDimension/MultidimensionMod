@@ -12,7 +12,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Fishron Cleaver");
-			Tooltip.SetDefault("A big cleaver, designed like a mutated ocean creature, maybe it was seen as a sign of strenght.\nReleases typhoons on enemy hits.");
+			Tooltip.SetDefault("A big cleaver, designed like a mutated ocean creature, maybe it was seen as a sign of strength.\nReleases typhoons on enemy hits.");
 			DisplayName.AddTranslation(GameCulture.German, "Fishron Beil");
 			Tooltip.AddTranslation(GameCulture.German, "Ein großes Beil, entworfen um wie eine mutierte Ozean Kreatur auszusehen, vielleicht wurde es als ein Zeichen der Stärke angesehen.\nVerschießt Taifune wenn gegner getroffen werden.");
 		}
