@@ -20,7 +20,7 @@ namespace MultidimensionMod.Items.Materials
 		{
 			Item.width = 20;
 			Item.height = 24;
-			Item.maxStack = 999;
+			Item.maxStack = 9999;
 			Item.rare = ItemRarityID.Green;
 		}
 
