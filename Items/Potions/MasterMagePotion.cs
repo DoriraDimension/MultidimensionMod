@@ -23,7 +23,7 @@ namespace MultidimensionMod.Items.Potions
             Item.useTime = 15;
             Item.useTurn = true;
             Item.UseSound = SoundID.Item3;
-            Item.maxStack = 999;
+            Item.maxStack = 9999;
             Item.consumable = true;
             Item.rare = ItemRarityID.LightRed;
             Item.value = Item.sellPrice(silver: 34);
