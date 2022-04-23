@@ -33,6 +33,13 @@ namespace MultidimensionMod.Items.Potions
 
         public override void AddRecipes()
         {
+            CreateRecipe()
+            .AddIngredient(ModContent.ItemType<MegaDemondrug>())
+            .AddIngredient(ModContent.ItemType<PotionofLife>())
+            .AddIngredient(ModContent.ItemType<DimensionalShieldPotion>())
+            .AddIngredient(ItemID.Ectoplasm)
+            .AddTile(355)
+            .Register();
 
         }
     }

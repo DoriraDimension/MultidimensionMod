@@ -1,4 +1,4 @@
-﻿using MultidimensionMod.Buffs.Potions;
+﻿using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -33,7 +33,10 @@ namespace MultidimensionMod.Items.Potions
 
         public override void AddRecipes()
         {
-
+            CreateRecipe()
+            .AddIngredient(ModContent.ItemType<EyeTendril>())
+            .AddTile(17)
+            .Register();
         }
     }
 }
