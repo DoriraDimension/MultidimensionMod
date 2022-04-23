@@ -1,6 +1,6 @@
-﻿using Terraria;
+﻿using MultidimensionMod.Tiles;
+using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Materials
@@ -24,7 +24,11 @@ namespace MultidimensionMod.Items.Materials
 
 		public override void AddRecipes()
 		{
-
+			CreateRecipe()
+			.AddIngredient(ModContent.ItemType<ManaInfusedSandstone>())
+			.AddIngredient(ModContent.ItemType<Dimensium>())
+			.AddTile(ModContent.TileType<DimensionalForge>())
+			.Register();
 		}
 	}
 }
