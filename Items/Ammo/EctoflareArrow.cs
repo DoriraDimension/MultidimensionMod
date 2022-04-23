@@ -30,7 +30,7 @@ namespace MultidimensionMod.Items.Ammo
 
 		public override void AddRecipes()
 		{
-			CreateRecipe()
+			CreateRecipe(150)
 			.AddIngredient(ItemID.WoodenArrow, 150)
 			.AddIngredient(ItemID.Ectoplasm)
 			.AddTile(134)
