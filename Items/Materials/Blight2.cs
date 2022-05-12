@@ -15,6 +15,7 @@ namespace MultidimensionMod.Items.Materials
 			Tooltip.SetDefault("A long lost soul, revived with the power of 3 mighty essences.");
 			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(4, 8));
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
+			ItemID.Sets.AnimatesAsSoul[Item.type] = true;
 			ItemID.Sets.ItemNoGravity[Item.type] = true;
 		}
 
