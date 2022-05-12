@@ -30,7 +30,7 @@ namespace MultidimensionMod.Items.Accessories
 			{
 				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
 				{
-					Item.OverrideColor = MDRarity.RareVariant;
+					Item.OverrideColor = MDRarity.ParallelVariant;
 				}
 			}
 		}
