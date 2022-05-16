@@ -24,6 +24,7 @@ namespace MultidimensionMod
 		internal bool vanillaLoaded = true;
 
 		public static int DimensiumEuronen;
+
 		public override void AddRecipeGroups()
 		{
 			RecipeGroup group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " ´VilePowder", new int[]
