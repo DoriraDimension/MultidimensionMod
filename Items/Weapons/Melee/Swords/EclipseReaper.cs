@@ -48,7 +48,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
 			float numberProjectiles = 3;
-			float rotation = MathHelper.ToRadians(45);
+			float rotation = MathHelper.ToRadians(30);
 
 			position += Vector2.Normalize(velocity) * 45f;
 
