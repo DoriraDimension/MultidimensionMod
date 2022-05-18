@@ -16,8 +16,8 @@ namespace MultidimensionMod.Items.Potions
 
         public override void SetDefaults()
         {
-            Item.width = 30;
-            Item.height = 32;
+            Item.width = 22;
+            Item.height = 28;
             Item.useStyle = ItemUseStyleID.DrinkLiquid;
             Item.useAnimation = 15;
             Item.useTime = 15;
