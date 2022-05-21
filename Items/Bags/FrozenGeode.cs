@@ -29,7 +29,7 @@ namespace MultidimensionMod.Items.Bags
 		public override void RightClick(Player player)
 		{
 			var source = player.GetSource_OpenItem(Type);
-			int choice = Main.rand.Next(8);
+			int choice = Main.rand.Next(7);
 			if (choice == 0)
 			{
 				player.QuickSpawnItem(source, ItemID.IceBlock, 35);
@@ -99,18 +99,7 @@ namespace MultidimensionMod.Items.Bags
 			}
 			else if (choice == 6)
 			{
-				player.QuickSpawnItem(source, ModContent.ItemType<OldFrozenStaffHead>());
-				if (Main.hardMode)
-				{
-					if (Main.rand.NextFloat() < .2500f)
-					{
-						player.QuickSpawnItem(source, ItemID.FrostCore);
-					}
-				}
-			}
-			else if (choice == 7)
-			{
-				player.QuickSpawnItem(source, ModContent.ItemType<OldFrozenRod>());
+				player.QuickSpawnItem(source, ModContent.ItemType<OldFrozenStaff>());
 				if (Main.hardMode)
 				{
 					if (Main.rand.NextFloat() < .2500f)

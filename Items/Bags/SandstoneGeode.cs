@@ -76,18 +76,7 @@ namespace MultidimensionMod.Items.Bags
 			}
 			else if (choice == 4)
 			{
-				player.QuickSpawnItem(source, ModContent.ItemType<OldDustyBowMiddlePiece>());
-				if (Main.hardMode)
-				{
-					if (Main.rand.NextFloat() < .2500f)
-					{
-						player.QuickSpawnItem(source, ItemID.AncientBattleArmorMaterial);
-					}
-				}
-			}
-			else if (choice == 5)
-			{
-				player.QuickSpawnItem(source, ModContent.ItemType<OldDustyBowArm>());
+				player.QuickSpawnItem(source, ModContent.ItemType<OldDustyBow>());
 				if (Main.hardMode)
 				{
 					if (Main.rand.NextFloat() < .2500f)

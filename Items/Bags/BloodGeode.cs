@@ -29,7 +29,7 @@ namespace MultidimensionMod.Items.Bags
 		public override void RightClick(Player player)
 		{
 			var source = player.GetSource_OpenItem(Type);
-			int choice = Main.rand.Next(4);
+			int choice = Main.rand.Next(3);
 			if (choice == 0)
 			{
 				player.QuickSpawnItem(source, ItemID.CrimtaneOre, 20);
@@ -40,11 +40,7 @@ namespace MultidimensionMod.Items.Bags
 			}
 			else if (choice == 2)
 			{
-				player.QuickSpawnItem(source, ModContent.ItemType<OldStainedBone>());
-			}
-			else if (choice == 3)
-			{
-				player.QuickSpawnItem(source, ModContent.ItemType<OldStainedFleshStick>());
+				player.QuickSpawnItem(source, ModContent.ItemType<OldStainedScythe>());
 			}
 		}
 	}

@@ -29,7 +29,7 @@ namespace MultidimensionMod.Items.Bags
 		public override void RightClick(Player player)
 		{
 			var source = player.GetSource_OpenItem(Type);
-			int choice = Main.rand.Next(6);
+			int choice = Main.rand.Next(5);
 			if (choice == 0)
 			{
 				player.QuickSpawnItem(source, ItemID.Hellstone, 20);
@@ -48,11 +48,7 @@ namespace MultidimensionMod.Items.Bags
 			}
 			else if (choice == 4)
 			{
-				player.QuickSpawnItem(source, ModContent.ItemType<OldMoltenBlade>());
-			}
-			else if (choice == 5)
-			{
-				player.QuickSpawnItem(source, ModContent.ItemType<OldMoltenGuard>());
+				player.QuickSpawnItem(source, ModContent.ItemType<OldPetrifiedBlade>());
 			}
 		}
 	}
