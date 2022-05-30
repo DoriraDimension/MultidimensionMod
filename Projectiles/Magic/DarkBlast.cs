@@ -9,6 +9,7 @@ namespace MultidimensionMod.Projectiles.Magic
 {
 	internal class DarkBlast : ModProjectile
 	{
+		public override string Texture => "MultidimensionMod/Projectiles/NoTexture";
 
 		public override void SetStaticDefaults()
 		{
