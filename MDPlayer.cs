@@ -1,4 +1,7 @@
-﻿using Terraria.ModLoader;
+﻿using MultidimensionMod.Items.Bags;
+using System.Collections.Generic;
+using Terraria;
+using Terraria.ModLoader;
 
 namespace MultidimensionMod
 {
@@ -14,6 +17,14 @@ namespace MultidimensionMod
         {
             SmileyJr = false;
             IgnaenHead = false;
+        }
+
+        public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
+        {
+            return new[]
+            {
+                new Item (ModContent.ItemType<SusPackage>())
+            };
         }
     }
 }
