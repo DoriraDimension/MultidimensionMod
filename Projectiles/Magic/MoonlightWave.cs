@@ -66,7 +66,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override bool PreDraw(ref Color lightColor)
 		{
-			Texture2D glowMask = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Pets/MoonlightWave").Value;
+			Texture2D glowMask = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Magic/MoonlightWave").Value;
 			return true;
 		}
 	}
