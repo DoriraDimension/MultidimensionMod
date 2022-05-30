@@ -20,6 +20,7 @@ namespace MultidimensionMod.Buffs.Pets
 			int projType = ModContent.ProjectileType<SmileyJr>();
 			if (player.whoAmI == Main.myPlayer && player.ownedProjectileCounts[projType] <= 0)
 			{
+				var entitySource = player.GetSource_Buff(buffIndex);
 				Projectile.NewProjectile(player.GetSource_Buff(buffIndex), player.Center, Vector2.Zero, projType, 0, 0f, player.whoAmI);
 			}
 		}
