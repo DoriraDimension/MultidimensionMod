@@ -1,3 +1,4 @@
+using MultidimensionMod.Items.Materials;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,6 +25,11 @@ namespace MultidimensionMod
 		internal bool vanillaLoaded = true;
 
 		public static int DimensiumEuronen;
+
+		public override void Load()
+		{
+			DimensiumEuronen = CustomCurrencyManager.RegisterCurrency(new MDCurrency(ModContent.ItemType<Dimensium>(), 999L, "Dimensium"));
+		}
 
 		public override void AddRecipeGroups()
 		{
