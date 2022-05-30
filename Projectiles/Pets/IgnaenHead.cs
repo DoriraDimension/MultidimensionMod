@@ -1,3 +1,4 @@
+using MultidimensionMod.Buffs.Pets;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using System;
@@ -24,7 +25,7 @@ namespace MultidimensionMod.Projectiles.Pets
 
 		public override bool PreDraw(ref Color lightColor)
         {
-			Texture2D glowMask = ModContent.Request<Texture2D>("Projectiles/Pets/IgnaenHead_Glow").Value;
+			Texture2D glowMask = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Pets/IgnaenHead_Glow").Value;
 			return true;
 		}
 
@@ -32,11 +33,7 @@ namespace MultidimensionMod.Projectiles.Pets
 		{
 			Player player = Main.player[Projectile.owner];
 			MDPlayer modPlayer = player.GetModPlayer<MDPlayer>();
-			if (player.dead)
-			{
-				modPlayer.IgnaenHead = false;
-			}
-			if (modPlayer.IgnaenHead)
+			if (!player.dead && player.HasBuff(ModContent.BuffType<IgnaenHeadBuff>()))
 			{
 				Projectile.timeLeft = 2;
 			}

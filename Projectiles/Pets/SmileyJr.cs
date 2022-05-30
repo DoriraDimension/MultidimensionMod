@@ -1,6 +1,6 @@
+using MultidimensionMod.Buffs.Pets;
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Projectiles.Pets
@@ -23,14 +23,9 @@ namespace MultidimensionMod.Projectiles.Pets
 		public override void AI() {
 			Player player = Main.player[Projectile.owner];
 			MDPlayer modPlayer = player.GetModPlayer<MDPlayer>();
-			if (player.dead) 
-			{
-				modPlayer.SmileyJr = false;
-			}
-			if (modPlayer.SmileyJr) 
+			if (!player.dead && player.HasBuff(ModContent.BuffType<SmileyJrBuff>()))
 			{
 				Projectile.timeLeft = 2;
-
 			}
 
 			int frameSpeed = 7;
