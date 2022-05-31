@@ -25,7 +25,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.knockBack = 1f;
 			Item.mana = 10;
 			Item.width = 22;
-			Item.height = 24;
+			Item.height = 26;
 			Item.useTime = 36;
 			Item.useAnimation = 36;
 			Item.useStyle = ItemUseStyleID.Shoot;
