@@ -53,8 +53,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 		{
 			CreateRecipe()
 			.AddIngredient(ItemID.Gungnir)
-			.AddIngredient(ModContent.ItemType<Blight2>(), 10)
-			.AddIngredient(ItemID.Ectoplasm, 5)
+			.AddIngredient(ModContent.ItemType<Blight2>(), 5)
+			.AddIngredient(ItemID.Ectoplasm, 3)
 			.AddTile(134)
 			.Register();
 		}
