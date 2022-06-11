@@ -1,8 +1,9 @@
 ﻿using MultidimensionMod.Projectiles.Magic;
+using MultidimensionMod.Items.Souls;
+using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Tiles;
 using Terraria;
-using Microsoft.Xna.Framework;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Others
@@ -33,6 +34,15 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<DarkBolt>();
 			Item.shootSpeed = 35f;
+		}
+
+		public override void AddRecipes()
+		{
+			CreateRecipe()
+			.AddIngredient(ModContent.ItemType<SmileySoulshard>())
+			.AddIngredient(ModContent.ItemType<Dimensium>(), 10)
+			.AddTile(ModContent.TileType<DimensionalForge>())
+			.Register();
 		}
 	}
 }
