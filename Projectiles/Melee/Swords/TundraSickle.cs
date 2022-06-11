@@ -26,6 +26,16 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			Projectile.penetrate = 3;
 		}
 
+		public override void Kill(int timeLeft)
+		{
+			for (int i = 0; i < 1; i++)
+			{
+				SoundEngine.PlaySound(SoundID.Item27, base.Projectile.position);
+				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.BlueCrystalShard, 0f, 0f, 100, default(Color), 2f);
+				Main.dust[dustIndex].velocity *= 1.4f;
+			}
+		}
+
 		public override void AI()
 		{
 			Projectile.rotation += 0.4f * (float)Projectile.direction;

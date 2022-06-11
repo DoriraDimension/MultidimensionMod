@@ -32,7 +32,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 		public override void Kill(int timeLeft)
 		{
 			SoundEngine.PlaySound(SoundID.Item27, base.Projectile.position);
-			int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 67, 0f, 0f, 100, default(Color), 2f); //sinep
+			int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.BlueCrystalShard, 0f, 0f, 100, default(Color), 2f);
 			Main.dust[dustIndex].velocity *= 1.4f;
 		}
 
@@ -51,7 +51,6 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			{
 				Projectile.velocity.Y = 16f;
 			}
-
 			if (Projectile.spriteDirection == -1)
 			{
 				Projectile.rotation += MathHelper.Pi;
