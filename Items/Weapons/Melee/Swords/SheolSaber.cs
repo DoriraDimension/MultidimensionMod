@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Projectiles.Melee.Swords;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -11,38 +12,49 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Sheol Saber");
-			Tooltip.SetDefault("A saber that was restored from old relics, it shoots demonic projectiles.");
+			Tooltip.SetDefault("A old relic augmented with demon powers, unleashes a hellish explosion on hit and has a chance to unleash several demon scythes.");
 		}
 
 		public override void SetDefaults()
 		{
 			Item.damage = 65;
 			Item.DamageType = DamageClass.Melee;
-			Item.width = 60;
-			Item.height = 68;
+			Item.width = 64;
+			Item.height = 72;
 			Item.useTime = 18;
 			Item.useAnimation = 18;
-			Item.useStyle = 1;
+			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 4;
 			Item.autoReuse = true;
 			Item.value = Item.sellPrice(gold: 1);
 			Item.rare = ItemRarityID.Pink;
 			Item.UseSound = SoundID.Item1;
-			Item.shoot = ProjectileID.DemonScythe;
-			Item.shootSpeed = 8f;
 		}
 
 		public override void MeleeEffects(Player player, Rectangle hitbox)
 		{
 			if (Main.rand.NextBool(3))
 			{
-				Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, (27));
+				Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, (296));
+			}
+		}
+
+		public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+		{
+			Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), target.Center.X, target.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<DemonExplosion>(), (int)((double)((float)Item.damage) * 0.3), 0f, Main.myPlayer);
+			if (Main.rand.Next(4) == 0)
+            {
+				for (int i = 0; i < 4; i++)
+				{
+					Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), target.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-9, 10)), ProjectileID.DemonScythe, (int)((double)((float)Item.damage) * 0.3f), 0f, Main.myPlayer);
+				}
 			}
 		}
 
 		public override void AddRecipes()
 		{
 			CreateRecipe()
+		    .AddIngredient(ModContent.ItemType<BurningSaber>())
 			.AddIngredient(ItemID.DemoniteBar, 20)
 			.AddIngredient(ItemID.SoulofNight, 5)
 			.AddIngredient(ModContent.ItemType<Blight2>())
