@@ -23,8 +23,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			Item.width = 62;
 			Item.height = 62;
 			Item.useStyle = ItemUseStyleID.Shoot;
-			Item.useTime = 55;
-			Item.useAnimation = 55;
+			Item.useTime = 11;
+			Item.useAnimation = 11;
 			Item.autoReuse = true;
 			Item.knockBack = 1f;
 			Item.DamageType = DamageClass.Magic;
@@ -47,8 +47,6 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			float num72 = (float)Math.Sqrt(num70 * num70 + num71 * num71);
 			float ai2 = num71 + position.Y;
 			int num99 = 5;
-			for (int num100 = 0; num100 < num99; num100++)
-			{
 				position = new Vector2(player.position.X + (float)player.width * 0.5f + (float)(Main.rand.Next(201) * -player.direction) + ((float)Main.mouseX + Main.screenPosition.X - player.position.X), player.MountedCenter.Y - 600f);
 				position.X = (position.X + player.Center.X) / 2f + (float)Main.rand.Next(-200, 201);
 				num70 = (float)Main.mouseX + Main.screenPosition.X - position.X;
@@ -68,7 +66,6 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 				float speedX4 = num70 + (float)Main.rand.Next(-40, 41) * 0.02f;
 				float speedY5 = num71 + (float)Main.rand.Next(-40, 41) * 0.02f;
 				Projectile.NewProjectile(source, position.X, position.Y, speedX4, speedY5, shoot, Damage, KnockBack, player.whoAmI, 0f, Main.rand.Next(5));
-			}
 			return false;
 		}
 	}
