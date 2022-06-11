@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using MultidimensionMod.Projectiles.Ranged;
+using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.DataStructures;
@@ -11,7 +12,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Cursed Maw");
-			Tooltip.SetDefault("A weapon modeled after Eater of Souls, it spits a few cursed fireballs.");
+			Tooltip.SetDefault("A grotesque weapon, almost seems to be alive...\nShoots 3 beams of cursed energy.");
 		}
 
 		public override void SetDefaults()
@@ -20,8 +21,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 			Item.DamageType = DamageClass.Ranged;
 			Item.width = 44;
 			Item.height = 24;
-			Item.useTime = 12;
-			Item.useAnimation = 54;
+			Item.useTime = 24;
+			Item.useAnimation = 24;
 			Item.reuseDelay = 40;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
@@ -30,17 +31,16 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 			Item.rare = ItemRarityID.LightRed;
 			Item.UseSound = SoundID.Item34;
 			Item.autoReuse = true;
-			Item.shoot = ProjectileID.CursedFlameFriendly;
+			Item.shoot = ModContent.ProjectileType<CursedRay>();
 			Item.shootSpeed = 10f;
 			Item.crit = 4;
 		}
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
-			int numberProjectiles = 1 + Main.rand.Next(1);
-			for (int i = 0; i < numberProjectiles; i++)
+			for (int i = 0; i < 3; i++)
 			{
-				Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(30));
+				Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(20));
 				Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
 			}
 			return false;
