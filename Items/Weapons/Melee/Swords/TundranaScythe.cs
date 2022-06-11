@@ -1,4 +1,5 @@
 using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Projectiles.Melee.Swords;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -12,7 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Tundrana Scythe");
-			Tooltip.SetDefault("A scythe created by an ice elemental from another dimension, it's extremely cold.");
+			Tooltip.SetDefault("A scythe from a world beyhond the freezing fog of the Frozen Underworld, it was once used by some sort of royal guard.\nShoot piss");
 		}
 
 		public override void SetDefaults()
@@ -20,34 +21,21 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.damage = 79;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 76;
-			Item.height = 60;
-			Item.useTime = 16;
-			Item.useAnimation = 16;
-			Item.useStyle = 1;
+			Item.height = 76;
+			Item.useTime = 42;
+			Item.useAnimation = 28;
+			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 4;
 			Item.autoReuse = true;
 			Item.value = Item.sellPrice(gold: 3);
 			Item.rare = ItemRarityID.Lime;
 			Item.UseSound = SoundID.Item1;
-			Item.shoot = ProjectileID.IceSickle;
-			Item.shootSpeed = 10f;
-			Item.reuseDelay = 14;
+			Item.shoot = ModContent.ProjectileType<TundraSickle>();
+			Item.shootSpeed = 12f;
 		}
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
-			{
-				type = Main.rand.Next(new int[] { type, ProjectileID.FrostBoltSword, ProjectileID.IceSickle });
-			}
-
-			{
-				for (int i = 0; i < 4; i++)
-				{
-					Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(20));
-					newVelocity *= 1f - Main.rand.NextFloat(0.3f);
-					Projectile.NewProjectileDirect(source, position, newVelocity, type, damage, knockback, player.whoAmI);
-				}
-			}
 			return true;
 		}
 
