@@ -2,6 +2,7 @@
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Tiles;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -34,6 +35,17 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<DarkBolt>();
 			Item.shootSpeed = 35f;
+		}
+
+		public override void ModifyTooltips(List<TooltipLine> list)
+		{
+			foreach (TooltipLine Item in list)
+			{
+				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
+				{
+					Item.OverrideColor = MDRarity.BossItem;
+				}
+			}
 		}
 
 		public override void AddRecipes()
