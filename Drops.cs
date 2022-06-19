@@ -20,307 +20,317 @@ namespace MultidimensionMod
 {
     class Drops : GlobalNPC
     {
-        public override void ModifyNPCLoot(NPC npc, NPCLoot npcloot)
+        public override void ModifyNPCLoot(NPC NPC, NPCLoot NPCloot)
         {
-            npcloot.Add(ItemDropRule.Common(ModContent.ItemType<Dimensium>(), 100));
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<Dimensium>(), 100));
 
-            if (npc.type == NPCID.KingSlime)
+            if (NPC.type == NPCID.KingSlime)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<RoyalBelt>(), 3));
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<KingSlimeSoul>()));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<RoyalBelt>(), 3));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<KingSlimeSoul>()));
             }
 
-            if (npc.type == NPCID.EyeofCthulhu)
+            if (NPC.type == NPCID.EyeofCthulhu)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<Iris>(), 4));
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<EyeTendril>(), 1, 3, 5));
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<EyeSoul>()));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<Iris>(), 4));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<EyeTendril>(), 1, 3, 5));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<EyeSoul>()));
             }
 
-            if ((npc.type == NPCID.DemonEye) || (npc.type == NPCID.DemonEye2) || (npc.type == NPCID.PurpleEye) || (npc.type == NPCID.PurpleEye2) || (npc.type == NPCID.GreenEye) || (npc.type == NPCID.GreenEye2) || (npc.type == NPCID.DialatedEye) || (npc.type == NPCID.DialatedEye2) || (npc.type == NPCID.CataractEye) || (npc.type == NPCID.CataractEye2) || (npc.type == NPCID.SleepyEye) || (npc.type == NPCID.SleepyEye2) || (npc.type == NPCID.DemonEyeOwl) || (npc.type == NPCID.DemonEyeSpaceship))
+            if ((NPC.type == NPCID.DemonEye) || (NPC.type == NPCID.DemonEye2) || (NPC.type == NPCID.PurpleEye) || (NPC.type == NPCID.PurpleEye2) || (NPC.type == NPCID.GreenEye) || (NPC.type == NPCID.GreenEye2) || (NPC.type == NPCID.DialatedEye) || (NPC.type == NPCID.DialatedEye2) || (NPC.type == NPCID.CataractEye) || (NPC.type == NPCID.CataractEye2) || (NPC.type == NPCID.SleepyEye) || (NPC.type == NPCID.SleepyEye2) || (NPC.type == NPCID.DemonEyeOwl) || (NPC.type == NPCID.DemonEyeSpaceship))
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<EyeoftheNightwalker>(), 30));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<EyeoftheNightwalker>(), 30));
             }
 
-            if (npc.type == NPCID.ServantofCthulhu)
+            if (NPC.type == NPCID.ServantofCthulhu)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<EyeoftheNightwalker>(), 100));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<EyeoftheNightwalker>(), 100));
             }
 
-            if (System.Array.IndexOf(new int[] { NPCID.EaterofWorldsBody, NPCID.EaterofWorldsHead, NPCID.EaterofWorldsTail }, npc.type) > -1)
+            if (System.Array.IndexOf(new int[] { NPCID.EaterofWorldsBody, NPCID.EaterofWorldsHead, NPCID.EaterofWorldsTail }, NPC.type) > -1)
             {
                 LeadingConditionRule leadingConditionRule = new(new Conditions.LegacyHack_IsABoss());
-                leadingConditionRule.OnSuccess(npcloot.Add(ItemDropRule.Common(ModContent.ItemType<WormSoul>())));
-                npcloot.Add(leadingConditionRule);
+                leadingConditionRule.OnSuccess(NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<WormSoul>())));
+                NPCloot.Add(leadingConditionRule);
             }
 
-            if (npc.type == NPCID.BrainofCthulhu)
+            if (NPC.type == NPCID.BrainofCthulhu)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<BrainSoul>()));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<BrainSoul>()));
             }
 
-            if (npc.type == NPCID.QueenBee)
+            if (NPC.type == NPCID.QueenBee)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<BeeSoul>()));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<BeeSoul>()));
             }
 
-            if (npc.type == NPCID.SkeletronHead)
+            if (NPC.type == NPCID.SkeletronHead)
             {
-                npcloot.Add(ItemDropRule.Common(ItemID.BoneKey, 10000));
-                npcloot.Add(ItemDropRule.Common(ItemID.Bone, 1, 25, 35));
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<SkeletonSoul>()));
+                NPCloot.Add(ItemDropRule.Common(ItemID.BoneKey, 10000));
+                NPCloot.Add(ItemDropRule.Common(ItemID.Bone, 1, 25, 35));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<SkeletonSoul>()));
             }
 
-            if (npc.type == NPCID.WallofFlesh)
+            if (NPC.type == NPCID.Deerclops)
             {
-                npcloot.Add(ItemDropRule.Common(ItemID.FleshBlock, 1, 40, 50));
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<WallSoul>()));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<DeerSoul>()));
             }
 
-            if (npc.type == NPCID.Retinazer || npc.type == NPCID.Spazmatism)
+            if (NPC.type == NPCID.WallofFlesh)
+            {
+                NPCloot.Add(ItemDropRule.Common(ItemID.FleshBlock, 1, 40, 50));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<WallSoul>()));
+            }
+
+            if (NPC.type == NPCID.QueenSlimeBoss)
+            {
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<WomanSlimeSoul>()));
+            }
+
+            if (NPC.type == NPCID.Retinazer || NPC.type == NPCID.Spazmatism)
             {
                 LeadingConditionRule leadingConditionRule = new LeadingConditionRule(new Conditions.MissingTwin());
-                leadingConditionRule.OnSuccess(npcloot.Add(ItemDropRule.Common(ModContent.ItemType<Retilazor>(), 4)));
-                leadingConditionRule.OnSuccess(npcloot.Add(ItemDropRule.Common(ModContent.ItemType<Spazmelter>(), 4)));
-                leadingConditionRule.OnSuccess(npcloot.Add(ItemDropRule.Common(ModContent.ItemType<TwinSoul>())));
-                npcloot.Add(leadingConditionRule);
+                leadingConditionRule.OnSuccess(NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<Retilazor>(), 4)));
+                leadingConditionRule.OnSuccess(NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<Spazmelter>(), 4)));
+                leadingConditionRule.OnSuccess(NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<TwinSoul>())));
+                NPCloot.Add(leadingConditionRule);
             }
 
-            if (npc.type == NPCID.TheDestroyer)
+            if (NPC.type == NPCID.TheDestroyer)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<MetalWormSoul>()));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MetalWormSoul>()));
             }
 
-            if (npc.type == NPCID.SkeletronPrime)
+            if (NPC.type == NPCID.SkeletronPrime)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<PrimeSoul>(), 4));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<PrimeSoul>(), 4));
             }
 
-            if (npc.type == NPCID.Plantera)
+            if (NPC.type == NPCID.Plantera)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<BlackRoseScarf>(), 30));
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<PlantSoul>()));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<BlackRoseScarf>(), 30));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<PlantSoul>()));
             }
 
-            if (npc.type == NPCID.Golem)
+            if (NPC.type == NPCID.Golem)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<GolemSoul>()));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<GolemSoul>()));
             }
 
-            if (npc.type == NPCID.DukeFishron)
+            if (NPC.type == NPCID.DukeFishron)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<TidalQuartz>(), 1, 10, 15));
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<TyphoonDragon>(), 30));
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<DukeSoul>()));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<TidalQuartz>(), 1, 10, 15));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<TyphoonDragon>(), 30));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<DukeSoul>()));
             }
 
-            if (npc.type == NPCID.CultistBoss)
+            if (NPC.type == NPCID.CultistBoss)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<CultistSoul>()));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<CultistSoul>()));
             }
 
-            if (npc.type == NPCID.MoonLordCore)
+            if (NPC.type == NPCID.MoonLordCore)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<MoonSoul>()));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MoonSoul>()));
             }
 
-            if (npc.type == NPCID.MartianSaucerCore)
+            if (NPC.type == NPCID.MartianSaucerCore)
             {
-                npcloot.Add(ItemDropRule.Common(ItemID.CompanionCube, 100));
+                NPCloot.Add(ItemDropRule.Common(ItemID.CompanionCube, 100));
             }
 
-            if (npc.type == NPCID.Penguin)
+            if (NPC.type == NPCID.Penguin)
             {
-                npcloot.Add(ItemDropRule.Common(ItemID.Fish, 20));
+                NPCloot.Add(ItemDropRule.Common(ItemID.Fish, 20));
             }
 
-            if (npc.type == NPCID.FlyingFish)
+            if (NPC.type == NPCID.FlyingFish)
             {
-                npcloot.Add(ItemDropRule.Common(ItemID.ZephyrFish, 30));
+                NPCloot.Add(ItemDropRule.Common(ItemID.ZephyrFish, 30));
             }
 
-            if (npc.type == NPCID.ZombieEskimo)
+            if (NPC.type == NPCID.ZombieEskimo)
             {
-                npcloot.Add(ItemDropRule.Common(ItemID.HandWarmer, 25));
+                NPCloot.Add(ItemDropRule.Common(ItemID.HandWarmer, 25));
             }
 
-            if (npc.type == NPCID.SkeletonArcher)
+            if (NPC.type == NPCID.SkeletonArcher)
             {
-                npcloot.Add(ItemDropRule.Common(ItemID.EndlessQuiver, 50));
+                NPCloot.Add(ItemDropRule.Common(ItemID.EndlessQuiver, 50));
             }
 
-            if (npc.type == NPCID.Shark)
+            if (NPC.type == NPCID.Shark)
             {
-                npcloot.Add(ItemDropRule.Common(ItemID.SharkToothNecklace, 12));
+                NPCloot.Add(ItemDropRule.Common(ItemID.SharkToothNecklace, 12));
             }
 
-            if (npc.type == NPCID.UmbrellaSlime)
+            if (NPC.type == NPCID.UmbrellaSlime)
             {
-                npcloot.Add(ItemDropRule.Common(ItemID.Umbrella, 30));
+                NPCloot.Add(ItemDropRule.Common(ItemID.Umbrella, 30));
             }
 
-            if (npc.type == NPCID.WyvernHead)
+            if (NPC.type == NPCID.WyvernHead)
             {
-                npcloot.Add(ItemDropRule.Common(ItemID.SkyFracture, 100));
+                NPCloot.Add(ItemDropRule.Common(ItemID.SkyFracture, 100));
             }
 
-            if (npc.type == NPCID.SantaNK1)
+            if (NPC.type == NPCID.SantaNK1)
             {
-                ItemDropRule.OneFromOptions(1, ItemID.BluePresent, ItemID.YellowPresent, ItemID.GreenPresent);
+                ItemDropRule.OneFromOptions(1, ItemID.BluePresent, ItemID.YellowPresent, ItemID.GreenPresent, 1);
             }
 
-            if (npc.type == NPCID.Pumpking)
+            if (NPC.type == NPCID.Pumpking)
             {
-                npcloot.Add(ItemDropRule.Common(ItemID.GoodieBag));
+                NPCloot.Add(ItemDropRule.Common(ItemID.GoodieBag));
             }
 
-            if (npc.type == NPCID.GreenSlime)
+            if (NPC.type == NPCID.GreenSlime)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<Rambam>(), 100000));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<Rambam>(), 100000));
             }
 
-            if (npc.type == NPCID.CursedSkull)
+            if (NPC.type == NPCID.CursedSkull)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<AncientDragonSkull>(), 20));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<AncientDragonSkull>(), 20));
             }
 
-            if ((npc.type == NPCID.CaveBat) || (npc.type == NPCID.GiantBat))
+            if ((NPC.type == NPCID.CaveBat) || (NPC.type == NPCID.GiantBat))
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<EyeoftheExplorer>(), 30));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<EyeoftheExplorer>(), 30));
             }
 
-            if ((npc.type == NPCID.EaterofSouls) || (npc.type == NPCID.LittleEater) || (npc.type == NPCID.BigEater) || (npc.type == NPCID.Crimera) || (npc.type == NPCID.LittleCrimera) || (npc.type == NPCID.BigCrimera))
+            if ((NPC.type == NPCID.EaterofSouls) || (NPC.type == NPCID.LittleEater) || (NPC.type == NPCID.BigEater) || (NPC.type == NPCID.Crimera) || (NPC.type == NPCID.LittleCrimera) || (NPC.type == NPCID.BigCrimera))
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<EyeoftheHunter>(), 20));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<EyeoftheHunter>(), 20));
             }
 
-            if (npc.type == NPCID.GoblinThief)
+            if (NPC.type == NPCID.GoblinThief)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<EyeofDesire>(), 20));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<EyeofDesire>(), 20));
             }
 
-            if ((npc.type == NPCID.WallCreeper) || (npc.type == NPCID.WallCreeperWall))
+            if ((NPC.type == NPCID.WallCreeper) || (NPC.type == NPCID.WallCreeperWall))
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<SpooderLexicon>(), 50));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<SpooderLexicon>(), 50));
             }
 
-            if ((npc.type == NPCID.BlackRecluse) || (npc.type == NPCID.BlackRecluseWall))
+            if ((NPC.type == NPCID.BlackRecluse) || (NPC.type == NPCID.BlackRecluseWall))
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<SpiderCurse>(), 20));
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<SpooderLexicon>(), 50));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<SpiderCurse>(), 20));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<SpooderLexicon>(), 50));
             }
 
-            if (npc.type == NPCID.Demon)
+            if (NPC.type == NPCID.Demon)
             {
-                npcloot.Add(ItemDropRule.Common(ItemID.CrystalShard, 10000));
+                NPCloot.Add(ItemDropRule.Common(ItemID.CrystalShard, 10000));
             }
 
-            if (npc.type == NPCID.Vulture)
+            if (NPC.type == NPCID.Vulture)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<KFC>(), 20));
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<DesertEagle>(), 20));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<KFC>(), 20));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<DesertEagle>(), 20));
             }
 
-            if ((npc.type == NPCID.BoneSerpentHead && NPC.downedBoss3) || (npc.type == NPCID.BigPantlessSkeleton && NPC.downedBoss3) || (npc.type == NPCID.SmallPantlessSkeleton && NPC.downedBoss3) || (npc.type == NPCID.PantlessSkeleton && NPC.downedBoss3) || (npc.type == NPCID.BigMisassembledSkeleton && NPC.downedBoss3) || (npc.type == NPCID.SmallMisassembledSkeleton && NPC.downedBoss3) || (npc.type == NPCID.MisassembledSkeleton && NPC.downedBoss3) || (npc.type == NPCID.BigSkeleton && NPC.downedBoss3) || (npc.type == NPCID.SmallSkeleton && NPC.downedBoss3) || (npc.type == NPCID.Skeleton && NPC.downedBoss3) || (npc.type == NPCID.Skeleton && NPC.downedBoss3) || (npc.type == NPCID.BigHeadacheSkeleton && NPC.downedBoss3) || (npc.type == NPCID.SmallHeadacheSkeleton && NPC.downedBoss3) || (npc.type == NPCID.HeadacheSkeleton && NPC.downedBoss3))
+            if ((NPC.type == NPCID.BoneSerpentHead && NPC.downedBoss3) || (NPC.type == NPCID.BigPantlessSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.SmallPantlessSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.PantlessSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.BigMisassembledSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.SmallMisassembledSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.MisassembledSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.BigSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.SmallSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.Skeleton && NPC.downedBoss3) || (NPC.type == NPCID.Skeleton && NPC.downedBoss3) || (NPC.type == NPCID.BigHeadacheSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.SmallHeadacheSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.HeadacheSkeleton && NPC.downedBoss3))
             {
-                npcloot.Add(ItemDropRule.Common(ItemID.Bone, 1, 3, 6));
+                NPCloot.Add(ItemDropRule.Common(ItemID.Bone, 1, 3, 6));
             }
 
-            if ((npc.type == NPCID.TinyMossHornet) || (npc.type == NPCID.LittleMossHornet) || (npc.type == NPCID.BigMossHornet) || (npc.type == NPCID.GiantMossHornet) || (npc.type == NPCID.MossHornet))
+            if ((NPC.type == NPCID.TinyMossHornet) || (NPC.type == NPCID.LittleMossHornet) || (NPC.type == NPCID.BigMossHornet) || (NPC.type == NPCID.GiantMossHornet) || (NPC.type == NPCID.MossHornet))
             {
-                npcloot.Add(ItemDropRule.Common(ItemID.Stinger, 2));
+                NPCloot.Add(ItemDropRule.Common(ItemID.Stinger, 2));
             }
 
-            if (npc.type == NPCID.Reaper && NPC.downedMechBoss3)
+            if (NPC.type == NPCID.Reaper && NPC.downedMechBoss3)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<EclipseReaper>(), 30));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<EclipseReaper>(), 30));
             }
 
-            if (npc.type == NPCID.BigMimicHallow)
+            if (NPC.type == NPCID.BigMimicHallow)
             {
-                npcloot.Add(ItemDropRule.Common(ItemID.LightShard, 1, 1, 3));
+                NPCloot.Add(ItemDropRule.Common(ItemID.LightShard, 1, 1, 3));
             }
 
-            if ((npc.type == NPCID.BigMimicCrimson) || (npc.type == NPCID.BigMimicCorruption))
+            if ((NPC.type == NPCID.BigMimicCrimson) || (NPC.type == NPCID.BigMimicCorruption))
             {
-                npcloot.Add(ItemDropRule.Common(ItemID.DarkShard, 1, 1, 3));
+                NPCloot.Add(ItemDropRule.Common(ItemID.DarkShard, 1, 1, 3));
             }
 
-            if (Main.hardMode && (npc.type == NPCID.BlackSlime) || (npc.type == NPCID.MotherSlime) || (npc.type == NPCID.BabySlime) || (npc.type == NPCID.GiantWormHead) || (npc.type == NPCID.CaveBat) || (npc.type == NPCID.BlueJellyfish) || (npc.type == NPCID.Crawdad) || (npc.type == NPCID.GiantShelly) || (npc.type == NPCID.UndeadMiner) || (npc.type == NPCID.Tim))
+            if (Main.hardMode && (NPC.type == NPCID.BlackSlime) || (NPC.type == NPCID.MotherSlime) || (NPC.type == NPCID.BabySlime) || (NPC.type == NPCID.GiantWormHead) || (NPC.type == NPCID.CaveBat) || (NPC.type == NPCID.BlueJellyfish) || (NPC.type == NPCID.Crawdad) || (NPC.type == NPCID.GiantShelly) || (NPC.type == NPCID.UndeadMiner) || (NPC.type == NPCID.Tim))
             { 
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<Geode>(), 20));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<Geode>(), 20));
             }
 
-            if ((npc.type == NPCID.IceBat) || (npc.type == NPCID.SnowFlinx) || (npc.type == NPCID.SpikedIceSlime) || (npc.type == NPCID.UndeadViking) || (npc.type == NPCID.ArmoredViking) || (npc.type == NPCID.IceTortoise) || (npc.type == NPCID.IceElemental) || (npc.type == NPCID.IcyMerman) || (npc.type == NPCID.IceMimic) || (npc.type == NPCID.PigronCorruption) || (npc.type == NPCID.PigronCrimson) || (npc.type == NPCID.PigronHallow))
+            if ((NPC.type == NPCID.IceBat) || (NPC.type == NPCID.SnowFlinx) || (NPC.type == NPCID.SpikedIceSlime) || (NPC.type == NPCID.UndeadViking) || (NPC.type == NPCID.ArmoredViking) || (NPC.type == NPCID.IceTortoise) || (NPC.type == NPCID.IceElemental) || (NPC.type == NPCID.IcyMerman) || (NPC.type == NPCID.IceMimic) || (NPC.type == NPCID.PigronCorruption) || (NPC.type == NPCID.PigronCrimson) || (NPC.type == NPCID.PigronHallow))
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<FrozenGeode>(), 20));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<FrozenGeode>(), 20));
             }
 
-            if ((npc.type == NPCID.Hellbat) || (npc.type == NPCID.Demon) || (npc.type == NPCID.RedDevil) || (npc.type == NPCID.LavaSlime) || (npc.type == NPCID.FireImp) || (npc.type == NPCID.VoodooDemon) || (npc.type == NPCID.BoneSerpentHead) || (npc.type == NPCID.Lavabat))
+            if ((NPC.type == NPCID.Hellbat) || (NPC.type == NPCID.Demon) || (NPC.type == NPCID.RedDevil) || (NPC.type == NPCID.LavaSlime) || (NPC.type == NPCID.FireImp) || (NPC.type == NPCID.VoodooDemon) || (NPC.type == NPCID.BoneSerpentHead) || (NPC.type == NPCID.Lavabat))
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<MagmaGeode>(), 20));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MagmaGeode>(), 20));
             }
 
-            if ((npc.type == NPCID.BlackSlime) || (npc.type == NPCID.MotherSlime) || (npc.type == NPCID.BabySlime) || (npc.type == NPCID.GiantWormHead) || (npc.type == NPCID.CaveBat) || (npc.type == NPCID.BlueJellyfish) || (npc.type == NPCID.Crawdad) || (npc.type == NPCID.GiantShelly) || (npc.type == NPCID.UndeadMiner) || (npc.type == NPCID.Tim) || (npc.type == NPCID.ArmoredSkeleton) || (npc.type == NPCID.HeavySkeleton) || (npc.type == NPCID.DiggerHead) || (npc.type == NPCID.GiantBat) || (npc.type == NPCID.GreenJellyfish) || (npc.type == NPCID.RockGolem) || (npc.type == NPCID.SkeletonArcher) || (npc.type == NPCID.RuneWizard))
+            if ((NPC.type == NPCID.BlackSlime) || (NPC.type == NPCID.MotherSlime) || (NPC.type == NPCID.BabySlime) || (NPC.type == NPCID.GiantWormHead) || (NPC.type == NPCID.CaveBat) || (NPC.type == NPCID.BlueJellyfish) || (NPC.type == NPCID.Crawdad) || (NPC.type == NPCID.GiantShelly) || (NPC.type == NPCID.UndeadMiner) || (NPC.type == NPCID.Tim) || (NPC.type == NPCID.ArmoredSkeleton) || (NPC.type == NPCID.HeavySkeleton) || (NPC.type == NPCID.DiggerHead) || (NPC.type == NPCID.GiantBat) || (NPC.type == NPCID.GreenJellyfish) || (NPC.type == NPCID.RockGolem) || (NPC.type == NPCID.SkeletonArcher) || (NPC.type == NPCID.RuneWizard))
             {
                 if (Main.hardMode)
                 {
-                    npcloot.Add(ItemDropRule.Common(ModContent.ItemType<OmniGeode>(), 20));
+                    NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<OmniGeode>(), 20));
                 }
             }
 
-            if ((npc.type == NPCID.Antlion) || (npc.type == NPCID.WalkingAntlion) || (npc.type == NPCID.LarvaeAntlion) || (npc.type == NPCID.FlyingAntlion) || (npc.type == NPCID.GiantWalkingAntlion) || (npc.type == NPCID.GiantFlyingAntlion) || (npc.type == NPCID.TombCrawlerHead) || (npc.type == NPCID.DuneSplicerHead) || (npc.type == NPCID.DesertScorpionWalk) || (npc.type == NPCID.DesertScorpionWall) || (npc.type == NPCID.DesertLamiaLight) || (npc.type == NPCID.DesertLamiaDark) || (npc.type == NPCID.DesertBeast) || (npc.type == NPCID.DesertGhoul) || (npc.type == NPCID.DesertGhoulCorruption) || (npc.type == NPCID.DesertGhoulCrimson) || (npc.type == NPCID.DesertGhoulHallow))
+            if ((NPC.type == NPCID.Antlion) || (NPC.type == NPCID.WalkingAntlion) || (NPC.type == NPCID.LarvaeAntlion) || (NPC.type == NPCID.FlyingAntlion) || (NPC.type == NPCID.GiantWalkingAntlion) || (NPC.type == NPCID.GiantFlyingAntlion) || (NPC.type == NPCID.TombCrawlerHead) || (NPC.type == NPCID.DuneSplicerHead) || (NPC.type == NPCID.DesertScorpionWalk) || (NPC.type == NPCID.DesertScorpionWall) || (NPC.type == NPCID.DesertLamiaLight) || (NPC.type == NPCID.DesertLamiaDark) || (NPC.type == NPCID.DesertBeast) || (NPC.type == NPCID.DesertGhoul) || (NPC.type == NPCID.DesertGhoulCorruption) || (NPC.type == NPCID.DesertGhoulCrimson) || (NPC.type == NPCID.DesertGhoulHallow))
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<SandstoneGeode>(), 25));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<SandstoneGeode>(), 25));
             }
 
-            if ((npc.type == NPCID.IlluminantSlime) || (npc.type == NPCID.IlluminantBat) || (npc.type == NPCID.ChaosElemental) || (npc.type == NPCID.EnchantedSword) || (npc.type == NPCID.BigMimicHallow) || (npc.type == NPCID.PigronHallow) || (npc.type == NPCID.DesertGhoulHallow))
+            if ((NPC.type == NPCID.IlluminantSlime) || (NPC.type == NPCID.IlluminantBat) || (NPC.type == NPCID.ChaosElemental) || (NPC.type == NPCID.EnchantedSword) || (NPC.type == NPCID.BigMimicHallow) || (NPC.type == NPCID.PigronHallow) || (NPC.type == NPCID.DesertGhoulHallow))
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<FairyGeode>(), 25));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<FairyGeode>(), 25));
             }
 
-            if ((npc.type == NPCID.Clinger) || (npc.type == NPCID.PigronCorruption) || (npc.type == NPCID.CursedHammer) || (npc.type == NPCID.BigMimicCorruption) || (npc.type == NPCID.DesertGhoulCorruption))
+            if ((NPC.type == NPCID.Clinger) || (NPC.type == NPCID.PigronCorruption) || (NPC.type == NPCID.CursedHammer) || (NPC.type == NPCID.BigMimicCorruption) || (NPC.type == NPCID.DesertGhoulCorruption))
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<DecayGeode>(), 20));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<DecayGeode>(), 20));
             }
 
-            if ((npc.type == NPCID.CrimsonAxe) || (npc.type == NPCID.BloodJelly) || (npc.type == NPCID.IchorSticker) || (npc.type == NPCID.FloatyGross) || (npc.type == NPCID.PigronCrimson))
+            if ((NPC.type == NPCID.CrimsonAxe) || (NPC.type == NPCID.BloodJelly) || (NPC.type == NPCID.IchorSticker) || (NPC.type == NPCID.FloatyGross) || (NPC.type == NPCID.PigronCrimson))
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<BloodGeode>(), 10));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<BloodGeode>(), 10));
             }
 
-            if ((npc.type == NPCID.Hornet) || (npc.type == NPCID.HornetFatty) || (npc.type == NPCID.BigHornetFatty) || (npc.type == NPCID.LittleHornetFatty) || (npc.type == NPCID.HornetHoney) || (npc.type == NPCID.LittleHornetHoney) || (npc.type == NPCID.BigHornetHoney) || (npc.type == NPCID.HornetLeafy) || (npc.type == NPCID.BigHornetLeafy) || (npc.type == NPCID.LittleHornetLeafy) || (npc.type == NPCID.HornetSpikey) || (npc.type == NPCID.LittleHornetSpikey) || (npc.type == NPCID.BigHornetSpikey) || (npc.type == NPCID.HornetStingy) || (npc.type == NPCID.LittleHornetStingy) || (npc.type == NPCID.BigHornetStingy) || (npc.type == NPCID.TinyMossHornet) || (npc.type == NPCID.LittleMossHornet) || (npc.type == NPCID.BigMossHornet) || (npc.type == NPCID.GiantMossHornet) || (npc.type == NPCID.MossHornet) || (npc.type == NPCID.SpikedJungleSlime) || (npc.type == NPCID.ManEater) || (npc.type == NPCID.JungleCreeperWall) || (npc.type == NPCID.JungleCreeper) || (npc.type == NPCID.Moth) || (npc.type == NPCID.AngryTrapper))
+            if ((NPC.type == NPCID.Hornet) || (NPC.type == NPCID.HornetFatty) || (NPC.type == NPCID.BigHornetFatty) || (NPC.type == NPCID.LittleHornetFatty) || (NPC.type == NPCID.HornetHoney) || (NPC.type == NPCID.LittleHornetHoney) || (NPC.type == NPCID.BigHornetHoney) || (NPC.type == NPCID.HornetLeafy) || (NPC.type == NPCID.BigHornetLeafy) || (NPC.type == NPCID.LittleHornetLeafy) || (NPC.type == NPCID.HornetSpikey) || (NPC.type == NPCID.LittleHornetSpikey) || (NPC.type == NPCID.BigHornetSpikey) || (NPC.type == NPCID.HornetStingy) || (NPC.type == NPCID.LittleHornetStingy) || (NPC.type == NPCID.BigHornetStingy) || (NPC.type == NPCID.TinyMossHornet) || (NPC.type == NPCID.LittleMossHornet) || (NPC.type == NPCID.BigMossHornet) || (NPC.type == NPCID.GiantMossHornet) || (NPC.type == NPCID.MossHornet) || (NPC.type == NPCID.SpikedJungleSlime) || (NPC.type == NPCID.ManEater) || (NPC.type == NPCID.JungleCreeperWall) || (NPC.type == NPCID.JungleCreeper) || (NPC.type == NPCID.Moth) || (NPC.type == NPCID.AngryTrapper))
             {
                 if (NPC.downedMechBoss3)
                 {
-                    npcloot.Add(ItemDropRule.Common(ModContent.ItemType<MuddyGeode>(), 20));
-                    npcloot.Add(ItemDropRule.Common(ModContent.ItemType<PlantMurderStarterSet>(), 100));
+                    NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MuddyGeode>(), 20));
+                    NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<PlantMurderStarterSet>(), 100));
                 }
             }
 
-            if ((npc.type == NPCID.Harpy) || (npc.type == NPCID.WyvernHead))
+            if ((NPC.type == NPCID.Harpy) || (NPC.type == NPCID.WyvernHead))
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<MoonGeode>(), 8));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MoonGeode>(), 8));
             }
 
-            if ((npc.type == NPCID.Shark) || (npc.type == NPCID.Crab) || (npc.type == NPCID.Squid) || (npc.type == NPCID.SeaSnail) || (npc.type == NPCID.Dolphin) || (npc.type == NPCID.SeaTurtle))
+            if ((NPC.type == NPCID.Shark) || (NPC.type == NPCID.Crab) || (NPC.type == NPCID.Squid) || (NPC.type == NPCID.SeaSnail) || (NPC.type == NPCID.Dolphin) || (NPC.type == NPCID.SeaTurtle))
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<TidalQuartz>(), 20));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<TidalQuartz>(), 20));
             }
 
-            if ((npc.type == NPCID.Antlion) || (npc.type == NPCID.WalkingAntlion) || (npc.type == NPCID.LarvaeAntlion) || (npc.type == NPCID.FlyingAntlion) || (npc.type == NPCID.GiantWalkingAntlion) || (npc.type == NPCID.GiantFlyingAntlion) || (npc.type == NPCID.TombCrawlerHead) || (npc.type == NPCID.DuneSplicerHead) || (npc.type == NPCID.DesertScorpionWalk) || (npc.type == NPCID.DesertScorpionWall) || (npc.type == NPCID.DesertLamiaLight) || (npc.type == NPCID.DesertLamiaDark) || (npc.type == NPCID.DesertBeast) || (npc.type == NPCID.DesertGhoul) || (npc.type == NPCID.DesertGhoulCorruption) || (npc.type == NPCID.DesertGhoulCrimson) || (npc.type == NPCID.DesertGhoulHallow))
+            if ((NPC.type == NPCID.Antlion) || (NPC.type == NPCID.WalkingAntlion) || (NPC.type == NPCID.LarvaeAntlion) || (NPC.type == NPCID.FlyingAntlion) || (NPC.type == NPCID.GiantWalkingAntlion) || (NPC.type == NPCID.GiantFlyingAntlion) || (NPC.type == NPCID.TombCrawlerHead) || (NPC.type == NPCID.DuneSplicerHead) || (NPC.type == NPCID.DesertScorpionWalk) || (NPC.type == NPCID.DesertScorpionWall) || (NPC.type == NPCID.DesertLamiaLight) || (NPC.type == NPCID.DesertLamiaDark) || (NPC.type == NPCID.DesertBeast) || (NPC.type == NPCID.DesertGhoul) || (NPC.type == NPCID.DesertGhoulCorruption) || (NPC.type == NPCID.DesertGhoulCrimson) || (NPC.type == NPCID.DesertGhoulHallow))
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<BrokenAncientDepictionItem>(), 100));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<BrokenAncientDepictionItem>(), 100));
             }
 
-            if ((npc.type == NPCID.AnomuraFungus) || (npc.type == NPCID.FungiBulb) || (npc.type == NPCID.MushiLadybug) || (npc.type == NPCID.SporeBat) || (npc.type == NPCID.SporeSkeleton) || (npc.type == NPCID.ZombieMushroom) || (npc.type == NPCID.ZombieMushroomHat) || (npc.type == NPCID.FungoFish) || (npc.type == NPCID.GiantFungiBulb) || (npc.type == NPCID.GlowingSnail) || (npc.type == NPCID.TruffleWorm))
+            if ((NPC.type == NPCID.AnomuraFungus) || (NPC.type == NPCID.FungiBulb) || (NPC.type == NPCID.MushiLadybug) || (NPC.type == NPCID.SporeBat) || (NPC.type == NPCID.SporeSkeleton) || (NPC.type == NPCID.ZombieMushroom) || (NPC.type == NPCID.ZombieMushroomHat) || (NPC.type == NPCID.FungoFish) || (NPC.type == NPCID.GiantFungiBulb) || (NPC.type == NPCID.GlowingSnail) || (NPC.type == NPCID.TruffleWorm))
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<Mushmatter>(), 100));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<Mushmatter>(), 100));
             }
 
-            if (npc.type == NPCID.SpikedJungleSlime)
+            if (NPC.type == NPCID.SpikedJungleSlime)
             {
-                npcloot.Add(ItemDropRule.Common(ModContent.ItemType<StinkyPaste>(), 12));
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<StinkyPaste>(), 12));
             }
         }
     }
