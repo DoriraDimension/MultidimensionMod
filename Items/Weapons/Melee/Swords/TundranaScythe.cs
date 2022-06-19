@@ -13,7 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Tundrana Scythe");
-			Tooltip.SetDefault("A scythe from a world beyhond the freezing fog of the Frozen Underworld, it was once used by some sort of royal guard.\nShoot piss");
+			Tooltip.SetDefault("A scythe from a world beyhond the freezing fog of the Frozen Underworld, it was once used by some sort of royal guard.\nShoots rotating sickles which drpo ice spikes as they travel.");
 		}
 
 		public override void SetDefaults()
