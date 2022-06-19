@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Souls
 {
-	public class BrainSoul : ModItem
+	public class DeerSoul : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
