@@ -34,14 +34,12 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
-			type = ProjectileID.Bone;
-
 			{
 				for (int i = 0; i < 4; i++)
 				{
 					Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(30));
 					newVelocity *= 1f - Main.rand.NextFloat(0.3f);
-					Projectile.NewProjectileDirect(source, position, newVelocity, type, damage, knockback, (int)((double)((float)Item.damage) * 0.3), 0f, player.whoAmI);
+					Projectile.NewProjectileDirect(source, position, newVelocity, type, (int)((double)((float)Item.damage) * 0.3), 0f, player.whoAmI);
 				}
 			}
 			return false;
