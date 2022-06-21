@@ -28,6 +28,7 @@ namespace MultidimensionMod.Items.Accessories
 			player.moveSpeed += 0.06f;
 			player.spikedBoots += 2;
 			player.maxMinions += 1;
+			player.buffImmune[BuffID.Webbed] = true;
 		}
 	}
 }
