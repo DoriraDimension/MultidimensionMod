@@ -32,7 +32,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void Kill(int timeLeft)
 		{
-			SoundEngine.PlaySound(SoundID.Item8, Projectile.position);
+			SoundEngine.PlaySound(SoundID.NPCDeath14, Projectile.position);
 
 			for (int i = 0; i < 10; i++)
 			{
