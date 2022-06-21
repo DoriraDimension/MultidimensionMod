@@ -23,7 +23,7 @@ namespace MultidimensionMod.Items.Accessories
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.statLifeMax2 += 35;
+			player.GetModPlayer<MDPlayer>().Healthy = true;
 		}
 
 		public override void AddRecipes()
