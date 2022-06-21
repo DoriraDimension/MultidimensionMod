@@ -27,6 +27,7 @@ namespace MultidimensionMod
             Blaze = false;
             EyeCrit = false;
             StarvingLarva = false;
+            Healthy = false;
         }
 
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
@@ -92,6 +93,19 @@ namespace MultidimensionMod
                     return;
                 }
                 player.statLife += 5;
+            }
+        }
+
+        public override void GetHealLife(Item item, bool quickHeal, ref int healValue)
+        {
+            Player player = Main.LocalPlayer;
+            if (item.type == ItemID.Mushroom && player.GetModPlayer<MDPlayer>().Healthy)
+            {
+                item.healLife = 60;
+            }
+            else if (item.type == ItemID.Mushroom && !player.GetModPlayer<MDPlayer>().Healthy)
+            {
+                item.healLife = 15;
             }
         }
     }
