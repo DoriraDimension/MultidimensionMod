@@ -1,5 +1,5 @@
 ﻿using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Projectiles.Ranged;
+using MultidimensionMod.Projectiles.Typeless;
 using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
