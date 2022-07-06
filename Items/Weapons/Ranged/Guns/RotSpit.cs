@@ -1,4 +1,7 @@
 ﻿using MultidimensionMod.Projectiles.Ranged;
+using MultidimensionMod.Items.Souls;
+using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Tiles;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using Terraria;
@@ -50,6 +53,15 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 		public override Vector2? HoldoutOffset()
 		{
 			return new Vector2(-10, 0);
+		}
+
+		public override void AddRecipes()
+		{
+			CreateRecipe()
+			.AddIngredient(ModContent.ItemType<WormSoul>())
+			.AddIngredient(ModContent.ItemType<Dimensium>(), 10)
+			.AddTile(ModContent.TileType<DimensionalForge>())
+			.Register();
 		}
 	}
 }
