@@ -38,7 +38,7 @@ namespace MultidimensionMod.Items.Accessories
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.GetCritChance(DamageClass.Generic) += 10;
+			player.GetCritChance(DamageClass.Generic) += 5;
 			player.GetModPlayer<MDPlayer>().EyeCrit = true;
 
 		}
