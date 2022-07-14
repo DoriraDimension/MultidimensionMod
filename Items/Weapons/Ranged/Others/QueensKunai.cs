@@ -51,16 +51,6 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 			}
 		}
 
-		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-		{
-			for (int i = 0; i < 1; i++)
-			{
-				Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(25));
-				Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
-			}
-			return false;
-		}
-
 		public override void AddRecipes()
 		{
 			CreateRecipe()
