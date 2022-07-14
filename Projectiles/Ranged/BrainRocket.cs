@@ -30,6 +30,9 @@ namespace MultidimensionMod.Projectiles.Ranged
 		{
 			SoundEngine.PlaySound(SoundID.NPCDeath14, Projectile.position);
 			Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<Braindamage>(), (int)((double)((float)Projectile.damage) * 0.8), 0f, Main.myPlayer);
+				Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, ModContent.Find<ModGore>("MultidimensionMod/BrainGore3").Type, 1);
+                Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, ModContent.Find<ModGore>("MultidimensionMod/BrainGore2").Type, 1);
+				Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, ModContent.Find<ModGore>("MultidimensionMod/BrainGore1").Type, 1);
 		}
 
 		public override void AI()
