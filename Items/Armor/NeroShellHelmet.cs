@@ -35,9 +35,9 @@ namespace MultidimensionMod.Items.Armor
 			player.statLifeMax2 += 40;
 			player.accFlipper = true;
 			player.ignoreWater = true;
-			if (player.wet)
+			if (player.wet && !player.lavaWet && !player.honeyWet)
 			{
-				player.moveSpeed += 15f;
+				player.moveSpeed += 0.15f;
 				player.statDefense += 10;
             }
 		}
