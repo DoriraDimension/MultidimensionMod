@@ -1,8 +1,11 @@
 ﻿using MultidimensionMod.Items.Bags;
+using MultidimensionMod.Projectiles.Summon.Minions;
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod
 {
@@ -20,6 +23,10 @@ namespace MultidimensionMod
 
         public bool StarvingLarva = false;
 
+        public bool Probe = false;
+
+        public Item DiggerEngine;
+
         public override void ResetEffects()
         {
             SmileyJr = false;
@@ -28,6 +35,7 @@ namespace MultidimensionMod
             EyeCrit = false;
             StarvingLarva = false;
             Healthy = false;
+            Probe = false;
         }
 
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
@@ -85,7 +93,6 @@ namespace MultidimensionMod
                     target.AddBuff(BuffID.Ichor, 240);
                 }
             }
-
             if (StarvingLarva)
             {
                 if (target.life > 0)
@@ -106,6 +113,18 @@ namespace MultidimensionMod
             else if (item.type == ItemID.Mushroom && !player.GetModPlayer<MDPlayer>().Healthy)
             {
                 item.healLife = 15;
+            }
+        }
+
+        public override void PostHurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit)
+        {
+            if (this.Probe && !Player.lavaWet)
+            {
+                if (Main.myPlayer == Player.whoAmI)
+                {
+                    Item item = DiggerEngine;
+                    Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<FriendlyProbe>(), (int)damage + 40, 0f, Player.whoAmI);
+                }
             }
         }
     }
