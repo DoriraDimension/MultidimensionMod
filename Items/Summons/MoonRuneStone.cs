@@ -36,7 +36,7 @@ namespace MultidimensionMod.Items.Summons
 		public override bool? UseItem(Player player)
 		{
 			NPC.SpawnOnPlayer(player.whoAmI, NPCID.CultistBoss);
-			SoundEngine.PlaySound(SoundID.Roar, player.position, -50);
+			SoundEngine.PlaySound(SoundID.Roar, player.position);
 			return true;
 		}
 
