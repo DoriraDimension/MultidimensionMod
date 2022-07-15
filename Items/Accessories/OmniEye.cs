@@ -45,8 +45,8 @@ namespace MultidimensionMod.Items.Accessories
 			.AddOnCraftCallback(delegate (Recipe recipe, Item Item) 
 			 {
 				 Main.LocalPlayer.AddBuff(BuffID.Obstructed, 6000);
-				 SoundEngine.PlaySound(SoundID.DD2_EtherianPortalIdleLoop.WithVolume(3f), Item.position);
-				 SoundEngine.PlaySound(SoundID.DD2_BetsyDeath.WithVolume(3f), Item.position);
+				 SoundEngine.PlaySound(SoundID.DD2_EtherianPortalIdleLoop, Item.position);
+				 SoundEngine.PlaySound(SoundID.DD2_BetsyDeath, Item.position);
 			 })
 			.AddTile(26)
 			.Register();
