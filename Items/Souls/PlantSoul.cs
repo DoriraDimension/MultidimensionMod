@@ -30,15 +30,15 @@ namespace MultidimensionMod.Items.Souls
 		{
 			foreach (TooltipLine Item in list)
 			{
-				if (Item.mod == "Terraria" && Item.Name == "ItemName")
+				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
 				{
 					switch (Main.GameUpdateCount / 60 % 2)
 					{
 						case 0:
-							Item.overrideColor = new Color(225, 128, 206);
+							Item.OverrideColor = new Color(225, 128, 206);
 							break;
 						case 1:
-							Item.overrideColor = new Color(110, 183, 4);
+							Item.OverrideColor = new Color(110, 183, 4);
 							break;
 					}
 				}
