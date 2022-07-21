@@ -62,16 +62,6 @@ namespace MultidimensionMod.Items.Bags
 				case "Dorito":
 				case "Karl":
 				case "Silverking":
-					player.QuickSpawnItem(source, ModContent.ItemType<EleanoraBodypillowItem>());
-					player.QuickSpawnItem(source, ModContent.ItemType<October1Item>());
-					break;
-
-				case "Eleanora":
-				case "EleanoraKitti":
-				case "Ellie":
-				case "Sunclaw":
-					player.QuickSpawnItem(source, ModContent.ItemType<EleanoraPlushie>());
-					player.QuickSpawnItem(source, ModContent.ItemType<October1Item>());
 					break;
 
 				case "PhiaKitti":
