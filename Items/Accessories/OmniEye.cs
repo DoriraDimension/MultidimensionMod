@@ -1,6 +1,7 @@
 ﻿using MultidimensionMod.Items.Materials;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
@@ -42,7 +43,7 @@ namespace MultidimensionMod.Items.Accessories
 			.AddIngredient(ModContent.ItemType<EyeoftheNightwalker>())
 			.AddIngredient(ModContent.ItemType<EyeofDesire>())
 			.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 10)
-			.AddOnCraftCallback(delegate (Recipe recipe, Item Item) 
+			.AddOnCraftCallback(delegate (Recipe recipe, Item Item, List<Item> consumedItems) 
 			 {
 				 Main.LocalPlayer.AddBuff(BuffID.Obstructed, 6000);
 				 SoundEngine.PlaySound(SoundID.DD2_EtherianPortalIdleLoop, Item.position);
