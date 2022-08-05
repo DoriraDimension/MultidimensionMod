@@ -32,14 +32,14 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.useAnimation = 100;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
-			Item.knockBack = 2;
+			Item.knockBack = 0;
 			Item.noUseGraphic = true;
 			Item.value = Item.sellPrice(gold: 5);
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item20;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<NeuralWave>();
-			Item.shootSpeed = 15f;
+			Item.shootSpeed = 10f;
 			Item.crit = 8;
 		}
 
@@ -56,10 +56,13 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
-				for (int i = 0; i < 3; i++)
-				{
-					Projectile.NewProjectile(source, position, new Vector2(Main.rand.NextFloat(-10, 10), Main.rand.NextFloat(-3, 3)), type, damage, 0f, Main.myPlayer);
-				}
+			for (int i = 0; i < 16; i++)
+			{
+				int numProj = 2;
+				float rotation = MathHelper.ToRadians(50f);
+				Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedBy(MathHelper.Lerp(0f - rotation, rotation, (float)(i / (numProj - 1))));
+				Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<NeuralWave>(), damage, knockback, player.whoAmI);
+			}
 			return false;
 		}
 
