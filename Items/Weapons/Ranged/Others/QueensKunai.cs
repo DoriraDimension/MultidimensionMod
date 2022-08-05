@@ -28,7 +28,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 			Item.height = 30;
 			Item.useTime = 10;
 			Item.useAnimation = 10;
-			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.useStyle = ItemUseStyleID.Swing;
 			Item.noMelee = true;
 			Item.knockBack = 2;
 			Item.noUseGraphic = true;
