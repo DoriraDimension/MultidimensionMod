@@ -120,7 +120,7 @@ namespace MultidimensionMod
         {
             if (this.Probe && !Player.lavaWet)
             {
-                if (Main.myPlayer == Player.whoAmI)
+                if (Main.myPlayer == Player.whoAmI && Player.ownedProjectileCounts[ModContent.ProjectileType<FriendlyProbe>()] < 4)
                 {
                     Item item = DiggerEngine;
                     Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<FriendlyProbe>(), (int)damage + 40, 0f, Player.whoAmI);
