@@ -29,17 +29,6 @@ namespace MultidimensionMod.Items.Placeables
 			Item.createTile = ModContent.TileType<RubyPlushiePlaced>();
 		}
 
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.Eleanora;
-				}
-			}
-		}
-
 		public override void AddRecipes()
 		{
 			CreateRecipe()
