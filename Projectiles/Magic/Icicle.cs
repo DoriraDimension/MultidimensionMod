@@ -27,8 +27,6 @@ namespace MultidimensionMod.Projectiles.Magic
 		public override void Kill(int timeLeft)
 		{
 			SoundEngine.PlaySound(SoundID.Item27, base.Projectile.position);
-			int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 67, 0f, 0f, 100, default(Color), 2f); //sinep
-			Main.dust[dustIndex].velocity *= 1.4f;
 
 			for (int i = 0; i < 4; i++)
 			{
