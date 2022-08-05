@@ -21,12 +21,11 @@ namespace MultidimensionMod.Projectiles.Ranged
 		public override void SetDefaults()
 		{
 			Projectile.width = 6;
-			Projectile.height = 22;
+			Projectile.height = 6;
 			Projectile.friendly = true;
 			Projectile.DamageType = DamageClass.Ranged;
 			Projectile.ignoreWater = true;
 			Projectile.tileCollide = true;
-			Projectile.alpha = 255;
 		}
 
 		public override Color? GetAlpha(Color lightColor)
@@ -45,25 +44,6 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void AI()
 		{
-			Projectile.ai[0] += 1f;
-			if (Projectile.ai[0] > 300f)
-			{
-				Projectile.alpha += 25;
-				if (Projectile.alpha > 255)
-				{
-					Projectile.alpha = 255;
-				}
-			}
-			else
-			{
-				Projectile.alpha -= 25;
-				if (Projectile.alpha < 100)
-				{
-					Projectile.alpha = 100;
-				}
-			}
-			Projectile.velocity /= 0.98f;
-
 			if (++Projectile.frameCounter >= 5)
 			{
 				Projectile.frameCounter = 0;
@@ -77,35 +57,12 @@ namespace MultidimensionMod.Projectiles.Ranged
 			{
 				Projectile.Kill();
 			}
-						Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
-			Projectile.rotation = Projectile.velocity.ToRotation();
-			if (Projectile.velocity.Y > 16f) {
+			Projectile.velocity.Y = Projectile.velocity.Y + 0.2f;
+			if (Projectile.velocity.Y > 16f)
+			{
 				Projectile.velocity.Y = 16f;
 			}
-
-			if (Projectile.spriteDirection == -1) {
-				Projectile.rotation += MathHelper.Pi;
-			}
-
-			if (Main.rand.Next(5) == 0)
-			{
-				int choice = Main.rand.Next(3);
-				if (choice == 0)
-				{
-					choice = ModContent.DustType<StormDust>();
-				}
-				else if (choice == 1)
-				{
-					choice = ModContent.DustType<StormDust>();
-				}
-				else
-				{
-					choice = ModContent.DustType<StormDust>();
-				}
-
-				Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, choice, Projectile.velocity.X * 1f, Projectile.velocity.Y * 1f, 150, default(Color), 0.7f);
-			}
-
+			Projectile.rotation += 0.4f * (float)Projectile.direction;
 		}
 
 		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)

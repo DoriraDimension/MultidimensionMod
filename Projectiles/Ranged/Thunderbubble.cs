@@ -73,32 +73,13 @@ namespace MultidimensionMod.Projectiles.Ranged
 			{
 				Projectile.Kill();
 			}
-
-			if (Main.rand.Next(5) == 0)
-			{
-				int choice = Main.rand.Next(3);
-				if (choice == 0)
-				{
-					choice = ModContent.DustType<StormDust>();
-				}
-				else if (choice == 1)
-				{
-					choice = ModContent.DustType<StormDust>();
-				}
-				else
-				{
-					choice = ModContent.DustType<StormDust>();
-				}
-
-				Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, choice, Projectile.velocity.X * 1f, Projectile.velocity.Y * 1f, 150, default(Color), 0.7f);
-			}
 		}
 
 		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
 		{
 			for (int i = 0; i < 5; i++)
 			{
-				int a = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y - 16f, Main.rand.Next(-10, 11) * .25f, Main.rand.Next(-10, -5) * .25f, ModContent.ProjectileType<BubbleBolt>(), (int)(Projectile.damage * .5f), 0, Projectile.owner);
+				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y - 16f, Main.rand.Next(-10, 11) * .25f, Main.rand.Next(-10, -5) * .25f, ModContent.ProjectileType<BubbleBolt>(), (int)(Projectile.damage * .5f), 0, Projectile.owner);
 
 			}
 		}
