@@ -13,7 +13,7 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Digger Engine");
-			Tooltip.SetDefault("A excavator engine used in the Destroyer to mine minerals incredibly fast.\nIncreases mining speed by 100% and spawns friendly Probes when you get hit.");
+			Tooltip.SetDefault("A excavator engine used in the Destroyer to mine minerals incredibly fast.\nIncreases mining speed by 50% and spawns friendly Probes when you get hit.");
 		}
 
 		public override void SetDefaults()
