@@ -16,7 +16,7 @@ namespace MultidimensionMod
 
 		public static Color ParallelVariant => new Color(95, 57, 249);
 
-		public static Color Eleanora => new Color(247, 171, 18);
+		public static Color Eleanora => new Color(240, 136, 185);
 
 		public static Color Dorira => new Color(18, 279, 247);
 
