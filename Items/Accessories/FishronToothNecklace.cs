@@ -25,6 +25,7 @@ namespace MultidimensionMod.Items.Accessories
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
 			player.GetArmorPenetration(DamageClass.Generic) += 12;
+			player.gills = true;
 		}
 
 		public override void AddRecipes()
