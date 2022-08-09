@@ -8,7 +8,7 @@ using MultidimensionMod.Items.Weapons.Ranged.Guns;
 using MultidimensionMod.Items.Weapons.Ranged.Flamethrowers;
 using MultidimensionMod.Items.Weapons.Magic.Tomes;
 using MultidimensionMod.Items.Placeables;
-using MultidimensionMod.Items.Bags;
+using MultidimensionMod.Items.Weapons.Typeless;
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Summons;
 using Terraria;
