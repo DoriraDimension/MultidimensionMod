@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Items.Accessories;
+using MultidimensionMod.Projectiles.Typeless;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -15,33 +16,22 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 
 		public override void SetDefaults()
 		{
+			Item.damage = 53;
 			Item.width = 28;
 			Item.height = 28;
 			Item.rare = ItemRarityID.LightRed;
-			Item.maxStack = 99;
-		}
-
-		public override bool CanRightClick()
-		{
-			return true;
-		}
-
-		public override void RightClick(Player player)
-		{
-			var source = player.GetSource_OpenItem(Type);
-			int choice = Main.rand.Next(3);
-			if (choice == 0)
-			{
-				player.QuickSpawnItem(source, ItemID.CrystalShard, 15);
-			}
-			else if (choice == 1)
-			{
-				player.QuickSpawnItem(source, ItemID.PearlstoneBlock, 50);
-			}
-			else if (choice == 2)
-			{
-				player.QuickSpawnItem(source, ModContent.ItemType<MysticStone>());
-			}
+			Item.maxStack = 9999;
+			Item.useStyle = ItemUseStyleID.Swing;
+			Item.DamageType = DamageClass.Generic;
+			Item.useTime = 30;
+			Item.useAnimation = 30;
+			Item.noMelee = true;
+			Item.consumable = true;
+			Item.knockBack = 2;
+			Item.noUseGraphic = true;
+			Item.UseSound = SoundID.Item1;
+			Item.shoot = ModContent.ProjectileType<FairyGeodeThrown>();
+			Item.shootSpeed = 14f;
 		}
 	}
 }

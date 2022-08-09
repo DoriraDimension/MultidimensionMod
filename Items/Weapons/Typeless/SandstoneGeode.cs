@@ -1,4 +1,4 @@
-﻿using MultidimensionMod.Items.Materials;
+﻿using MultidimensionMod.Projectiles.Typeless;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -15,76 +15,22 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 
 		public override void SetDefaults()
 		{
+			Item.damage = 29;
 			Item.width = 28;
 			Item.height = 22;
 			Item.rare = ItemRarityID.Blue;
-			Item.maxStack = 99;
-		}
-
-		public override bool CanRightClick()
-		{
-			return true;
-		}
-
-		public override void RightClick(Player player)
-		{
-			var source = player.GetSource_OpenItem(Type);
-			int choice = Main.rand.Next(6);
-			if (choice == 0)
-			{
-				player.QuickSpawnItem(source, ItemID.Amber, 5);
-				if (Main.hardMode)
-				{
-					if (Main.rand.NextFloat() < .2500f)
-					{
-						player.QuickSpawnItem(source, ItemID.AncientBattleArmorMaterial);
-					}
-				}
-			}
-			else if (choice == 1)
-			{
-				player.QuickSpawnItem(source, ItemID.Sandstone, 50);
-				if (Main.hardMode)
-				{
-					if (Main.rand.NextFloat() < .2500f)
-					{
-						player.QuickSpawnItem(source, ItemID.AncientBattleArmorMaterial);
-					}
-				}
-			}
-			else if (choice == 2)
-			{
-				player.QuickSpawnItem(source, ItemID.HardenedSand, 50);
-				if (Main.hardMode)
-				{
-					if (Main.rand.NextFloat() < .2500f)
-					{
-						player.QuickSpawnItem(source, ItemID.AncientBattleArmorMaterial);
-					}
-				}
-			}
-			else if (choice == 3)
-			{
-				player.QuickSpawnItem(source, ItemID.DesertFossil, 15);
-				if (Main.hardMode)
-				{
-					if (Main.rand.NextFloat() < .2500f)
-					{
-						player.QuickSpawnItem(source, ItemID.AncientBattleArmorMaterial);
-					}
-				}
-			}
-			else if (choice == 4)
-			{
-				player.QuickSpawnItem(source, ModContent.ItemType<OldDustyBow>());
-				if (Main.hardMode)
-				{
-					if (Main.rand.NextFloat() < .2500f)
-					{
-						player.QuickSpawnItem(source, ItemID.AncientBattleArmorMaterial);
-					}
-				}
-			}
+			Item.maxStack = 9999;
+			Item.useStyle = ItemUseStyleID.Swing;
+			Item.DamageType = DamageClass.Generic;
+			Item.useTime = 30;
+			Item.useAnimation = 30;
+			Item.noMelee = true;
+			Item.consumable = true;
+			Item.knockBack = 2;
+			Item.noUseGraphic = true;
+			Item.UseSound = SoundID.Item1;
+			Item.shoot = ModContent.ProjectileType<SandstoneGeodeThrown>();
+			Item.shootSpeed = 14f;
 		}
 	}
 }

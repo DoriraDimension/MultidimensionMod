@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using MultidimensionMod.Projectiles.Typeless;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -14,53 +15,22 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 
 		public override void SetDefaults()
 		{
+			Item.damage = 20;
 			Item.width = 22;
 			Item.height = 24;
 			Item.rare = ItemRarityID.Blue;
-			Item.maxStack = 99;
-		}
-
-		public override bool CanRightClick()
-		{
-			return true;
-		}
-
-		public override void RightClick(Player player)
-		{
-			var source = player.GetSource_OpenItem(Type);
-			int choice = Main.rand.Next(8);
-			if (choice == 0)
-			{
-				player.QuickSpawnItem(source, ItemID.SilverOre, 20);
-			}
-			else if (choice == 1)
-			{
-				player.QuickSpawnItem(source, ItemID.TungstenOre, 20);
-			}
-			else if (choice == 2)
-			{
-				player.QuickSpawnItem(source, ItemID.GoldOre, 20);
-			}
-			else if (choice == 3)
-			{
-				player.QuickSpawnItem(source, ItemID.PlatinumOre, 20);
-			}
-			else if (choice == 4)
-			{
-				player.QuickSpawnItem(source, ItemID.IronOre, 20);
-			}
-			else if (choice == 5)
-			{
-				player.QuickSpawnItem(source, ItemID.LeadOre, 20);
-			}
-			else if (choice == 6)
-			{
-				player.QuickSpawnItem(source, ItemID.CopperOre, 20);
-			}
-			else if (choice == 7)
-			{
-			    player.QuickSpawnItem(source, ItemID.TinOre, 20);
-			}
+			Item.maxStack = 9999;
+			Item.useStyle = ItemUseStyleID.Swing;
+			Item.DamageType = DamageClass.Generic;
+			Item.useTime = 30;
+			Item.useAnimation = 30;
+			Item.noMelee = true;
+			Item.consumable = true;
+			Item.knockBack = 2;
+			Item.noUseGraphic = true;
+			Item.UseSound = SoundID.Item1;
+			Item.shoot = ModContent.ProjectileType<OreGeodeThrown>();
+			Item.shootSpeed = 14f;
 		}
 	}
 }

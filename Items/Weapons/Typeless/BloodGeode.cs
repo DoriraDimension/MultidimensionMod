@@ -1,4 +1,4 @@
-﻿using MultidimensionMod.Items.Materials;
+﻿using MultidimensionMod.Projectiles.Typeless;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -15,33 +15,22 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 
 		public override void SetDefaults()
 		{
+			Item.damage = 31;
 			Item.width = 18;
 			Item.height = 20;
 			Item.rare = ItemRarityID.Green;
-			Item.maxStack = 99;
-		}
-
-		public override bool CanRightClick()
-		{
-			return true;
-		}
-
-		public override void RightClick(Player player)
-		{
-			var source = player.GetSource_OpenItem(Type);
-			int choice = Main.rand.Next(3);
-			if (choice == 0)
-			{
-				player.QuickSpawnItem(source, ItemID.CrimtaneOre, 20);
-			}
-			else if (choice == 1)
-			{
-				player.QuickSpawnItem(source, ItemID.CrimstoneBlock, 50);
-			}
-			else if (choice == 2)
-			{
-				player.QuickSpawnItem(source, ModContent.ItemType<OldStainedScythe>());
-			}
+			Item.maxStack = 9999;
+			Item.useStyle = ItemUseStyleID.Swing;
+			Item.DamageType = DamageClass.Generic;
+			Item.useTime = 30;
+			Item.useAnimation = 30;
+			Item.noMelee = true;
+			Item.consumable = true;
+			Item.knockBack = 2;
+			Item.noUseGraphic = true;
+			Item.UseSound = SoundID.Item1;
+			Item.shoot = ModContent.ProjectileType<BloodGeodeThrown>();
+			Item.shootSpeed = 14f;
 		}
 	}
 }
