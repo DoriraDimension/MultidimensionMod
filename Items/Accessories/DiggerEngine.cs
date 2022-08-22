@@ -47,7 +47,7 @@ namespace MultidimensionMod.Items.Accessories
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<MetalWormSoul>())
 			.AddIngredient(ModContent.ItemType<Dimensium>(), 15)
-			.AddIngredient(ModContent.TileType<DimensionalForge>())
+			.AddTile(ModContent.TileType<DimensionalForge>())
 			.AddTile(134)
 			.Register();
 		}
