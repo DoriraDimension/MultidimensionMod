@@ -61,7 +61,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 
 		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
 		{
-			Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Materials/LophiiformesBaculum_Glow").Value;
+			Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Weapons/Magic/Staffs/LophiiformesBaculum_Glow").Value;
 			spriteBatch.Draw
 			(
 				texture,
