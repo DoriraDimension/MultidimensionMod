@@ -24,6 +24,7 @@ namespace MultidimensionMod.Items.Accessories
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
 			player.dangerSense = true;
+			player.GetModPlayer<MDPlayer>().ExplorerEye = true;
 		}
 	}
 }

@@ -24,6 +24,7 @@ namespace MultidimensionMod.Items.Accessories
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
 			player.findTreasure = true;
+			player.GetModPlayer<MDPlayer>().DesireEye = true;
 		}
 	}
 }

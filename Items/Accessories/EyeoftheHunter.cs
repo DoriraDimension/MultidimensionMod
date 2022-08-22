@@ -24,6 +24,7 @@ namespace MultidimensionMod.Items.Accessories
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
 			player.detectCreature = true;
+			player.GetModPlayer<MDPlayer>().HunterEye = true;
 		}
 	}
 }
