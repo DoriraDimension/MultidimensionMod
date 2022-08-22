@@ -61,7 +61,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 
 		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
 		{
-			Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Magic/Others/GreatMoonlight_Glow").Value;
+			Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Weapons/Magic/Others/GreatMoonlight_Glow").Value;
 			spriteBatch.Draw
 			(
 				texture,
