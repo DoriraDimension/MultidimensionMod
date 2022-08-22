@@ -25,7 +25,23 @@ namespace MultidimensionMod
 
         public bool Probe = false;
 
+        public bool HunterEye = false;
+
+        public bool DesireEye = false;
+
+        public bool NightEye = false;
+
+        public bool ExplorerEye = false;
+
         public Item DiggerEngine;
+
+        public Item EyeoftheHunter;
+
+        public Item EyeoftheNightwalker;
+
+        public Item EyeofDesire;
+
+        public Item EyeoftheExplorer;
 
         public override void ResetEffects()
         {
@@ -36,6 +52,10 @@ namespace MultidimensionMod
             StarvingLarva = false;
             Healthy = false;
             Probe = false;
+            HunterEye = false;
+            DesireEye = false;
+            NightEye = false;
+            ExplorerEye = false;
         }
 
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
@@ -118,12 +138,45 @@ namespace MultidimensionMod
 
         public override void PostHurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit, int cooldownCounter)
         {
+            Player player = Main.LocalPlayer;
             if (this.Probe && !Player.lavaWet)
             {
                 if (Main.myPlayer == Player.whoAmI && Player.ownedProjectileCounts[ModContent.ProjectileType<FriendlyProbe>()] < 4)
                 {
                     Item item = DiggerEngine;
                     Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<FriendlyProbe>(), (int)damage + 40, 0f, Player.whoAmI);
+                }
+            }
+            if (this.HunterEye)
+            {
+                if (Main.rand.NextBool(5))
+                {
+                    Item item = EyeoftheHunter;
+                    player.AddBuff(BuffID.Weak, 480);
+                }
+            }
+            if (this.DesireEye)
+            {
+                if (Main.rand.NextBool(5))
+                {
+                    Item item = EyeofDesire;
+                    player.AddBuff(BuffID.Cursed, 480);
+                }
+            }
+            if (this.ExplorerEye)
+            {
+                if (Main.rand.NextBool(5))
+                {
+                    Item item = EyeoftheExplorer;
+                    player.AddBuff(BuffID.Slow, 480);
+                }
+            }
+            if (this.NightEye)
+            {
+                if (Main.rand.NextBool(5))
+                {
+                    Item item = EyeoftheNightwalker;
+                    player.AddBuff(BuffID.Blackout, 480);
                 }
             }
         }
