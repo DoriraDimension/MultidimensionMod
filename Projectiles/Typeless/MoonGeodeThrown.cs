@@ -1,6 +1,5 @@
-﻿using MultidimensionMod.Items.Materials;
+﻿using MultidimensionMod.Items.Weapons.Typeless;
 using Microsoft.Xna.Framework;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
@@ -46,18 +45,40 @@ namespace MultidimensionMod.Projectiles.Typeless
 
 		public override void Kill(int timeLeft)
 		{
+			Player player = Main.LocalPlayer;
 			SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
 			for (int i = 0; i < 5; i++)
 			{
 				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.LunarOre, 0f, 0f, 100, default(Color), 2f);
 				Main.dust[dustIndex].velocity *= 1.4f;
 			}
-			if (Projectile.owner == Main.myPlayer)
+			if (!player.GetModPlayer<MDPlayer>().Geodes)
 			{
-				int choice = Main.rand.Next(1);
-				if (choice == 0)
+				if (Projectile.owner == Main.myPlayer)
 				{
-					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.LunarOre, 40);
+					int choice = Main.rand.Next(1);
+					if (choice == 0)
+					{
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.LunarOre, 40);
+					}
+				}
+			}
+			else if (player.GetModPlayer<MDPlayer>().Geodes)
+			{
+				if (Main.rand.NextFloat() < .3300f)
+				{
+					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ModContent.ItemType<MoonGeode>(), 1);
+				}
+			}
+			if (player.GetModPlayer<MDPlayer>().Geodes)
+			{
+				for (int i = 0; i < 5; i++)
+				{
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, new Vector2(Main.rand.NextFloat(-10, 10), Main.rand.NextFloat(-9, 10)), ProjectileID.Meowmere, (int)((double)((float)Projectile.damage) * 0.3f), 0f, Main.myPlayer);
+				}
+				for (int i = 0; i < 5; i++)
+				{
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, new Vector2(Main.rand.NextFloat(-10, 10), Main.rand.NextFloat(-9, 10)), ProjectileID.StarWrath, (int)((double)((float)Projectile.damage) * 0.3f), 0f, Main.myPlayer);
 				}
 			}
 		}

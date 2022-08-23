@@ -1,6 +1,6 @@
 ﻿using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Items.Weapons.Typeless;
 using Microsoft.Xna.Framework;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
@@ -46,34 +46,59 @@ namespace MultidimensionMod.Projectiles.Typeless
 
 		public override void Kill(int timeLeft)
 		{
+			Player player = Main.LocalPlayer;
 			SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
 			for (int i = 0; i < 5; i++)
 			{
 				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Ebonwood, 0f, 0f, 100, default(Color), 2f);
 				Main.dust[dustIndex].velocity *= 1.4f;
 			}
-			if (Projectile.owner == Main.myPlayer)
+			if (!player.GetModPlayer<MDPlayer>().Geodes)
 			{
-				int choice = Main.rand.Next(5);
-				if (choice == 0)
+				if (Projectile.owner == Main.myPlayer)
 				{
-					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.DemoniteOre, 20);
+					int choice = Main.rand.Next(5);
+					if (choice == 0)
+					{
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.DemoniteOre, 20);
+					}
+					else if (choice == 1)
+					{
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.EbonstoneBlock, 50);
+					}
+					else if (choice == 2)
+					{
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.EbonstoneBlock, 25);
+					}
+					else if (choice == 3)
+					{
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ModContent.ItemType<OldTaintedGun>(), 1);
+					}
+					else if (choice == 4)
+					{
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.RottenChunk, 5);
+					}
 				}
-				else if (choice == 1)
+			}
+			else if (player.GetModPlayer<MDPlayer>().Geodes)
+			{
+				if (Main.rand.NextFloat() < .3300f)
 				{
-					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.EbonstoneBlock, 50);
+					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ModContent.ItemType<DecayGeode>(), 1);
 				}
-				else if (choice == 2)
+			}
+			if (player.GetModPlayer<MDPlayer>().Geodes)
+            {
+				for (int i = 0; i < 4; i++)
 				{
-					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.EbonstoneBlock, 25);
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, new Vector2(Main.rand.NextFloat(-10, 10), Main.rand.NextFloat(-9, 10)), ProjectileID.VilethornBase, (int)((double)((float)Projectile.damage) * 0.3f), 0f, Main.myPlayer);
 				}
-				else if (choice == 3)
+			}
+			if (player.GetModPlayer<MDPlayer>().Geodes && Main.hardMode)
+			{
+				for (int i = 0; i < 5; i++)
 				{
-					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ModContent.ItemType<OldTaintedGun>(), 1);
-				}
-				else if (choice == 4)
-				{
-					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.RottenChunk, 5);
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, new Vector2(Main.rand.NextFloat(-10, 10), Main.rand.NextFloat(-9, 10)), ProjectileID.TinyEater, (int)((double)((float)Projectile.damage) * 0.3f), 0f, Main.myPlayer);
 				}
 			}
 		}

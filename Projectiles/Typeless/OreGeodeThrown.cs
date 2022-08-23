@@ -1,6 +1,5 @@
-﻿using MultidimensionMod.Dusts;
+﻿using MultidimensionMod.Items.Weapons.Typeless;
 using Microsoft.Xna.Framework;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
@@ -46,47 +45,72 @@ namespace MultidimensionMod.Projectiles.Typeless
 
 		public override void Kill(int timeLeft)
 		{
+			Player player = Main.LocalPlayer;
 			SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
 			for (int i = 0; i < 5; i++)
 			{
 				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Dirt, 0f, 0f, 100, default(Color), 2f);
 				Main.dust[dustIndex].velocity *= 1.4f;
 			}
-			if (Projectile.owner == Main.myPlayer)
+			if (!player.GetModPlayer<MDPlayer>().Geodes)
 			{
-				int stack = 20;
-				int choice = Main.rand.Next(8);
-				if (choice == 0)
+				if (Projectile.owner == Main.myPlayer)
 				{
-					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.CopperOre, stack);
+					int stack = 20;
+					int choice = Main.rand.Next(8);
+					if (choice == 0)
+					{
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.CopperOre, stack);
+					}
+					else if (choice == 1)
+					{
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.TinOre, stack);
+					}
+					else if (choice == 2)
+					{
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.LeadOre, stack);
+					}
+					else if (choice == 3)
+					{
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.IronOre, stack);
+					}
+					else if (choice == 4)
+					{
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.TungstenOre, stack);
+					}
+					else if (choice == 5)
+					{
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.SilverOre, stack);
+					}
+					else if (choice == 6)
+					{
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.GoldOre, stack);
+					}
+					else if (choice == 7)
+					{
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.PlatinumOre, stack);
+					}
 				}
-				else if (choice == 1)
+			}
+			else if (player.GetModPlayer<MDPlayer>().Geodes)
+			{
+				if (Main.rand.NextFloat() < .3300f)
 				{
-					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.TinOre, stack);
+					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ModContent.ItemType<Geode>(), 1);
 				}
-				else if (choice == 2)
+			}
+			if (player.GetModPlayer<MDPlayer>().Geodes)
+            {
+				for (int i = 0; i < 7; i++)
 				{
-					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.LeadOre, stack);
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, new Vector2(Main.rand.NextFloat(-10, 10), Main.rand.NextFloat(-9, 10)), ModContent.ProjectileType<GeodeFragment>(), (int)((double)((float)Projectile.damage) * 0.3f), 0f, Main.myPlayer);
 				}
-				else if (choice == 3)
+			}
+			if (player.GetModPlayer<MDPlayer>().Geodes && Main.hardMode)
+			{
+				for (int i = 0; i < 2; i++)
 				{
-					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.IronOre, stack);
-				}
-				else if (choice == 4)
-				{
-					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.TungstenOre, stack);
-				}
-				else if (choice == 5)
-				{
-					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.SilverOre, stack);
-				}
-				else if (choice == 6)
-				{
-					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.GoldOre, stack);
-				}
-				else if (choice == 7)
-				{
-					Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.PlatinumOre, stack);
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ProjectileID.BoulderStaffOfEarth, (int)((double)((float)Projectile.damage) * 0.3f), 0f, Main.myPlayer);
 				}
 			}
 		}
