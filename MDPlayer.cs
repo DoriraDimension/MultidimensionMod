@@ -25,6 +25,8 @@ namespace MultidimensionMod
 
         public bool Probe = false;
 
+        public Item DiggerEngine;
+
         public bool HunterEye = false;
 
         public bool DesireEye = false;
@@ -33,8 +35,6 @@ namespace MultidimensionMod
 
         public bool ExplorerEye = false;
 
-        public Item DiggerEngine;
-
         public Item EyeoftheHunter;
 
         public Item EyeoftheNightwalker;
@@ -42,6 +42,8 @@ namespace MultidimensionMod
         public Item EyeofDesire;
 
         public Item EyeoftheExplorer;
+
+        public bool Geodes;
 
         public override void ResetEffects()
         {
@@ -56,6 +58,7 @@ namespace MultidimensionMod
             DesireEye = false;
             NightEye = false;
             ExplorerEye = false;
+            Geodes = false;
         }
 
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
