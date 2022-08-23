@@ -67,7 +67,7 @@ namespace MultidimensionMod.Projectiles.Typeless
             {
 				if (Projectile.owner == Main.myPlayer)
 				{
-					int choice = Main.rand.Next(5);
+					int choice = Main.rand.Next(4);
 					if (choice == 0)
 					{
 						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.PearlstoneBlock, 50);
@@ -95,14 +95,6 @@ namespace MultidimensionMod.Projectiles.Typeless
 					else if (choice == 3)
 					{
 						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.PearlstoneBlock, 25);
-						if (Main.rand.NextFloat() < .2500f)
-						{
-							Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.QueenSlimeCrystal, 1);
-						}
-					}
-					else if (choice == 4)
-					{
-						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ModContent.ItemType<MysticStone>(), 1);
 						if (Main.rand.NextFloat() < .2500f)
 						{
 							Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.QueenSlimeCrystal, 1);
