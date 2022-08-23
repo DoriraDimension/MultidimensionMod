@@ -1,9 +1,7 @@
 ﻿using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.Utilities;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -11,8 +9,8 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Mystic Stone");
-			Tooltip.SetDefault("This stone pulses with magical energy and increases max mana by 40.\nThe energy that surrounds the hallow has very potent magical capabilities,\nthe growing crystal shards can sometimes turn into even bigger crystals filled to the brim with magic.");
+			DisplayName.SetDefault("Mystic Geode");
+			Tooltip.SetDefault("A geode infused with potent dimensional magic, its presence empowers any thrown geode\nCauses geodes to drop themself as a 1/3 chance instead of their regular loot\nGrants geodes unique effects depending on their type\nNew effects are added when entering hardmode");
 		}
 
 		public override void SetDefaults()
@@ -20,13 +18,24 @@ namespace MultidimensionMod.Items.Accessories
 			Item.width = 44;
 			Item.height = 34;
 			Item.accessory = true;
-			Item.value = Item.sellPrice(gold: 1);
-			Item.rare = ItemRarityID.LightRed;
+			Item.value = Item.sellPrice(silver: 13);
+			Item.rare = ItemRarityID.Green;
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.statManaMax2 += 40;
+			player.GetModPlayer<MDPlayer>().Geodes = true;
+		}
+
+		public override void AddRecipes()
+		{
+			CreateRecipe()
+			.AddIngredient(ItemID.Geode, 3)
+			.AddIngredient(ModContent.ItemType<ManaInfusedSandstone>(), 5)
+			.AddIngredient(ItemID.Granite, 13)
+			.AddIngredient(ItemID.Marble, 13)
+			.AddTile(TileID.Anvils)
+			.Register();
 		}
 	}
 }
