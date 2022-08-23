@@ -15,6 +15,7 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 
 		public override void SetDefaults()
 		{
+			Item.damage = 74;
 			Item.width = 20;
 			Item.height = 24;
 			Item.rare = ItemRarityID.Lime;
@@ -30,25 +31,6 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 			Item.UseSound = SoundID.Item1;
 			Item.shoot = ModContent.ProjectileType<MuddyGeodeThrown>();
 			Item.shootSpeed = 14f;
-		}
-
-		public override bool CanRightClick()
-		{
-			return true;
-		}
-
-		public override void RightClick(Player player)
-		{
-			var source = player.GetSource_OpenItem(Type);
-			int choice = Main.rand.Next(2);
-			if (choice == 0)
-			{
-				player.QuickSpawnItem(source, ItemID.ChlorophyteOre, 30);
-			}
-			else if (choice == 1)
-			{
-				player.QuickSpawnItem(source, ItemID.MudBlock, 50);
-			}
 		}
 	}
 }

@@ -32,40 +32,5 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 			Item.shoot = ModContent.ProjectileType<OmniGeodeThrown>();
 			Item.shootSpeed = 14f;
 		}
-
-		public override bool CanRightClick()
-		{
-			return true;
-		}
-
-		public override void RightClick(Player player)
-		{
-			var source = player.GetSource_OpenItem(Type);
-			int choice = Main.rand.Next(6);
-			if (choice == 0)
-			{
-				player.QuickSpawnItem(source, ItemID.CobaltOre, 20);
-			}
-			else if (choice == 1)
-			{
-				player.QuickSpawnItem(source, ItemID.PalladiumOre, 20);
-			}
-			else if (choice == 2)
-			{
-				player.QuickSpawnItem(source, ItemID.OrichalcumOre, 20);
-			}
-			else if (choice == 3)
-			{
-				player.QuickSpawnItem(source, ItemID.MythrilOre, 20);
-			}
-			else if (choice == 4)
-			{
-				player.QuickSpawnItem(source, ItemID.AdamantiteOre, 20);
-			}
-			else if (choice == 5)
-			{
-				player.QuickSpawnItem(source, ItemID.TitaniumOre, 20);
-			}
-		}
 	}
 }
