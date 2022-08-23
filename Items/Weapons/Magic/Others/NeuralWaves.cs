@@ -56,7 +56,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
-			for (int i = 0; i < 16; i++)
+			for (int i = 0; i < 18; i++)
 			{
 				int numProj = 2;
 				float rotation = MathHelper.ToRadians(50f);
