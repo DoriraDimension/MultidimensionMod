@@ -53,17 +53,17 @@ namespace MultidimensionMod
 				}
 				if (MadnessTimer >= 220)
 				{
-					MadnessCringe += 5;
+					MadnessCringe += 10;
 					if (player.GetModPlayer<MDPlayer>().CalmMind)
 					{
-						MadnessCringe -= 5;
-						MadnessCringe += 2;
+						MadnessCringe -= 10;
+						MadnessCringe += 5;
 					}
 					MadnessTimer = 0;
 				}
-				if (MadnessCringe >= 20)
+				if (MadnessCringe >= 50)
 				{
-					MadnessCringe = 20;
+					MadnessCringe = 50;
 				}
 				npc.lifeRegen -= MadnessCringe;
 			}
