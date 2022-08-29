@@ -1,5 +1,6 @@
 ﻿using MultidimensionMod.Items.Bags;
 using MultidimensionMod.Projectiles.Summon.Minions;
+using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -45,6 +46,14 @@ namespace MultidimensionMod
 
         public bool Geodes;
 
+        public bool Madness;
+
+        public int MadnessTimer;
+
+        public int MadnessCringe;
+
+        public bool CalmMind;
+
         public override void ResetEffects()
         {
             SmileyJr = false;
@@ -59,6 +68,7 @@ namespace MultidimensionMod
             NightEye = false;
             ExplorerEye = false;
             Geodes = false;
+            Madness = false;
         }
 
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
@@ -80,6 +90,36 @@ namespace MultidimensionMod
                 }
                 player.lifeRegenTime = 0;
                 player.lifeRegen -= 32;
+            }
+            if (Madness)
+            {
+                MadnessTimer++;
+                if (player.lifeRegen > 0)
+                {
+                    player.lifeRegen = 0;
+                }
+                player.lifeRegenTime = 0;
+                if (MadnessTimer >= 220)
+                {
+                    MadnessCringe += 5;
+                    if (CalmMind)
+                    {
+                        MadnessCringe -= 5;
+                        MadnessCringe += 2;
+                    }
+                    MadnessTimer = 0;
+                }
+                if (MadnessCringe >= 20)
+                {
+                    MadnessCringe = 20;
+                }
+                player.lifeRegen -= MadnessCringe;
+            }
+            if (!Madness)
+            {
+                MadnessTimer = 0;
+                MadnessCringe = 0;
+                player.lifeRegen = 0;
             }
         }
 
