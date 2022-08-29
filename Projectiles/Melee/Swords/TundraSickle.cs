@@ -16,8 +16,8 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void SetDefaults()
 		{
-			Projectile.width = 45;
-			Projectile.height = 45;
+			Projectile.width = 38;
+			Projectile.height = 38;
 			Projectile.friendly = true;
 			Projectile.DamageType = DamageClass.Magic;
 			Projectile.ignoreWater = true;
