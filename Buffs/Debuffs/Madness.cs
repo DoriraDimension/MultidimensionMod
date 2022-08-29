@@ -8,7 +8,7 @@ namespace MultidimensionMod.Buffs.Debuffs
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Madness");
-            Description.SetDefault("you suck and just realized it.");
+            Description.SetDefault("You witnessed cosmic knowledge, its burning your mind away.");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = false;
         }
