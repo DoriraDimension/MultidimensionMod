@@ -27,6 +27,8 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.ignoreWater = true;
 			Projectile.tileCollide = true;
 			Projectile.penetrate = 3;
+			Projectile.usesLocalNPCImmunity = true;
+			Projectile.localNPCHitCooldown = 5;
 		}
 
 		public override void Kill(int timeLeft)
