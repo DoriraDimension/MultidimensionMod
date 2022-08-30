@@ -10,7 +10,7 @@ namespace MultidimensionMod.Buffs.Debuffs
             DisplayName.SetDefault("Madness");
             Description.SetDefault("You witnessed cosmic knowledge, its burning your mind away.");
             Main.buffNoTimeDisplay[Type] = false;
-            Main.debuff[Type] = false;
+            Main.debuff[Type] = true;
         }
 
         public override void Update(Player player, ref int buffIndex)
