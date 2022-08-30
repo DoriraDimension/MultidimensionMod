@@ -54,11 +54,6 @@ namespace MultidimensionMod
 				if (MadnessTimer >= 220)
 				{
 					MadnessCringe += 10;
-					if (player.GetModPlayer<MDPlayer>().CalmMind)
-					{
-						MadnessCringe -= 10;
-						MadnessCringe += 5;
-					}
 					MadnessTimer = 0;
 				}
 				if (MadnessCringe >= 50)
