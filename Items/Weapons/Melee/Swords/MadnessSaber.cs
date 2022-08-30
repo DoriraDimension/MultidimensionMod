@@ -41,7 +41,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<MadnessFragment>(), 12)
-			.AddTile(134)
+			.AddTile(TileID.Anvils)
 			.Register();
 		}
 
