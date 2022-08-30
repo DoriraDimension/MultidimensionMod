@@ -1,7 +1,7 @@
-﻿using Microsoft.Xna.Framework;
+﻿using MultidimensionMod.Buffs.Debuffs;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
-using Terraria.Audio;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Projectiles.Ranged
@@ -69,6 +69,11 @@ namespace MultidimensionMod.Projectiles.Ranged
 			{
 				Projectile.rotation += MathHelper.Pi;
 			}
+		}
+
+		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+		{
+			target.AddBuff(ModContent.BuffType<Madness>(), 120);
 		}
 	}
 }
