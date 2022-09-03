@@ -38,7 +38,6 @@ namespace MultidimensionMod
 
             if (NPC.type == NPCID.EyeofCthulhu)
             {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Iris>(), 4));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EyeTendril>(), 1, 3, 5));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EyeSoul>()));
 
