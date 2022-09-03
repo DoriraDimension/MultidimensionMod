@@ -92,6 +92,7 @@ namespace MultidimensionMod
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<QueenBelt>(), 3));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WomanSlimeSoul>()));
+                npcLoot.Add(ItemDropRule.Common(ItemID.PinkGel, 1, 10, 25));
             }
 
             if (NPC.type == NPCID.Retinazer || NPC.type == NPCID.Spazmatism)
