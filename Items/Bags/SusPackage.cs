@@ -2,7 +2,7 @@
 using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Weapons.Melee.Swords;
 using MultidimensionMod.Items.Weapons.Magic.Staffs;
-using MultidimensionMod.Items.Placeables;
+using MultidimensionMod.Items.Weapons.Typeless;
 using MultidimensionMod.Items.Potions;
 using Terraria;
 using Terraria.ID;
@@ -54,7 +54,11 @@ namespace MultidimensionMod.Items.Bags
 			player.QuickSpawnItem(source, ItemID.CopperHammer);
 			player.QuickSpawnItem(source, ItemID.Torch, 30);
 			player.QuickSpawnItem(source, ItemID.RecallPotion, 5);
-			player.QuickSpawnItem(source, ModContent.ItemType<CalamityRing>());
+			player.QuickSpawnItem(source, ItemID.Rope, 100);
+			player.QuickSpawnItem(source, ItemID.Bomb, 15);
+			player.QuickSpawnItem(source, ItemID.Dynamite, 2);
+			player.QuickSpawnItem(source, ItemID.BuilderPotion, 3);
+			player.QuickSpawnItem(source, ItemID.CopperCoin);
 			switch (player.name)
 			{
 				case "Dorira":
