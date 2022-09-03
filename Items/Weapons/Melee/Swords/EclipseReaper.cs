@@ -40,7 +40,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			{
 				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
 				{
-					Item.OverrideColor = MDRarity.ParallelVariant;
+					Item.OverrideColor = MDRarity.ForbiddenArtifact;
 				}
 			}
 		}
