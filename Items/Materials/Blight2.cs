@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Reincarnated Soul");
-			Tooltip.SetDefault("A long lost soul, revived with the power of 3 mighty essences.");
+			DisplayName.SetDefault("Mad Titan's Soul");
+			Tooltip.SetDefault("The soul of a being that attempted ascension, it probably got the furthest before devolving into this mess of a creature.");
 			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(4, 8));
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
 			ItemID.Sets.AnimatesAsSoul[Item.type] = true;
@@ -26,16 +26,6 @@ namespace MultidimensionMod.Items.Materials
 			Item.maxStack = 9999;
 			Item.value = Item.sellPrice(silver: 6);
 			Item.rare = ItemRarityID.Pink;
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ItemID.SoulofFright)
-			.AddIngredient(ItemID.SoulofSight)
-			.AddIngredient(ItemID.SoulofMight)
-			.AddTile(26)
-			.Register();
 		}
 	}
 }
