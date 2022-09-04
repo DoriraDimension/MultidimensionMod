@@ -20,6 +20,7 @@ namespace MultidimensionMod.Buffs.Debuffs
 
         public override void Update(NPC npc, ref int buffIndex)
         {
+            npc.GetGlobalNPC<MDGlobalNPC>().Madness = true;
         }
     }
 }
