@@ -27,11 +27,11 @@ namespace MultidimensionMod
 		public override void ResetEffects(NPC npc)
 		{
 			Blaze = false;
+			Madness = false;
 		}
 
 		public override void UpdateLifeRegen(NPC npc, ref int damage)
 		{
-			Player player = Main.LocalPlayer;
 			if (Blaze)
 			{
 				if (npc.lifeRegen > 0)
@@ -39,10 +39,6 @@ namespace MultidimensionMod
 					npc.lifeRegen = 0;
 				}
 				npc.lifeRegen -= 32;
-				if (damage < 2)
-				{
-					damage = 2;
-				}
 			}
 			if (Madness)
 			{
@@ -66,7 +62,6 @@ namespace MultidimensionMod
 			{
 				MadnessTimer = 0;
 				MadnessCringe = 0;
-				npc.lifeRegen = 0;
 			}
 		}
 

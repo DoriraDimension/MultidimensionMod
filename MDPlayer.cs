@@ -119,7 +119,6 @@ namespace MultidimensionMod
             {
                 MadnessTimer = 0;
                 MadnessCringe = 0;
-                player.lifeRegen = 0;
             }
         }
 
