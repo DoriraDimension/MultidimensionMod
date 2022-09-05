@@ -7,10 +7,10 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 {
 	public class DirtagnanProj : ModProjectile
 	{
-		public const int FadeInDuration = 10;
+		public const int FadeInDuration = 26;
 		public const int FadeOutDuration = 4;
 
-		public const int TotalDuration = 27;
+		public const int TotalDuration = 37;
 		public float CollisionWidth => 5f * Projectile.scale;
 
 		public int Timer
