@@ -1,5 +1,4 @@
-﻿using MultidimensionMod.Items.Materials;
-using Terraria;
+﻿using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.DataStructures;
@@ -61,15 +60,9 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 		public override void AddRecipes()
         {
             CreateRecipe()
-            .AddIngredient(ItemID.IronBow)
-            .AddIngredient(ItemID.Coral, 6)
-            .AddTile(134)
-            .Register();
-
-			CreateRecipe()
-            .AddIngredient(ItemID.LeadBow)
-            .AddIngredient(ItemID.Coral, 6)
-            .AddTile(134)
+			.AddIngredient(ItemID.Starfish, 4)
+            .AddIngredient(ItemID.Coral, 9)
+            .AddTile(TileID.MythrilAnvil)
             .Register();
 		}
     }
