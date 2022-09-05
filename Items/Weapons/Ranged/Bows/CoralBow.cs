@@ -62,7 +62,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
             CreateRecipe()
 			.AddIngredient(ItemID.Starfish, 4)
             .AddIngredient(ItemID.Coral, 9)
-            .AddTile(TileID.MythrilAnvil)
+            .AddTile(TileID.Anvils)
             .Register();
 		}
     }
