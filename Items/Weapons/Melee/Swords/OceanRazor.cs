@@ -36,20 +36,10 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ItemID.IronShortsword)
 			.AddIngredient(ItemID.Starfish, 3)
 			.AddIngredient(ItemID.Coral, 7)
-			.AddIngredient(ItemID.GoldBar, 2)
 			.AddTile(TileID.Anvils)
 			.Register();
-
-			CreateRecipe()
-            .AddIngredient(ItemID.LeadShortsword)
-            .AddIngredient(ItemID.Starfish, 3)
-            .AddIngredient(ItemID.Coral, 7)
-            .AddIngredient(ItemID.GoldBar, 2)
-            .AddTile(TileID.Anvils)
-            .Register();
 		}
 	}
 }
