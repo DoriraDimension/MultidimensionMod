@@ -36,8 +36,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ItemID.Starfish, 3)
-			.AddIngredient(ItemID.Coral, 7)
+			.AddIngredient(ItemID.Starfish, 4)
+			.AddIngredient(ItemID.Coral, 9)
 			.AddTile(TileID.Anvils)
 			.Register();
 		}
