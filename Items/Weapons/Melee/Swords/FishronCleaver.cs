@@ -1,7 +1,9 @@
 ﻿using MultidimensionMod.Items.Materials;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -28,11 +30,21 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.crit = 9;
+			Item.shoot = ProjectileID.FlaironBubble;
+			Item.shootSpeed = 17f;
 		}
 
-		public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
-			Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), target.position.X + 0f + (float)Main.rand.Next(0, 151), player.position.Y + 0f, 0f, -6f, ProjectileID.Typhoon, (int)((double)((float)Item.damage) * 0.5), 0f, Main.myPlayer);
+			{
+				for (int i = 0; i < 8; i++)
+				{
+					Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(30));
+					newVelocity *= 1f - Main.rand.NextFloat(0.3f);
+					Projectile.NewProjectileDirect(source, position, newVelocity, type, (int)((double)((float)Item.damage) * 0.2), 0f, player.whoAmI);
+				}
+			}
+			return false;
 		}
 
 		public override void AddRecipes()
