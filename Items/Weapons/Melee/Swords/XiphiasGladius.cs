@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Projectiles.Melee.Swords;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -15,27 +16,32 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void SetDefaults()
 		{
-			Item.damage = 94;
+			Item.damage = 53;
 			Item.DamageType = DamageClass.Melee;
-			Item.width = 42;
-			Item.height = 42;
-			Item.useTime = 15;
-			Item.useAnimation = 15;
-			Item.useStyle = 1;
-			Item.knockBack = 4;
+			Item.width = 54;
+			Item.height = 58;
+			Item.useTime = 5;
+			Item.useAnimation = 5;
+			Item.useStyle = ItemUseStyleID.Rapier;
+			Item.knockBack = 3;
 			Item.autoReuse = true;
 			Item.value = Item.sellPrice(gold: 1);
 			Item.rare = ItemRarityID.Yellow;
 			Item.UseSound = SoundID.Item1;
 			Item.crit = 11;
+			Item.noMelee = true;
+			Item.noUseGraphic = true;
+			Item.shoot = ModContent.ProjectileType<XiphiasGladiusStab>();
+			Item.shootSpeed = 4.50f;
 		}
 
 		public override void AddRecipes()
 		{
 			CreateRecipe()
+		    .AddIngredient(ModContent.ItemType<OceanRazor>())
 			.AddIngredient(ModContent.ItemType<TidalQuartz>(), 7)
 			.AddIngredient(ItemID.HallowedBar, 15)
-			.AddTile(134)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 	}
