@@ -11,6 +11,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 {
 	public class LophiiformesBaculum : ModItem
 	{
+		public int WaveTimer = 0;
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Lophiiformes Baculum");
@@ -41,22 +42,37 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
-			int numberProjectiles = 2 + Main.rand.Next(2); 
-			for (int i = 0; i < numberProjectiles; i++)
+			for (int i = 0; i < 4; i++)
 			{
-				Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(21)); 																																																																											
+				Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(47)); 																																																																											
 				Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
 			}
-			return false; 
+
+			if (WaveTimer == 2)
+            {
+				Projectile.NewProjectile(source, position.X, position.Y, velocity.X, velocity.Y, ModContent.ProjectileType<GiantWave>(), damage, knockback, player.whoAmI);
+			}
+			return false;
 		}
 
 		public override void AddRecipes()
 		{
 			CreateRecipe()
+			.AddIngredient(ModContent.ItemType<AtlanteanTrident>())
 			.AddIngredient(ModContent.ItemType<TidalQuartz>(), 5)
 			.AddIngredient(ItemID.HallowedBar, 11)
-			.AddTile(134)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
+		}
+
+		public override bool? UseItem(Player player)
+		{
+			WaveTimer += 1;
+			if (WaveTimer >= 3)
+			{
+				WaveTimer = 0;
+			}
+			return true;
 		}
 
 		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
