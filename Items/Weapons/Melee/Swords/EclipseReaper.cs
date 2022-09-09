@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
-using Microsoft.Xna.Framework;
+﻿using MultidimensionMod.Projectiles.Melee.Swords;
+using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Tiles;
+using System.Collections.Generic;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -11,27 +12,27 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Eclipse Reaper");
-			Tooltip.SetDefault("The reapers that appear during the eclipse are followers of the Dimensional Death,\nfar down the line as the most unimportant servants,\ntho some of them have the honor to wield a scythe with incredible power");
+			DisplayName.SetDefault("Hidden Sun Soulcaller");
+			Tooltip.SetDefault("A scythe from a well hidden and now extinct civilisation, it was once a ordinary weapon,\ndecorated with a bright white extension to show off the connection to their very own sun.\nThough the scythe was retrieved and modified to now be able to summon the souls of the long lost residents.");
 		}
 
 		public override void SetDefaults()
 		{
 			Item.damage = 62;
 			Item.DamageType = DamageClass.Melee;
-			Item.width = 68;
-			Item.height = 70;
-			Item.useTime = 17;
-			Item.useAnimation = 17;
-			Item.useStyle = 1;
+			Item.width = 72;
+			Item.height = 56;
+			Item.useTime = 41;
+			Item.useAnimation = 41;
+			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 6;
 			Item.autoReuse = true;
 			Item.value = Item.sellPrice(gold: 10);
 			Item.rare = ItemRarityID.Lime;
 			Item.UseSound = SoundID.Item71;
 			Item.crit = 10;
-			Item.shoot = ProjectileID.DeathSickle;
-			Item.shootSpeed = 50f;
+			Item.shoot = ModContent.ProjectileType<HiddenSunScythe>();
+			Item.shootSpeed = 15f;
 		}
 
 		public override void ModifyTooltips(List<TooltipLine> list)
@@ -45,20 +46,17 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			}
 		}
 
-		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+		public override void AddRecipes()
 		{
-			float numberProjectiles = 3;
-			float rotation = MathHelper.ToRadians(30);
-
-			position += Vector2.Normalize(velocity) * 45f;
-
-			for (int i = 0; i < numberProjectiles; i++)
-			{
-				Vector2 perturbedSpeed = velocity.RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))) * .2f;
-				Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
-			}
-
-			return false; 
+			CreateRecipe()
+			.AddIngredient(ItemID.DeathSickle)
+			.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 16)
+			.AddIngredient(ItemID.Ectoplasm, 6)
+			.AddIngredient(ModContent.ItemType<MadnessFragment>(), 10)
+			.AddIngredient(ModContent.ItemType<Blight2>())
+			.AddIngredient(ModContent.ItemType<Dimensium>(), 17)
+			.AddTile(ModContent.TileType<DimensionalForge>())
+			.Register();
 		}
 	}
 }
