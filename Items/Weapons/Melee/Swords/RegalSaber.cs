@@ -2,14 +2,19 @@
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Tiles;
+using MultidimensionMod.Projectiles.Melee.Spears;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
+using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.Audio;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
 	public class RegalSaber : ModItem
 	{
+		public int Grow = 0;
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Regal Saber");
@@ -47,6 +52,35 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
 		{
 			target.AddBuff(137, 480);
+		}
+
+		public override bool? UseItem(Player player)
+		{
+			Grow += 1;
+			if (Grow == 1)
+            {
+				Item.scale = 1.5f;
+				Item.damage = 13;
+            }
+			if (Grow == 2)
+            {
+				Item.scale = 2f;
+				Item.damage = 15;
+            }
+			if (Grow == 3)
+            {
+				Item.scale = 3f;
+				Item.damage = 17;
+            }
+			if (Grow >= 4)
+			{
+				Item.damage = 11;
+				Item.scale = 1f;
+				Item.noMelee = false;
+				Item.noUseGraphic = false;
+				Grow = 0;
+			}
+			return true;
 		}
 
 		public override void AddRecipes()
