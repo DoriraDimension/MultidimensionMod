@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using MultidimensionMod.Items.Materials;
+﻿using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Tiles;
+using MultidimensionMod.Projectiles.Melee.Swords;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -31,6 +31,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.crit = 8;
+			Item.shootSpeed = 15;
 		}
 
 		public override void MeleeEffects(Player player, Rectangle hitbox)
@@ -40,6 +41,11 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 				Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, (14));
 				Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, (57));
 			}
+		}
+
+		public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+		{
+			Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), Main.MouseWorld, new Vector2(0, 0), ModContent.ProjectileType<LifelightBlade>(), (int)((double)((float)Item.damage) * 0.5f), 0f, Main.myPlayer);
 		}
 
 		public override void AddRecipes()
