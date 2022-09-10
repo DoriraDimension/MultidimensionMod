@@ -39,6 +39,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			CreateRecipe()
 			.AddIngredient(ItemID.Starfish, 4)
 			.AddIngredient(ItemID.Coral, 9)
+			.AddIngredient(ItemID.WhitePearl)
 			.AddTile(TileID.Anvils)
 			.Register();
 		}
