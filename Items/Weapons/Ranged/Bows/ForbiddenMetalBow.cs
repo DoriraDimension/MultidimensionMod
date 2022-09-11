@@ -1,9 +1,8 @@
 ﻿using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Projectiles.Ammo;
+using MultidimensionMod.Projectiles.Ranged;
 using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Bows
