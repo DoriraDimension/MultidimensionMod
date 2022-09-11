@@ -1,6 +1,6 @@
 ﻿using MultidimensionMod.Items.Placeables.Banners;
 using MultidimensionMod.Items.Hooks;
-using MultidimensionMod.Items.Weapons.Melee.Swords;
+using MultidimensionMod.Items.Weapons.Melee.Others;
 using MultidimensionMod.Items.Placeables;
 using Terraria;
 using Terraria.ID;
