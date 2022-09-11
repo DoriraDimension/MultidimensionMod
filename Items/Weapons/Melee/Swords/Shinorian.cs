@@ -33,7 +33,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.noUseGraphic = true;
 			Item.crit = 5;
 			Item.shoot = ModContent.ProjectileType<HexStab>();
-			Item.shootSpeed = 3f;
+			Item.shootSpeed = 3.50f;
 		}
 
 		public override void ModifyTooltips(List<TooltipLine> list)
