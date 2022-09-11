@@ -1,12 +1,14 @@
 ﻿using MultidimensionMod.Items.Bags;
 using MultidimensionMod.Projectiles.Summon.Minions;
+using MultidimensionMod.Buffs.Ability;
 using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.DataStructures;
+using Terraria.GameInput;
+using Terraria.Audio;
 
 namespace MultidimensionMod
 {
@@ -54,6 +56,10 @@ namespace MultidimensionMod
 
         public bool CalmMind;
 
+        public bool RoseScarf = false;
+
+        public bool RoseVenom = false;
+
         public override void ResetEffects()
         {
             SmileyJr = false;
@@ -69,6 +75,8 @@ namespace MultidimensionMod
             ExplorerEye = false;
             Geodes = false;
             Madness = false;
+            RoseScarf = false;
+            RoseVenom = false;
         }
 
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
@@ -220,6 +228,16 @@ namespace MultidimensionMod
                     Item item = EyeoftheNightwalker;
                     player.AddBuff(BuffID.Blackout, 480);
                 }
+            }
+        }
+
+        public override void ProcessTriggers(TriggersSet triggersSet)
+        {
+            Player player = Main.LocalPlayer;
+            if (MDKeybinds.RoseScarfKey.JustPressed && RoseScarf && !RoseVenom)
+            {
+                Player.AddBuff(ModContent.BuffType<RoseVenom>(), 900);
+                SoundEngine.PlaySound(SoundID.Item170, player.Center);
             }
         }
     }
