@@ -184,7 +184,7 @@ namespace MultidimensionMod
 
             if (NPC.type == NPCID.SantaNK1)
             {
-                ItemDropRule.OneFromOptions(1, ItemID.BluePresent, ItemID.YellowPresent, ItemID.GreenPresent, 1);
+                npcLoot.Add(ItemDropRule.OneFromOptions(1, ItemID.BluePresent, ItemID.YellowPresent, ItemID.GreenPresent, 1));
             }
 
             if (NPC.type == NPCID.Pumpking)

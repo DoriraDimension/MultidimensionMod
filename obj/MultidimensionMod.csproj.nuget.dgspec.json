@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\REuser\\source\\repos\\steamapps\\common\\tModLoader\\My Games\\Terraria\\ModLoader\\Mod Sources\\MultidimensionMod\\MultidimensionMod.csproj": {}
+    "C:\\Users\\Clare\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj": {}
   },
   "projects": {
-    "C:\\Users\\REuser\\source\\repos\\steamapps\\common\\tModLoader\\My Games\\Terraria\\ModLoader\\Mod Sources\\MultidimensionMod\\MultidimensionMod.csproj": {
+    "C:\\Users\\Clare\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\REuser\\source\\repos\\steamapps\\common\\tModLoader\\My Games\\Terraria\\ModLoader\\Mod Sources\\MultidimensionMod\\MultidimensionMod.csproj",
+        "projectUniqueName": "C:\\Users\\Clare\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj",
         "projectName": "MultidimensionMod",
-        "projectPath": "C:\\Users\\REuser\\source\\repos\\steamapps\\common\\tModLoader\\My Games\\Terraria\\ModLoader\\Mod Sources\\MultidimensionMod\\MultidimensionMod.csproj",
-        "packagesPath": "C:\\Users\\23JFurniss-Roe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\REuser\\source\\repos\\steamapps\\common\\tModLoader\\My Games\\Terraria\\ModLoader\\Mod Sources\\MultidimensionMod\\obj\\",
+        "projectPath": "C:\\Users\\Clare\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj",
+        "packagesPath": "C:\\Users\\Clare\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Clare\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\23JFurniss-Roe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Clare\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net45"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net45": {
-            "targetAlias": "net45",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -37,15 +37,30 @@
         }
       },
       "frameworks": {
-        "net45": {
-          "targetAlias": "net45",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "tModLoader.CodeAssist": {
               "target": "Package",
               "version": "[0.1.*, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
