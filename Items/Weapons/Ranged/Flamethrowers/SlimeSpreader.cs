@@ -52,29 +52,6 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 			}
 		}
 
-		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-		{
-			if (player.altFunctionUse == 2)
-			{
-				Vector2 muzzleOffset = Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 30f;
-				if (Collision.CanHit(position, 3, 3, position + muzzleOffset, -6, 6))
-				{
-					position += muzzleOffset;
-				}
-
-				{
-					float rotation = MathHelper.ToRadians(10);
-					position += Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 25f;
-					for (int i = 0; i < 2; i++)
-					{
-						Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (2 - 1))) * .2f;
-						Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
-					}					
-				}
-			}
-			return true;
-		}
-
 		public override Vector2? HoldoutOffset()
 		{
 			return new Vector2(-4, 0);
