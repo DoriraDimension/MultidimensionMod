@@ -51,7 +51,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 			if (Projectile.timeLeft % 20 == 19 && Projectile.owner == Main.myPlayer)
 			{
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X + (float)Main.rand.Next(-100, 100), Projectile.Center.Y + 600f, 0f, -15f, ModContent.ProjectileType<LesserDevourer>(), (int)((double)((float)Projectile.damage) * 0.7), 0f, Projectile.owner);
+				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X + (float)Main.rand.Next(-100, 100), Projectile.Center.Y + 350f, 0f, -15f, ModContent.ProjectileType<LesserDevourer>(), (int)((double)((float)Projectile.damage) * 0.7), 0f, Projectile.owner);
 			}
 		}
 	}
