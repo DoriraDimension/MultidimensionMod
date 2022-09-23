@@ -184,7 +184,7 @@ namespace MultidimensionMod
 
             if (NPC.type == NPCID.SantaNK1)
             {
-                npcLoot.Add(ItemDropRule.OneFromOptions(1, ItemID.BluePresent, ItemID.YellowPresent, ItemID.GreenPresent, 1));
+                npcLoot.Add(ItemDropRule.OneFromOptions(1, ItemID.BluePresent, ItemID.YellowPresent, ItemID.GreenPresent));
             }
 
             if (NPC.type == NPCID.Pumpking)
@@ -321,7 +321,7 @@ namespace MultidimensionMod
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MoonGeode>(), 8));
             }
 
-            if (NPC.downedGolemBoss && (NPC.type == NPCID.Shark) || (NPC.type == NPCID.Crab) || (NPC.type == NPCID.Squid) || (NPC.type == NPCID.SeaSnail) || (NPC.type == NPCID.Dolphin) || (NPC.type == NPCID.SeaTurtle))
+            if (NPC.downedFishron && (NPC.type == NPCID.Shark) || (NPC.type == NPCID.Crab) || (NPC.type == NPCID.Squid) || (NPC.type == NPCID.SeaSnail) || (NPC.type == NPCID.Dolphin) || (NPC.type == NPCID.SeaTurtle))
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TidalQuartz>(), 20));
             }
