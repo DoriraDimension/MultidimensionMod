@@ -75,6 +75,11 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 			return true;
 		}
 
+		public override Vector2? HoldoutOffset()
+		{
+			return new Vector2(-4, 0);
+		}
+
 		public override void AddRecipes()
 		{
 			CreateRecipe()
