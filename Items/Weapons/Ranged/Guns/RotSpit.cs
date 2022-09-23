@@ -35,7 +35,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			Item.UseSound = SoundID.NPCDeath13;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<RottenSpit>();
-			Item.shootSpeed = 50f;
+			Item.shootSpeed = 65f;
 			Item.crit = 13;
 		}
 
