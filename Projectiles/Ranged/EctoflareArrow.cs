@@ -20,7 +20,8 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.height = 18;             
 			Projectile.aiStyle = 1;         
 			Projectile.friendly = true;       
-			Projectile.hostile = false;        
+			Projectile.hostile = false;
+			Projectile.arrow = true;
 			Projectile.DamageType = DamageClass.Ranged;
 			Projectile.penetrate = 2;          
 			Projectile.timeLeft = 600;               

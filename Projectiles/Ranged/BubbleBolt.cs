@@ -26,6 +26,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.DamageType = DamageClass.Ranged;
 			Projectile.ignoreWater = true;
 			Projectile.tileCollide = true;
+			Projectile.timeLeft = 300;
 		}
 
 		public override Color? GetAlpha(Color lightColor)
@@ -68,6 +69,11 @@ namespace MultidimensionMod.Projectiles.Ranged
 		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
 		{
 			target.AddBuff(BuffID.Electrified, 900);
+		}
+
+		public override bool? CanHitNPC(NPC target)
+		{
+			return Projectile.timeLeft < 280 ? null : false;
 		}
 	}
 }
