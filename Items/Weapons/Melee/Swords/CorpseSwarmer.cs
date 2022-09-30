@@ -12,7 +12,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Corpse Swarmer");
-			Tooltip.SetDefault("Control the perfect swarm of rot loving flies.");
+			Tooltip.SetDefault("Control the perfect swarm of rot loving flies\nShoots two Decay Flies on every swing and enemy hits\nHas a chance to shoot a big one");
 		}
 
 		public override void SetDefaults()
@@ -23,7 +23,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.height = 68;
 			Item.useTime = 21;
 			Item.useAnimation = 21;
-			Item.useStyle = 1;
+			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 3;
 			Item.value = Item.sellPrice(gold: 1);
 			Item.rare = ItemRarityID.LightRed;
@@ -43,9 +43,9 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			{
 				Projectile.NewProjectile(source, position.X, position.Y, speedX2, speedY2, ModContent.ProjectileType<BigFly>(), (int)((double)damage * 1.5), knockback, player.whoAmI);
 			}
-			
 
-			for (int i = 0; i < 3; i++)
+
+			for (int i = 0; i < 2; i++)
 			{
 				Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(15));
 
@@ -56,8 +56,13 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
 		{
-			Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), target.position.X + 0f + (float)Main.rand.Next(0, 151), player.position.Y + 0f, 0f, -6f, ModContent.ProjectileType<DecayFlyFriendly>(), (int)((double)((float)Item.damage) * 0.3), 0f, Main.myPlayer);
-			Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), target.position.X + 0f + (float)Main.rand.Next(0, 151), player.position.Y + 0f, 0f, -6f, ModContent.ProjectileType<BigFly>(), (int)((double)((float)Item.damage) * 0.3), 0f, Main.myPlayer);
+			for (int numero = 0; numero < 2; numero++)
+			{
+				Vector2 value = new Vector2(Main.rand.Next(-100, 101), Main.rand.Next(-100, 101));
+				value.Normalize();
+				value *= (float)Main.rand.Next(10, 201) * 0.01f;
+				Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), player.Center.X, player.Center.Y, value.X, value.Y, ModContent.ProjectileType<DecayFlyFriendly>(), (int)((double)Item.damage * 0.3), knockback, player.whoAmI);
+			}
 		}
 
 		public override void AddRecipes()
@@ -66,7 +71,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			.AddIngredient(ModContent.ItemType<TheFly>())
 			.AddIngredient(ItemID.BeeKeeper)
 			.AddIngredient(ItemID.AdamantiteBar, 3)
-			.AddTile(134)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 	}
