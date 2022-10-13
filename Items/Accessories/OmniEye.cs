@@ -43,7 +43,7 @@ namespace MultidimensionMod.Items.Accessories
 			.AddIngredient(ModContent.ItemType<EyeoftheNightwalker>())
 			.AddIngredient(ModContent.ItemType<EyeofDesire>())
 			.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 10)
-			.AddOnCraftCallback(delegate (Recipe recipe, Item Item, List<Item> consumedItems) 
+			.AddOnCraftCallback(delegate (Recipe recipe, Item Item, List<Item> consumedItems, Item destinationStack) 
 			 {
 				 Main.LocalPlayer.AddBuff(BuffID.Obstructed, 6000);
 				 SoundEngine.PlaySound(SoundID.DD2_EtherianPortalIdleLoop, Item.position);
