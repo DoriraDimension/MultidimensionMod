@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using System.Collections.Generic;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -98,7 +99,18 @@ namespace MultidimensionMod
 				item.UseSound = SoundID.Item2;
 				item.consumable = true;
 				item.healLife = 10;
+				item.buffType = (BuffID.PotionSickness);
+				item.buffTime = 600;
 			}
 		}
+
+		public override bool CanUseItem(Item item, Player player)
+        {
+			if (item.type == ItemID.Waterleaf)
+            {
+				return !player.HasBuff(BuffID.PotionSickness);
+            }
+			return true;
+        }
 	}
 }
