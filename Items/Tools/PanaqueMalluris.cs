@@ -17,7 +17,7 @@ namespace MultidimensionMod.Items.Tools
 		{
 			Item.damage = 53;
 			Item.DamageType = DamageClass.Melee;
-			Item.width = 56;
+			Item.width = 52;
 			Item.height = 50;
 			Item.useTime = 15;
 			Item.useAnimation = 15;
