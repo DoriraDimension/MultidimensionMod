@@ -234,7 +234,7 @@ namespace MultidimensionMod
         public override void ProcessTriggers(TriggersSet triggersSet)
         {
             Player player = Main.LocalPlayer;
-            if (MDKeybinds.RoseScarfKey.JustPressed && RoseScarf && !RoseVenom)
+            if (MDKeybinds.RoseScarfKey.JustPressed && RoseScarf && !player.HasBuff(ModContent.BuffType<RoseVenom>()))
             {
                 Player.AddBuff(ModContent.BuffType<RoseVenom>(), 900);
                 SoundEngine.PlaySound(SoundID.Item170, player.Center);
