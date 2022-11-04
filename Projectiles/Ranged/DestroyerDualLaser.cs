@@ -29,7 +29,12 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.ignoreWater = true;
 			Projectile.tileCollide = true;
 			Projectile.extraUpdates = 1;
-			AIType = ProjectileID.PurpleLaser;
+		}
+
+		public override void AI()
+		{
+			Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
+			Projectile.rotation = Projectile.velocity.ToRotation();
 		}
 
 		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
