@@ -20,8 +20,8 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetDefaults()
 		{
-			Projectile.width = 100;
-			Projectile.height = 100;
+			Projectile.width = 75;
+			Projectile.height = 75;
 			Projectile.friendly = true;
 			Projectile.DamageType = DamageClass.Magic;
 			Projectile.ignoreWater = true;
@@ -31,7 +31,11 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void AI()
 		{
-
+			if (Main.rand.NextBool(5))
+			{
+				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Shadowflame, 0f, 0f, 100, default(Color), 2f);
+				Main.dust[dustIndex].velocity *= 1.4f;
+			}
 		}
 
 		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
