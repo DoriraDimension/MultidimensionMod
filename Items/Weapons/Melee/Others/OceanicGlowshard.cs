@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Others
 {
@@ -34,6 +35,15 @@ namespace MultidimensionMod.Items.Weapons.Melee.Others
 			Item.UseSound = SoundID.Item1;
 			Item.shoot = ModContent.ProjectileType<GlowshardThrow>();
 			Item.shootSpeed = 14f;
+		}
+
+		public override bool CanUseItem(Player player)
+		{
+			if (player.altFunctionUse != 2)
+			{
+				return player.ownedProjectileCounts[base.Item.shoot] <= 0;
+			}
+			return true;
 		}
 
 		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
