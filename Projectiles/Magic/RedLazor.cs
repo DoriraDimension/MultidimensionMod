@@ -20,7 +20,6 @@ namespace MultidimensionMod.Projectiles.Magic
 		{
 			Projectile.width = 8;
 			Projectile.height = 8;
-			Projectile.aiStyle = 1;
 			Projectile.friendly = true;
 			Projectile.hostile = false;
 			Projectile.DamageType = DamageClass.Magic;
@@ -30,7 +29,12 @@ namespace MultidimensionMod.Projectiles.Magic
 			Projectile.ignoreWater = true;
 			Projectile.tileCollide = true;
 			Projectile.extraUpdates = 1;
-			AIType = ProjectileID.DeathLaser;
+		}
+
+		public override void AI()
+        {
+			Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
+			Projectile.rotation = Projectile.velocity.ToRotation();
 		}
 
 		public override bool PreDraw(ref Color lightColor)
