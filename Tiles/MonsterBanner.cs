@@ -1,4 +1,10 @@
 ﻿using MultidimensionMod.Items.Placeables.Banners;
+using MultidimensionMod.NPCs.Dungeon;
+using MultidimensionMod.NPCs.Corruption;
+using MultidimensionMod.NPCs.Tundra;
+using MultidimensionMod.NPCs.Ocean;
+using MultidimensionMod.NPCs.Desert;
+using MultidimensionMod.NPCs.Critters;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -81,45 +87,47 @@ namespace MultidimensionMod.Tiles
 			{
 				Player player = Main.LocalPlayer;
 				int style = Main.tile[i, j].TileFrameX / 18;
-				string type;
+				int type = 0;
 				switch (style)
 				{
 					case 0:
-						type = "Darkling";
+						type = ModContent.NPCType<Darkling>();
 						break;
 					case 1:
-						type = "CorrGuy";
+						type = ModContent.NPCType<CorrGuy>();
 						break;
 					case 2:
-						type = "MagicTrident";
+						type = ModContent.NPCType<MagicTrident>();
 						break;
 					case 3:
-						type = "OtherworldlyGlowmarin";
+						type = ModContent.NPCType<OtherworldlyGlowmarin>();
 						break;
 					case 4:
-						type = "StormFrontEel";
+						type = ModContent.NPCType<StormFrontEel>();
 						break;
 					case 5:
-						type = "ParrotLobster";
+						type = ModContent.NPCType<ParrotLobster>();
 						break;
 					case 6:
-						type = "BabyGlowmarin";
+						type = ModContent.NPCType<BabyGlowmarin>();
 						break;
 					case 7:
-						type = "IceDrakeJuvenile";
+						type = ModContent.NPCType<IceDrakeJuvenile>();
 						break;
 					case 8:
-						type = "FrostburnSlime";
+						type = ModContent.NPCType<FrostburnSlime>();
 						break;
 					case 9:
-						type = "LesserSandElemental";
+						type = ModContent.NPCType<LesserSandElemental>();
 						break;
 					case 10:
-						type = "GilaMonster";
+						type = ModContent.NPCType<GilaMonster>();
 						break;
 					default:
 						return;
 				}
+				Main.SceneMetrics.NPCBannerBuff[type] = true;
+				Main.SceneMetrics.hasBanner = true;
 			}
 		}
 
