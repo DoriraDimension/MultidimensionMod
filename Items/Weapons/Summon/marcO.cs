@@ -32,7 +32,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.value = Item.sellPrice(silver: 10);
 			Item.rare = ItemRarityID.Yellow;
-			Item.UseSound = SoundID.NPCHit23;
+			Item.UseSound = SoundID.Item17;
 			Item.autoReuse = true;
 			Item.noMelee = true;
 			Item.buffType = ModContent.BuffType<OcramServantBuff>();

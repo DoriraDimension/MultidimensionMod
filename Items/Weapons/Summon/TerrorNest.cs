@@ -31,7 +31,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.value = Item.sellPrice(gold: 4);
 			Item.rare = ItemRarityID.LightRed;
-			Item.UseSound = SoundID.NPCHit54;
+			Item.UseSound = SoundID.Item97;
 			Item.noMelee = true;
 			Item.buffType = ModContent.BuffType<FleshrendingTerror>();
 			Item.shoot = ModContent.ProjectileType<TerrorBee>();
