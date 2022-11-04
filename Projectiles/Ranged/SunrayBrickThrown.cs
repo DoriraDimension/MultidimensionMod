@@ -32,7 +32,13 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void Kill(int timeLeft)
 		{
-			SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/FireExplosion"), Projectile.position);
+
+			if (Main.hardMode && Main.rand.NextFloat() < .0500f)
+			{
+				SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/TheExplosion"), Projectile.position);
+			}
+			else
+				SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/FireExplosion"), Projectile.position);
 
 			for (int i = 0; i < 50; i++)
 			{
