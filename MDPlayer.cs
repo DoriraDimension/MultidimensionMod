@@ -203,6 +203,7 @@ namespace MultidimensionMod
                 {
                     Item item = EyeoftheHunter;
                     player.AddBuff(BuffID.Weak, 480);
+                    SoundEngine.PlaySound(SoundID.DD2_BetsyDeath, player.position);
                 }
             }
             if (this.DesireEye)
@@ -211,6 +212,7 @@ namespace MultidimensionMod
                 {
                     Item item = EyeofDesire;
                     player.AddBuff(BuffID.Cursed, 480);
+                    SoundEngine.PlaySound(SoundID.DD2_BetsyDeath, player.position);
                 }
             }
             if (this.ExplorerEye)
@@ -219,6 +221,7 @@ namespace MultidimensionMod
                 {
                     Item item = EyeoftheExplorer;
                     player.AddBuff(BuffID.Slow, 480);
+                    SoundEngine.PlaySound(SoundID.DD2_BetsyDeath, player.position);
                 }
             }
             if (this.NightEye)
@@ -227,6 +230,7 @@ namespace MultidimensionMod
                 {
                     Item item = EyeoftheNightwalker;
                     player.AddBuff(BuffID.Blackout, 480);
+                    SoundEngine.PlaySound(SoundID.DD2_BetsyDeath, player.position);
                 }
             }
         }
