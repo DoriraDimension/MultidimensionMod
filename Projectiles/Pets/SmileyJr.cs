@@ -31,7 +31,7 @@ namespace MultidimensionMod.Projectiles.Pets
 			int frameSpeed = 7;
 			Player projOwner = Main.player[Projectile.owner];
 			Projectile.frameCounter++;
-			if (projOwner.statLife >= projOwner.statLifeMax2 / 4)
+			if (projOwner.statLife >= projOwner.statLifeMax2 / 4 && Main.dayTime)
 			{
 				if (Projectile.frameCounter > 5)
 				{
@@ -43,7 +43,7 @@ namespace MultidimensionMod.Projectiles.Pets
 					Projectile.frame = 0;
 				}
 			}
-			else if (projOwner.statLife <= projOwner.statLifeMax2 / 4)
+			if (projOwner.statLife <= projOwner.statLifeMax2 / 4 && Main.dayTime)
 			{
 				if (Projectile.frameCounter > 5)
 				{
@@ -55,7 +55,7 @@ namespace MultidimensionMod.Projectiles.Pets
 					Projectile.frame = 4;
 				}
 			}
-			else if (!Main.dayTime)
+			if (!Main.dayTime)
 			{
 				if (Projectile.frameCounter > 5)
 				{
