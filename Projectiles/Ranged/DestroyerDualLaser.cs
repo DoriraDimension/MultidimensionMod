@@ -20,7 +20,6 @@ namespace MultidimensionMod.Projectiles.Ranged
 		{
 			Projectile.width = 8;
 			Projectile.height = 8;
-			Projectile.aiStyle = 1;
 			Projectile.friendly = true;
 			Projectile.hostile = false;
 			Projectile.DamageType = DamageClass.Ranged;
