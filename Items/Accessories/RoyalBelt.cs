@@ -28,8 +28,7 @@ namespace MultidimensionMod.Items.Accessories
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
 			player.jumpSpeedBoost += 0.50f;
-			player.jumpBoost = true;
-			Player.jumpHeight += 3;
+			Player.jumpHeight += 10;
 		}
 	}
 }
