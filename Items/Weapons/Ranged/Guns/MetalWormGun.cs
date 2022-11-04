@@ -2,9 +2,9 @@
 using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.Audio;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 {
@@ -29,12 +29,17 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			Item.knockBack = 4;
 			Item.value = Item.sellPrice(gold: 3);
 			Item.rare = ItemRarityID.Pink;
-			Item.UseSound = SoundID.Item33;
 			Item.autoReuse = true;
 			Item.shoot = 10;
 			Item.shootSpeed = 30f;
 			Item.useAmmo = AmmoID.Bullet;
 			Item.crit = 15;
+		}
+
+		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+		{
+			SoundEngine.PlaySound(SoundID.Item33 with { Volume = 0.4f }, player.position);
+			return true;
 		}
 
 		public override Vector2? HoldoutOffset()
