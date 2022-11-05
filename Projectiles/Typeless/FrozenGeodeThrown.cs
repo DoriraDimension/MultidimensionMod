@@ -79,7 +79,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 			{
 				if (Projectile.owner == Main.myPlayer)
 				{
-					int choice = Main.rand.Next(5);
+					int choice = Main.rand.Next(6);
 					if (choice == 0)
 					{
 						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.IceBlock, 50);
@@ -115,6 +115,14 @@ namespace MultidimensionMod.Projectiles.Typeless
 					else if (choice == 4)
 					{
 						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ModContent.ItemType<OldFrozenStaff>(), 1);
+						if (Main.hardMode && Main.rand.NextFloat() < .2500f)
+						{
+							Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.FrostCore, 1);
+						}
+					}
+					else if (choice == 5)
+					{
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ModContent.ItemType<VikingRelic>(), 1);
 						if (Main.hardMode && Main.rand.NextFloat() < .2500f)
 						{
 							Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.FrostCore, 1);
