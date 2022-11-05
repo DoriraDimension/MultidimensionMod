@@ -340,6 +340,16 @@ namespace MultidimensionMod
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<StinkyPaste>(), 12));
             }
+
+            if (NPC.type == NPCID.UndeadViking)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<VikingRelic>(), 1, 2, 3));
+            }
+
+            if (NPC.type == NPCID.ArmoredViking)
+            {
+                npcLoot.Add(ItemDropRule.Common(ItemID.FleshBlock, 1, 3, 5));
+            }
         }
     }
 }
