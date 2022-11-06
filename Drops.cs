@@ -348,7 +348,7 @@ namespace MultidimensionMod
 
             if (NPC.type == NPCID.ArmoredViking)
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.FleshBlock, 1, 3, 5));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<VikingRelic>(), 1, 3, 5));
             }
         }
     }
