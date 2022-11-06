@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MultidimensionMod.NPCs.Tundra;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
@@ -24,10 +25,13 @@ namespace MultidimensionMod
 
 		public int MadnessCringe;
 
+		public bool DrakePoison;
+
 		public override void ResetEffects(NPC npc)
 		{
 			Blaze = false;
 			Madness = false;
+			DrakePoison = false;
 		}
 
 		public override void UpdateLifeRegen(NPC npc, ref int damage)
@@ -38,7 +42,7 @@ namespace MultidimensionMod
 				{
 					npc.lifeRegen = 0;
 				}
-				npc.lifeRegen -= 32;
+				npc.lifeRegen -= 50;
 			}
 			if (Madness)
 			{
@@ -49,19 +53,35 @@ namespace MultidimensionMod
 				}
 				if (MadnessTimer >= 220)
 				{
-					MadnessCringe += 10;
-					MadnessTimer = 0;
+					MadnessCringe += 10; //Increases the damage this debuff does
+					MadnessTimer = 0; //resets the time until the next level
 				}
-				if (MadnessCringe >= 50)
+				if (MadnessCringe >= 50) //If the damage level would go above 50, it gets reset to 50 instead
 				{
-					MadnessCringe = 50;
+					MadnessCringe = 50; //Maximum damage the debuff can do
 				}
 				npc.lifeRegen -= MadnessCringe;
 			}
 			if (!Madness)
 			{
 				MadnessTimer = 0;
-				MadnessCringe = 0;
+				MadnessCringe = 0; //Resets the damage level of the debuff if it runs out
+			}
+			if (DrakePoison)
+			{
+				if (npc.lifeRegen > 0)
+				{
+					npc.lifeRegen = 0;
+				}
+				npc.lifeRegen -= 24;
+				if (npc.type == ModContent.NPCType<IceDrakeJuvenile>()) //Does more damage to these enemy types
+                {
+					if (npc.lifeRegen > 0)
+					{
+						npc.lifeRegen = 0;
+					}
+					npc.lifeRegen -= 36;
+                }
 			}
 		}
 
@@ -71,7 +91,7 @@ namespace MultidimensionMod
 			{
 				if (Main.rand.Next(4) < 3)
 				{
-					int dust = Dust.NewDust(npc.position - new Vector2(2f, 2f), npc.width + 4, npc.height + 4, 6, npc.velocity.X * 0.4f, npc.velocity.Y * 0.4f, 100, default(Color), 3.5f);
+					int dust = Dust.NewDust(npc.position - new Vector2(2f, 2f), npc.width + 4, npc.height + 4, DustID.CrimsonTorch, npc.velocity.X * 0.4f, npc.velocity.Y * 0.4f, 100, default(Color), 3.5f);
 					Main.dust[dust].noGravity = true;
 					Main.dust[dust].velocity *= 1.8f;
 					Main.dust[dust].velocity.Y -= 0.5f;
