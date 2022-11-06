@@ -18,13 +18,12 @@ namespace MultidimensionMod.Buffs.Debuffs
         public override void Update(Player player, ref int buffIndex)
         {
             player.GetModPlayer<MDPlayer>().Blaze = true;
-            player.statDefense -= 5;
+            player.endurance -= 0.06f;
         }
 
         public override void Update(NPC npc, ref int buffIndex)
         {
             npc.GetGlobalNPC<MDGlobalNPC>().Blaze = true;
-            npc.defense -= 5;
         }
     }
 }
