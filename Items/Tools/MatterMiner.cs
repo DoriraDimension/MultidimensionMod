@@ -10,15 +10,15 @@ namespace MultidimensionMod.Items.Tools
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Matter Miner");
-			Tooltip.SetDefault("A dark matter pickaxe made to mine any matter... and it still cannot mine high tier ores...");
+			Tooltip.SetDefault("A void matter pickaxe made to mine any matter... and it still cannot mine anything thats higher tier than Cobalt or Palladium...");
 		}
 
 		public override void SetDefaults()
 		{
 			Item.damage = 15;
 			Item.DamageType = DamageClass.Melee;
-			Item.width = 40;
-			Item.height = 40;
+			Item.width = 46;
+			Item.height = 36;
 			Item.useTime = 16;
 			Item.useAnimation = 24;
 			Item.pick = 100;
@@ -35,7 +35,7 @@ namespace MultidimensionMod.Items.Tools
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 12)
-			.AddTile(26)
+			.AddTile(TileID.DemonAltar)
 			.Register();
 		}
 	}

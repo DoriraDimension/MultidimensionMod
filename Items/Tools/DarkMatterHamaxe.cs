@@ -9,16 +9,16 @@ namespace MultidimensionMod.Items.Tools
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dark Matter Hamaxe");
-			Tooltip.SetDefault("A dark matter hamaxe that could cut down dark trees if they would exist.");
+			DisplayName.SetDefault("Void Matter Axe");
+			Tooltip.SetDefault("A void matter axe that could cut down dark trees if they existed.");
 		}
 
 		public override void SetDefaults()
 		{
 			Item.damage = 26;
 			Item.DamageType = DamageClass.Melee;
-			Item.width = 56;
-			Item.height = 50;
+			Item.width = 52;
+			Item.height = 32;
 			Item.useTime = 25;
 			Item.useAnimation = 25;
 			Item.axe = 30;
@@ -35,7 +35,7 @@ namespace MultidimensionMod.Items.Tools
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 11)
-			.AddTile(26)
+			.AddTile(TileID.DemonAltar)
 			.Register();
 		}
 	}
