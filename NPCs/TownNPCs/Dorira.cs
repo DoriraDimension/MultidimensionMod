@@ -227,6 +227,10 @@ namespace MultidimensionMod.NPCs.TownNPCs
 				shop.item[nextSlot].shopCustomPrice = 3;
 				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
 				nextSlot++;
+				shop.item[nextSlot].SetDefaults(ModContent.ItemType<FishLegacy>());
+				shop.item[nextSlot].shopCustomPrice = 10;
+				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
+				nextSlot++;
 			}
 			if (NPC.downedPlantBoss)
 			{
