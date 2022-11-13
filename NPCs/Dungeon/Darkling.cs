@@ -46,9 +46,9 @@ namespace MultidimensionMod.NPCs.Dungeon
 			NPC.netUpdate = true;
 			Player player = Main.player[NPC.target];
 
-			Vector2 vector8 = new(NPC.position.X + (NPC.width * 0.5f), NPC.position.Y + (NPC.height * 0.5f));
+			Vector2 victor = new(NPC.position.X + (NPC.width * 0.5f), NPC.position.Y + (NPC.height * 0.5f));
 			{
-				float rotation = (float)Math.Atan2(vector8.Y - (Main.player[NPC.target].position.Y + (Main.player[NPC.target].height * 0.5f)), vector8.X - (Main.player[NPC.target].position.X + (Main.player[NPC.target].width * 0.5f)));
+				float rotation = (float)Math.Atan2(victor.Y - (Main.player[NPC.target].position.Y + (Main.player[NPC.target].height * 0.5f)), victor.X - (Main.player[NPC.target].position.X + (Main.player[NPC.target].width * 0.5f)));
 				NPC.velocity.X = (float)(Math.Cos(rotation) * 4) * -1;
 				NPC.velocity.Y = (float)(Math.Sin(rotation) * 4) * -1;
 			}
