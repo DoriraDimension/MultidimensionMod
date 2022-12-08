@@ -47,8 +47,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<BeeSoul>())
 			.AddIngredient(ModContent.ItemType<Dimensium>(), 10)
-			.AddIngredient(ModContent.TileType<DimensionalForge>())
-			.AddTile(134)
+			.AddTile(ModContent.TileType<DimensionalForge>())
 			.Register();
 		}
 	}
