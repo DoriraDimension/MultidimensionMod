@@ -1,5 +1,8 @@
 ﻿using MultidimensionMod.Buffs.Minions;
+using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Projectiles.Summon.Minions;
+using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Tiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -48,6 +51,15 @@ namespace MultidimensionMod.Items.Weapons.Summon
 		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
 		{
 			position = Main.MouseWorld;
+		}
+
+		public override void AddRecipes()
+		{
+			CreateRecipe()
+			.AddIngredient(ModContent.ItemType<BeeSoul>())
+			.AddIngredient(ModContent.ItemType<Dimensium>(), 10)
+			.AddTile(ModContent.TileType<DimensionalForge>())
+			.Register();
 		}
 	}
 }
