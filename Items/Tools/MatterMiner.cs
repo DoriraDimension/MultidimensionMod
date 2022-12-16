@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Tiles.Furniture.VoidMatter;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -35,7 +36,7 @@ namespace MultidimensionMod.Items.Tools
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 12)
-			.AddTile(TileID.DemonAltar)
+			.AddTile(ModContent.TileType<EmptyKingsFabricatorPlaced>())
 			.Register();
 		}
 	}
