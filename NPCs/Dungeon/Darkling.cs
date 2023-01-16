@@ -4,6 +4,7 @@ using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
+using Terraria.GameContent.Bestiary;
 using Terraria.ModLoader.Utilities;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader;
@@ -38,6 +39,16 @@ namespace MultidimensionMod.NPCs.Dungeon
 			NPC.aiStyle = -1;
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<DarklingBanner>();
+		}
+
+		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+		{
+			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+			{
+			   BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheDungeon,
+				BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.NightTime,
+				new FlavorTextBestiaryInfoElement("A entity that was created from Void Matter, they curiously approach people who pass by in the dungeon and only attack when threatened.")
+			});
 		}
 
 		public override void AI()

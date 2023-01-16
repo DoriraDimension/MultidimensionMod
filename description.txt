@@ -5,35 +5,35 @@ Just telling you so you arent confused by the mods name, the mod is just named a
 
 The mod currently adds:
 
-- 75 Weapons
-- 39 Accessories
-- 1 Armor Set
-- 13 Placeable furniture items
-- 12 Potions
+- 100+ Weapons
+- 32 Accessories
+- 2 Armor Sets
 - 2 Pets
 - 6 Vanity Items
 - 11 Enemies
-- 1 Boss
+- 1 Boss and 2 minibosses
 - 1 Town NPC
-- 1 unfisnished biome
+- 1 Biome
+       Frozen Underworld: A frozen solid version of the underworld that takes up almost half of the regular one.
+- A good variety of placeable furniture
 - Boss Souls acting as lore items, can be crafted into boss soul weapons.
 - Some changes to vanilla enemy lootpools and recipes for normally not craftable items.
 - A transmutation system, allowing the player to convert materials into their counterpart or even awakening a items hidden power.
-- Dozens of items, enemies and even bosses from the old version of the Ancients Awakened mod, giving them another chance to shine, since they are removed from the new version.
+- Dozens of scrapped items, enemies and even bosses from Ancients Awakened make their return in this mod.
 
-I'm not really the best coder and have some bigger planned content,
-so if you are a coder, spriter or musician and you are interested in my work and want to help me, join my discord server
-Or just do it for news ig, lol.
+I'm not really the best coder and have some bigger planned content.
+So if you are a coder, spriter or musician and you are interested in my work and want to help me, join my discord server
+Or just do it for news I guess, lol.
 
 Developer:
 
--Dorira  owner/spriter/coder
+-Dorira  owner/spriter/coder/lore writer
 -DrVoodoo  musician
 
 
 Contributor:
 
--RAZOR  spriting
+-Dussi  spriting
 -naka  spriting
 -HybridDeath  coding
 -ZSolar1  For making the wiki logo

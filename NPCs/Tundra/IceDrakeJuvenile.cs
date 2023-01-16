@@ -4,9 +4,10 @@ using MultidimensionMod.Items.Weapons.Summon;
 using MultidimensionMod.Items.Weapons.Typeless;
 using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
-using Terraria.ModLoader.Utilities;
+using Terraria.GameContent.Bestiary;
 using Terraria.Localization;
 using Terraria.DataStructures;
 using Terraria.GameContent.ItemDropRules;
@@ -45,31 +46,41 @@ namespace MultidimensionMod.NPCs.Tundra
 			BannerItem = ModContent.ItemType<BbyDrakeBanner>();
 		}
 
+		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+		{
+			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+			{
+			   BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundSnow,
+				new FlavorTextBestiaryInfoElement("Juvenile Ice Drakes usually reside underground where they hunt down prey via ambush. They can be approached savely when they are asleep.")
+			});
+		}
+
 		public override void AI()
         {
+			NPC.TargetClosest(true);
 			NPC.netUpdate = true;
 			Player player = Main.player[NPC.target];
 
 			if (!hasBeenFed && NPC.life < NPC.lifeMax)
             {
-				//Placeholder AI
 				NPC.friendly = false;
 				NPC.knockBackResist = 0.6f;
-				NPC.CloneDefaults(NPCID.FlyingSnake);
-				NPC.aiStyle = 14;
-				AIType = NPCID.FlyingSnake;
-			}
-		}
+				Vector2 victor = new(NPC.position.X + (NPC.width * 0.5f), NPC.position.Y + (NPC.height * 0.5f));
+				{
+					float rotation = (float)Math.Atan2(victor.Y - (Main.player[NPC.target].position.Y + (Main.player[NPC.target].height * 0.5f)), victor.X - (Main.player[NPC.target].position.X + (Main.player[NPC.target].width * 0.5f)));
+					NPC.velocity.X = (float)(Math.Cos(rotation) * 4) * -1;
+					NPC.velocity.Y = (float)(Math.Sin(rotation) * 4) * -1;
+				}
+				if (NPC.velocity.X > -0.1)
+				{
+					NPC.spriteDirection = -1;
 
-		public override bool? CanBeHitByItem(Player player, Item item)
-		{
-			//Gives the player the ability to hurt the Drake even while it is set to friendly.
-			//Removes that ability if it was fed already. It is now immortal
-			if (!hasBeenFed)
-			{
-				return true;
+				}
+				else if (NPC.velocity.X < 0.1)
+				{
+					NPC.spriteDirection = 1;
+				}
 			}
-			return false;
 		}
 
 		public override bool? CanBeHitByProjectile(Projectile projectile)
@@ -85,7 +96,11 @@ namespace MultidimensionMod.NPCs.Tundra
 
 		public override bool CanChat()
 		{
-			return true;
+			if (!hasBeenFed && NPC.life < NPC.lifeMax == false)
+			{
+				return true;
+			}
+			return false;
 		}
 
 		public override string GetChat()
@@ -100,7 +115,7 @@ namespace MultidimensionMod.NPCs.Tundra
 		public override void SetChatButtons(ref string button, ref string button2)
 		{
 			//gives the option to feed the Drake, does not work if it was already fed or is currently hostile.
-			if (!hasBeenFed || NPC.life < NPC.lifeMax)
+			if (!hasBeenFed)
 			{
 				button = Language.GetTextValue("Feed");
 			}
@@ -115,27 +130,28 @@ namespace MultidimensionMod.NPCs.Tundra
 				SoundEngine.PlaySound(SoundID.NPCDeath13 with { Volume = 0.5f }, NPC.position);
 				int commonDrop = Main.rand.Next(2);
 				int uncommonDrop = Main.rand.Next(2);
-				if (Main.rand.NextBool(2))
+				if (Main.rand.NextFloat() < .0500f)
 				{
-
-					if (commonDrop == 0)
+					if (uncommonDrop == 0)
 					{
-						Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ItemID.ShiverthornSeeds, 1);
+						Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ModContent.ItemType<FrozenGeode>(), 1);
 					}
-					if (commonDrop == 1)
+					if (uncommonDrop == 1)
 					{
-						Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ItemID.FlinxFur, 1);
+						Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ModContent.ItemType<DrakeCrystal>(), 1);
 					}
+					return;
 				}
 				else
-					if (uncommonDrop == 0)
+				    if (commonDrop == 0)
 				    {
-					    Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ModContent.ItemType<FrozenGeode>(), 1);
+					    Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ItemID.ShiverthornSeeds, 1);
 				    }
-				    if (uncommonDrop == 1)
+				    if (commonDrop == 1)
 				    {
-				        Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ModContent.ItemType<DrakeCrystal>(), 1);
+					    Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ItemID.FlinxFur, 1);
 				    }
+				    return;
 			}
 		}
 
@@ -166,34 +182,31 @@ namespace MultidimensionMod.NPCs.Tundra
 			}
 		}
 
+		private int frame;
 		public override void FindFrame(int frameHeight)
 		{
-			if (!hasBeenFed && NPC.life < NPC.lifeMax)
-            {
-				NPC.frameCounter += 1.0;
-				if (NPC.frameCounter >= 0.0)
+			if (++NPC.frameCounter > 8)
+			{
+				frame++;
+				NPC.frameCounter = 0;
+				if (frame > 13)
 				{
-					NPC.frameCounter = 9.0;
-					NPC.frame.Y += frameHeight;
-					if (NPC.frame.Y >= 7)
+					frame = 8;
+				}
+			}
+			if (!hasBeenFed && NPC.life < NPC.lifeMax)
+			{
+				if (++NPC.frameCounter > 4)
+				{
+					frame++;
+					NPC.frameCounter = 0;
+					if (frame > 7)
 					{
-						NPC.frame.Y = 0;
+						frame = 0;
 					}
 				}
-				return;
 			}
-			else
-			    NPC.frameCounter += 1.0;
-			    if (NPC.frameCounter >= 6.0)
-			    {
-				    NPC.frameCounter = 0.0;
-				    NPC.frame.Y += frameHeight;
-				    if (NPC.frame.Y >= Main.npcFrameCount[NPC.type])
-				    {
-					    NPC.frame.Y = 8;
-				    }		
-			    }
-			    return;
+			NPC.frame.Y = frame * frameHeight;
 		}
 	}
 }
