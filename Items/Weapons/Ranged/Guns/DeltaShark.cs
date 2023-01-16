@@ -50,5 +50,13 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 		{
 			return new Vector2(0, -6);
 		}
+
+		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+		{
+			if (Main.rand.Next(4) == 0)
+            {
+                type = ProjectileID.NanoBullet;
+            }
+		}
 	}
 }

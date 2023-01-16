@@ -1,7 +1,7 @@
 ﻿using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Tiles;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.ToolsEnviromentChange
@@ -51,6 +51,7 @@ namespace MultidimensionMod.Items.ToolsEnviromentChange
 			.AddIngredient(ItemID.PixieDust, 12)
 			.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 12)
 			.AddIngredient(ModContent.ItemType<Dimensium>(), 6)
+			.AddTile(ModContent.TileType<DimensionalForge>())
 			.Register();
 		}
 	}

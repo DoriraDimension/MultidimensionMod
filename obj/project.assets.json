@@ -2,23 +2,23 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "tModLoader.CodeAssist/0.1.5": {
+      "tModLoader.CodeAssist/0.1.4": {
         "type": "package"
       }
     }
   },
   "libraries": {
-    "tModLoader.CodeAssist/0.1.5": {
-      "sha512": "Sg/jKEg/z5eN+Cdi3/9CU4JfJwvXHVH+UDJf4Lipo26uTa+guLLJXH1XDJNPShTFwKK8jMUYbthINP4QhsgHSA==",
+    "tModLoader.CodeAssist/0.1.4": {
+      "sha512": "X6CJQ4sVJHJx3paDt/YCWJnLfSCI0CqJO+jBIeL7aABSMMjDFUHykeHy60lISWqOKWH8SionloBya9YbQsBzNA==",
       "type": "package",
-      "path": "tmodloader.codeassist/0.1.5",
+      "path": "tmodloader.codeassist/0.1.4",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "NugetIcon.png",
         "analyzers/dotnet/cs/tModLoader.CodeAssist.dll",
-        "tmodloader.codeassist.0.1.5.nupkg.sha512",
+        "tmodloader.codeassist.0.1.4.nupkg.sha512",
         "tmodloader.codeassist.nuspec",
         "tools/install.ps1",
         "tools/uninstall.ps1"
@@ -31,19 +31,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Clare\\.nuget\\packages\\": {}
+    "C:\\Users\\Megaport\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Clare\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj",
+      "projectUniqueName": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj",
       "projectName": "MultidimensionMod",
-      "projectPath": "C:\\Users\\Clare\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj",
-      "packagesPath": "C:\\Users\\Clare\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Clare\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\obj\\",
+      "projectPath": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj",
+      "packagesPath": "C:\\Users\\Megaport\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Clare\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Megaport\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -89,7 +89,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

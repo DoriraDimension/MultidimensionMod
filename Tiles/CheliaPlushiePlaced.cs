@@ -20,7 +20,7 @@ namespace MultidimensionMod.Tiles
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
 			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Shapeshifter Plushie");
+			name.SetDefault("Chelia Plushie");
 			AddMapEntry(new Color(225, 71, 173), name);
 			DustType = 228;
 		}

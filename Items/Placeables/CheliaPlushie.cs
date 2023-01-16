@@ -8,7 +8,7 @@ namespace MultidimensionMod.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Shapeshifter Plushie (placeable)");
+			DisplayName.SetDefault("Chelia Plushie");
 			Tooltip.SetDefault("A cuddly plushie that looks like a unknown friend of the Dimensional God.\nWhy is he selling these?");
 		}
 

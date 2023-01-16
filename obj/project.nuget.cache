@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ql114ZM5+zx+U0fHWlNaPvOC0hvtyQe9uY+VthWETzU6L6gBJ2C5XWdUdkMFETB2gGq44EWtscPaUHhORA6mhA==",
+  "dgSpecHash": "7GRFa1CLuIM9vabj/PMgh3DGh4bQZ1FaUxrlBesJ3xNdsdq+qfZVDWvSbd6P7+bFOidxuaadm9rKpackCcd4Ug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Clare\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj",
+  "projectFilePath": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Clare\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+    "C:\\Users\\Megaport\\.nuget\\packages\\tmodloader.codeassist\\0.1.4\\tmodloader.codeassist.0.1.4.nupkg.sha512"
   ],
   "logs": []
 }

@@ -19,6 +19,7 @@ The mod currently adds:
 - Boss Souls acting as lore items, can be crafted into boss soul weapons.
 - Some changes to vanilla enemy lootpools and recipes for normally not craftable items.
 - A transmutation system, allowing the player to convert materials into their counterpart or even awakening a items hidden power.
+- Dozens of items, enemies and even bosses from the old version of the Ancients Awakened mod, giving them another chance to shine, since they are removed from the new version.
 
 I'm not really the best coder and have some bigger planned content,
 so if you are a coder, spriter or musician and you are interested in my work and want to help me, join my discord server
@@ -26,27 +27,16 @@ Or just do it for news ig, lol.
 
 Developer:
 
-Dorira  owner/spriter/coder
-
-EggsBenedict  ideas
-
-megs  coder
-
-torra the  spriting
-
-Yhariel  coder?
-
-DrVoodoo  musician
+-Dorira  owner/spriter/coder
+-DrVoodoo  musician
 
 
 Contributor:
 
-RAZOR  spriting
-
-naka  spriting
-
-HybridDeath  code/spriting
-
-ZSolar1  For making the wiki logo
-
-EggsBendeict  ideas/spriting
+-RAZOR  spriting
+-naka  spriting
+-HybridDeath  coding
+-ZSolar1  For making the wiki logo
+-EggsBenedict  ideas
+-nebs  coding
+-torra th  spriting

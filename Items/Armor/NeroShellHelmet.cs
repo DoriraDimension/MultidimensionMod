@@ -35,6 +35,7 @@ namespace MultidimensionMod.Items.Armor
 			player.statLifeMax2 += 40;
 			player.accFlipper = true;
 			player.ignoreWater = true;
+			ArmorIDs.Head.Sets.DrawHead[Item.headSlot] = false;
 			if (player.wet && !player.lavaWet && !player.honeyWet)
 			{
 				player.moveSpeed += 0.15f;

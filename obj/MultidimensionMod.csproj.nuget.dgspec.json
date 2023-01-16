@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Clare\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj": {}
+    "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Clare\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj": {
+    "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Clare\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj",
+        "projectUniqueName": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj",
         "projectName": "MultidimensionMod",
-        "projectPath": "C:\\Users\\Clare\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj",
-        "packagesPath": "C:\\Users\\Clare\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Clare\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\obj\\",
+        "projectPath": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MultidimensionMod.csproj",
+        "packagesPath": "C:\\Users\\Megaport\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Clare\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Megaport\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
