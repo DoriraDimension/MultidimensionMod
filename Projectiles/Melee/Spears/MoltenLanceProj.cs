@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -90,6 +91,12 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
             {
 				target.AddBuff(323, 180);
             }
+		}
+
+		public override bool PreDraw(ref Color lightColor)
+		{
+			Texture2D glowMask = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Melee/Spears/MoltenLanceProj_Glow").Value;
+			return true;
 		}
 	}
 }

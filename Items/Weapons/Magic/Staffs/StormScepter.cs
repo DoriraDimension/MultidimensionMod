@@ -1,6 +1,7 @@
 ﻿using MultidimensionMod.Projectiles.Magic;
 using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
@@ -67,6 +68,27 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 				float speedY5 = num71 + (float)Main.rand.Next(-40, 41) * 0.02f;
 				Projectile.NewProjectile(source, position.X, position.Y, speedX4, speedY5, shoot, Damage, KnockBack, player.whoAmI, 0f, Main.rand.Next(5));
 			return false;
+		}
+
+		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
+		{
+			Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Weapons/Magic/Staffs/StormScepter_Glow").Value;
+			spriteBatch.Draw
+			(
+				texture,
+				new Vector2
+				(
+					Item.position.X - Main.screenPosition.X + Item.width * 0.5f,
+					Item.position.Y - Main.screenPosition.Y + Item.height - texture.Height * 0.5f
+				),
+				new Rectangle(0, 0, texture.Width, texture.Height),
+				Color.White,
+				rotation,
+				texture.Size() * 0.5f,
+				scale,
+				SpriteEffects.None,
+				0f
+			);
 		}
 	}
 }
