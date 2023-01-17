@@ -11,10 +11,10 @@ namespace MultidimensionMod.Projectiles.Magic
 {
 	internal class MythosStaff : ModProjectile
 	{
-
+		public int ringTimer = 0;
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Brain Rocket");
+			DisplayName.SetDefault("Lightstream Mythos");
 		}
 
 		public override void SetDefaults()
@@ -28,11 +28,16 @@ namespace MultidimensionMod.Projectiles.Magic
 			Projectile.tileCollide = false;
 			Projectile.penetrate = -1;
 			Projectile.hide = false;
+			Projectile.localNPCHitCooldown = 20;
 		}
 
 		public override void Kill(int timeLeft)
 		{
-
+			Player player = Main.player[Projectile.owner];
+			if (ringTimer == 600)
+			{
+				player.statLife += 10;
+			}
 		}
 
 		public override void AI()
@@ -43,12 +48,28 @@ namespace MultidimensionMod.Projectiles.Magic
             {
 				Projectile.Kill();
             }
-			Projectile.rotation += .3f;
-
-
-
+			Projectile.rotation += .3f * player.direction;
 			Projectile.spriteDirection = player.direction;
 			Projectile.Center = player.Center;
+
+			if (player.channel)
+            {
+				ringTimer++;
+            }
+			if (ringTimer == 300)
+            {
+				SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), Projectile.position);
+				Projectile.NewProjectile(Projectile.GetSource_FromThis(), player.Center.X, player.Center.Y, 0f, 0f, ModContent.ProjectileType<MythosRing>(), (int)((double)((float)Projectile.damage) * 0.7), 0f, Main.myPlayer);
+			}
+			if (ringTimer == 600)
+            {
+				SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), Projectile.position);
+				Projectile.NewProjectile(Projectile.GetSource_FromThis(), player.Center.X, player.Center.Y, 0f, 0f, ModContent.ProjectileType<MythosRing2>(), (int)((double)((float)Projectile.damage) * 0.5), 0f, Main.myPlayer);
+			}
+			if (ringTimer > 600)
+            {
+				ringTimer = 600;
+            }
 		}
 	}
 }
