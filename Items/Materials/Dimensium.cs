@@ -18,10 +18,17 @@ namespace MultidimensionMod.Items.Materials
 
 		public override void SetDefaults()
 		{
-			Item.width = 20;
+			Item.width = 22;
 			Item.height = 24;
 			Item.maxStack = 9999;
 			Item.rare = ItemRarityID.Green;
+			Item.useTurn = true;
+			Item.autoReuse = true;
+			Item.useAnimation = 15;
+			Item.useTime = 10;
+			Item.useStyle = ItemUseStyleID.Swing;
+			Item.consumable = true;
+			Item.createTile = ModContent.TileType<Tiles.Ores.Dimensium>();
 		}
 
 		public override void ModifyTooltips(List<TooltipLine> list)

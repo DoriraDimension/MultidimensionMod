@@ -13,7 +13,7 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Drakescale Shield");
-			Tooltip.SetDefault("A shield reinforced with the scales of juvenile Ice Drakes.\nDrakescales are strengthened in the cold icy winds of the tundra, so theres no wonder that natives often use them as protection.\nIncreases defense by 4 and damage reduction by 4% when in the Snow biome.");
+			Tooltip.SetDefault("A shield reinforced with the scales of juvenile Ice Drakes.\nDrakescales are strengthened in the cold icy winds of the tundra, so theres no wonder that natives often use them as protection.\nIncreases defense by 4 and damage reduction by 4% when in the Snow biome.\nGives immunity to chilled and frozen");
 		}
 
 		public override void SetDefaults()

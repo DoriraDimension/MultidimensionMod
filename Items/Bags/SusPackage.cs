@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
 using MultidimensionMod.Items.Accessories;
+using MultidimensionMod.Items.Weapons.Summon;
+using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Items.Placeables;
 using MultidimensionMod.Items.Weapons.Melee.Swords;
 using MultidimensionMod.Items.Weapons.Magic.Staffs;
 using MultidimensionMod.Items.Weapons.Typeless;
@@ -66,17 +69,13 @@ namespace MultidimensionMod.Items.Bags
 				case "Dorito":
 				case "Karl":
 				case "Silverking":
-					break;
-
-				case "PhiaKitti":
-				case "Dust":
-					player.QuickSpawnItem(source, ItemID.Bass, 999);
-					player.QuickSpawnItem(source, ItemID.Worm);
+					player.QuickSpawnItem(source, ModContent.ItemType<FishLegacy>());
+					player.QuickSpawnItem(source, ModContent.ItemType<Dimensium>(), 15);
+					player.QuickSpawnItem(source, ModContent.ItemType<DimensionalForgeItem>());
 					break;
 
 				case "Teiteira":
 				case "Fat":
-				case "YuukiSimp":
 					player.QuickSpawnItem(source, ItemID.SugarCookie, 5);
 					player.QuickSpawnItem(source, ItemID.Holly);
 					player.QuickSpawnItem(source, ItemID.Ale);
@@ -84,13 +83,13 @@ namespace MultidimensionMod.Items.Bags
 
 				case "Rage":
 				case "Josh":
-					player.QuickSpawnItem(source, ModContent.ItemType<MegaDemondrug>(), 10);
+					player.QuickSpawnItem(source, ModContent.ItemType<MegaDemondrug>(), 5);
 					break;
 
 				case "Cotton":
 				case "Dynosaur":
 				case "Crabbane":
-					player.QuickSpawnItem(source, ModContent.ItemType<MegaDemondrug>(), 10);
+					player.QuickSpawnItem(source, ModContent.ItemType<MegaDemondrug>(), 5);
 					player.QuickSpawnItem(source, ItemID.PinkDye, 3);
 					player.QuickSpawnItem(source, ItemID.PinkPaint, 999);
 					break;
@@ -107,6 +106,12 @@ namespace MultidimensionMod.Items.Bags
 					player.QuickSpawnItem(source, ModContent.ItemType<SandstoneGeode>(), 3);
 					player.QuickSpawnItem(source, ModContent.ItemType<BloodGeode>(), 3);
 					player.QuickSpawnItem(source, ModContent.ItemType<DecayGeode>(), 3);
+					break;
+
+				case "Darkrage":
+					player.QuickSpawnItem(source, ModContent.ItemType<DrakeCrystal>());
+					player.QuickSpawnItem(source, ModContent.ItemType<FrostScale>(), 14);
+					player.QuickSpawnItem(source, ItemID.LihzahrdBanner);
 					break;
 			}
 		}

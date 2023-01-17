@@ -15,8 +15,8 @@ namespace MultidimensionMod.Items.Accessories
 
 		public override void SetDefaults()
 		{
-			Item.width = 44;
-			Item.height = 34;
+			Item.width = 30;
+			Item.height = 36;
 			Item.accessory = true;
 			Item.value = Item.sellPrice(silver: 13);
 			Item.rare = ItemRarityID.Green;
