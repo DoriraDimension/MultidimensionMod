@@ -69,61 +69,61 @@ namespace MultidimensionMod
                 }
             if (Main.player[Main.myPlayer].GetModPlayer<MDPlayer>().Geodes)
             {
-                if (MDSets.EbonBlocks[type] && Main.rand.NextBool(100))
+                if (MDSets.Tiles.EbonBlocks[type] && Main.rand.NextBool(100))
                 {
                     Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<DecayGeode>(), 1, false, 0, false, false);
                 }
             }
             else
-                if (MDSets.EbonBlocks[type] && Main.rand.NextBool(200))
+                if (MDSets.Tiles.EbonBlocks[type] && Main.rand.NextBool(200))
                 {
                     Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<DecayGeode>(), 1, false, 0, false, false);
                 }
             if (Main.player[Main.myPlayer].GetModPlayer<MDPlayer>().Geodes)
             {
-                if (MDSets.CrimBlocks[type] && Main.rand.NextBool(100))
+                if (MDSets.Tiles.CrimBlocks[type] && Main.rand.NextBool(100))
                 {
                     Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<BloodGeode>(), 1, false, 0, false, false);
                 }
             }
             else
-                if (MDSets.CrimBlocks[type] && Main.rand.NextBool(200))
+                if (MDSets.Tiles.CrimBlocks[type] && Main.rand.NextBool(200))
                 {
                     Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<BloodGeode>(), 1, false, 0, false, false);
                 }
             if (Main.player[Main.myPlayer].GetModPlayer<MDPlayer>().Geodes && Main.hardMode)
             {
-                if (MDSets.JungleBlocks[type] && Main.rand.NextBool(100))
+                if (MDSets.Tiles.JungleBlocks[type] && Main.rand.NextBool(100))
                 {
                     Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<MuddyGeode>(), 1, false, 0, false, false);
                 }
             }
             else
-                if (MDSets.JungleBlocks[type] && Main.rand.NextBool(200) && Main.hardMode)
+                if (MDSets.Tiles.JungleBlocks[type] && Main.rand.NextBool(200) && Main.hardMode)
                 {
                     Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<MuddyGeode>(), 1, false, 0, false, false);
                 }
             if (Main.player[Main.myPlayer].GetModPlayer<MDPlayer>().Geodes)
             {
-                if (MDSets.HellBlocks[type] && Main.rand.NextBool(100))
+                if (MDSets.Tiles.HellBlocks[type] && Main.rand.NextBool(100))
                 {
                     Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<MagmaGeode>(), 1, false, 0, false, false);
                 }
             }
             else
-                if (MDSets.HellBlocks[type] && Main.rand.NextBool(200))
+                if (MDSets.Tiles.HellBlocks[type] && Main.rand.NextBool(200))
                 {
                     Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<MagmaGeode>(), 1, false, 0, false, false);
                 }
             if (Main.player[Main.myPlayer].GetModPlayer<MDPlayer>().Geodes)
             {
-                if (MDSets.HallowBlocks[type] && Main.rand.NextBool(100) && Main.hardMode)
+                if (MDSets.Tiles.HallowBlocks[type] && Main.rand.NextBool(100) && Main.hardMode)
                 {
                     Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<FairyGeode>(), 1, false, 0, false, false);
                 }
             }
             else
-                if (MDSets.HallowBlocks[type] && Main.rand.NextBool(200) && Main.hardMode)
+                if (MDSets.Tiles.HallowBlocks[type] && Main.rand.NextBool(200) && Main.hardMode)
                 {
                     Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<FairyGeode>(), 1, false, 0, false, false);
                 }
