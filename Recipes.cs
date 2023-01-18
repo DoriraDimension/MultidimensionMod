@@ -25,16 +25,16 @@ namespace MultidimensionMod
 			Recipe blizzard = Recipe.Create(ItemID.BlizzardinaBottle);
 			blizzard.AddIngredient(ItemID.Bottle);
 			blizzard.AddIngredient(ItemID.SnowBlock, 10);
-			blizzard.AddIngredient(ItemID.Feather, 3);
 			blizzard.AddIngredient(ModContent.ItemType<FrostScale>(), 6);
+			blizzard.AddIngredient(ItemID.Feather, 3);
 			blizzard.AddTile(TileID.Bottles);
 			blizzard.Register();
 
 			Recipe sandstorm = Recipe.Create(ItemID.SandstorminaBottle);
 			sandstorm.AddIngredient(ItemID.Bottle);
 			sandstorm.AddRecipeGroup("SandBlocks", 25);
-			sandstorm.AddIngredient(ItemID.Feather, 3);
 			sandstorm.AddIngredient(ModContent.ItemType<ManaInfusedSandstone>(), 6);
+			sandstorm.AddIngredient(ItemID.Feather, 3);
 			sandstorm.AddTile(TileID.Bottles);
 			sandstorm.Register();
 

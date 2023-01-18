@@ -249,11 +249,6 @@ namespace MultidimensionMod
                 npcLoot.Add(ItemDropRule.Common(ItemID.Stinger, 2));
             }
 
-            if (NPC.type == NPCID.Reaper && NPC.downedMechBoss3)
-            {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EclipseReaper>(), 30));
-            }
-
             if (NPC.type == NPCID.BigMimicHallow)
             {
                 npcLoot.Add(ItemDropRule.Common(ItemID.LightShard, 1, 1, 3));
@@ -264,76 +259,9 @@ namespace MultidimensionMod
                 npcLoot.Add(ItemDropRule.Common(ItemID.DarkShard, 1, 1, 3));
             }
 
-            if (Main.hardMode && (NPC.type == NPCID.BlackSlime) || (NPC.type == NPCID.MotherSlime) || (NPC.type == NPCID.BabySlime) || (NPC.type == NPCID.GiantWormHead) || (NPC.type == NPCID.CaveBat) || (NPC.type == NPCID.BlueJellyfish) || (NPC.type == NPCID.Crawdad) || (NPC.type == NPCID.GiantShelly) || (NPC.type == NPCID.UndeadMiner) || (NPC.type == NPCID.Tim))
-            { 
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Geode>(), 20));
-            }
-
-            if ((NPC.type == NPCID.IceBat) || (NPC.type == NPCID.SnowFlinx) || (NPC.type == NPCID.SpikedIceSlime) || (NPC.type == NPCID.UndeadViking) || (NPC.type == NPCID.ArmoredViking) || (NPC.type == NPCID.IceTortoise) || (NPC.type == NPCID.IceElemental) || (NPC.type == NPCID.IcyMerman) || (NPC.type == NPCID.IceMimic) || (NPC.type == NPCID.PigronCorruption) || (NPC.type == NPCID.PigronCrimson) || (NPC.type == NPCID.PigronHallow))
-            {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<FrozenGeode>(), 20));
-            }
-
-            if ((NPC.type == NPCID.Hellbat) || (NPC.type == NPCID.Demon) || (NPC.type == NPCID.RedDevil) || (NPC.type == NPCID.LavaSlime) || (NPC.type == NPCID.FireImp) || (NPC.type == NPCID.VoodooDemon) || (NPC.type == NPCID.BoneSerpentHead) || (NPC.type == NPCID.Lavabat))
-            {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MagmaGeode>(), 20));
-            }
-
-            if (Main.hardMode && (NPC.type == NPCID.BlackSlime) || (NPC.type == NPCID.MotherSlime) || (NPC.type == NPCID.BabySlime) || (NPC.type == NPCID.GiantWormHead) || (NPC.type == NPCID.CaveBat) || (NPC.type == NPCID.BlueJellyfish) || (NPC.type == NPCID.Crawdad) || (NPC.type == NPCID.GiantShelly) || (NPC.type == NPCID.UndeadMiner) || (NPC.type == NPCID.Tim) || (NPC.type == NPCID.ArmoredSkeleton) || (NPC.type == NPCID.HeavySkeleton) || (NPC.type == NPCID.DiggerHead) || (NPC.type == NPCID.GiantBat) || (NPC.type == NPCID.GreenJellyfish) || (NPC.type == NPCID.RockGolem) || (NPC.type == NPCID.SkeletonArcher) || (NPC.type == NPCID.RuneWizard))
-            {
-                if (Main.hardMode)
-                {
-                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<OmniGeode>(), 20));
-                }
-            }
-
-            if ((NPC.type == NPCID.Antlion) || (NPC.type == NPCID.WalkingAntlion) || (NPC.type == NPCID.LarvaeAntlion) || (NPC.type == NPCID.FlyingAntlion) || (NPC.type == NPCID.GiantWalkingAntlion) || (NPC.type == NPCID.GiantFlyingAntlion) || (NPC.type == NPCID.TombCrawlerHead) || (NPC.type == NPCID.DuneSplicerHead) || (NPC.type == NPCID.DesertScorpionWalk) || (NPC.type == NPCID.DesertScorpionWall) || (NPC.type == NPCID.DesertLamiaLight) || (NPC.type == NPCID.DesertLamiaDark) || (NPC.type == NPCID.DesertBeast) || (NPC.type == NPCID.DesertGhoul) || (NPC.type == NPCID.DesertGhoulCorruption) || (NPC.type == NPCID.DesertGhoulCrimson) || (NPC.type == NPCID.DesertGhoulHallow))
-            {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SandstoneGeode>(), 25));
-            }
-
-            if ((NPC.type == NPCID.IlluminantSlime) || (NPC.type == NPCID.IlluminantBat) || (NPC.type == NPCID.ChaosElemental) || (NPC.type == NPCID.EnchantedSword) || (NPC.type == NPCID.BigMimicHallow) || (NPC.type == NPCID.PigronHallow) || (NPC.type == NPCID.DesertGhoulHallow))
-            {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<FairyGeode>(), 25));
-            }
-
-            if ((NPC.type == NPCID.Clinger) || (NPC.type == NPCID.PigronCorruption) || (NPC.type == NPCID.CursedHammer) || (NPC.type == NPCID.BigMimicCorruption) || (NPC.type == NPCID.DesertGhoulCorruption))
-            {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DecayGeode>(), 20));
-            }
-
-            if ((NPC.type == NPCID.CrimsonAxe) || (NPC.type == NPCID.BloodJelly) || (NPC.type == NPCID.IchorSticker) || (NPC.type == NPCID.FloatyGross) || (NPC.type == NPCID.PigronCrimson))
-            {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BloodGeode>(), 10));
-            }
-
-            if (NPC.downedMechBoss3 && (NPC.type == NPCID.Hornet) || (NPC.type == NPCID.HornetFatty) || (NPC.type == NPCID.BigHornetFatty) || (NPC.type == NPCID.LittleHornetFatty) || (NPC.type == NPCID.HornetHoney) || (NPC.type == NPCID.LittleHornetHoney) || (NPC.type == NPCID.BigHornetHoney) || (NPC.type == NPCID.HornetLeafy) || (NPC.type == NPCID.BigHornetLeafy) || (NPC.type == NPCID.LittleHornetLeafy) || (NPC.type == NPCID.HornetSpikey) || (NPC.type == NPCID.LittleHornetSpikey) || (NPC.type == NPCID.BigHornetSpikey) || (NPC.type == NPCID.HornetStingy) || (NPC.type == NPCID.LittleHornetStingy) || (NPC.type == NPCID.BigHornetStingy) || (NPC.type == NPCID.TinyMossHornet) || (NPC.type == NPCID.LittleMossHornet) || (NPC.type == NPCID.BigMossHornet) || (NPC.type == NPCID.GiantMossHornet) || (NPC.type == NPCID.MossHornet) || (NPC.type == NPCID.SpikedJungleSlime) || (NPC.type == NPCID.ManEater) || (NPC.type == NPCID.JungleCreeperWall) || (NPC.type == NPCID.JungleCreeper) || (NPC.type == NPCID.Moth) || (NPC.type == NPCID.AngryTrapper))
-            {
-                if (NPC.downedMechBoss3)
-                {
-                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MuddyGeode>(), 20));
-                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PlantMurderStarterSet>(), 100));
-                }
-            }
-
             if (NPC.downedMoonlord && (NPC.type == NPCID.Harpy) || (NPC.type == NPCID.WyvernHead))
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MoonGeode>(), 8));
-            }
-
-            if (NPC.downedFishron && (NPC.type == NPCID.Shark) || (NPC.type == NPCID.Crab) || (NPC.type == NPCID.Squid) || (NPC.type == NPCID.SeaSnail) || (NPC.type == NPCID.Dolphin) || (NPC.type == NPCID.SeaTurtle))
-            {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TidalQuartz>(), 20));
-            }
-
-            if ((NPC.type == NPCID.Antlion) || (NPC.type == NPCID.WalkingAntlion) || (NPC.type == NPCID.LarvaeAntlion) || (NPC.type == NPCID.FlyingAntlion) || (NPC.type == NPCID.GiantWalkingAntlion) || (NPC.type == NPCID.GiantFlyingAntlion) || (NPC.type == NPCID.TombCrawlerHead) || (NPC.type == NPCID.DuneSplicerHead) || (NPC.type == NPCID.DesertScorpionWalk) || (NPC.type == NPCID.DesertScorpionWall) || (NPC.type == NPCID.DesertLamiaLight) || (NPC.type == NPCID.DesertLamiaDark) || (NPC.type == NPCID.DesertBeast) || (NPC.type == NPCID.DesertGhoul) || (NPC.type == NPCID.DesertGhoulCorruption) || (NPC.type == NPCID.DesertGhoulCrimson) || (NPC.type == NPCID.DesertGhoulHallow))
-            {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BrokenAncientDepictionItem>(), 100));
-            }
-
-            if ((NPC.type == NPCID.AnomuraFungus) || (NPC.type == NPCID.FungiBulb) || (NPC.type == NPCID.MushiLadybug) || (NPC.type == NPCID.SporeBat) || (NPC.type == NPCID.SporeSkeleton) || (NPC.type == NPCID.ZombieMushroom) || (NPC.type == NPCID.ZombieMushroomHat) || (NPC.type == NPCID.FungoFish) || (NPC.type == NPCID.GiantFungiBulb) || (NPC.type == NPCID.GlowingSnail) || (NPC.type == NPCID.TruffleWorm))
-            {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Mushmatter>(), 100));
             }
 
             if (NPC.type == NPCID.SpikedJungleSlime)
@@ -341,14 +269,9 @@ namespace MultidimensionMod
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<StinkyPaste>(), 12));
             }
 
-            if (NPC.type == NPCID.UndeadViking)
+            if (NPC.type == NPCID.UndeadViking || NPC.type == NPCID.ArmoredViking)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<VikingRelic>(), 1, 2, 3));
-            }
-
-            if (NPC.type == NPCID.ArmoredViking)
-            {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<VikingRelic>(), 1, 3, 5));
             }
         }
     }

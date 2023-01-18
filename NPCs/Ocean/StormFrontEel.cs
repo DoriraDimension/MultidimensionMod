@@ -45,7 +45,10 @@ namespace MultidimensionMod.NPCs.Ocean
 			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<ThunderbubbleBow>(), 4));
 			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<StormScepter>(), 4));
 			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<EelMask>(), 10));
-			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<TidalQuartz>(), 1, 1, 3));
+			if (NPC.downedFishron)
+			{
+				NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<TidalQuartz>(), 1, 1, 3));
+			}
 		}
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
