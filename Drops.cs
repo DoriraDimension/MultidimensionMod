@@ -125,6 +125,12 @@ namespace MultidimensionMod
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<GolemSoul>()));
             }
 
+            if (NPC.type == NPCID.HallowBoss) //Empress
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Prismatine>(), 1, 10, 15));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmpressSoul>()));
+            }
+
             if (NPC.type == NPCID.DukeFishron)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TidalQuartz>(), 1, 10, 15));

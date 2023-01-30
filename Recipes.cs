@@ -639,6 +639,37 @@ namespace MultidimensionMod
 			redseed.AddTile(ModContent.TileType<DimensionalForge>());
 			redseed.Register();
 			#endregion
+
+			#region Empress Drops
+			Recipe nightglow = Recipe.Create(ItemID.FairyQueenMagicItem); //Nightglow
+			nightglow.AddIngredient(ModContent.ItemType<Prismatine>(), 8);
+			nightglow.AddIngredient(ItemID.FallenStar, 4);
+			nightglow.AddTile(TileID.CrystalBall);
+			nightglow.Register();
+
+			Recipe starlight = Recipe.Create(4923);
+			starlight.AddIngredient(ModContent.ItemType<Prismatine>(), 10);
+			starlight.AddTile(TileID.CrystalBall);
+			starlight.Register();
+
+			Recipe eventide = Recipe.Create(ItemID.FairyQueenRangedItem);
+			eventide.AddIngredient(ModContent.ItemType<Prismatine>(), 9);
+			eventide.AddTile(TileID.CrystalBall);
+			eventide.Register();
+
+			Recipe kaleido = Recipe.Create(4914);
+			kaleido.AddIngredient(ModContent.ItemType<Prismatine>(), 10);
+			kaleido.AddTile(TileID.CrystalBall);
+			kaleido.Register();
+
+			Recipe prisma = Recipe.Create(ItemID.EmpressBlade);
+			prisma.AddIngredient(ModContent.ItemType<Prismatine>(), 23);
+			prisma.AddIngredient(ItemID.Smolstar); //Blade Staff
+			prisma.AddIngredient(ItemID.CrystalShard, 35);
+			prisma.AddIngredient(ItemID.FragmentStardust, 20);
+			prisma.AddTile(TileID.CrystalBall);
+			prisma.Register();
+			#endregion
 		}
 	}
 }
