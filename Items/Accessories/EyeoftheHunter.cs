@@ -9,7 +9,7 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Eye of the Hunter");
-			Tooltip.SetDefault("A true hunter can sense its prey.\nOne of the forbidden eyes.\nYou can now sense your enemies everywhere.");
+			Tooltip.SetDefault("A true hunter can sense its prey.\nOne of the forbidden eyes.\nYou can now sense your enemies everywhere.\nHas a chance to inflict the Weak debuff when you get it");
 		}
 
 		public override void SetDefaults()

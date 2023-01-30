@@ -14,13 +14,13 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetDefaults()
 		{
-			Projectile.CloneDefaults(ProjectileID.Starfury);
-			AIType = ProjectileID.Starfury;
+			Projectile.CloneDefaults(ProjectileID.FallingStar);
+			AIType = ProjectileID.FallingStar;
 		}
 
 		public override bool PreKill(int timeLeft)
 		{
-			Projectile.type = ProjectileID.Starfury;
+			Projectile.type = ProjectileID.FallingStar;
 			return true;
 		}
 	}

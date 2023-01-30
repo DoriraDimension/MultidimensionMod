@@ -26,7 +26,7 @@ namespace MultidimensionMod.Items.Ammo
 		{
 			CreateRecipe()
 			.AddIngredient(ItemID.Gel, 600)
-			.AddTile(134)
+			.AddTile(TileID.CrystalBall)
 			.Register();
 		}
 	}

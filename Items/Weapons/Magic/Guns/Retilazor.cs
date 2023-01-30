@@ -41,5 +41,14 @@ namespace MultidimensionMod.Items.Weapons.Magic.Guns
 			SoundEngine.PlaySound(SoundID.Item33 with {Volume = 0.4f}, player.position);
 			return true;
 		}
+
+		public override void AddRecipes()
+		{
+			CreateRecipe()
+			.AddIngredient(ItemID.HallowedBar, 12)
+			.AddIngredient(ItemID.SoulofSight, 7)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
+		}
 	}
 }

@@ -22,8 +22,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			Item.width = 26;
 			Item.height = 26;
 			Item.useStyle = ItemUseStyleID.Swing;
-			Item.useTime = 55;
-			Item.useAnimation = 55;
+			Item.useTime = 45;
+			Item.useAnimation = 45;
 			Item.knockBack = 2f;
 			Item.DamageType = DamageClass.Magic;
 			Item.noMelee = true;
@@ -31,38 +31,38 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			Item.rare = ItemRarityID.Blue;
 			Item.mana = 4;
 			Item.shoot = ModContent.ProjectileType<PoyoStar>();
-			Item.shootSpeed = 10f;
+			Item.shootSpeed = 15f;
 		}
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
-			int Damage = Item.damage;
-			float KnockBack = Item.knockBack;
-			int shoot = Item.shoot;
-			float speed = Item.shootSpeed;
-			float num70 = (float)Main.mouseX + Main.screenPosition.X - position.X;
-			float num71 = (float)Main.mouseY + Main.screenPosition.Y - position.Y;
-			float num72 = (float)Math.Sqrt(num70 * num70 + num71 * num71);
-			int num99 = 2;
-				position = new Vector2(player.position.X + (float)player.width * 0.5f + (float)(Main.rand.Next(201) * -player.direction) + ((float)Main.mouseX + Main.screenPosition.X - player.position.X), player.MountedCenter.Y - 600f);
-				position.X = (position.X + player.Center.X) / 2f + (float)Main.rand.Next(-200, 201);
-				num70 = (float)Main.mouseX + Main.screenPosition.X - position.X;
-				num71 = (float)Main.mouseY + Main.screenPosition.Y - position.Y;
-				if (num71 < 0f)
+			Vector2 target = Main.screenPosition + new Vector2(Main.mouseX, Main.mouseY);
+			float ceiling = target.Y;
+			if (ceiling > player.Center.Y - 200f)
+			{
+				ceiling = player.Center.Y - 200f;
+			}
+			for (int i = 0; i < 1; i++)
+            {
+				position = player.Center - new Vector2(Main.rand.NextFloat(401) * player.direction, 600f);
+				position.Y -= 100 * i;
+				Vector2 heading = target - position;
+
+				if (heading.Y < 0f)
 				{
-					num71 *= -1f;
+					heading.Y *= -1f;
 				}
-				if (num71 < 20f)
+
+				if (heading.Y < 20f)
 				{
-					num71 = 20f;
+					heading.Y = 20f;
 				}
-				num72 = (float)Math.Sqrt(num70 * num70 + num71 * num71);
-				num72 = speed / num72;
-				num70 *= num72;
-				num71 *= num72;
-				float speedX4 = num70 + (float)Main.rand.Next(-40, 41) * 0.02f;
-				float speedY5 = num71 + (float)Main.rand.Next(-40, 41) * 0.02f;
-			    Projectile.NewProjectile(source, position.X, position.Y, speedX4, speedY5, shoot, Damage, KnockBack, player.whoAmI, 0f, Main.rand.Next(5));
+
+				heading.Normalize();
+				heading *= velocity.Length();
+				heading.Y += Main.rand.Next(-40, 41) * 0.02f;
+				Projectile.NewProjectile(source, position, heading, type, damage, knockback, player.whoAmI, 0f, ceiling);
+			}
 			return false;
 		}
 

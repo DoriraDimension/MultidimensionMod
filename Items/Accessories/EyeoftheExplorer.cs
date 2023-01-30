@@ -9,7 +9,7 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Eye of the Explorer");
-			Tooltip.SetDefault("A true adventurer can sense traps and danger.\nOne of the forbidden eyes.\nYou can see danger sources.");
+			Tooltip.SetDefault("A true adventurer can sense traps and danger.\nOne of the forbidden eyes.\nYou can see danger sources.\nHas a chance to inflict the Slow debuff when you get it");
 		}
 
 		public override void SetDefaults()

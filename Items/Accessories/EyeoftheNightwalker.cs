@@ -11,7 +11,7 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Eye of the Nightwalker");
-			Tooltip.SetDefault("A true resident of the night can see through the darkness.\nOne of the forbidden eyes.\nYou now have improved vision at night.");
+			Tooltip.SetDefault("A true resident of the night can see through the darkness.\nOne of the forbidden eyes.\nYou now have improved vision at night.\nHas a chance to inflict the Blackout debuff when you get it");
 		}
 
 		public override void SetDefaults()

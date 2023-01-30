@@ -9,7 +9,7 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Eye of the Greed");
-			Tooltip.SetDefault("A true greed can find every treasure.\nOne of the forbidden eyes.\nYour greedy eyes can now see treasures.");
+			Tooltip.SetDefault("A true greed can find every treasure.\nOne of the forbidden eyes.\nYour greedy eyes can now see treasures.\nHas a chance to inflict the Cursed debuff when you get it");
 		}
 
 		public override void SetDefaults()

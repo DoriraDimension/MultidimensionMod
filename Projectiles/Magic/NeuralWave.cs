@@ -26,13 +26,11 @@ namespace MultidimensionMod.Projectiles.Magic
 			Projectile.light = 0.5f;
 			Projectile.hide = false;
 			Projectile.penetrate = -1;
+			Projectile.timeLeft = 20;
 		}
 
 		public override void AI()
 		{
-			if (Projectile.timeLeft > 50)
-				Projectile.timeLeft = 50;
-
 			if (Projectile.ai[0] >= 100f)
 			{
 				Projectile.Kill();

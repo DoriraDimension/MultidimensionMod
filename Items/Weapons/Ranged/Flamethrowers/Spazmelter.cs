@@ -12,7 +12,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Spmazmelter");
+			DisplayName.SetDefault("Spazmelter");
 			Tooltip.SetDefault("Shoots cursed flames.");
 		}
 
@@ -70,6 +70,16 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 				SpriteEffects.None,
 				0f
 			);
+		}
+
+		public override void AddRecipes()
+		{
+			CreateRecipe()
+			.AddIngredient(ItemID.HallowedBar, 11)
+			.AddIngredient(ItemID.SoulofSight, 7)
+			.AddIngredient(ItemID.CursedFlame, 6)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 		}
 	}
 }
