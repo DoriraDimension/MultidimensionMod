@@ -44,7 +44,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 			for (int i = 0; i < 5; i++)
 			{
-				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Torch, 0f, 0f, 100, default(Color), 2f);
+				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.CrimsonTorch, 0f, 0f, 100, default(Color), 2f);
 				Main.dust[dustIndex].velocity *= 1.8f;
 				Main.dust[dustIndex].alpha = 50;
 			}
@@ -62,7 +62,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			}
 			for (int i = 0; i < 25; i++)
 			{
-				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Torch, 0f, 0f, 100, default(Color), 2f);
+				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.CrimsonTorch, 0f, 0f, 100, default(Color), 2f);
 				Main.dust[dustIndex].velocity *= 1.4f;
 			}
 		}

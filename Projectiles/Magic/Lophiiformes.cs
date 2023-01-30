@@ -75,7 +75,6 @@ namespace MultidimensionMod.Projectiles.Magic
 					}
 				}
 			}
-			Projectile.friendly = foundTarget;
 
 			float speed = 20f;
 			float inertia = 20f;

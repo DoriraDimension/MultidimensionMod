@@ -9,7 +9,7 @@ namespace MultidimensionMod.Items.Placeables.MusicBoxes
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Music Box (Frozen Underworld)");
-			Tooltip.SetDefault("Wasteland of Frigid Sins");
+			Tooltip.SetDefault("Frigid Sins");
 		}
 
 		public override void SetDefaults()

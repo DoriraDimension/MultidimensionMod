@@ -194,5 +194,10 @@ namespace MultidimensionMod.Projectiles.Ranged
 			// It's important to return false, otherwise we also draw the original texture.
 			return false;
 		}
+
+		public override bool? CanDamage()
+		{
+			return false;
+		}
 	}
 }

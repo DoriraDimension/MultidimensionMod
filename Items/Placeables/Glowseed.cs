@@ -12,7 +12,7 @@ namespace MultidimensionMod.Items.Placeables
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Glowseed");
-			Tooltip.SetDefault("A small glowing seed from another world. Grows a glowtree when placed instantly");
+			Tooltip.SetDefault("A small glowing seed from another world. Instantly grows a glowtree when placed");
 		}
 
 		public override void SetDefaults()
