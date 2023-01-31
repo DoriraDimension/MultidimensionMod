@@ -2,6 +2,8 @@
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Weapons.Summon;
 using MultidimensionMod.Items.Weapons.Typeless;
+using MultidimensionMod.Items.Potions;
+using MultidimensionMod.NPCs.TownPets;
 using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -19,6 +21,7 @@ namespace MultidimensionMod.NPCs.Tundra
 	public class IceDrakeJuvenile : ModNPC
 	{
 		public bool hasBeenFed;
+		public bool isAdoptable;
 
 		public override void SetStaticDefaults()
 		{
@@ -119,12 +122,17 @@ namespace MultidimensionMod.NPCs.Tundra
 			{
 				button = Language.GetTextValue("Feed");
 			}
+			if (Main.LocalPlayer.HasItem(ModContent.ItemType<KFC>()) && !NPC.AnyNPCs(ModContent.NPCType<TownDrake>()))
+            {
+				button = Language.GetTextValue("Adopt");
+				isAdoptable = true;
+            }
 		}
 
 		public override void OnChatButtonClicked(bool firstButton, ref bool shop)
 		{
 			//Makes the Drake drop an item upon feeding it
-			if (firstButton)
+			if (firstButton && !isAdoptable)
 			{
 				hasBeenFed = true;
 				SoundEngine.PlaySound(SoundID.NPCDeath13 with { Volume = 0.5f }, NPC.position);
@@ -152,6 +160,12 @@ namespace MultidimensionMod.NPCs.Tundra
 					    Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ItemID.FlinxFur, 1);
 				    }
 				    return;
+			}
+			else if (firstButton && isAdoptable)
+            {
+				Vector2 spawnAt = NPC.Center + new Vector2(0f, (float)NPC.height / 2f);
+				NPC.NewNPC(NPC.GetSource_FromAI(), (int)spawnAt.X, (int)spawnAt.Y, ModContent.NPCType<TownDrake>());
+				NPC.active = false;
 			}
 		}
 
