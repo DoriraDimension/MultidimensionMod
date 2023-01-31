@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MultidimensionMod.Rarities.Souls;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -21,26 +22,7 @@ namespace MultidimensionMod.Items.Souls
 		{
 			Item.width = 20;
 			Item.height = 32;
-			Item.rare = ItemRarityID.Orange;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					switch (Main.GameUpdateCount / 60 % 2)
-					{
-						case 0:
-							Item.OverrideColor = new Color(204, 204, 159);
-							break;
-						case 1:
-							Item.OverrideColor = new Color(45, 45, 29);
-							break;
-					}
-				}
-			}
+			Item.rare = ModContent.RarityType<SkeletonSoulRarity>();
 		}
 
 		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)

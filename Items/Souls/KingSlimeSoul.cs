@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MultidimensionMod.Rarities.Souls;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.DataStructures;
@@ -24,26 +25,7 @@ namespace MultidimensionMod.Items.Souls
 		{
 			Item.width = 22;
 			Item.height = 36;
-			Item.rare = ItemRarityID.Blue;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					switch (Main.GameUpdateCount / 60 % 2)
-					{
-						case 0:
-							Item.OverrideColor = new Color(89, 164, 254);
-							break;
-						case 1:
-							Item.OverrideColor = new Color(228, 196, 74);
-							break;
-					}
-				}
-			}
+			Item.rare = ModContent.RarityType<KingSlimeSoulRarity>();
 		}
 	}
 }

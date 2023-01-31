@@ -51,7 +51,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 				int numProj = 2;
 				float rotation = MathHelper.ToRadians(50f);
 				Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedBy(MathHelper.Lerp(0f - rotation, rotation, (float)(i / (numProj - 1))));
-				Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<NeuralWave>(), damage, knockback, player.whoAmI);
+				Projectile.NewProjectile(source, player.Center.X, player.Center.Y, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<NeuralWave>(), damage, knockback, player.whoAmI);
 			}
 			return false;
 		}

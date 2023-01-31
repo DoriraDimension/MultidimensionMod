@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MultidimensionMod.Rarities.Souls;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.DataStructures;
@@ -24,26 +25,7 @@ namespace MultidimensionMod.Items.Souls
 		{
 			Item.width = 18;
 			Item.height = 38;
-			Item.rare = ItemRarityID.Pink;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					switch (Main.GameUpdateCount / 60 % 2)
-					{
-						case 0:
-							Item.OverrideColor = new Color(210, 210, 210);
-							break;
-						case 1:
-							Item.OverrideColor = new Color(85, 202, 150);
-							break;
-					}
-				}
-			}
+			Item.rare = ModContent.RarityType<TwinSoulRarity>();
 		}
 	}
 }

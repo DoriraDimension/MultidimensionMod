@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MultidimensionMod.Rarities.Souls;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.DataStructures;
@@ -24,32 +25,7 @@ namespace MultidimensionMod.Items.Souls
 		{
 			Item.width = 40;
 			Item.height = 40;
-			Item.rare = ItemRarityID.Cyan;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					switch (Main.GameUpdateCount / 60 % 4)
-					{
-						case 0:
-							Item.OverrideColor = new Color(0, 177, 227);
-							break;
-						case 1:
-							Item.OverrideColor = new Color(247, 178, 11);
-							break;
-						case 2:
-							Item.OverrideColor = new Color(20, 223, 147);
-							break;
-						case 3:
-							Item.OverrideColor = new Color(246, 92, 216);
-							break;
-					}
-				}
-			}
+			Item.rare = ModContent.RarityType<CultistSoulRarity>();
 		}
 	}
 }

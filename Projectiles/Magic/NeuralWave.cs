@@ -27,6 +27,7 @@ namespace MultidimensionMod.Projectiles.Magic
 			Projectile.hide = false;
 			Projectile.penetrate = -1;
 			Projectile.timeLeft = 20;
+			Projectile.alpha = 150;
 		}
 
 		public override void AI()

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MultidimensionMod.Rarities.Souls;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -21,7 +22,7 @@ namespace MultidimensionMod.Items.Souls
 		{
 			Item.width = 30;
 			Item.height = 38;
-			Item.rare = ItemRarityID.Yellow;
+			Item.rare = ModContent.RarityType<EmpressSoulRarity>();
 		}
 	}
 }
