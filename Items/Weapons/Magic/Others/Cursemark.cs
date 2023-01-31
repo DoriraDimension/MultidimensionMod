@@ -1,6 +1,7 @@
 ﻿using MultidimensionMod.Projectiles.Magic;
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Rarities;
 using MultidimensionMod.Tiles;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -31,7 +32,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.noMelee = true;
 			Item.knockBack = 0f;
 			Item.value = Item.sellPrice(silver: 12);
-			Item.rare = ItemRarityID.Pink;
+			Item.rare = ModContent.RarityType<BossSoulItem>();
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<Curse>();
 		}

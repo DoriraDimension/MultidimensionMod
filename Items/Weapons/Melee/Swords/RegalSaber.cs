@@ -2,13 +2,10 @@
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Tiles;
-using MultidimensionMod.Projectiles.Melee.Spears;
-using Microsoft.Xna.Framework;
+using MultidimensionMod.Rarities;
 using Terraria;
 using Terraria.ID;
-using Terraria.DataStructures;
 using Terraria.ModLoader;
-using Terraria.Audio;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -33,20 +30,9 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.knockBack = 2;
 			Item.autoReuse = true;
 			Item.value = Item.sellPrice(silver: 30);
-			Item.rare = ItemRarityID.Green;
+			Item.rare = ModContent.RarityType<BossSoulItem>();
 			Item.UseSound = SoundID.Item1;
 			Item.crit = 31;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.BossItem;
-				}
-			}
 		}
 
 		public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)

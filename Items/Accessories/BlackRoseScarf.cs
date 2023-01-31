@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MultidimensionMod.Rarities;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -19,18 +20,11 @@ namespace MultidimensionMod.Items.Accessories
 			Item.height = 44;
 			Item.accessory = true;
 			Item.value = Item.sellPrice(gold: 7);
-			Item.rare = ItemRarityID.Lime;
+			Item.rare = ModContent.RarityType<ForbiddenArtifact>();
 		}
 
 		public override void ModifyTooltips(List<TooltipLine> list)
 		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.ForbiddenArtifact;
-				}
-			}
 			List<string> hotkey = MDKeybinds.RoseScarfKey.GetAssignedKeys();
 			foreach (TooltipLine line2 in list)
 			{

@@ -1,6 +1,7 @@
 ﻿using MultidimensionMod.Projectiles.Melee.Swords;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Tiles;
+using MultidimensionMod.Rarities;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
@@ -28,22 +29,11 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.knockBack = 6;
 			Item.autoReuse = true;
 			Item.value = Item.sellPrice(gold: 10);
-			Item.rare = ItemRarityID.Lime;
+			Item.rare = ModContent.RarityType<ForbiddenArtifact>();
 			Item.UseSound = SoundID.Item71;
 			Item.crit = 10;
 			Item.shoot = ModContent.ProjectileType<HiddenSunScythe>();
 			Item.shootSpeed = 15f;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.ForbiddenArtifact;
-				}
-			}
 		}
 
 		public override void AddRecipes()

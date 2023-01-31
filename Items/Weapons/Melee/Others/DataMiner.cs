@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using MultidimensionMod.Projectiles.Melee.Others;
+﻿using MultidimensionMod.Projectiles.Melee.Others;
+using MultidimensionMod.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -28,23 +28,12 @@ namespace MultidimensionMod.Items.Weapons.Melee.Others
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.knockBack = 2;
 			Item.value = Item.sellPrice(platinum: 1);
-			Item.rare = -12;
+			Item.rare = ModContent.RarityType<DoriraRarity>();
 			Item.UseSound = SoundID.Item23;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<DataMinerProj>();
 			Item.shootSpeed = 20f;
 			Item.crit = 77;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.Dorira;
-				}
-			}
 		}
 	}
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MultidimensionMod.Rarities;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -26,19 +27,8 @@ namespace MultidimensionMod.Items.Placeables
 			Item.useTime = 10;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
-			Item.rare = ItemRarityID.Cyan;
+			Item.rare = ModContent.RarityType<DoriraRarity>();
 			Item.createTile = ModContent.TileType<Tiles.DimensionalForge>();
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.Dorira;
-				}
-			}
 		}
 	}
 }

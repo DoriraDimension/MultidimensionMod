@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Projectiles.Melee.Swords;
+using MultidimensionMod.Rarities;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using Terraria;
@@ -26,7 +27,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.useStyle = ItemUseStyleID.Rapier;
 			Item.knockBack = 2;
 			Item.value = Item.sellPrice(silver: 78);
-			Item.rare = ItemRarityID.LightRed;
+			Item.rare = ModContent.RarityType<ForbiddenArtifact>();
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.noMelee = true;
@@ -34,17 +35,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.crit = 5;
 			Item.shoot = ModContent.ProjectileType<HexStab>();
 			Item.shootSpeed = 3.50f;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.ForbiddenArtifact;
-				}
-			}
 		}
 
 		public override void MeleeEffects(Player player, Rectangle hitbox)

@@ -2,6 +2,7 @@
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Tiles;
 using MultidimensionMod.Projectiles.Magic;
+using MultidimensionMod.Rarities;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -35,20 +36,9 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.noMelee = true;
 			Item.noUseGraphic = true;
 			Item.channel = true;
-			Item.rare = ItemRarityID.Pink;
+			Item.rare = ModContent.RarityType<BossSoulItem>();
 			Item.shoot = ModContent.ProjectileType<MythosStaff>();
 			Item.shootSpeed = 0f;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.BossItem;
-				}
-			}
 		}
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)

@@ -7,7 +7,7 @@ namespace MultidimensionMod
 		public MDCurrency(int coinItemID, long currencyCap, string CurrencyTextKey) : base(coinItemID, currencyCap)
 		{
 			this.CurrencyTextKey = CurrencyTextKey;
-			CurrencyTextColor = MDRarity.Dorira;
+			CurrencyTextColor = MDColors.DoriraColor;
 		}
 	}
 }

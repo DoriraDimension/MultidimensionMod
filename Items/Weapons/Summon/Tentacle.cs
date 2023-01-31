@@ -2,6 +2,7 @@
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Tiles;
 using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -29,21 +30,10 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.noUseGraphic = true;
 			Item.noMelee = true;
 			Item.value = Item.sellPrice(gold: 18);
-			Item.rare = ItemRarityID.Purple;
+			Item.rare = ModContent.RarityType<BossSoulItem>();
 			Item.DefaultToWhip(ModContent.ProjectileType<TentacleWhip>(), 45, 2, 4);
 			Item.shootSpeed = 8;
 
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.BossItem;
-				}
-			}
 		}
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)

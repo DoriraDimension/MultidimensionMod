@@ -3,6 +3,7 @@ using MultidimensionMod.Projectiles.Ranged;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Tiles;
+using MultidimensionMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -32,24 +33,13 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 			Item.noMelee = true;
 			Item.knockBack = 0.3f;
 			Item.value = Item.sellPrice(silver: 30);
-			Item.rare = ItemRarityID.Green;
+			Item.rare = ModContent.RarityType<BossSoulItem>();
 			Item.UseSound = SoundID.Item34;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<GelCloud>();
 			Item.shootSpeed = 30f;
 			Item.useAmmo = AmmoID.Gel;
 			Item.consumeAmmoOnLastShotOnly = true;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.BossItem;
-				}
-			}
 		}
 
 		public override Vector2? HoldoutOffset()

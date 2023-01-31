@@ -1,5 +1,6 @@
 ﻿using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Tiles;
+using MultidimensionMod.Rarities;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -28,21 +29,10 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.useAnimation = 15;
 			Item.knockBack = 15;
 			Item.value = Item.sellPrice(gold: 70);
-			Item.rare = ItemRarityID.Purple;
+			Item.rare = ModContent.RarityType<ForbiddenArtifact>();
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.crit = 70; 
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.ForbiddenArtifact;
-				}
-			}
 		}
 
 		public override bool AltFunctionUse(Player player)

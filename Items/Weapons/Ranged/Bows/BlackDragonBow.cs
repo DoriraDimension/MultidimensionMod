@@ -1,7 +1,6 @@
 using MultidimensionMod.Projectiles.Ranged;
-using System.Collections.Generic;
+using MultidimensionMod.Rarities;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
@@ -26,7 +25,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 			Item.noMelee = true; 
 			Item.knockBack = 4;
 			Item.value = Item.sellPrice(gold: 30);
-			Item.rare = ItemRarityID.Purple; 
+			Item.rare = ModContent.RarityType<ForbiddenArtifact>();
 			Item.UseSound = SoundID.Item5; 
 			Item.autoReuse = true; 
 			Item.shoot = 10; 

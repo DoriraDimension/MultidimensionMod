@@ -1,6 +1,7 @@
 ﻿using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Tiles;
+using MultidimensionMod.Rarities;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
@@ -24,18 +25,7 @@ namespace MultidimensionMod.Items.Accessories
 			Item.height = 42;
 			Item.accessory = true;
 			Item.value = Item.sellPrice(gold: 12);
-			Item.rare = ItemRarityID.Pink;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.BossItem;
-				}
-			}
+			Item.rare = ModContent.RarityType<BossSoulItem>();
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)

@@ -3,6 +3,7 @@ using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Projectiles.Summon.Minions;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Tiles;
+using MultidimensionMod.Rarities;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -34,22 +35,11 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.useAnimation = 36;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.value = Item.sellPrice(gold: 4);
-			Item.rare = ItemRarityID.LightRed;
+			Item.rare = ModContent.RarityType<BossSoulItem>();
 			Item.UseSound = SoundID.Item97;
 			Item.noMelee = true;
 			Item.buffType = ModContent.BuffType<MaskBuff>();
 			Item.shoot = ModContent.ProjectileType<GolemMask>();
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.BossItem;
-				}
-			}
 		}
 
 		public override bool CanUseItem(Player player)

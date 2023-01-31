@@ -7,6 +7,7 @@ using MultidimensionMod.Items.Weapons.Melee.Swords;
 using MultidimensionMod.Items.Weapons.Magic.Staffs;
 using MultidimensionMod.Items.Weapons.Typeless;
 using MultidimensionMod.Items.Potions;
+using MultidimensionMod.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -25,19 +26,8 @@ namespace MultidimensionMod.Items.Bags
 		{
 			Item.width = 26;
 			Item.height = 30;
-			Item.rare = ItemRarityID.Blue;
+			Item.rare = ModContent.RarityType<DoriraRarity>();
 			Item.maxStack = 99;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine item in list)
-			{
-				if (item.Mod == "Terraria" && item.Name == "ItemName")
-				{
-					item.OverrideColor = MDRarity.Dorira;
-				}
-			}
 		}
 
 		public override bool CanRightClick()

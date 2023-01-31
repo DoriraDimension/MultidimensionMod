@@ -3,6 +3,7 @@ using MultidimensionMod.Projectiles.Ranged;
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Tiles;
+using MultidimensionMod.Rarities;
 using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
@@ -33,23 +34,12 @@ namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 			Item.noMelee = true;
 			Item.knockBack = 6;
 			Item.value = Item.sellPrice(gold: 7);
-			Item.rare = ItemRarityID.Pink;
+			Item.rare = ModContent.RarityType<BossSoulItem>();
 			Item.UseSound = SoundID.Item11;
 			Item.autoReuse = true;
 			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 12f;
 			Item.useAmmo = AmmoID.Rocket;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.BossItem;
-				}
-			}
 		}
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)

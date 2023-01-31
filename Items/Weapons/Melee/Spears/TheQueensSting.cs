@@ -2,6 +2,7 @@
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Tiles;
+using MultidimensionMod.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -28,7 +29,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 			Item.width = 70;
 			Item.height = 70;
 			Item.scale = 1f;
-			Item.rare = ItemRarityID.Green;
+			Item.rare = ModContent.RarityType<BossSoulItem>();
 			Item.value = Item.sellPrice(gold: 6);
 			Item.noMelee = true;
 			Item.noUseGraphic = true;

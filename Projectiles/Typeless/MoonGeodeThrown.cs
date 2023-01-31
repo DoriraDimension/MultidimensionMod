@@ -56,9 +56,25 @@ namespace MultidimensionMod.Projectiles.Typeless
 			{
 				if (Projectile.owner == Main.myPlayer)
 				{
-					int choice = Main.rand.Next(1);
+					int choice = Main.rand.Next(4);
 					if (choice == 0)
 					{
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.FragmentSolar, 10);
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.LunarOre, 40);
+					}
+					else if (choice == 1)
+                    {
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.FragmentVortex, 10);
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.LunarOre, 40);
+					}
+					else if (choice == 2)
+                    {
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.FragmentNebula, 10);
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.LunarOre, 40);
+					}
+					else if (choice == 3)
+                    {
+						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.FragmentStardust, 10);
 						Item.NewItem(new EntitySource_Loot(Projectile), Projectile.position, Projectile.Size, ItemID.LunarOre, 40);
 					}
 				}

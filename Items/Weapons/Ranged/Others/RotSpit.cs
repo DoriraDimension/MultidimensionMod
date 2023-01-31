@@ -2,6 +2,7 @@
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Tiles;
+using MultidimensionMod.Rarities;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using Terraria;
@@ -31,23 +32,12 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 			Item.noMelee = true;
 			Item.knockBack = 1;
 			Item.value = Item.sellPrice(silver: 26);
-			Item.rare = ItemRarityID.Green;
+			Item.rare = ModContent.RarityType<BossSoulItem>();
 			Item.UseSound = SoundID.NPCDeath13;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<RottenSpit>();
 			Item.shootSpeed = 65f;
 			Item.crit = 13;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.BossItem;
-				}
-			}
 		}
 
 		public override Vector2? HoldoutOffset()

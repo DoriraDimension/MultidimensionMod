@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
@@ -32,17 +31,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.shoot = ProjectileID.MiniSharkron;
 			Item.shootSpeed = 11f;
 			Item.crit = 12;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.ForbiddenArtifact;
-				}
-			}
 		}
 
 		public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)

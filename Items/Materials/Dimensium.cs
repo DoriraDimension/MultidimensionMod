@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MultidimensionMod.Rarities;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -21,7 +22,7 @@ namespace MultidimensionMod.Items.Materials
 			Item.width = 22;
 			Item.height = 24;
 			Item.maxStack = 9999;
-			Item.rare = ItemRarityID.Green;
+			Item.rare = ModContent.RarityType<DoriraRarity>();
 			Item.useTurn = true;
 			Item.autoReuse = true;
 			Item.useAnimation = 15;
@@ -29,17 +30,6 @@ namespace MultidimensionMod.Items.Materials
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
 			Item.createTile = ModContent.TileType<Tiles.Ores.Dimensium>();
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.Dorira;
-				}
-			}
 		}
 
 		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)

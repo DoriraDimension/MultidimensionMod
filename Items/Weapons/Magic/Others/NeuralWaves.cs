@@ -2,6 +2,7 @@
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Tiles;
+using MultidimensionMod.Rarities;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -35,23 +36,12 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.knockBack = 0;
 			Item.noUseGraphic = true;
 			Item.value = Item.sellPrice(gold: 5);
-			Item.rare = ItemRarityID.Green;
+			Item.rare = ModContent.RarityType<BossSoulItem>();
 			Item.UseSound = SoundID.Item20;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<NeuralWave>();
 			Item.shootSpeed = 10f;
 			Item.crit = 8;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.BossItem;
-				}
-			}
 		}
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)

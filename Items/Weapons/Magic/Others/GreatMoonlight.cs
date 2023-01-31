@@ -3,6 +3,7 @@ using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Projectiles.Magic;
 using MultidimensionMod.Dusts;
 using MultidimensionMod.Tiles;
+using MultidimensionMod.Rarities;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -32,21 +33,10 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.knockBack = 6;
 			Item.autoReuse = true;
 			Item.value = Item.sellPrice(gold: 4);
-			Item.rare = ItemRarityID.Cyan;
+			Item.rare = ModContent.RarityType<BossSoulItem>();
 			Item.UseSound = SoundID.Item1;
 			Item.shoot = ModContent.ProjectileType<MoonlightWave>();
 			Item.shootSpeed = 15f;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.BossItem;
-				}
-			}
 		}
 
 		public override void MeleeEffects(Player player, Rectangle hitbox)

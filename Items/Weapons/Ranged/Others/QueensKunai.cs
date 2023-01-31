@@ -2,6 +2,7 @@
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Tiles;
+using MultidimensionMod.Rarities;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -33,22 +34,11 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 			Item.knockBack = 2;
 			Item.noUseGraphic = true;
 			Item.value = Item.sellPrice(gold: 5);
-			Item.rare = ItemRarityID.LightRed;
+			Item.rare = ModContent.RarityType<BossSoulItem>();
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<QueenKunai>();
 			Item.shootSpeed = 20f;
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					Item.OverrideColor = MDRarity.BossItem;
-				}
-			}
 		}
 
 		public override void AddRecipes()
