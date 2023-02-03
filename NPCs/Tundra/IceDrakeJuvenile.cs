@@ -34,8 +34,8 @@ namespace MultidimensionMod.NPCs.Tundra
 		{
 			NPC.friendly = true;
 			NPC.dontTakeDamageFromHostiles = true;
-			NPC.width = 54;
-			NPC.height = 56;
+			NPC.width = 34;
+			NPC.height = 22;
 			NPC.damage = 16;
 			NPC.defense = 13;
 			NPC.lifeMax = 50;
@@ -66,6 +66,8 @@ namespace MultidimensionMod.NPCs.Tundra
 
 			if (!hasBeenFed && NPC.life < NPC.lifeMax)
             {
+				NPC.width = 54;
+				NPC.height = 56;
 				NPC.friendly = false;
 				NPC.knockBackResist = 0.6f;
 				Vector2 victor = new(NPC.position.X + (NPC.width * 0.5f), NPC.position.Y + (NPC.height * 0.5f));

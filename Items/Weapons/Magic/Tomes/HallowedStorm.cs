@@ -26,7 +26,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 			Item.DamageType = DamageClass.Magic;
 			Item.knockBack = 1f;
 			Item.mana = 6;
-			Item.width = 40;
+			Item.width = 34;
 			Item.height = 38;
 			Item.useTime = 18;
 			Item.useAnimation = 18;
