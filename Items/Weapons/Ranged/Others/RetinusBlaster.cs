@@ -23,7 +23,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 		public override void SetDefaults()
 		{
 			Item.DamageType = DamageClass.Ranged;
-			Item.damage = 120;
+			Item.damage = 340;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.useTime = 40;
 			Item.useAnimation = 40;

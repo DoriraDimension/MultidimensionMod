@@ -19,7 +19,7 @@ namespace MultidimensionMod.NPCs.TownPets
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Ice Drake Juvenile");
-            Main.npcFrameCount[Type] = 9;
+            Main.npcFrameCount[Type] = 6;
             NPCID.Sets.ExtraFramesCount[Type] = 0;
             NPCID.Sets.AttackFrameCount[Type] = 0;
             NPCID.Sets.ExtraTextureCount[Type] = 0;
@@ -40,6 +40,8 @@ namespace MultidimensionMod.NPCs.TownPets
             NPC.defense = 15;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
+            NPC.width = 36;
+            NPC.height = 32;
         }
 
         public override string GetChat()
@@ -72,23 +74,49 @@ namespace MultidimensionMod.NPCs.TownPets
         {
             if (Main.player[Main.myPlayer].talkNPC > -1 && Main.npc[Main.player[Main.myPlayer].talkNPC].type == Type)
                 Main.player[Main.myPlayer].isTheAnimalBeingPetSmall = true;
+            if (Main.rand.NextBool(5000))
+            {
+                Item.NewItem(NPC.GetSource_Loot(), NPC.position, NPC.Size, ModContent.ItemType<FrostScale>(), 1);
+            }
         }
 
         private int frame;
+        private int frameCounter = 0;
+
+        public int Frame(int firstFrame, int lastFrame, int speed)
+        {
+            frameCounter++;
+            if (frameCounter > speed)
+            {
+                frameCounter = 0;
+                frame++;
+                if (frame > lastFrame)
+                    frame = firstFrame;
+            }
+
+            return frame;
+        }
+
         public override void FindFrame(int frameHeight)
         {
             NPC.spriteDirection = NPC.direction;
-            if (++NPC.frameCounter > 8)
-            {
-                frame++;
-                NPC.frameCounter = 0;
-                if (frame > 9)
-                {
-                    frame = 0;
-                }
-            }
 
+            switch (NPC.ai[0])
+            {
+                case 0:
+                    NPC.frame.Y = frameHeight * Frame(0, 0, 6);
+                    break;
+
+                case 1:
+                    NPC.frame.Y = frameHeight * Frame(1, 5, 6);
+                    break;
+
+                default:
+                    NPC.frame.Y = frameHeight * Frame(0, 0, 6);
+                    break;
+            }
         }
+
         public override List<string> SetNPCNameList()
         {
             return new List<string>() {
@@ -98,7 +126,8 @@ namespace MultidimensionMod.NPCs.TownPets
                 "Sheegoth",
                 "Rundas",
                 "Kyu",
-                "Tundrana"
+                "Tundrana",
+                "UwU"
             };
         }
 

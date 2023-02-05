@@ -35,7 +35,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			Item.UseSound = SoundID.Item20;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<Icicle>();
-			Item.shootSpeed = 15f;
+			Item.shootSpeed = 20f;
 			Item.crit = 8;
 		}
 

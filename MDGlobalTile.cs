@@ -1,4 +1,4 @@
-﻿using MultidimensionMod.Tiles.FrozenUnderworld;
+﻿using MultidimensionMod.Tiles.Biomes.FrozenUnderworld;
 using MultidimensionMod.Items.Weapons.Typeless;
 using Terraria;
 using Terraria.ID;

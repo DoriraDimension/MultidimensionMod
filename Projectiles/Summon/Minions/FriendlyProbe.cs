@@ -249,6 +249,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 				Projectile.ai[1] += 1f;
 				if (Main.myPlayer == Projectile.owner && Collision.CanHitLine(Projectile.position, Projectile.width, Projectile.height, vector, 0, 0))
 				{
+					SoundEngine.PlaySound(SoundID.Item33 with { Volume = 0.4f }, player.position);
 					Vector2 vector2 = vector - Projectile.Center;
 					vector2.Normalize();
 					vector2 *= num17;
