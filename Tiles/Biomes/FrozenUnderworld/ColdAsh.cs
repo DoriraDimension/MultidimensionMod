@@ -19,6 +19,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			Main.tileMerge[TileID.Ash][Type] = true;
 			Main.tileMerge[Type][ModContent.TileType<AbyssalHellstonePlaced>()] = true;
 			Main.tileMerge[Type][ModContent.TileType<SolidMagmaPlaced>()] = true;
+			Main.tileMerge[Type][ModContent.TileType<GlazedObsidianBrickPlaced>()] = true;
 			Main.tileMergeDirt[Type] = true;
 		}
 

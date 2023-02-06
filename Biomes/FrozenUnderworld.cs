@@ -10,7 +10,7 @@ namespace MultidimensionMod.Biomes
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
 
-        //public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => ModContent.GetInstance<DepthsUnderworldBackground?>();
+        public override Color? BackgroundColor => new(0, 0, 0);
 
         public override int Music => MusicLoader.GetMusicSlot(Mod, "Sounds/Music/FrozenUnderworld");
         public override string MapBackground => BackgroundPath;
@@ -24,9 +24,20 @@ namespace MultidimensionMod.Biomes
             DisplayName.SetDefault("Frozen Underworld");
         }
 
+        public override void SpecialVisuals(Player player, bool isActive)
+        {
+            if (isActive)
+            {
+                if (Main.UseStormEffects)
+                {
+                    player.ManageSpecialBiomeVisuals("Blizzard", true);
+                }
+            }
+        }
+
         public override bool IsBiomeActive(Player player)
         {
-            bool b1 = ModContent.GetInstance<FrozenUnderworldTileCount>().FUCount >= 60;
+            bool b1 = ModContent.GetInstance<FrozenUnderworldTileCount>().FUCount >= 100;
 
             bool b2 = player.ZoneUnderworldHeight;
             return b1 && b2;
@@ -39,9 +50,9 @@ namespace MultidimensionMod.Biomes
 
         public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
         {
-            FUCount = tileCounts[ModContent.TileType<ColdAsh>()];
-            FUCount = tileCounts[ModContent.TileType<AbyssalHellstonePlaced>()];
-            FUCount = tileCounts[ModContent.TileType<GlazedObsidianPlaced>()];
+            FUCount = tileCounts[ModContent.TileType<ColdAsh>()]
+            + tileCounts[ModContent.TileType<AbyssalHellstonePlaced>()]
+            + tileCounts[ModContent.TileType<GlazedObsidianPlaced>()];
         }
     }
 }

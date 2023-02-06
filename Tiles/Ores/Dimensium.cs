@@ -15,6 +15,8 @@ namespace MultidimensionMod.Tiles.Ores
 			Main.tileShine2[Type] = true;
 			Main.tileShine[Type] = 975;
 			Main.tileMergeDirt[Type] = true;
+			Main.tileMerge[Type][TileID.Stone] = true;
+			Main.tileMerge[TileID.Stone][Type] = true;
 			Main.tileSolid[Type] = true;
 			Main.tileBlockLight[Type] = true;
 

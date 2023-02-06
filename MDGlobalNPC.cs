@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.NPCs.Tundra;
+using MultidimensionMod.Biomes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -102,6 +103,19 @@ namespace MultidimensionMod
 					}
 				}
 				Lighting.AddLight(npc.position, 0.1f, 0.2f, 0.7f);
+			}
+		}
+
+		public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)
+        {
+			if (spawnInfo.Player.InModBiome<FrozenUnderworld>())
+			{
+				pool.Clear();
+				//pool.Add(ModContent.NPCType<Ashton>(), 1f);
+				//pool.Add(ModContent.NPCType<IceDemon>(), 0.3f);
+				//pool.Add(ModContent.NPCType<Victim>(), 0.3f);
+				//pool.Add(ModContent.NPCType<VeilImp>(), 0.2f);
+				//pool.Add(ModContent.NPCType<Dusty>(), 0.1f);
 			}
 		}
 	}
