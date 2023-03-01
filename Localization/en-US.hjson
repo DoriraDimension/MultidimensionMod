@@ -1,0 +1,2438 @@
+
+Mods: {
+	MultidimensionMod: {
+		Biomes.FrozenUnderworld.DisplayName: Frozen Underworld
+
+		Buffs: {
+			RoseVenom: {
+				DisplayName: Rose Venom
+				Description: Your life is being consumed, but defense is increased.
+			}
+
+			BlazingSuffering: {
+				DisplayName: Blazing Suffering
+				Description: Your body is getting incinerated from the inside.
+			}
+
+			DrakePoison: {
+				DisplayName: Drakeblood Poison
+				Description: Toxificated blood is weakening you.
+			}
+
+			Madness: {
+				DisplayName: Madness
+				Description: You witnessed cosmic knowledge, its burning your mind away.
+			}
+
+			DarkRebelsBuff: {
+				DisplayName: Dark Rebel
+				Description: One of Smiley's trusted soldiers helps you in battle
+			}
+
+			DrakeBuff: {
+				DisplayName: Tame Ice Drake Juvenile
+				Description: A cute Ice Drake bby is MURDERING YOUR ENEMIES!
+			}
+
+			FleshrendingTerror: {
+				DisplayName: Terror Bee
+				Description: A malicious hunter is fighting for you
+			}
+
+			MaskBuff: {
+				DisplayName: Golem Mask
+				Description: A mask is masking for mask
+			}
+
+			OcramServantBuff: {
+				DisplayName: Forgotten Servant
+				Description: The servant of a long lost time is fighting for you
+			}
+
+			SandEleBuff: {
+				DisplayName: Lesser Sand Elemental
+				Description: A living ball of sand fights for you
+			}
+
+			IgnaenHeadBuff: {
+				DisplayName: Archtyrant's Head
+				Description: The head of a demonic lord is following you.
+			}
+
+			SmileyJrBuff: {
+				DisplayName: Smiley Jr
+				Description: You will take care of him now.
+			}
+
+			AnglersPower: {
+				DisplayName: Angler's power
+				Description: You are filled with the power of a true fisher.
+			}
+
+			AttackUp: {
+				DisplayName: Attack Up
+				Description: Increased offensive stats.
+			}
+
+			CalmMind: {
+				DisplayName: Calm Mind
+				Description: Madness has a harder time reaching your mind.
+			}
+
+			DimensionalShield: {
+				DisplayName: Dimensional Shield
+				Description: Your body is surrounded by a dimensional energy shield.
+			}
+
+			LifePower: {
+				DisplayName: Life Power
+				Description: You feel as if you could live forever.
+			}
+
+			MasterMage: {
+				DisplayName: Master Mage
+				Description: Magic abilities are stronger.
+			}
+
+			OceansBlessing: {
+				DisplayName: Oceans Blessing
+				Description: You can swim and breathe like a resident of the sea.
+			}
+
+			pap: {
+				DisplayName: lol
+				Description: you are immortal now.
+			}
+
+			PerfectLeader: {
+				DisplayName: Perfect Leader
+				Description: Increased summon damage.
+			}
+
+			WarriorsHeart: {
+				DisplayName: Warriors Heart
+				Description: Increased meele damage.
+			}
+		}
+
+		Items: {
+			AllKnowingEye: {
+				DisplayName: The all knowing Eye
+				Tooltip:
+					'''
+					Increases crit chance by 10%
+					Critical hits grant the hunter potion effect for a short time and inflict the target with ichor for 2 seconds.
+					'''
+			}
+
+			AstralTitansEyeJewel: {
+				DisplayName: Astral Titan's Eye Jewel
+				Tooltip:
+					'''
+					A jewel made to look like the eyes of the creation titan.
+					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen by 2. 
+					Increases invincibility time and rains down stars after getting hit.
+					'''
+			}
+
+			BaitLeaf: {
+				DisplayName: Bait Leaf
+				Tooltip:
+					'''
+					A aromatic leaf from another dimension, its strong scent can even lure in bigger predators.
+					These might be useful to attract helpers, but be aware of possible stronger foes getting attracted too.
+					Gives +1 minion slot
+					'''
+			}
+
+			BlackRoseScarf: {
+				DisplayName: Black Rose Scarf
+				Tooltip:
+					'''
+					Roses are as beautiful as they are dangerous.
+					Reflects 45% of damage back to the enemy if they touch you
+					This text will be replaced by the hotkey tooltip
+					While under the effects of the toxins, you gain a 25% buff to your damage reflection as well as 20 defense
+					'''
+			}
+
+			ColdDesertShield: {
+				DisplayName: Cold Desert Shield
+				Tooltip:
+					'''
+					Combining both, desert and frost magic results in a strong protecting shield.
+					Increases all damage and crit chance by 4%, increases defense by 6 and damage reduction by 4% when in the Desert or Snow biome.
+					Increases defense by 4 when under 50% life
+					'''
+			}
+
+			CreationMedaillon: {
+				DisplayName: Creation Medaillon
+				Tooltip:
+					'''
+					A replica of the creation medaillon, not as powerful as the original but often used as a talisman for good fortune.
+					The medaillon resembles the deity circle, a group of powerful beings where every triangle stands for one deity while the eye resembles the creation titan.
+					Increases all damage by 10% and crit chance by 10%.
+					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen by 2.
+					Increases invincibility time and rains down stars after getting hit. 
+					Gives a variety of additional stat bonuses.
+					'''
+			}
+
+			DesertNecklace: {
+				DisplayName: Desert Necklace
+				Tooltip:
+					'''
+					A magical necklace, created with the mana infused sand from a Lesser Sand Elemental.
+					It is unknown why the gem only reacts to the dry aura of deserts so are its actual origins.
+					Increases all damage and crit chance by 4% when in the Desert.
+					'''
+			}
+
+			DiggerEngine: {
+				DisplayName: Digger Engine
+				Tooltip:
+					'''
+					A excavator engine used in the Destroyer to mine minerals incredibly fast.
+					Increases mining speed by 50% and spawns friendly Probes when you get hit.
+					'''
+			}
+
+			DrakescaleShield: {
+				DisplayName: Drakescale Shield
+				Tooltip:
+					'''
+					A shield reinforced with the scales of juvenile Ice Drakes.
+					Drakescales are strengthened in the cold icy winds of the tundra, so theres no wonder that natives often use them as protection.
+					Increases defense by 4 and damage reduction by 4% when in the Snow biome.
+					Gives immunity to chilled and frozen
+					'''
+			}
+
+			EyeofDesire: {
+				DisplayName: Eye of the Greed
+				Tooltip:
+					'''
+					A true greed can find every treasure.
+					One of the forbidden eyes.
+					Your greedy eyes can now see treasures.
+					Has a chance to inflict the Cursed debuff when you get it
+					'''
+			}
+
+			EyeoftheExplorer: {
+				DisplayName: Eye of the Explorer
+				Tooltip:
+					'''
+					A true adventurer can sense traps and danger.
+					One of the forbidden eyes.
+					You can see danger sources.
+					Has a chance to inflict the Slow debuff when you get it
+					'''
+			}
+
+			EyeoftheHunter: {
+				DisplayName: Eye of the Hunter
+				Tooltip:
+					'''
+					A true hunter can sense its prey.
+					One of the forbidden eyes.
+					You can now sense your enemies everywhere.
+					Has a chance to inflict the Weak debuff when you get it
+					'''
+			}
+
+			EyeoftheNightwalker: {
+				DisplayName: Eye of the Nightwalker
+				Tooltip:
+					'''
+					A true resident of the night can see through the darkness.
+					One of the forbidden eyes.
+					You now have improved vision at night.
+					Has a chance to inflict the Blackout debuff when you get it
+					'''
+			}
+
+			FishronToothNecklace: {
+				DisplayName: Fishron Tooth Necklace
+				Tooltip:
+					'''
+					A necklace made from the Teeth of a great ocean abomination,
+					as shown in depictions of the old sea civilisation, it was seen as a sign of strength.
+					Increases armor penetration by 12.
+					Grants the ability to breathe underwater
+					'''
+			}
+
+			GlowingFungiScarf: {
+				DisplayName: Glowing Fungi Scarf
+				Tooltip:
+					'''
+					A scarf made out of several mushrooms, it glows.
+					Increases ranged damage by 5%.
+					Increases max life by 10 when in a glowing mushroom biome
+					Increases max life by 25 and damage reduction by 5% when in a glowing mushroom biome in hardmode.
+					'''
+			}
+
+			HealthyCap: {
+				DisplayName: Healthy Cap
+				Tooltip:
+					'''
+					A healthy mushroom filled with healing potion liquid.
+					Increases the amount of HP healed by mushrooms to 60.
+					'''
+			}
+
+			IronUndies: {
+				DisplayName: Iron Undies
+				Tooltip: Useful for sitting upon a cactus.
+			}
+
+			MysticStone: {
+				DisplayName: Mystic Geode
+				Tooltip:
+					'''
+					A geode infused with potent dimensional magic, its presence empowers any thrown geode
+					Causes geodes to drop themself as a 1/3 chance instead of their regular loot
+					Grants geodes unique effects depending on their type
+					New effects are added when entering hardmode
+					Increases the chance of obtaining Geodes drastically
+					'''
+			}
+
+			OmniEye: {
+				DisplayName: Omni Eye
+				Tooltip:
+					'''
+					You... can... see. Beware not to get blinded by it's forbidden magic.
+					A old magician once created the Omni Eye, a magical object with big potential, but his experiments cursed it.
+					When the curse started to consume the magician, he split the eye into 4 fragments so that it will never be used again.
+					But with all forbidden things, curiosity will take over ones mind, resulting in copies of the forbidden eyes.
+					Highlights danger sources, enemies and treasures, also gives nightvision
+					'''
+			}
+
+			QueenBelt: {
+				DisplayName: Angelic Belt
+				Tooltip:
+					'''
+					Increases movement speed by 10%.
+					Restores a small fraction of flight time upon getting hit.
+					Seriously why do legless slimes keep having these?
+					'''
+			}
+
+			RoyalBelt: {
+				DisplayName: Royal Belt
+				Tooltip:
+					'''
+					Increases jump height and jump speed by 50%. 
+					The King Slime's belt, if he had legs.
+					'''
+			}
+
+			ShadowEmoji: {
+				DisplayName: Shadow Emoji
+				Tooltip:
+					'''
+					Smiley's ability to smile, even in the darkest days is truly inspiring.
+					Grants +2 minion slots and increases minion damage by 5%.
+					Increases movement speed by 15% when below 30% health.
+					'''
+			}
+
+			SidanesQuiver: {
+				DisplayName: Sidane's Quiver
+				Tooltip:
+					'''
+					The magitech quiver owned by the creator Sidane.
+					Sidane is one of the less serious members of the creator council, he would sometimes fly around on a hoverboard and use others inventions as targets for training.
+					Increases arrow damage by 10%, ranged damage by 10% and greatly increases arrow speed 
+					20% chance to not consume arrows.
+					'''
+			}
+
+			Socks: {
+				DisplayName: Socks
+				Tooltip: Don't let them get wet or you will be in eternal pain.
+			}
+
+			SpiderCurse: {
+				DisplayName: Spider Curse
+				Tooltip:
+					'''
+					A cursed artifact found in the spider caverns. 
+					Increases movement speed by 10% and gives +1 minion slot. 
+					You can stick to walls like a spider.
+					'''
+			}
+
+			SpiderFangNecklace: {
+				DisplayName: Spider Fang Necklace
+				Tooltip:
+					'''
+					A necklace made of spider fangs.
+					Increases armor penetration by 9.
+					'''
+			}
+
+			StarvingLarva: {
+				DisplayName: Starving Larva
+				Tooltip: You recover 5HP on enemy kills.
+			}
+
+			StinkyPaste: {
+				DisplayName: Stinky Paste
+				Tooltip:
+					'''
+					Some stinky weird paste from the jungle, it is weird how its bad smell attracts all kinds of little creatures.
+					Increases minion damage by 6%.
+					You can rub it onto your skin to smell like shit.
+					'''
+			}
+
+			StormHide: {
+				DisplayName: Storm Hide
+				Tooltip:
+					'''
+					The rubbery hide of stormy Eels makes them immune to the thunder that strikes down during storms.
+					The storm is a untamed force of nature and so are these creatures.
+					Gives immunity to electrified.
+					Increases movement speed by 8%, damage by 5% and defense by 5 when it is raining.
+					'''
+			}
+
+			SuperScent: {
+				DisplayName: Super Scent
+				Tooltip:
+					'''
+					The combination of stinky paste and a aromatic Leaf created a scent that smells, to say it nicely, interesting.
+					Increases minion damage by 6% and gives +1 minion slot.
+					Rub it onto your skin to smell worse than the human mind can comprehend
+					'''
+			}
+
+			ThornScarf: {
+				DisplayName: Thorn Scarf
+				Tooltip:
+					'''
+					Old natives of the jungle would wear this to hurt animals that attack them but would also hurt themself,
+					a small price to pay to be able to escape a attacking predator.
+					Reflects 15% of damage back to the enemy if they touch you
+					'''
+			}
+
+			InfiniteGelTank: {
+				DisplayName: Infinite Gel Tank
+				Tooltip: A tank with integrated gel fabricator, you will never run out of gel anymore.
+			}
+
+			TideArrow: {
+				DisplayName: Tide Arrow
+				Tooltip: this arrow does arrotic stuff. what...?
+			}
+
+			NeroBreastplate: {
+				DisplayName: Nero Breastplate
+				Tooltip:
+					'''
+					A breastplate created from old blueprints found at the shores. The ancient depictions show brave warriors defending their home.
+					Increases crit chance by 15%.
+					'''
+			}
+
+			NeroGreaves: {
+				DisplayName: Nero Greaves
+				Tooltip:
+					'''
+					Greaves created from old blueprints found at the shores. The ancient depictions show brave warriors defending their home.
+					Increases movement speed by 8%.
+					'''
+			}
+
+			NeroHammerheadMask: {
+				DisplayName: Nero Hammerhead Mask
+				Tooltip:
+					'''
+					A mask created from old blueprints found at the shores. The ancient depictions show brave warriors defending their home.
+					Increases magic damage by 18% and increases max mana by 100.
+					'''
+			}
+
+			NeroLanternHelm: {
+				DisplayName: Nero Lantern Helm
+				Tooltip:
+					'''
+					A helm created from old blueprints found at the shores. The ancient depictions show brave warriors defending their home.
+					Increases minion damage by 18%.
+					'''
+			}
+
+			NeroPredatorHead: {
+				DisplayName: Nero Predator Head
+				Tooltip:
+					'''
+					A head helm created from old blueprints found at the shores. The ancient depictions show brave warriors defending their home.
+					Increases ranged damage by 18%.
+					'''
+			}
+
+			NeroShellHelmet: {
+				DisplayName: Nero Shell Helmet
+				Tooltip:
+					'''
+					A helmet created from old blueprints found at the shores. The ancient depictions show brave warriors defending their home.
+					Increases melee damage by 18%.
+					'''
+			}
+
+			RaiderChest: {
+				DisplayName: Raider Chestplate
+				Tooltip: lore soon.
+			}
+
+			RaiderHelm: {
+				DisplayName: Raider Helmet
+				Tooltip: lore soon
+			}
+
+			RaiderLegs: {
+				DisplayName: Raider Greaves
+				Tooltip: lore soon.
+			}
+
+			EnergyFish: {
+				DisplayName: Energy Fish
+				Tooltip:
+					'''
+					A fish charged with the lowest tier of Dimensional Energy.
+					Right click to extract its energy.
+					'''
+			}
+
+			SusPackage: {
+				DisplayName: Mysterious Gift
+				Tooltip: A weird package that you found next to you, it contains some useful beginner items
+			}
+
+			BabyGlowmarinItem: {
+				DisplayName: Baby Glowmarin
+				Tooltip: A juvenile Glowmarin, it's glow organs are already developed.
+			}
+
+			GlowingKelpHook: {
+				DisplayName: Glowing Kelp Hook
+				Tooltip: Kelp is said to be very grabby.
+			}
+
+			AbyssalHellstoneBar: {
+				DisplayName: Abyssal Hellstone Bar
+				Tooltip: Cold to the touch.
+			}
+
+			Blight2: {
+				DisplayName: Mad Titan's Soul
+				Tooltip: The soul of a being that attempted ascension, it probably got the furthest before devolving into this mess of a creature.
+			}
+
+			DarkMatterClump: {
+				DisplayName: Void Matter
+				Tooltip: The physical incarnation of the nothingness outside our plain of existence. There are strange crystals stuck inside the mass.
+			}
+
+			Dimensium: {
+				DisplayName: Dimensium
+				Tooltip:
+					'''
+					The most common dimensional energy in form of a crystal, mostly found when a being crosses the dimensional wall through an unstable rift.
+					A certain dimensional traveler might want this.
+					'''
+			}
+
+			EyeTendril: {
+				DisplayName: Eye Tendril
+				Tooltip: A tendril from the big eye.
+			}
+
+			FrostScale: {
+				DisplayName: Frost Scale
+				Tooltip:
+					'''
+					The scale of a juvenile ice drake, its cold and soft.
+					Ice Drake nest underground until they become too big for the small ice caves.
+					'''
+			}
+
+			IceblossomItem: {
+				DisplayName: Iceblossom
+				Tooltip:
+					'''
+					A kind of flora found in the Frozen Underworld, its ancestor, the Fireblossom, adapted to the environment to survive.
+					The influence of the icy magic made this plant dangerous to eat.
+					'''
+			}
+
+			MadnessFragment: {
+				DisplayName: Fragment of Madness
+				Tooltip: A fragment of a fragment LOL.
+			}
+
+			ManaInfusedSandstone: {
+				DisplayName: Mana Sandstone
+				Tooltip:
+					'''
+					A special type of stone, found inside of Lesser Sand Elementals, you can feel the magic flowing through it.
+					Lesser Sand Elementals are hostile against anyone who comes near their Desert.
+					Who knows how the old desert people didnt get attacked by them, if it's the elementals being tamed or even created by them.
+					'''
+			}
+
+			Mushmatter: {
+				DisplayName: Mushmatter
+				Tooltip:
+					'''
+					A juicy piece of Fungi infested flesh, could be useful.
+					It's somewhat terrifying how these glowing mushrooms can infect every living thing if they arent careful enough,
+					maybe a problem that should be dealed with before it gets out of hand.
+					'''
+			}
+
+			OldDustyBow: {
+				DisplayName: Old Dusty Bow
+				Tooltip:
+					'''
+					A worn bow, covered in sandy dust.
+					With some love and craftmanship it could be repaired
+					'''
+			}
+
+			OldFrozenStaff: {
+				DisplayName: Old Frozen Staff
+				Tooltip:
+					'''
+					A frozen staff that has lost its magic abilities.
+					With some love and craftmanship it could be repaired
+					'''
+			}
+
+			OldPetrifiedBlade: {
+				DisplayName: Old Petrified Blade
+				Tooltip:
+					'''
+					A blade that lost its fiery magic and turned to stone.
+					With some love and craftmanship it could be repaired
+					'''
+			}
+
+			OldStainedScythe: {
+				DisplayName: Old Stained Scythe
+				Tooltip:
+					'''
+					A old scythe made out of flesh, stained with blood.
+					With some love and craftmanship it could be repaired
+					'''
+			}
+
+			OldTaintedGun: {
+				DisplayName: Old Tainted Gun
+				Tooltip:
+					'''
+					A something that was a gun before it was abandoned to decay.
+					With some love and craftmanship it could be repaired
+					'''
+			}
+
+			Prismatine: {
+				DisplayName: Prismatine
+				Tooltip:
+					'''
+					A prismatic shard empowered by the Empress of Light,
+					it is rumored that they are Crystal Shards in their purest form
+					'''
+			}
+
+			TidalQuartz: {
+				DisplayName: Tidal Quartz
+				Tooltip:
+					'''
+					A gem found inside of oceanic creatures.
+					The unique minerals and bacteria inside the Terrarian oceans have a interesting effect on some animals,
+					as they form a light blue quartz like gem inside their bodies.
+					'''
+			}
+
+			VikingRelic: {
+				DisplayName: Viking Relic
+				Tooltip: A piece of icy history.
+			}
+
+			WeirdStone: {
+				DisplayName: Rune Stone
+				Tooltip: A rune stone with weird markings, it is sturdy enough to withstand a lot of energy.
+			}
+
+			MDUnbooler: {
+				DisplayName: MD Unbooler
+				Tooltip:
+					'''
+					Undowns all AA bools
+					Non-Consumable
+					'''
+			}
+
+			ArchtyrantsFace: {
+				DisplayName: Burning Antler
+				Tooltip: Summons the physical apparition of a Demonic being from far beyhond time and space.
+			}
+
+			CuteEmoji: {
+				DisplayName: Cute Emoji
+				Tooltip:
+					'''
+					Summons Smiley's adopted son.
+					At some point a young darkling decided to follow and imitate Smiley, thats when he decided to adopt him as his own child.
+					'''
+			}
+
+			AncientBannerItem: {
+				DisplayName: Ancient Banner
+				Tooltip: A ancient banner, its made of worn cloth and probably not ideal as furniture.
+			}
+
+			AncientDepictionItem: {
+				DisplayName: Ancient Depiction
+				Tooltip: A big and heavy sandstone tablet, it depicts a bird found in old desert legends, a bird of judgement.
+			}
+
+			AncientDragonSkull: {
+				DisplayName: Ancient Dragon Skull
+				Tooltip: A dragon skull from old times, it is no longer cursed.
+			}
+
+			BabyGlowmarinBanner: {
+				DisplayName: Baby Glowmarin Banner
+				Tooltip:
+					'''
+					These small adorable fish are from another dimension, they reproduce really fast.
+					Its small glow organs are already developed and work fine.
+					'''
+			}
+
+			BbyDrakeBanner: {
+				DisplayName: Ice Drake Juvenile Banner
+				Tooltip:
+					'''
+					Despite being young, these babies are very aggressive, they attack everything that enters their nesting grounds in the icy caves.
+					During blizzards they will fly outside and start hunting
+					'''
+			}
+
+			DarklingBanner: {
+				DisplayName: Darkling Banner
+				Tooltip:
+					'''
+					Darklings are beings of pure dark matter, they hide inside the dungeon while their leader roams the land in search of someone.
+					Darklings arent very strong alone and even kinda shy but can be threatening in groups.
+					Their original purpose is to spread darkness across the universe but they refuse to do so.
+					'''
+			}
+
+			FrostburnSlimeBanner: {
+				DisplayName: Frostburn Slime Banner
+				Tooltip: Flying slimes that mastered the power of frostburn, anyone who touches them will be in immense pain.
+			}
+
+			GilaBanner: {
+				DisplayName: Gilania Banner
+				Tooltip:
+					'''
+					Big reptiles that live in the desert, their bite is venomous.
+					They will rest underground at day to escape the blazing desert sun and come out at night.
+					'''
+			}
+
+			GlowmarinBanner: {
+				DisplayName: Otherworldly Glowmarin Banner
+				Tooltip: A fish from another dimension, they have glowing organs all over their body, suggesting that they originally lived in deeper waters.
+			}
+
+			InfestedBanner: {
+				DisplayName: Infested Abomination Banner
+				Tooltip:
+					'''
+					It was possibly once human but is now just a disgusting thing, these weird creatures are hosts to a local species of rot loving flies.
+					They drip green stinky goo everywhere they walk and spit disgusting liquid with every movement of their mouth.
+					'''
+			}
+
+			LesserSandEleBanner: {
+				DisplayName: Lesser Sand Elemental Banner
+				Tooltip:
+					'''
+					They are actually crystalized mana surrounded by sand, it's unclear yet if they were brought to life naturally or through magic experiments.
+					They will react hostile against every human that enters a desert.
+					During sandstorms they become even more active and travel to the surface, sometimes following Sand Elementals.
+					'''
+			}
+
+			ParrotLobsterBanner: {
+				DisplayName: Parrot Lobster Banner
+				Tooltip:
+					'''
+					Odd lobster species that lives near the shores, the have a beak which gives them their name.
+					Their meat is very tasty and can make a nice dish.
+					'''
+			}
+
+			StormEelBanner: {
+				DisplayName: Storm Front Eel Banner
+				Tooltip:
+					'''
+					The great storm eels, only active during storms, when the sea is harsh and unforgiving.
+					Many people believe they are scouts, scouts of someone or something deep under the ocean,
+					that is why these creatures are seen as an omen of even worse to come
+					'''
+			}
+
+			TridentBanner: {
+				DisplayName: Magic Trident Banner
+				Tooltip:
+					'''
+					A trident that moves on its own, basically a remnant of the old Sea civilisation.
+					Now that their owners are gone they aimlessly roam the ocean with no purpose.
+					'''
+			}
+
+			AbyssalHellstone: {
+				DisplayName: Abyssal Hellstone
+				Tooltip: Ice cold magic has turned this normally hot ore into a freezing rock.
+			}
+
+			AbyssalHellstoneBrick: {
+				DisplayName: Abyssal Hellstone Brick
+				Tooltip: what the brick.
+			}
+
+			ColdAshItem: {
+				DisplayName: Cold Ash
+				Tooltip: Normal underworld ash that was cooled down by icy winds.
+			}
+
+			GlazedObsidian: {
+				DisplayName: Glazed Obsidian
+				Tooltip: schmobdi.
+			}
+
+			GlazedObsidianBrick: {
+				DisplayName: Glazed Obsidian Brick
+				Tooltip: tasty.
+			}
+
+			IceblossomSeeds: {
+				DisplayName: Iceblossom Seeds
+				Tooltip: cold seeds that will grow into a Iceblossom when planted on Cold Ash
+			}
+
+			SolidMagma: {
+				DisplayName: Solid Magma
+				Tooltip: Lava but not hot.
+			}
+
+			BrokenAncientDepictionItem: {
+				DisplayName: Broken Ancient Depiction
+				Tooltip:
+					'''
+					A big and heavy sandstone tablet, it seems to be broken and it's difficult to guess what it is showing.
+					Dont drop it on the ground, its fragile
+					'''
+			}
+
+			CheliaPlushie: {
+				DisplayName: Chelia Plushie
+				Tooltip:
+					'''
+					A cuddly plushie that looks like a unknown friend of the Dimensional God.
+					Why is he selling these?
+					'''
+			}
+
+			CrimsonAltar: {
+				DisplayName: Crimson Altar
+				Tooltip: So you dont need to run to your local Crimson anymore.
+			}
+
+			DemonAltar: {
+				DisplayName: Demon Altar
+				Tooltip: So you dont need to run to your local Corruption anymore.
+			}
+
+			DimensionalForgeItem: {
+				DisplayName: Dimensional Forge
+				Tooltip:
+					'''
+					The forge of the dimensional god, it is able to craft Items with Dimensium.
+					Is capable of transmutation, needs Dimensium as fuel.
+					'''
+			}
+
+			FishLegacy: {
+				DisplayName: Legacy of the Fish
+				Tooltip: It is said that the first thing Dorira ever created... was a low quality fish.
+			}
+
+			EmptyKingsFabricator: {
+				DisplayName: Void Fabricator
+				Tooltip:
+					'''
+					Is used to craft Void Matter items.
+					All Darklings were once forged in such a fabricator by the Empty King, a entity unseen to this day.
+					'''
+			}
+
+			VoidMatterBathtub: {
+				DisplayName: Void Matter Bathtub
+				Tooltip: Bathe yourself in darkness and embrace the void.
+			}
+
+			VoidMatterBookcase: {
+				DisplayName: Void Matter Bookcase
+				Tooltip: The knowledge found in these books is of great value, but it impossible to read for normal human beings.
+			}
+
+			VoidMatterCandelabra: {
+				DisplayName: Void Matter Candelabra
+				Tooltip: A romantic shine on a date in darkness.
+			}
+
+			VoidMatterCandle: {
+				DisplayName: Void Matter Candle
+				Tooltip: Sometimes only a small light can help through the night.
+			}
+
+			VoidMatterChair: {
+				DisplayName: Void Matter Chair
+				Tooltip: When there is a dark table, there is a dark chair.
+			}
+
+			VoidMatterChamber: {
+				DisplayName: Void Matter Chamber
+				Tooltip: Sleep an eternal sleep for the king.
+			}
+
+			VoidMatterChandelier: {
+				DisplayName: Void Matter Chandelier
+				Tooltip: The most luxurious dark light source.
+			}
+
+			VoidMatterClock: {
+				DisplayName: Void Matter Clock
+				Tooltip: Does time even matter in timeless space?
+			}
+
+			VoidMatterDoor: {
+				DisplayName: Void Matter Door
+				Tooltip: You can close the door, but the void will always find a way in.
+			}
+
+			VoidMatterDresser: {
+				DisplayName: Void Matter Dresser
+				Tooltip: Which one will it be today, something dark or something darker
+			}
+
+			VoidMatterLamp: {
+				DisplayName: Void Matter Lamp
+				Tooltip: A shady man stands under a lamp outside, he asks you to come closer, will you?
+			}
+
+			VoidMatterLantern: {
+				DisplayName: Void Matter Lantern
+				Tooltip: A dark room, only a single light lights up the room in the center
+			}
+
+			VoidMatterPiano: {
+				DisplayName: Void Matter Piano
+				Tooltip: You can play the most beautiful music, but nobody will hear you.
+			}
+
+			VoidMatterPlatform: {
+				DisplayName: Void Matter Platform
+				Tooltip: A dark bridge that leads through the void, barely visible, beware not to fall.
+			}
+
+			VoidMatterSink: {
+				DisplayName: Void Matter Sink
+				Tooltip: ""
+			}
+
+			VoidMatterSofa: {
+				DisplayName: Void Matter Sofa
+				Tooltip: Take a break and relax on the void's most comfy sofa.
+			}
+
+			VoidMatterStorage: {
+				DisplayName: Void Matter Storage
+				Tooltip: The infinite void inside this storage can contain a finite amount of content.
+			}
+
+			VoidMatterTable: {
+				DisplayName: Void Matter Table
+				Tooltip: Enjoy a nice breakfast of condensed evil on this table of darkness.
+			}
+
+			VoidMatterWorkBench: {
+				DisplayName: Void Matter Workbench
+				Tooltip: Tools of darkness are crafted on this.
+			}
+
+			Glowseed: {
+				DisplayName: Glowseed
+				Tooltip: A small glowing seed from another world. Instantly grows a glowtree when placed
+			}
+
+			ColdHellBox: {
+				DisplayName: Music Box (Frozen Underworld)
+				Tooltip:
+					'''
+					Frigid Sins
+					By Dr.Voodoo
+					'''
+			}
+
+			SmileyTrophy: {
+				DisplayName: SmileyTrophy
+				Tooltip: A chunk of dark matter that is produced by Smiley's body.
+			}
+
+			AnglersPowerPotion: {
+				DisplayName: Angler's Power Potion
+				Tooltip:
+					'''
+					Increases your fishing power by 30.
+					Increases your chance to fish up crates by 10%. 
+					You can see what is biting your hook.
+					'''
+			}
+
+			CalmingPills: {
+				DisplayName: Calming Pills
+				Tooltip: Calms your mind and fends off madness.
+			}
+
+			CommandersDrink: {
+				DisplayName: Commander's Drink
+				Tooltip:
+					'''
+					Become a true leader. 
+					Increases summon damage by 20%.
+					'''
+			}
+
+			CookedEyeTendril: {
+				DisplayName: Cooked Tendril
+				Tooltip: Good for the eyes.
+			}
+
+			DimensionalShieldPotion: {
+				DisplayName: Dimensional Shield Potion
+				Tooltip:
+					'''
+					Gives you a small fragmant of a dimensional serpents power. 
+					Increases defense by 10 and reduces Damage taken by 20%.
+					'''
+			}
+
+			KFC: {
+				DisplayName: KFC
+				Tooltip: Kevin's Fried Chicken.
+			}
+
+			MasterMagePotion: {
+				DisplayName: Master Mage Potion
+				Tooltip: Increases magic damage by 20%, increases mana regeneration, increases max mana by 40 and mana star pickup range
+			}
+
+			MegaDemondrug: {
+				DisplayName: Mega Demondrug
+				Tooltip: Increases all damage and crit chance by 12% and increases knockback.
+			}
+
+			MerfolkPotion: {
+				DisplayName: Merfolk Potion
+				Tooltip:
+					'''
+					Let's you breath underwater. 
+					Gives you the ability to swim. 
+					Increases movement speed by 10%.
+					'''
+			}
+
+			PotionofLife: {
+				DisplayName: Potion of Life
+				Tooltip:
+					'''
+					Increases heart pickup range. 
+					Increases max HP by 50. 
+					Gives +2 life regen
+					'''
+			}
+
+			Rambam: {
+				DisplayName: Fucking overpowered super hyper mega ultra extreme hacker potion of absolute death limited edition
+				Tooltip: If you buy now, you get nothing for free.
+			}
+
+			WarriorsThermos: {
+				DisplayName: Warriors Thermos
+				Tooltip:
+					'''
+					A warm drink to strengthen your power. 
+					Increases melee damage by 20%.
+					'''
+			}
+
+			BeeSoul: {
+				DisplayName: Soul of a Queen Bee
+				Tooltip: These giant bees live deep in the jungle, disturb one of their larvae and feel their fury.
+			}
+
+			BrainSoul: {
+				DisplayName: Soul of the Brain
+				Tooltip:
+					'''
+					Like the related eye, this brain is supposed to test ones skills,
+					but rather than doing that it turned against its duty.
+					It resides in the bloody land of flesh, awaiting a new victim.
+					'''
+			}
+
+			CultistSoul: {
+				DisplayName: Soul of the Lunatic Cultist
+				Tooltip:
+					'''
+					The weird cultist who worships the moon wanted to reawaken something that was sealed away for hundreds of years,
+					but he got interrupted and absorbed the energy used for the ritual to fight instead.
+					The absorbed celestial energy smashed his soul into 4 pieces driving him even more insane.
+					There was no hope for this guy anymore, or perhaps never was.
+					'''
+			}
+
+			DeerSoul: {
+				DisplayName: Soul of the Deerclops
+				Tooltip:
+					'''
+					A weird creature that resembles a one eyed deer on two legs, it originates from another world.
+					The creature only appears in snowy regions and is extremely hostile towards anything that comes near it.
+					'''
+			}
+
+			DukeSoul: {
+				DisplayName: Soul of Duke Fishron
+				Tooltip:
+					'''
+					A weird pigron mutation from the seas, he seems to have some sort of connection to the Storm and it's aggressive scouts.
+					Perhaps the duke of the seas has a more important role than one thinks.
+					'''
+			}
+
+			EmpressSoul: {
+				DisplayName: Soul of the Light Empress
+				Tooltip: Big woman that has rainbows.
+			}
+
+			EyeSoul: {
+				DisplayName: Soul of the Eye
+				Tooltip:
+					'''
+					Yes, this eye actually had a soul on its own.
+					The ever watching eye, true eye or not, it doesnt matter, it was just waiting for another being to grow stronger.
+					Some people call it the Eye of Judgement, the first test.
+					'''
+			}
+
+			GolemSoul: {
+				DisplayName: Core of a Golem
+				Tooltip:
+					'''
+					A solar essence powered protector Golem, it is in no way perfect, as it was build poorly and rushed.
+					Who knows if it was made in a emergency.
+					'''
+			}
+
+			KingSlimeSoul: {
+				DisplayName: Soul of the King Slime
+				Tooltip:
+					'''
+					The soul of the king of everything slimy.
+					The King Slime was once a ordinary blue slime who wanted to become the ultimate being.
+					He absorbed hundreds of other slimes and grew larger and larger to become allmighty...
+					sadly blue slimes are very damn weak so the result wasnt too great in the end.
+					It's a mystery where he got his crown or who that idiot inside of him is.
+					'''
+			}
+
+			MetalWormSoul: {
+				DisplayName: Core of the Destroyer
+				Tooltip:
+					'''
+					A long forgotten mech in shape of a worm that was lying dormant for years deep underground, it was now reactivated when the forces of light and darkness were unleashed.
+					It's only purpose is to tunnel through the ground and destroy everything in it's path.
+					It's creator remains unknown... for now...
+					'''
+			}
+
+			MoonSoul: {
+				DisplayName: Soul of the Moon Lord
+				Tooltip:
+					'''
+					The one being the Lunatic Cultist wanted to reawake, it was waiting behind the moon, gathering new power to strike once more.
+					Tho the thing that was supposed to bring doom upon this world was nothing more than a weak imperfect incarnation of what it once has been.
+					'''
+			}
+
+			PlantSoul: {
+				DisplayName: Soul of Plantera
+				Tooltip:
+					'''
+					Plantera is the guardian of the jungle.
+					She will hunt down and kill anyone who damages the small pink bulbs that are scattered around the jungle,
+					as these are actually young plants that will eventually grow into another guardian, Plantera will defend them with her life.
+					'''
+			}
+
+			PrimeSoul: {
+				DisplayName: Core of Skeletron Prime
+				Tooltip:
+					'''
+					A long forgotten mech in shape of a curse that was lying dormant for years, it was now reactivated when the forces of light and darkness were unleashed.
+					Ages ago someone found a sample of the Skeletron curse and recreated it as a mechanical form with even more weapons.
+					It's creator remains unknown... for now...
+					'''
+			}
+
+			SkeletonSoul: {
+				DisplayName: Soul of Skeletron
+				Tooltip:
+					'''
+					A curse, Skeletron was nothing more than the physical incarnation of a old curse,
+					this curse binds the one poor soul that has to carry it, to guard the dark dungeon for all eternity.
+					A old clothier fell victim to this curse due to his own curiosity when he entered a place he wasnt supposed to enter.
+					The curses influence didn't just possess the old man but also created copies of its physical form to guard the dungeon on lower levels.
+					The origins of the curse lie deep within the dungeon itself, but only a fool would dare to find it.
+					'''
+			}
+
+			SmileySoulshard: {
+				DisplayName: Smiley Soulshard
+				Tooltip:
+					'''
+					A shard that reflects the soul of a dark being.
+					Smiley was born as a being of pure dark whos purpose was to spread darkness all across existence, but unlike his siblings, he refused to be evil.
+					When his creator wasn't paying attention he left his home together with a small army of Darklings.
+					Now he is hiding in the Terrarian world with hope to find a person strong enough to take on his creator.
+					'''
+			}
+
+			TwinSoul: {
+				DisplayName: Core of the Twins
+				Tooltip:
+					'''
+					A long forgotten pair of mechs in shape of two eyes that were lying dormant for years, it was now reactivated when the forces of light and darkness were unleashed.
+					Their design was likely inspired by the eye of judgement, their purpose was to scout certain targets.
+					It's creator remains unknown... for now...
+					'''
+			}
+
+			WallSoul: {
+				DisplayName: Soul of the Underworld
+				Tooltip:
+					'''
+					Ages ago the race of the underworld with great help of another race, captured and contained the forces of light and darkness.
+					In this world, neither light nor darkness are good or bad, but both forces possessed too much power over this place,
+					they were always conflicting with eachother which had influence on the world around them,
+					containing them got rid of these problems but now you unleashed them again... make sure you are prepared.
+					'''
+			}
+
+			WomanSlimeSoul: {
+				DisplayName: Soul of the Queen Slime
+				Tooltip:
+					'''
+					Where a king is, there is a queen, and this queen is a angel.
+					The queen of all slimes resides in the hallow, where she augmented herself with the magical energy of the land by putting a crystal inside her.
+					This crystal has heavenly powers, even giving her angelic wings to fly.
+					The crystal constantly increases her powers so who knows what she could have become if not taken care off.
+					'''
+			}
+
+			WormSoul: {
+				DisplayName: Soul of the World Eater
+				Tooltip:
+					'''
+					A giant worm, responsible for the chasms in the corruption.
+					This creature might be named Eater of Worlds but it never actually consumed anything that size,
+					it might got its name because of its size and habit to devour anything it finds.
+					The existence of this creature shows the potential of the corruption.
+					'''
+			}
+
+			MartianCellphone: {
+				DisplayName: Martian Cellphone
+				Tooltip:
+					'''
+					A cell phone with strange symbols on it, theres a phone number on the screen, call it?
+					Calls the Martians.
+					'''
+			}
+
+			MoonRuneStone: {
+				DisplayName: Moon Rune Stone
+				Tooltip:
+					'''
+					A rune only known inside the moon cult, it calls forth their insane leader.
+					This must be a very important artifact for the moon cult or else their leader wouldnt be so angry about you taking it.
+					'''
+			}
+
+			MothAttractor: {
+				DisplayName: Moth Attractor
+				Tooltip:
+					'''
+					It's interesting how easy it is to lure in moths with just light, so if we make a bigger lamp we attract bigger moths, right?.
+					Summons a Mothron during an eclipse. 
+					'''
+			}
+
+			PlantMurderStarterSet: {
+				DisplayName: Plant Murder Starter Set
+				Tooltip:
+					'''
+					Chop this little bulb to make the big plant very angry, now in a small starter pack for kids. No refund warranty.
+					Product is made and advertised by Dor Inc.
+					Summons Plantera. 
+					'''
+			}
+
+			UnknownEmoji: {
+				DisplayName: Unknown Emoji
+				Tooltip:
+					'''
+					A weird smiling pile of dark matter pulsing with energy.
+					Summons Smiley at night, the leader of Darklings.
+					Warning, boss is extremely unstable in multiplayer and will despawn in all cases.
+					'''
+			}
+
+			TitleTester: {
+				DisplayName: Title Tester
+				Tooltip: Tests titles I think I guess?
+			}
+
+			DarkMatterHamaxe: {
+				DisplayName: Void Matter Axe
+				Tooltip: A void matter axe that could cut down dark trees if they existed.
+			}
+
+			MatterMiner: {
+				DisplayName: Matter Miner
+				Tooltip: A void matter pickaxe made to mine any matter... and it still cannot mine anything thats higher tier than Cobalt or Palladium...
+			}
+
+			PanaqueMalluris: {
+				DisplayName: Panaque Malluris
+				Tooltip: A hamaxe created from old blueprints found at the shores. The ancient depictions show it being used to gather and shape wood.
+			}
+
+			ScarusFossores: {
+				DisplayName: Scarus Fossores
+				Tooltip: A pickaxe created from old blueprints found at the shores. The ancient depictions show it being used to carve out holes from reefs.
+			}
+
+			CelestialLepidoptera: {
+				DisplayName: Celestial Lepidoptera
+				Tooltip:
+					'''
+					A artifact shaped after the celestial deity of balance.
+					Can be used to change day to night and vice versa.
+					When needed the goddess sisters can combine their powers to create a energy projection resembling a giant purple colored goddess.
+					'''
+			}
+
+			MoonlightMoth: {
+				DisplayName: Moonlight Moth
+				Tooltip:
+					'''
+					A artifact shaped after a deity of balance, it's magic power scares the sun away
+					This butterfly resembles the blue goddess who is more childish and playful.
+					'''
+			}
+
+			SunlightButterfly: {
+				DisplayName: Sunlight Butterfly
+				Tooltip:
+					'''
+					A artifact shaped after a deity of balance, its magic power scares the moon away
+					This butterfly resembles the red goddess who is more mature and serious.
+					'''
+			}
+
+			CorrGuyMask: {
+				DisplayName: Infested Abomination Mask
+				Tooltip: Does not include flies.
+			}
+
+			DarkCloak: {
+				DisplayName: Lonely Warrior's Cloak
+				Tooltip: The cloak of a lonely dark warrior.
+			}
+
+			EelMask: {
+				DisplayName: Storm Front Eel Mask
+				Tooltip: You look super angry with this on.
+			}
+
+			LonelyWarriorsVisor: {
+				DisplayName: Lonely Warrior's Visor
+				Tooltip: The Visor of a dark warrior.
+			}
+
+			OldSeaCrown: {
+				DisplayName: Old Sea Crown
+				Tooltip: A old crown found in the ocean, it is guessed that it didnt belong to a king as there are many of these found.
+			}
+
+			SmileyMask: {
+				DisplayName: Smiley Mask
+				Tooltip: Maybe if you disguise as him, the Darklings wont attack you anymore.
+			}
+
+			VikingBoots: {
+				DisplayName: Viking Boots
+				Tooltip: lore soon.
+			}
+
+			VikingHelm: {
+				DisplayName: Viking Helm
+				Tooltip: lore soon
+			}
+
+			VikingPlate: {
+				DisplayName: Viking Chestplate
+				Tooltip: lore soon.
+			}
+
+			Retilazor: {
+				DisplayName: Retilazor
+				Tooltip: Fires 4 lazors per shot.
+			}
+
+			Cursemark: {
+				DisplayName: Cursemark
+				Tooltip: While you press the attack button, your mouse gains a damaging aura.
+			}
+
+			GreatMoonlight: {
+				DisplayName: Great Moonlight
+				Tooltip:
+					'''
+					The blue crystal blade is composed only of light.
+					The lunatic Cultist is a insane fanatic of the moon and so stole this legendary blade to use it himself,
+					tho the Great Moonlight seems to not belong in this world and instead obeys an otherworldly moon.
+					'''
+			}
+
+			Mythos: {
+				DisplayName: Lightstream Mythos
+				Tooltip:
+					'''
+					Spin a crystal halberd around you that generates up to 2 light rings that spin around you as well.
+					If both rings of light are present and you stop attacking, the holy magic within them will heal you for 10 HP
+					+This weapon belonged to Adel, the general of the Hallow, he was noble but also stubborn
+					He fought in the great war against his arch nemesis Vertrarius, that was until his soul was trapped inside the Wall of Flesh
+					'''
+			}
+
+			NeuralWaves: {
+				DisplayName: Neural Waves
+				Tooltip:
+					'''
+					A forbidden technique that transforms the user's thoughts into energy waves that burst out in all directions.
+					It is one of the forbidden techniques of old times, when the Creators did'nt knew the morals of life.
+					As told in old secret records, the spell gets stronger the more malicious the user's thoughts are, resulting in a devastating shockwave.
+					'''
+			}
+
+			SmileySmile: {
+				DisplayName: Smiley's Dark Blast
+				Tooltip:
+					'''
+					A smiling stare.
+					Shoots dark energy beams that explode on hit
+					'''
+			}
+
+			AtlanteanTrident: {
+				DisplayName: Atlantean Trident
+				Tooltip: fdjpydsfhgpsdfughaofidjüaefogip.
+			}
+
+			CoolingStaff: {
+				DisplayName: Cooling Staff
+				Tooltip: A staff that was restored from old relics, it shoots a icicle that bursts into 4 smaller icicles.
+			}
+
+			IceCrystalStaff: {
+				DisplayName: Ice Crystal Staff
+				Tooltip: A staff that was restored from old relics, it shoots 3 icicles that burst into smaller icicles.
+			}
+
+			LophiiformesBaculum: {
+				DisplayName: Lophiiformes Baculum
+				Tooltip: A staff created from old blueprints found at the shores. The ancient depictions show it being used by wise magicians.
+			}
+
+			MadnessStaff: {
+				DisplayName: Mindbursting Madness
+				Tooltip:
+					'''
+					A staff made from the flesh of creatures that attampted ascension
+					Hurls a bouncing sphere that becomes stronger after it bounces.
+					'''
+			}
+
+			OceanTrident: {
+				DisplayName: Ocean Trident
+				Tooltip: Ball penetrator.
+			}
+
+			StarRod: {
+				DisplayName: Star Rod
+				Tooltip: The power of the stars is on your side.
+			}
+
+			StormScepter: {
+				DisplayName: Storm Scepter
+				Tooltip:
+					'''
+					Call forth a shower from the sky.
+					Rains Storm Droplets from above the mouse cursor
+					'''
+			}
+
+			HallowedStorm: {
+				DisplayName: Hallowed Storm
+				Tooltip:
+					'''
+					Summons prism shards around you as long as you hold down the mouse button
+					All shards fly towards the cursor upon releasing the button.
+					'''
+			}
+
+			SandBook: {
+				DisplayName: Dune Chaser
+				Tooltip: Old desert magic used by ancient magicians, it shoots a bouncing ball of sand.
+			}
+
+			SpazzicCurse: {
+				DisplayName: Spazzic Curse
+				Tooltip: Summons a cursed flame at your cursor that then explodes into smaller fireballs
+			}
+
+			SpooderLexicon: {
+				DisplayName: Arachnophobia
+				Tooltip:
+					'''
+					An entire book on how to defeat the fear of spiders, wait... WHY ARE THERE SPIDERS IN THIS BOOK?!
+					Shoots homing spiders and rarely a high velocity Albino Spider that deals double damage.
+					'''
+			}
+
+			FleshRipper: {
+				DisplayName: Flesh Ripper
+				Tooltip: A throwable Scythe that was restored from old relics, perfect for making big wounds.
+			}
+
+			InjectorScythe: {
+				DisplayName: Injector Scythe
+				Tooltip: A throwable scythe that was restored from old relics, inflicts the ichor debuff on hit for 3 seconds.
+			}
+
+			DataMiner: {
+				DisplayName: Data Miner
+				Tooltip:
+					'''
+					The dimensional gods allmight drill, used by him to tear rifts into the dimensions.
+					Inflicts Electrified.
+					'''
+			}
+
+			OceanicGlowshard: {
+				DisplayName: Oceanic Glowshard
+				Tooltip:
+					'''
+					A otherworldly blade from the back of a Glowmarin.
+					Throws out a rotating blade that can be controlled with the cursor.
+					'''
+			}
+
+			DuskBringer: {
+				DisplayName: Dusk Bringer
+				Tooltip: Shoots slowly deccelerating crescents from the spear
+			}
+
+			GildedRejection: {
+				DisplayName: Gilded Rejection
+				Tooltip: Reject your enemies until they go away.
+			}
+
+			GrassSpear: {
+				DisplayName: Jungle Leaf Spear
+				Tooltip: Shoots small leafes
+			}
+
+			MoltenLance: {
+				DisplayName: Molten Lance
+				Tooltip:
+					'''
+					Inflicts On Fire!
+					Inflicts Hellfire on crits
+					'''
+			}
+
+			PokingFool: {
+				DisplayName: Poking Fool
+				Tooltip: Poke your enemies until they go away.
+			}
+
+			PokingLoser: {
+				DisplayName: Poking Loser
+				Tooltip: Poke your enemies until they go away.
+			}
+
+			RadiantAcceptance: {
+				DisplayName: Radiant Acceptance
+				Tooltip:
+					'''
+					The awakened form of a rejective spear.
+					After decades of rejection, you are finally accepted, now make the best of it.
+					'''
+			}
+
+			RaiderLance: {
+				DisplayName: Raider Drakeslayer
+				Tooltip: Inflicts Drakeblood Poison.
+			}
+
+			ShiningRejection: {
+				DisplayName: Shining Rejection
+				Tooltip: Reject your enemies until they go away.
+			}
+
+			Soulpiercer: {
+				DisplayName: Soulpiercer
+				Tooltip: Doesnt affect soulless beings.
+			}
+
+			TheQueensSting: {
+				DisplayName: The Queen's Sting
+				Tooltip: Explodes into bees and poison clouds on hit.
+			}
+
+			VikingPolearm: {
+				DisplayName: Viking Drakeslayer
+				Tooltip: Inflicts Drakeblood Poison
+			}
+
+			WingedAnnoyance: {
+				DisplayName: Winged Annoyance
+				Tooltip: Annoy your enemies until they go away.
+			}
+
+			WingedNuisance: {
+				DisplayName: Winged Nuisance
+				Tooltip: Annoy your enemies until they go away.
+			}
+
+			AwakenedArchbird: {
+				DisplayName: Awakened Archbird
+				Tooltip:
+					'''
+					A sword shaped like a legendary bird found in ancient depictions in the desert, it is full of dark flames.
+					Inscriptions say that one day the archbird will swoop down and bathe the earth in it's dark flames.
+					Shoots shadowflame tentacles when swung and slows enemies when hit for 5 seconds.
+					'''
+			}
+
+			BurningSaber: {
+				DisplayName: Hellfire Saber
+				Tooltip: A saber that was restored from old relics, spawns small fire clouds on hit.
+			}
+
+			CorpseSwarmer: {
+				DisplayName: Corpse Swarmer
+				Tooltip:
+					'''
+					Control the perfect swarm of rot loving flies
+					Shoots two Decay Flies on every swing and enemy hits
+					Has a chance to shoot a big one
+					'''
+			}
+
+			CursedDesert: {
+				DisplayName: Cursed Desert
+				Tooltip: A sword forged in the dark caves of the desert by a long shattered cult, it slows down enemies on hit for 2 seconds.
+			}
+
+			DarkMatterImpacter: {
+				DisplayName: Void Matter Impacter
+				Tooltip:
+					'''
+					A massive void matter sword used to hit enemies with a hefty swing
+					Charge to yeet enemies even further.
+					'''
+			}
+
+			Dirtagnan: {
+				DisplayName: D'irtagnan
+				Tooltip: Stab with the power of dirt.
+			}
+
+			DormantKing: {
+				DisplayName: Dormant King
+				Tooltip: A blade forged by a long shattered cult who worshipped a unknown deity, it slows enemies down for 5 seconds.
+			}
+
+			EclipseReaper: {
+				DisplayName: Hidden Sun Soulcaller
+				Tooltip:
+					'''
+					A scythe from a well hidden and now extinct civilisation, it was once a ordinary weapon,
+					decorated with a bright white extension to show off the connection to their very own sun.
+					Though the scythe was retrieved and modified to now be able to summon the souls of the long lost residents.
+					'''
+			}
+
+			FishCleaver: {
+				DisplayName: Fish Cleaver
+				Tooltip: Fish -Phiakitti 2021.
+			}
+
+			FishronCleaver: {
+				DisplayName: Fishron Cleaver
+				Tooltip:
+					'''
+					A big cleaver, designed like a mutated ocean creature, it was seen as a sign of strength.
+					Releases typhoons on enemy hits.
+					'''
+			}
+
+			FrostbornBlade: {
+				DisplayName: Frostborn Blade
+				Tooltip:
+					'''
+					A magic sword from another world, a world beyhond the freezing fog of the Frozen Underworld.
+					Shoots several frost spikes that inflict Frostbite
+					Dealing critical hits unleashes more frost spikes from the player.
+					'''
+			}
+
+			GreatToothsword: {
+				DisplayName: Skeletal Greatsword
+				Tooltip:
+					'''
+					How cruel the world is, humans killing humans for nothing.
+					Some are especially cruel and process their victims into weapons, just to show off how many they have killed.
+					The sword throws out bones of the former victims on every swing
+					'''
+			}
+
+			Lifelight: {
+				DisplayName: Lifelight
+				Tooltip: The awakened form of the Light's Bane that shows that even the most evil being can become good.
+			}
+
+			LobsterClaw: {
+				DisplayName: Lobster Claw
+				Tooltip: The claw of a Parrot Lobster, it's shiny.
+			}
+
+			LonelySword: {
+				DisplayName: Lonely Sword
+				Tooltip:
+					'''
+					A sword of a dark warrior that was given to Smiley after said warroir fell in battle.
+					It shoots a dark orb straight from 1995.
+					'''
+			}
+
+			MadnessSaber: {
+				DisplayName: Mindslicing Madness
+				Tooltip:
+					'''
+					A blade made from the flesh of creatures that attampted ascension
+					Inflicts madness on hit
+					'''
+			}
+
+			OceanRazor: {
+				DisplayName: Ocean Razor
+				Tooltip: This is definetily a knife with water thats salty.
+			}
+
+			RegalSaber: {
+				DisplayName: Regal Saber
+				Tooltip: A sword born from the soul of the king of all slimes, it might not be a very powerful sword but it emits a regal aura.
+			}
+
+			ShatteringBat: {
+				DisplayName: All Shattering Bat
+				Tooltip:
+					'''
+
+					Enemies will be confused on hit.
+					Right click fires Onyx Shots.
+					It may seem like a generic wooden bat, but this is actually a forbidden artifact
+					It was forged in ancient times, using a extinct form of energy
+					'''
+			}
+
+			SheolSaber: {
+				DisplayName: Sheol Saber
+				Tooltip: A old relic augmented with demon powers, unleashes a hellish explosion on hit and has a chance to unleash several demon scythes.
+			}
+
+			Shinorian: {
+				DisplayName: Hex Rapier
+				Tooltip:
+					'''
+					A cursed thrusting sword empowered by malicious runes.
+					The curses that were laid onto this weapon are ancient and have no counterspell,
+					the hex isnt at its peak though and as such wont be able to cause any overly major harm
+					One should still beware of its power, as it is a forbidden artifact after all
+					'''
+			}
+
+			ShroomKnife: {
+				DisplayName: Shroom Knife
+				Tooltip: A small knife made of juicy fungus flesh.
+			}
+
+			TheFly: {
+				DisplayName: The Fly
+				Tooltip: Swarm your foes with flies like flies swarm a rotting corpse.
+			}
+
+			TundranaScythe: {
+				DisplayName: Tundrana Scythe
+				Tooltip:
+					'''
+					A scythe from a world beyhond the freezing fog of the Frozen Underworld, it was once used by some sort of royal guard.
+					Shoots rotating sickles which drpo ice spikes as they travel.
+					'''
+			}
+
+			TyphoonDragon: {
+				DisplayName: Typhoon Dragon
+				Tooltip:
+					'''
+					A sword used by powerful ancient ocean warriors? It may be logical when this weapon is compared to the other weapons from the deep ocean,
+					but this one is kinda odd as it possesses a weird energy inside, not found in any other weapon here.
+					Shoots mini sharkrons and releases typhoons and more mini sharkrons on enemy hits.
+					'''
+			}
+
+			Vulkanus: {
+				DisplayName: Evil Ember, Vulkanus
+				Tooltip:
+					'''
+					Throw a blade of molten rock, the blade explodes into volcanic rocks on impact
+					This weapon belonged to Vertrarius, the strongest warrior of the dark forces, he is powerful and doesn't let any wound get to him
+					Vertrarius is not evil, he simply fights the Hallow out of boredom, violence is the most entertaining thing to him
+					'''
+			}
+
+			WoodenBat: {
+				DisplayName: Wooden Bat
+				Tooltip:
+					'''
+					Le Bonk
+					Low chance to confuse enemies on hit.
+					'''
+			}
+
+			XiphiasGladius: {
+				DisplayName: Xiphias Gladius
+				Tooltip: A sword created from old blueprints found at the shores. The ancient depictions show it being used to fend off preditory ocean creatures.
+			}
+
+			BlackDragonBow: {
+				DisplayName: Black Dragon Bow
+				Tooltip:
+					'''
+					Fires a high damage Dragonpiercer.
+					Right click to shoot a wide spread of flames to incinerate your enemies.
+					Fatalis, Fatalis, heaven and earth are yours.
+					'''
+			}
+
+			CoralBow: {
+				DisplayName: Coral Bow
+				Tooltip: This is bow ma boy.
+			}
+
+			DarkshotBow: {
+				DisplayName: Darkshot Bow
+				Tooltip:
+					'''
+					A dark matter bow from the dark edge of the cosmos.
+					Shoots 3 arrows at once.
+					'''
+			}
+
+			ForbiddenMetalBow: {
+				DisplayName: Forbidden Dunes
+				Tooltip: A bow that was restored from old relics, it converts Wooden Arrows into Forbidden Arrows.
+			}
+
+			MadnessBow: {
+				DisplayName: Mindpiercing Madness
+				Tooltip:
+					'''
+					A bow made from the flesh of creatures that attampted ascension
+					Fires two inaccurate shots that inflict madness
+					'''
+			}
+
+			MandibleMetalBow: {
+				DisplayName: Antlion Mandible Bow
+				Tooltip:
+					'''
+					A bow that was restored from old relics, its is made of Antlion Mandibles.
+					Shoots two Mandibles.
+					'''
+			}
+
+			MushBow: {
+				DisplayName: Mush Bow
+				Tooltip: A bow made of juicy fungi flesh.
+			}
+
+			TendrilBow: {
+				DisplayName: Tendril Bow
+				Tooltip:
+					'''
+					Made with the tendrils of the big eye.
+					Has a chance to shoot a small eyeball that deals 50% more damage.
+					'''
+			}
+
+			ThunderbubbleBow: {
+				DisplayName: Thunderbubble Bow
+				Tooltip: Shoots electrified bubbles that explode into small gravity affected electric bolts that inflict electrified.
+			}
+
+			ToxotesArcus: {
+				DisplayName: Toxotes Arcus
+				Tooltip:
+					'''
+					A bow created from old blueprints found at the shores. The ancient depictions show it being used to hunt ocean creatures for food.
+					Shoots a burst of 4 arrows.
+					'''
+			}
+
+			SlimeSpreader: {
+				DisplayName: Slime Spreader
+				Tooltip:
+					'''
+					A flamethrower that does not convert gel into fire but instead shoots a deadly spread of slime.
+					The most dangerous slime is a slime with a gun.
+					'''
+			}
+
+			Spazmelter: {
+				DisplayName: Spazmelter
+				Tooltip: Shoots cursed flames.
+			}
+
+			BoneShottie: {
+				DisplayName: Bone Shottie
+				Tooltip: Spooky Scary Shotgun.
+			}
+
+			DeltaShark: {
+				DisplayName: Delta Shark
+				Tooltip:
+					'''
+					65% chance to not consume ammo.
+					A small juvenile robotic shark, watch out for his parents.
+					'''
+			}
+
+			DesertEagle: {
+				DisplayName: Desert Eagle
+				Tooltip: Did someone squish this bird into a gun shape, wth?
+			}
+
+			MetalWormGun: {
+				DisplayName: Handheld Destroyer
+				Tooltip: The rotten flesh fell off and it evolved to take on the place of the Destroyer.
+			}
+
+			SnipeWorm: {
+				DisplayName: Snipe Worm
+				Tooltip:
+					'''
+					A sniper rifle that was restored from old relics, it has rotten skin around its metal.
+					Converts normal bullets into Cursed Bullets.
+					'''
+			}
+
+			CursedMaw: {
+				DisplayName: Cursed Maw
+				Tooltip:
+					'''
+					A grotesque weapon, almost seems to be alive...
+					Shoots 3 beams of cursed energy.
+					'''
+			}
+
+			DarkMatterLauncher: {
+				DisplayName: Dark Matter Launcher
+				Tooltip: You could basically shove the boss into this thing to use as ammo.
+			}
+
+			GelVac: {
+				DisplayName: Gel Vac
+				Tooltip:
+					'''
+					Normally not used for combat, more of a rancher tool.
+					Shoots different kind of adorable slimes.
+					'''
+			}
+
+			QueensKunai: {
+				DisplayName: Queen's Kunai
+				Tooltip: Throws kunais that summon a sparkling energy circle on impact.
+			}
+
+			RetinusBlaster: {
+				DisplayName: Retinus Blaster
+				Tooltip: Charges a devastating death beam
+			}
+
+			RotSpit: {
+				DisplayName: Rot Spit
+				Tooltip: Spits out a big ball of rotten flesh that attracts small devourers. Devourer will poison enemies on hit.
+			}
+
+			StormfisherHarpoon: {
+				DisplayName: Stormfisher Harpoon
+				Tooltip:
+					'''
+					Shoot a giant harpoon that gets stuck inside its target as long as you hold down the attack button
+					While the harpoon is stuck it will attract lightning
+					'''
+			}
+
+			SunrayBrick: {
+				DisplayName: Sunray Brick
+				Tooltip: Creates a google stock explosion gif on impact.
+			}
+
+			Comprehension: {
+				DisplayName: Comprehension
+				Tooltip:
+					'''
+					Shoots 3 brain rockets that explode into a big invisible shockwave, the shockwave will cause braindamage and confuse enemies that are hit by it.
+					When the brain had a moment in which its mind ascended for just a brief moment, it glimpsed past the abyss into the eternal void.
+					Whatever it saw in these mere seconds, it broke the brain.
+					'''
+			}
+
+			PrimusSuperlauncher: {
+				DisplayName: Primus Superlauncher
+				Tooltip: Shoots several Prime weapon based rockets.
+			}
+
+			DarkRebels: {
+				DisplayName: Dark Rebels
+				Tooltip:
+					'''
+					Summons one of Smiley's trusted soldiers to fight for you.
+					The Darklings who hide in the dungeon are ready to fight whenever they get called to battle.
+					'''
+			}
+
+			DrakeCrystal: {
+				DisplayName: Drake Crystal
+				Tooltip:
+					'''
+					I still have nightmares from the icy caves...
+					Summons a tame juvenile Ice Drake to fight for you.
+					'''
+			}
+
+			IdolMask: {
+				DisplayName: Mask of the Idol
+				Tooltip: mask that is funny clay man
+			}
+
+			MadnessWhip: {
+				DisplayName: Mindpunishing Madness
+				Tooltip: AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH.
+			}
+
+			marcO: {
+				DisplayName: Servants of Blight
+				Tooltip:
+					'''
+					A long time ago a flying creepy creature roamed the night, with it's servants by it's side.
+					But one day it dissapeared and only left behind this gift.
+					Summons the forgotten servant of the blighted crawler.
+					'''
+			}
+
+			SandBun: {
+				DisplayName: Sand Bun
+				Tooltip:
+					'''
+					People always talk about Sand Cake, but what about Sand Buns?
+					Summons a Lesser Sand Elemental to fight for you.
+					Yeah idk either how they would eat these.
+					'''
+			}
+
+			Tendril: {
+				DisplayName: Tendril Whip
+				Tooltip: You can maybe eat it later...
+			}
+
+			Tentacle: {
+				DisplayName: Celestial Tentacle
+				Tooltip: Yo, Moon beard.
+			}
+
+			TerrorNest: {
+				DisplayName: Terror Nest
+				Tooltip:
+					'''
+					Summons a killer bee that grows sawblades when enemies are spotted.
+					A rare bee species, adapted to hunt and kill prey.
+					Their honey contains special pollen that gives it a bloodred color, totally not the blood of their victims...
+					'''
+			}
+
+			BloodGeode: {
+				DisplayName: Blood Geode
+				Tooltip:
+					'''
+					A geode found in the Crimson.
+					A blacksmith can break this open for you, sadly, there is none.
+					Right click to recieve Crimson minerals.
+					'''
+			}
+
+			DecayGeode: {
+				DisplayName: Decay Geode
+				Tooltip:
+					'''
+					A geode found in the Corruption.
+					A blacksmith can break this open for you, sadly, there is none.
+					Right click to recieve Corruption minerals.
+					'''
+			}
+
+			FairyGeode: {
+				DisplayName: Fairy Geode
+				Tooltip:
+					'''
+					A geode found in the Hallow.
+					A blacksmith can break this open for you, sadly, there is none.
+					Right click to recieve Hallow minerals.
+					'''
+			}
+
+			FrozenGeode: {
+				DisplayName: Frozen Geode
+				Tooltip:
+					'''
+					A geode found in the ice caves
+					A blacksmith can break this open for you, sadly, there is none
+					Right click to recieve ice cave minerals.
+					'''
+			}
+
+			Geode: {
+				DisplayName: Ore Geode
+				Tooltip:
+					'''
+					A geode found in the caverns.
+					A blacksmith can break this open for you, sadly, there is none.
+					Right click to recieve cavern minerals
+					'''
+			}
+
+			MagmaGeode: {
+				DisplayName: Magma Geode
+				Tooltip:
+					'''
+					A geode found in the underworld.
+					A blacksmith can break this open for you, sadly, there is none.
+					Right click to recieve underworld minerals.
+					'''
+			}
+
+			MoonGeode: {
+				DisplayName: Moon Geode
+				Tooltip:
+					'''
+					A geode found in the space layer after the lord of the moon fell.
+					A blacksmith can break this open for you, sadly, there is none.
+					Right click to recieve Luminite.
+					'''
+			}
+
+			MuddyGeode: {
+				DisplayName: Muddy Geode
+				Tooltip:
+					'''
+					A geode found in the Jungle.
+					A blacksmith can break this open for you, sadly, there is none.
+					Right click to recieve Jungle minerals.
+					'''
+			}
+
+			OmniGeode: {
+				DisplayName: Omni Geode
+				Tooltip:
+					'''
+					A geode found after the spirits of lights and darkness have been released.
+					A blacksmith can break this open for you, sadly, there is none.
+					Right click to recieve hardmode cavern minerals.
+					'''
+			}
+
+			SandstoneGeode: {
+				DisplayName: Sandstone Geode
+				Tooltip:
+					'''
+					A geode found in the desert.
+					A blacksmith can break this open for you, sadly, there is none.
+					Right click to recieve desert minerals.
+					'''
+			}
+
+			Watchers: {
+				DisplayName: The Watchers
+				Tooltip:
+					'''
+					Grants the ability to fire a swarm of ever watching eyes.
+					The servants of the Eye of Judgement will some day become what their master is if given enough time.
+					'''
+			}
+
+			FrostburnWings: {
+				DisplayName: Frostburn Wings
+				Tooltip: These wings are hot and cold at the same time, seems cool.
+			}
+		}
+
+		Projectiles: {
+			KelpHookTip.DisplayName: ${ProjectileName.GemHookAmethyst}
+			DarklingShot.DisplayName: Void Bolt
+			Curse.DisplayName: Cursemark
+			DarkBlast.DisplayName: Dark Blast
+			DarkBolt.DisplayName: Dark Bolt
+			GiantWave.DisplayName: Giant Wave
+			Icicle.DisplayName: Icicle
+			Lophiiformes.DisplayName: Lophiiformes
+			MadnessSphere.DisplayName: Madness Sphere
+			MoonlightWave.DisplayName: Moonlight Wave
+			MythosRing.DisplayName: Mythos Light Ring
+			MythosRing2.DisplayName: Mythos Light Ring
+			MythosStaff.DisplayName: Lightstream Mythos
+			NeuralWave.DisplayName: Neural Wave
+			PoyoStar.DisplayName: Poyo Star
+			PrismShards.DisplayName: Prism Shard
+			RedLazor.DisplayName: Red Lazor
+			SandBallz.DisplayName: Sand Ball
+			Smallcicle.DisplayName: Smallcicle
+			SpazBall.DisplayName: Spazzic Bolt
+			SpazExplosion.DisplayName: Spazzic Explosion
+			SpazzicFlame.DisplayName: Spazzic Flame
+			Spooder.DisplayName: Spooder
+			StormDroplet.DisplayName: Storm Droplet
+			Wave.DisplayName: Wave
+			Weeeeeeeee.DisplayName: Sonic the Spooder
+			FleshRipperProj.DisplayName: Flesh Ripper
+			InjectorScytheProj.DisplayName: Injector
+			DataMinerProj.DisplayName: Data Miner Proj
+			GlowshardThrow.DisplayName: Glowshard
+			Acceptance.DisplayName: Acceptance
+			DuskBringerProj.DisplayName: Dusk Bringer
+			DuskCrescent.DisplayName: Dusk Crescent
+			GildedRejectionProj.DisplayName: Gilded Rejection
+			GrassSpearProj.DisplayName: Jungle Leaf Spear
+			JungleLeaf.DisplayName: Jungle Leaf
+			MoltenLanceProj.DisplayName: Molten Lance
+			PokingFoolProj.DisplayName: Poking Fool
+			PokingLoserProj.DisplayName: Poking Loser
+			QueensSting.DisplayName: Queen Bee's sting sting
+			RaiderLanceProj.DisplayName: Raider Lance
+			ShiningRejectionProj.DisplayName: Shining Rejection
+			SoulpiercerProj.DisplayName: Soulpiercer
+			VikingPolearmProj.DisplayName: Viking Drakeslayer
+			WingedAnnoyanceProj.DisplayName: Winged Annoyance
+			WingedNuisanceProj.DisplayName: Winged Nuisance
+			AbyssalSoul.DisplayName: Abyssal Soul
+			BigFly.DisplayName: Big Decay Fly
+			DarkMatterImpacterProj.DisplayName: Void Matter Impacter
+			DecayFlyFriendly.DisplayName: Friendly Decay Fly
+			DemonExplosion.DisplayName: Demon Explosion
+			DirtagnanProj.DisplayName: D'irtagnan
+			Explosion.DisplayName: Explosion
+			FrostSpike.DisplayName: Frost Spike
+			Glowshard.DisplayName: Glowshard
+			HexStab.DisplayName: Hex Rapier
+			HiddenSunScythe.DisplayName: Hidden Sun Scythe
+			ImpactZone.DisplayName: Void Matter Impact
+			LifelightBlade.DisplayName: Lifelight Holy Blade
+			OceanRazorStab.DisplayName: Ocean Razor Waterblade
+			OGMatterBall.DisplayName: Dark Matter Ball
+			TundraSickle.DisplayName: Tundrana Sickle
+			VulkanusRock.DisplayName: Volcanic Rock
+			VulkanusThrow.DisplayName: Evil Ember, Vulkanus
+			XiphiasGladiusStab.DisplayName: Xiphias Gladius Waterblade
+			IgnaenHead.DisplayName: Ignaen's Head
+			SmileyJr.DisplayName: Smiley Jr
+			Braindamage.DisplayName: Spazzic Explosion
+			BrainRocket.DisplayName: Brain Rocket
+			BubbleBolt.DisplayName: Bubble Bolt
+			CompletelyOutOfPlaceExplosionGif.DisplayName: Explosion gif that was ripped from google
+			CursedRay.DisplayName: Blast
+			DarkMatterBlob.DisplayName: Big Blob
+			DarkMatterBlob2.DisplayName: Small Blob
+			DestroyerDualLaser.DisplayName: Destroyer Dual Laser
+			Dragonpiercer.DisplayName: Dragonpiercer
+			EctoflareArrow.DisplayName: EctoflareArrow
+			FireSlime.DisplayName: Fire Slime
+			ForbiddenArrow.DisplayName: Forbidden Arrow
+			GelCloud.DisplayName: Gel Cloud
+			HarpoonProj.DisplayName: Stormfisher Harpoon
+			HoneySlime.DisplayName: Honey Slime
+			LesserDevourer.DisplayName: Lesser Devourer
+			MadnessBolt.DisplayName: Madness Bolt
+			Mandible.DisplayName: Spinning Mandible
+			PinkSlime.DisplayName: Pink Slime
+			PrimusCannon.DisplayName: Primus Cannon
+			PrimusCannonball.DisplayName: Primus Cannonball
+			PrimusLaser.DisplayName: Primus Laser
+			PrimusSaw.DisplayName: Primus Saw
+			PrimusVice.DisplayName: Primus Vice
+			QueenKunai.DisplayName: Queen Kunai
+			RetinusBeam.DisplayName: Retinus Beam
+			RetinusBlasterHoldOut.DisplayName: Retinus Blaster Hold Out
+			RottenSpit.DisplayName: Rotten Spit
+			ShradesDemise.DisplayName: Shrades Demise
+			SpazmicFlame.DisplayName: Spazmic Flame
+			SunrayBrickThrown.DisplayName: Nuclear Bomb
+			Thunderbubble.DisplayName: Thunderbubble
+			TidalBubble.DisplayName: Tide Bubble
+			TideArrowProj.DisplayName: Forbidden Arrow
+			DarkRebelsMinion.DisplayName: Dark Rebel
+			FlyingSand.DisplayName: Lesser Sand Elemental
+			FriendlyProbe.DisplayName: Friendly Probe
+			GolemFireball.DisplayName: Fireball
+			GolemLaser.DisplayName: Golem Laser
+			GolemMask.DisplayName: Golem Mask
+			IceDrakeOfDOOM.DisplayName: Tamed Ice Drake Juvenile
+			ServantofOcram2.DisplayName: Forgotten Servant
+			TerrorBee.DisplayName: Terror Bee
+			MadnessWhipProj.DisplayName: Madness Whip Proj
+			TendrilWhip.DisplayName: Tendril Whip
+			TentacleWhip.DisplayName: Tentacle Whip
+			BloodGeodeThrown.DisplayName: Blood Geode
+			BloodTear.DisplayName: Blood Tear
+			DecayGeodeThrown.DisplayName: Decay Geode
+			Eyeball.DisplayName: Eyeball
+			FairyGeodeThrown.DisplayName: Fairy Geode
+			FrozenGeodeThrown.DisplayName: Frozen Geode
+			GeodeFragment.DisplayName: Geode Fragment
+			MagmaGeodeThrown.DisplayName: Magma Geode
+			MoonGeodeThrown.DisplayName: Moon Geode
+			MuddyGeodeThrown.DisplayName: Muddy Geode
+			OmniGeodeThrown.DisplayName: Omni Geode
+			OreGeodeThrown.DisplayName: Ore Geode
+			SandExplosion.DisplayName: Sandsplosion
+			SandstoneGeodeThrown.DisplayName: Sandstone Geode
+		}
+
+		Keybinds: {
+			Rose_Venom.DisplayName: Rose Venom
+			"Rose Venom.DisplayName": Mods.MultidimensionMod.Keybinds.Rose Venom.DisplayName
+		}
+
+		NPCs: {
+			CorrGuy.DisplayName: Infested Abomination
+			DecayFly.DisplayName: Decay Fly
+			BabyGlowmarin.DisplayName: Baby Glowmarin
+			GilaMonster.DisplayName: Gilania
+			LesserSandElemental.DisplayName: Lesser Sand Elemental
+			Darkling.DisplayName: Darkling
+			Ashton.DisplayName: Ashton
+			MagicTrident.DisplayName: Magic Trident
+			OtherworldlyGlowmarin.DisplayName: Otherworldly Glowmarin
+			ParrotLobster.DisplayName: Parrot Lobster
+			StormFrontEel.DisplayName: Storm Front Eel
+			Dorira.DisplayName: Dimensional God
+			TownDrake.DisplayName: Ice Drake Juvenile
+			FrostburnSlime.DisplayName: Frostburn Slime
+			IceDrakeJuvenile.DisplayName: Ice Drake Juvenile
+		}
+
+		Tiles: {
+			VoidMatterDresserPlaced: {
+				ContainerName: Void Matter Dresser
+				MapEntry: Void Matter Dresser
+			}
+
+			VoidMatterStoragePlaced: {
+				ContainerName: Void Matter Storage
+				MapEntry: Void Matter Storage
+			}
+
+			AncientBanner.MapEntry: Ancient Banner
+			AncientDepiction.MapEntry: Ancient Depiction
+			AncientDragonSkullPlaced.MapEntry: Ancient Dragon Skull
+			BossTrophy.MapEntry: Trophy
+			BrokenAncientDepiction.MapEntry: Broken Ancient Depiction
+			CheliaPlushiePlaced.MapEntry: Chelia Plushie
+			DimensionalForge.MapEntry: Dimensional Forge
+			FishLegacyPlaced.MapEntry: Fish Cleaver Display
+			EmptyKingsFabricatorPlaced.MapEntry: Void Fabricator
+			VoidMatterBathtubPlaced.MapEntry: Void Matter Bathtub
+			VoidMatterBookcasePlaced.MapEntry: Void Matter Bookcase
+			VoidMatterCandelabraPlaced.MapEntry: Void Matter Candelabra
+			VoidMatterCandlePlaced.MapEntry: Void Matter Candle
+			VoidMatterChairPlaced.MapEntry: Void Matter Chair
+			VoidMatterChamberPlaced.MapEntry: Void Matter Chamber
+			VoidMatterChandelierPlaced.MapEntry: Void Matter Chandelier
+			VoidMatterClockPlaced.MapEntry: Void Matter Clock
+			VoidMatterDoorClosed.MapEntry: Void Matter Door
+			VoidMatterDoorOpen.MapEntry: Void Matter Door
+			VoidMatterLampPlaced.MapEntry: Void Matter Lamp
+			VoidMatterLanternPlaced.MapEntry: Void Matter Lantern
+			VoidMatterPianoPlaced.MapEntry: Void Matter Piano
+			VoidMatterSinkPlaced.MapEntry: Void Matter Sink
+			VoidMatterSofaPlaced.MapEntry: Void Matter Sofa
+			VoidMatterTablePlaced.MapEntry: Void MatterTable
+			VoidMatterWorkBenchPlaced.MapEntry: Void Matter Workbench
+			MonsterBanner.MapEntry: Banner
+			ColdHellBoxPlaced.MapEntry: Music Box
+			OceanicGlowtree.MapEntry: Oceanic Glowtree
+			Dimensium.MapEntry: Dimensium
+			PlacedCrimsonAltar.MapEntry: Crimson Altar
+			PlacedDemonAltar.MapEntry: Demon Altar
+		}
+	}
+}

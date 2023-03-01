@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Small Blob");
+			// DisplayName.SetDefault("Small Blob");
 		}
 
 		public override void SetDefaults()

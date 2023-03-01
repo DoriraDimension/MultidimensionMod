@@ -12,7 +12,7 @@ namespace MultidimensionMod.NPCs.Ocean
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Parrot Lobster");
+			// DisplayName.SetDefault("Parrot Lobster");
 			Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.WalkingAntlion];
 		}
 

@@ -13,8 +13,8 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Servants of Blight");
-			Tooltip.SetDefault("A long time ago a flying creepy creature roamed the night, with it's servants by it's side.\nBut one day it dissapeared and only left behind this gift.\nSummons the forgotten servant of the blighted crawler.");
+			// DisplayName.SetDefault("Servants of Blight");
+			// Tooltip.SetDefault("A long time ago a flying creepy creature roamed the night, with it's servants by it's side.\nBut one day it dissapeared and only left behind this gift.\nSummons the forgotten servant of the blighted crawler.");
 			ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true;
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
 		}

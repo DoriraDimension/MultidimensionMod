@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Ice Crystal Staff");
-			Tooltip.SetDefault("A staff that was restored from old relics, it shoots 3 icicles that burst into smaller icicles.");
+			// DisplayName.SetDefault("Ice Crystal Staff");
+			// Tooltip.SetDefault("A staff that was restored from old relics, it shoots 3 icicles that burst into smaller icicles.");
 			Item.staff[Item.type] = true;
 		}
 

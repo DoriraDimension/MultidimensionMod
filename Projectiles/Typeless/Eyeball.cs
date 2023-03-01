@@ -13,7 +13,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Eyeball");
+			// DisplayName.SetDefault("Eyeball");
 			Main.projFrames[Projectile.type] = 4;
 		}
 

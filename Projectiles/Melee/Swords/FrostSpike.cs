@@ -11,7 +11,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Frost Spike");
+			// DisplayName.SetDefault("Frost Spike");
 		}
 
 		public override void SetDefaults()

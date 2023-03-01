@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.ToolsEnviromentChange
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Sunlight Butterfly");
-			Tooltip.SetDefault("A artifact shaped after a deity of balance, its magic power scares the moon away\nThis butterfly resembles the red goddess who is more mature and serious.");
+			// DisplayName.SetDefault("Sunlight Butterfly");
+			// Tooltip.SetDefault("A artifact shaped after a deity of balance, its magic power scares the moon away\nThis butterfly resembles the red goddess who is more mature and serious.");
 		}
 
 		public override void SetDefaults()

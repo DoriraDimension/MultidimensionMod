@@ -38,8 +38,7 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			TileObjectData.newTile.StyleHorizontal = true;
 			TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
 			TileObjectData.addTile(Type);
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Void Matter Storage");
+			LocalizedText name = CreateMapEntryName();
 			AddMapEntry(new Color(25, 19, 39), name);
 			DustType = ModContent.DustType<DarkDust>();
 			HitSound = SoundID.Dig;
@@ -47,7 +46,6 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			{
 				TileID.Containers
 			};
-			ContainerName.SetDefault("Void Matter Storage");
 			ChestDrop = ModContent.ItemType<VoidMatterStorage>();
 		}
 

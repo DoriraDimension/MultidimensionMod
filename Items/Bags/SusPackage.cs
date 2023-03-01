@@ -18,8 +18,6 @@ namespace MultidimensionMod.Items.Bags
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Mysterious Gift");
-			Tooltip.SetDefault("A weird package that you found next to you, it contains some useful beginner items");
 		}
 
 		public override void SetDefaults()

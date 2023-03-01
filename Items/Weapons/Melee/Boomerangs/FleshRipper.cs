@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Flesh Ripper");
-			Tooltip.SetDefault("A throwable Scythe that was restored from old relics, perfect for making big wounds.");
+			// DisplayName.SetDefault("Flesh Ripper");
+			// Tooltip.SetDefault("A throwable Scythe that was restored from old relics, perfect for making big wounds.");
 		}
 
 		public override void SetDefaults()

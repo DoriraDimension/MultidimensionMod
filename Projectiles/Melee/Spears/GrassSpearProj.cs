@@ -9,7 +9,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Jungle Leaf Spear");
+			// DisplayName.SetDefault("Jungle Leaf Spear");
 		}
 
 		public override void SetDefaults()

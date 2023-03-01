@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Placeables.Banners
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Otherworldly Glowmarin Banner");
-			Tooltip.SetDefault("A fish from another dimension, they have glowing organs all over their body, suggesting that they originally lived in deeper waters.");
+			// DisplayName.SetDefault("Otherworldly Glowmarin Banner");
+			// Tooltip.SetDefault("A fish from another dimension, they have glowing organs all over their body, suggesting that they originally lived in deeper waters.");
 		}
 
 		public override void SetDefaults()

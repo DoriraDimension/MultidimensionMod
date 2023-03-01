@@ -8,8 +8,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Lobster Claw");
-			Tooltip.SetDefault("The claw of a Parrot Lobster, it's shiny.");
+			// DisplayName.SetDefault("Lobster Claw");
+			// Tooltip.SetDefault("The claw of a Parrot Lobster, it's shiny.");
 		}
 
 		public override void SetDefaults()

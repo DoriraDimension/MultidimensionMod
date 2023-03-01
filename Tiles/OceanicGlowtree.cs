@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -24,8 +25,8 @@ namespace MultidimensionMod.Tiles
 			TileObjectData.newTile.RandomStyleRange = 3;
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Oceanic Glowtree");
+			LocalizedText name = CreateMapEntryName();
+			// name.SetDefault("Oceanic Glowtree");
 			AddMapEntry(new Color(31, 22, 45), name);
 			DustType = 68;
 		}

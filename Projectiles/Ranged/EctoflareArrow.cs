@@ -9,7 +9,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("EctoflareArrow");
+			// DisplayName.SetDefault("EctoflareArrow");
 			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 5;   
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;      
 		}

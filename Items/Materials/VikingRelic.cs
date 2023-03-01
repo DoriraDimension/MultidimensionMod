@@ -9,8 +9,6 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Viking Relic");
-			Tooltip.SetDefault("A piece of icy history.");
 		}
 
 		public override void SetDefaults()

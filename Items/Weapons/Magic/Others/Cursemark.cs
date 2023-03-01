@@ -15,8 +15,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Cursemark");
-			Tooltip.SetDefault("While you press the attack button, your mouse gains a damaging aura.");
+			// DisplayName.SetDefault("Cursemark");
+			// Tooltip.SetDefault("While you press the attack button, your mouse gains a damaging aura.");
 		}
 
 		public override void SetDefaults()

@@ -11,7 +11,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dark Matter Ball");
+			// DisplayName.SetDefault("Dark Matter Ball");
 			Main.projFrames[Projectile.type] = 3;
 		}
 

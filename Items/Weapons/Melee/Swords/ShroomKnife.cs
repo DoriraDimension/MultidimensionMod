@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Shroom Knife");
-			Tooltip.SetDefault("A small knife made of juicy fungus flesh.");
+			// DisplayName.SetDefault("Shroom Knife");
+			// Tooltip.SetDefault("A small knife made of juicy fungus flesh.");
 		}
 
 		public override void SetDefaults()

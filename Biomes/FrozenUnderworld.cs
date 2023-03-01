@@ -17,11 +17,6 @@ namespace MultidimensionMod.Biomes
 
         public override string BestiaryIcon => "TheDepths/Biomes/DepthsBestiaryIcon";
 
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Frozen Underworld");
-        }
-
         public override void SpecialVisuals(Player player, bool isActive)
         {
             if (isActive)

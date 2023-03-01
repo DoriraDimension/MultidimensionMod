@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Injector Scythe");
-			Tooltip.SetDefault("A throwable scythe that was restored from old relics, inflicts the ichor debuff on hit for 3 seconds.");
+			// DisplayName.SetDefault("Injector Scythe");
+			// Tooltip.SetDefault("A throwable scythe that was restored from old relics, inflicts the ichor debuff on hit for 3 seconds.");
 		}
 
 		public override void SetDefaults()

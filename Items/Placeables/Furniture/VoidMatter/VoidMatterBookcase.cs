@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Bookcase");
-			Tooltip.SetDefault("The knowledge found in these books is of great value, but it impossible to read for normal human beings.");
+			// DisplayName.SetDefault("Void Matter Bookcase");
+			// Tooltip.SetDefault("The knowledge found in these books is of great value, but it impossible to read for normal human beings.");
 		}
 
 		public override void SetDefaults()

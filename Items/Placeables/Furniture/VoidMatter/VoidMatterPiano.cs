@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Piano");
-			Tooltip.SetDefault("You can play the most beautiful music, but nobody will hear you.");
+			// DisplayName.SetDefault("Void Matter Piano");
+			// Tooltip.SetDefault("You can play the most beautiful music, but nobody will hear you.");
 		}
 
 		public override void SetDefaults()

@@ -8,8 +8,6 @@ namespace MultidimensionMod.Items.Ammo
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Infinite Gel Tank");
-			Tooltip.SetDefault("A tank with integrated gel fabricator, you will never run out of gel anymore.");
 		}
 
 		public override void SetDefaults()

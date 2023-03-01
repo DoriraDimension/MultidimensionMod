@@ -8,8 +8,6 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Old Frozen Staff");
-			Tooltip.SetDefault("A frozen staff that has lost its magic abilities.\nWith some love and craftmanship it could be repaired");
 		}
 
 		public override void SetDefaults()

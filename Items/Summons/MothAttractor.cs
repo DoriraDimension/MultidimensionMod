@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Summons
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Moth Attractor");
-			Tooltip.SetDefault("It's interesting how easy it is to lure in moths with just light, so if we make a bigger lamp we attract bigger moths, right?.\nSummons a Mothron during an eclipse. ");
+			// DisplayName.SetDefault("Moth Attractor");
+			// Tooltip.SetDefault("It's interesting how easy it is to lure in moths with just light, so if we make a bigger lamp we attract bigger moths, right?.\nSummons a Mothron during an eclipse. ");
 			ItemID.Sets.SortingPriorityBossSpawns[Item.type] = 12;
 		}
 

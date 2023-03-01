@@ -9,7 +9,7 @@ namespace MultidimensionMod.Projectiles.Magic
 		public override string Texture => "MultidimensionMod/Projectiles/NoTexture";
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Lophiiformes");
+			// DisplayName.SetDefault("Lophiiformes");
 		}
 
 		public override void SetDefaults()

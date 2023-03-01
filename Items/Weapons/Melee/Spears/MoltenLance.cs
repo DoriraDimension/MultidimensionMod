@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Molten Lance");
-			Tooltip.SetDefault("Inflicts On Fire!\nInflicts Hellfire on crits");
+			// DisplayName.SetDefault("Molten Lance");
+			// Tooltip.SetDefault("Inflicts On Fire!\nInflicts Hellfire on crits");
 		}
 
 		public override void SetDefaults()

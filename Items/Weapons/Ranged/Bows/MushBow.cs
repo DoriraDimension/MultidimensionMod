@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Mush Bow");
-			Tooltip.SetDefault("A bow made of juicy fungi flesh.");
+			// DisplayName.SetDefault("Mush Bow");
+			// Tooltip.SetDefault("A bow made of juicy fungi flesh.");
 		}
 
 		public override void SetDefaults()

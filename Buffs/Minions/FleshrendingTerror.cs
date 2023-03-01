@@ -8,8 +8,6 @@ namespace MultidimensionMod.Buffs.Minions
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Terror Bee");
-			Description.SetDefault("A malicious hunter is fighting for you");
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
 		}

@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Ancient Depiction");
-			Tooltip.SetDefault("A big and heavy sandstone tablet, it depicts a bird found in old desert legends, a bird of judgement.");
+			// DisplayName.SetDefault("Ancient Depiction");
+			// Tooltip.SetDefault("A big and heavy sandstone tablet, it depicts a bird found in old desert legends, a bird of judgement.");
 		}
 
 		public override void SetDefaults()

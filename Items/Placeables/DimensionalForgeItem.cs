@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dimensional Forge");
-			Tooltip.SetDefault("The forge of the dimensional god, it is able to craft Items with Dimensium.\nIs capable of transmutation, needs Dimensium as fuel.");
+			// DisplayName.SetDefault("Dimensional Forge");
+			// Tooltip.SetDefault("The forge of the dimensional god, it is able to craft Items with Dimensium.\nIs capable of transmutation, needs Dimensium as fuel.");
 		}
 
 		public override void SetDefaults()

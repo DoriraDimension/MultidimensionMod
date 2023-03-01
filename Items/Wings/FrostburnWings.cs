@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Wings
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Frostburn Wings");
-			Tooltip.SetDefault("These wings are hot and cold at the same time, seems cool.");
+			// DisplayName.SetDefault("Frostburn Wings");
+			// Tooltip.SetDefault("These wings are hot and cold at the same time, seems cool.");
 			ArmorIDs.Wing.Sets.Stats[Item.wingSlot] = new WingStats(130, 6f, 2.5f);
 		}
 

@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Cursed Desert");
-			Tooltip.SetDefault("A sword forged in the dark caves of the desert by a long shattered cult, it slows down enemies on hit for 2 seconds.");
+			// DisplayName.SetDefault("Cursed Desert");
+			// Tooltip.SetDefault("A sword forged in the dark caves of the desert by a long shattered cult, it slows down enemies on hit for 2 seconds.");
 		}
 
 		public override void SetDefaults()

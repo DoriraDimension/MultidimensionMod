@@ -8,7 +8,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dusk Bringer");
+			// DisplayName.SetDefault("Dusk Bringer");
 		}
 
 		public override void SetDefaults()

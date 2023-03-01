@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Ocean Razor");
-			Tooltip.SetDefault("This is definetily a knife with water thats salty.");
+			// DisplayName.SetDefault("Ocean Razor");
+			// Tooltip.SetDefault("This is definetily a knife with water thats salty.");
 		}
 
 		public override void SetDefaults()

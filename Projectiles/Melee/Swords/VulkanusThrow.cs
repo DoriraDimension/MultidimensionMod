@@ -14,7 +14,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Evil Ember, Vulkanus");
+			// DisplayName.SetDefault("Evil Ember, Vulkanus");
 		}
 
 		public override void SetDefaults()

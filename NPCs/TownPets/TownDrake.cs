@@ -18,7 +18,7 @@ namespace MultidimensionMod.NPCs.TownPets
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Ice Drake Juvenile");
+            // DisplayName.SetDefault("Ice Drake Juvenile");
             Main.npcFrameCount[Type] = 6;
             NPCID.Sets.ExtraFramesCount[Type] = 0;
             NPCID.Sets.AttackFrameCount[Type] = 0;

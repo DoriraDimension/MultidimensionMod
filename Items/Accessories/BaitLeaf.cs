@@ -8,8 +8,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Bait Leaf");
-			Tooltip.SetDefault("A aromatic leaf from another dimension, its strong scent can even lure in bigger predators.\nThese might be useful to attract helpers, but be aware of possible stronger foes getting attracted too.\nGives +1 minion slot");
 		}
 
 		public override void SetDefaults()

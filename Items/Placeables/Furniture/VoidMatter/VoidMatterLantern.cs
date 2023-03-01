@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Lantern");
-			Tooltip.SetDefault("A dark room, only a single light lights up the room in the center");
+			// DisplayName.SetDefault("Void Matter Lantern");
+			// Tooltip.SetDefault("A dark room, only a single light lights up the room in the center");
 		}
 
 		public override void SetDefaults()

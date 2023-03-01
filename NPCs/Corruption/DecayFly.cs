@@ -9,7 +9,7 @@ namespace MultidimensionMod.NPCs.Corruption
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Decay Fly");
+			// DisplayName.SetDefault("Decay Fly");
 			Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.Bee];
 		}
 

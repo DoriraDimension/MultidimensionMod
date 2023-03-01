@@ -13,7 +13,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dark Blast");
+			// DisplayName.SetDefault("Dark Blast");
 		}
 
 		public override void SetDefaults()

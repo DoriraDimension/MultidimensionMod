@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Data Miner");
-			Tooltip.SetDefault("The dimensional gods allmight drill, used by him to tear rifts into the dimensions.\nInflicts Electrified.");
+			// DisplayName.SetDefault("Data Miner");
+			// Tooltip.SetDefault("The dimensional gods allmight drill, used by him to tear rifts into the dimensions.\nInflicts Electrified.");
 		}
 
 		public override void SetDefaults()

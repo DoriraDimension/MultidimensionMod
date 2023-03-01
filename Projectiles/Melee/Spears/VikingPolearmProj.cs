@@ -10,7 +10,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Viking Drakeslayer");
+			// DisplayName.SetDefault("Viking Drakeslayer");
 		}
 
 		public override void SetDefaults()

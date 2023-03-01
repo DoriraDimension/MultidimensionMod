@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Cooked Tendril");
-            Tooltip.SetDefault("Good for the eyes.");
+            // DisplayName.SetDefault("Cooked Tendril");
+            // Tooltip.SetDefault("Good for the eyes.");
         }
 
         public override void SetDefaults()

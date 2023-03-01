@@ -14,8 +14,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Starving Larva");
-			Tooltip.SetDefault("You recover 5HP on enemy kills.");
 		}
 
 		public override void SetDefaults()

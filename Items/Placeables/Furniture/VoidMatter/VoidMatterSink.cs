@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Sink");
-			Tooltip.SetDefault("");
+			// DisplayName.SetDefault("Void Matter Sink");
+			// Tooltip.SetDefault("");
 		}
 
 		public override void SetDefaults()

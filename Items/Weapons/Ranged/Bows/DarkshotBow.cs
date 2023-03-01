@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Darkshot Bow");
-			Tooltip.SetDefault("A dark matter bow from the dark edge of the cosmos.\nShoots 3 arrows at once.");
+			// DisplayName.SetDefault("Darkshot Bow");
+			// Tooltip.SetDefault("A dark matter bow from the dark edge of the cosmos.\nShoots 3 arrows at once.");
 		}
 
 		public override void SetDefaults()

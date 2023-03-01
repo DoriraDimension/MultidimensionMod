@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Mindpiercing Madness");
-			Tooltip.SetDefault("A bow made from the flesh of creatures that attampted ascension\nFires two inaccurate shots that inflict madness");
+			// DisplayName.SetDefault("Mindpiercing Madness");
+			// Tooltip.SetDefault("A bow made from the flesh of creatures that attampted ascension\nFires two inaccurate shots that inflict madness");
 		}
 
 		public override void SetDefaults()

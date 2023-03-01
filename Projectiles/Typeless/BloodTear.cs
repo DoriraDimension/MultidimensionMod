@@ -11,7 +11,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Blood Tear");
+			// DisplayName.SetDefault("Blood Tear");
 		}
 
 		public override void SetDefaults()

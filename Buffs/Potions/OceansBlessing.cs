@@ -9,8 +9,6 @@ namespace MultidimensionMod.Buffs.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Oceans Blessing");
-            Description.SetDefault("You can swim and breathe like a resident of the sea.");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = false;
         }

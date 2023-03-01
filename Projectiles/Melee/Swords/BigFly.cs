@@ -9,7 +9,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Big Decay Fly");
+			// DisplayName.SetDefault("Big Decay Fly");
 			Main.projFrames[Projectile.type] = 4;
 		}
 

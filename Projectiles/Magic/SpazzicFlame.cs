@@ -10,7 +10,7 @@ namespace MultidimensionMod.Projectiles.Magic
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Spazzic Flame");
+			// DisplayName.SetDefault("Spazzic Flame");
 		}
 
 		public override void SetDefaults()
@@ -53,7 +53,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Spazzic Explosion");
+			// DisplayName.SetDefault("Spazzic Explosion");
 		}
 
 		public override void SetDefaults()
@@ -88,7 +88,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Spazzic Bolt");
+			// DisplayName.SetDefault("Spazzic Bolt");
 		}
 
 		public override void SetDefaults()

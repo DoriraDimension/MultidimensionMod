@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Warriors Thermos");
-            Tooltip.SetDefault("A warm drink to strengthen your power. \nIncreases melee damage by 20%.");
+            // DisplayName.SetDefault("Warriors Thermos");
+            // Tooltip.SetDefault("A warm drink to strengthen your power. \nIncreases melee damage by 20%.");
         }
 
         public override void SetDefaults()

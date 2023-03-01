@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Enums;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
@@ -34,8 +35,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			TileID.Sets.CanBeSatOnForPlayers[Type] = true;
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
 			AdjTiles = new int[] { TileID.Chairs };
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Void Fabricator");
+			LocalizedText name = CreateMapEntryName();
+			// name.SetDefault("Void Fabricator");
 			AddMapEntry(new Color(25, 19, 39), name);
 			DustType = ModContent.DustType<DarkDust>();
 		}

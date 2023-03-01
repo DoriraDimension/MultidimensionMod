@@ -11,7 +11,7 @@ namespace MultidimensionMod.NPCs.Desert
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Gilania");
+			// DisplayName.SetDefault("Gilania");
 			Main.npcFrameCount[NPC.type] = 6;
 		}
 

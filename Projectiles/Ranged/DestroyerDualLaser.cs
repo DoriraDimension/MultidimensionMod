@@ -11,7 +11,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Destroyer Dual Laser");
+			// DisplayName.SetDefault("Destroyer Dual Laser");
 			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 3;
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
 		}

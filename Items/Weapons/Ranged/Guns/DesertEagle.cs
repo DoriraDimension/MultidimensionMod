@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Desert Eagle");
-			Tooltip.SetDefault("Did someone squish this bird into a gun shape, wth?");
+			// DisplayName.SetDefault("Desert Eagle");
+			// Tooltip.SetDefault("Did someone squish this bird into a gun shape, wth?");
 		}
 
 		public override void SetDefaults()

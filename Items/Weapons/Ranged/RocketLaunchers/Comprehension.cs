@@ -16,8 +16,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Comprehension");
-			Tooltip.SetDefault("Shoots 3 brain rockets that explode into a big invisible shockwave, the shockwave will cause braindamage and confuse enemies that are hit by it.\nWhen the brain had a moment in which its mind ascended for just a brief moment, it glimpsed past the abyss into the eternal void.\nWhatever it saw in these mere seconds, it broke the brain.");
+			// DisplayName.SetDefault("Comprehension");
+			// Tooltip.SetDefault("Shoots 3 brain rockets that explode into a big invisible shockwave, the shockwave will cause braindamage and confuse enemies that are hit by it.\nWhen the brain had a moment in which its mind ascended for just a brief moment, it glimpsed past the abyss into the eternal void.\nWhatever it saw in these mere seconds, it broke the brain.");
 		}
 
 		public override void SetDefaults()

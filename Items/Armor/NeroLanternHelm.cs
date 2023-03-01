@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Armor
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Nero Lantern Helm");
-			Tooltip.SetDefault("A helm created from old blueprints found at the shores. The ancient depictions show brave warriors defending their home.\nIncreases minion damage by 18%.");
 		}
 
 		public override void SetDefaults()

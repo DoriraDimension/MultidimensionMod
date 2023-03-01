@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Thunderbubble");
+			// DisplayName.SetDefault("Thunderbubble");
 			Main.projFrames[Projectile.type] = 4;
 		}
 

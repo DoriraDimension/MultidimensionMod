@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dark Matter Launcher");
-			Tooltip.SetDefault("You could basically shove the boss into this thing to use as ammo.");
+			// DisplayName.SetDefault("Dark Matter Launcher");
+			// Tooltip.SetDefault("You could basically shove the boss into this thing to use as ammo.");
 		}
 
 		public override void SetDefaults()

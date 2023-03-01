@@ -19,7 +19,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 		int locked = 0;
 		public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Void Matter Impacter");
+            // DisplayName.SetDefault("Void Matter Impacter");
 			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 4;
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
 		}

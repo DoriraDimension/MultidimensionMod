@@ -10,8 +10,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Spider Curse");
-			Tooltip.SetDefault("A cursed artifact found in the spider caverns. \nIncreases movement speed by 10% and gives +1 minion slot. \nYou can stick to walls like a spider.");
 		}
 
 		public override void SetDefaults()

@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Spazmelter");
-			Tooltip.SetDefault("Shoots cursed flames.");
+			// DisplayName.SetDefault("Spazmelter");
+			// Tooltip.SetDefault("Shoots cursed flames.");
 		}
 
 		public override void SetDefaults()

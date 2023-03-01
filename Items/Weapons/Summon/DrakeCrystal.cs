@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Drake Crystal");
-			Tooltip.SetDefault("I still have nightmares from the icy caves...\nSummons a tame juvenile Ice Drake to fight for you.");
+			// DisplayName.SetDefault("Drake Crystal");
+			// Tooltip.SetDefault("I still have nightmares from the icy caves...\nSummons a tame juvenile Ice Drake to fight for you.");
 			ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true;
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
 		}

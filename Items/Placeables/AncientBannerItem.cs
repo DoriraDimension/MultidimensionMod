@@ -8,8 +8,8 @@ namespace MultidimensionMod.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Ancient Banner");
-			Tooltip.SetDefault("A ancient banner, its made of worn cloth and probably not ideal as furniture.");
+			// DisplayName.SetDefault("Ancient Banner");
+			// Tooltip.SetDefault("A ancient banner, its made of worn cloth and probably not ideal as furniture.");
 		}
 
 		public override void SetDefaults()

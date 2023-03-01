@@ -17,7 +17,7 @@ namespace MultidimensionMod.Biomes
     class FUGen : ModSystem
     {
 		//Gen code is made possible by Ancients Awakened
-		public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
+		public override void ModifyWorldGenTasks(List<GenPass> tasks, ref double totalWeight)
 		{
 			int BiomesIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Micro Biomes"));
 			if (BiomesIndex != -1)
@@ -114,12 +114,12 @@ namespace MultidimensionMod.Biomes
 		public static void ObjectPlace(Point Origin, int x, int y, int TileType, int style = 0, int direction = -1)
 		{
 			WorldGen.PlaceObject(Origin.X + x, Origin.Y + y, TileType, true, style, 0, -1, direction);
-			NetMessage.SendObjectPlacment(-1, Origin.X + x, Origin.Y + y, TileType, style, 0, -1, direction);
+			NetMessage.SendObjectPlacement(-1, Origin.X + x, Origin.Y + y, TileType, style, 0, -1, direction);
 		}
 		public static void ObjectPlace(int x, int y, int TileType, int style = 0, int direction = -1)
 		{
 			WorldGen.PlaceObject(x, y, TileType, true, style, 0, -1, direction);
-			NetMessage.SendObjectPlacment(-1, x, y, TileType, style, 0, -1, direction);
+			NetMessage.SendObjectPlacement(-1, x, y, TileType, style, 0, -1, direction);
 		}
 		public static void InvokeOnMainThread(Action action)
 		{

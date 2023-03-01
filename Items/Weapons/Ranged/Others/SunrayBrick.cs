@@ -16,8 +16,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Sunray Brick");
-			Tooltip.SetDefault("Creates a google stock explosion gif on impact.");
+			// DisplayName.SetDefault("Sunray Brick");
+			// Tooltip.SetDefault("Creates a google stock explosion gif on impact.");
 		}
 
 

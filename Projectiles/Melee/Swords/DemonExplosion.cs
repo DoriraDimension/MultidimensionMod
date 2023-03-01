@@ -10,7 +10,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Demon Explosion");
+			// DisplayName.SetDefault("Demon Explosion");
 		}
 
 		public override void SetDefaults()

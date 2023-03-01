@@ -11,7 +11,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Tundrana Sickle");
+			// DisplayName.SetDefault("Tundrana Sickle");
 		}
 
 		public override void SetDefaults()

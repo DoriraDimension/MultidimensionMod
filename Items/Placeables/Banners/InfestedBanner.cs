@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Placeables.Banners
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Infested Abomination Banner");
-			Tooltip.SetDefault("It was possibly once human but is now just a disgusting thing, these weird creatures are hosts to a local species of rot loving flies.\nThey drip green stinky goo everywhere they walk and spit disgusting liquid with every movement of their mouth.");
+			// DisplayName.SetDefault("Infested Abomination Banner");
+			// Tooltip.SetDefault("It was possibly once human but is now just a disgusting thing, these weird creatures are hosts to a local species of rot loving flies.\nThey drip green stinky goo everywhere they walk and spit disgusting liquid with every movement of their mouth.");
 		}
 
 		public override void SetDefaults()

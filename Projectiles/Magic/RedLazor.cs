@@ -11,7 +11,7 @@ namespace MultidimensionMod.Projectiles.Magic
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Red Lazor");
+			// DisplayName.SetDefault("Red Lazor");
 			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 3;
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
 		}

@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			base.DisplayName.SetDefault("Retinus Beam");
+			// base.DisplayName.SetDefault("Retinus Beam");
 		}
 
 		public override void SetDefaults()

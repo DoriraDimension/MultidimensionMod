@@ -7,8 +7,6 @@ namespace MultidimensionMod.Buffs.Ability
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Rose Venom");
-            Description.SetDefault("Your life is being consumed, but defense is increased.");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = true;
         }

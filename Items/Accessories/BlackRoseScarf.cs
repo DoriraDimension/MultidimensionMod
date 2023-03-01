@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Black Rose Scarf");
-			Tooltip.SetDefault("Roses are as beautiful as they are dangerous.\nReflects 45% of damage back to the enemy if they touch you\nThis text will be replaced by the hotkey tooltip\nWhile under the effects of the toxins, you gain a 25% buff to your damage reflection as well as 20 defense");
 		}
 
 		public override void SetDefaults()

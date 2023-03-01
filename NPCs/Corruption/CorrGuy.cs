@@ -14,7 +14,7 @@ namespace MultidimensionMod.NPCs.Corruption
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Infested Abomination");
+			// DisplayName.SetDefault("Infested Abomination");
 			Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.Crab];
 		}
 

@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Calming Pills");
-            Tooltip.SetDefault("Calms your mind and fends off madness.");
+            // DisplayName.SetDefault("Calming Pills");
+            // Tooltip.SetDefault("Calms your mind and fends off madness.");
         }
 
         public override void SetDefaults()

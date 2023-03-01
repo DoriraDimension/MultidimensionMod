@@ -12,8 +12,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Sidane's Quiver");
-			Tooltip.SetDefault("The magitech quiver owned by the creator Sidane.\nSidane is one of the less serious members of the creator council, he would sometimes fly around on a hoverboard and use others inventions as targets for training.\nIncreases arrow damage by 10%, ranged damage by 10% and greatly increases arrow speed \n20% chance to not consume arrows.");
 		}
 
 		public override void SetDefaults()

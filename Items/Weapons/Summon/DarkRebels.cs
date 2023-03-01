@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dark Rebels");
-			Tooltip.SetDefault("Summons one of Smiley's trusted soldiers to fight for you.\nThe Darklings who hide in the dungeon are ready to fight whenever they get called to battle.");
+			// DisplayName.SetDefault("Dark Rebels");
+			// Tooltip.SetDefault("Summons one of Smiley's trusted soldiers to fight for you.\nThe Darklings who hide in the dungeon are ready to fight whenever they get called to battle.");
 			ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true;
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
 		}

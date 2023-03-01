@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -25,8 +26,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			TileID.Sets.IgnoredByNpcStepUp[Type] = true;
 			AdjTiles = new int[] { TileID.WorkBenches };
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Void Matter Workbench");
+			LocalizedText name = CreateMapEntryName();
+			// name.SetDefault("Void Matter Workbench");
 			AddMapEntry(new Color(25, 19, 39), name);
 			DustType = ModContent.DustType<DarkDust>();
 		}

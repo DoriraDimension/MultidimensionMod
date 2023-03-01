@@ -10,8 +10,6 @@ namespace MultidimensionMod.Buffs.Debuffs
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Drakeblood Poison");
-            Description.SetDefault("Toxificated blood is weakening you.");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = true;
         }

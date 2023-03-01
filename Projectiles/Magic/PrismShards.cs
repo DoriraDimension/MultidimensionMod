@@ -13,7 +13,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Prism Shard");
+			// DisplayName.SetDefault("Prism Shard");
 			Main.projFrames[Projectile.type] = 3;
 		}
 

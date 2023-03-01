@@ -16,8 +16,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Slime Spreader");
-			Tooltip.SetDefault("A flamethrower that does not convert gel into fire but instead shoots a deadly spread of slime.\nThe most dangerous slime is a slime with a gun.");
+			// DisplayName.SetDefault("Slime Spreader");
+			// Tooltip.SetDefault("A flamethrower that does not convert gel into fire but instead shoots a deadly spread of slime.\nThe most dangerous slime is a slime with a gun.");
 		}
 
 		public override void SetDefaults()

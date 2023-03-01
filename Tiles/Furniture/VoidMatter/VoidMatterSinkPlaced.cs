@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -18,8 +19,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
 			TileObjectData.addTile(Type);
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Void Matter Sink");
+			LocalizedText name = CreateMapEntryName();
+			// name.SetDefault("Void Matter Sink");
 			AddMapEntry(new Color(25, 19, 39), name);
 			DustType = ModContent.DustType<DarkDust>();
 			AdjTiles = new int[] { TileID.Sinks };

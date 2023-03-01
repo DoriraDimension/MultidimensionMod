@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Banners
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Darkling Banner");
-			Tooltip.SetDefault("Darklings are beings of pure dark matter, they hide inside the dungeon while their leader roams the land in search of someone.\nDarklings arent very strong alone and even kinda shy but can be threatening in groups.\nTheir original purpose is to spread darkness across the universe but they refuse to do so.");
+			// DisplayName.SetDefault("Darkling Banner");
+			// Tooltip.SetDefault("Darklings are beings of pure dark matter, they hide inside the dungeon while their leader roams the land in search of someone.\nDarklings arent very strong alone and even kinda shy but can be threatening in groups.\nTheir original purpose is to spread darkness across the universe but they refuse to do so.");
 		}
 		public override void SetDefaults()
 		{

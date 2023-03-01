@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Lamp");
-			Tooltip.SetDefault("A shady man stands under a lamp outside, he asks you to come closer, will you?");
+			// DisplayName.SetDefault("Void Matter Lamp");
+			// Tooltip.SetDefault("A shady man stands under a lamp outside, he asks you to come closer, will you?");
 		}
 
 		public override void SetDefaults()

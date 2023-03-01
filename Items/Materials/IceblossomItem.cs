@@ -9,8 +9,6 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Iceblossom");
-			Tooltip.SetDefault("A kind of flora found in the Frozen Underworld, its ancestor, the Fireblossom, adapted to the environment to survive.\nThe influence of the icy magic made this plant dangerous to eat.");
 		}
 
 		public override void SetDefaults()

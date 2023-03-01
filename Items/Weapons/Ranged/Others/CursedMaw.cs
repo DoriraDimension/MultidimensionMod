@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Cursed Maw");
-			Tooltip.SetDefault("A grotesque weapon, almost seems to be alive...\nShoots 3 beams of cursed energy.");
+			// DisplayName.SetDefault("Cursed Maw");
+			// Tooltip.SetDefault("A grotesque weapon, almost seems to be alive...\nShoots 3 beams of cursed energy.");
 		}
 
 		public override void SetDefaults()

@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -20,8 +21,8 @@ namespace MultidimensionMod.Tiles.MusicBoxes
 			TileObjectData.newTile.DrawYOffset = 2;
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Music Box");
+			LocalizedText name = CreateMapEntryName();
+			// name.SetDefault("Music Box");
 			AddMapEntry(new Color(200, 200, 200), name);
 		}
 

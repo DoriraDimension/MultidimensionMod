@@ -12,8 +12,6 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Rune Stone");
-			Tooltip.SetDefault("A rune stone with weird markings, it is sturdy enough to withstand a lot of energy.");
 		}
 
 		public override void SetDefaults()

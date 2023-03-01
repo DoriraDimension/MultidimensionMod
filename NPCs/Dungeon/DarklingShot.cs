@@ -12,7 +12,7 @@ namespace MultidimensionMod.NPCs.Dungeon
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Bolt");
+			// DisplayName.SetDefault("Void Bolt");
 			Main.projFrames[Projectile.type] = 4;
 		}
 

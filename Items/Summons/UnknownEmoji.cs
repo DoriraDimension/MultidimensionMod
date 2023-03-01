@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Summons
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Unknown Emoji");
-			Tooltip.SetDefault("A weird smiling pile of dark matter pulsing with energy.\nSummons Smiley at night, the leader of Darklings.\nWarning, boss is extremely unstable in multiplayer and will despawn in all cases.");
+			// DisplayName.SetDefault("Unknown Emoji");
+			// Tooltip.SetDefault("A weird smiling pile of dark matter pulsing with energy.\nSummons Smiley at night, the leader of Darklings.\nWarning, boss is extremely unstable in multiplayer and will despawn in all cases.");
 			ItemID.Sets.SortingPriorityBossSpawns[Item.type] = 13;
 		}
 

@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Summons
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Moon Rune Stone");
-			Tooltip.SetDefault("A rune only known inside the moon cult, it calls forth their insane leader.\nThis must be a very important artifact for the moon cult or else their leader wouldnt be so angry about you taking it.");
+			// DisplayName.SetDefault("Moon Rune Stone");
+			// Tooltip.SetDefault("A rune only known inside the moon cult, it calls forth their insane leader.\nThis must be a very important artifact for the moon cult or else their leader wouldnt be so angry about you taking it.");
 			ItemID.Sets.SortingPriorityBossSpawns[Item.type] = 12;
 		}
 

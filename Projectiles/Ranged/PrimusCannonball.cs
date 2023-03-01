@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Primus Cannonball");
+			// DisplayName.SetDefault("Primus Cannonball");
 		}
 
 		public override void SetDefaults()

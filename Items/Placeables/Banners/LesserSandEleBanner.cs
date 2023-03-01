@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Placeables.Banners
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Lesser Sand Elemental Banner");
-			Tooltip.SetDefault("They are actually crystalized mana surrounded by sand, it's unclear yet if they were brought to life naturally or through magic experiments.\nThey will react hostile against every human that enters a desert.\nDuring sandstorms they become even more active and travel to the surface, sometimes following Sand Elementals.");
+			// DisplayName.SetDefault("Lesser Sand Elemental Banner");
+			// Tooltip.SetDefault("They are actually crystalized mana surrounded by sand, it's unclear yet if they were brought to life naturally or through magic experiments.\nThey will react hostile against every human that enters a desert.\nDuring sandstorms they become even more active and travel to the surface, sometimes following Sand Elementals.");
 		}
 
 		public override void SetDefaults()

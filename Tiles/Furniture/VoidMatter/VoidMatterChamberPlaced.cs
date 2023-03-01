@@ -31,8 +31,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
 			AdjTiles = new int[] { TileID.Beds };
 			TileObjectData.addTile(Type);
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Void Matter Chamber");
+			LocalizedText name = CreateMapEntryName();
+			// name.SetDefault("Void Matter Chamber");
 			AddMapEntry(new Color(25, 19, 39), name);
 			DustType = ModContent.DustType<DarkDust>();
 		}

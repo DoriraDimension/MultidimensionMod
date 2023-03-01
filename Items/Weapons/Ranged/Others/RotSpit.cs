@@ -16,8 +16,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Rot Spit");
-			Tooltip.SetDefault("Spits out a big ball of rotten flesh that attracts small devourers. Devourer will poison enemies on hit.");
+			// DisplayName.SetDefault("Rot Spit");
+			// Tooltip.SetDefault("Spits out a big ball of rotten flesh that attracts small devourers. Devourer will poison enemies on hit.");
 		}
 
 		public override void SetDefaults()

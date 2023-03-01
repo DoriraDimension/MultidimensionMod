@@ -9,8 +9,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Healthy Cap");
-			Tooltip.SetDefault("A healthy mushroom filled with healing potion liquid.\nIncreases the amount of HP healed by mushrooms to 60.");
 		}
 
 		public override void SetDefaults()

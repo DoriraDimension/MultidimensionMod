@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Table");
-			Tooltip.SetDefault("Enjoy a nice breakfast of condensed evil on this table of darkness.");
+			// DisplayName.SetDefault("Void Matter Table");
+			// Tooltip.SetDefault("Enjoy a nice breakfast of condensed evil on this table of darkness.");
 		}
 
 		public override void SetDefaults()

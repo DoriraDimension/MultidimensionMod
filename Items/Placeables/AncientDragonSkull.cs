@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Ancient Dragon Skull");
-			Tooltip.SetDefault("A dragon skull from old times, it is no longer cursed.");
+			// DisplayName.SetDefault("Ancient Dragon Skull");
+			// Tooltip.SetDefault("A dragon skull from old times, it is no longer cursed.");
 		}
 
 		public override void SetDefaults()

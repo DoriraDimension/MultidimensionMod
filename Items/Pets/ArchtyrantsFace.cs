@@ -12,8 +12,6 @@ namespace MultidimensionMod.Items.Pets
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Burning Antler");
-			Tooltip.SetDefault("Summons the physical apparition of a Demonic being from far beyhond time and space.");
 		}
 
 		public override void SetDefaults()

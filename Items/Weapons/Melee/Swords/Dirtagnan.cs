@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("D'irtagnan");
-			Tooltip.SetDefault("Stab with the power of dirt.");
+			// DisplayName.SetDefault("D'irtagnan");
+			// Tooltip.SetDefault("Stab with the power of dirt.");
 		}
 
 		public override void SetDefaults()

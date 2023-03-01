@@ -15,7 +15,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Blood Geode");
+			// DisplayName.SetDefault("Blood Geode");
 		}
 
 		public override void SetDefaults()

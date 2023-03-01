@@ -11,7 +11,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Sonic the Spooder");
+			// DisplayName.SetDefault("Sonic the Spooder");
 		}
 
 		public override void SetDefaults()

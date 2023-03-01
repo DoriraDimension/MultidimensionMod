@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Bags
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Energy Fish");
-			Tooltip.SetDefault("A fish charged with the lowest tier of Dimensional Energy.\nRight click to extract its energy.");
 		}
 
 		public override void SetDefaults()

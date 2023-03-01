@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dune Chaser");
-			Tooltip.SetDefault("Old desert magic used by ancient magicians, it shoots a bouncing ball of sand.");
+			// DisplayName.SetDefault("Dune Chaser");
+			// Tooltip.SetDefault("Old desert magic used by ancient magicians, it shoots a bouncing ball of sand.");
 		}
 
 		public override void SetDefaults()

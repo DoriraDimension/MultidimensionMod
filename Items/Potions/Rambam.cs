@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Potions
 	{
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Fucking overpowered super hyper mega ultra extreme hacker potion of absolute death limited edition");
-            Tooltip.SetDefault("If you buy now, you get nothing for free.");
+            // DisplayName.SetDefault("Fucking overpowered super hyper mega ultra extreme hacker potion of absolute death limited edition");
+            // Tooltip.SetDefault("If you buy now, you get nothing for free.");
         }
 
         public override void SetDefaults()

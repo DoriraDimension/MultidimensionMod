@@ -8,8 +8,6 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Void Matter");
-			Tooltip.SetDefault("The physical incarnation of the nothingness outside our plain of existence. There are strange crystals stuck inside the mass.");
 		}
 
 		public override void SetDefaults() 

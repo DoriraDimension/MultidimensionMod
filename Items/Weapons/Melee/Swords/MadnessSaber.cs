@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Mindslicing Madness");
-			Tooltip.SetDefault("A blade made from the flesh of creatures that attampted ascension\nInflicts madness on hit");
+			// DisplayName.SetDefault("Mindslicing Madness");
+			// Tooltip.SetDefault("A blade made from the flesh of creatures that attampted ascension\nInflicts madness on hit");
 		}
 
 		public override void SetDefaults()

@@ -9,9 +9,8 @@ namespace MultidimensionMod.Items.Pets
 {
 	public class CuteEmoji : ModItem
 	{
-		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Cute Emoji");
-			Tooltip.SetDefault("Summons Smiley's adopted son.\nAt some point a young darkling decided to follow and imitate Smiley, thats when he decided to adopt him as his own child.");
+		public override void SetStaticDefaults() 
+		{
 		}
 
 		public override void SetDefaults() {

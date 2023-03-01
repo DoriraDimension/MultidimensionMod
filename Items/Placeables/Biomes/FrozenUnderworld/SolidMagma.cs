@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Solid Magma");
-			Tooltip.SetDefault("Lava but not hot.");
+			// DisplayName.SetDefault("Solid Magma");
+			// Tooltip.SetDefault("Lava but not hot.");
 		}
 
 		public override void SetDefaults()

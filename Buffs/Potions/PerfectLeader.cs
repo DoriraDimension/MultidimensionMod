@@ -9,8 +9,6 @@ namespace MultidimensionMod.Buffs.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Perfect Leader");
-            Description.SetDefault("Increased summon damage.");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = false;
         }

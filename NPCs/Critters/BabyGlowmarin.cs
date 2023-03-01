@@ -11,7 +11,7 @@ namespace MultidimensionMod.NPCs.Critters
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Baby Glowmarin");
+			// DisplayName.SetDefault("Baby Glowmarin");
 			Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.Shark];
 			Main.npcCatchable[NPC.type] = true;
 		}

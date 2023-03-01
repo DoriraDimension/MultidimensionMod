@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Desert Necklace");
-			Tooltip.SetDefault("A magical necklace, created with the mana infused sand from a Lesser Sand Elemental.\nIt is unknown why the gem only reacts to the dry aura of deserts so are its actual origins.\nIncreases all damage and crit chance by 4% when in the Desert.");
 		}
 
 		public override void SetDefaults()

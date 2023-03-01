@@ -8,8 +8,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 	public class Soulpiercer : ModItem
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Soulpiercer");
-			Tooltip.SetDefault("Doesnt affect soulless beings.");
+			// DisplayName.SetDefault("Soulpiercer");
+			// Tooltip.SetDefault("Doesnt affect soulless beings.");
 		}
 
 		public override void SetDefaults() {

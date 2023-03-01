@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Sand Bun");
-			Tooltip.SetDefault("People always talk about Sand Cake, but what about Sand Buns?\nSummons a Lesser Sand Elemental to fight for you.\nYeah idk either how they would eat these.");
+			// DisplayName.SetDefault("Sand Bun");
+			// Tooltip.SetDefault("People always talk about Sand Cake, but what about Sand Buns?\nSummons a Lesser Sand Elemental to fight for you.\nYeah idk either how they would eat these.");
 			ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true;
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
 		}

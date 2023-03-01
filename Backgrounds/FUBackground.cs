@@ -18,7 +18,7 @@ namespace MultidimensionMod.Backgrounds
     {
         //Made possible by Avalon or not because its not working rn
         protected override void Apply() =>
-            IL.Terraria.Main.DrawUnderworldBackgroudLayer += ILMainDrawUnderworldBackgroundLayer;
+            Terraria.IL_Main.DrawUnderworldBackgroudLayer += ILMainDrawUnderworldBackgroundLayer;
 
         private static void ILMainDrawUnderworldBackgroundLayer(ILContext il)
         {

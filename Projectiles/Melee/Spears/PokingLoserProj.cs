@@ -8,7 +8,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Poking Loser");
+			// DisplayName.SetDefault("Poking Loser");
 		}
 
 		public override void SetDefaults()

@@ -8,8 +8,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Fish Cleaver");
-			Tooltip.SetDefault("Fish -Phiakitti 2021.");
+			// DisplayName.SetDefault("Fish Cleaver");
+			// Tooltip.SetDefault("Fish -Phiakitti 2021.");
 		}
 
 		public override void SetDefaults()

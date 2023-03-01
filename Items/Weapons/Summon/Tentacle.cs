@@ -16,8 +16,8 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Celestial Tentacle");
-			Tooltip.SetDefault("Yo, Moon beard.");
+			// DisplayName.SetDefault("Celestial Tentacle");
+			// Tooltip.SetDefault("Yo, Moon beard.");
 		}
 
 		public override void SetDefaults()

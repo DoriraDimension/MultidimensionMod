@@ -9,9 +9,6 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Mana Sandstone");
-			Tooltip.SetDefault("A special type of stone, found inside of Lesser Sand Elementals, you can feel the magic flowing through it.\nLesser Sand Elementals are hostile against anyone who comes near their Desert." +
-                "\nWho knows how the old desert people didnt get attacked by them, if it's the elementals being tamed or even created by them.");
 		}
 
 		public override void SetDefaults()

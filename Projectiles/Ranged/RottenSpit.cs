@@ -11,7 +11,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Rotten Spit");
+			// DisplayName.SetDefault("Rotten Spit");
 		}
 
 		public override void SetDefaults()

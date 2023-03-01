@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Impacter");
-			Tooltip.SetDefault("A massive void matter sword used to hit enemies with a hefty swing\nCharge to yeet enemies even further.");
+			// DisplayName.SetDefault("Void Matter Impacter");
+			// Tooltip.SetDefault("A massive void matter sword used to hit enemies with a hefty swing\nCharge to yeet enemies even further.");
 		}
 
 		public override void SetDefaults()

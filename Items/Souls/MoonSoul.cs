@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Soul of the Moon Lord");
-			Tooltip.SetDefault("The one being the Lunatic Cultist wanted to reawake, it was waiting behind the moon, gathering new power to strike once more.\nTho the thing that was supposed to bring doom upon this world was nothing more than a weak imperfect incarnation of what it once has been.");
+			// DisplayName.SetDefault("Soul of the Moon Lord");
+			// Tooltip.SetDefault("The one being the Lunatic Cultist wanted to reawake, it was waiting behind the moon, gathering new power to strike once more.\nTho the thing that was supposed to bring doom upon this world was nothing more than a weak imperfect incarnation of what it once has been.");
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
 			ItemID.Sets.ItemNoGravity[Item.type] = true;
 		}

@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Abyssal Hellstone Brick");
-			Tooltip.SetDefault("what the brick.");
+			// DisplayName.SetDefault("Abyssal Hellstone Brick");
+			// Tooltip.SetDefault("what the brick.");
 		}
 
 		public override void SetDefaults()

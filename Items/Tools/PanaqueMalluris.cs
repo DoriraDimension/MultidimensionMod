@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Tools
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Panaque Malluris");
-			Tooltip.SetDefault("A hamaxe created from old blueprints found at the shores. The ancient depictions show it being used to gather and shape wood.");
+			// DisplayName.SetDefault("Panaque Malluris");
+			// Tooltip.SetDefault("A hamaxe created from old blueprints found at the shores. The ancient depictions show it being used to gather and shape wood.");
 		}
 
 		public override void SetDefaults()

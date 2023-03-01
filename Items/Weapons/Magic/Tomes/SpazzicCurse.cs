@@ -16,8 +16,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Spazzic Curse");
-			Tooltip.SetDefault("Summons a cursed flame at your cursor that then explodes into smaller fireballs");
+			// DisplayName.SetDefault("Spazzic Curse");
+			// Tooltip.SetDefault("Summons a cursed flame at your cursor that then explodes into smaller fireballs");
 		}
 
 		public override void SetDefaults()

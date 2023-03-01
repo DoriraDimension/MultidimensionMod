@@ -12,8 +12,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Cold Desert Shield");
-			Tooltip.SetDefault("Combining both, desert and frost magic results in a strong protecting shield.\nIncreases all damage and crit chance by 4%, increases defense by 6 and damage reduction by 4% when in the Desert or Snow biome.\nIncreases defense by 4 when under 50% life");
 		}
 
 		public override void SetDefaults()

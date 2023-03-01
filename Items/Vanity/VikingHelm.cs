@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Vanity
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Viking Helm");
-			Tooltip.SetDefault("lore soon");
+			// DisplayName.SetDefault("Viking Helm");
+			// Tooltip.SetDefault("lore soon");
 		}
 
 		public override void SetDefaults()

@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Volcanic Rock");
+			// DisplayName.SetDefault("Volcanic Rock");
 		}
 
 		public override void SetDefaults()

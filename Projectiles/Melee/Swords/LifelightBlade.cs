@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Lifelight Holy Blade");
+			// DisplayName.SetDefault("Lifelight Holy Blade");
 		}
 
 		public override void SetDefaults()

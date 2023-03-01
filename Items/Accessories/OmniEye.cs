@@ -13,8 +13,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Omni Eye");
-			Tooltip.SetDefault("You... can... see. Beware not to get blinded by it's forbidden magic.\nA old magician once created the Omni Eye, a magical object with big potential, but his experiments cursed it.\nWhen the curse started to consume the magician, he split the eye into 4 fragments so that it will never be used again.\nBut with all forbidden things, curiosity will take over ones mind, resulting in copies of the forbidden eyes.\nHighlights danger sources, enemies and treasures, also gives nightvision");
 		}
 
 		public override void SetDefaults()

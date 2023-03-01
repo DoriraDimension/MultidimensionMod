@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Workbench");
-			Tooltip.SetDefault("Tools of darkness are crafted on this.");
+			// DisplayName.SetDefault("Void Matter Workbench");
+			// Tooltip.SetDefault("Tools of darkness are crafted on this.");
 		}
 
 		public override void SetDefaults()

@@ -7,7 +7,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 	public class SoulpiercerProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Soulpiercer");
+			// DisplayName.SetDefault("Soulpiercer");
 		}
 
 		public override void SetDefaults() {

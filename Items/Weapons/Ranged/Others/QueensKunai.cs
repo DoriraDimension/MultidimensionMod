@@ -16,8 +16,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Queen's Kunai");
-			Tooltip.SetDefault("Throws kunais that summon a sparkling energy circle on impact.");
+			// DisplayName.SetDefault("Queen's Kunai");
+			// Tooltip.SetDefault("Throws kunais that summon a sparkling energy circle on impact.");
 		}
 
 

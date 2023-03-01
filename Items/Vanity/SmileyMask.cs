@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Vanity
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Smiley Mask");
-			Tooltip.SetDefault("Maybe if you disguise as him, the Darklings wont attack you anymore.");
+			// DisplayName.SetDefault("Smiley Mask");
+			// Tooltip.SetDefault("Maybe if you disguise as him, the Darklings wont attack you anymore.");
 		}
 
 		public override void SetDefaults()

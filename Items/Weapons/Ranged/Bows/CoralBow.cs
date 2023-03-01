@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 		int Shots = 0;
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Coral Bow");
-			Tooltip.SetDefault("This is bow ma boy.");
+			// DisplayName.SetDefault("Coral Bow");
+			// Tooltip.SetDefault("This is bow ma boy.");
 		}
 
 		public override void SetDefaults()

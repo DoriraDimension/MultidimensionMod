@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Magma Geode");
-			Tooltip.SetDefault("A geode found in the underworld.\nA blacksmith can break this open for you, sadly, there is none.\nRight click to recieve underworld minerals.");
+			// DisplayName.SetDefault("Magma Geode");
+			// Tooltip.SetDefault("A geode found in the underworld.\nA blacksmith can break this open for you, sadly, there is none.\nRight click to recieve underworld minerals.");
 		}
 
 		public override void SetDefaults()

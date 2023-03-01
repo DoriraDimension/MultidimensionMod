@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Corpse Swarmer");
-			Tooltip.SetDefault("Control the perfect swarm of rot loving flies\nShoots two Decay Flies on every swing and enemy hits\nHas a chance to shoot a big one");
+			// DisplayName.SetDefault("Corpse Swarmer");
+			// Tooltip.SetDefault("Control the perfect swarm of rot loving flies\nShoots two Decay Flies on every swing and enemy hits\nHas a chance to shoot a big one");
 		}
 
 		public override void SetDefaults()

@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Thunderbubble Bow");
-			Tooltip.SetDefault("Shoots electrified bubbles that explode into small gravity affected electric bolts that inflict electrified.");
+			// DisplayName.SetDefault("Thunderbubble Bow");
+			// Tooltip.SetDefault("Shoots electrified bubbles that explode into small gravity affected electric bolts that inflict electrified.");
 		}
 
 		public override void SetDefaults()

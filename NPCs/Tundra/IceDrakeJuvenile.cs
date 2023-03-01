@@ -25,7 +25,7 @@ namespace MultidimensionMod.NPCs.Tundra
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Ice Drake Juvenile");
+			// DisplayName.SetDefault("Ice Drake Juvenile");
 			Main.npcFrameCount[NPC.type] = 14;
 			NPCID.Sets.ActsLikeTownNPC[Type] = true;
 		}

@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Storage");
-			Tooltip.SetDefault("The infinite void inside this storage can contain a finite amount of content.");
+			// DisplayName.SetDefault("Void Matter Storage");
+			// Tooltip.SetDefault("The infinite void inside this storage can contain a finite amount of content.");
 		}
 
 		public override void SetDefaults()

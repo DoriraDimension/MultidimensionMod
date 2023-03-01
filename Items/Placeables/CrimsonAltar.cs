@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Crimson Altar");
-			Tooltip.SetDefault("So you dont need to run to your local Crimson anymore.");
+			// DisplayName.SetDefault("Crimson Altar");
+			// Tooltip.SetDefault("So you dont need to run to your local Crimson anymore.");
 		}
 
 		public override void SetDefaults()

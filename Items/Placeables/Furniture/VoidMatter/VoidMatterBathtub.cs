@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Bathtub");
-			Tooltip.SetDefault("Bathe yourself in darkness and embrace the void.");
+			// DisplayName.SetDefault("Void Matter Bathtub");
+			// Tooltip.SetDefault("Bathe yourself in darkness and embrace the void.");
 		}
 
 		public override void SetDefaults()

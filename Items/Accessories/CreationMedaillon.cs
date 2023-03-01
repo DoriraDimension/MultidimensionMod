@@ -8,8 +8,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Creation Medaillon");
-			Tooltip.SetDefault("A replica of the creation medaillon, not as powerful as the original but often used as a talisman for good fortune.\nThe medaillon resembles the deity circle, a group of powerful beings where every triangle stands for one deity while the eye resembles the creation titan.\nIncreases all damage by 10% and crit chance by 10%.\nDecreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen by 2.\nIncreases invincibility time and rains down stars after getting hit. \nGives a variety of additional stat bonuses.");
 		}
 
 		public override void SetDefaults()

@@ -13,7 +13,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Primus Laser");
+			// DisplayName.SetDefault("Primus Laser");
 			Main.projFrames[Projectile.type] = 4;
 		}
 

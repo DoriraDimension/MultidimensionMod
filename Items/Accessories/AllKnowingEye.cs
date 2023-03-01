@@ -16,8 +16,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("The all knowing Eye");
-			Tooltip.SetDefault("Increases crit chance by 10%\nCritical hits grant the hunter potion effect for a short time and inflict the target with ichor for 2 seconds.");
 		}
 
 		public override void SetDefaults()

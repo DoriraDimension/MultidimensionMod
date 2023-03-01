@@ -8,8 +8,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Wooden Bat");
-			Tooltip.SetDefault("Le Bonk\nLow chance to confuse enemies on hit.");
+			// DisplayName.SetDefault("Wooden Bat");
+			// Tooltip.SetDefault("Le Bonk\nLow chance to confuse enemies on hit.");
 		}
 
 		public override void SetDefaults()

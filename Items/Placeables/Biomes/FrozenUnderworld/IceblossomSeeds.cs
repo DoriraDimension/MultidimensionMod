@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Iceblossom Seeds");
-			Tooltip.SetDefault("cold seeds that will grow into a Iceblossom when planted on Cold Ash");
+			// DisplayName.SetDefault("Iceblossom Seeds");
+			// Tooltip.SetDefault("cold seeds that will grow into a Iceblossom when planted on Cold Ash");
 		}
 
 		public override void SetDefaults()

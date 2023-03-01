@@ -14,7 +14,7 @@ namespace MultidimensionMod.NPCs.Ocean
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Otherworldly Glowmarin");
+			// DisplayName.SetDefault("Otherworldly Glowmarin");
 			Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.Shark];
 		}
 

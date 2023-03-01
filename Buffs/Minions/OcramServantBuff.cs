@@ -8,8 +8,6 @@ namespace MultidimensionMod.Buffs.Minions
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Forgotten Servant");
-			Description.SetDefault("The servant of a long lost time is fighting for you");
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
 		}

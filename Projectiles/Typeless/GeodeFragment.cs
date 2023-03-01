@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Geode Fragment");
+			// DisplayName.SetDefault("Geode Fragment");
 			Main.projFrames[Projectile.type] = 3;
 		}
 

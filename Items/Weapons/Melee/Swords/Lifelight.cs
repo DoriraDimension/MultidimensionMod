@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Lifelight");
-			Tooltip.SetDefault("The awakened form of the Light's Bane that shows that even the most evil being can become good.");
+			// DisplayName.SetDefault("Lifelight");
+			// Tooltip.SetDefault("The awakened form of the Light's Bane that shows that even the most evil being can become good.");
 		}
 
 		public override void SetDefaults()

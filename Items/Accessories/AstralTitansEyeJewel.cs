@@ -9,8 +9,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Astral Titan's Eye Jewel");
-			Tooltip.SetDefault("A jewel made to look like the eyes of the creation titan.\nDecreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen by 2. \nIncreases invincibility time and rains down stars after getting hit.");
 		}
 
 		public override void SetDefaults()

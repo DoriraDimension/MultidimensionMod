@@ -13,8 +13,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Hidden Sun Soulcaller");
-			Tooltip.SetDefault("A scythe from a well hidden and now extinct civilisation, it was once a ordinary weapon,\ndecorated with a bright white extension to show off the connection to their very own sun.\nThough the scythe was retrieved and modified to now be able to summon the souls of the long lost residents.");
+			// DisplayName.SetDefault("Hidden Sun Soulcaller");
+			// Tooltip.SetDefault("A scythe from a well hidden and now extinct civilisation, it was once a ordinary weapon,\ndecorated with a bright white extension to show off the connection to their very own sun.\nThough the scythe was retrieved and modified to now be able to summon the souls of the long lost residents.");
 		}
 
 		public override void SetDefaults()

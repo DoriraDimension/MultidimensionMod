@@ -32,7 +32,7 @@ namespace MultidimensionMod
 			//IL.Terraria.Liquid.Update += Evaporation;
 		}
 
-		public override void AddRecipeGroups()
+		public override void AddRecipeGroups()/* tModPorter Note: Removed. Use ModSystem.AddRecipeGroups */
 		{
 			RecipeGroup group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " ´VilePowder", new int[]
 			{
@@ -88,7 +88,7 @@ namespace MultidimensionMod
 			RecipeGroup.RegisterGroup("AdamantiteBars", group);
 		}
 
-		//Heat Distortion and Evaporation IL's were made possible by The Depths mod <3
+		//Heat Distortion and Evaporation IL's were made possible by The Depths mod <3 (Im dumb and cant make it work right now)
 		//private void NoHeap(ILContext il)
 		//{
 		//	var c = new ILCursor(il);

@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Master Mage Potion");
-            Tooltip.SetDefault("Increases magic damage by 20%, increases mana regeneration, increases max mana by 40 and mana star pickup range");
+            // DisplayName.SetDefault("Master Mage Potion");
+            // Tooltip.SetDefault("Increases magic damage by 20%, increases mana regeneration, increases max mana by 40 and mana star pickup range");
         }
 
         public override void SetDefaults()

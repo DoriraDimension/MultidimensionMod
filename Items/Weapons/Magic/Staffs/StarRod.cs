@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Star Rod");
-			Tooltip.SetDefault("The power of the stars is on your side.");
+			// DisplayName.SetDefault("Star Rod");
+			// Tooltip.SetDefault("The power of the stars is on your side.");
 		}
 
 		public override void SetDefaults()

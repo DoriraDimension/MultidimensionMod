@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Armor
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Nero Breastplate");
-			Tooltip.SetDefault("A breastplate created from old blueprints found at the shores. The ancient depictions show brave warriors defending their home.\nIncreases crit chance by 15%.");
 		}
 
 		public override void SetDefaults()

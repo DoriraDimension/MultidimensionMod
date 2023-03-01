@@ -16,8 +16,8 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("The Watchers");
-			Tooltip.SetDefault("Grants the ability to fire a swarm of ever watching eyes.\nThe servants of the Eye of Judgement will some day become what their master is if given enough time.");
+			// DisplayName.SetDefault("The Watchers");
+			// Tooltip.SetDefault("Grants the ability to fire a swarm of ever watching eyes.\nThe servants of the Eye of Judgement will some day become what their master is if given enough time.");
 		}
 
 

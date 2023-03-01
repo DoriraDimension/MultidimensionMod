@@ -15,8 +15,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Evil Ember, Vulkanus");
-			Tooltip.SetDefault("Throw a blade of molten rock, the blade explodes into volcanic rocks on impact\nThis weapon belonged to Vertrarius, the strongest warrior of the dark forces, he is powerful and doesn't let any wound get to him\nVertrarius is not evil, he simply fights the Hallow out of boredom, violence is the most entertaining thing to him");
+			// DisplayName.SetDefault("Evil Ember, Vulkanus");
+			// Tooltip.SetDefault("Throw a blade of molten rock, the blade explodes into volcanic rocks on impact\nThis weapon belonged to Vertrarius, the strongest warrior of the dark forces, he is powerful and doesn't let any wound get to him\nVertrarius is not evil, he simply fights the Hallow out of boredom, violence is the most entertaining thing to him");
 		}
 
 		public override void SetDefaults()

@@ -8,8 +8,6 @@ namespace MultidimensionMod.Buffs.Minions
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dark Rebel");
-			Description.SetDefault("One of Smiley's trusted soldiers helps you in battle");
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
 		}

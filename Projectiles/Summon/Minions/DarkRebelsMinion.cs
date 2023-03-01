@@ -13,7 +13,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dark Rebel");
+			// DisplayName.SetDefault("Dark Rebel");
 			Main.projFrames[Projectile.type] = 6;
 			ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
 			Main.projPet[Projectile.type] = true;

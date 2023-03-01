@@ -10,7 +10,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Hidden Sun Scythe");
+			// DisplayName.SetDefault("Hidden Sun Scythe");
 		}
 
 		public override void SetDefaults()

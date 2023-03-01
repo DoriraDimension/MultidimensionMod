@@ -10,8 +10,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Mystic Geode");
-			Tooltip.SetDefault("A geode infused with potent dimensional magic, its presence empowers any thrown geode\nCauses geodes to drop themself as a 1/3 chance instead of their regular loot\nGrants geodes unique effects depending on their type\nNew effects are added when entering hardmode\nIncreases the chance of obtaining Geodes drastically");
 		}
 
 		public override void SetDefaults()

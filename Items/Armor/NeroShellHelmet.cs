@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Armor
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Nero Shell Helmet");
-			Tooltip.SetDefault("A helmet created from old blueprints found at the shores. The ancient depictions show brave warriors defending their home.\nIncreases melee damage by 18%.");
 		}
 
 		public override void SetDefaults()

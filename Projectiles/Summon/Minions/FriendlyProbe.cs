@@ -13,7 +13,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 	{
 		public override void SetStaticDefaults()
 		{
-			base.DisplayName.SetDefault("Friendly Probe");
+			// base.DisplayName.SetDefault("Friendly Probe");
 			ProjectileID.Sets.MinionSacrificable[Projectile.type] = true;
 			ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
 		}

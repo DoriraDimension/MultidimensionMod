@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Blood Geode");
-			Tooltip.SetDefault("A geode found in the Crimson.\nA blacksmith can break this open for you, sadly, there is none.\nRight click to recieve Crimson minerals.");
+			// DisplayName.SetDefault("Blood Geode");
+			// Tooltip.SetDefault("A geode found in the Crimson.\nA blacksmith can break this open for you, sadly, there is none.\nRight click to recieve Crimson minerals.");
 		}
 
 		public override void SetDefaults()

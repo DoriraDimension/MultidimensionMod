@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Jungle Leaf Spear");
-			Tooltip.SetDefault("Shoots small leafes");
+			// DisplayName.SetDefault("Jungle Leaf Spear");
+			// Tooltip.SetDefault("Shoots small leafes");
 		}
 
 		public override void SetDefaults()

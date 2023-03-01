@@ -9,8 +9,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Socks");
-			Tooltip.SetDefault("Don't let them get wet or you will be in eternal pain.");
 		}
 
 		public override void SetDefaults()

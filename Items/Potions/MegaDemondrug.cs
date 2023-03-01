@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Mega Demondrug");
-            Tooltip.SetDefault("Increases all damage and crit chance by 12% and increases knockback.");
+            // DisplayName.SetDefault("Mega Demondrug");
+            // Tooltip.SetDefault("Increases all damage and crit chance by 12% and increases knockback.");
         }
 
         public override void SetDefaults()

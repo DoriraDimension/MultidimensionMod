@@ -9,8 +9,6 @@ namespace MultidimensionMod.Items.Critters
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Baby Glowmarin");
-			Tooltip.SetDefault("A juvenile Glowmarin, it's glow organs are already developed.");
 		}
 
 		public override void SetDefaults()

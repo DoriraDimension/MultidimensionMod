@@ -8,8 +8,6 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Old Petrified Blade");
-			Tooltip.SetDefault("A blade that lost its fiery magic and turned to stone.\nWith some love and craftmanship it could be repaired");
 		}
 
 		public override void SetDefaults()

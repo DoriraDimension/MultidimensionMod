@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Lonely Sword");
-			Tooltip.SetDefault("A sword of a dark warrior that was given to Smiley after said warroir fell in battle.\nIt shoots a dark orb straight from 1995.");
+			// DisplayName.SetDefault("Lonely Sword");
+			// Tooltip.SetDefault("A sword of a dark warrior that was given to Smiley after said warroir fell in battle.\nIt shoots a dark orb straight from 1995.");
 		}
 
 		public override void SetDefaults()

@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Handheld Destroyer");
-			Tooltip.SetDefault("The rotten flesh fell off and it evolved to take on the place of the Destroyer.");
+			// DisplayName.SetDefault("Handheld Destroyer");
+			// Tooltip.SetDefault("The rotten flesh fell off and it evolved to take on the place of the Destroyer.");
 		}
 
 		public override void SetDefaults()

@@ -13,8 +13,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Frostborn Blade");
-			Tooltip.SetDefault("A magic sword from another world, a world beyhond the freezing fog of the Frozen Underworld.\nShoots several frost spikes that inflict Frostbite\nDealing critical hits unleashes more frost spikes from the player.");
+			// DisplayName.SetDefault("Frostborn Blade");
+			// Tooltip.SetDefault("A magic sword from another world, a world beyhond the freezing fog of the Frozen Underworld.\nShoots several frost spikes that inflict Frostbite\nDealing critical hits unleashes more frost spikes from the player.");
 		}
 
 		public override void SetDefaults()

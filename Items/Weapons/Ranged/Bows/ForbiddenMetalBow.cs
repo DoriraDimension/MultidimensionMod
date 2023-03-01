@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Forbidden Dunes");
-			Tooltip.SetDefault("A bow that was restored from old relics, it converts Wooden Arrows into Forbidden Arrows.");
+			// DisplayName.SetDefault("Forbidden Dunes");
+			// Tooltip.SetDefault("A bow that was restored from old relics, it converts Wooden Arrows into Forbidden Arrows.");
 		}
 
 		public override void SetDefaults()

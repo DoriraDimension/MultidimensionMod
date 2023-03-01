@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Bone Shottie");
-			Tooltip.SetDefault("Spooky Scary Shotgun.");
+			// DisplayName.SetDefault("Bone Shottie");
+			// Tooltip.SetDefault("Spooky Scary Shotgun.");
 		}
 
 		public override void SetDefaults()

@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Raider Drakeslayer");
-			Tooltip.SetDefault("Inflicts Drakeblood Poison.");
+			// DisplayName.SetDefault("Raider Drakeslayer");
+			// Tooltip.SetDefault("Inflicts Drakeblood Poison.");
 		}
 
 		public override void SetDefaults()

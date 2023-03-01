@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Candelabra");
-			Tooltip.SetDefault("A romantic shine on a date in darkness.");
+			// DisplayName.SetDefault("Void Matter Candelabra");
+			// Tooltip.SetDefault("A romantic shine on a date in darkness.");
 		}
 
 		public override void SetDefaults()

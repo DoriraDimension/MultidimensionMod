@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Xiphias Gladius");
-			Tooltip.SetDefault("A sword created from old blueprints found at the shores. The ancient depictions show it being used to fend off preditory ocean creatures.");
+			// DisplayName.SetDefault("Xiphias Gladius");
+			// Tooltip.SetDefault("A sword created from old blueprints found at the shores. The ancient depictions show it being used to fend off preditory ocean creatures.");
 		}
 
 		public override void SetDefaults()

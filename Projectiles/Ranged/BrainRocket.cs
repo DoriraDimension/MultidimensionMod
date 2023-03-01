@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Brain Rocket");
+			// DisplayName.SetDefault("Brain Rocket");
 		}
 
 		public override void SetDefaults()
@@ -57,7 +57,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Spazzic Explosion");
+			// DisplayName.SetDefault("Spazzic Explosion");
 		}
 
 		public override void SetDefaults()

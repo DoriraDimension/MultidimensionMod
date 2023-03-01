@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("The Fly");
-			Tooltip.SetDefault("Swarm your foes with flies like flies swarm a rotting corpse.");
+			// DisplayName.SetDefault("The Fly");
+			// Tooltip.SetDefault("Swarm your foes with flies like flies swarm a rotting corpse.");
 		}
 
 		public override void SetDefaults()

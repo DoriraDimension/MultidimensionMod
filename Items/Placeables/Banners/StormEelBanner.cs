@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Placeables.Banners
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Storm Front Eel Banner");
-			Tooltip.SetDefault("The great storm eels, only active during storms, when the sea is harsh and unforgiving.\nMany people believe they are scouts, scouts of someone or something deep under the ocean,\nthat is why these creatures are seen as an omen of even worse to come");
+			// DisplayName.SetDefault("Storm Front Eel Banner");
+			// Tooltip.SetDefault("The great storm eels, only active during storms, when the sea is harsh and unforgiving.\nMany people believe they are scouts, scouts of someone or something deep under the ocean,\nthat is why these creatures are seen as an omen of even worse to come");
 		}
 
 		public override void SetDefaults()

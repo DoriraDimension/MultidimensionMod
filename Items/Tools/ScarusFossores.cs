@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Tools
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Scarus Fossores");
-			Tooltip.SetDefault("A pickaxe created from old blueprints found at the shores. The ancient depictions show it being used to carve out holes from reefs.");
+			// DisplayName.SetDefault("Scarus Fossores");
+			// Tooltip.SetDefault("A pickaxe created from old blueprints found at the shores. The ancient depictions show it being used to carve out holes from reefs.");
 		}
 
 		public override void SetDefaults()

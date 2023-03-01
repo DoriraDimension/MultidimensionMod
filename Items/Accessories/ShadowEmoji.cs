@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Shadow Emoji");
-			Tooltip.SetDefault("Smiley's ability to smile, even in the darkest days is truly inspiring.\nGrants +2 minion slots and increases minion damage by 5%.\nIncreases movement speed by 15% when below 30% health.");
 			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(8, 5));
 			ItemID.Sets.AnimatesAsSoul[Item.type] = true;
 			ItemID.Sets.ItemNoGravity[Item.type] = true;

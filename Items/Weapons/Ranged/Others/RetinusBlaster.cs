@@ -16,8 +16,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Retinus Blaster");
-			Tooltip.SetDefault("Charges a devastating death beam");
+			// DisplayName.SetDefault("Retinus Blaster");
+			// Tooltip.SetDefault("Charges a devastating death beam");
 		}
 
 		public override void SetDefaults()

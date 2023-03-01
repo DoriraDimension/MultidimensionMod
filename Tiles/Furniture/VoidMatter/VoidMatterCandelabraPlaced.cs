@@ -2,6 +2,7 @@
 using MultidimensionMod.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.ObjectData;
@@ -19,8 +20,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.addTile(Type);
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Void Matter Candelabra");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Void Matter Candelabra");
             AddMapEntry(new Color(25, 19, 39), name);
             DustType = ModContent.DustType<DarkDust>();
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);

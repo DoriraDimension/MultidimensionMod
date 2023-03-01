@@ -11,7 +11,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Golem Laser");
+			// DisplayName.SetDefault("Golem Laser");
 			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 3;
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
 		}

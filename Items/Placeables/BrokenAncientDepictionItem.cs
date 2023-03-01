@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Broken Ancient Depiction");
-			Tooltip.SetDefault("A big and heavy sandstone tablet, it seems to be broken and it's difficult to guess what it is showing.\nDont drop it on the ground, its fragile");
+			// DisplayName.SetDefault("Broken Ancient Depiction");
+			// Tooltip.SetDefault("A big and heavy sandstone tablet, it seems to be broken and it's difficult to guess what it is showing.\nDont drop it on the ground, its fragile");
 		}
 
 		public override void SetDefaults()

@@ -14,8 +14,8 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Soul of the Brain");
-			Tooltip.SetDefault("Like the related eye, this brain is supposed to test ones skills,\nbut rather than doing that it turned against its duty.\nIt resides in the bloody land of flesh, awaiting a new victim.");
+			// DisplayName.SetDefault("Soul of the Brain");
+			// Tooltip.SetDefault("Like the related eye, this brain is supposed to test ones skills,\nbut rather than doing that it turned against its duty.\nIt resides in the bloody land of flesh, awaiting a new victim.");
 			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(7, 6));
 			ItemID.Sets.AnimatesAsSoul[Item.type] = true;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;

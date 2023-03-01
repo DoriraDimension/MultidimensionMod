@@ -10,7 +10,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 	{
 		public override void SetStaticDefaults()
 		{
-			base.DisplayName.SetDefault("Tide Bubble");
+			// base.DisplayName.SetDefault("Tide Bubble");
 		}
 
 		public override void SetDefaults()

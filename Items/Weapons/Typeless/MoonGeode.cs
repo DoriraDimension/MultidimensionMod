@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Moon Geode");
-			Tooltip.SetDefault("A geode found in the space layer after the lord of the moon fell.\nA blacksmith can break this open for you, sadly, there is none.\nRight click to recieve Luminite.");
+			// DisplayName.SetDefault("Moon Geode");
+			// Tooltip.SetDefault("A geode found in the space layer after the lord of the moon fell.\nA blacksmith can break this open for you, sadly, there is none.\nRight click to recieve Luminite.");
 		}
 
 		public override void SetDefaults()

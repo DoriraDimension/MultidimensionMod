@@ -9,8 +9,6 @@ namespace MultidimensionMod.Buffs.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Warriors Heart");
-            Description.SetDefault("Increased meele damage.");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = false;
         }

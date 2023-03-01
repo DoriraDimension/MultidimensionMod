@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dormant King");
-			Tooltip.SetDefault("A blade forged by a long shattered cult who worshipped a unknown deity, it slows enemies down for 5 seconds.");
+			// DisplayName.SetDefault("Dormant King");
+			// Tooltip.SetDefault("A blade forged by a long shattered cult who worshipped a unknown deity, it slows enemies down for 5 seconds.");
 		}
 
 		public override void SetDefaults()

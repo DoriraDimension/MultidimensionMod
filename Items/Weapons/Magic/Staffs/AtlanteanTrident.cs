@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 		int WaveTimer = 0;
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Atlantean Trident");
-			Tooltip.SetDefault("fdjpydsfhgpsdfughaofidjüaefogip.");
+			// DisplayName.SetDefault("Atlantean Trident");
+			// Tooltip.SetDefault("fdjpydsfhgpsdfughaofidjüaefogip.");
 			Item.staff[Item.type] = true;
 		}
 

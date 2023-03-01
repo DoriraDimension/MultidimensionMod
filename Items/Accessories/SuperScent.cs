@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Super Scent");
-			Tooltip.SetDefault("The combination of stinky paste and a aromatic Leaf created a scent that smells, to say it nicely, interesting.\nIncreases minion damage by 6% and gives +1 minion slot.\nRub it onto your skin to smell worse than the human mind can comprehend");
 		}
 
 		public override void SetDefaults()

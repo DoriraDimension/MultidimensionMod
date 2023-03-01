@@ -13,7 +13,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Tamed Ice Drake Juvenile");
+			// DisplayName.SetDefault("Tamed Ice Drake Juvenile");
 			Main.projFrames[Projectile.type] = 5;
 			ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
 			Main.projPet[Projectile.type] = true;

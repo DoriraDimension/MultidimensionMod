@@ -17,8 +17,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Great Moonlight");
-			Tooltip.SetDefault("The blue crystal blade is composed only of light.\nThe lunatic Cultist is a insane fanatic of the moon and so stole this legendary blade to use it himself,\ntho the Great Moonlight seems to not belong in this world and instead obeys an otherworldly moon.");
+			// DisplayName.SetDefault("Great Moonlight");
+			// Tooltip.SetDefault("The blue crystal blade is composed only of light.\nThe lunatic Cultist is a insane fanatic of the moon and so stole this legendary blade to use it himself,\ntho the Great Moonlight seems to not belong in this world and instead obeys an otherworldly moon.");
 		}
 
 		public override void SetDefaults()

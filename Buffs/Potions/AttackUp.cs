@@ -9,8 +9,6 @@ namespace MultidimensionMod.Buffs.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Attack Up");
-            Description.SetDefault("Increased offensive stats.");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = false;
         }

@@ -7,7 +7,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 	public class GildedRejectionProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Gilded Rejection");
+			// DisplayName.SetDefault("Gilded Rejection");
 		}
 
 		public override void SetDefaults() {

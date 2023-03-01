@@ -13,8 +13,8 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Soul of the Lunatic Cultist");
-			Tooltip.SetDefault("The weird cultist who worships the moon wanted to reawaken something that was sealed away for hundreds of years,\nbut he got interrupted and absorbed the energy used for the ritual to fight instead.\nThe absorbed celestial energy smashed his soul into 4 pieces driving him even more insane.\nThere was no hope for this guy anymore, or perhaps never was.");
+			// DisplayName.SetDefault("Soul of the Lunatic Cultist");
+			// Tooltip.SetDefault("The weird cultist who worships the moon wanted to reawaken something that was sealed away for hundreds of years,\nbut he got interrupted and absorbed the energy used for the ritual to fight instead.\nThe absorbed celestial energy smashed his soul into 4 pieces driving him even more insane.\nThere was no hope for this guy anymore, or perhaps never was.");
 			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(7, 8));
 			ItemID.Sets.AnimatesAsSoul[Item.type] = true;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;

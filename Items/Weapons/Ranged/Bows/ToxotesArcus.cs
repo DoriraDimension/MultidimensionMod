@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 		public int WaveShot = 0;
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Toxotes Arcus");
-			Tooltip.SetDefault("A bow created from old blueprints found at the shores. The ancient depictions show it being used to hunt ocean creatures for food.\nShoots a burst of 4 arrows.");
+			// DisplayName.SetDefault("Toxotes Arcus");
+			// Tooltip.SetDefault("A bow created from old blueprints found at the shores. The ancient depictions show it being used to hunt ocean creatures for food.\nShoots a burst of 4 arrows.");
 		}
 
 		public override void SetDefaults()

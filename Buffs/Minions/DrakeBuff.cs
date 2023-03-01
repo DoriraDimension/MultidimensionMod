@@ -8,8 +8,6 @@ namespace MultidimensionMod.Buffs.Minions
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Tame Ice Drake Juvenile");
-			Description.SetDefault("A cute Ice Drake bby is MURDERING YOUR ENEMIES!");
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
 		}

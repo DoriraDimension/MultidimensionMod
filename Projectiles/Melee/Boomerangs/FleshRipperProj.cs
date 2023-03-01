@@ -9,7 +9,7 @@ namespace MultidimensionMod.Projectiles.Melee.Boomerangs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Flesh Ripper");
+			// DisplayName.SetDefault("Flesh Ripper");
 		}
 
 		public override void SetDefaults()

@@ -17,8 +17,8 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Mask of the Idol");
-			Tooltip.SetDefault("mask that is funny clay man");
+			// DisplayName.SetDefault("Mask of the Idol");
+			// Tooltip.SetDefault("mask that is funny clay man");
 			ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true;
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
 		}

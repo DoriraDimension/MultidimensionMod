@@ -8,8 +8,6 @@ namespace MultidimensionMod.Buffs.Minions
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Lesser Sand Elemental");
-			Description.SetDefault("A living ball of sand fights for you");
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
 		}

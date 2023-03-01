@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Thorn Scarf");
-			Tooltip.SetDefault("Old natives of the jungle would wear this to hurt animals that attack them but would also hurt themself,\na small price to pay to be able to escape a attacking predator.\nReflects 15% of damage back to the enemy if they touch you");
 		}
 
 		public override void SetDefaults()

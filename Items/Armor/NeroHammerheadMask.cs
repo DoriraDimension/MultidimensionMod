@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Armor
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Nero Hammerhead Mask");
-			Tooltip.SetDefault("A mask created from old blueprints found at the shores. The ancient depictions show brave warriors defending their home.\nIncreases magic damage by 18% and increases max mana by 100.");
 		}
 
 		public override void SetDefaults()

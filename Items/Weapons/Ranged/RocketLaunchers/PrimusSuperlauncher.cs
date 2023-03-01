@@ -17,8 +17,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Primus Superlauncher");
-			Tooltip.SetDefault("Shoots several Prime weapon based rockets.");
+			// DisplayName.SetDefault("Primus Superlauncher");
+			// Tooltip.SetDefault("Shoots several Prime weapon based rockets.");
 		}
 
 		public override void SetDefaults()

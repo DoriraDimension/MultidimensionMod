@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Fairy Geode");
-			Tooltip.SetDefault("A geode found in the Hallow.\nA blacksmith can break this open for you, sadly, there is none.\nRight click to recieve Hallow minerals.");
+			// DisplayName.SetDefault("Fairy Geode");
+			// Tooltip.SetDefault("A geode found in the Hallow.\nA blacksmith can break this open for you, sadly, there is none.\nRight click to recieve Hallow minerals.");
 		}
 
 		public override void SetDefaults()

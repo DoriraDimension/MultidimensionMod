@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Omni Geode");
-			Tooltip.SetDefault("A geode found after the spirits of lights and darkness have been released.\nA blacksmith can break this open for you, sadly, there is none.\nRight click to recieve hardmode cavern minerals.");
+			// DisplayName.SetDefault("Omni Geode");
+			// Tooltip.SetDefault("A geode found after the spirits of lights and darkness have been released.\nA blacksmith can break this open for you, sadly, there is none.\nRight click to recieve hardmode cavern minerals.");
 		}
 
 		public override void SetDefaults()

@@ -14,8 +14,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("All Shattering Bat");
-			Tooltip.SetDefault("\nEnemies will be confused on hit.\nRight click fires Onyx Shots.\nIt may seem like a generic wooden bat, but this is actually a forbidden artifact\nIt was forged in ancient times, using a extinct form of energy");
+			// DisplayName.SetDefault("All Shattering Bat");
+			// Tooltip.SetDefault("\nEnemies will be confused on hit.\nRight click fires Onyx Shots.\nIt may seem like a generic wooden bat, but this is actually a forbidden artifact\nIt was forged in ancient times, using a extinct form of energy");
 		}
 
 		public override void SetDefaults()

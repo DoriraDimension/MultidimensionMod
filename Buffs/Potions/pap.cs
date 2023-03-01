@@ -9,8 +9,6 @@ namespace MultidimensionMod.Buffs.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("lol");
-            Description.SetDefault("you are immortal now.");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = false;
         }

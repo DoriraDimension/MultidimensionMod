@@ -3058,7 +3058,7 @@ namespace MultidimensionMod.Base
                     SoundEngine.PlaySound(SoundID.Roar, npc.position);
             }
             //prevent a -1, -1 saving scenario
-            if (npc.type >= Main.maxNPCTypes && npc.homeTileX == -1 && npc.homeTileY == -1 || npc.homeTileX == ushort.MaxValue && npc.homeTileY == ushort.MaxValue)
+            if (npc.homeTileX == -1 && npc.homeTileY == -1 || npc.homeTileX == ushort.MaxValue && npc.homeTileY == ushort.MaxValue)
             {
                 npc.homeTileX = (int)npc.Center.X / 16;
                 npc.homeTileY = (int)npc.Center.Y / 16;

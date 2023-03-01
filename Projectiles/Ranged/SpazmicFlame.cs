@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Spazmic Flame"); 
+			// DisplayName.SetDefault("Spazmic Flame"); 
 		}
 
 		public override void SetDefaults()

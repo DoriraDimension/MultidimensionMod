@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Guns
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Retilazor");
-			Tooltip.SetDefault("Fires 4 lazors per shot.");
+			// DisplayName.SetDefault("Retilazor");
+			// Tooltip.SetDefault("Fires 4 lazors per shot.");
 		}
 
 		public override void SetDefaults()

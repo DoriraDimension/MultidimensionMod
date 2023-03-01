@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Shrades Demise");
+			// DisplayName.SetDefault("Shrades Demise");
 		}
 
 		public override void SetDefaults()

@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Fishron Cleaver");
-			Tooltip.SetDefault("A big cleaver, designed like a mutated ocean creature, it was seen as a sign of strength.\nReleases typhoons on enemy hits.");
+			// DisplayName.SetDefault("Fishron Cleaver");
+			// Tooltip.SetDefault("A big cleaver, designed like a mutated ocean creature, it was seen as a sign of strength.\nReleases typhoons on enemy hits.");
 		}
 
 		public override void SetDefaults()

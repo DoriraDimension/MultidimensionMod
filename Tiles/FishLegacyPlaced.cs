@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -19,8 +20,8 @@ namespace MultidimensionMod.Tiles
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 16, 16 };
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Fish Cleaver Display");
+			LocalizedText name = CreateMapEntryName();
+			// name.SetDefault("Fish Cleaver Display");
 			AddMapEntry(new Color(159, 115, 87), name);
 			DustType = 0;
 		}

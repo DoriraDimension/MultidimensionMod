@@ -21,7 +21,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Ocean Razor Waterblade");
+			// DisplayName.SetDefault("Ocean Razor Waterblade");
 		}
 
 		public override void SetDefaults()

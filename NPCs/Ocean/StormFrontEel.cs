@@ -16,7 +16,7 @@ namespace MultidimensionMod.NPCs.Ocean
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Storm Front Eel");
+			// DisplayName.SetDefault("Storm Front Eel");
 			Main.npcFrameCount[NPC.type] = 5;
 		}
 

@@ -13,8 +13,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("The Queen's Sting");
-			Tooltip.SetDefault("Explodes into bees and poison clouds on hit.");
+			// DisplayName.SetDefault("The Queen's Sting");
+			// Tooltip.SetDefault("Explodes into bees and poison clouds on hit.");
 		}
 
 		public override void SetDefaults()

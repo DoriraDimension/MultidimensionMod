@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Hex Rapier");
-			Tooltip.SetDefault("A cursed thrusting sword empowered by malicious runes.\nThe curses that were laid onto this weapon are ancient and have no counterspell,\nthe hex isnt at its peak though and as such wont be able to cause any overly major harm\nOne should still beware of its power, as it is a forbidden artifact after all");
+			// DisplayName.SetDefault("Hex Rapier");
+			// Tooltip.SetDefault("A cursed thrusting sword empowered by malicious runes.\nThe curses that were laid onto this weapon are ancient and have no counterspell,\nthe hex isnt at its peak though and as such wont be able to cause any overly major harm\nOne should still beware of its power, as it is a forbidden artifact after all");
 		}
 
 		public override void SetDefaults()

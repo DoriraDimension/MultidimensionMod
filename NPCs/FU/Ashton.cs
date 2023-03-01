@@ -19,7 +19,6 @@ namespace MultidimensionMod.NPCs.FU
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Ashton");
 			Main.npcFrameCount[NPC.type] = 5;
 		}
 

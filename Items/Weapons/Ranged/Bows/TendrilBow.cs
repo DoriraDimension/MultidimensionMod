@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Tendril Bow");
-			Tooltip.SetDefault("Made with the tendrils of the big eye.\nHas a chance to shoot a small eyeball that deals 50% more damage.");
+			// DisplayName.SetDefault("Tendril Bow");
+			// Tooltip.SetDefault("Made with the tendrils of the big eye.\nHas a chance to shoot a small eyeball that deals 50% more damage.");
 		}
 
 		public override void SetDefaults()

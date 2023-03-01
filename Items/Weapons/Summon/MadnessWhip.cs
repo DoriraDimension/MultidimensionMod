@@ -15,8 +15,8 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Mindpunishing Madness");
-			Tooltip.SetDefault("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH.");
+			// DisplayName.SetDefault("Mindpunishing Madness");
+			// Tooltip.SetDefault("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH.");
 		}
 
 		public override void SetDefaults()

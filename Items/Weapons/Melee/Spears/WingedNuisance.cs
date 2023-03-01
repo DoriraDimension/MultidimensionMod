@@ -8,8 +8,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 	public class WingedNuisance : ModItem
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Winged Nuisance");
-			Tooltip.SetDefault("Annoy your enemies until they go away.");
+			// DisplayName.SetDefault("Winged Nuisance");
+			// Tooltip.SetDefault("Annoy your enemies until they go away.");
 		}
 
 		public override void SetDefaults() {

@@ -9,8 +9,6 @@ namespace MultidimensionMod.Buffs.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Master Mage");
-            Description.SetDefault("Magic abilities are stronger.");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = false;
         }

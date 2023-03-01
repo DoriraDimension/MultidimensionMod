@@ -14,7 +14,7 @@ namespace MultidimensionMod.Projectiles.Magic
 		public int ringTimer = 0;
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Lightstream Mythos");
+			// DisplayName.SetDefault("Lightstream Mythos");
 		}
 
 		public override void SetDefaults()

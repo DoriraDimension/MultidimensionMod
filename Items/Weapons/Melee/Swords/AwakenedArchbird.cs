@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Awakened Archbird");
-			Tooltip.SetDefault("A sword shaped like a legendary bird found in ancient depictions in the desert, it is full of dark flames.\nInscriptions say that one day the archbird will swoop down and bathe the earth in it's dark flames.\nShoots shadowflame tentacles when swung and slows enemies when hit for 5 seconds.");
+			// DisplayName.SetDefault("Awakened Archbird");
+			// Tooltip.SetDefault("A sword shaped like a legendary bird found in ancient depictions in the desert, it is full of dark flames.\nInscriptions say that one day the archbird will swoop down and bathe the earth in it's dark flames.\nShoots shadowflame tentacles when swung and slows enemies when hit for 5 seconds.");
 		}
 
 		public override void SetDefaults()

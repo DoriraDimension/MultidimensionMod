@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Abyssal Hellstone");
-			Tooltip.SetDefault("Ice cold magic has turned this normally hot ore into a freezing rock.");
+			// DisplayName.SetDefault("Abyssal Hellstone");
+			// Tooltip.SetDefault("Ice cold magic has turned this normally hot ore into a freezing rock.");
 		}
 
 		public override void SetDefaults()

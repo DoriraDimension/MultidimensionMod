@@ -7,9 +7,8 @@ namespace MultidimensionMod.Buffs.Pets
 {
 	public class IgnaenHeadBuff : ModBuff
 	{
-		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Archtyrant's Head");
-			Description.SetDefault("The head of a demonic lord is following you.");
+		public override void SetStaticDefaults() 
+		{
 			Main.buffNoTimeDisplay[Type] = true;
 			Main.vanityPet[Type] = true;
 		}

@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 	public class DeltaShark : ModItem
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Delta Shark");
-			Tooltip.SetDefault("65% chance to not consume ammo.\nA small juvenile robotic shark, watch out for his parents.");
+			// DisplayName.SetDefault("Delta Shark");
+			// Tooltip.SetDefault("65% chance to not consume ammo.\nA small juvenile robotic shark, watch out for his parents.");
 		}
 
 		public override void SetDefaults() {

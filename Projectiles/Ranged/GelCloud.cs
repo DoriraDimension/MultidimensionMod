@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Gel Cloud");
+			// DisplayName.SetDefault("Gel Cloud");
 		}
 
 		public override void SetDefaults()

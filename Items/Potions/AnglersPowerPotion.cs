@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Potions
 	{
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Angler's Power Potion");
-            Tooltip.SetDefault("Increases your fishing power by 30.\nIncreases your chance to fish up crates by 10%. \nYou can see what is biting your hook.");
+            // DisplayName.SetDefault("Angler's Power Potion");
+            // Tooltip.SetDefault("Increases your fishing power by 30.\nIncreases your chance to fish up crates by 10%. \nYou can see what is biting your hook.");
         }
 
         public override void SetDefaults()

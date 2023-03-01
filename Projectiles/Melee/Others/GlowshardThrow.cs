@@ -14,7 +14,7 @@ namespace MultidimensionMod.Projectiles.Melee.Others
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Glowshard");
+			// DisplayName.SetDefault("Glowshard");
 		}
 
 		public override void SetDefaults()

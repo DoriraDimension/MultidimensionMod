@@ -3,6 +3,7 @@ using MultidimensionMod.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
@@ -20,8 +21,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
             TileObjectData.newTile.CoordinateHeights = new int[] { 18 };
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.addTile(Type);
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Void Matter Candle");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Void Matter Candle");
             AddMapEntry(new Color(25, 19, 39), name);
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
             AdjTiles = new int[] { TileID.Candles };

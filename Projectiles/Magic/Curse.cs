@@ -15,7 +15,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Cursemark");
+			// DisplayName.SetDefault("Cursemark");
 		}
 
 		public override void SetDefaults()

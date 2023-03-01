@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Skeletal Greatsword");
-			Tooltip.SetDefault("How cruel the world is, humans killing humans for nothing.\nSome are especially cruel and process their victims into weapons, just to show off how many they have killed.\nThe sword throws out bones of the former victims on every swing");
+			// DisplayName.SetDefault("Skeletal Greatsword");
+			// Tooltip.SetDefault("How cruel the world is, humans killing humans for nothing.\nSome are especially cruel and process their victims into weapons, just to show off how many they have killed.\nThe sword throws out bones of the former victims on every swing");
 		}
 
 		public override void SetDefaults()

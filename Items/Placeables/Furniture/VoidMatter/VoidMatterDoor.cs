@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Door");
-			Tooltip.SetDefault("You can close the door, but the void will always find a way in.");
+			// DisplayName.SetDefault("Void Matter Door");
+			// Tooltip.SetDefault("You can close the door, but the void will always find a way in.");
 		}
 
 		public override void SetDefaults()

@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -20,8 +21,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 18 };
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Void Fabricator");
+			LocalizedText name = CreateMapEntryName();
+			// name.SetDefault("Void Fabricator");
 			AddMapEntry(new Color(25, 19, 39), name);
 			DustType = ModContent.DustType<DarkDust>();
 		}

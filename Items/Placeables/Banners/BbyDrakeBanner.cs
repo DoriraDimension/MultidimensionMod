@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Placeables.Banners
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Ice Drake Juvenile Banner");
-			Tooltip.SetDefault("Despite being young, these babies are very aggressive, they attack everything that enters their nesting grounds in the icy caves.\nDuring blizzards they will fly outside and start hunting");
+			// DisplayName.SetDefault("Ice Drake Juvenile Banner");
+			// Tooltip.SetDefault("Despite being young, these babies are very aggressive, they attack everything that enters their nesting grounds in the icy caves.\nDuring blizzards they will fly outside and start hunting");
 		}
 
 		public override void SetDefaults()

@@ -7,7 +7,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 	public class WingedNuisanceProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Winged Nuisance");
+			// DisplayName.SetDefault("Winged Nuisance");
 		}
 
 		public override void SetDefaults() {

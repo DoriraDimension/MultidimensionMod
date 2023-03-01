@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Sofa");
-			Tooltip.SetDefault("Take a break and relax on the void's most comfy sofa.");
+			// DisplayName.SetDefault("Void Matter Sofa");
+			// Tooltip.SetDefault("Take a break and relax on the void's most comfy sofa.");
 		}
 
 		public override void SetDefaults()

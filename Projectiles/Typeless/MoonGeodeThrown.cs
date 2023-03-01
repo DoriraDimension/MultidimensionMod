@@ -14,7 +14,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Frozen Geode");
+			// DisplayName.SetDefault("Frozen Geode");
 		}
 
 		public override void SetDefaults()

@@ -11,7 +11,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Queen Bee's sting sting");
+			// DisplayName.SetDefault("Queen Bee's sting sting");
 		}
 
 		public override void SetDefaults()

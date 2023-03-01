@@ -13,8 +13,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Storm Scepter");
-			Tooltip.SetDefault("Call forth a shower from the sky.\nRains Storm Droplets from above the mouse cursor");
+			// DisplayName.SetDefault("Storm Scepter");
+			// Tooltip.SetDefault("Call forth a shower from the sky.\nRains Storm Droplets from above the mouse cursor");
 			Item.staff[Item.type] = true;
 		}
 

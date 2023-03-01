@@ -14,8 +14,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Smiley's Dark Blast");
-			Tooltip.SetDefault("A smiling stare.\nShoots dark energy beams that explode on hit");
+			// DisplayName.SetDefault("Smiley's Dark Blast");
+			// Tooltip.SetDefault("A smiling stare.\nShoots dark energy beams that explode on hit");
 		}
 
 		public override void SetDefaults()

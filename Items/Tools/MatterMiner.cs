@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Tools
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Matter Miner");
-			Tooltip.SetDefault("A void matter pickaxe made to mine any matter... and it still cannot mine anything thats higher tier than Cobalt or Palladium...");
+			// DisplayName.SetDefault("Matter Miner");
+			// Tooltip.SetDefault("A void matter pickaxe made to mine any matter... and it still cannot mine anything thats higher tier than Cobalt or Palladium...");
 		}
 
 		public override void SetDefaults()

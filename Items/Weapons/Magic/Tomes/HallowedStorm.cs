@@ -16,8 +16,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Hallowed Storm");
-			Tooltip.SetDefault("Summons prism shards around you as long as you hold down the mouse button\nAll shards fly towards the cursor upon releasing the button.");
+			// DisplayName.SetDefault("Hallowed Storm");
+			// Tooltip.SetDefault("Summons prism shards around you as long as you hold down the mouse button\nAll shards fly towards the cursor upon releasing the button.");
 		}
 
 		public override void SetDefaults()

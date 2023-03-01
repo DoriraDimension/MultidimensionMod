@@ -10,9 +10,9 @@ namespace MultidimensionMod.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("MD Unbooler");
-            Tooltip.SetDefault("Undowns all AA bools" +
-                "\nNon-Consumable");
+            // DisplayName.SetDefault("MD Unbooler");
+            /* Tooltip.SetDefault("Undowns all AA bools" +
+                "\nNon-Consumable"); */
         }
 
         public override void SetDefaults()

@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Pets
 	public class IgnaenHead : ModProjectile
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Ignaen's Head");
+			// DisplayName.SetDefault("Ignaen's Head");
 			Main.projFrames[Projectile.type] = 6;
 			Main.projPet[Projectile.type] = true;
 		}

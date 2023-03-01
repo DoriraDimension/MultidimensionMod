@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Chair");
-			Tooltip.SetDefault("When there is a dark table, there is a dark chair.");
+			// DisplayName.SetDefault("Void Matter Chair");
+			// Tooltip.SetDefault("When there is a dark table, there is a dark chair.");
 		}
 
 		public override void SetDefaults()

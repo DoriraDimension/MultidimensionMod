@@ -14,7 +14,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Omni Geode");
+            // DisplayName.SetDefault("Omni Geode");
         }
 
         public override void SetDefaults()

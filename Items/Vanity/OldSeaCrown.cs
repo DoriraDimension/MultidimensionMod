@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Vanity
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Old Sea Crown");
-			Tooltip.SetDefault("A old crown found in the ocean, it is guessed that it didnt belong to a king as there are many of these found.");
+			// DisplayName.SetDefault("Old Sea Crown");
+			// Tooltip.SetDefault("A old crown found in the ocean, it is guessed that it didnt belong to a king as there are many of these found.");
 		}
 
 		public override void SetDefaults()

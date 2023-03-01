@@ -9,8 +9,6 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Fragment of Madness");
-			Tooltip.SetDefault("A fragment of a fragment LOL.");
 		}
 
 		public override void SetDefaults()

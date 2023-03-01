@@ -9,7 +9,7 @@ namespace MultidimensionMod.Projectiles.Magic
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Poyo Star");
+			// DisplayName.SetDefault("Poyo Star");
 		}
 
 		public override void SetDefaults()

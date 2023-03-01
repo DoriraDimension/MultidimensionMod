@@ -14,7 +14,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 		public int laserTimer = 0;
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Golem Mask");
+			// DisplayName.SetDefault("Golem Mask");
 		}
 
 		public override void SetDefaults()

@@ -15,8 +15,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Cooling Staff");
-			Tooltip.SetDefault("A staff that was restored from old relics, it shoots a icicle that bursts into 4 smaller icicles.");
+			// DisplayName.SetDefault("Cooling Staff");
+			// Tooltip.SetDefault("A staff that was restored from old relics, it shoots a icicle that bursts into 4 smaller icicles.");
 			Item.staff[Item.type] = true;
 		}
 

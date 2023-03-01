@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Typhoon Dragon");
-			Tooltip.SetDefault("A sword used by powerful ancient ocean warriors? It may be logical when this weapon is compared to the other weapons from the deep ocean,\nbut this one is kinda odd as it possesses a weird energy inside, not found in any other weapon here.\nShoots mini sharkrons and releases typhoons and more mini sharkrons on enemy hits.");
+			// DisplayName.SetDefault("Typhoon Dragon");
+			// Tooltip.SetDefault("A sword used by powerful ancient ocean warriors? It may be logical when this weapon is compared to the other weapons from the deep ocean,\nbut this one is kinda odd as it possesses a weird energy inside, not found in any other weapon here.\nShoots mini sharkrons and releases typhoons and more mini sharkrons on enemy hits.");
 		}
 
 		public override void SetDefaults()

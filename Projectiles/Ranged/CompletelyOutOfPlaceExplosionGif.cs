@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Explosion gif that was ripped from google");
+			// DisplayName.SetDefault("Explosion gif that was ripped from google");
 			Main.projFrames[Projectile.type] = 14;
 		}
 

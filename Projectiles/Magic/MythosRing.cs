@@ -13,7 +13,7 @@ namespace MultidimensionMod.Projectiles.Magic
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Mythos Light Ring");
+			// DisplayName.SetDefault("Mythos Light Ring");
 		}
 
 		public override void SetDefaults()

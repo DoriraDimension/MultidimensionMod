@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Chamber");
-			Tooltip.SetDefault("Sleep an eternal sleep for the king.");
+			// DisplayName.SetDefault("Void Matter Chamber");
+			// Tooltip.SetDefault("Sleep an eternal sleep for the king.");
 		}
 
 		public override void SetDefaults()

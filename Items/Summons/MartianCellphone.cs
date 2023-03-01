@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Summons
 	{
 		public override void SetStaticDefaults()
 		{
-			base.DisplayName.SetDefault("Martian Cellphone");
-			base.Tooltip.SetDefault("A cell phone with strange symbols on it, theres a phone number on the screen, call it?\nCalls the Martians.");
+			// base.DisplayName.SetDefault("Martian Cellphone");
+			// base.Tooltip.SetDefault("A cell phone with strange symbols on it, theres a phone number on the screen, call it?\nCalls the Martians.");
 		}
 
 		public override void SetDefaults()

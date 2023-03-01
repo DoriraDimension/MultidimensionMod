@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("KFC");
-            Tooltip.SetDefault("Kevin's Fried Chicken.");
+            // DisplayName.SetDefault("KFC");
+            // Tooltip.SetDefault("Kevin's Fried Chicken.");
         }
 
         public override void SetDefaults()

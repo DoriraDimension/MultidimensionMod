@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Vanity
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Infested Abomination Mask");
-			Tooltip.SetDefault("Does not include flies.");
+			// DisplayName.SetDefault("Infested Abomination Mask");
+			// Tooltip.SetDefault("Does not include flies.");
 		}
 
 		public override void SetDefaults()

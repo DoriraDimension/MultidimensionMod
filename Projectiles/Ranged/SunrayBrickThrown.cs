@@ -11,7 +11,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Nuclear Bomb");
+			// DisplayName.SetDefault("Nuclear Bomb");
 		}
 
 		public override void SetDefaults()

@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Trophies
 	{
 		public override void SetStaticDefaults()
         {
-			DisplayName.SetDefault("SmileyTrophy");
-			Tooltip.SetDefault("A chunk of dark matter that is produced by Smiley's body.");
+			// DisplayName.SetDefault("SmileyTrophy");
+			// Tooltip.SetDefault("A chunk of dark matter that is produced by Smiley's body.");
 		}
 
 		public override void SetDefaults()

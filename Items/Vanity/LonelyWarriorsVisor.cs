@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Vanity
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Lonely Warrior's Visor");
-			Tooltip.SetDefault("The Visor of a dark warrior.");
+			// DisplayName.SetDefault("Lonely Warrior's Visor");
+			// Tooltip.SetDefault("The Visor of a dark warrior.");
 		}
 
 		public override void SetDefaults()

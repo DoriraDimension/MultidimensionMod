@@ -15,8 +15,8 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Terror Nest");
-			Tooltip.SetDefault("Summons a killer bee that grows sawblades when enemies are spotted.\nA rare bee species, adapted to hunt and kill prey.\nTheir honey contains special pollen that gives it a bloodred color, totally not the blood of their victims...");
+			// DisplayName.SetDefault("Terror Nest");
+			// Tooltip.SetDefault("Summons a killer bee that grows sawblades when enemies are spotted.\nA rare bee species, adapted to hunt and kill prey.\nTheir honey contains special pollen that gives it a bloodred color, totally not the blood of their victims...");
 			ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true;
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
 		}

@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.ToolsEnviromentChange
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Moonlight Moth");
-			Tooltip.SetDefault("A artifact shaped after a deity of balance, it's magic power scares the sun away\nThis butterfly resembles the blue goddess who is more childish and playful.");
+			// DisplayName.SetDefault("Moonlight Moth");
+			// Tooltip.SetDefault("A artifact shaped after a deity of balance, it's magic power scares the sun away\nThis butterfly resembles the blue goddess who is more childish and playful.");
 		}
 
 		public override void SetDefaults()

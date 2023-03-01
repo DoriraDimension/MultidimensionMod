@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
@@ -20,8 +21,8 @@ namespace MultidimensionMod.Tiles
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Crimson Altar");
+			LocalizedText name = CreateMapEntryName();
+			// name.SetDefault("Crimson Altar");
 			AddMapEntry(new Color(165, 40, 44), name);
 			DustType = (1);
 			AdjTiles = new int[] { 26 };

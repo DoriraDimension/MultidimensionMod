@@ -16,8 +16,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Neural Waves");
-			Tooltip.SetDefault("A forbidden technique that transforms the user's thoughts into energy waves that burst out in all directions.\nIt is one of the forbidden techniques of old times, when the Creators did'nt knew the morals of life.\nAs told in old secret records, the spell gets stronger the more malicious the user's thoughts are, resulting in a devastating shockwave.");
+			// DisplayName.SetDefault("Neural Waves");
+			// Tooltip.SetDefault("A forbidden technique that transforms the user's thoughts into energy waves that burst out in all directions.\nIt is one of the forbidden techniques of old times, when the Creators did'nt knew the morals of life.\nAs told in old secret records, the spell gets stronger the more malicious the user's thoughts are, resulting in a devastating shockwave.");
 			Item.staff[Item.type] = true;
 		}
 

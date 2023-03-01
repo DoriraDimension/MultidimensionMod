@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Commander's Drink");
-            Tooltip.SetDefault("Become a true leader. \nIncreases summon damage by 20%.");
+            // DisplayName.SetDefault("Commander's Drink");
+            // Tooltip.SetDefault("Become a true leader. \nIncreases summon damage by 20%.");
         }
 
         public override void SetDefaults()

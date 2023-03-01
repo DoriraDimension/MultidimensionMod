@@ -11,7 +11,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Moonlight Wave");
+			// DisplayName.SetDefault("Moonlight Wave");
 		}
 
 		public override void SetDefaults()

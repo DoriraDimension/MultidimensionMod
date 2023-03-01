@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Placeables.Banners
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Magic Trident Banner");
-			Tooltip.SetDefault("A trident that moves on its own, basically a remnant of the old Sea civilisation.\nNow that their owners are gone they aimlessly roam the ocean with no purpose.");
+			// DisplayName.SetDefault("Magic Trident Banner");
+			// Tooltip.SetDefault("A trident that moves on its own, basically a remnant of the old Sea civilisation.\nNow that their owners are gone they aimlessly roam the ocean with no purpose.");
 		}
 
 		public override void SetDefaults()

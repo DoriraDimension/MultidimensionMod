@@ -31,7 +31,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dimensional God");
+			// DisplayName.SetDefault("Dimensional God");
 			Main.npcFrameCount[NPC.type] = 23;
 			NPCID.Sets.ExtraFramesCount[NPC.type] = 9;
 			NPCID.Sets.AttackFrameCount[NPC.type] = 4;
@@ -74,7 +74,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			AnimationType = NPCID.Mechanic;
 		}
 
-		public override bool CanTownNPCSpawn(int numTownNPCs, int money)
+		public override bool CanTownNPCSpawn(int numTownNPCs)/* tModPorter Suggestion: Copy the implementation of NPC.SpawnAllowed_Merchant in vanilla if you to count money, and be sure to set a flag when unlocked, so you don't count every tick. */
 		{
 			for (int k = 0; k < 255; k++)
 			{

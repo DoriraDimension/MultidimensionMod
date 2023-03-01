@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Cold Ash");
-			Tooltip.SetDefault("Normal underworld ash that was cooled down by icy winds.");
+			// DisplayName.SetDefault("Cold Ash");
+			// Tooltip.SetDefault("Normal underworld ash that was cooled down by icy winds.");
 		}
 
 		public override void SetDefaults()

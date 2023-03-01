@@ -14,7 +14,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Madness Bolt");
+			// DisplayName.SetDefault("Madness Bolt");
 			Main.projFrames[Projectile.type] = 4;
 		}
 

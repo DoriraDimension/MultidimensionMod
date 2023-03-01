@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Banners
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Parrot Lobster Banner");
-			Tooltip.SetDefault("Odd lobster species that lives near the shores, the have a beak which gives them their name.\nTheir meat is very tasty and can make a nice dish.");
+			// DisplayName.SetDefault("Parrot Lobster Banner");
+			// Tooltip.SetDefault("Odd lobster species that lives near the shores, the have a beak which gives them their name.\nTheir meat is very tasty and can make a nice dish.");
 		}
 
 		public override void SetDefaults()

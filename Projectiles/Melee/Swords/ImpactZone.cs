@@ -13,7 +13,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 		public override string Texture => "MultidimensionMod/Projectiles/NoTexture";
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Impact");
+			// DisplayName.SetDefault("Void Matter Impact");
 			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 4;
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
 		}

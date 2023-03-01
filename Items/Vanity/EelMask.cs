@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Vanity
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Storm Front Eel Mask");
-			Tooltip.SetDefault("You look super angry with this on.");
+			// DisplayName.SetDefault("Storm Front Eel Mask");
+			// Tooltip.SetDefault("You look super angry with this on.");
 		}
 
 		public override void SetDefaults()

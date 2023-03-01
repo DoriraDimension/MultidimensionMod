@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -19,8 +20,8 @@ namespace MultidimensionMod.Tiles
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 18 };
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Chelia Plushie");
+			LocalizedText name = CreateMapEntryName();
+			// name.SetDefault("Chelia Plushie");
 			AddMapEntry(new Color(225, 71, 173), name);
 			DustType = 228;
 		}

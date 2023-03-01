@@ -6,6 +6,7 @@ using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -44,8 +45,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
             TileObjectData.newAlternate.Origin = new Point16(0, 2);
             TileObjectData.addAlternate(0);
             TileObjectData.addTile(Type);
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Void Matter Door");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Void Matter Door");
             AddMapEntry(new Color(25, 19, 39), name);
             DustType = ModContent.DustType<DarkDust>();
         }

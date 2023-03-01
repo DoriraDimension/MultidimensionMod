@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Fire Slime");
+			// DisplayName.SetDefault("Fire Slime");
 		}
 
 		public override void SetDefaults()

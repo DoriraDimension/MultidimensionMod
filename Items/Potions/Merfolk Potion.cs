@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Potions
 	{
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Merfolk Potion");
-            Tooltip.SetDefault("Let's you breath underwater. \nGives you the ability to swim. \nIncreases movement speed by 10%.");
+            // DisplayName.SetDefault("Merfolk Potion");
+            // Tooltip.SetDefault("Let's you breath underwater. \nGives you the ability to swim. \nIncreases movement speed by 10%.");
         }
 
         public override void SetDefaults()

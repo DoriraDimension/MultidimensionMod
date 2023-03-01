@@ -16,7 +16,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Fairy Geode");
+			// DisplayName.SetDefault("Fairy Geode");
 		}
 
 		public override void SetDefaults()

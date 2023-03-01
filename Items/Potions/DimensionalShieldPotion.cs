@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Potions
 	{
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Dimensional Shield Potion");
-            Tooltip.SetDefault("Gives you a small fragmant of a dimensional serpents power. \nIncreases defense by 10 and reduces Damage taken by 20%.");
+            // DisplayName.SetDefault("Dimensional Shield Potion");
+            // Tooltip.SetDefault("Gives you a small fragmant of a dimensional serpents power. \nIncreases defense by 10 and reduces Damage taken by 20%.");
         }
 
         public override void SetDefaults()

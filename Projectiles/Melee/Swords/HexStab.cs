@@ -21,7 +21,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Hex Rapier");
+			// DisplayName.SetDefault("Hex Rapier");
 		}
 
 		public override void SetDefaults()

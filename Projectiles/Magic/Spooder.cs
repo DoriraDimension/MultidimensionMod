@@ -11,7 +11,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Spooder");
+			// DisplayName.SetDefault("Spooder");
 		}
 
 		public override void SetDefaults()

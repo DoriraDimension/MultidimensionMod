@@ -21,7 +21,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("D'irtagnan");
+			// DisplayName.SetDefault("D'irtagnan");
 		}
 
 		public override void SetDefaults()

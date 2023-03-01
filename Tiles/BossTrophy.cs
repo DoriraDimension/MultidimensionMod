@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -21,8 +22,8 @@ namespace MultidimensionMod.Tiles
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
 			DustType = 7;
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Trophy");
+			LocalizedText name = CreateMapEntryName();
+			// name.SetDefault("Trophy");
 			AddMapEntry(new Color(120, 85, 60), name);
 		}
 

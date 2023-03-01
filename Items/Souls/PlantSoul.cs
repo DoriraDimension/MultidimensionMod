@@ -13,8 +13,8 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Soul of Plantera");
-			Tooltip.SetDefault("Plantera is the guardian of the jungle.\nShe will hunt down and kill anyone who damages the small pink bulbs that are scattered around the jungle,\nas these are actually young plants that will eventually grow into another guardian, Plantera will defend them with her life.");
+			// DisplayName.SetDefault("Soul of Plantera");
+			// Tooltip.SetDefault("Plantera is the guardian of the jungle.\nShe will hunt down and kill anyone who damages the small pink bulbs that are scattered around the jungle,\nas these are actually young plants that will eventually grow into another guardian, Plantera will defend them with her life.");
 			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(7, 10));
 			ItemID.Sets.AnimatesAsSoul[Item.type] = true;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;

@@ -16,7 +16,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Magma Geode");
+			// DisplayName.SetDefault("Magma Geode");
 		}
 
 		public override void SetDefaults()

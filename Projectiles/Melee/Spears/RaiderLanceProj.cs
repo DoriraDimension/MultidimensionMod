@@ -10,7 +10,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Raider Lance");
+			// DisplayName.SetDefault("Raider Lance");
 		}
 
 		public override void SetDefaults()

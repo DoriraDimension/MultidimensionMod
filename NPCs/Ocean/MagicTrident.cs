@@ -12,7 +12,7 @@ namespace MultidimensionMod.NPCs.Ocean
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Magic Trident");
+			// DisplayName.SetDefault("Magic Trident");
 			Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.EnchantedSword];
 		}
 

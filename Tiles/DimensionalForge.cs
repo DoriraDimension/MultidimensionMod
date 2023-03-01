@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -20,8 +21,8 @@ namespace MultidimensionMod.Tiles
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Dimensional Forge");
+			LocalizedText name = CreateMapEntryName();
+			// name.SetDefault("Dimensional Forge");
 			AddMapEntry(new Color(35, 189, 236), name);
 			DustType = 68;
 			AnimationFrameHeight = 38;

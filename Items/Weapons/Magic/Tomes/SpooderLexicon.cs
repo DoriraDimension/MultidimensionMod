@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Arachnophobia");
-			Tooltip.SetDefault("An entire book on how to defeat the fear of spiders, wait... WHY ARE THERE SPIDERS IN THIS BOOK?!\nShoots homing spiders and rarely a high velocity Albino Spider that deals double damage.");
+			// DisplayName.SetDefault("Arachnophobia");
+			// Tooltip.SetDefault("An entire book on how to defeat the fear of spiders, wait... WHY ARE THERE SPIDERS IN THIS BOOK?!\nShoots homing spiders and rarely a high velocity Albino Spider that deals double damage.");
 		}
 
 		public override void SetDefaults()

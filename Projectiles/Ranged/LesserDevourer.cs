@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Lesser Devourer");
+			// DisplayName.SetDefault("Lesser Devourer");
 		}
 
 		public override void SetDefaults()

@@ -10,8 +10,6 @@ namespace MultidimensionMod.Items.Ammo
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Tide Arrow");
-			Tooltip.SetDefault("this arrow does arrotic stuff. what...?");
 		}
 
 		public override void SetDefaults()

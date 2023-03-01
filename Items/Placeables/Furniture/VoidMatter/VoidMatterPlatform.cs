@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Platform");
-			Tooltip.SetDefault("A dark bridge that leads through the void, barely visible, beware not to fall.");
+			// DisplayName.SetDefault("Void Matter Platform");
+			// Tooltip.SetDefault("A dark bridge that leads through the void, barely visible, beware not to fall.");
 		}
 
 		public override void SetDefaults()

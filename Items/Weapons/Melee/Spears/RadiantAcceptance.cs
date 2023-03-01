@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Radiant Acceptance");
-			Tooltip.SetDefault("The awakened form of a rejective spear.\nAfter decades of rejection, you are finally accepted, now make the best of it.");
+			// DisplayName.SetDefault("Radiant Acceptance");
+			// Tooltip.SetDefault("The awakened form of a rejective spear.\nAfter decades of rejection, you are finally accepted, now make the best of it.");
 		}
 
 		public override void SetDefaults()

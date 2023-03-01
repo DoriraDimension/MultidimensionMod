@@ -14,8 +14,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 		public int WaveTimer = 0;
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Lophiiformes Baculum");
-			Tooltip.SetDefault("A staff created from old blueprints found at the shores. The ancient depictions show it being used by wise magicians.");
+			// DisplayName.SetDefault("Lophiiformes Baculum");
+			// Tooltip.SetDefault("A staff created from old blueprints found at the shores. The ancient depictions show it being used by wise magicians.");
 			Item.staff[Item.type] = true; 
 		}
 

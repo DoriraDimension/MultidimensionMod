@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Armor
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Raider Greaves");
-			Tooltip.SetDefault("lore soon.");
 		}
 
 		public override void SetDefaults()

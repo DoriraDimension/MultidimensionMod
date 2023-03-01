@@ -9,7 +9,7 @@ namespace MultidimensionMod.Projectiles.Pets
 	public class SmileyJr : ModProjectile
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Smiley Jr");
+			// DisplayName.SetDefault("Smiley Jr");
 			Main.projFrames[Projectile.type] = 14;
 			Main.projPet[Projectile.type] = true;
 		}

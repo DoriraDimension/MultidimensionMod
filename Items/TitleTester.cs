@@ -11,8 +11,8 @@ namespace MultidimensionMod.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Title Tester");
-            Tooltip.SetDefault("Tests titles I think I guess?");
+            // DisplayName.SetDefault("Title Tester");
+            // Tooltip.SetDefault("Tests titles I think I guess?");
         }
 
         public override void SetDefaults()

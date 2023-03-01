@@ -21,7 +21,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Xiphias Gladius Waterblade");
+			// DisplayName.SetDefault("Xiphias Gladius Waterblade");
 		}
 
 		public override void SetDefaults()

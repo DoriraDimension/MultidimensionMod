@@ -9,8 +9,6 @@ namespace MultidimensionMod.Buffs.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Dimensional Shield");
-            Description.SetDefault("Your body is surrounded by a dimensional energy shield.");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = false;
         }

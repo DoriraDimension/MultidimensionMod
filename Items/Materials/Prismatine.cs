@@ -12,8 +12,6 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Prismatine");
-			Tooltip.SetDefault("A prismatic shard empowered by the Empress of Light,\nit is rumored that they are Crystal Shards in their purest form");
 		}
 
 		public override void SetDefaults()

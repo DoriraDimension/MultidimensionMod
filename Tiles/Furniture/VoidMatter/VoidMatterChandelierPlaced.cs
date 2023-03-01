@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.Enums;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -23,8 +24,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			TileObjectData.newTile.Width = 3;
 			TileObjectData.newTile.StyleHorizontal = true;
 			TileObjectData.addTile(Type);
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Void Matter Chandelier");
+			LocalizedText name = CreateMapEntryName();
+			// name.SetDefault("Void Matter Chandelier");
 			AddMapEntry(new Color(25, 19, 39), name);
 			DustType = ModContent.DustType<DarkDust>();
 		}

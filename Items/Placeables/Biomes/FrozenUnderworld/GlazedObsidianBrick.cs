@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Glazed Obsidian Brick");
-			Tooltip.SetDefault("tasty.");
+			// DisplayName.SetDefault("Glazed Obsidian Brick");
+			// Tooltip.SetDefault("tasty.");
 		}
 
 		public override void SetDefaults()

@@ -10,8 +10,6 @@ namespace MultidimensionMod.Buffs.Debuffs
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Blazing Suffering");
-            Description.SetDefault("Your body is getting incinerated from the inside.");
            Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = true;
         }

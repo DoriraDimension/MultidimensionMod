@@ -3,6 +3,7 @@ using MultidimensionMod.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
@@ -22,8 +23,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
             TileObjectData.newSubTile.CopyFrom(TileObjectData.newTile);
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.addTile(Type);
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Void Matter Lantern");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Void Matter Lantern");
             AddMapEntry(new Color(25, 19, 39), name);
             DustType = ModContent.DustType<DarkDust>();
             AdjTiles = new int[] { TileID.HangingLanterns };

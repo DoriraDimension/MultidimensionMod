@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dusk Bringer");
-			Tooltip.SetDefault("Shoots slowly deccelerating crescents from the spear");
+			// DisplayName.SetDefault("Dusk Bringer");
+			// Tooltip.SetDefault("Shoots slowly deccelerating crescents from the spear");
 		}
 
 		public override void SetDefaults()

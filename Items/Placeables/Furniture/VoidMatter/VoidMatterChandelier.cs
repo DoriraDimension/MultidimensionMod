@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Chandelier");
-			Tooltip.SetDefault("The most luxurious dark light source.");
+			// DisplayName.SetDefault("Void Matter Chandelier");
+			// Tooltip.SetDefault("The most luxurious dark light source.");
 		}
 
 		public override void SetDefaults()

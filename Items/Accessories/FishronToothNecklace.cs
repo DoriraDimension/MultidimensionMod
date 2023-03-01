@@ -9,8 +9,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Fishron Tooth Necklace");
-			Tooltip.SetDefault("A necklace made from the Teeth of a great ocean abomination,\nas shown in depictions of the old sea civilisation, it was seen as a sign of strength.\nIncreases armor penetration by 12.\nGrants the ability to breathe underwater");
 		}
 
 		public override void SetDefaults()

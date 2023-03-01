@@ -7,7 +7,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 	public class PokingFoolProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Poking Fool");
+			// DisplayName.SetDefault("Poking Fool");
 		}
 
 		public override void SetDefaults() {

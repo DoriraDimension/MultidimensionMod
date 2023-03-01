@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Banners
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Gilania Banner");
-			Tooltip.SetDefault("Big reptiles that live in the desert, their bite is venomous.\nThey will rest underground at day to escape the blazing desert sun and come out at night.");
+			// DisplayName.SetDefault("Gilania Banner");
+			// Tooltip.SetDefault("Big reptiles that live in the desert, their bite is venomous.\nThey will rest underground at day to escape the blazing desert sun and come out at night.");
 		}
 
 		public override void SetDefaults()

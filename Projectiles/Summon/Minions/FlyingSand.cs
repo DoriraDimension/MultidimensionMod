@@ -13,7 +13,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Lesser Sand Elemental");
+			// DisplayName.SetDefault("Lesser Sand Elemental");
 			Main.projFrames[Projectile.type] = 5;
 			ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
 			Main.projPet[Projectile.type] = true;

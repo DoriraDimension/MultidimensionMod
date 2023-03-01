@@ -15,8 +15,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Mindbursting Madness");
-			Tooltip.SetDefault("A staff made from the flesh of creatures that attampted ascension\nHurls a bouncing sphere that becomes stronger after it bounces.");
+			// DisplayName.SetDefault("Mindbursting Madness");
+			// Tooltip.SetDefault("A staff made from the flesh of creatures that attampted ascension\nHurls a bouncing sphere that becomes stronger after it bounces.");
 		}
 
 		public override void SetDefaults()

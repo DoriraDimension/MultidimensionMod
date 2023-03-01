@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Gel Vac");
-			Tooltip.SetDefault("Normally not used for combat, more of a rancher tool.\nShoots different kind of adorable slimes.");
+			// DisplayName.SetDefault("Gel Vac");
+			// Tooltip.SetDefault("Normally not used for combat, more of a rancher tool.\nShoots different kind of adorable slimes.");
 		}
 
 		public override void SetDefaults()

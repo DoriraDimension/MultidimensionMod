@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Sandsplosion");
+			// DisplayName.SetDefault("Sandsplosion");
 			Main.projFrames[Projectile.type] = 5;
 		}
 

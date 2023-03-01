@@ -9,8 +9,6 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Eye Tendril");
-			Tooltip.SetDefault("A tendril from the big eye.");
 		}
 
 		public override void SetDefaults()

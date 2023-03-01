@@ -8,7 +8,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Shining Rejection");
+			// DisplayName.SetDefault("Shining Rejection");
 		}
 
 		public override void SetDefaults()

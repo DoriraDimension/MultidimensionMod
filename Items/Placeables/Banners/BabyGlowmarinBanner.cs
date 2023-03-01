@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Banners
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Baby Glowmarin Banner");
-			Tooltip.SetDefault("These small adorable fish are from another dimension, they reproduce really fast.\nIts small glow organs are already developed and work fine.");
+			// DisplayName.SetDefault("Baby Glowmarin Banner");
+			// Tooltip.SetDefault("These small adorable fish are from another dimension, they reproduce really fast.\nIts small glow organs are already developed and work fine.");
 		}
 		public override void SetDefaults()
 		{

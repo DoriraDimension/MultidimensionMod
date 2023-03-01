@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Legacy of the Fish");
-			Tooltip.SetDefault("It is said that the first thing Dorira ever created... was a low quality fish.");
+			// DisplayName.SetDefault("Legacy of the Fish");
+			// Tooltip.SetDefault("It is said that the first thing Dorira ever created... was a low quality fish.");
 		}
 
 		public override void SetDefaults()

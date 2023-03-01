@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Stormfisher Harpoon");
+			// DisplayName.SetDefault("Stormfisher Harpoon");
 		}
 
 		public override void SetDefaults()

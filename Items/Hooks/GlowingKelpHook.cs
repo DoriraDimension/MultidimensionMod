@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Hooks
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Glowing Kelp Hook");
-			Tooltip.SetDefault("Kelp is said to be very grabby.");
 		}
 
 		public override void SetDefaults()
@@ -64,7 +62,7 @@ namespace MultidimensionMod.Items.Hooks
 
 			public override void SetStaticDefaults()
 			{
-				DisplayName.SetDefault("${ProjectileName.GemHookAmethyst}");
+				// DisplayName.SetDefault("${ProjectileName.GemHookAmethyst}");
 			}
 
 			public override void SetDefaults()

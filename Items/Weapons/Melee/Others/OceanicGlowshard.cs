@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Oceanic Glowshard");
-			Tooltip.SetDefault("A otherworldly blade from the back of a Glowmarin.\nThrows out a rotating blade that can be controlled with the cursor.");
+			// DisplayName.SetDefault("Oceanic Glowshard");
+			// Tooltip.SetDefault("A otherworldly blade from the back of a Glowmarin.\nThrows out a rotating blade that can be controlled with the cursor.");
 		}
 
 		public override void SetDefaults()

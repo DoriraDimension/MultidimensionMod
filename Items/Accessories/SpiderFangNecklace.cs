@@ -8,8 +8,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Spider Fang Necklace");
-			Tooltip.SetDefault("A necklace made of spider fangs.\nIncreases armor penetration by 9.");
 		}
 
 		public override void SetDefaults()

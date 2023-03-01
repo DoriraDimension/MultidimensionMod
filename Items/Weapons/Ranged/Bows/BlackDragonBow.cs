@@ -11,7 +11,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 	public class BlackDragonBow : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Fires a high damage Dragonpiercer.\nRight click to shoot a wide spread of flames to incinerate your enemies.\nFatalis, Fatalis, heaven and earth are yours.");
+			// Tooltip.SetDefault("Fires a high damage Dragonpiercer.\nRight click to shoot a wide spread of flames to incinerate your enemies.\nFatalis, Fatalis, heaven and earth are yours.");
 		}
 
 		public override void SetDefaults() {

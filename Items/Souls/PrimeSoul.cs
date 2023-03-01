@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Core of Skeletron Prime");
-			Tooltip.SetDefault("A long forgotten mech in shape of a curse that was lying dormant for years, it was now reactivated when the forces of light and darkness were unleashed.\nAges ago someone found a sample of the Skeletron curse and recreated it as a mechanical form with even more weapons.\nIt's creator remains unknown... for now...");
+			// DisplayName.SetDefault("Core of Skeletron Prime");
+			// Tooltip.SetDefault("A long forgotten mech in shape of a curse that was lying dormant for years, it was now reactivated when the forces of light and darkness were unleashed.\nAges ago someone found a sample of the Skeletron curse and recreated it as a mechanical form with even more weapons.\nIt's creator remains unknown... for now...");
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
 			ItemID.Sets.ItemNoGravity[Item.type] = true;
 		}

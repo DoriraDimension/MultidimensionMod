@@ -7,9 +7,8 @@ namespace MultidimensionMod.Buffs.Pets
 {
 	public class SmileyJrBuff : ModBuff
 	{
-		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Smiley Jr");
-			Description.SetDefault("You will take care of him now.");
+		public override void SetStaticDefaults() 
+		{
 			Main.buffNoTimeDisplay[Type] = true;
 			Main.vanityPet[Type] = true;
 		}

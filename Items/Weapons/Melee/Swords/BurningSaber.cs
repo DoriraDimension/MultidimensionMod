@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Hellfire Saber");
-			Tooltip.SetDefault("A saber that was restored from old relics, spawns small fire clouds on hit.");
+			// DisplayName.SetDefault("Hellfire Saber");
+			// Tooltip.SetDefault("A saber that was restored from old relics, spawns small fire clouds on hit.");
 		}
 
 		public override void SetDefaults()

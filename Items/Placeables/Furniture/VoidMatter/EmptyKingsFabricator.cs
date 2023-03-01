@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Fabricator");
-			Tooltip.SetDefault("Is used to craft Void Matter items.\nAll Darklings were once forged in such a fabricator by the Empty King, a entity unseen to this day.");
+			// DisplayName.SetDefault("Void Fabricator");
+			// Tooltip.SetDefault("Is used to craft Void Matter items.\nAll Darklings were once forged in such a fabricator by the Empty King, a entity unseen to this day.");
 		}
 
 		public override void SetDefaults()

@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Antlion Mandible Bow");
-			Tooltip.SetDefault("A bow that was restored from old relics, its is made of Antlion Mandibles.\nShoots two Mandibles.");
+			// DisplayName.SetDefault("Antlion Mandible Bow");
+			// Tooltip.SetDefault("A bow that was restored from old relics, its is made of Antlion Mandibles.\nShoots two Mandibles.");
 		}
 
 		public override void SetDefaults()

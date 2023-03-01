@@ -16,8 +16,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Stormfisher Harpoon");
-			Tooltip.SetDefault("Shoot a giant harpoon that gets stuck inside its target as long as you hold down the attack button\nWhile the harpoon is stuck it will attract lightning");
+			// DisplayName.SetDefault("Stormfisher Harpoon");
+			// Tooltip.SetDefault("Shoot a giant harpoon that gets stuck inside its target as long as you hold down the attack button\nWhile the harpoon is stuck it will attract lightning");
 		}
 
 		public override void SetDefaults()

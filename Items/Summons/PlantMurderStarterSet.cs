@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Summons
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Plant Murder Starter Set");
-			Tooltip.SetDefault("Chop this little bulb to make the big plant very angry, now in a small starter pack for kids. No refund warranty.\nProduct is made and advertised by Dor Inc.\nSummons Plantera. ");
+			// DisplayName.SetDefault("Plant Murder Starter Set");
+			// Tooltip.SetDefault("Chop this little bulb to make the big plant very angry, now in a small starter pack for kids. No refund warranty.\nProduct is made and advertised by Dor Inc.\nSummons Plantera. ");
 			ItemID.Sets.SortingPriorityBossSpawns[Item.type] = 12; 
 		}
 

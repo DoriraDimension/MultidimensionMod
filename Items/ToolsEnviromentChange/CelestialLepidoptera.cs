@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.ToolsEnviromentChange
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Celestial Lepidoptera");
-			Tooltip.SetDefault("A artifact shaped after the celestial deity of balance.\nCan be used to change day to night and vice versa.\nWhen needed the goddess sisters can combine their powers to create a energy projection resembling a giant purple colored goddess.");
+			// DisplayName.SetDefault("Celestial Lepidoptera");
+			// Tooltip.SetDefault("A artifact shaped after the celestial deity of balance.\nCan be used to change day to night and vice versa.\nWhen needed the goddess sisters can combine their powers to create a energy projection resembling a giant purple colored goddess.");
 		}
 
 		public override void SetDefaults()

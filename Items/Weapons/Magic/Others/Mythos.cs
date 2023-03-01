@@ -16,9 +16,9 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Lightstream Mythos");
-			Tooltip.SetDefault("Spin a crystal halberd around you that generates up to 2 light rings that spin around you as well.\nIf both rings of light are present and you stop attacking, the holy magic within them will heal you for 10 HP\n+" +
-                "This weapon belonged to Adel, the general of the Hallow, he was noble but also stubborn\nHe fought in the great war against his arch nemesis Vertrarius, that was until his soul was trapped inside the Wall of Flesh");
+			// DisplayName.SetDefault("Lightstream Mythos");
+			/* Tooltip.SetDefault("Spin a crystal halberd around you that generates up to 2 light rings that spin around you as well.\nIf both rings of light are present and you stop attacking, the holy magic within them will heal you for 10 HP\n+" +
+                "This weapon belonged to Adel, the general of the Hallow, he was noble but also stubborn\nHe fought in the great war against his arch nemesis Vertrarius, that was until his soul was trapped inside the Wall of Flesh"); */
 		}
 
 		public override void SetDefaults()

@@ -12,7 +12,7 @@ namespace MultidimensionMod.NPCs.Tundra
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Frostburn Slime");
+			// DisplayName.SetDefault("Frostburn Slime");
 			Main.npcFrameCount[NPC.type] = 4;
 		}
 

@@ -15,8 +15,8 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Tendril Whip");
-			Tooltip.SetDefault("You can maybe eat it later...");
+			// DisplayName.SetDefault("Tendril Whip");
+			// Tooltip.SetDefault("You can maybe eat it later...");
 		}
 
 		public override void SetDefaults()

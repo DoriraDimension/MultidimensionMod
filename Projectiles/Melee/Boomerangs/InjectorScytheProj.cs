@@ -9,7 +9,7 @@ namespace MultidimensionMod.Projectiles.Melee.Boomerangs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Injector");
+			// DisplayName.SetDefault("Injector");
 		}
 
 		public override void SetDefaults()

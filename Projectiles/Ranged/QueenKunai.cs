@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Queen Kunai");
+			// DisplayName.SetDefault("Queen Kunai");
 		}
 
 		public override void SetDefaults()

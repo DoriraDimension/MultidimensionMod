@@ -8,8 +8,6 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Old Dusty Bow");
-			Tooltip.SetDefault("A worn bow, covered in sandy dust.\nWith some love and craftmanship it could be repaired");
 		}
 
 		public override void SetDefaults()

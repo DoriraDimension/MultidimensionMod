@@ -8,8 +8,6 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Old Tainted Gun");
-			Tooltip.SetDefault("A something that was a gun before it was abandoned to decay.\nWith some love and craftmanship it could be repaired");
 		}
 
 		public override void SetDefaults()

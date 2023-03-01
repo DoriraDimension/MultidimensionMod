@@ -10,7 +10,7 @@ namespace MultidimensionMod.Projectiles.Magic
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Storm Droplet");
+			// DisplayName.SetDefault("Storm Droplet");
 		}
 
 		public override void SetDefaults()

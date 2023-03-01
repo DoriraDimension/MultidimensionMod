@@ -9,8 +9,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Angelic Belt");
-			Tooltip.SetDefault("Increases movement speed by 10%.\nRestores a small fraction of flight time upon getting hit.\nSeriously why do legless slimes keep having these?");
 		}
 
 		public override void SetDefaults()

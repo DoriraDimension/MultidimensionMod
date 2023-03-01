@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Sheol Saber");
-			Tooltip.SetDefault("A old relic augmented with demon powers, unleashes a hellish explosion on hit and has a chance to unleash several demon scythes.");
+			// DisplayName.SetDefault("Sheol Saber");
+			// Tooltip.SetDefault("A old relic augmented with demon powers, unleashes a hellish explosion on hit and has a chance to unleash several demon scythes.");
 		}
 
 		public override void SetDefaults()

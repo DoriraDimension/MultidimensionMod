@@ -8,8 +8,6 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Old Stained Scythe");
-			Tooltip.SetDefault("A old scythe made out of flesh, stained with blood.\nWith some love and craftmanship it could be repaired");
 		}
 
 		public override void SetDefaults()

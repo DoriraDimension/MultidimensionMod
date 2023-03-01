@@ -13,7 +13,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Spinning Mandible");
+			// DisplayName.SetDefault("Spinning Mandible");
 		}
 
 		public override void SetDefaults()

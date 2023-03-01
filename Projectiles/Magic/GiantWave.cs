@@ -10,7 +10,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Giant Wave");
+			// DisplayName.SetDefault("Giant Wave");
 		}
 
 		public override void SetDefaults()

@@ -13,8 +13,8 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Core of a Golem");
-			Tooltip.SetDefault("A solar essence powered protector Golem, it is in no way perfect, as it was build poorly and rushed.\nWho knows if it was made in a emergency.");
+			// DisplayName.SetDefault("Core of a Golem");
+			// Tooltip.SetDefault("A solar essence powered protector Golem, it is in no way perfect, as it was build poorly and rushed.\nWho knows if it was made in a emergency.");
 			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(7, 8));
 			ItemID.Sets.AnimatesAsSoul[Item.type] = true;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;

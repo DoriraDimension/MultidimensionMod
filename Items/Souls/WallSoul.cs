@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Soul of the Underworld");
-			Tooltip.SetDefault("Ages ago the race of the underworld with great help of another race, captured and contained the forces of light and darkness.\nIn this world, neither light nor darkness are good or bad, but both forces possessed too much power over this place,\nthey were always conflicting with eachother which had influence on the world around them,\ncontaining them got rid of these problems but now you unleashed them again... make sure you are prepared.");
+			// DisplayName.SetDefault("Soul of the Underworld");
+			// Tooltip.SetDefault("Ages ago the race of the underworld with great help of another race, captured and contained the forces of light and darkness.\nIn this world, neither light nor darkness are good or bad, but both forces possessed too much power over this place,\nthey were always conflicting with eachother which had influence on the world around them,\ncontaining them got rid of these problems but now you unleashed them again... make sure you are prepared.");
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
 			ItemID.Sets.ItemNoGravity[Item.type] = true;
 		}

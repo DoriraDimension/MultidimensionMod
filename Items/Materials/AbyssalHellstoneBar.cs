@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Abyssal Hellstone Bar");
-			Tooltip.SetDefault("Cold to the touch.");
 		}
 
 		public override void SetDefaults()

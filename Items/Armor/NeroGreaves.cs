@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Armor
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Nero Greaves");
-			Tooltip.SetDefault("Greaves created from old blueprints found at the shores. The ancient depictions show brave warriors defending their home.\nIncreases movement speed by 8%.");
 		}
 
 		public override void SetDefaults()

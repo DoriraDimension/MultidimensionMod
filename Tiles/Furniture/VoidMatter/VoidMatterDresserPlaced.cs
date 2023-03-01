@@ -37,11 +37,9 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
 			TileObjectData.addTile(Type);
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
-			ContainerName.SetDefault("Void Matter Dresser");
 			AdjTiles = new int[] { TileID.Dressers };
 			DresserDrop = ModContent.ItemType<VoidMatterDresser>();
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Void Matter Dresser");
+			LocalizedText name = CreateMapEntryName();
 			AddMapEntry(new Color(25, 19, 39), name);
 			DustType = ModContent.DustType<DarkDust>();
 		}

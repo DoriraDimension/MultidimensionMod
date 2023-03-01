@@ -12,8 +12,8 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Soul of the Light Empress");
-			Tooltip.SetDefault("Big woman that has rainbows.");
+			// DisplayName.SetDefault("Soul of the Light Empress");
+			// Tooltip.SetDefault("Big woman that has rainbows.");
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
 			ItemID.Sets.ItemNoGravity[Item.type] = true;
 		}

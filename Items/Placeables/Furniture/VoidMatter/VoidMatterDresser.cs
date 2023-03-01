@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Dresser");
-			Tooltip.SetDefault("Which one will it be today, something dark or something darker");
+			// DisplayName.SetDefault("Void Matter Dresser");
+			// Tooltip.SetDefault("Which one will it be today, something dark or something darker");
 		}
 
 		public override void SetDefaults()

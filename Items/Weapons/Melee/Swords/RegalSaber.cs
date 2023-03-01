@@ -14,8 +14,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public int Grow = 0;
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Regal Saber");
-			Tooltip.SetDefault("A sword born from the soul of the king of all slimes, it might not be a very powerful sword but it emits a regal aura.");
+			// DisplayName.SetDefault("Regal Saber");
+			// Tooltip.SetDefault("A sword born from the soul of the king of all slimes, it might not be a very powerful sword but it emits a regal aura.");
 		}
 
 		public override void SetDefaults()

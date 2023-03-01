@@ -10,8 +10,6 @@ namespace MultidimensionMod.Buffs.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Calm Mind");
-            Description.SetDefault("Madness has a harder time reaching your mind.");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = false;
         }

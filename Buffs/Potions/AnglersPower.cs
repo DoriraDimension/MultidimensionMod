@@ -9,8 +9,6 @@ namespace MultidimensionMod.Buffs.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Angler's power");
-            Description.SetDefault("You are filled with the power of a true fisher.");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = false;
         }

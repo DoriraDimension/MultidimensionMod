@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Iron Undies");
-			Tooltip.SetDefault("Useful for sitting upon a cactus.");
 		}
 
 		public override void SetDefaults()

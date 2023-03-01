@@ -13,8 +13,6 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dimensium");
-			Tooltip.SetDefault("The most common dimensional energy in form of a crystal, mostly found when a being crosses the dimensional wall through an unstable rift.\nA certain dimensional traveler might want this.");
 		}
 
 		public override void SetDefaults()

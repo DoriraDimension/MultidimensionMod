@@ -8,7 +8,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Acceptance");
+			// DisplayName.SetDefault("Acceptance");
 		}
 
 		public override void SetDefaults()

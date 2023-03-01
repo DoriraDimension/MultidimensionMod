@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Matter Clock");
-			Tooltip.SetDefault("Does time even matter in timeless space?");
+			// DisplayName.SetDefault("Void Matter Clock");
+			// Tooltip.SetDefault("Does time even matter in timeless space?");
 		}
 
 		public override void SetDefaults()

@@ -15,7 +15,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Decay Geode");
+			// DisplayName.SetDefault("Decay Geode");
 		}
 
 		public override void SetDefaults()

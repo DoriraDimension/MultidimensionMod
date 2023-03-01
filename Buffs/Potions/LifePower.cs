@@ -9,8 +9,6 @@ namespace MultidimensionMod.Buffs.Potions
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Life Power");
-            Description.SetDefault("You feel as if you could live forever.");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = false;
         }

@@ -11,7 +11,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Abyssal Soul");
+			// DisplayName.SetDefault("Abyssal Soul");
 		}
 
 		public override void SetDefaults()

@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Dark Bolt");
+			// DisplayName.SetDefault("Dark Bolt");
 			Main.projFrames[Projectile.type] = 4;
 		}
 

@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Glowing Fungi Scarf");
-			Tooltip.SetDefault("A scarf made out of several mushrooms, it glows.\nIncreases ranged damage by 5%.\nIncreases max life by 10 when in a glowing mushroom biome\nIncreases max life by 25 and damage reduction by 5% when in a glowing mushroom biome in hardmode.");
 		}
 
 		public override void SetDefaults()

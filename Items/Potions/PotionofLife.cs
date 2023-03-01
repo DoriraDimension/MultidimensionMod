@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Potions
 	{
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Potion of Life");
-            Tooltip.SetDefault("Increases heart pickup range. \nIncreases max HP by 50. \nGives +2 life regen");
+            // DisplayName.SetDefault("Potion of Life");
+            // Tooltip.SetDefault("Increases heart pickup range. \nIncreases max HP by 50. \nGives +2 life regen");
         }
 
         public override void SetDefaults()

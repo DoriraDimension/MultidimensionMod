@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Demon Altar");
-			Tooltip.SetDefault("So you dont need to run to your local Corruption anymore.");
+			// DisplayName.SetDefault("Demon Altar");
+			// Tooltip.SetDefault("So you dont need to run to your local Corruption anymore.");
 		}
 
 		public override void SetDefaults()

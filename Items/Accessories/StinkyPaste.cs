@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Stinky Paste");
-			Tooltip.SetDefault("Some stinky weird paste from the jungle, it is weird how its bad smell attracts all kinds of little creatures.\nIncreases minion damage by 6%.\nYou can rub it onto your skin to smell like shit.");
 		}
 
 		public override void SetDefaults()

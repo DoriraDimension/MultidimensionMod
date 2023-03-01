@@ -11,8 +11,6 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Royal Belt");
-			Tooltip.SetDefault("Increases jump height and jump speed by 50%. \nThe King Slime's belt, if he had legs.");
 		}
 
 		public override void SetDefaults()

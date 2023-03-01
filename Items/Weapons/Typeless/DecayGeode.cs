@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Decay Geode");
-			Tooltip.SetDefault("A geode found in the Corruption.\nA blacksmith can break this open for you, sadly, there is none.\nRight click to recieve Corruption minerals.");
+			// DisplayName.SetDefault("Decay Geode");
+			// Tooltip.SetDefault("A geode found in the Corruption.\nA blacksmith can break this open for you, sadly, there is none.\nRight click to recieve Corruption minerals.");
 		}
 
 		public override void SetDefaults()

@@ -10,8 +10,8 @@ namespace MultidimensionMod.Items.Placeables.Banners
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Frostburn Slime Banner");
-			Tooltip.SetDefault("Flying slimes that mastered the power of frostburn, anyone who touches them will be in immense pain.");
+			// DisplayName.SetDefault("Frostburn Slime Banner");
+			// Tooltip.SetDefault("Flying slimes that mastered the power of frostburn, anyone who touches them will be in immense pain.");
 		}
 
 		public override void SetDefaults()

@@ -9,8 +9,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Ocean Trident");
-			Tooltip.SetDefault("Ball penetrator.");
+			// DisplayName.SetDefault("Ocean Trident");
+			// Tooltip.SetDefault("Ball penetrator.");
 			Item.staff[Item.type] = true;
 		}
 
