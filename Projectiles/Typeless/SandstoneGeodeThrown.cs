@@ -1,4 +1,5 @@
-﻿using MultidimensionMod.Items.Materials;
+﻿using MultidimensionMod.Common.Players;
+using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Weapons.Typeless;
 using MultidimensionMod.Projectiles.Magic;
 using Microsoft.Xna.Framework;

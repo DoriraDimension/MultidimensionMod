@@ -1,5 +1,6 @@
 ﻿using MultidimensionMod.Tiles.Biomes.FrozenUnderworld;
 using MultidimensionMod.Items.Weapons.Typeless;
+using MultidimensionMod.Common.Players;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

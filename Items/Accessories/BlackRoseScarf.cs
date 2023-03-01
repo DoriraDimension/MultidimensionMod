@@ -1,4 +1,5 @@
-﻿using MultidimensionMod.Rarities;
+﻿using MultidimensionMod.Common.Players;
+using MultidimensionMod.Rarities;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;

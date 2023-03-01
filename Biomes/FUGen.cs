@@ -81,13 +81,6 @@ namespace MultidimensionMod.Biomes
 			WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
 			{
 				new InWorld(),
-				new Modifiers.OnlyTiles(new ushort[]{ TileID.Mud }),
-				new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
-				new SetModTile(TileID.Dirt, true, true)
-			}));
-			WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
-			{
-				new InWorld(),
 				new Modifiers.OnlyTiles(new ushort[] { TileID.HellstoneBrick }),
 				new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
 				new SetModTile(hellstoneBrick, true, true)
@@ -110,10 +103,10 @@ namespace MultidimensionMod.Biomes
 			WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
 {
 				new InWorld(),
-				new Modifiers.OnlyTiles(new ushort[]{ 374 }),
+				new Modifiers.OnlyTiles(new ushort[]{ 374 }), //Lava Dropper
 				new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
 				new Actions.ClearTile()
-}));
+            }));
 		}
 	}
 	public class GenUtils

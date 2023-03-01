@@ -17,6 +17,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			AddMapEntry(new Color(249, 7, 40));
 			Main.tileMerge[Type][ModContent.TileType<ColdAsh>()] = true;
 			Main.tileMergeDirt[Type] = true;
+			HitSound = SoundID.Tink;
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)

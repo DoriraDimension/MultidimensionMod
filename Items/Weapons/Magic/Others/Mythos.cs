@@ -29,7 +29,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.useTime = 20;
 			Item.useAnimation = 20;
 			Item.autoReuse = true;
-			Item.knockBack = 0f;
+			Item.knockBack = 4.5f;
 			Item.width = 80;
 			Item.height = 38;
 			Item.value = Item.sellPrice(gold: 1);

@@ -1,4 +1,5 @@
-﻿using MultidimensionMod.Items.Accessories;
+﻿using MultidimensionMod.Common.Players;
+using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Weapons.Typeless;
 using Microsoft.Xna.Framework;
 using System;

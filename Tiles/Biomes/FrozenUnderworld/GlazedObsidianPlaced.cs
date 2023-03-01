@@ -16,6 +16,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			ItemDrop = ModContent.ItemType<GlazedObsidian>();
 			AddMapEntry(new Color(2, 2, 2));
 			Main.tileMergeDirt[Type] = true;
+			HitSound = SoundID.Tink;
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)

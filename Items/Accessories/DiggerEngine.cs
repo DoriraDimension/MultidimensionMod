@@ -1,4 +1,5 @@
-﻿using MultidimensionMod.Items.Souls;
+﻿using MultidimensionMod.Common.Players;
+using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Tiles;
 using MultidimensionMod.Rarities;

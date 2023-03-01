@@ -10,12 +10,10 @@ namespace MultidimensionMod.Biomes
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
 
-        public override Color? BackgroundColor => new(0, 0, 0);
-
         public override int Music => MusicLoader.GetMusicSlot(Mod, "Sounds/Music/FrozenUnderworld");
         public override string MapBackground => BackgroundPath;
 
-        public override string BackgroundPath => "TheDepths/Biomes/DepthsMapBackground";
+        public override string BackgroundPath => "MultidimensionMod/Backgrounds/Map/FUMap";
 
         public override string BestiaryIcon => "TheDepths/Biomes/DepthsBestiaryIcon";
 
@@ -37,7 +35,7 @@ namespace MultidimensionMod.Biomes
 
         public override bool IsBiomeActive(Player player)
         {
-            bool b1 = ModContent.GetInstance<FrozenUnderworldTileCount>().FUCount >= 100;
+            bool b1 = ModContent.GetInstance<FrozenUnderworldTileCount>().FUCount >= 150;
 
             bool b2 = player.ZoneUnderworldHeight;
             return b1 && b2;

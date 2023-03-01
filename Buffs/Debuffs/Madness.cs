@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using MultidimensionMod.Common.Players;
+using Terraria;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Buffs.Debuffs

@@ -1,4 +1,5 @@
-﻿using MultidimensionMod.Items.Materials;
+﻿using MultidimensionMod.Common.Players;
+using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

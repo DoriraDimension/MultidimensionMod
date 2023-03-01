@@ -1,13 +1,17 @@
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Biomes;
+using MultidimensionMod.UI;
 using System;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.GameContent.UI;
 using Terraria.ID;
+using Terraria.UI;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
+
 
 namespace MultidimensionMod
 {
@@ -18,6 +22,8 @@ namespace MultidimensionMod
 		internal bool vanillaLoaded = true;
 
 		public static int DimensiumEuronen;
+
+		public static float FUTransition { get; set; }
 
 		public override void Load()
 		{
@@ -138,5 +144,65 @@ namespace MultidimensionMod
 		//		Logger.Error(e.Message);
 		//	}
 		//}
+	}
+
+	public class MDSystem : ModSystem
+	{
+		public static MDSystem Instance { get; private set; }
+		public MDSystem()
+		{
+			Instance = this;
+		}
+		public bool Initialized;
+
+		public UserInterface TitleUILayer;
+		public TitleCard TitleCardUIElement;
+
+		public override void Load()
+		{
+			if (!Main.dedServ)
+			{
+				TitleUILayer = new UserInterface();
+				TitleCardUIElement = new TitleCard();
+				TitleUILayer.SetState(TitleCardUIElement);
+			}
+		}
+
+		public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
+		{
+			layers.Insert(layers.FindIndex(layer => layer.Name.Equals("Vanilla: Mouse Text")), new LegacyGameInterfaceLayer("GUI Menus",
+				delegate
+				{
+					return true;
+				}, InterfaceScaleType.UI));
+			int MouseTextIndex = layers.FindIndex(layer => layer.Name.Equals("Vanilla: Mouse Text"));
+			if (MouseTextIndex != -1)
+			{
+				AddInterfaceLayer(layers, TitleUILayer, TitleCardUIElement, MouseTextIndex + 3, TitleCard.Showing, "Title Card");
+			}
+		}
+
+		public static void AddInterfaceLayer(List<GameInterfaceLayer> layers, UserInterface userInterface, UIState state, int index, bool visible, string customName = null) //Code created by Scalie
+		{
+			string name;
+			if (customName == null)
+			{
+				name = state.ToString();
+			}
+			else
+			{
+				name = customName;
+			}
+			layers.Insert(index, new LegacyGameInterfaceLayer("MultidimensionMod: " + name,
+				delegate
+				{
+					if (visible)
+					{
+						userInterface.Update(Main._drawInterfaceGameTime);
+						state.Draw(Main.spriteBatch);
+					}
+					return true;
+				}, InterfaceScaleType.UI));
+		}
 	}
 }

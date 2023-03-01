@@ -1,3 +1,4 @@
+using MultidimensionMod.Common.Players;
 using MultidimensionMod.Buffs.Pets;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;

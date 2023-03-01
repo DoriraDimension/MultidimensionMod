@@ -1,4 +1,5 @@
-﻿using MultidimensionMod.Items.Weapons.Typeless;
+﻿using MultidimensionMod.Common.Players;
+using MultidimensionMod.Items.Weapons.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;

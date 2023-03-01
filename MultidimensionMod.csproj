@@ -10,9 +10,4 @@
   <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="AltLibrary">
-      <HintPath>..\ModAssemblies\AltLibrary_v1.0.4.72.dll</HintPath>
-    </Reference>
-  </ItemGroup>
 </Project>
