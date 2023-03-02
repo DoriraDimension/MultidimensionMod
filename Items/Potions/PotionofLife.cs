@@ -10,8 +10,6 @@ namespace MultidimensionMod.Items.Potions
 	{
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Potion of Life");
-            // Tooltip.SetDefault("Increases heart pickup range. \nIncreases max HP by 50. \nGives +2 life regen");
         }
 
         public override void SetDefaults()
@@ -27,16 +25,16 @@ namespace MultidimensionMod.Items.Potions
             Item.consumable = true;
             Item.rare = ItemRarityID.LightRed;
             Item.value = Item.sellPrice(silver: 25);
-            Item.buffType = ModContent.BuffType<Buffs.Potions.LifePower>();
-            Item.buffTime = 36000;
+            Item.buffType = ModContent.BuffType<LifePower>();
+            Item.buffTime = 600;
         }
 
         public override void AddRecipes()
         {
             CreateRecipe()
-            .AddIngredient(ItemID.HeartreachPotion)
-            .AddIngredient(ItemID.LifeforcePotion)
             .AddIngredient(ItemID.RegenerationPotion)
+            .AddIngredient(ItemID.LifeCrystal)
+            .AddIngredient(ItemID.PixieDust, 10)
             .AddTile(355)
             .Register();
 

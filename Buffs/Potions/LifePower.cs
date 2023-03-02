@@ -15,9 +15,9 @@ namespace MultidimensionMod.Buffs.Potions
 
         public override void Update(Player player, ref int buffIndex)
         {
-            player.lifeMagnet = true;
-            player.statLifeMax2 += 50;
-            player.lifeRegen += 2;
+            player.lifeRegen += 12;
+            player.lifeRegenTime += 6;
+            player.moveSpeed -= 0.5f;
         }
     }
 }

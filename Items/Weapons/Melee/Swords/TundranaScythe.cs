@@ -12,8 +12,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults() 
 		{
-			// DisplayName.SetDefault("Tundrana Scythe");
-			// Tooltip.SetDefault("A scythe from a world beyhond the freezing fog of the Frozen Underworld, it was once used by some sort of royal guard.\nShoots rotating sickles which drpo ice spikes as they travel.");
 		}
 
 		public override void SetDefaults()
@@ -43,7 +41,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		{
 			CreateRecipe()
 			.AddIngredient(ItemID.IceSickle, 1)
-			.AddIngredient(ItemID.FrostCore, 2)
+			.AddIngredient(ModContent.ItemType<AbyssalHellstoneBar>(), 8)
 			.AddIngredient(ModContent.ItemType<TidalQuartz>(), 5)
 			.AddTile(134)
 			.Register();

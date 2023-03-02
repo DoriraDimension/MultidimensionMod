@@ -13,8 +13,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults() 
 		{
-			// DisplayName.SetDefault("Frostborn Blade");
-			// Tooltip.SetDefault("A magic sword from another world, a world beyhond the freezing fog of the Frozen Underworld.\nShoots several frost spikes that inflict Frostbite\nDealing critical hits unleashes more frost spikes from the player.");
 		}
 
 		public override void SetDefaults()
@@ -67,8 +65,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		{
 			CreateRecipe()
 			.AddIngredient(ItemID.Frostbrand, 1)
-			.AddIngredient(ItemID.FrostCore, 3)
-			.AddIngredient(ModContent.ItemType<Blight2>(), 3)
+			.AddIngredient(ModContent.ItemType<AbyssalHellstoneBar>(), 8)
 			.AddTile(134)
 			.Register();
 		}

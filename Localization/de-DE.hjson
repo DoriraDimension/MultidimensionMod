@@ -86,7 +86,7 @@ Mods: {
 
 			LifePower: {
 				// DisplayName: Life Power
-				// Description: You feel as if you could live forever.
+				// Description: Your body is flooded by life power.
 			}
 
 			MasterMage: {
@@ -1071,9 +1071,8 @@ Mods: {
 				// DisplayName: Potion of Life
 				/* Tooltip:
 					'''
-					Increases heart pickup range. 
-					Increases max HP by 50. 
-					Gives +2 life regen
+					Greatly increases life regeneration
+					Cuts your movement speed in half
 					''' */
 			}
 
