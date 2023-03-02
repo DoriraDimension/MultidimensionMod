@@ -1072,7 +1072,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Greatly increases life regeneration
-					Cuts your movement speed in half
+					Reduces movement speed by 50%
 					''' */
 			}
 

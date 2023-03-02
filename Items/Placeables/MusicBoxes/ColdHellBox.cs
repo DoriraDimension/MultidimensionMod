@@ -8,8 +8,7 @@ namespace MultidimensionMod.Items.Placeables.MusicBoxes
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Music Box (Frozen Underworld)");
-			// Tooltip.SetDefault("Frigid Sins\nBy Dr.Voodoo");
+			MusicLoader.AddMusicBox(Mod, MusicLoader.GetMusicSlot(Mod, "Sounds/Music/FrozenUnderworld"), ModContent.ItemType<ColdHellBox>(), ModContent.TileType<ColdHellBoxPlaced>());
 		}
 
 		public override void SetDefaults()
