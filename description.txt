@@ -29,6 +29,7 @@ Developer:
 
 -Dorira  owner/spriter/coder/lore writer
 -DrVoodoo  musician
+-Enigmatic  spriting
 
 
 Contributor:
@@ -40,4 +41,4 @@ Contributor:
 -EggsBenedict  ideas
 -nebs  coding
 -torra th  spriting
--Enigmatic  spriting
+-Rocketlauncher269  spriting

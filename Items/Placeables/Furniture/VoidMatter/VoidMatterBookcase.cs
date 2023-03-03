@@ -33,7 +33,7 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 20)
+			.AddIngredient(ModContent.ItemType<VoidMatterMass>(), 20)
 			.AddIngredient(ItemID.Book, 10)
 			.AddTile(ModContent.TileType<EmptyKingsFabricatorPlaced>())
 			.Register();

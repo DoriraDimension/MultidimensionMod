@@ -12,8 +12,6 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Spazmelter");
-			// Tooltip.SetDefault("Shoots cursed flames.");
 		}
 
 		public override void SetDefaults()
@@ -22,7 +20,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 			Item.DamageType = DamageClass.Ranged;
 			Item.width = 42;
 			Item.height = 26;
-			Item.useTime = 6;
+			Item.useTime = 3;
 			Item.useAnimation = 30;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
@@ -32,23 +30,23 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 			Item.UseSound = SoundID.Item34;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<SpazmicFlame>();
-			Item.shootSpeed = 9f;
+			Item.shootSpeed = 7f;
 			Item.useAmmo = AmmoID.Gel;
 			Item.consumeAmmoOnLastShotOnly = true;
-		}
-
-		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-		{
-			Vector2 muzzleOffset = Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 42f;
-			if (Collision.CanHit(position, 6, 6, position + muzzleOffset, 6, 6))
-			{
-				position += muzzleOffset;
-			}
-			return true;
 		}
 		public override Vector2? HoldoutOffset()
 		{
 			return new Vector2(0, -2);
+		}
+
+		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+		{
+			Vector2 muzzleOffset = Vector2.Normalize(velocity) * 25f;
+
+			if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
+			{
+				position += muzzleOffset;
+			}
 		}
 
 		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)

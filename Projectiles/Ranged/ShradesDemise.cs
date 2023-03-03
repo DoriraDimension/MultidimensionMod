@@ -3,22 +3,20 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace MultidimensionMod.Projectiles.Ranged
 {
 	public class ShradesDemise : ModProjectile
 	{
-		public override string Texture => "MultidimensionMod/Projectiles/NoTexture";
-
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Shrades Demise");
 		}
 
 		public override void SetDefaults()
 		{
-			Projectile.width = 8;
-			Projectile.height = 8;
+			Projectile.width = 50;
+			Projectile.height = 50;
 			Projectile.alpha = 255;
 			Projectile.friendly = true;
 			Projectile.hostile = false;
@@ -28,21 +26,21 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.tileCollide = true;
 			Projectile.DamageType = DamageClass.Ranged;
 			Projectile.extraUpdates = 2;
+			Projectile.scale = 0.5f;
 		}
 
 		public override void AI()
 		{
-			float dustScale = 1f;
-			if (Projectile.ai[0] == 0f)
-				dustScale = 0.25f;
-			else if (Projectile.ai[0] == 1f)
-				dustScale = 0.5f;
-			else if (Projectile.ai[0] == 2f)
-				dustScale = 0.75f;
-
-			if (Main.rand.Next(2) == 0)
+			if (Projectile.timeLeft > 5)
 			{
-				Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, 6, Projectile.velocity.X * 0.10f, Projectile.velocity.Y * 0.10f, 6);
+				Projectile.alpha -= 30;
+			}
+			else
+				Projectile.alpha += 60;
+			Projectile.scale += 0.028f;
+			if (Main.rand.NextBool(15))
+			{
+				Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.CrimsonTorch, Projectile.velocity.X * 0.10f, Projectile.velocity.Y * 0.10f, 6);
 
 				if (Main.rand.NextBool(3))
 				{
@@ -51,12 +49,9 @@ namespace MultidimensionMod.Projectiles.Ranged
 					dust.velocity.X *= 3f;
 					dust.velocity.Y *= 3f;
 				}
-
 				dust.scale *= 1.5f;
 				dust.velocity *= 1.2f;
-				dust.scale *= dustScale;
 			}
-			Projectile.ai[0] += 1f;
 		}
 
 		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
@@ -67,15 +62,6 @@ namespace MultidimensionMod.Projectiles.Ranged
 		public override void OnHitPlayer(Player target, int damage, bool crit)
 		{
 			target.AddBuff(ModContent.BuffType<BlazingSuffering>(), 180);
-		}
-
-		public override void ModifyDamageHitbox(ref Rectangle hitbox)
-		{
-			int size = 50;
-			hitbox.X -= size;
-			hitbox.Y -= size;
-			hitbox.Width += size * 2;
-			hitbox.Height += size * 2;
 		}
 	}
 }

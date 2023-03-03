@@ -654,12 +654,7 @@ Mods: {
 
 			TidalQuartz: {
 				DisplayName: Tidal Quartz
-				Tooltip:
-					'''
-					A gem found inside of oceanic creatures.
-					The unique minerals and bacteria inside the Terrarian oceans have a interesting effect on some animals,
-					as they form a light blue quartz like gem inside their bodies.
-					'''
+				Tooltip: A mineral that is said to be the lost treasure of the forgotten ocean civilization that was once stolen by its destroyer.
 			}
 
 			VikingRelic: {
@@ -1865,12 +1860,12 @@ Mods: {
 			}
 
 			BlackDragonBow: {
-				DisplayName: Black Dragon Bow
+				DisplayName: Flames of Demise
 				Tooltip:
 					'''
-					Fires a high damage Dragonpiercer.
-					Right click to shoot a wide spread of flames to incinerate your enemies.
-					Fatalis, Fatalis, heaven and earth are yours.
+					Shoot a wide spread of flames to incinerate your enemies
+					Flames become hotter and much more lethal at half health
+					Fatalis, Fatalis, heaven and earth are yours
 					'''
 			}
 
@@ -2127,7 +2122,7 @@ Mods: {
 					'''
 					A geode found in the Crimson.
 					A blacksmith can break this open for you, sadly, there is none.
-					Right click to recieve Crimson minerals.
+					A good throw on the ground will do too
 					'''
 			}
 
@@ -2137,7 +2132,7 @@ Mods: {
 					'''
 					A geode found in the Corruption.
 					A blacksmith can break this open for you, sadly, there is none.
-					Right click to recieve Corruption minerals.
+					A good throw on the ground will do too
 					'''
 			}
 
@@ -2147,7 +2142,7 @@ Mods: {
 					'''
 					A geode found in the Hallow.
 					A blacksmith can break this open for you, sadly, there is none.
-					Right click to recieve Hallow minerals.
+					A good throw on the ground will do too
 					'''
 			}
 
@@ -2157,7 +2152,7 @@ Mods: {
 					'''
 					A geode found in the ice caves
 					A blacksmith can break this open for you, sadly, there is none
-					Right click to recieve ice cave minerals.
+					A good throw on the ground will do too
 					'''
 			}
 
@@ -2167,7 +2162,7 @@ Mods: {
 					'''
 					A geode found in the caverns.
 					A blacksmith can break this open for you, sadly, there is none.
-					Right click to recieve cavern minerals
+					A good throw on the ground will do too
 					'''
 			}
 
@@ -2177,7 +2172,7 @@ Mods: {
 					'''
 					A geode found in the underworld.
 					A blacksmith can break this open for you, sadly, there is none.
-					Right click to recieve underworld minerals.
+					A good throw on the ground will do too
 					'''
 			}
 
@@ -2187,7 +2182,7 @@ Mods: {
 					'''
 					A geode found in the space layer after the lord of the moon fell.
 					A blacksmith can break this open for you, sadly, there is none.
-					Right click to recieve Luminite.
+					A good throw on the ground will do too
 					'''
 			}
 
@@ -2197,7 +2192,7 @@ Mods: {
 					'''
 					A geode found in the Jungle.
 					A blacksmith can break this open for you, sadly, there is none.
-					Right click to recieve Jungle minerals.
+					A good throw on the ground will do too
 					'''
 			}
 
@@ -2207,7 +2202,7 @@ Mods: {
 					'''
 					A geode found after the spirits of lights and darkness have been released.
 					A blacksmith can break this open for you, sadly, there is none.
-					Right click to recieve hardmode cavern minerals.
+					A good throw on the ground will do too
 					'''
 			}
 
@@ -2217,7 +2212,7 @@ Mods: {
 					'''
 					A geode found in the desert.
 					A blacksmith can break this open for you, sadly, there is none.
-					Right click to recieve desert minerals.
+					A good throw on the ground will do too
 					'''
 			}
 
@@ -2233,6 +2228,11 @@ Mods: {
 			FrostburnWings: {
 				DisplayName: Frostburn Wings
 				Tooltip: These wings are hot and cold at the same time, seems cool.
+			}
+
+			VoidMatterMass: {
+				DisplayName: Void Matter Mass
+				Tooltip: Void consumes, void calls, void will rule once more
 			}
 		}
 
@@ -2364,6 +2364,7 @@ Mods: {
 			OreGeodeThrown.DisplayName: Ore Geode
 			SandExplosion.DisplayName: Sandsplosion
 			SandstoneGeodeThrown.DisplayName: Sandstone Geode
+			ShradesDemisePhase2.DisplayName: Shrades Demise Phase2
 		}
 
 		Keybinds: {
