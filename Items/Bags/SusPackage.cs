@@ -69,15 +69,9 @@ namespace MultidimensionMod.Items.Bags
 					player.QuickSpawnItem(source, ItemID.Ale);
 					break;
 
-				case "Rage":
-				case "Josh":
-					player.QuickSpawnItem(source, ModContent.ItemType<MegaDemondrug>(), 5);
-					break;
-
 				case "Cotton":
 				case "Dynosaur":
 				case "Crabbane":
-					player.QuickSpawnItem(source, ModContent.ItemType<MegaDemondrug>(), 5);
 					player.QuickSpawnItem(source, ItemID.PinkDye, 3);
 					player.QuickSpawnItem(source, ItemID.PinkPaint, 999);
 					break;

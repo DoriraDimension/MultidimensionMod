@@ -12,9 +12,9 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader;
 using Terraria.Audio;
 
-namespace MultidimensionMod.NPCs.FU
+namespace MultidimensionMod.NPCs.Underworld
 {
-	public class Ashton : ModNPC
+	public class SearedAshton : ModNPC
 	{
 		public int Blargh;
 
@@ -46,7 +46,7 @@ namespace MultidimensionMod.NPCs.FU
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("A weird creature that roams the frozen section of the underworld, hovering as if hanging on strings. They spit burning cold ash at everything that doesn't belong.")
+				new FlavorTextBestiaryInfoElement("A subspecies of Ashton that adapted to live in the seething heat of the underworld, they spit hot burning ash clouds.")
 			});
 		}
 
@@ -78,7 +78,7 @@ namespace MultidimensionMod.NPCs.FU
 					for (int i = 0; i < 5; i++)
 					{
 						Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(45));
-						Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<AshCloud>(), (int)((double)((float)NPC.damage) * 1.5), 0f, Main.myPlayer);
+						Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<BurningAshCloud>(), (int)((double)((float)NPC.damage) * 1.5), 0f, Main.myPlayer);
 					}
 					Blargh = 0;
 				}
@@ -87,25 +87,21 @@ namespace MultidimensionMod.NPCs.FU
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
-			if (spawnInfo.Player.InModBiome(ModContent.GetInstance<FrozenUnderworld>()))
-			{
-				return SpawnCondition.Underworld.Chance * 0.02f;
-			}
-			return base.SpawnChance(spawnInfo);
+			return SpawnCondition.Underworld.Chance * 0.04f;
 		}
 
 		public override void ModifyNPCLoot(NPCLoot NPCloot)
 		{
-			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<AbyssalHellstoneBar>(), 1, 1, 3));
+			NPCloot.Add(ItemDropRule.Common(ItemID.HellstoneBar, 1, 1, 3));
 		}
 
 		public override void HitEffect(int hitDirection, double damage)
 		{
 			if (NPC.life <= 0)
 			{
-				Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/AshtonGore1").Type, 1);
-				Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/AshtonGore2").Type, 1);
-				Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/AshtonGore3").Type, 1);
+				Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/SearedAshtonGore1").Type, 1);
+				Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/SearedAshtonGore2").Type, 1);
+				Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/SearedAshtonGore3").Type, 1);
 			}
 		}
 

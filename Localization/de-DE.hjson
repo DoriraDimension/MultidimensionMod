@@ -2232,7 +2232,7 @@ Mods: {
 
 			VoidMatterMass: {
 				// DisplayName: Void Matter Mass
-				// Tooltip: ""
+				// Tooltip: Void consumes, void calls, void will rule once more
 			}
 		}
 
@@ -2365,6 +2365,8 @@ Mods: {
 			// SandExplosion.DisplayName: Sandsplosion
 			// SandstoneGeodeThrown.DisplayName: Sandstone Geode
 			// ShradesDemisePhase2.DisplayName: Shrades Demise Phase2
+			// AshCloud.DisplayName: Ash Cloud
+			// BurningAshCloud.DisplayName: Burning Ash Cloud
 		}
 
 		Keybinds: {
@@ -2388,6 +2390,7 @@ Mods: {
 			// TownDrake.DisplayName: Ice Drake Juvenile
 			// FrostburnSlime.DisplayName: Frostburn Slime
 			// IceDrakeJuvenile.DisplayName: Ice Drake Juvenile
+			// SearedAshton.DisplayName: Seared Ashton
 		}
 
 		Tiles: {

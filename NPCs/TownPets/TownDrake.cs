@@ -74,7 +74,7 @@ namespace MultidimensionMod.NPCs.TownPets
         {
             if (Main.player[Main.myPlayer].talkNPC > -1 && Main.npc[Main.player[Main.myPlayer].talkNPC].type == Type)
                 Main.player[Main.myPlayer].isTheAnimalBeingPetSmall = true;
-            if (Main.rand.NextBool(5000))
+            if (Main.rand.NextBool(10000))
             {
                 Item.NewItem(NPC.GetSource_Loot(), NPC.position, NPC.Size, ModContent.ItemType<FrostScale>(), 1);
             }
