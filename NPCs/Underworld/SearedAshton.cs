@@ -87,7 +87,7 @@ namespace MultidimensionMod.NPCs.Underworld
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
-			return SpawnCondition.Underworld.Chance * 0.04f;
+			return SpawnCondition.Underworld.Chance * 0.10f;
 		}
 
 		public override void ModifyNPCLoot(NPCLoot NPCloot)

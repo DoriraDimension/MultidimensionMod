@@ -2391,6 +2391,7 @@ Mods: {
 			FrostburnSlime.DisplayName: Frostburn Slime
 			IceDrakeJuvenile.DisplayName: Ice Drake Juvenile
 			SearedAshton.DisplayName: Seared Ashton
+			Dusty.DisplayName: Dusty
 		}
 
 		Tiles: {

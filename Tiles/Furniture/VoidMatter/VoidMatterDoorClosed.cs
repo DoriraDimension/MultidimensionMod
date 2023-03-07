@@ -28,7 +28,7 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsDoor);
             DustType = ModContent.DustType<DarkDust>();
             AdjTiles = new int[] { TileID.ClosedDoor };
-            OpenDoorID = ModContent.TileType<VoidMatterDoorOpen>();
+            TileID.Sets.OpenDoorID[Type] = ModContent.TileType<VoidMatterDoorOpen>();
             TileObjectData.newTile.Width = 1;
             TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.Origin = new Point16(0, 0);

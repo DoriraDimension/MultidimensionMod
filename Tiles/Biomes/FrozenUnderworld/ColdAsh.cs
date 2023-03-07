@@ -11,7 +11,6 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 		public override void SetStaticDefaults()
 		{
 			Main.tileSolid[Type] = true;
-			Main.tileMergeDirt[57] = true;
 			Main.tileBlockLight[Type] = true;
 			ItemDrop = ModContent.ItemType<ColdAshItem>();
 			AddMapEntry(new Color(200, 200, 200));
@@ -20,7 +19,6 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			Main.tileMerge[Type][ModContent.TileType<AbyssalHellstonePlaced>()] = true;
 			Main.tileMerge[Type][ModContent.TileType<SolidMagmaPlaced>()] = true;
 			Main.tileMerge[Type][ModContent.TileType<GlazedObsidianBrickPlaced>()] = true;
-			Main.tileMergeDirt[Type] = true;
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)

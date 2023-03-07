@@ -70,11 +70,6 @@ namespace MultidimensionMod.Items.Hooks
 				Projectile.CloneDefaults(ProjectileID.GemHookAmethyst); 
 			}
 
-			public override bool? SingleGrappleHook(Player player)
-			{
-				return true;
-			}
-
 			public override float GrappleRange()
 			{
 				return 1000f;

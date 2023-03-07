@@ -70,6 +70,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 		public override void AddRecipes()
 		{
 			CreateRecipe()
+			.AddIngredient(ItemID.MoltenFury)
 			.AddIngredient(ItemID.Flamethrower)
 			.AddIngredient(ItemID.LunarBar, 10)
 			.AddIngredient(ItemID.SoulofFright, 30)

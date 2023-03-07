@@ -35,7 +35,6 @@ namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 			Item.knockBack = 6;
 			Item.value = Item.sellPrice(gold: 7);
 			Item.rare = ModContent.RarityType<BossSoulItem>();
-			Item.UseSound = SoundID.Item11;
 			Item.autoReuse = true;
 			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 12f;
@@ -44,7 +43,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
-			SoundEngine.PlaySound(SoundID.Item11, player.position);
+			SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Item/LauncherShot"), player.position);
 			return true;
 		}
 

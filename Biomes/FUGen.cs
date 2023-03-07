@@ -57,7 +57,8 @@ namespace MultidimensionMod.Biomes
 			float PlaceBiomeY = e;
 
 			ushort ash = (ushort)ModContent.TileType<ColdAsh>(), hellstone = (ushort)ModContent.TileType<AbyssalHellstonePlaced>(), hellstoneBrick = (ushort)ModContent.TileType<AbyssalHellstoneBrickPlaced>(),
-            obsidianBrick = (ushort)ModContent.TileType<GlazedObsidianBrickPlaced>(), lava = (ushort)ModContent.TileType<SolidMagmaPlaced>();
+            obsidianBrick = (ushort)ModContent.TileType<GlazedObsidianBrickPlaced>(), lava = (ushort)ModContent.TileType<SolidMagmaPlaced>(), grass = (ushort)ModContent.TileType<ColdAshGrass>(), 
+			vines = (ushort)ModContent.TileType<ColdAshVines>();
 
 			int biomeRadius = 675;
 
@@ -91,6 +92,20 @@ namespace MultidimensionMod.Biomes
 				new Modifiers.OnlyTiles(new ushort[]{ TileID.ObsidianBrick }),
 				new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
  				new SetModTile(obsidianBrick, true, true)
+            }));
+			WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
+            {
+				new InWorld(),
+				new Modifiers.OnlyTiles(new ushort[]{ TileID.AshVines }),
+				new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
+ 				new SetModTile(vines, true, true)
+            }));
+			WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
+            {
+				new InWorld(),
+				new Modifiers.OnlyTiles(new ushort[]{ TileID.AshGrass }),
+				new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
+ 				new SetModTile(grass, true, true)
             }));
 			{
 				WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]

@@ -3,11 +3,14 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.Audio;
 
 namespace MultidimensionMod.Tiles.Ores
 {
 	public class Dimensium : ModTile
 	{
+		public static readonly SoundStyle MineSound = new SoundStyle("MultidimensionMod/Sounds/Custom/DimensiumMine", 3);
+
 		public override void SetStaticDefaults()
 		{
 			TileID.Sets.Ore[Type] = true;
@@ -27,7 +30,7 @@ namespace MultidimensionMod.Tiles.Ores
 
 			DustType = 84;
 			ItemDrop = ModContent.ItemType<Items.Materials.Dimensium>();
-			HitSound = SoundID.Tink;
+			HitSound = Dimensium.MineSound;
 		}
 	}
 }

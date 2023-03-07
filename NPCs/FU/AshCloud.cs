@@ -20,7 +20,7 @@ namespace MultidimensionMod.NPCs.FU
 			Projectile.ignoreWater = false;
 			Projectile.tileCollide = false;
 			Projectile.penetrate = -1;
-			Projectile.timeLeft = 60;
+			Projectile.timeLeft = 120;
 		}
 
 		public override void Kill(int timeLeft)

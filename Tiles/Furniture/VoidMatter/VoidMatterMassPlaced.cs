@@ -4,11 +4,14 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Audio;
 
 namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 {
 	public class VoidMatterMassPlaced : ModTile
 	{
+		public static readonly SoundStyle MineSound = new SoundStyle("MultidimensionMod/Sounds/Custom/VoidMine", 3);
+
 		public override void SetStaticDefaults()
 		{
 			Main.tileSolid[Type] = true;
@@ -17,6 +20,7 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			AddMapEntry(new Color(25, 19, 39));
 			Main.tileMergeDirt[Type] = true;
 			DustType = ModContent.DustType<DarkDust>();
+			HitSound = VoidMatterMassPlaced.MineSound;
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)

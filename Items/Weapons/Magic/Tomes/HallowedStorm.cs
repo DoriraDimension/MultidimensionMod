@@ -9,15 +9,15 @@ using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.Audio;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 {
 	public class HallowedStorm : ModItem
 	{
+		public static readonly SoundStyle UseSound = new SoundStyle("MultidimensionMod/Sounds/Item/HallowedEcho");
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Hallowed Storm");
-			// Tooltip.SetDefault("Summons prism shards around you as long as you hold down the mouse button\nAll shards fly towards the cursor upon releasing the button.");
 		}
 
 		public override void SetDefaults()
@@ -34,7 +34,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.value = Item.sellPrice(silver: 10);
 			Item.rare = ModContent.RarityType<BossSoulItem>();
-			Item.UseSound = SoundID.Item9;
+			Item.UseSound = HallowedStorm.UseSound;
 			Item.noMelee = true;
 			Item.shoot = ModContent.ProjectileType<PrismShards>();
 			Item.channel = true;

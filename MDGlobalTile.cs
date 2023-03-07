@@ -10,9 +10,11 @@ namespace MultidimensionMod
 {
     public class MDGlobalTile : GlobalTile
     {
+        public static ushort[] PlantTypes;
+
         public override void RandomUpdate(int i, int j, int type)
         {
-            if (type == ModContent.TileType<ColdAsh>() && Main.rand.NextBool(1000))
+            if (type == ModContent.TileType<ColdAsh>() && Main.rand.NextBool(3000))
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<Iceblossom>(), mute: true);
             }

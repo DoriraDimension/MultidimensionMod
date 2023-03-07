@@ -45,7 +45,8 @@ namespace MultidimensionMod.Biomes
         {
             FUCount = tileCounts[ModContent.TileType<ColdAsh>()]
             + tileCounts[ModContent.TileType<AbyssalHellstonePlaced>()]
-            + tileCounts[ModContent.TileType<GlazedObsidianPlaced>()];
+            + tileCounts[ModContent.TileType<GlazedObsidianPlaced>()]
+            + tileCounts[ModContent.TileType<ColdAshGrass>()];
         }
     }
 }
