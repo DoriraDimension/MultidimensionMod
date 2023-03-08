@@ -15,7 +15,7 @@ namespace MultidimensionMod.Biomes
 
         public override string BackgroundPath => "MultidimensionMod/Backgrounds/Map/FUMap";
 
-        public override string BestiaryIcon => "TheDepths/Biomes/DepthsBestiaryIcon";
+        public override string BestiaryIcon => "MultidimensionMod/Backgrounds/FUBestiaryIcon";
 
         public override void SpecialVisuals(Player player, bool isActive)
         {

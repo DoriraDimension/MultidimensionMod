@@ -32,10 +32,17 @@ namespace MultidimensionMod.NPCs.FU
 
         public override void AI()
         {
+            NPC.TargetClosest(true);
+            NPC.netUpdate = true;
             Player player = Main.player[NPC.target];
-            Vector2 velocity = player.Center - NPC.Center;
-            velocity.Normalize();
-            NPC.velocity = velocity * 10f;
+
+            Vector2 victor = new(NPC.position.X + (NPC.width * 0.5f), NPC.position.Y + (NPC.height * 0.5f));
+            {
+                float rotation = (float)Math.Atan2(victor.Y - (Main.player[NPC.target].position.Y + (Main.player[NPC.target].height * 0.5f)), victor.X - (Main.player[NPC.target].position.X + (Main.player[NPC.target].width * 0.5f)));
+                NPC.velocity.X = (float)(Math.Cos(rotation) * 4) * -2;
+                NPC.velocity.Y = (float)(Math.Sin(rotation) * 4) * -2;
+            }
+            NPC.rotation = NPC.velocity.ToRotation() + MathHelper.Pi;
         }
 
         public override void HitEffect(int hitDirection, double damage)
@@ -48,6 +55,15 @@ namespace MultidimensionMod.NPCs.FU
 
             // Remove the enemy from the game
             NPC.active = false;
+        }
+
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        {
+            if (spawnInfo.Player.InModBiome(ModContent.GetInstance<FrozenUnderworld>()))
+            {
+                return SpawnCondition.Underworld.Chance * 0.1f;
+            }
+            return base.SpawnChance(spawnInfo);
         }
     }
 }
