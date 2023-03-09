@@ -2234,6 +2234,33 @@ Mods: {
 				DisplayName: Void Matter Mass
 				Tooltip: Void consumes, void calls, void will rule once more
 			}
+
+			DevilSilk: {
+				DisplayName: Devilish Silk
+				Tooltip:
+					'''
+					Soft silk cloth worn by Victims, it somehow stays warm, even in this frozen environment
+					It is said that this warmth comes from the sins of a great devil, integrated into this cloth
+					'''
+			}
+
+			FreezerSolution: {
+				DisplayName: Freezer Solution
+				Tooltip:
+					'''
+					Used by the Clentaminator
+					Freezes the Underworld
+					'''
+			}
+
+			MelterSolution: {
+				DisplayName: Melter Solution
+				Tooltip:
+					'''
+					Used by the Clentaminator
+					Defrosts the Frozen Underworld
+					'''
+			}
 		}
 
 		Projectiles: {
@@ -2367,6 +2394,8 @@ Mods: {
 			ShradesDemisePhase2.DisplayName: Shrades Demise Phase2
 			AshCloud.DisplayName: Ash Cloud
 			BurningAshCloud.DisplayName: Burning Ash Cloud
+			FreezerSpray.DisplayName: Freezer Spray
+			MelterSpray.DisplayName: Melter Spray
 		}
 
 		Keybinds: {
@@ -2392,6 +2421,8 @@ Mods: {
 			IceDrakeJuvenile.DisplayName: Ice Drake Juvenile
 			SearedAshton.DisplayName: Seared Ashton
 			Dusty.DisplayName: Dusty
+			Victim.DisplayName: Victim
+			VictimsEye.DisplayName: Victims Eye
 		}
 
 		Tiles: {

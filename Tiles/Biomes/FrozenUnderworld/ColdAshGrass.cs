@@ -23,8 +23,6 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
             TileID.Sets.SpreadOverground[Type] = true;
             TileID.Sets.SpreadUnderground[Type] = true;
             TileID.Sets.CanBeClearedDuringOreRunner[Type] = true;
-
-            TileID.Sets.Conversion.Grass[Type] = true;
             TileID.Sets.Conversion.MergesWithDirtInASpecialWay[Type] = true;
             Main.tileMerge[Type][ModContent.TileType<ColdAsh>()] = true;
 

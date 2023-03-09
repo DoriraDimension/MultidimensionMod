@@ -18,7 +18,6 @@ namespace MultidimensionMod.NPCs.Dungeon
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Darkling");
 			Main.npcFrameCount[NPC.type] = 6;
 		}
 

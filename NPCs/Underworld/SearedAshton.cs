@@ -39,13 +39,13 @@ namespace MultidimensionMod.NPCs.Underworld
 			NPC.noTileCollide = true;
 			NPC.aiStyle = -1;
 			Banner = NPC.type;
-			SpawnModBiomes = new int[1] { ModContent.GetInstance<FrozenUnderworld>().Type };
 		}
 
 		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
+				BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheUnderworld,
 				new FlavorTextBestiaryInfoElement("A subspecies of Ashton that adapted to live in the seething heat of the underworld, they spit hot burning ash clouds.")
 			});
 		}
@@ -77,7 +77,7 @@ namespace MultidimensionMod.NPCs.Underworld
 					Vector2 velocity = Vector2.Normalize(player.Center - NPC.Center) * 10f;
 					for (int i = 0; i < 5; i++)
 					{
-						Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(45));
+						Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(30));
 						Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<BurningAshCloud>(), (int)((double)((float)NPC.damage) * 1.5), 0f, Main.myPlayer);
 					}
 					Blargh = 0;
@@ -87,7 +87,11 @@ namespace MultidimensionMod.NPCs.Underworld
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
-			return SpawnCondition.Underworld.Chance * 0.10f;
+			if (Main.hardMode)
+			{
+				return SpawnCondition.Underworld.Chance * 0.10f;
+			}
+			return 0f;
 		}
 
 		public override void ModifyNPCLoot(NPCLoot NPCloot)

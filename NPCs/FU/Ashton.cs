@@ -77,7 +77,7 @@ namespace MultidimensionMod.NPCs.FU
 					Vector2 velocity = Vector2.Normalize(player.Center - NPC.Center) * 10f;
 					for (int i = 0; i < 5; i++)
 					{
-						Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(45));
+						Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(30));
 						Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<AshCloud>(), (int)((double)((float)NPC.damage) * 1.5), 0f, Main.myPlayer);
 					}
 					Blargh = 0;
@@ -87,9 +87,9 @@ namespace MultidimensionMod.NPCs.FU
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
-			if (spawnInfo.Player.InModBiome(ModContent.GetInstance<FrozenUnderworld>()))
+			if (spawnInfo.Player.InModBiome(ModContent.GetInstance<FrozenUnderworld>()) && Main.hardMode)
 			{
-				return SpawnCondition.Underworld.Chance * 0.1f;
+				return 0.20f;
 			}
 			return base.SpawnChance(spawnInfo);
 		}
