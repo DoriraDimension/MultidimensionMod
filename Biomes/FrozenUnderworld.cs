@@ -10,12 +10,12 @@ namespace MultidimensionMod.Biomes
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
 
-        public override int Music => MusicLoader.GetMusicSlot(Mod, "Sounds/Music/FrozenUnderworld");
+        public override int Music => Main.hardMode ? MusicLoader.GetMusicSlot(Mod, "Sounds/Music/FrozenUnderworld2") : MusicLoader.GetMusicSlot(Mod, "Sounds/Music/FrozenUnderworld");
         public override string MapBackground => BackgroundPath;
 
         public override string BackgroundPath => "MultidimensionMod/Backgrounds/Map/FUMap";
 
-        public override string BestiaryIcon => "MultidimensionMod/Backgrounds/FUBestiaryIcon";
+        public override string BestiaryIcon => "MultidimensionMod/Biomes/FUBestiaryIcon";
 
         public override void SpecialVisuals(Player player, bool isActive)
         {

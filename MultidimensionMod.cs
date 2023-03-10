@@ -16,12 +16,13 @@ using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria.GameContent;
 using Terraria.Graphics.Effects;
-
+using Terraria.Graphics.Shaders;
 
 namespace MultidimensionMod
 {
 	public class MultidimensionMod : Mod
 	{
+		//Many things here in the mod are made possible by Ancients Awakened, so pay them a visit!
 		internal static MultidimensionMod Instance;
 
 		internal bool vanillaLoaded = true;
@@ -35,8 +36,33 @@ namespace MultidimensionMod
 			Terraria.IL_Main.DrawUnderworldBackgroudLayer += ILMainDrawUnderworldBackgroundLayer;
 			//Terraria.IL_Main.Player.UpdateBiomes += NoHeap;
 			//IL.Terraria.Liquid.Update += Evaporation;
+			SkyManager.Instance["MadnessMoonSky"] = new MadnessMoonSky();
+			Filters.Scene["MultidimensionMod:Madness"] = new Filter(new ScreenShaderData("FilterMiniTower").UseColor(0.8f, 0.6f, 0.2f).UseOpacity(0.3f), EffectPriority.High);
+			base.Load();
 		}
 
+		#region Madness looky looky
+		public static void PremultiplyTexture(Texture2D texture)
+		{
+			Color[] buffer = new Color[texture.Width * texture.Height];
+			texture.GetData(buffer);
+			for (int i = 0; i < buffer.Length; i++)
+			{
+				buffer[i] = Color.FromNonPremultiplied(buffer[i].R, buffer[i].G, buffer[i].B, buffer[i].A);
+			}
+			texture.SetData(buffer);
+		}
+
+		private void PremultiplyTextures()
+		{
+			Main.QueueMainThreadAction(() =>
+			{
+				PremultiplyTexture(ModContent.Request<Texture2D>("MultidimensionMod/Biomes/MadnessMoonEye", AssetRequestMode.ImmediateLoad).Value);
+			});
+		}
+		#endregion
+
+		#region Frozen Underworld BG IL
 		public static float FUTransition { get; set; }
 
 		private void ILMainDrawUnderworldBackgroundLayer(ILContext il)
@@ -211,7 +237,9 @@ namespace MultidimensionMod
 				}
 			});
 		}
+		#endregion
 
+		#region Frozen Underworld heat distortion IL
 		private void NoHeap(ILContext il)
 		{
 			var c = new ILCursor(il);
@@ -234,6 +262,7 @@ namespace MultidimensionMod
 				Logger.Error(e.Message);
 			}
 		}
+		#endregion
 
 		public override void AddRecipeGroups()/* tModPorter Note: Removed. Use ModSystem.AddRecipeGroups */
 		{

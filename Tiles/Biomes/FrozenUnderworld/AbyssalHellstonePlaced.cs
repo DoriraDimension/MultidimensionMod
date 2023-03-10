@@ -18,7 +18,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			Main.tileShine2[Type] = true;
 			MinPick = 110;
 			ItemDrop = ModContent.ItemType<AbyssalHellstone>();
-			AddMapEntry(new Color(98, 32, 210));
+			AddMapEntry(new Color(60, 99, 181));
 			Main.tileMerge[Type][ModContent.TileType<ColdAsh>()] = true;
 			Main.tileMergeDirt[Type] = true;
 			HitSound = SoundID.Tink;

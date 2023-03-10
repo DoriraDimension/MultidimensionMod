@@ -1,7 +1,10 @@
 
 Mods: {
 	MultidimensionMod: {
-		Biomes.FrozenUnderworld.DisplayName: Frozen Underworld
+		Biomes: {
+			FrozenUnderworld.DisplayName: Frozen Underworld
+			MadnessMoon.DisplayName: Madness Moon
+		}
 
 		Buffs: {
 			RoseVenom: {
@@ -990,7 +993,7 @@ Mods: {
 				Tooltip:
 					'''
 					Frigid Sins
-					By Dr.Voodoo
+					By DrVoodoo
 					'''
 			}
 
@@ -2261,10 +2264,24 @@ Mods: {
 					Defrosts the Frozen Underworld
 					'''
 			}
+
+			MadnessCaller: {
+				DisplayName: Ascendant's Eye
+				Tooltip: Eat this eye to awaken the madness that lurks in the shadows
+			}
+
+			ColdEnragedHellBox: {
+				DisplayName: Music Box (Frozen Underworld - Enraged)
+				Tooltip:
+					'''
+					Raging Sins
+					By DrVoodoo
+					'''
+			}
 		}
 
 		Projectiles: {
-			KelpHookTip.DisplayName: ${ProjectileName.GemHookAmethyst}
+			KelpHookTip.DisplayName: KelpHook
 			DarklingShot.DisplayName: Void Bolt
 			Curse.DisplayName: Cursemark
 			DarkBlast.DisplayName: Dark Blast
@@ -2468,6 +2485,7 @@ Mods: {
 			Dimensium.MapEntry: Dimensium
 			PlacedCrimsonAltar.MapEntry: Crimson Altar
 			PlacedDemonAltar.MapEntry: Demon Altar
+			ColdEnragedHellBoxPlaced.MapEntry: Music Box
 		}
 	}
 }

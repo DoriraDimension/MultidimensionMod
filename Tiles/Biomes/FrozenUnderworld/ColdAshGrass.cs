@@ -29,7 +29,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
             Main.tileSolid[Type] = true;
             Main.tileBlockLight[Type] = true;
 
-            AddMapEntry(new Color(255, 255, 7));
+            AddMapEntry(new Color(60, 99, 181));
 
             MinPick = 10;
             MineResist = 0.1f;

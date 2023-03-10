@@ -16,7 +16,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			Main.tileNoFail[Type] = true;
 			DustType = DustID.Smoke;
 			HitSound = SoundID.Grass;
-			AddMapEntry(new Color(6, 3, 78));
+			AddMapEntry(new Color(60, 99, 181));
 		}
 
 		public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)

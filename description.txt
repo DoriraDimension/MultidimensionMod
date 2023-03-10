@@ -7,7 +7,7 @@ The mod currently adds:
 
 - 100+ Weapons
 - 32 Accessories
-- 2 Armor Sets
+- 3 Armor Sets
 - 2 Pets
 - 6 Vanity Items
 - 11 Enemies
@@ -15,6 +15,7 @@ The mod currently adds:
 - 1 Town NPC
 - 1 Biome
        Frozen Underworld: A frozen solid version of the underworld that takes up almost half of the regular one.
+- 1 Event
 - A good variety of placeable furniture
 - Boss Souls acting as lore items, can be crafted into boss soul weapons.
 - Some changes to vanilla enemy lootpools and recipes for normally not craftable items.
@@ -37,8 +38,12 @@ Contributor:
 -Dussi  spriting
 -naka  spriting
 -HybridDeath  coding
--ZSolar1  For making the wiki logo
 -EggsBenedict  ideas
 -nebs  coding
 -torra th  spriting
 -Rocketlauncher269  spriting
+
+Special Thanks:
+
+-ZSolar1  For making the old wiki logo
+-Lion8cake, for the help with the Frozen Underworld ILs.
