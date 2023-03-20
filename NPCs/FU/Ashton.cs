@@ -99,7 +99,7 @@ namespace MultidimensionMod.NPCs.FU
 			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<AbyssalHellstoneBar>(), 1, 1, 3));
 		}
 
-		public override void HitEffect(int hitDirection, double damage)
+		public override void HitEffect(NPC.HitInfo hit)
 		{
 			if (NPC.life <= 0)
 			{

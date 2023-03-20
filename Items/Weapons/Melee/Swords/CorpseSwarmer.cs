@@ -54,14 +54,14 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			return false;
 		}
 
-		public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			for (int numero = 0; numero < 2; numero++)
 			{
 				Vector2 value = new Vector2(Main.rand.Next(-100, 101), Main.rand.Next(-100, 101));
 				value.Normalize();
 				value *= (float)Main.rand.Next(10, 201) * 0.01f;
-				Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), player.Center.X, player.Center.Y, value.X, value.Y, ModContent.ProjectileType<DecayFlyFriendly>(), (int)((double)Item.damage * 0.3), knockback, player.whoAmI);
+				Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), player.Center.X, player.Center.Y, value.X, value.Y, ModContent.ProjectileType<DecayFlyFriendly>(), (int)((double)Item.damage * 0.3), hit.KnockBack, player.whoAmI);
 			}
 		}
 

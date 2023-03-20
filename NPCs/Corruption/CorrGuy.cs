@@ -49,7 +49,7 @@ namespace MultidimensionMod.NPCs.Corruption
 			return SpawnCondition.Corruption.Chance * 0.5f;
 		}
 
-		public override void HitEffect(int hitDirection, double damage)
+		public override void HitEffect(NPC.HitInfo hit)
 		{
 			if (NPC.life <= 0)
 			{

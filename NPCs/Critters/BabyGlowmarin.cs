@@ -50,13 +50,13 @@ namespace MultidimensionMod.NPCs.Critters
 			return !spawnInfo.PlayerSafe && Main.hardMode && NPC.downedMechBossAny ? SpawnCondition.OceanMonster.Chance * 0.30f : 0f;
 		}
 
-		public override void HitEffect(int hitDirection, double damage)
+		public override void HitEffect(NPC.HitInfo hit)
 		{
 			if (NPC.life <= 0)
 			{
 				for (int i = 0; i < 6; i++)
 				{
-					int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, 200, 2 * hitDirection, -2f);
+					int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, 200, 2 * hit.HitDirection, -2f);
 					if (Main.rand.NextBool(2))
 					{
 						Main.dust[dust].noGravity = true;

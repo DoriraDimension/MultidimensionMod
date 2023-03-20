@@ -35,7 +35,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.crit = 31;
 		}
 
-		public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			target.AddBuff(137, 480);
 		}

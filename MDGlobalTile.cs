@@ -20,7 +20,7 @@ namespace MultidimensionMod
             }
         }
 
-        public override bool Drop(int i, int j, int type)
+        public override void Drop(int i, int j, int type)
         {
             if (Main.player[Main.myPlayer].GetModPlayer<MDPlayer>().Geodes)
             {
@@ -130,7 +130,7 @@ namespace MultidimensionMod
                 {
                     Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<FairyGeode>(), 1, false, 0, false, false);
                 }
-            return base.Drop(i, j, type);
+            return;
         }
     }
 }

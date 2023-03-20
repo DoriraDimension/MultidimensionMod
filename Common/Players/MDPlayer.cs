@@ -141,12 +141,12 @@ namespace MultidimensionMod.Common.Players
             }
         }
 
-        public override void OnHitNPC(Item item, NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPCWithItem(Item item, NPC target, NPC.HitInfo hit, int damageDone)
         {
             Player player = Main.LocalPlayer;
             if (EyeCrit)
             {
-                if (crit)
+                if (hit.Crit)
                 {
                     player.AddBuff(BuffID.Hunter, 960);
                     target.AddBuff(BuffID.Ichor, 240);
@@ -163,12 +163,12 @@ namespace MultidimensionMod.Common.Players
             }
         }
 
-        public override void OnHitNPCWithProj(Projectile proj, NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPCWithProj(Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
         {
             Player player = Main.LocalPlayer;
             if (EyeCrit)
             {
-                if (crit)
+                if (hit.Crit)
                 {
                     player.AddBuff(BuffID.Hunter, 960);
                     target.AddBuff(BuffID.Ichor, 240);
@@ -197,7 +197,7 @@ namespace MultidimensionMod.Common.Players
             }
         }
 
-        public override void PostHurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit, int cooldownCounter)
+        public override void PostHurt(Player.HurtInfo info)
         {
             //This code spawns a friendly Destroyer Probe when the player gets hit, the amount of Probes caps at 4
             Player player = Main.LocalPlayer;
@@ -206,7 +206,7 @@ namespace MultidimensionMod.Common.Players
                 if (Main.myPlayer == Player.whoAmI && Player.ownedProjectileCounts[ModContent.ProjectileType<FriendlyProbe>()] < 4)
                 {
                     Item item = DiggerEngine;
-                    Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<FriendlyProbe>(), (int)damage + 40, 0f, Player.whoAmI);
+                    Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<FriendlyProbe>(), (int)info.Damage + 40, 0f, Player.whoAmI);
                 }
             }
             //Gives the player certain debuffs and plays a sound if they get hit while wearing an eye accessory

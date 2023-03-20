@@ -27,7 +27,7 @@ namespace MultidimensionMod.Projectiles.Melee.Others
 			Main.dust[dust].noGravity = true;
 		}
 
-		public override void OnHitNPC(NPC target, int damage, float knockBack, bool crit)
+		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			{
 				target.AddBuff(BuffID.Electrified, 60000);

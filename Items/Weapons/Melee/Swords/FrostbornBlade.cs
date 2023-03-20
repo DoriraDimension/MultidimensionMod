@@ -49,16 +49,9 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			return false;
 		}
 
-		public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 		{
-			if (crit)
-			{
-				for (int i = 0; i < 3; i++)
-				{
-					int spike = Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<FrostSpike>(), (int)((double)((float)Item.damage) * 0.3), 0f, Main.myPlayer);
-					Main.projectile[spike].aiStyle = 1;
-				}
-			}
+
 		}
 
 		public override void AddRecipes() 

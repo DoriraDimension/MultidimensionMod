@@ -28,6 +28,9 @@ namespace MultidimensionMod.Items
         public override bool? UseItem(Player player)
         {
             DownedSystem.seenFU = false;
+            DownedSystem.seenHell = false;
+            DownedSystem.seenDungeon = false;
+            DownedSystem.seenTemple = false;
 
             if (Main.netMode == NetmodeID.Server)
                 NetMessage.SendData(MessageID.WorldData);

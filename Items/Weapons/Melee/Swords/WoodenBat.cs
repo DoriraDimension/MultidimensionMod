@@ -36,7 +36,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			.Register();
 		}
 
-		public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			if (Main.rand.NextFloat() < .1500f)
 				target.AddBuff(BuffID.Confused, 180);

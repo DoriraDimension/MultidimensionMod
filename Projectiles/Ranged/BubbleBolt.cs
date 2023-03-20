@@ -66,7 +66,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.rotation += 0.4f * (float)Projectile.direction;
 		}
 
-		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			target.AddBuff(BuffID.Electrified, 900);
 		}

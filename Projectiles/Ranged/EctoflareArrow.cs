@@ -32,7 +32,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			AIType = ProjectileID.Bullet;           
 		}
 
-		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			target.AddBuff(BuffID.Ichor, 300);
 			target.AddBuff(BuffID.CursedInferno, 300);

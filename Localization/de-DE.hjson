@@ -2440,6 +2440,10 @@ Mods: {
 			// Dusty.DisplayName: Dusty
 			// Victim.DisplayName: Victim
 			// VictimsEye.DisplayName: Victims Eye
+			// Madman.DisplayName: Madman
+			// MadnessBat.DisplayName: Madness Bat
+			// MadnessBat2.DisplayName: Madness Bat2
+			// MadnessDog.DisplayName: Madness Dog
 		}
 
 		Tiles: {

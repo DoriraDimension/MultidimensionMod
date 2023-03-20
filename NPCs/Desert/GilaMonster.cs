@@ -39,9 +39,9 @@ namespace MultidimensionMod.NPCs.Desert
 			NPCloot.Add(ItemDropRule.Common(ItemID.VialofVenom, 2));
 		}
 
-		public override void OnHitPlayer(Player player, int damage, bool crit)
+		public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
 		{
-		     player.AddBuff(BuffID.Venom, 240);
+		     target.AddBuff(BuffID.Venom, 240);
 
 		}
 
@@ -58,7 +58,7 @@ namespace MultidimensionMod.NPCs.Desert
 			return 0f;
 		}
 
-		public override void HitEffect(int hitDirection, double damage)
+		public override void HitEffect(NPC.HitInfo hit)
 		{
 			if (NPC.life <= 0)
 			{

@@ -37,7 +37,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 
 		public override Vector2? HoldoutOffset()
 		{
-			return new Vector2(0, -10);
+			return new Vector2(0, -5);
 		}
 	}
 }

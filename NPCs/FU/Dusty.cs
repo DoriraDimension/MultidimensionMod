@@ -54,7 +54,7 @@ namespace MultidimensionMod.NPCs.FU
             NPC.rotation = NPC.velocity.ToRotation() + MathHelper.Pi;
         }
 
-        public override void HitEffect(int hitDirection, double damage)
+        public override void HitEffect(NPC.HitInfo hit)
         {
             for (int i = 0; i < 10; i++)
             {
@@ -63,9 +63,9 @@ namespace MultidimensionMod.NPCs.FU
             NPC.active = false;
         }
 
-        public override void OnHitPlayer(Player player, int damage, bool crit)
+        public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
         {
-            player.AddBuff(BuffID.Blackout, 300);
+           target.AddBuff(BuffID.Blackout, 300);
 
         }
 

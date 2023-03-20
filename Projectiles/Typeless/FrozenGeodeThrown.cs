@@ -48,7 +48,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 			Projectile.rotation += 0.4f * (float)Projectile.direction;
 		}
 
-		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
 			Player player = Main.LocalPlayer;
 			if (player.GetModPlayer<MDPlayer>().Geodes)
@@ -62,7 +62,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 					int numProj = 2;
 					float rotation = MathHelper.ToRadians(50f);
 					Vector2 perturbedSpeed = Projectile.velocity.RotatedBy(MathHelper.Lerp(0f - rotation, rotation, (float)(i / (numProj - 1))));
-					Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, perturbedSpeed, ModContent.ProjectileType<Smallcicle>(), (int)((double)((float)Projectile.damage) * 0.1f), knockback, player.whoAmI);
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, perturbedSpeed, ModContent.ProjectileType<Smallcicle>(), (int)((double)((float)Projectile.damage) * 0.1f), hit.KnockBack, player.whoAmI);
 				}
 			}
         }

@@ -56,7 +56,7 @@ namespace MultidimensionMod.NPCs.Ocean
 			return !spawnInfo.PlayerSafe && Main.hardMode && Main.raining && NPC.downedGolemBoss && !NPC.AnyNPCs(ModContent.NPCType<StormFrontEel>()) ? SpawnCondition.Ocean.Chance * 0.15f : 0f;
 		}
 
-		public override void HitEffect(int hitDirection, double damage)
+		public override void HitEffect(NPC.HitInfo hit)
 		{
 			if (NPC.life <= 0)
 			{

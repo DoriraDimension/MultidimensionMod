@@ -99,7 +99,7 @@ namespace MultidimensionMod.NPCs.Underworld
 			NPCloot.Add(ItemDropRule.Common(ItemID.HellstoneBar, 1, 1, 3));
 		}
 
-		public override void HitEffect(int hitDirection, double damage)
+		public override void HitEffect(NPC.HitInfo hit)
 		{
 			if (NPC.life <= 0)
 			{

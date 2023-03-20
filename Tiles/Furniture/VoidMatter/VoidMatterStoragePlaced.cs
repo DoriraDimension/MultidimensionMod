@@ -1,6 +1,7 @@
 ﻿using MultidimensionMod.Items.Placeables.Furniture.VoidMatter;
 using MultidimensionMod.Dusts;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -46,7 +47,6 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			{
 				TileID.Containers
 			};
-			ChestDrop = ModContent.ItemType<VoidMatterStorage>();
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)
@@ -54,11 +54,10 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			num = 1;
 		}
 
-		public override void KillMultiTile(int i, int j, int TileFrameX, int TileFrameY)
+		public override IEnumerable<Item> GetItemDrops(int i, int j)
 		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 48, ChestDrop);
-
-			Chest.DestroyChest(i, j);
+			Tile tile = Main.tile[i, j];
+			yield return new Item(ModContent.ItemType<VoidMatterStorage>());
 		}
 
 		public string MapChestName(string name, int i, int j)
@@ -212,7 +211,7 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 
 				if (player.cursorItemIconText == "Void Matter Storage")
 				{
-					player.cursorItemIconID = ChestDrop;
+					player.cursorItemIconID = ModContent.ItemType<VoidMatterStorage>();
 					player.cursorItemIconText = "";
 				}
 			}

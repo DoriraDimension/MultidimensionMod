@@ -84,16 +84,16 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 			}
 		}
 
-		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			target.AddBuff(ModContent.BuffType<DrakePoison>(), 300);
 		}
 
-		public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+		public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
 		{
 			if (target.type >= ModContent.NPCType<IceDrakeJuvenile>())
 			{
-				damage += (int)0.5f;
+				modifiers.FinalDamage += (int)0.5f;
 			}
 		}
 	}

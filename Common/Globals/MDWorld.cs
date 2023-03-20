@@ -23,6 +23,21 @@ namespace MultidimensionMod.Common.Globals
                 MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Frozen Underworld", 90, 120, 1.6f, 0, Color.LightGray, "Sinner's Wasteland");
                 NPC.SetEventFlagCleared(ref DownedSystem.seenFU, -1);
             }
+            if (Main.LocalPlayer.ZoneDungeon & !DownedSystem.seenDungeon)
+            {
+                MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Dungeon", 90, 120, 1.6f, 0, Color.DarkGray, "Halls of Sin");
+                NPC.SetEventFlagCleared(ref DownedSystem.seenDungeon, -1);
+            }
+            if (Main.LocalPlayer.ZoneLihzhardTemple & !DownedSystem.seenTemple)
+            {
+                MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Jungle Temple", 90, 120, 1.6f, 0, Color.Brown, "Isolated Chambers");
+                NPC.SetEventFlagCleared(ref DownedSystem.seenTemple, -1);
+            }
+            if (Main.LocalPlayer.ZoneUnderworldHeight & !DownedSystem.seenHell)
+            {
+                MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Underworld", 90, 120, 1.6f, 0, Color.OrangeRed, "Ashen Remnants");
+                NPC.SetEventFlagCleared(ref DownedSystem.seenHell, -1);
+            }
             #region Night of Madness
             if (!Main.fastForwardTimeToDawn && !Main.fastForwardTimeToDusk)
             {

@@ -40,7 +40,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			}
 		}
 
-		public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), target.Center.X, target.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<DemonExplosion>(), (int)((double)((float)Item.damage) * 0.3), 0f, Main.myPlayer);
 			if (Main.rand.Next(4) == 0)

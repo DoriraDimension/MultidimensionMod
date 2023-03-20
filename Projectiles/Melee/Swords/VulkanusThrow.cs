@@ -50,7 +50,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			}
 		}
 
-		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
 			target.AddBuff(ModContent.BuffType<BlazingSuffering>(), 360);
 			SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/FireExplosion"), Projectile.position);
@@ -58,7 +58,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			for (int i = 0; i < numberProjectiles; i++)
 			{
 				Vector2 perturbedSpeed = new Vector2(Projectile.velocity.X / 2, Projectile.velocity.Y / 2).RotatedByRandom(MathHelper.ToRadians(360));
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<VulkanusRock>(), damage, knockback, Main.myPlayer);
+				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<VulkanusRock>(), hit.Damage, hit.KnockBack, Main.myPlayer);
 			}
 			for (int i = 0; i < 25; i++)
 			{

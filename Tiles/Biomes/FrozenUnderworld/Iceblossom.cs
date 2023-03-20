@@ -50,7 +50,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 				spriteEffects = SpriteEffects.FlipHorizontally;
 		}
 
-		public override bool Drop(int i, int j)
+		public override bool CanDrop(int i, int j)
 		{
 			PlantStage stage = GetStage(i, j);
 

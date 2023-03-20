@@ -108,7 +108,7 @@ namespace MultidimensionMod.NPCs.Dungeon
 		    NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<DarkMatterClump>(), 1, 1, 3));
 		}
 
-		public override void HitEffect(int hitDirection, double damage)
+		public override void HitEffect(NPC.HitInfo hit)
 		{
 			for (int i = 0; i < 10; i++)
 			{

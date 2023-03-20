@@ -52,12 +52,12 @@ namespace MultidimensionMod.NPCs.Tundra
 			else return 0f;
 		}
 
-		public override void OnHitPlayer(Player player, int damage, bool crit)
+		public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
 		{
-			player.AddBuff(BuffID.Frostburn, 360, true);
+			target.AddBuff(BuffID.Frostburn, 360, true);
 		}
 
-		public override void HitEffect(int hitDirection, double damage)
+		public override void HitEffect(NPC.HitInfo hit)
 		{
 			for (int i = 0; i < 10; i++)
 			{

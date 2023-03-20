@@ -46,7 +46,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 			Projectile.rotation += 0.4f * (float)Projectile.direction;
 		}
 
-		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			Player player = Main.LocalPlayer;
 			if (player.GetModPlayer<MDPlayer>().Geodes && Main.hardMode)
