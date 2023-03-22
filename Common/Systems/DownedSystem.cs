@@ -12,6 +12,9 @@ namespace MultidimensionMod.Common.Systems
         public static bool seenHell;
         public static bool seenDungeon;
         public static bool seenTemple;
+        public static bool seenAether;
+        public static bool downedSmiley;
+        public static bool downedGrudge;
 
         public override void OnWorldLoad()
         {
@@ -19,6 +22,8 @@ namespace MultidimensionMod.Common.Systems
             seenHell = false;
             seenDungeon = false;
             seenTemple = false;
+            seenAether = false;
+            downedSmiley = false;
         }
 
         public override void OnWorldUnload()
@@ -27,6 +32,8 @@ namespace MultidimensionMod.Common.Systems
             seenHell = false;
             seenDungeon = false;
             seenTemple = false;
+            seenAether = false;
+            downedSmiley = false;
         }
 
         public override void SaveWorldData(TagCompound tag)
@@ -41,6 +48,10 @@ namespace MultidimensionMod.Common.Systems
                 downed.Add("seenDungeon");
             if (seenTemple)
                 downed.Add("seenTemple");
+            if (seenAether)
+                downed.Add("seenAether");
+            if (downedSmiley)
+                downed.Add("downedSmiley");
 
             tag["downed"] = downed;
         }
@@ -53,6 +64,8 @@ namespace MultidimensionMod.Common.Systems
             seenHell = downed.Contains("seenHell");
             seenDungeon = downed.Contains("seenDungeon");
             seenTemple = downed.Contains("seenTemple");
+            seenAether = downed.Contains("seenAether");
+            downedSmiley = downed.Contains("downedSmiley");
         }
 
         public override void NetSend(BinaryWriter writer)
@@ -62,6 +75,8 @@ namespace MultidimensionMod.Common.Systems
             flags[1] = seenHell;
             flags[2] = seenDungeon;
             flags[3] = seenTemple;
+            flags[4] = seenAether;
+            flags[5] = downedSmiley;
             writer.Write(flags);
         }
 
@@ -72,6 +87,8 @@ namespace MultidimensionMod.Common.Systems
             seenHell = flags[1];
             seenDungeon = flags[2];
             seenTemple = flags[3];
+            seenAether = flags[4];
+            downedSmiley = flags[5];
         }
     }
 }

@@ -6,7 +6,7 @@ using MultidimensionMod.Common.Globals;
 
 namespace MultidimensionMod.Items
 {
-    public class MDUnbooler : ModItem
+    public class MDUndowner : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -25,11 +25,7 @@ namespace MultidimensionMod.Items
 
         public override bool? UseItem(Player player)
         {
-            DownedSystem.seenFU = false;
-            DownedSystem.seenHell = false;
-            DownedSystem.seenDungeon = false;
-            DownedSystem.seenTemple = false;
-            DownedSystem.seenAether = false;
+            DownedSystem.downedSmiley = false;
 
             if (Main.netMode == NetmodeID.Server)
                 NetMessage.SendData(MessageID.WorldData);

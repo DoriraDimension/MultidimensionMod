@@ -38,6 +38,11 @@ namespace MultidimensionMod.Common.Globals
                 MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Underworld", 90, 120, 1.6f, 0, Color.OrangeRed, "Ashen Remnants");
                 NPC.SetEventFlagCleared(ref DownedSystem.seenHell, -1);
             }
+            if (Main.LocalPlayer.ZoneShimmer & !DownedSystem.seenAether)
+            {
+                MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Aether", 90, 120, 1.6f, 0, Color.Pink, "Hidden Starry Sky");
+                NPC.SetEventFlagCleared(ref DownedSystem.seenAether, -1);
+            }
             #region Night of Madness
             if (!Main.fastForwardTimeToDawn && !Main.fastForwardTimeToDusk)
             {

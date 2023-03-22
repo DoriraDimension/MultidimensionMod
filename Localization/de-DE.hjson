@@ -2278,11 +2278,27 @@ Mods: {
 					By DrVoodoo
 					''' */
 			}
+
+			SmileyBag: {
+				// DisplayName: Smiley Bag
+				// Tooltip: ""
+			}
+
+			MDUndowner: {
+				// DisplayName: M D Undowner
+				// Tooltip: ""
+			}
+
+			VanillaUndowner: {
+				// DisplayName: Vanilla Undowner
+				// Tooltip: ""
+			}
 		}
 
 		Projectiles: {
 			// KelpHookTip.DisplayName: KelpHook
 			// DarklingShot.DisplayName: Void Bolt
+			// Darkling.DisplayName: Darkling
 			// Curse.DisplayName: Cursemark
 			// DarkBlast.DisplayName: Dark Blast
 			// DarkBolt.DisplayName: Dark Bolt
@@ -2413,6 +2429,12 @@ Mods: {
 			// BurningAshCloud.DisplayName: Burning Ash Cloud
 			// FreezerSpray.DisplayName: Freezer Spray
 			// MelterSpray.DisplayName: Melter Spray
+			// Baller.DisplayName: Baller
+			// Baller2.DisplayName: Baller2
+			// Baller3.DisplayName: Baller3
+			// Baller4.DisplayName: Baller4
+			// SmileyDeath.DisplayName: Smiley Death
+			// SmileyPhase2.DisplayName: Smiley Phase2
 		}
 
 		Keybinds: {
@@ -2444,6 +2466,7 @@ Mods: {
 			// MadnessBat.DisplayName: Madness Bat
 			// MadnessBat2.DisplayName: Madness Bat2
 			// MadnessDog.DisplayName: Madness Dog
+			// Smiley.DisplayName: Smiley
 		}
 
 		Tiles: {

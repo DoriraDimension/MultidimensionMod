@@ -6,6 +6,7 @@ using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Weapons.Melee.Others;
 using MultidimensionMod.Items.Weapons.Melee.Swords;
 using MultidimensionMod.Items;
+using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Projectiles.Ranged;
 using System;
 using System.Linq;
@@ -221,7 +222,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
 				nextSlot++;
 			}
-			if (Main.hardMode)
+			if (DownedSystem.downedSmiley)
             {
 				shop.item[nextSlot].SetDefaults(ModContent.ItemType<UnknownEmoji>());
 				shop.item[nextSlot].shopCustomPrice = 3;

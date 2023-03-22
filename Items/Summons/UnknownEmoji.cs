@@ -1,7 +1,10 @@
 ﻿using MultidimensionMod.Items.Materials;
+using MultidimensionMod.NPCs.Bosses.Smiley;
+using MultidimensionMod.Tiles.Furniture.VoidMatter;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Audio;
 
 namespace MultidimensionMod.Items.Summons
 {
@@ -9,8 +12,6 @@ namespace MultidimensionMod.Items.Summons
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Unknown Emoji");
-			// Tooltip.SetDefault("A weird smiling pile of dark matter pulsing with energy.\nSummons Smiley at night, the leader of Darklings.\nWarning, boss is extremely unstable in multiplayer and will despawn in all cases.");
 			ItemID.Sets.SortingPriorityBossSpawns[Item.type] = 13;
 		}
 
@@ -27,11 +28,23 @@ namespace MultidimensionMod.Items.Summons
 			Item.consumable = true;
 		}
 
+		public override bool CanUseItem(Player player)
+		{
+			return !Main.dayTime && !NPC.AnyNPCs(ModContent.NPCType<Smiley>());
+		}
+
+		public override bool? UseItem(Player player)
+		{
+			NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<Smiley>());
+			SoundEngine.PlaySound(SoundID.Roar, player.position);
+			return true;
+		}
+
 		public override void AddRecipes()
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 10)
-			.AddTile(26)
+			.AddTile(ModContent.TileType<EmptyKingsFabricatorPlaced>())
 			.Register();
 		}
 	}

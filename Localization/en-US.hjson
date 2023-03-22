@@ -674,7 +674,7 @@ Mods: {
 				DisplayName: MD Unbooler
 				Tooltip:
 					'''
-					Undowns all AA bools
+					Sets all MD bools to false
 					Non-Consumable
 					'''
 			}
@@ -2278,11 +2278,35 @@ Mods: {
 					By DrVoodoo
 					'''
 			}
+
+			SmileyBag: {
+				DisplayName: Treasure Bag (Smiley)
+				Tooltip: "Right-click to open"
+			}
+
+			MDUndowner: {
+				DisplayName: MD Undowned
+				Tooltip:
+				     '''
+					 Undowns all MD bosses
+					 Non-Consumable
+					 '''
+			}
+
+			VanillaUndowner: {
+				DisplayName: Vanilla Undowner
+				Tooltip:
+				    '''
+					Left click to undown all Pre-Hardmode vanilla bosses
+					Right click to undown all Hardmode vanilla bosses
+					'''
+			}
 		}
 
 		Projectiles: {
 			KelpHookTip.DisplayName: KelpHook
 			DarklingShot.DisplayName: Void Bolt
+			Darkling.DisplayName: Darkling
 			Curse.DisplayName: Cursemark
 			DarkBlast.DisplayName: Dark Blast
 			DarkBolt.DisplayName: Dark Bolt
@@ -2413,6 +2437,12 @@ Mods: {
 			BurningAshCloud.DisplayName: Burning Ash Cloud
 			FreezerSpray.DisplayName: Freezer Spray
 			MelterSpray.DisplayName: Melter Spray
+			Baller.DisplayName: Smiling Emoji
+			Baller2.DisplayName: Happy Emoji
+			Baller3.DisplayName: Neutral Emoji
+			Baller4.DisplayName: Dark Emoji
+			SmileyDeath.DisplayName: Smiley
+			SmileyPhase2.DisplayName: Smiley
 		}
 
 		Keybinds: {
@@ -2444,6 +2474,7 @@ Mods: {
 			MadnessBat.DisplayName: Madness Bat
 			MadnessBat2.DisplayName: Madness Bat2
 			MadnessDog.DisplayName: Madness Dog
+			Smiley.DisplayName: Smiley
 		}
 
 		Tiles: {

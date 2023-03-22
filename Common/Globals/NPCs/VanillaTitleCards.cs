@@ -45,7 +45,7 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 {
                     if (!Main.dedServ)
                     {
-                       MDSystem.Instance.TitleCardUIElement.DisplayTitle("King Slime", 60, 90, 1.0f, 0, Color.SkyBlue, "Geletic Ruler");
+                       MDSystem.Instance.TitleCardUIElement.DisplayTitle("King Slime", 60, 90, 1.0f, 0, Color.LightBlue, "Geletic Ruler");
                        KingTitleCard = true;
                     }
                 }
@@ -195,7 +195,7 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 {
                     if (!Main.dedServ)
                     {
-                        MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Destroyer", 60, 90, 1.0f, 0, Color.Blue, "Tectonic Tunneler");
+                        MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Destroyer", 60, 90, 1.0f, 0, Color.LightBlue, "Tectonic Tunneler");
                         MetalWormTitleCard = true;
                     }
                 }

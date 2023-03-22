@@ -32,8 +32,8 @@ namespace MultidimensionMod.NPCs.FU
 			Projectile.velocity *= 0.98f;
 		}
 
-		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
-        {
+		public override void OnHitPlayer(Player target, Player.HurtInfo info)
+		{
 			target.AddBuff(BuffID.Frostburn2, 300);
         }
 	}
