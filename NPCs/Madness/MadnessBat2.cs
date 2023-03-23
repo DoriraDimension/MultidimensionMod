@@ -2,17 +2,22 @@
 using MultidimensionMod.Dusts;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Base;
+using System;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.Bestiary;
+using Terraria.Audio;
 
 namespace MultidimensionMod.NPCs.Madness
 {
     public class MadnessBat2 : ModNPC
     {
+        int Ambush = 1;
+        int AmbushTimer = 0;
         public override void SetStaticDefaults()
         {
             Main.npcFrameCount[NPC.type] = 4;
@@ -45,7 +50,6 @@ namespace MultidimensionMod.NPCs.Madness
 
         public override void AI()
         {
-            BaseAI.AIFlier(NPC, ref NPC.ai, true, 0.1f, 0.04f, 4f, 1.5f, true, 300);
             Player player = Main.player[NPC.target];
 
             if (player.Center.X > NPC.Center.X)
@@ -56,13 +60,69 @@ namespace MultidimensionMod.NPCs.Madness
             {
                 NPC.spriteDirection = 1;
             }
-
+            BaseAI.AIFlier(NPC, ref NPC.ai, true, 0.1f, 0.04f, 4f, 1.5f, true, 300);
+            if (Ambush == 1)
+            {
+                if (AmbushTimer == 120)
+                {
+                    Vector2 victor = new(NPC.position.X + (NPC.width * 0.5f), NPC.position.Y + (NPC.height * 0.5f));
+                    {
+                        SoundEngine.PlaySound(new("MultidimensionMod/Sounds/NPC/MadnessScream"), NPC.position);
+                        float rotation = (float)Math.Atan2(victor.Y - (Main.player[NPC.target].position.Y + (Main.player[NPC.target].height * 0.5f)), victor.X - (Main.player[NPC.target].position.X + (Main.player[NPC.target].width * 0.5f)));
+                        NPC.velocity.X = (float)(Math.Cos(rotation) * 8) * -1;
+                        NPC.velocity.Y = (float)(Math.Sin(rotation) * 8) * -1;
+                        for (int m = 0; m < 20; m++)
+                        {
+                            int dustID = Dust.NewDust(new Vector2(NPC.Center.X - 1, NPC.Center.Y - 1), 2, 2, ModContent.DustType<MadnessY>(), 0f, 0f, 100, Color.White, 1.6f);
+                            Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(6f, 0f), m / (float)20 * 6.28f);
+                            Main.dust[dustID].noLight = false;
+                            Main.dust[dustID].noGravity = true;
+                        }
+                    }
+                }
+                if (AmbushTimer == 160)
+                {
+                    Vector2 victor = new(NPC.position.X + (NPC.width * 0.5f), NPC.position.Y + (NPC.height * 0.5f));
+                    {
+                        SoundEngine.PlaySound(new("MultidimensionMod/Sounds/NPC/MadnessScream"), NPC.position);
+                        float rotation = (float)Math.Atan2(victor.Y - (Main.player[NPC.target].position.Y + (Main.player[NPC.target].height * 0.5f)), victor.X - (Main.player[NPC.target].position.X + (Main.player[NPC.target].width * 0.5f)));
+                        NPC.velocity.X = (float)(Math.Cos(rotation) * 8) * -1;
+                        NPC.velocity.Y = (float)(Math.Sin(rotation) * 8) * -1;
+                        for (int m = 0; m < 20; m++)
+                        {
+                            int dustID = Dust.NewDust(new Vector2(NPC.Center.X - 1, NPC.Center.Y - 1), 2, 2, ModContent.DustType<MadnessY>(), 0f, 0f, 100, Color.White, 1.6f);
+                            Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(6f, 0f), m / (float)20 * 6.28f);
+                            Main.dust[dustID].noLight = false;
+                            Main.dust[dustID].noGravity = true;
+                        }
+                    }
+                }
+                if (AmbushTimer == 200)
+                {
+                    Vector2 victor = new(NPC.position.X + (NPC.width * 0.5f), NPC.position.Y + (NPC.height * 0.5f));
+                    {
+                        SoundEngine.PlaySound(new("MultidimensionMod/Sounds/NPC/MadnessScream"), NPC.position);
+                        float rotation = (float)Math.Atan2(victor.Y - (Main.player[NPC.target].position.Y + (Main.player[NPC.target].height * 0.5f)), victor.X - (Main.player[NPC.target].position.X + (Main.player[NPC.target].width * 0.5f)));
+                        NPC.velocity.X = (float)(Math.Cos(rotation) * 10) * -1;
+                        NPC.velocity.Y = (float)(Math.Sin(rotation) * 10) * -1;
+                        for (int m = 0; m < 20; m++)
+                        {
+                            int dustID = Dust.NewDust(new Vector2(NPC.Center.X - 1, NPC.Center.Y - 1), 2, 2, ModContent.DustType<MadnessY>(), 0f, 0f, 100, Color.White, 1.6f);
+                            Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(6f, 0f), m / (float)20 * 6.28f);
+                            Main.dust[dustID].noLight = false;
+                            Main.dust[dustID].noGravity = true;
+                        }
+                    }
+                    AmbushTimer = 0;
+                }
+                AmbushTimer++;
+            }
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             if (spawnInfo.Player.InModBiome(ModContent.GetInstance<MadnessMoon>()) && Main.hardMode)
             {
-                return SpawnCondition.OverworldNightMonster.Chance * 0.1f;
+                return SpawnCondition.OverworldNightMonster.Chance * 0.12f;
             }
             return 0f;
         }
@@ -103,6 +163,11 @@ namespace MultidimensionMod.NPCs.Madness
             {
                 NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MadnessFragment>(), 1, 1, 2));
             }
+        }
+
+        public override void OnHitPlayer(Player target, Player.HurtInfo info)
+        {
+            target.AddBuff(ModContent.BuffType<Buffs.Debuffs.Madness>(), 300);
         }
     }
 }

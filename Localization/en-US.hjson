@@ -3,7 +3,7 @@ Mods: {
 	MultidimensionMod: {
 		Biomes: {
 			FrozenUnderworld.DisplayName: Frozen Underworld
-			MadnessMoon.DisplayName: Madness Moon
+			MadnessMoon.DisplayName: Night of Madness
 		}
 
 		Buffs: {
@@ -2281,24 +2281,33 @@ Mods: {
 
 			SmileyBag: {
 				DisplayName: Treasure Bag (Smiley)
-				Tooltip: "Right-click to open"
+				Tooltip: Right-click to open
 			}
 
 			MDUndowner: {
 				DisplayName: MD Undowned
 				Tooltip:
-				     '''
-					 Undowns all MD bosses
-					 Non-Consumable
-					 '''
+					'''
+					Undowns all MD bosses
+					Non-Consumable
+					'''
 			}
 
 			VanillaUndowner: {
 				DisplayName: Vanilla Undowner
 				Tooltip:
-				    '''
+					'''
 					Left click to undown all Pre-Hardmode vanilla bosses
 					Right click to undown all Hardmode vanilla bosses
+					'''
+			}
+
+			MadnessBox: {
+				DisplayName: Music Box (Night of Madness)
+				Tooltip:
+					'''
+					Visage's Visit
+					By DrVoodoo
 					'''
 			}
 		}
@@ -2471,10 +2480,11 @@ Mods: {
 			Victim.DisplayName: Victim
 			VictimsEye.DisplayName: Victims Eye
 			Madman.DisplayName: Madman
-			MadnessBat.DisplayName: Madness Bat
-			MadnessBat2.DisplayName: Madness Bat2
-			MadnessDog.DisplayName: Madness Dog
+			MadnessBat.DisplayName: Madness Flier
+			MadnessBat2.DisplayName: Madness Gazer
+			MadnessDog.DisplayName: Starving Madness
 			Smiley.DisplayName: Smiley
+			Taraha.DisplayName: Greater One
 		}
 
 		Tiles: {
@@ -2521,6 +2531,7 @@ Mods: {
 			PlacedCrimsonAltar.MapEntry: Crimson Altar
 			PlacedDemonAltar.MapEntry: Demon Altar
 			ColdEnragedHellBoxPlaced.MapEntry: Music Box
+			MadnessBoxPlaced.MapEntry: Music Box
 		}
 	}
 }

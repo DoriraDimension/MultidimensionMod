@@ -59,7 +59,7 @@ namespace MultidimensionMod.Common.Globals
                                     MadnessMoon = true;
                                     if (!Main.dayTime)
                                     {
-                                        string status = "You feel your mind pierced...";
+                                        string status = "You feel your mind burned...";
                                         if (Main.netMode == NetmodeID.Server)
                                             ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(status), Color.Gold);
                                         else if (Main.netMode == NetmodeID.SinglePlayer)

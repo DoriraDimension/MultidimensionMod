@@ -32,10 +32,7 @@ namespace MultidimensionMod.NPCs.Madness
 			NPC.HitSound = SoundID.NPCHit54;
 			NPC.DeathSound = SoundID.NPCDeath52;
 			NPC.value = Item.buyPrice(0, 0, 1, 40);
-			NPC.knockBackResist = 0.0f;
-			NPC.lavaImmune = false;
-			NPC.noGravity = false;
-			NPC.noTileCollide = true;
+			NPC.knockBackResist = 0.5f;
 			NPC.aiStyle = -1;
 			Banner = NPC.type;
 			SpawnModBiomes = new int[1] { ModContent.GetInstance<MadnessMoon>().Type };
@@ -45,7 +42,7 @@ namespace MultidimensionMod.NPCs.Madness
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("A fucking moron.")
+				new FlavorTextBestiaryInfoElement("A simple man who witnessed the true horror beyond, no longer able to think like a normal person.")
 			});
 		}
 
@@ -61,21 +58,21 @@ namespace MultidimensionMod.NPCs.Madness
 				NPC.spriteDirection = -1;
 				NPC.direction = -1;
 			}
-			BaseAI.AIZombie(NPC, ref NPC.ai, true, true, 0, 0.07f, 1, 5, 6, 200, true, 5, 20, false);
+			BaseAI.AIZombie(NPC, ref NPC.ai, true, false, 0, 0.16f, 3, 5, 6, 200, true, 5, 20, false);
 		}
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
 			if (spawnInfo.Player.InModBiome(ModContent.GetInstance<MadnessMoon>()))
 			{
-				return 0.20f;
+				return 0.70f;
 			}
 			return base.SpawnChance(spawnInfo);
 		}
 
 		public override void ModifyNPCLoot(NPCLoot NPCloot)
 		{
-			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MadnessFragment>(), 1, 1, 3));
+			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MadnessFragment>(), 3, 1, 2));
 		}
 
 		public override void HitEffect(NPC.HitInfo hit)
@@ -84,6 +81,11 @@ namespace MultidimensionMod.NPCs.Madness
 			{
 
 			}
+		}
+
+		public override void OnHitPlayer(Player target, Player.HurtInfo info)
+		{
+			target.AddBuff(ModContent.BuffType<Buffs.Debuffs.Madness>(), 600);
 		}
 
 		public override void FindFrame(int frameHeight)

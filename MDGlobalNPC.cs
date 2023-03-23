@@ -1,5 +1,6 @@
 ﻿using MultidimensionMod.NPCs.Tundra;
 using MultidimensionMod.NPCs.FU;
+using MultidimensionMod.NPCs.Madness;
 using MultidimensionMod.Biomes;
 using System;
 using System.Collections.Generic;
@@ -117,6 +118,18 @@ namespace MultidimensionMod
 				pool.Add(ModContent.NPCType<Victim>(), 0.1f);
 				//pool.Add(ModContent.NPCType<VeilImp>(), 0.2f);
 				pool.Add(ModContent.NPCType<Dusty>(), 0.1f);
+			}
+			if (spawnInfo.Player.InModBiome<MadnessMoon>())
+            {
+				pool.Clear();
+				pool.Add(ModContent.NPCType<MadnessBat>(), 1.0f);
+				pool.Add(ModContent.NPCType<MadnessDog>(), 1.0f);
+				pool.Add(ModContent.NPCType<Madman>(), 1.0f);
+				if (Main.hardMode)
+                {
+					pool.Add(ModContent.NPCType<MadnessBat2>(), 1.0f);
+					//pool.Add(ModContent.NPCType<MadTitan>(), 0.2f);
+				}
 			}
 		}
 	}

@@ -37,7 +37,7 @@ namespace MultidimensionMod
 			//Terraria.IL_Main.Player.UpdateBiomes += NoHeap;
 			//IL.Terraria.Liquid.Update += Evaporation;
 			SkyManager.Instance["MadnessMoonSky"] = new MadnessMoonSky();
-			Filters.Scene["MultidimensionMod:Madness"] = new Filter(new ScreenShaderData("FilterMiniTower").UseColor(0.8f, 0.6f, 0.2f).UseOpacity(0.3f), EffectPriority.High);
+			Filters.Scene["MultidimensionMod:Madness"] = new Filter(new ScreenShaderData("FilterMiniTower").UseColor(0.8f, 0.6f, 0.2f).UseOpacity(0.5f), EffectPriority.High);
 			base.Load();
 		}
 

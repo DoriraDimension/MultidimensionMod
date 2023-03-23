@@ -71,7 +71,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 			NPCloot.Add(ItemDropRule.Common(ItemID.GoldCoin, 1, 11, 11));
 			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<DarkMatterClump>(), 1, 15, 20));
 			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<SmileySoulshard>()));
-			NPCloot.Add(ItemDropRule.BossBag(ModContent.ItemType<EnergyFish>()));
+			NPCloot.Add(ItemDropRule.BossBag(ModContent.ItemType<SmileyBag>()));
 			if (Main.rand.NextBool(10))
 			{
 				NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<SmileyTrophy>()));

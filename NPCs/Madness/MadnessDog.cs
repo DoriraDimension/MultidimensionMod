@@ -44,7 +44,7 @@ namespace MultidimensionMod.NPCs.Madness
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("Visions of friend.")
+				new FlavorTextBestiaryInfoElement("A gruesome creature that gazed into the lurking terror, its madness scarred mind forgot how to consume food and as such is driven by a neverending hunger.")
 			});
 		}
 
@@ -60,14 +60,14 @@ namespace MultidimensionMod.NPCs.Madness
 				NPC.spriteDirection = -1;
 				NPC.direction = -1;
 			}
-			BaseAI.AICharger(NPC, ref NPC.ai, 0.07f, 6, true, 300);
+			BaseAI.AICharger(NPC, ref NPC.ai, 0.14f, 6, false, 300);
 		}
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
 			if (spawnInfo.Player.InModBiome(ModContent.GetInstance<MadnessMoon>()))
 			{
-				return 0.20f;
+				return 0.60f;
 			}
 			return base.SpawnChance(spawnInfo);
 		}
@@ -75,6 +75,11 @@ namespace MultidimensionMod.NPCs.Madness
 		public override void ModifyNPCLoot(NPCLoot NPCloot)
 		{
 			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MadnessFragment>(), 1, 1, 3));
+		}
+
+		public override void OnHitPlayer(Player target, Player.HurtInfo info)
+		{
+			target.AddBuff(ModContent.BuffType<Buffs.Debuffs.Madness>(), 240);
 		}
 
 		public override void HitEffect(NPC.HitInfo hit)

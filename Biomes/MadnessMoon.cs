@@ -12,6 +12,8 @@ namespace MultidimensionMod.Biomes
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.Event;
 
+        public override int Music => MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Madness");
+
         public override bool IsBiomeActive(Player player)
         {
             return (player.ZoneSkyHeight || player.ZoneOverworldHeight) && MDWorld.MadnessMoon;
@@ -27,7 +29,7 @@ namespace MultidimensionMod.Biomes
             SkyManager.Instance.Activate("MadnessMoonSky");
             if (isActive)
             {
-                if (Main.dayTime)
+                if (Main.dayTime && !MDWorld.MadnessMoon)
                 {
                     player.ManageSpecialBiomeVisuals("MultidimensionMod:Madness", false);
                 }
