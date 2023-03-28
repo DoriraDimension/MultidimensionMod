@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Items.Summons;
 using MultidimensionMod.NPCs.TownNPCs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -130,19 +131,35 @@ namespace MultidimensionMod.NPCs.TownNPCs
 				case 0:
 					itemIds.Add(ModContent.ItemType<MadnessFragment>());
 					break;
+            }
+            switch (Main.rand.Next(1))
+            {
+				case 0:
+					itemIds.Add(ModContent.ItemType<MadnessCaller>());
+					break;
 			}
-			switch (Main.rand.Next(2))
+            switch (Main.rand.Next(1))
 			{
 				case 0:
 					itemIds.Add(ModContent.ItemType<Dimensium>());
 					break;
-				default:
-					itemIds.Add(ModContent.ItemType<Prismatine>());
+            }
+            switch (Main.rand.Next(1))
+            {
+				case 0:
+					itemIds.Add(ModContent.ItemType<SoulRemnant>());
 					break;
+				case 1:
+					itemIds.Add(ItemID.PinkPearl);
+					break;
+            }
+            if (Main.hardMode)
+			{
+				itemIds.Add(ModContent.ItemType<CerebroAlloy>());
 			}
 
-			// convert to a list of items
-			shopItems = new List<Item>();
+            // convert to a list of items
+            shopItems = new List<Item>();
 			foreach (int itemId in itemIds)
 			{
 				Item item = new Item();
@@ -167,8 +184,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		{
 			NPC.townNPC = true;
 			NPC.friendly = true;
-			NPC.width = 91;
-			NPC.height = 91;
+			NPC.width = 122;
+			NPC.height = 144;
 			NPC.aiStyle = -1;
 			NPC.damage = 10;
 			NPC.defense = 15;
@@ -237,15 +254,15 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			button = Language.GetTextValue("LegacyInterface.28");
 		}
 
-		public override void OnChatButtonClicked(bool firstButton, ref bool shop)
+		public override void OnChatButtonClicked(bool firstButton, ref string shopName)
 		{
 			if (firstButton)
 			{
-				shop = true;
+				shopName = "Shop";
 			}
 		}
 
-		public override void SetupShop(Chest shop, ref int nextSlot)
+		public override void AddShops()
 		{
 			foreach (Item item in shopItems)
 			{
@@ -253,8 +270,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 				if (item == null || item.type == ItemID.None)
 					continue;
 
-				shop.item[nextSlot].SetDefaults(item.type);
-				nextSlot++;
+				//shop.item[nextSlot].SetDefaults(item.type);
+				//nextSlot++;
 			}
 		}
 

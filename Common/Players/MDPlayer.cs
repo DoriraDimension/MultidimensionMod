@@ -22,7 +22,7 @@ namespace MultidimensionMod.Common.Players
 
         public bool IgnaenHead = false;
 
-        public bool EyeCrit = false;
+        public bool DarkusCrit = false;
 
         public bool StarvingLarva = false;
 
@@ -67,7 +67,7 @@ namespace MultidimensionMod.Common.Players
             SmileyJr = false;
             IgnaenHead = false;
             Blaze = false;
-            EyeCrit = false;
+            DarkusCrit = false;
             StarvingLarva = false;
             Healthy = false;
             Probe = false;
@@ -144,12 +144,11 @@ namespace MultidimensionMod.Common.Players
         public override void OnHitNPCWithItem(Item item, NPC target, NPC.HitInfo hit, int damageDone)
         {
             Player player = Main.LocalPlayer;
-            if (EyeCrit)
+            if (DarkusCrit)
             {
                 if (hit.Crit)
                 {
-                    player.AddBuff(BuffID.Hunter, 960);
-                    target.AddBuff(BuffID.Ichor, 240);
+
                 }
             }
 
@@ -166,12 +165,11 @@ namespace MultidimensionMod.Common.Players
         public override void OnHitNPCWithProj(Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
         {
             Player player = Main.LocalPlayer;
-            if (EyeCrit)
+            if (DarkusCrit)
             {
                 if (hit.Crit)
                 {
-                    player.AddBuff(BuffID.Hunter, 960);
-                    target.AddBuff(BuffID.Ichor, 240);
+
                 }
             }
             if (StarvingLarva)

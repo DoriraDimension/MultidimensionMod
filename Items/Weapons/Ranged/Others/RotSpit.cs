@@ -16,8 +16,6 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Rot Spit");
-			// Tooltip.SetDefault("Spits out a big ball of rotten flesh that attracts small devourers. Devourer will poison enemies on hit.");
 		}
 
 		public override void SetDefaults()
@@ -32,7 +30,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 			Item.noMelee = true;
 			Item.knockBack = 1;
 			Item.value = Item.sellPrice(silver: 26);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.LightRed;
 			Item.UseSound = SoundID.NPCDeath13;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<RottenSpit>();
@@ -43,15 +41,6 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 		public override Vector2? HoldoutOffset()
 		{
 			return new Vector2(-10, 0);
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<WormSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 10)
-			.AddTile(ModContent.TileType<DimensionalForge>())
-			.Register();
 		}
 	}
 }

@@ -16,8 +16,6 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Slime Spreader");
-			// Tooltip.SetDefault("A flamethrower that does not convert gel into fire but instead shoots a deadly spread of slime.\nThe most dangerous slime is a slime with a gun.");
 		}
 
 		public override void SetDefaults()
@@ -33,7 +31,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 			Item.noMelee = true;
 			Item.knockBack = 0.3f;
 			Item.value = Item.sellPrice(silver: 30);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item34;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<GelCloud>();
@@ -50,9 +48,9 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<KingSlimeSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 10)
-			.AddTile(ModContent.TileType<DimensionalForge>())
+			.AddIngredient(ItemID.Gel, 34)
+			.AddRecipeGroup("GoldBars", 16)
+			.AddTile(TileID.Solidifier)
 			.Register();
 		}
 	}

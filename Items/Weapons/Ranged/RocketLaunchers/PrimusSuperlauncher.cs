@@ -34,7 +34,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 			Item.noMelee = true;
 			Item.knockBack = 6;
 			Item.value = Item.sellPrice(gold: 7);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.Pink;
 			Item.autoReuse = true;
 			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 12f;
@@ -55,9 +55,9 @@ namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<PrimeSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 15)
-			.AddTile(ModContent.TileType<DimensionalForge>())
+			.AddIngredient(ItemID.HallowedBar, 13)
+			.AddIngredient(ItemID.SoulofFright, 6)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 

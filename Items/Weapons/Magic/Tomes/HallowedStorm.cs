@@ -33,7 +33,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 			Item.autoReuse = true;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.value = Item.sellPrice(silver: 10);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.Yellow;
 			Item.UseSound = HallowedStorm.UseSound;
 			Item.noMelee = true;
 			Item.shoot = ModContent.ProjectileType<PrismShards>();
@@ -54,9 +54,9 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<EmpressSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 20)
-			.AddTile(ModContent.TileType<DimensionalForge>())
+			.AddIngredient(ItemID.CrystalStorm)
+			.AddIngredient(ModContent.ItemType<Prismatine>(), 6)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 	}

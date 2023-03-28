@@ -15,8 +15,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Evil Ember, Vulkanus");
-			// Tooltip.SetDefault("Throw a blade of molten rock, the blade explodes into volcanic rocks on impact\nThis weapon belonged to Vertrarius, the strongest warrior of the dark forces, he is powerful and doesn't let any wound get to him\nVertrarius is not evil, he simply fights the Hallow out of boredom, violence is the most entertaining thing to him");
 		}
 
 		public override void SetDefaults()
@@ -31,7 +29,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 7f;
 			Item.value = Item.sellPrice(gold: 1);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.LightRed;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.noMelee = true;
@@ -43,15 +41,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void MeleeEffects(Player player, Rectangle hitbox)
 		{
 			Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, (6));
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<WallSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 15)
-			.AddTile(ModContent.TileType<DimensionalForge>())
-			.Register();
 		}
 	}
 }

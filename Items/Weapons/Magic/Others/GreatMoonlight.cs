@@ -17,8 +17,6 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Great Moonlight");
-			// Tooltip.SetDefault("The blue crystal blade is composed only of light.\nThe lunatic Cultist is a insane fanatic of the moon and so stole this legendary blade to use it himself,\ntho the Great Moonlight seems to not belong in this world and instead obeys an otherworldly moon.");
 		}
 
 		public override void SetDefaults()
@@ -33,7 +31,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.knockBack = 6;
 			Item.autoReuse = true;
 			Item.value = Item.sellPrice(gold: 4);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.White;
 			Item.UseSound = SoundID.Item1;
 			Item.shoot = ModContent.ProjectileType<MoonlightWave>();
 			Item.shootSpeed = 15f;
@@ -72,11 +70,10 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 
 		public override void AddRecipes()
 		{
-			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<CultistSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 20)
-			.AddTile(ModContent.TileType<DimensionalForge>())
-			.Register();
+			//CreateRecipe()
+			//.AddIngredient(ModContent.ItemType<MagicSword>())
+			//.AddTile(ModContent.TileType<DimensionalForge>())
+			//.Register();
 		}
 	}
 }

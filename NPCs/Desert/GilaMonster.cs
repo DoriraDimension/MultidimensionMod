@@ -2,7 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.ModLoader.Utilities;
+using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 
 namespace MultidimensionMod.NPCs.Desert
@@ -11,7 +11,6 @@ namespace MultidimensionMod.NPCs.Desert
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Gilania");
 			Main.npcFrameCount[NPC.type] = 6;
 		}
 
@@ -32,6 +31,14 @@ namespace MultidimensionMod.NPCs.Desert
 			AnimationType = NPCID.Squirrel;
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<GilaBanner>();
+		}
+
+		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+		{
+			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+			{
+				new FlavorTextBestiaryInfoElement("Big reptiles that live in the desert, their bite is venomous. They will rest underground at day to escape the blazing desert sun and come out at night..")
+			});
 		}
 
 		public override void ModifyNPCLoot(NPCLoot NPCloot)

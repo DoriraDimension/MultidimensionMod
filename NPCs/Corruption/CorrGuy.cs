@@ -7,6 +7,7 @@ using Terraria.ID;
 using Terraria.ModLoader.Utilities;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader;
+using Terraria.GameContent.Bestiary;
 
 namespace MultidimensionMod.NPCs.Corruption
 {
@@ -34,6 +35,14 @@ namespace MultidimensionMod.NPCs.Corruption
 			AnimationType = NPCID.Crab;
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<InfestedBanner>();
+		}
+
+		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+		{
+			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+			{
+				new FlavorTextBestiaryInfoElement("It was possibly once human but is now just a disgusting thing, these weird creatures are hosts to a local species of rot loving flies. They drip green stinky goo everywhere they walk and spit disgusting liquid with every movement of their mouth.")
+			});
 		}
 
 		public override void ModifyNPCLoot(NPCLoot NPCloot)

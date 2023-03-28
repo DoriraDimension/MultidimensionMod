@@ -16,8 +16,6 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Celestial Tentacle");
-			// Tooltip.SetDefault("Yo, Moon beard.");
 		}
 
 		public override void SetDefaults()
@@ -30,7 +28,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.noUseGraphic = true;
 			Item.noMelee = true;
 			Item.value = Item.sellPrice(gold: 18);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.Red;
 			Item.DefaultToWhip(ModContent.ProjectileType<TentacleWhip>(), 45, 2, 4);
 			Item.shootSpeed = 8;
 
@@ -45,15 +43,6 @@ namespace MultidimensionMod.Items.Weapons.Summon
 				Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
 			}
 			return false;
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-				.AddIngredient(ModContent.ItemType<MoonSoul>())
-				.AddIngredient(ModContent.ItemType<Dimensium>(), 30)
-				.AddTile(ModContent.TileType<DimensionalForge>())
-				.Register();
 		}
 
 		public override bool MeleePrefix()

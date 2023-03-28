@@ -31,20 +31,11 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.mana = 5;
 			Item.knockBack = 1;
 			Item.value = Item.sellPrice(gold: 1);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.Orange;
 			Item.UseSound = SoundID.DD2_SonicBoomBladeSlash;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<DarkBolt>();
 			Item.shootSpeed = 35f;
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<SmileySoulshard>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 10)
-			.AddTile(ModContent.TileType<DimensionalForge>())
-			.Register();
 		}
 	}
 }

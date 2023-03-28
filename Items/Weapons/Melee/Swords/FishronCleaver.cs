@@ -52,7 +52,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<FishCleaver>())
 			.AddIngredient(ModContent.ItemType<TidalQuartz>(), 15)
-			.AddCondition(Recipe.Condition.NearWater)
+			.AddCondition(Condition.NearWater)
 			.Register();
 		}
 	}

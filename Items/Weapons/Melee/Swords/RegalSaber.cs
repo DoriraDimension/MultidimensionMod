@@ -14,8 +14,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public int Grow = 0;
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Regal Saber");
-			// Tooltip.SetDefault("A sword born from the soul of the king of all slimes, it might not be a very powerful sword but it emits a regal aura.");
 		}
 
 		public override void SetDefaults()
@@ -30,7 +28,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.knockBack = 2;
 			Item.autoReuse = true;
 			Item.value = Item.sellPrice(silver: 30);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item1;
 			Item.crit = 31;
 		}
@@ -72,9 +70,9 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<KingSlimeSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 10)
-			.AddTile(ModContent.TileType<DimensionalForge>())
+			.AddIngredient(ItemID.Gel, 56)
+			.AddRecipeGroup("GoldBars", 12)
+			.AddTile(TileID.Solidifier)
 			.Register();
 		}
 	}

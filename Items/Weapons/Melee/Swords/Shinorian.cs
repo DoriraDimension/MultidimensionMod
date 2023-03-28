@@ -27,7 +27,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.useStyle = ItemUseStyleID.Rapier;
 			Item.knockBack = 2;
 			Item.value = Item.sellPrice(silver: 78);
-			Item.rare = ModContent.RarityType<ForbiddenArtifact>();
+			Item.rare = ModContent.RarityType<AseGneblessaArtifact>();
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.noMelee = true;

@@ -25,7 +25,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 			Item.noMelee = true; 
 			Item.knockBack = 4;
 			Item.value = Item.sellPrice(gold: 30);
-			Item.rare = ModContent.RarityType<ForbiddenArtifact>();
+			Item.rare = ModContent.RarityType<AseGneblessaArtifact>();
 			Item.UseSound = SoundID.Item34; 
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<ShradesDemise>();

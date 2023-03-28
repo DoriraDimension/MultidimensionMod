@@ -5,31 +5,21 @@ using MultidimensionMod.Items.Summons;
 using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Weapons.Melee.Others;
 using MultidimensionMod.Items.Weapons.Melee.Swords;
-using MultidimensionMod.Items;
 using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Projectiles.Ranged;
-using System;
-using System.Linq;
 using Terraria;
-using Terraria.Audio;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.Utilities;
-using Terraria.GameContent.Bestiary;
-using Terraria.GameContent.ItemDropRules;
-using Microsoft.Xna.Framework.Graphics;
-using Terraria.GameContent;
 using Terraria.GameContent.Personalities;
-using Terraria.DataStructures;
 using System.Collections.Generic;
-using ReLogic.Content;
-
 namespace MultidimensionMod.NPCs.TownNPCs
 {
 	[AutoloadHead]
 	public class Dorira : ModNPC
 	{
+		public const string ShopName = "Shop";
+
 		public override void SetStaticDefaults()
 		{
 			// DisplayName.SetDefault("Dimensional God");
@@ -193,67 +183,68 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			button = Language.GetTextValue("LegacyInterface.28");
 		}
 
-		public override void OnChatButtonClicked(bool firstButton, ref bool shop)
+		public override void OnChatButtonClicked(bool firstButton, ref string shopName)
 		{
 			if (firstButton)
 			{
-				shop = true;
+				shopName = "Shop";
 			}
 		}
 
-		public override void SetupShop(Chest shop, ref int nextSlot)
+		public override void AddShops()
 		{
-			shop.item[nextSlot].SetDefaults(ModContent.ItemType<DimensionalForgeItem>());
-			shop.item[nextSlot].shopCustomPrice = 10;
-			shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(ModContent.ItemType<IronUndies>());
-			shop.item[nextSlot].shopCustomPrice = 5;
-			shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(ModContent.ItemType<BaitLeaf>());
-			shop.item[nextSlot].shopCustomPrice = 7;
-			shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
-			nextSlot++;
-			if (NPC.downedBoss3)
-            {
-				shop.item[nextSlot].SetDefaults(ModContent.ItemType<ArchtyrantsFace>());
-				shop.item[nextSlot].shopCustomPrice = 15;
-				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
-				nextSlot++;
-			}
-			if (DownedSystem.downedSmiley)
-            {
-				shop.item[nextSlot].SetDefaults(ModContent.ItemType<UnknownEmoji>());
-				shop.item[nextSlot].shopCustomPrice = 3;
-				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
-				nextSlot++;
-				shop.item[nextSlot].SetDefaults(ModContent.ItemType<FishLegacy>());
-				shop.item[nextSlot].shopCustomPrice = 10;
-				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
-				nextSlot++;
-			}
-			if (NPC.downedPlantBoss)
+			var npcShop = new NPCShop(Type, ShopName)
+			.Add(new Item(ModContent.ItemType<DimensionalForgeItem>())
 			{
-				shop.item[nextSlot].SetDefaults(ModContent.ItemType<CheliaPlushie>());
-				shop.item[nextSlot].shopCustomPrice = 16;
-				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
-				nextSlot++;
-			}
-			if (NPC.downedMoonlord)
+				shopCustomPrice = 10,
+				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
+			})
+			.Add(new Item(ModContent.ItemType<IronUndies>())
 			{
-				shop.item[nextSlot].SetDefaults(ModContent.ItemType<DataMiner>());
-				shop.item[nextSlot].shopCustomPrice = 40;
-				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
-				nextSlot++;
-			}
-			if (Main.LocalPlayer.HasItem(ModContent.ItemType<Shinorian>()) || Main.LocalPlayer.HasItem(ModContent.ItemType<ArchtyrantsFace>()))
+				shopCustomPrice = 5,
+				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
+			})
+			.Add(new Item(ModContent.ItemType<BaitLeaf>())
 			{
-				shop.item[nextSlot].SetDefaults(ModContent.ItemType<WeirdStone>());
-				shop.item[nextSlot].shopCustomPrice = 25;
-				shop.item[nextSlot].shopSpecialCurrency = MultidimensionMod.DimensiumEuronen;
-				nextSlot++;
-			}
+				shopCustomPrice = 7,
+				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
+			})
+			.Add(new Item(ModContent.ItemType<IronUndies>())
+			{
+				shopCustomPrice = 5,
+				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
+			})
+			.Add(new Item(ModContent.ItemType<ArchtyrantsFace>())
+			{
+				shopCustomPrice = 15,
+				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
+			})
+			//var DownedSmiley = new Condition("Conditions.DownedSmiley", () => DownedSystem.downedSmiley);
+			.Add(new Item(ModContent.ItemType<UnknownEmoji>())
+			{
+				shopCustomPrice = 3,
+				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
+			})
+			.Add(new Item(ModContent.ItemType<FishLegacy>())
+			{
+				shopCustomPrice = 10,
+				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
+			})
+			.Add(new Item(ModContent.ItemType<CheliaPlushie>())
+			{
+				shopCustomPrice = 16,
+				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
+			})
+			.Add(new Item(ModContent.ItemType<DataMiner>())
+			{
+				shopCustomPrice = 40,
+				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
+			})
+			.Add(new Item(ModContent.ItemType<WeirdStone>())
+			{
+				shopCustomPrice = 25,
+				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
+			});
 		}
 
 		public override bool CanGoToStatue(bool toKingStatue)

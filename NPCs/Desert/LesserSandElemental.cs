@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 using Terraria.GameContent.ItemDropRules;
+using Terraria.GameContent.Bestiary;
 
 namespace MultidimensionMod.NPCs.Desert
 {
@@ -34,6 +35,14 @@ namespace MultidimensionMod.NPCs.Desert
 			AnimationType = NPCID.Bird;
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<LesserSandEleBanner>();
+		}
+
+		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+		{
+			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+			{
+				new FlavorTextBestiaryInfoElement("They are actually crystalized mana surrounded by sand, created artificially by the Children of Rahlem. They will react hostile against anything that enters their desert. During sandstorms they become even more active and travel to the surface, sometimes following Sand Elementals.")
+			});
 		}
 
 		public override void ModifyNPCLoot(NPCLoot NPCloot)

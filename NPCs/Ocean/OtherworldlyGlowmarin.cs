@@ -7,6 +7,7 @@ using Terraria.ID;
 using Terraria.ModLoader.Utilities;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader;
+using Terraria.GameContent.Bestiary;
 
 namespace MultidimensionMod.NPCs.Ocean
 {
@@ -35,6 +36,14 @@ namespace MultidimensionMod.NPCs.Ocean
 			AnimationType = NPCID.Shark;
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<GlowmarinBanner>();
+		}
+
+		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+		{
+			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+			{
+				new FlavorTextBestiaryInfoElement("A fish from another dimension, they have glowing organs all over their body, suggesting that they originally lived in deeper waters..")
+			});
 		}
 
 		public override void ModifyNPCLoot(NPCLoot NPCloot)

@@ -86,7 +86,7 @@ namespace MultidimensionMod
 			lava.AddIngredient(ItemID.LavaBucket, 2);
 			lava.AddIngredient(ItemID.Fireblossom, 3);
 			lava.AddIngredient(ItemID.Obsidian, 15);
-			lava.AddCondition(Recipe.Condition.NearLava);
+			lava.AddCondition(Condition.NearLava);
 			lava.Register();
 
 			Recipe horseSneakers = Recipe.Create(ItemID.LuckyHorseshoe);
@@ -139,7 +139,7 @@ namespace MultidimensionMod
 			Recipe rose = Recipe.Create(ItemID.ObsidianRose);
 			rose.AddIngredient(ItemID.JungleRose);
 			rose.AddIngredient(ItemID.Obsidian, 20);
-			rose.AddCondition(Recipe.Condition.NearLava);
+			rose.AddCondition(Condition.NearLava);
 			rose.Register();
 
 			Recipe cloak = Recipe.Create(ItemID.StarCloak);

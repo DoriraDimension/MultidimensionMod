@@ -2310,6 +2310,26 @@ Mods: {
 					By DrVoodoo
 					''' */
 			}
+
+			NumbMindMask: {
+				// DisplayName: Numb Mind Mask
+				// Tooltip: ""
+			}
+
+			CerebroAlloy: {
+				// DisplayName: Cerebro Alloy
+				// Tooltip: ""
+			}
+
+			SoulRemnant: {
+				// DisplayName: Soul Remnant
+				// Tooltip: ""
+			}
+
+			ShadeEye: {
+				// DisplayName: Shade Eye
+				// Tooltip: ""
+			}
 		}
 
 		Projectiles: {
@@ -2484,7 +2504,7 @@ Mods: {
 			// MadnessBat2.DisplayName: Madness Gazer
 			// MadnessDog.DisplayName: Starving Madness
 			// Smiley.DisplayName: Smiley
-			// Taraha.DisplayName: Taraha
+			// Taraha.DisplayName: Greater One
 		}
 
 		Tiles: {

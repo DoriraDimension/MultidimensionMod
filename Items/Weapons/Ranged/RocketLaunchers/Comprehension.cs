@@ -32,7 +32,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 			Item.noMelee = true;
 			Item.knockBack = 8;
 			Item.value = Item.sellPrice(gold: 6);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.NPCHit13;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<BrainRocket>();
@@ -42,15 +42,6 @@ namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 		public override Vector2? HoldoutOffset()
 		{
 			return new Vector2(-8, 0);
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<BrainSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 10)
-			.AddTile(ModContent.TileType<DimensionalForge>())
-			.Register();
 		}
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)

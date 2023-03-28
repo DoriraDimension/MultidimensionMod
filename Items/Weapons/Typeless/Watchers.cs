@@ -34,7 +34,7 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 			Item.knockBack = 2;
 			Item.noUseGraphic = true;
 			Item.value = Item.sellPrice(gold: 5);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<Eyeball>();
@@ -49,15 +49,6 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 				Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
 			}
 			return false;
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<EyeSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 10)
-			.AddTile(ModContent.TileType<DimensionalForge>())
-			.Register();
 		}
 	}
 }

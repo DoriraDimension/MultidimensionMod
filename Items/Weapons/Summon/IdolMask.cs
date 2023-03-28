@@ -35,7 +35,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.useAnimation = 36;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.value = Item.sellPrice(gold: 4);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.Lime;
 			Item.UseSound = SoundID.Item97;
 			Item.noMelee = true;
 			Item.buffType = ModContent.BuffType<MaskBuff>();
@@ -58,15 +58,6 @@ namespace MultidimensionMod.Items.Weapons.Summon
 		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
 		{
 			position = player.Center;
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<GolemSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 15)
-			.AddTile(ModContent.TileType<DimensionalForge>())
-			.Register();
 		}
 	}
 }

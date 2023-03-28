@@ -16,8 +16,6 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Sunray Brick");
-			// Tooltip.SetDefault("Creates a google stock explosion gif on impact.");
 		}
 
 
@@ -34,7 +32,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 			Item.knockBack = 10;
 			Item.noUseGraphic = true;
 			Item.value = Item.sellPrice(gold: 8);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.Lime;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<SunrayBrickThrown>();
@@ -44,9 +42,10 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<GolemSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 12)
-			.AddTile(ModContent.TileType<DimensionalForge>())
+			.AddIngredient(ItemID.LihzahrdBrick, 20)
+			.AddIngredient(ItemID.LunarTabletFragment, 4)
+			.AddIngredient(ItemID.LihzahrdPowerCell)
+			.AddTile(TileID.LihzahrdFurnace)
 			.Register();
 		}
 

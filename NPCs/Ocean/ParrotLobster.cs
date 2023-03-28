@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader.Utilities;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader;
+using Terraria.GameContent.Bestiary;
 
 namespace MultidimensionMod.NPCs.Ocean
 {
@@ -33,6 +34,14 @@ namespace MultidimensionMod.NPCs.Ocean
 			AnimationType = NPCID.WalkingAntlion;
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<ParrotLobsterBanner>();
+		}
+
+		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+		{
+			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+			{
+				new FlavorTextBestiaryInfoElement("Odd lobster species that lives near the shores, the have a beak which gives them their name. Their meat is very tasty and can make a nice dish.")
+			});
 		}
 
 		public override void ModifyNPCLoot(NPCLoot NPCloot)

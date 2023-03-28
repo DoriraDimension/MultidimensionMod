@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace MultidimensionMod.Rarities
 {
-	public class ForbiddenArtifact : ModRarity
+	public class AseGneblessaArtifact : ModRarity
 	{
 		public override Color RarityColor => BaseUtility.MultiLerpColor(Main.LocalPlayer.miscCounter % 100 / 100f, MDColors.ForbiddenLavender, MDColors.ForbiddenPurple, MDColors.ForbiddenLavender);
 

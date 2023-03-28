@@ -9,6 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader.Utilities;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader;
+using Terraria.GameContent.Bestiary;
 
 namespace MultidimensionMod.NPCs.Ocean
 {
@@ -16,7 +17,6 @@ namespace MultidimensionMod.NPCs.Ocean
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Storm Front Eel");
 			Main.npcFrameCount[NPC.type] = 5;
 		}
 
@@ -37,6 +37,14 @@ namespace MultidimensionMod.NPCs.Ocean
 			AnimationType = NPCID.Bird;
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<StormEelBanner>();
+		}
+
+		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+		{
+			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+			{
+				new FlavorTextBestiaryInfoElement("					The great storm eels, only active during storms, when the sea is harsh and unforgiving. Many people believe they are scouts, scouts of someone or something deep under the ocean, that is why these creatures are seen as an omen of even worse to come")
+			});
 		}
 
 		public override void ModifyNPCLoot(NPCLoot NPCloot)

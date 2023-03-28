@@ -22,21 +22,12 @@ namespace MultidimensionMod.Items.Accessories
 			Item.height = 22;
 			Item.accessory = true;
 			Item.value = Item.sellPrice(gold: 7);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.LightRed;
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
 			player.GetModPlayer<MDPlayer>().StarvingLarva = true;
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<WormSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 10)
-			.AddTile(ModContent.TileType<DimensionalForge>())
-			.Register();
 		}
 	}
 }

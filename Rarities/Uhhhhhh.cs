@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace MultidimensionMod.Rarities
 {
-	public class BossSoulItem : ModRarity
+	public class Uhhhhhh : ModRarity
 	{
 		public override Color RarityColor => BaseUtility.MultiLerpColor(Main.LocalPlayer.miscCounter % 100 / 100f, MDColors.BossSoulRed, MDColors.BossSoulPink, MDColors.BossSoulPurple, MDColors.BossSoulPink, MDColors.BossSoulRed);
 

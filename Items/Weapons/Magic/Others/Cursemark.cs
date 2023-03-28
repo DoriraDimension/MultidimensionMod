@@ -15,8 +15,6 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Cursemark");
-			// Tooltip.SetDefault("While you press the attack button, your mouse gains a damaging aura.");
 		}
 
 		public override void SetDefaults()
@@ -32,7 +30,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.noMelee = true;
 			Item.knockBack = 0f;
 			Item.value = Item.sellPrice(silver: 12);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.Orange;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<Curse>();
 		}
@@ -41,15 +39,6 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 		{
 			Projectile.NewProjectile(source, Main.MouseWorld, velocity, type, damage, knockback, player.whoAmI);
 			return false;
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<SkeletonSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 10)
-			.AddTile(ModContent.TileType<DimensionalForge>())
-			.Register();
 		}
 	}
 }

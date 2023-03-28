@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Rarities.Souls;
+using MultidimensionMod.Items.Materials;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -12,8 +13,6 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Soul of a Queen Bee");
-			// Tooltip.SetDefault("These giant bees live deep in the jungle, disturb one of their larvae and feel their fury.");
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
 			ItemID.Sets.ItemNoGravity[Item.type] = true;
 		}

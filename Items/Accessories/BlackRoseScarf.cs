@@ -19,7 +19,7 @@ namespace MultidimensionMod.Items.Accessories
 			Item.height = 44;
 			Item.accessory = true;
 			Item.value = Item.sellPrice(gold: 7);
-			Item.rare = ModContent.RarityType<ForbiddenArtifact>();
+			Item.rare = ModContent.RarityType<AseGneblessaArtifact>();
 		}
 
 		public override void ModifyTooltips(List<TooltipLine> list)

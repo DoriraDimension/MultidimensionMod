@@ -2,13 +2,14 @@
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Potions;
 using MultidimensionMod.Items.Weapons.Melee.Swords;
-using MultidimensionMod.Items.Weapons.Melee.Boomerangs;
-using MultidimensionMod.Items.Weapons.Magic.Guns;
+using MultidimensionMod.Items.Weapons.Magic.Others;
 using MultidimensionMod.Items.Weapons.Ranged.Guns;
-using MultidimensionMod.Items.Weapons.Ranged.Flamethrowers;
+using MultidimensionMod.Items.Weapons.Ranged.Others;
 using MultidimensionMod.Items.Weapons.Magic.Tomes;
 using MultidimensionMod.Items.Placeables;
 using MultidimensionMod.Items.Weapons.Typeless;
+using MultidimensionMod.Items.Weapons.Summon;
+using MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers;
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Summons;
 using Terraria;
@@ -63,6 +64,8 @@ namespace MultidimensionMod
             if (NPC.type == NPCID.BrainofCthulhu)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BrainSoul>()));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<NeuralWaves>(), 5));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Comprehension>()));
             }
 
             if (NPC.type == NPCID.QueenBee)
@@ -98,8 +101,6 @@ namespace MultidimensionMod
             if (NPC.type == NPCID.Retinazer || NPC.type == NPCID.Spazmatism)
             {
                 LeadingConditionRule leadingConditionRule = new LeadingConditionRule(new Conditions.MissingTwin());
-                leadingConditionRule.OnSuccess(npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Retilazor>(), 4)));
-                leadingConditionRule.OnSuccess(npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Spazmelter>(), 4)));
                 leadingConditionRule.OnSuccess(npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TwinSoul>())));
                 npcLoot.Add(leadingConditionRule);
             }
@@ -123,6 +124,7 @@ namespace MultidimensionMod
             if (NPC.type == NPCID.Golem)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<GolemSoul>()));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<IdolMask>(), 3));
             }
 
             if (NPC.type == NPCID.HallowBoss) //Empress
@@ -146,6 +148,7 @@ namespace MultidimensionMod
             if (NPC.type == NPCID.MoonLordCore)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MoonSoul>()));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Tentacle>(), 3));
             }
 
             if (NPC.type == NPCID.MartianSaucerCore)
@@ -278,6 +281,31 @@ namespace MultidimensionMod
             if (NPC.type == NPCID.UndeadViking || NPC.type == NPCID.ArmoredViking)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<VikingRelic>(), 1, 2, 3));
+            }
+
+            if (NPC.type == NPCID.GoblinSummoner)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DarkusSigil>(), 4));
+            }
+
+            if (NPC.type == NPCID.DarkCaster)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Cursemark>(), 50));
+            }
+
+            if (NPC.type == NPCID.SeekerHead)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<StarvingLarva>(), 25));
+            }
+
+            if (NPC.type == NPCID.Corruptor)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RotSpit>(), 25));
+            }
+
+            if (NPC.type == NPCID.Drippler)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Watchers>(), 40));
             }
         }
     }

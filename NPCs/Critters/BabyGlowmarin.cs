@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader.Utilities;
 using Terraria.ModLoader;
+using Terraria.GameContent.Bestiary;
 
 namespace MultidimensionMod.NPCs.Critters
 {
@@ -33,6 +34,14 @@ namespace MultidimensionMod.NPCs.Critters
 			AnimationType = NPCID.Shark;
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<BabyGlowmarinBanner>();
+		}
+
+		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+		{
+			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+			{
+				new FlavorTextBestiaryInfoElement("These small adorable fish are from another dimension, they reproduce really fast. Its small glow organs are already developed and work fine.")
+			});
 		}
 
 		public override bool? CanBeHitByItem(Player player, Item item)

@@ -38,7 +38,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			.AddIngredient(ItemID.PrincessFish, 3)
 			.AddIngredient(ItemID.RedSnapper, 3)
 			.AddIngredient(ItemID.Trout, 3)
-			.AddCondition(Recipe.Condition.NearWater)
+			.AddCondition(Condition.NearWater)
 			.Register();
 		}
 	}

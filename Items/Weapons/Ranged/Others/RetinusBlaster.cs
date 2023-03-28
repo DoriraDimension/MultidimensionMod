@@ -16,8 +16,6 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Retinus Blaster");
-			// Tooltip.SetDefault("Charges a devastating death beam");
 		}
 
 		public override void SetDefaults()
@@ -36,7 +34,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 			Item.noMelee = true;
 			Item.noUseGraphic = true;
 			Item.channel = true;
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.Pink;
 			Item.shoot = ModContent.ProjectileType<RetinusBlasterHoldOut>();
 			Item.shootSpeed = 15f;
 		}
@@ -48,9 +46,9 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<TwinSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 15)
-			.AddTile(ModContent.TileType<DimensionalForge>())
+			.AddIngredient(ItemID.HallowedBar, 15)
+			.AddIngredient(ItemID.SoulofSight, 8)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 	}

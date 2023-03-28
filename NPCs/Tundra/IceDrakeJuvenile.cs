@@ -25,7 +25,6 @@ namespace MultidimensionMod.NPCs.Tundra
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Ice Drake Juvenile");
 			Main.npcFrameCount[NPC.type] = 14;
 			NPCID.Sets.ActsLikeTownNPC[Type] = true;
 		}
@@ -124,14 +123,14 @@ namespace MultidimensionMod.NPCs.Tundra
 			{
 				button = Language.GetTextValue("Feed");
 			}
-			if (Main.LocalPlayer.HasItem(ModContent.ItemType<KFC>()) && !NPC.AnyNPCs(ModContent.NPCType<TownDrake>()))
+			if (Main.LocalPlayer.HasItem(ItemID.GoldenDelight) && !NPC.AnyNPCs(ModContent.NPCType<TownDrake>()))
             {
 				button = Language.GetTextValue("Adopt");
 				isAdoptable = true;
             }
 		}
 
-		public override void OnChatButtonClicked(bool firstButton, ref bool shop)
+		public override void OnChatButtonClicked(bool firstButton, ref string shopName)
 		{
 			//Makes the Drake drop an item upon feeding it
 			if (firstButton && !isAdoptable)

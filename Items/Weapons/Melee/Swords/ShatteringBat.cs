@@ -29,7 +29,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.useAnimation = 15;
 			Item.knockBack = 15;
 			Item.value = Item.sellPrice(gold: 70);
-			Item.rare = ModContent.RarityType<ForbiddenArtifact>();
+			Item.rare = ModContent.RarityType<AseGneblessaArtifact>();
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.crit = 70; 

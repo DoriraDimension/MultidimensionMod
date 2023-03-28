@@ -24,7 +24,7 @@ namespace MultidimensionMod.Items.Accessories
 			Item.height = 42;
 			Item.accessory = true;
 			Item.value = Item.sellPrice(gold: 12);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ItemRarityID.Pink;
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
@@ -36,10 +36,10 @@ namespace MultidimensionMod.Items.Accessories
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<MetalWormSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 15)
-			.AddTile(ModContent.TileType<DimensionalForge>())
-			.AddTile(134)
+			.AddIngredient(ItemID.AncientChisel)
+			.AddIngredient(ItemID.HallowedBar, 10)
+			.AddIngredient(ItemID.SoulofMight, 7)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 

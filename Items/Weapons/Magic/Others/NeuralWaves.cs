@@ -16,8 +16,6 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Neural Waves");
-			// Tooltip.SetDefault("A forbidden technique that transforms the user's thoughts into energy waves that burst out in all directions.\nIt is one of the forbidden techniques of old times, when the Creators did'nt knew the morals of life.\nAs told in old secret records, the spell gets stronger the more malicious the user's thoughts are, resulting in a devastating shockwave.");
 			Item.staff[Item.type] = true;
 		}
 
@@ -36,7 +34,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.knockBack = 0;
 			Item.noUseGraphic = true;
 			Item.value = Item.sellPrice(gold: 5);
-			Item.rare = ModContent.RarityType<BossSoulItem>();
+			Item.rare = ModContent.RarityType<AseGneblessaArtifact>();
 			Item.UseSound = SoundID.Item20;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<NeuralWave>();
@@ -54,15 +52,6 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 				Projectile.NewProjectile(source, player.Center.X, player.Center.Y, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<NeuralWave>(), damage, knockback, player.whoAmI);
 			}
 			return false;
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<BrainSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 10)
-			.AddTile(ModContent.TileType<DimensionalForge>())
-			.Register();
 		}
 	}
 }
