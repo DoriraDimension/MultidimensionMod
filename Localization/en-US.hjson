@@ -109,7 +109,7 @@ Mods: {
 		}
 
 		Items: {
-			AllKnowingEye: {
+			DarkusSigil: {
 				DisplayName: Darkus Sigil
 				Tooltip:
 					'''
@@ -137,7 +137,7 @@ Mods: {
 				Tooltip:
 					'''
 					+1 max minions
-					Aromatic leaf from a twilighted land, it is capable of attracting all sorts of creatures, 
+					Aromatic leaf from a land of twilight, it is capable of attracting all sorts of creatures, 
 					a perfect lure that nobody can resist
 					'''
 			}
@@ -399,9 +399,9 @@ Mods: {
 
 			StarvingLarva: {
 				DisplayName: Starving Larva
-				Tooltip: 
-				    '''
-				    You recover 5HP on enemy kills.
+				Tooltip:
+					'''
+					You recover 5HP on enemy kills.
 					The world devouring worms always hunger for more prey,
 					a integrated instinct that keeps them going.
 					Maybe its a curse or a joke from mother nature.
@@ -456,7 +456,7 @@ Mods: {
 			TideArrow: {
 				DisplayName: Tide Arrow
 				Tooltip:
-				    '''
+					'''
 					Bursts into two bubbles on impact
 					The old ocean people used the extreme force that came from these small bubbles to stun their foes
 					'''
@@ -519,12 +519,11 @@ Mods: {
 			RaiderChest: {
 				DisplayName: Raider Chestplate
 				Tooltip:
-				    '''
+					'''
 					The breastplate of a Viking Raider, sturdy and very resistant.
 					During their battles against the drakes, they needed all protection they could get,
 					a small mistake meant death.
 					'''
-					
 			}
 
 			RaiderHelm: {
@@ -574,7 +573,7 @@ Mods: {
 			AbyssalHellstoneBar: {
 				DisplayName: Abyssal Hellstone Bar
 				Tooltip:
-				    '''
+					'''
 					Even after being processed into a bar, you can still hear a faint heartbeat
 					Cold to the touch
 					'''
@@ -624,9 +623,9 @@ Mods: {
 
 			MadnessFragment: {
 				DisplayName: Fragment of Madness
-				Tooltip: 
-				    '''
-				    Madness-soaked piece of flesh, it still hasn't lost its mind burning capabilities.
+				Tooltip:
+					'''
+					Madness-soaked piece of flesh, it still hasn't lost its mind burning capabilities.
 					The yellow essence known as madness originates from outside our realm,
 					somewhere in a dark corner of our universe.
 					'''
@@ -634,18 +633,12 @@ Mods: {
 
 			ManaInfusedSandstone: {
 				DisplayName: Mana Sandstone
-				Tooltip:
-					'''
-					Sandstone remains of a Lesser Sand Elemental, still pulsate with pure mana.
-					'''
+				Tooltip: Sandstone remains of a Lesser Sand Elemental, still pulsate with pure mana.
 			}
 
 			Mushmatter: {
 				DisplayName: Mushmatter
-				Tooltip:
-					'''
-					Fungus Flesh from the glowing monarch, it is unlike any other normal mushroom found here.
-					'''
+				Tooltip: Fungus Flesh from the glowing monarch, it is unlike any other normal mushroom found here.
 			}
 
 			OldDustyBow: {
@@ -709,8 +702,8 @@ Mods: {
 
 			VikingRelic: {
 				DisplayName: Viking Relic
-				Tooltip: 
-				    '''
+				Tooltip:
+					'''
 					A piece of icy history.
 					The plating once had a name but was lost in time, it was only forged to finally defeat the Drakes.
 					'''
@@ -751,8 +744,8 @@ Mods: {
 
 			AncientDepictionItem: {
 				DisplayName: Ancient Depiction
-				Tooltip: 
-				    '''
+				Tooltip:
+					'''
 					A big and heavy sandstone tablet, it depicts a bird found in old legends.
 					A bird of judgement or a bird of freedom?
 					'''
@@ -820,8 +813,8 @@ Mods: {
 
 			AbyssalHellstone: {
 				DisplayName: Abyssal Hellstone
-				Tooltip: 
-				    '''
+				Tooltip:
+					'''
 					Ice cold magic has turned this normally hot ore into a freezing cold rock.
 					You can hear a heartbeat from inside the rock.
 					'''
@@ -834,8 +827,8 @@ Mods: {
 
 			ColdAshItem: {
 				DisplayName: Cold Ash
-				Tooltip: 
-				    '''
+				Tooltip:
+					'''
 					Normal underworld ash that was cooled down by icy winds, it is harder than normal ash now.
 					Laying your hand onto the ash gives you a strange feeling...
 					'''
@@ -858,8 +851,8 @@ Mods: {
 
 			SolidMagma: {
 				DisplayName: Solid Magma
-				Tooltip: 
-				    '''
+				Tooltip:
+					'''
 					Lava that was frozen solid by the icy magic of the Frozen Underworld
 					It feels like as if it would dissolve into liquid any second despite being solid rock.
 					'''
@@ -1034,8 +1027,8 @@ Mods: {
 
 			CalmingPills: {
 				DisplayName: Calming Pills
-				Tooltip: 
-				    '''
+				Tooltip:
+					'''
 					Calms your mind and fends off madness.
 					Pills are only a temporary solution, they only slow the process as the madness burns away the mind itself.
 					'''
@@ -1110,7 +1103,7 @@ Mods: {
 			BeeSoul: {
 				DisplayName: Soul of a Queen Bee
 				Tooltip:
-				    '''
+					'''
 					The grand jungle bees build their hives inside the underground cave systems of the jungle.
 					Only one queen larva is born in a Queen's life cycle, so they are even more precious.
 					'''
@@ -1168,13 +1161,14 @@ Mods: {
 			EmpressSoul: {
 				DisplayName: Soul of the Light Empress
 				Tooltip:
-				    '''
+					'''
 					When the Hallow was still a place of beauty, this fae goddess served as their protector.
 					One can easily invoke her wrath by killing a small Lacewing butterfly since they were
 					seen as a beloved pet back in the day.
 					Her birth originates back to a beautiful star that rests somewhere in the Hallow,
 					though unlike a normal child, she was never given a name, since to protect, she doesn't need one.
 					'''
+			}
 
 			EyeSoul: {
 				DisplayName: Soul of the Eye
@@ -1472,11 +1466,12 @@ Mods: {
 
 			Cursemark: {
 				DisplayName: Cursemark
-				Tooltip: 
-				    '''
+				Tooltip:
+					'''
 					While you press the attack button, your mouse gains a damaging aura.
 					A cursemark signifies the presence of a overly powerful curse,
 					coming in all sorts of sizes, even be able to cover entire structures.
+					'''
 			}
 
 			GreatMoonlight: {
@@ -1521,10 +1516,11 @@ Mods: {
 
 			AtlanteanTrident: {
 				DisplayName: Atlantean Trident
-				Tooltip: 
-				    '''
+				Tooltip:
+					'''
 					Shoots multiple streams of water
 					Oceanic weapon from even before the grand ocean civilization
+					'''
 			}
 
 			CoolingStaff: {
@@ -2368,7 +2364,7 @@ Mods: {
 			NumbMindMask: {
 				DisplayName: Mask of the Numbed Mind
 				Tooltip:
-				    '''
+					'''
 					Grants immunity to Madness
 					This mask was forged from a special alloy, it is supposed to fend off any mind invading effects
 					The people who made it only finished it shortly before madness rampaged across their city,
@@ -2378,22 +2374,76 @@ Mods: {
 
 			CerebroAlloy: {
 				DisplayName: Cerebro Alloy
-				Tooltip: "A special metal from a faraway civilization, its special properties can protect one's mind."
+				Tooltip: A special metal from a faraway civilization, its special properties can protect one's mind.
 			}
 
 			SoulRemnant: {
 				DisplayName: Soul Remnant
-				Tooltip: "Weak and pathetic remains of a once powerful soul, its energy signature is now blank"
+				Tooltip: Weak and pathetic remains of a once powerful soul, its energy signature is now blank
 			}
 
 			ShadeEye: {
 				DisplayName: Light Deprived Eye
 				Tooltip:
-				    '''
+					'''
 					The eyeball of a creature that was going to become an Ascendant, it seems to have been interrupted halfway through
 					It is covered in a weird pitch black substance, you can hear strange whispers eminating from it...
 					[c/FF2CD0C: I have watched you from afar for quite a while now, you have even overcome pure madness and its titans.]
 					[c/FF2CD0C: I wish to converse with you, so you may visit me using this eye when the time comes.]
+					'''
+			}
+
+			Cassiopeia: {
+				DisplayName: Cassiopeia
+				Tooltip:
+					'''
+					Summons a hacking star nerd to your side
+					E
+					'''
+			}
+
+			Caph: {
+				DisplayName: Caph
+				Tooltip:
+					'''
+					The sturdy star named Caph
+					Belongs to a constellation
+					'''
+			}
+
+			Navi: {
+				DisplayName: Navi
+				Tooltip:
+					'''
+					The toxic star named Navi
+					Belongs to a constellation
+					'''
+			}
+
+			Ruchbah: {
+				DisplayName: Ruchbah
+				Tooltip:
+					'''
+					The cute star named Ruchbah
+					Belongs to a constellation
+					'''
+			}
+
+			Schedar: {
+				DisplayName: Schedar
+				Tooltip:
+					'''
+					The fiery star named Schedar
+					Belongs to a constellation
+					'''
+			}
+
+			Segin: {
+				DisplayName: Segin
+				Tooltip:
+					'''
+					The dark star named Segin
+					Belongs to a constellation
 					'''
 			}
 		}
@@ -2571,6 +2621,40 @@ Mods: {
 			MadnessDog.DisplayName: Starving Madness
 			Smiley.DisplayName: Smiley
 			Taraha.DisplayName: Greater One
+		}
+
+		TownNPCMood: {
+			Dorira: {
+				LoveNPC: "{NPCName} is so adorable, and I love adorable things!!!"
+				LikeNPC: I really like having {NPCName} around, he is a great source of explosives for my wall bangs.
+				DislikeNPC: No, get {NPCName} away from me, I want to keep my cheated Platinum Coins.
+				HateNPC: I don't know why, but I just hate {NPCName}.
+				LoveBiome: The nice warm sun, the soothing waves, it really is lovely here.
+				LikeBiome: I really like it here, all this nature is really nice, but something is still missing.
+				DislikeBiome: I really like to visit caves and play around in them but I rather have sunlight once in a while.
+				HateBiome: I really can't stand this blazing heat, it feels like I'm being incinerated.
+				NoHome: Uh... you don't happen to possess a room for me where I could stay?
+				FarFromHome: How did I get here?
+				Content: ok
+			}
+		}
+
+		Dialogue: {
+			Dorira: {
+				GoblinDialogue: I came here because I heard the anomalies in this dimension are very bad, {0}'s money sucking service is DEFINETILY one.
+				DemolitionistDialogue: When I go monster hunting, I will always buy {0}'s explosives from now on. Why I need bombs for hunting? You think a raw wall will do the trick? PAH!
+				MechanicDialogue: "{0}'s father was a real celebrity I heard, a super engineer who built the craziest things. A shame he died in a fire some time ago."
+				GenericDialogue1: When you are going to the Underworld, don't run into a wall.
+				GenericDialogue2: serglhw3o85zhp35ognpügd1312mfghödfdlhgftzjmdzinhwüß046ihn
+				#Below is help dialogue
+				ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
+				#Below is quest dialogue
+				CassieQuestStart: I wanted to ask if you could do me a favor, when I got here I broke something important on accident. Scattered around are stars from said thing, I expect them to be in the Dungeon, the Underworld, the Aether, the Jungle and around money. Can you go and get them?
+				CassieQuestClear: Thank you so much, here, this is what they were before. Since I trust you, you can keep it safe for me.
+			}
+
+			Taraha: {
+			}
 		}
 
 		Tiles: {

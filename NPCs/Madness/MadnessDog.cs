@@ -18,13 +18,13 @@ namespace MultidimensionMod.NPCs.Madness
 	{
 		public override void SetStaticDefaults()
 		{
-			Main.npcFrameCount[NPC.type] = 5;
+			Main.npcFrameCount[NPC.type] = 7;
 		}
 
 		public override void SetDefaults()
 		{
-			NPC.width = 72;
-			NPC.height = 44;
+			NPC.width = 114;
+			NPC.height = 58;
 			NPC.damage = 60;
 			NPC.defense = 10;
 			NPC.lifeMax = 500;

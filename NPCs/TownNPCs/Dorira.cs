@@ -6,13 +6,17 @@ using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Weapons.Melee.Others;
 using MultidimensionMod.Items.Weapons.Melee.Swords;
 using MultidimensionMod.Common.Systems;
+using MultidimensionMod.Common.Globals;
 using MultidimensionMod.Projectiles.Ranged;
+using MultidimensionMod.Items.Quest;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.GameContent.Personalities;
 using System.Collections.Generic;
+using Terraria.Utilities;
+
 namespace MultidimensionMod.NPCs.TownNPCs
 {
 	[AutoloadHead]
@@ -22,7 +26,6 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Dimensional God");
 			Main.npcFrameCount[NPC.type] = 23;
 			NPCID.Sets.ExtraFramesCount[NPC.type] = 9;
 			NPCID.Sets.AttackFrameCount[NPC.type] = 4;
@@ -39,10 +42,10 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			NPC.Happiness
 	            .SetBiomeAffection<ForestBiome>(AffectionLevel.Like)
 	            .SetBiomeAffection<OceanBiome>(AffectionLevel.Love)
-				.SetBiomeAffection<OceanBiome>(AffectionLevel.Dislike)
+				.SetBiomeAffection<UndergroundBiome>(AffectionLevel.Dislike)
 				.SetBiomeAffection<DesertBiome>(AffectionLevel.Hate) //I am vulnurable to heat lol
-				.SetNPCAffection(NPCID.Angler, AffectionLevel.Love)
-			    .SetNPCAffection(NPCID.Cyborg, AffectionLevel.Like)
+				.SetNPCAffection(NPCID.Princess, AffectionLevel.Love)
+				//.SetNPCAffection(ModContent.NPCType<Cultissima>(), AffectionLevel.Love)
 				.SetNPCAffection(NPCID.Demolitionist, AffectionLevel.Like) 
 	            .SetNPCAffection(NPCID.GoblinTinkerer, AffectionLevel.Dislike) 
 	            .SetNPCAffection(NPCID.BestiaryGirl, AffectionLevel.Hate)
@@ -65,7 +68,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			AnimationType = NPCID.Mechanic;
 		}
 
-		public override bool CanTownNPCSpawn(int numTownNPCs)/* tModPorter Suggestion: Copy the implementation of NPC.SpawnAllowed_Merchant in vanilla if you to count money, and be sure to set a flag when unlocked, so you don't count every tick. */
+		public override bool CanTownNPCSpawn(int numTownNPCs)
 		{
 			for (int k = 0; k < 255; k++)
 			{
@@ -88,107 +91,137 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		{
 			return new List<string>() {
 				"Dorira"
-
 			};
 		}
 
 		public override string GetChat()
 		{
+			Player player = Main.LocalPlayer;
+			WeightedRandom<string> chat = new WeightedRandom<string>();
 			int Gobfuck = NPC.FindFirstNPC(NPCID.GoblinTinkerer);
+			int BoomBoomMan = NPC.FindFirstNPC(NPCID.Demolitionist);
+			int WrenchWoman = NPC.FindFirstNPC(NPCID.Mechanic);
 			if (Gobfuck >= 0 && Main.rand.NextBool(4))
 			{
-				return "I came to this dimension because I heard of dimensional anomalies and " + Main.npc[Gobfuck].GivenName + "'s money sucking service is DEFINETILY one";
+				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GoblinDialogue", Main.npc[Gobfuck].GivenName));
 			}
-			int merchant = NPC.FindFirstNPC(NPCID.Merchant);
-			if (merchant >= 0 && Main.rand.NextBool(4))
-			{
-				return "I bought one of " + Main.npc[merchant].GivenName + " 's dirt blocks, can you tell him that it doesnt work";
-			}
-			int BoomBoomMan = NPC.FindFirstNPC(NPCID.Demolitionist);
 			if (BoomBoomMan >= 0 && Main.rand.NextBool(4))
 			{
-				return "When I go monster hunting, I will always buy " + Main.npc[BoomBoomMan].GivenName + "'s explosives from now on. Why I need bombs for hunting? *Insane stare*";
+				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.DemolitionistDialogue", Main.npc[BoomBoomMan].GivenName));
 			}
-			int PewPew = NPC.FindFirstNPC(NPCID.ArmsDealer);
-			if (PewPew >= 0 && Main.rand.NextBool(4))
+			if (WrenchWoman >= 0 && Main.rand.NextBool(4))
 			{
-				return "Just between us two, but I think " + Main.npc[PewPew].GivenName + " is selling illegal stuff. AMAZING";
+				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.MechanicDialogue", Main.npc[WrenchWoman].GivenName));
 			}
-			if (Main.dayTime)
-			{
-				switch (Main.rand.Next(8))
-				{
-					case 0:
-						return "Birds are singing, flowers are blooming, on days like these... I should stop with this phylosophy crap.";
-					case 1:
-						return "When you are going to the underworld dont run into a wall.";
-					case 2:
-						return "I wonder when the others will arrive.";
-					case 3:
-						return "serglhw3o85zhp35ognpügdmfghödfdlhgftzjmdzinhwüß046ihn";
-					case 4:
-						return "Some weirdo blocked my Hyperlink.";
-					case 5:
-						return "Do you know how FUCKING painful it is to learn programming? It's like you are thrown into a pit full of puzzles, but the puzzles are in japanese.";
-					case 6:
-						return "I once saw a fucking big ass serpent flying past me, ripping through the dimensions. I teleported behind him and then slapped him, but I told him that it's nothing personal.";
-					case 7:
-						return "nakasday";
-
-				}
-			}
-			if (!Main.dayTime)
-			{
-				switch (Main.rand.Next(10))
-				{
-					case 0:
-						return "Are you sleeping at night? I'm not, my motivation is fired up in the night.";
-					case 1:
-						return "Why are there zombies at night? Where do they come from? And why do they knock on my door? I DONT WANT TO BUY ANYTHING";
-					case 2:
-						return "*Glares creepily*";
-					case 3:
-						return "When you are going to the underworld dont run into a wall.";
-					case 4:
-						return "I wonder when the others will arrive.";
-					case 5:
-						return "serglhw3o85zhp35ognpügdmfghödfdlhgftzjmdzinhwüß046ihn";
-					case 6:
-						return "Some weirdo blocked my Hyperlink.";
-					case 7:
-						return "Do you know how FUCKING painful it is to learn programming? It's like you are thrown into a pit full of puzzles, but the puzzles are in japanese.";
-					case 8:
-						return "I once saw a fucking big ass serpent flying past me, ripping through the dimensions. I teleported behind him and then slapped him, but I told him that it's nothing personal.";
-					case 9:
-						return "nakasday";
-				}
-			}
-			switch (Main.rand.Next(4))
-			{
-				case 0:
-					return "When you are going to the underworld dont run into a wall.";
-				case 1:
-					return "Yes, I know, this is a game.";
-				case 2:
-					{
-						return "I wonder when the others will arrive.";
-					}
-				default:
-					return "Ugh... what?";
-			}
+			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue1"));
+			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue2"));
+			return chat;
 		}
 
+		private static int ChatNumber = 0;
 		public override void SetChatButtons(ref string button, ref string button2)
 		{
+			Player player = Main.LocalPlayer;
 			button = Language.GetTextValue("LegacyInterface.28");
-		}
+			button2 = "Cycle Options";
+            switch (ChatNumber)
+            {
+				case 0:
+					button = "Shop";
+					break;
+				case 1:
+					button = "Help";
+					break;
+				case 2:
+					button = "Quest";
+					break;
+			}
+        }
 
-		public override void OnChatButtonClicked(bool firstButton, ref string shopName)
+        public override void OnChatButtonClicked(bool firstButton, ref string shopName)
 		{
+			Player player = Main.LocalPlayer;
+			WeightedRandom<string> chat = new(Main.rand);
+			var source = player.GetSource_OpenItem(Type);
 			if (firstButton)
 			{
-				shopName = "Shop";
+				switch (ChatNumber)
+                {
+					case 0:
+						shopName = "Shop";
+						break;
+					case 1:
+						Main.npcChatText = HelpDialogue();
+						break;
+					case 2:
+						if (MDQuests.DoriraQuests == 0)
+						{
+							chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.CassieStart"));
+							int caph = player.FindItem(ModContent.ItemType<Caph>());
+							int segin = player.FindItem(ModContent.ItemType<Segin>());
+							int schedar = player.FindItem(ModContent.ItemType<Schedar>());
+							int ruchbah = player.FindItem(ModContent.ItemType<Ruchbah>());
+							int navi = player.FindItem(ModContent.ItemType<Navi>());
+							if (caph >= 0 && segin >= 0 && schedar >= 0 && ruchbah >= 0 && navi >= 0)
+							{
+								player.inventory[caph].stack--;
+								player.inventory[segin].stack--;
+								player.inventory[schedar].stack--;
+								player.inventory[ruchbah].stack--;
+								player.inventory[navi].stack--;
+								if (player.inventory[caph].stack <= 0 && player.inventory[segin].stack <= 0 && player.inventory[schedar].stack <= 0 && player.inventory[ruchbah].stack <= 0 && player.inventory[navi].stack <= 0)
+								{
+									player.inventory[caph] = new Item();
+									player.inventory[segin] = new Item();
+									player.inventory[schedar] = new Item();
+									player.inventory[ruchbah] = new Item();
+									player.inventory[navi] = new Item();
+									player.QuickSpawnItem(source, ModContent.ItemType<Cassiopeia>(), 1);
+									Main.npcChatText = CassieDialogue();
+									MDQuests.DoriraQuests++;
+									NPC.SetEventFlagCleared(ref MDQuests.CassieQuest, -1);
+									if (Main.netMode != NetmodeID.SinglePlayer)
+									{
+										NetMessage.SendData(MessageID.WorldData);
+									}
+								}
+							}
+							Main.npcChatText = QuestDialogue();
+						}
+						break;
+
+				}
 			}
+			else
+			{
+				ChatNumber++;
+				if (ChatNumber > 2)
+					ChatNumber = 0;
+			}
+		}
+
+		public static string HelpDialogue()
+        {
+			WeightedRandom<string> chat = new(Main.rand);
+			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.ColdHellHelp"));
+			return chat;
+		}
+
+		public static string QuestDialogue()
+        {
+			WeightedRandom<string> chat = new(Main.rand);
+			if (MDQuests.DoriraQuests == 0)
+            {
+				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.CassieQuestStart"));
+			}
+			return chat;
+		}
+
+		public static string CassieDialogue()
+        {
+			WeightedRandom<string> chat = new(Main.rand);
+			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.CassieQuestClear"));
+			return chat;
 		}
 
 		public override void AddShops()

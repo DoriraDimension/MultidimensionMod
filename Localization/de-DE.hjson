@@ -9,22 +9,22 @@ Mods: {
 		Buffs: {
 			RoseVenom: {
 				// DisplayName: Rose Venom
-				// Description: Your life is being consumed, but defense is increased.
+				// Description: Your life is being consumed, but defense is increased
 			}
 
 			BlazingSuffering: {
 				// DisplayName: Blazing Suffering
-				// Description: Your body is getting incinerated from the inside.
+				// Description: Your body is getting incinerated from the inside
 			}
 
 			DrakePoison: {
 				// DisplayName: Drakeblood Poison
-				// Description: Toxificated blood is weakening you.
+				// Description: Toxificated blood is weakening you
 			}
 
 			Madness: {
 				// DisplayName: Madness
-				// Description: You witnessed cosmic knowledge, its burning your mind away.
+				// Description: Your mind is being burned
 			}
 
 			DarkRebelsBuff: {
@@ -34,7 +34,7 @@ Mods: {
 
 			DrakeBuff: {
 				// DisplayName: Tame Ice Drake Juvenile
-				// Description: A cute Ice Drake bby is MURDERING YOUR ENEMIES!
+				// Description: A cute Ice Drake baby is MURDERING YOUR ENEMIES!
 			}
 
 			FleshrendingTerror: {
@@ -44,7 +44,7 @@ Mods: {
 
 			MaskBuff: {
 				// DisplayName: Golem Mask
-				// Description: A mask is masking for mask
+				// Description: A Golem mask is fighting for you
 			}
 
 			OcramServantBuff: {
@@ -54,7 +54,7 @@ Mods: {
 
 			SandEleBuff: {
 				// DisplayName: Lesser Sand Elemental
-				// Description: A living ball of sand fights for you
+				// Description: A living ball of sand is fighting for you
 			}
 
 			IgnaenHeadBuff: {
@@ -64,17 +64,7 @@ Mods: {
 
 			SmileyJrBuff: {
 				// DisplayName: Smiley Jr
-				// Description: You will take care of him now.
-			}
-
-			AnglersPower: {
-				// DisplayName: Angler's power
-				// Description: You are filled with the power of a true fisher.
-			}
-
-			AttackUp: {
-				// DisplayName: Attack Up
-				// Description: Increased offensive stats.
+				// Description: You will take care of him now
 			}
 
 			CalmMind: {
@@ -89,7 +79,7 @@ Mods: {
 
 			LifePower: {
 				// DisplayName: Life Power
-				// Description: Your body is flooded by life power.
+				// Description: Your body is being flooded by life.
 			}
 
 			MasterMage: {
@@ -113,18 +103,21 @@ Mods: {
 			}
 
 			WarriorsHeart: {
-				// DisplayName: Warriors Heart
-				// Description: Increased meele damage.
+				// DisplayName: Warrior's Heart
+				// Description: Your heart lusts for battle, meele damage is increased.
 			}
 		}
 
 		Items: {
-			AllKnowingEye: {
-				// DisplayName: The all knowing Eye
+			DarkusSigil: {
+				// DisplayName: Darkus Sigil
 				/* Tooltip:
 					'''
-					Increases crit chance by 10%
-					Critical hits grant the hunter potion effect for a short time and inflict the target with ichor for 2 seconds.
+					Increases crit chance by 5%
+					Crits summon short lived Death Elementals (Not implemented yet)
+					The Darkus Sigil is a old ritualistic object, said to have existed before harmony arrived in this world,
+					it possesses the power of death, if only just a minor fragment.
+					Its possession inside the Goblin race dates back to when they stole the powers of shadowflame from the Children of Rahlem.
 					''' */
 			}
 
@@ -132,9 +125,10 @@ Mods: {
 				// DisplayName: Astral Titan's Eye Jewel
 				/* Tooltip:
 					'''
-					A jewel made to look like the eyes of the creation titan.
 					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen by 2. 
 					Increases invincibility time and rains down stars after getting hit.
+					The Scelestians appreciate their titan and as such made replicas of its many crystal eyes,
+					these tokens are supposed to show their deep friendship.
 					''' */
 			}
 
@@ -142,9 +136,9 @@ Mods: {
 				// DisplayName: Bait Leaf
 				/* Tooltip:
 					'''
-					A aromatic leaf from another dimension, its strong scent can even lure in bigger predators.
-					These might be useful to attract helpers, but be aware of possible stronger foes getting attracted too.
-					Gives +1 minion slot
+					+1 max minions
+					Aromatic leaf from a land of twilight, it is capable of attracting all sorts of creatures, 
+					a perfect lure that nobody can resist
 					''' */
 			}
 
@@ -156,6 +150,8 @@ Mods: {
 					Reflects 45% of damage back to the enemy if they touch you
 					This text will be replaced by the hotkey tooltip
 					While under the effects of the toxins, you gain a 25% buff to your damage reflection as well as 20 defense
+					A cruel technique for the wearer allows them to take their attacker with them if all hope is lost.
+					This tactic only works on direct contact though and is only useful if no ranged combat is uncluded.
 					''' */
 			}
 
@@ -173,12 +169,13 @@ Mods: {
 				// DisplayName: Creation Medaillon
 				/* Tooltip:
 					'''
-					A replica of the creation medaillon, not as powerful as the original but often used as a talisman for good fortune.
-					The medaillon resembles the deity circle, a group of powerful beings where every triangle stands for one deity while the eye resembles the creation titan.
 					Increases all damage by 10% and crit chance by 10%.
 					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen by 2.
 					Increases invincibility time and rains down stars after getting hit. 
 					Gives a variety of additional stat bonuses.
+					The divine medaillon that is only given to high ranked Scelestians, like the eye jewel,
+					this is a token of respect towards their titan.
+					Losing or breaking it is seen as a sign of great misfortune.
 					''' */
 			}
 
@@ -186,9 +183,9 @@ Mods: {
 				// DisplayName: Desert Necklace
 				/* Tooltip:
 					'''
-					A magical necklace, created with the mana infused sand from a Lesser Sand Elemental.
-					It is unknown why the gem only reacts to the dry aura of deserts so are its actual origins.
 					Increases all damage and crit chance by 4% when in the Desert.
+					A necklace crafted with mana infused sandstone, its gem only reacts to the dry aura of the desert
+					The barren lands have a aura unlike any other, it makes you wonder how natural they actually are
 					''' */
 			}
 
@@ -198,6 +195,9 @@ Mods: {
 					'''
 					A excavator engine used in the Destroyer to mine minerals incredibly fast.
 					Increases mining speed by 50% and spawns friendly Probes when you get hit.
+					The engine located in the Destroyer's head, it was designed to be as efficient as possible,
+					completely ignoring the amount of fuel it would consume.
+					It basically served as the worm's brain, sending out the various probes embedded in its segments.
 					''' */
 			}
 
@@ -205,10 +205,12 @@ Mods: {
 				// DisplayName: Drakescale Shield
 				/* Tooltip:
 					'''
-					A shield reinforced with the scales of juvenile Ice Drakes.
-					Drakescales are strengthened in the cold icy winds of the tundra, so theres no wonder that natives often use them as protection.
 					Increases defense by 4 and damage reduction by 4% when in the Snow biome.
 					Gives immunity to chilled and frozen
+					A metal base, reinforced with drake scales.
+					Drake scales react to temperature and harden when the environment becomes cold,
+					travellers would often pick up shed scales from juveniles and use them for various tools,
+					unlike the Vikings who took them by force.
 					''' */
 			}
 
@@ -217,9 +219,11 @@ Mods: {
 				/* Tooltip:
 					'''
 					A true greed can find every treasure.
-					One of the forbidden eyes.
 					Your greedy eyes can now see treasures.
 					Has a chance to inflict the Cursed debuff when you get it
+					Greed is a terrible sin, affecting everyone the same,
+					theft, murder and other even worse things, all because the mind craves more.
+					This way even a honest man can be affected by it and not even the purest soul will be able to escape.
 					''' */
 			}
 
@@ -228,9 +232,12 @@ Mods: {
 				/* Tooltip:
 					'''
 					A true adventurer can sense traps and danger.
-					One of the forbidden eyes.
 					You can see danger sources.
 					Has a chance to inflict the Slow debuff when you get it
+					It is said that an adventurer developes a sixth sense for danger,
+					seeing traps before they even went around the corner.
+					Maybe it isn't as stupid to think this way, this world is full of magic,
+					in both the literal and metaphorical sense.
 					''' */
 			}
 
@@ -239,9 +246,11 @@ Mods: {
 				/* Tooltip:
 					'''
 					A true hunter can sense its prey.
-					One of the forbidden eyes.
 					You can now sense your enemies everywhere.
 					Has a chance to inflict the Weak debuff when you get it
+					Hunters come in many different shapes, some prefer to lurk and ambush,
+					some rather chase down their prey and others just bruteforce their way through.
+					Whatever path you chose, a hunter is a hunter, no matter the style of killing.
 					''' */
 			}
 
@@ -250,9 +259,12 @@ Mods: {
 				/* Tooltip:
 					'''
 					A true resident of the night can see through the darkness.
-					One of the forbidden eyes.
 					You now have improved vision at night.
 					Has a chance to inflict the Blackout debuff when you get it
+					They lurk through the night, when everything sleeps, 
+					terrors nobody wishes to ever witness.
+					The night is dangerous, so people wanted to see,
+					but no matter how much vision they had, the terrors always saw them first.
 					''' */
 			}
 
@@ -260,10 +272,11 @@ Mods: {
 				// DisplayName: Fishron Tooth Necklace
 				/* Tooltip:
 					'''
-					A necklace made from the Teeth of a great ocean abomination,
-					as shown in depictions of the old sea civilisation, it was seen as a sign of strength.
 					Increases armor penetration by 12.
 					Grants the ability to breathe underwater
+					Back in the old days, when the ocean civilization still stood, 
+					hunting down a Fishron was seen as a great achievement, 
+					and wearing a nacklace made from its teeth only shows the hunter's pride.
 					''' */
 			}
 
@@ -275,6 +288,7 @@ Mods: {
 					Increases ranged damage by 5%.
 					Increases max life by 10 when in a glowing mushroom biome
 					Increases max life by 25 and damage reduction by 5% when in a glowing mushroom biome in hardmode.
+					This item fucking sucks
 					''' */
 			}
 
@@ -309,10 +323,11 @@ Mods: {
 				/* Tooltip:
 					'''
 					You... can... see. Beware not to get blinded by it's forbidden magic.
-					A old magician once created the Omni Eye, a magical object with big potential, but his experiments cursed it.
-					When the curse started to consume the magician, he split the eye into 4 fragments so that it will never be used again.
-					But with all forbidden things, curiosity will take over ones mind, resulting in copies of the forbidden eyes.
 					Highlights danger sources, enemies and treasures, also gives nightvision
+					The eye that sees all, a gaze upon us, definetily a sight to behold,
+					if only this artifact wasn't just as dangerous as it is helpful.
+					Using it grants the wearer the ability to see unseen things,
+					but the dark shady hex that lies within can also blind them forever.
 					''' */
 			}
 
@@ -349,10 +364,12 @@ Mods: {
 				// DisplayName: Sidane's Quiver
 				/* Tooltip:
 					'''
-					The magitech quiver owned by the creator Sidane.
-					Sidane is one of the less serious members of the creator council, he would sometimes fly around on a hoverboard and use others inventions as targets for training.
 					Increases arrow damage by 10%, ranged damage by 10% and greatly increases arrow speed 
 					20% chance to not consume arrows.
+					Sidane was never serious about his work, always carelessly playing around and yet,
+					he is a high ranked member of the Scelestian Council.
+					Despite his careless nature, he is still dedicated to protect his people,
+					with his bow and arrow.
 					''' */
 			}
 
@@ -382,16 +399,23 @@ Mods: {
 
 			StarvingLarva: {
 				// DisplayName: Starving Larva
-				// Tooltip: You recover 5HP on enemy kills.
+				/* Tooltip:
+					'''
+					You recover 5HP on enemy kills.
+					The world devouring worms always hunger for more prey,
+					a integrated instinct that keeps them going.
+					Maybe its a curse or a joke from mother nature.
+					''' */
 			}
 
 			StinkyPaste: {
 				// DisplayName: Stinky Paste
 				/* Tooltip:
 					'''
-					Some stinky weird paste from the jungle, it is weird how its bad smell attracts all kinds of little creatures.
 					Increases minion damage by 6%.
 					You can rub it onto your skin to smell like shit.
+					The inside of jungle slimes has a weird rotten smell,
+					it was often used by lihzahrds to protect themself from predators.
 					''' */
 			}
 
@@ -399,10 +423,9 @@ Mods: {
 				// DisplayName: Storm Hide
 				/* Tooltip:
 					'''
-					The rubbery hide of stormy Eels makes them immune to the thunder that strikes down during storms.
-					The storm is a untamed force of nature and so are these creatures.
 					Gives immunity to electrified.
 					Increases movement speed by 8%, damage by 5% and defense by 5 when it is raining.
+					The storm is a untamed force of nature and so are these creatures.
 					''' */
 			}
 
@@ -410,7 +433,6 @@ Mods: {
 				// DisplayName: Super Scent
 				/* Tooltip:
 					'''
-					The combination of stinky paste and a aromatic Leaf created a scent that smells, to say it nicely, interesting.
 					Increases minion damage by 6% and gives +1 minion slot.
 					Rub it onto your skin to smell worse than the human mind can comprehend
 					''' */
@@ -420,9 +442,9 @@ Mods: {
 				// DisplayName: Thorn Scarf
 				/* Tooltip:
 					'''
+					Reflects 15% of damage back to the enemy if they touch you
 					Old natives of the jungle would wear this to hurt animals that attack them but would also hurt themself,
 					a small price to pay to be able to escape a attacking predator.
-					Reflects 15% of damage back to the enemy if they touch you
 					''' */
 			}
 
@@ -433,7 +455,11 @@ Mods: {
 
 			TideArrow: {
 				// DisplayName: Tide Arrow
-				// Tooltip: this arrow does arrotic stuff. what...?
+				/* Tooltip:
+					'''
+					Bursts into two bubbles on impact
+					The old ocean people used the extreme force that came from these small bubbles to stun their foes
+					''' */
 			}
 
 			NeroBreastplate: {
@@ -492,25 +518,40 @@ Mods: {
 
 			RaiderChest: {
 				// DisplayName: Raider Chestplate
-				// Tooltip: lore soon.
+				/* Tooltip:
+					'''
+					The breastplate of a Viking Raider, sturdy and very resistant.
+					During their battles against the drakes, they needed all protection they could get,
+					a small mistake meant death.
+					''' */
 			}
 
 			RaiderHelm: {
 				// DisplayName: Raider Helmet
-				// Tooltip: lore soon
+				/* Tooltip:
+					'''
+					The breastplate of a Viking Raider, sturdy and very resistant.
+					During their battles against the drakes, they needed all protection they could get,
+					a small mistake meant death.
+					''' */
 			}
 
 			RaiderLegs: {
 				// DisplayName: Raider Greaves
-				// Tooltip: lore soon.
+				/* Tooltip:
+					'''
+					The breastplate of a Viking Raider, sturdy and very resistant.
+					During their battles against the drakes, they needed all protection they could get,
+					a small mistake meant death.
+					''' */
 			}
 
 			EnergyFish: {
 				// DisplayName: Energy Fish
 				/* Tooltip:
 					'''
-					A fish charged with the lowest tier of Dimensional Energy.
-					Right click to extract its energy.
+					Right click to extract Dimensium.
+					Certain fish can consume Dimensium and become charged themself
 					''' */
 			}
 
@@ -531,12 +572,16 @@ Mods: {
 
 			AbyssalHellstoneBar: {
 				// DisplayName: Abyssal Hellstone Bar
-				// Tooltip: Cold to the touch.
+				/* Tooltip:
+					'''
+					Even after being processed into a bar, you can still hear a faint heartbeat
+					Cold to the touch
+					''' */
 			}
 
 			Blight2: {
 				// DisplayName: Mad Titan's Soul
-				// Tooltip: The soul of a being that attempted ascension, it probably got the furthest before devolving into this mess of a creature.
+				// Tooltip: The soul of a madness titan, their unique souls made them resist death through mind incineration.
 			}
 
 			DarkMatterClump: {
@@ -578,27 +623,22 @@ Mods: {
 
 			MadnessFragment: {
 				// DisplayName: Fragment of Madness
-				// Tooltip: A fragment of a fragment LOL.
+				/* Tooltip:
+					'''
+					Madness-soaked piece of flesh, it still hasn't lost its mind burning capabilities.
+					The yellow essence known as madness originates from outside our realm,
+					somewhere in a dark corner of our universe.
+					''' */
 			}
 
 			ManaInfusedSandstone: {
 				// DisplayName: Mana Sandstone
-				/* Tooltip:
-					'''
-					A special type of stone, found inside of Lesser Sand Elementals, you can feel the magic flowing through it.
-					Lesser Sand Elementals are hostile against anyone who comes near their Desert.
-					Who knows how the old desert people didnt get attacked by them, if it's the elementals being tamed or even created by them.
-					''' */
+				// Tooltip: Sandstone remains of a Lesser Sand Elemental, still pulsate with pure mana.
 			}
 
 			Mushmatter: {
 				// DisplayName: Mushmatter
-				/* Tooltip:
-					'''
-					A juicy piece of Fungi infested flesh, could be useful.
-					It's somewhat terrifying how these glowing mushrooms can infect every living thing if they arent careful enough,
-					maybe a problem that should be dealed with before it gets out of hand.
-					''' */
+				// Tooltip: Fungus Flesh from the glowing monarch, it is unlike any other normal mushroom found here.
 			}
 
 			OldDustyBow: {
@@ -662,7 +702,11 @@ Mods: {
 
 			VikingRelic: {
 				// DisplayName: Viking Relic
-				// Tooltip: A piece of icy history.
+				/* Tooltip:
+					'''
+					A piece of icy history.
+					The plating once had a name but was lost in time, it was only forged to finally defeat the Drakes.
+					''' */
 			}
 
 			WeirdStone: {
@@ -695,12 +739,16 @@ Mods: {
 
 			AncientBannerItem: {
 				// DisplayName: Ancient Banner
-				// Tooltip: A ancient banner, its made of worn cloth and probably not ideal as furniture.
+				// Tooltip: A ancient banner, its made of worn cloth.
 			}
 
 			AncientDepictionItem: {
 				// DisplayName: Ancient Depiction
-				// Tooltip: A big and heavy sandstone tablet, it depicts a bird found in old desert legends, a bird of judgement.
+				/* Tooltip:
+					'''
+					A big and heavy sandstone tablet, it depicts a bird found in old legends.
+					A bird of judgement or a bird of freedom?
+					''' */
 			}
 
 			AncientDragonSkull: {
@@ -710,131 +758,104 @@ Mods: {
 
 			BabyGlowmarinBanner: {
 				// DisplayName: Baby Glowmarin Banner
-				/* Tooltip:
-					'''
-					These small adorable fish are from another dimension, they reproduce really fast.
-					Its small glow organs are already developed and work fine.
-					''' */
+				// Tooltip: ""
 			}
 
 			BbyDrakeBanner: {
 				// DisplayName: Ice Drake Juvenile Banner
-				/* Tooltip:
-					'''
-					Despite being young, these babies are very aggressive, they attack everything that enters their nesting grounds in the icy caves.
-					During blizzards they will fly outside and start hunting
-					''' */
+				// Tooltip: ""
 			}
 
 			DarklingBanner: {
 				// DisplayName: Darkling Banner
-				/* Tooltip:
-					'''
-					Darklings are beings of pure dark matter, they hide inside the dungeon while their leader roams the land in search of someone.
-					Darklings arent very strong alone and even kinda shy but can be threatening in groups.
-					Their original purpose is to spread darkness across the universe but they refuse to do so.
-					''' */
+				// Tooltip: ""
 			}
 
 			FrostburnSlimeBanner: {
 				// DisplayName: Frostburn Slime Banner
-				// Tooltip: Flying slimes that mastered the power of frostburn, anyone who touches them will be in immense pain.
+				// Tooltip: ""
 			}
 
 			GilaBanner: {
 				// DisplayName: Gilania Banner
-				/* Tooltip:
-					'''
-					Big reptiles that live in the desert, their bite is venomous.
-					They will rest underground at day to escape the blazing desert sun and come out at night.
-					''' */
+				// Tooltip: ""
 			}
 
 			GlowmarinBanner: {
 				// DisplayName: Otherworldly Glowmarin Banner
-				// Tooltip: A fish from another dimension, they have glowing organs all over their body, suggesting that they originally lived in deeper waters.
+				// Tooltip: ""
 			}
 
 			InfestedBanner: {
 				// DisplayName: Infested Abomination Banner
-				/* Tooltip:
-					'''
-					It was possibly once human but is now just a disgusting thing, these weird creatures are hosts to a local species of rot loving flies.
-					They drip green stinky goo everywhere they walk and spit disgusting liquid with every movement of their mouth.
-					''' */
+				// Tooltip: ""
 			}
 
 			LesserSandEleBanner: {
 				// DisplayName: Lesser Sand Elemental Banner
-				/* Tooltip:
-					'''
-					They are actually crystalized mana surrounded by sand, it's unclear yet if they were brought to life naturally or through magic experiments.
-					They will react hostile against every human that enters a desert.
-					During sandstorms they become even more active and travel to the surface, sometimes following Sand Elementals.
-					''' */
+				// Tooltip: ""
 			}
 
 			ParrotLobsterBanner: {
 				// DisplayName: Parrot Lobster Banner
-				/* Tooltip:
-					'''
-					Odd lobster species that lives near the shores, the have a beak which gives them their name.
-					Their meat is very tasty and can make a nice dish.
-					''' */
+				// Tooltip: ""
 			}
 
 			StormEelBanner: {
 				// DisplayName: Storm Front Eel Banner
-				/* Tooltip:
-					'''
-					The great storm eels, only active during storms, when the sea is harsh and unforgiving.
-					Many people believe they are scouts, scouts of someone or something deep under the ocean,
-					that is why these creatures are seen as an omen of even worse to come
-					''' */
+				// Tooltip: ""
 			}
 
 			TridentBanner: {
 				// DisplayName: Magic Trident Banner
-				/* Tooltip:
-					'''
-					A trident that moves on its own, basically a remnant of the old Sea civilisation.
-					Now that their owners are gone they aimlessly roam the ocean with no purpose.
-					''' */
+				// Tooltip: ""
 			}
 
 			AbyssalHellstone: {
 				// DisplayName: Abyssal Hellstone
-				// Tooltip: Ice cold magic has turned this normally hot ore into a freezing rock.
+				/* Tooltip:
+					'''
+					Ice cold magic has turned this normally hot ore into a freezing cold rock.
+					You can hear a heartbeat from inside the rock.
+					''' */
 			}
 
 			AbyssalHellstoneBrick: {
 				// DisplayName: Abyssal Hellstone Brick
-				// Tooltip: what the brick.
+				// Tooltip: ""
 			}
 
 			ColdAshItem: {
 				// DisplayName: Cold Ash
-				// Tooltip: Normal underworld ash that was cooled down by icy winds.
+				/* Tooltip:
+					'''
+					Normal underworld ash that was cooled down by icy winds, it is harder than normal ash now.
+					Laying your hand onto the ash gives you a strange feeling...
+					''' */
 			}
 
 			GlazedObsidian: {
 				// DisplayName: Glazed Obsidian
-				// Tooltip: schmobdi.
+				// Tooltip: ""
 			}
 
 			GlazedObsidianBrick: {
 				// DisplayName: Glazed Obsidian Brick
-				// Tooltip: tasty.
+				// Tooltip: ""
 			}
 
 			IceblossomSeeds: {
 				// DisplayName: Iceblossom Seeds
-				// Tooltip: cold seeds that will grow into a Iceblossom when planted on Cold Ash
+				// Tooltip: Cold seeds that will grow into a Iceblossom when planted on Cold Ash
 			}
 
 			SolidMagma: {
 				// DisplayName: Solid Magma
-				// Tooltip: Lava but not hot.
+				/* Tooltip:
+					'''
+					Lava that was frozen solid by the icy magic of the Frozen Underworld
+					It feels like as if it would dissolve into liquid any second despite being solid rock.
+					''' */
 			}
 
 			BrokenAncientDepictionItem: {
@@ -869,8 +890,10 @@ Mods: {
 				// DisplayName: Dimensional Forge
 				/* Tooltip:
 					'''
-					The forge of the dimensional god, it is able to craft Items with Dimensium.
-					Is capable of transmutation, needs Dimensium as fuel.
+					The forge of the Dimensional God, it is able to craft Items with Dimensium.
+					Is capable of transmutation
+					Needs Dimensium as fuel.
+					Seems like a great invention but anyone who really knows what dimensional energy is would point out every flaw.
 					''' */
 			}
 
@@ -895,7 +918,7 @@ Mods: {
 
 			VoidMatterBookcase: {
 				// DisplayName: Void Matter Bookcase
-				// Tooltip: The knowledge found in these books is of great value, but it impossible to read for normal human beings.
+				// Tooltip: The knowledge found in these books is of great value, but is impossible to read for normal human beings.
 			}
 
 			VoidMatterCandelabra: {
@@ -905,7 +928,7 @@ Mods: {
 
 			VoidMatterCandle: {
 				// DisplayName: Void Matter Candle
-				// Tooltip: Sometimes only a small light can help through the night.
+				// Tooltip: Sometimes a small light can help through the night.
 			}
 
 			VoidMatterChair: {
@@ -960,7 +983,7 @@ Mods: {
 
 			VoidMatterSink: {
 				// DisplayName: Void Matter Sink
-				// Tooltip: ""
+				// Tooltip: Drink from the empty sink
 			}
 
 			VoidMatterSofa: {
@@ -999,22 +1022,16 @@ Mods: {
 
 			SmileyTrophy: {
 				// DisplayName: SmileyTrophy
-				// Tooltip: A chunk of dark matter that is produced by Smiley's body.
-			}
-
-			AnglersPowerPotion: {
-				// DisplayName: Angler's Power Potion
-				/* Tooltip:
-					'''
-					Increases your fishing power by 30.
-					Increases your chance to fish up crates by 10%. 
-					You can see what is biting your hook.
-					''' */
+				// Tooltip: ""
 			}
 
 			CalmingPills: {
 				// DisplayName: Calming Pills
-				// Tooltip: Calms your mind and fends off madness.
+				/* Tooltip:
+					'''
+					Calms your mind and fends off madness.
+					Pills are only a temporary solution, they only slow the process as the madness burns away the mind itself.
+					''' */
 			}
 
 			CommandersDrink: {
@@ -1035,7 +1052,7 @@ Mods: {
 				// DisplayName: Dimensional Shield Potion
 				/* Tooltip:
 					'''
-					Gives you a small fragmant of a dimensional serpents power. 
+					Summons a bubble of dimensional energy around you. 
 					Increases defense by 10 and reduces Damage taken by 20%.
 					''' */
 			}
@@ -1048,11 +1065,6 @@ Mods: {
 			MasterMagePotion: {
 				// DisplayName: Master Mage Potion
 				// Tooltip: Increases magic damage by 20%, increases mana regeneration, increases max mana by 40 and mana star pickup range
-			}
-
-			MegaDemondrug: {
-				// DisplayName: Mega Demondrug
-				// Tooltip: Increases all damage and crit chance by 12% and increases knockback.
 			}
 
 			MerfolkPotion: {
@@ -1090,16 +1102,21 @@ Mods: {
 
 			BeeSoul: {
 				// DisplayName: Soul of a Queen Bee
-				// Tooltip: These giant bees live deep in the jungle, disturb one of their larvae and feel their fury.
+				/* Tooltip:
+					'''
+					The grand jungle bees build their hives inside the underground cave systems of the jungle.
+					Only one queen larva is born in a Queen's life cycle, so they are even more precious.
+					''' */
 			}
 
 			BrainSoul: {
 				// DisplayName: Soul of the Brain
 				/* Tooltip:
 					'''
-					Like the related eye, this brain is supposed to test ones skills,
-					but rather than doing that it turned against its duty.
-					It resides in the bloody land of flesh, awaiting a new victim.
+					A soul? This is the cheap excuse of a soul, made to imitate a real one,
+					with that the brain hoped to be saved from its ongoing misery.
+					Its body and soul lost, the brain lost itself, without a soul guiding it.
+					It wished to have a body again, but that wish ended in a disgusting mess of crimson flesh.
 					''' */
 			}
 
@@ -1107,10 +1124,17 @@ Mods: {
 				// DisplayName: Soul of the Lunatic Cultist
 				/* Tooltip:
 					'''
-					The weird cultist who worships the moon wanted to reawaken something that was sealed away for hundreds of years,
-					but he got interrupted and absorbed the energy used for the ritual to fight instead.
-					The absorbed celestial energy smashed his soul into 4 pieces driving him even more insane.
-					There was no hope for this guy anymore, or perhaps never was.
+					A young boy once dreamed of the day where he could meet a god in flesh,
+					a goal that he kept throughout his entire life.
+					Later in his life, when he went outside to pray at a nearby temple,
+					he got hit by a landslide caused by a ongoing thunderstorm,
+					but he had luck in this misfortune, because he found something of great value.
+					Down in a cave at the bottom of a cliff, he found the Celestial Sigil,
+					a artifact that speaks about a deity named Cthulhu.
+					Over time, the man dedicated himself to revive this forgotten god,
+					creating a cult and going more mad day by day.
+					[c/F4cf0cc: What was I thinking, I should have known this deity was not real,]
+					[c/F4cf0cc: this pathetic husk was not even worth my effort, my dream was always a fraud.]
 					''' */
 			}
 
@@ -1120,6 +1144,7 @@ Mods: {
 					'''
 					A weird creature that resembles a one eyed deer on two legs, it originates from another world.
 					The creature only appears in snowy regions and is extremely hostile towards anything that comes near it.
+					Despite being so aggressive, it neither attacked any Drake or Viking, probably for different reasons each.
 					''' */
 			}
 
@@ -1127,23 +1152,30 @@ Mods: {
 				// DisplayName: Soul of Duke Fishron
 				/* Tooltip:
 					'''
-					A weird pigron mutation from the seas, he seems to have some sort of connection to the Storm and it's aggressive scouts.
-					Perhaps the duke of the seas has a more important role than one thinks.
+					A oceanic apex predator that normally lives in more open waters,
+					sometimes they come near the shores which puts civilians in great danger, even on land.
+					Interestingly enough, despite being a creature from the seas, Fishrons can fly.
 					''' */
 			}
 
 			EmpressSoul: {
 				// DisplayName: Soul of the Light Empress
-				// Tooltip: Big woman that has rainbows.
+				/* Tooltip:
+					'''
+					When the Hallow was still a place of beauty, this fae goddess served as their protector.
+					One can easily invoke her wrath by killing a small Lacewing butterfly since they were
+					seen as a beloved pet back in the day.
+					Her birth originates back to a beautiful star that rests somewhere in the Hallow,
+					though unlike a normal child, she was never given a name, since to protect, she doesn't need one.
+					''' */
 			}
 
 			EyeSoul: {
 				// DisplayName: Soul of the Eye
 				/* Tooltip:
 					'''
-					Yes, this eye actually had a soul on its own.
-					The ever watching eye, true eye or not, it doesnt matter, it was just waiting for another being to grow stronger.
-					Some people call it the Eye of Judgement, the first test.
+					A massive flying eye, said to belong to a slain deity,
+					in reality, this is just one of many abominations spawned from the crimson flesh.
 					''' */
 			}
 
@@ -1151,8 +1183,8 @@ Mods: {
 				// DisplayName: Core of a Golem
 				/* Tooltip:
 					'''
-					A solar essence powered protector Golem, it is in no way perfect, as it was build poorly and rushed.
-					Who knows if it was made in a emergency.
+					A protector for the lihzahrd's sanctuary, built during their lockdown.
+					It was modeled after a sun god they worshipped and even uses solar energy cells.
 					''' */
 			}
 
@@ -1160,11 +1192,9 @@ Mods: {
 				// DisplayName: Soul of the King Slime
 				/* Tooltip:
 					'''
-					The soul of the king of everything slimy.
-					The King Slime was once a ordinary blue slime who wanted to become the ultimate being.
-					He absorbed hundreds of other slimes and grew larger and larger to become allmighty...
-					sadly blue slimes are very damn weak so the result wasnt too great in the end.
-					It's a mystery where he got his crown or who that idiot inside of him is.
+					A large group of Blue Slimes got hit by a dimensional energy strike,
+					that hit fused them together into a massive ruler of all slimey.
+					It is unknown where he got his crown or who the person inside him is.
 					''' */
 			}
 
@@ -1172,9 +1202,9 @@ Mods: {
 				// DisplayName: Core of the Destroyer
 				/* Tooltip:
 					'''
-					A long forgotten mech in shape of a worm that was lying dormant for years deep underground, it was now reactivated when the forces of light and darkness were unleashed.
-					It's only purpose is to tunnel through the ground and destroy everything in it's path.
-					It's creator remains unknown... for now...
+					A long forgotten mech in shape of a worm that was lying dormant for years deep underground,
+					it was now reactivated when the forces of light and darkness were unleashed.
+					It was built by a famous engineer with the purpose to excavate more minerals for further processing into new tech.
 					''' */
 			}
 
@@ -1182,8 +1212,11 @@ Mods: {
 				// DisplayName: Soul of the Moon Lord
 				/* Tooltip:
 					'''
-					The one being the Lunatic Cultist wanted to reawake, it was waiting behind the moon, gathering new power to strike once more.
-					Tho the thing that was supposed to bring doom upon this world was nothing more than a weak imperfect incarnation of what it once has been.
+					The great deity that the cultist wished to revive, only known under the name Cthulhu, 
+					a greater one of mindless destruction. 
+					But this is not the real Cthulhu, the real one is long gone, this is only a husk. 
+					This body is unfinished and flawed, it does not hold the greatness of the deity it is supposed to represent. 
+					Empty brain, another false soul and a weak vessel, nothing great about this greater one.
 					''' */
 			}
 
@@ -1191,9 +1224,10 @@ Mods: {
 				// DisplayName: Soul of Plantera
 				/* Tooltip:
 					'''
-					Plantera is the guardian of the jungle.
-					She will hunt down and kill anyone who damages the small pink bulbs that are scattered around the jungle,
-					as these are actually young plants that will eventually grow into another guardian, Plantera will defend them with her life.
+					A plant that was brought to life by an experiment about granting life to inanimate objects.
+					She was granted a soul and the will to live and a simple task: "Protect the Jungle".
+					Unfortunately she never had a mind and so only executed her only task every day,
+					but for some reason, she still gets something that resembles anger when someone smashes her offspring.
 					''' */
 			}
 
@@ -1201,9 +1235,9 @@ Mods: {
 				// DisplayName: Core of Skeletron Prime
 				/* Tooltip:
 					'''
-					A long forgotten mech in shape of a curse that was lying dormant for years, it was now reactivated when the forces of light and darkness were unleashed.
-					Ages ago someone found a sample of the Skeletron curse and recreated it as a mechanical form with even more weapons.
-					It's creator remains unknown... for now...
+					A long forgotten mech in shape of a curse that was lying dormant for years, 
+					it was now reactivated when the forces of light and darkness were unleashed.
+					It was built by a famous engineer with the purpose of total destruction, nothing more, nothing less.
 					''' */
 			}
 
@@ -1211,7 +1245,7 @@ Mods: {
 				// DisplayName: Soul of Skeletron
 				/* Tooltip:
 					'''
-					A curse, Skeletron was nothing more than the physical incarnation of a old curse,
+					A curse, Skeletron was nothing more than the offshoot of an old curse,
 					this curse binds the one poor soul that has to carry it, to guard the dark dungeon for all eternity.
 					A old clothier fell victim to this curse due to his own curiosity when he entered a place he wasnt supposed to enter.
 					The curses influence didn't just possess the old man but also created copies of its physical form to guard the dungeon on lower levels.
@@ -1223,10 +1257,16 @@ Mods: {
 				// DisplayName: Smiley Soulshard
 				/* Tooltip:
 					'''
-					A shard that reflects the soul of a dark being.
-					Smiley was born as a being of pure dark whos purpose was to spread darkness all across existence, but unlike his siblings, he refused to be evil.
-					When his creator wasn't paying attention he left his home together with a small army of Darklings.
-					Now he is hiding in the Terrarian world with hope to find a person strong enough to take on his creator.
+					The echo of a powerful soul flows through this shard.
+					Smiley is disgusted by his own origins, so much even that his body turned white
+					to rebel against what he truly is.
+					He was born from void, forged by an empty king with the duty to weak the LIGHT.
+					But something was different, he had a mind of his own, a soul to feel emotions...
+					He had own wishes, did not want to obey his master, and this obviously angered said master.
+					In a conflict they battled, Smiley stood no chance, but his brethren react differently now.
+					Their expression changed, they opened their eyes and rushed to aid him.
+					During this incident, a lot of Darklings gave their life and a big chunk of the void entities fled,
+					now lurking in the dungeon, awaiting the day where they can live free in peace.
 					''' */
 			}
 
@@ -1234,9 +1274,9 @@ Mods: {
 				// DisplayName: Core of the Twins
 				/* Tooltip:
 					'''
-					A long forgotten pair of mechs in shape of two eyes that were lying dormant for years, it was now reactivated when the forces of light and darkness were unleashed.
-					Their design was likely inspired by the eye of judgement, their purpose was to scout certain targets.
-					It's creator remains unknown... for now...
+					A long forgotten pair of mechs in shape of two eyes that were lying dormant for years, 
+					it was now reactivated when the forces of light and darkness were unleashed.
+					It was built by a famous engineer with the purpose to possibly scout for possible threats.
 					''' */
 			}
 
@@ -1244,10 +1284,9 @@ Mods: {
 				// DisplayName: Soul of the Underworld
 				/* Tooltip:
 					'''
-					Ages ago the race of the underworld with great help of another race, captured and contained the forces of light and darkness.
-					In this world, neither light nor darkness are good or bad, but both forces possessed too much power over this place,
-					they were always conflicting with eachother which had influence on the world around them,
-					containing them got rid of these problems but now you unleashed them again... make sure you are prepared.
+					It is a flesh prison supposed to hold thousands of souls from both Hallowers and Dark forces.
+					It was brought into existence by the now extinct underworld civilization 
+					by fusing their bodies into one large magic imbued mass.
 					''' */
 			}
 
@@ -1255,10 +1294,8 @@ Mods: {
 				// DisplayName: Soul of the Queen Slime
 				/* Tooltip:
 					'''
-					Where a king is, there is a queen, and this queen is a angel.
-					The queen of all slimes resides in the hallow, where she augmented herself with the magical energy of the land by putting a crystal inside her.
-					This crystal has heavenly powers, even giving her angelic wings to fly.
-					The crystal constantly increases her powers so who knows what she could have become if not taken care off.
+					Where a king is, there is a queen, and this queen is an angel.
+					Once an ordinary pinky, this grand gelatine queen uses the pure holy crystal inside her to gain more power.
 					''' */
 			}
 
@@ -1266,10 +1303,9 @@ Mods: {
 				// DisplayName: Soul of the World Eater
 				/* Tooltip:
 					'''
-					A giant worm, responsible for the chasms in the corruption.
-					This creature might be named Eater of Worlds but it never actually consumed anything that size,
-					it might got its name because of its size and habit to devour anything it finds.
-					The existence of this creature shows the potential of the corruption.
+					A species of giant worm, responsible for the chasms in the corruption, almost went extinct
+					if they didn't find a new home in the infectious Corruption.
+					The rotten flesh merely satisfies their eternal hunger, so a fresh meal approaching suits them well.
 					''' */
 			}
 
@@ -1287,7 +1323,8 @@ Mods: {
 				/* Tooltip:
 					'''
 					A rune only known inside the moon cult, it calls forth their insane leader.
-					This must be a very important artifact for the moon cult or else their leader wouldnt be so angry about you taking it.
+					Tries were made to speed up the revival ritual, these runes are part of that,
+					but all tries never worked and only made the leaders mood worse.
 					''' */
 			}
 
@@ -1359,8 +1396,10 @@ Mods: {
 				// DisplayName: Moonlight Moth
 				/* Tooltip:
 					'''
-					A artifact shaped after a deity of balance, it's magic power scares the sun away
-					This butterfly resembles the blue goddess who is more childish and playful.
+					Scares away the Sun
+					A artifact of time, modeled after the Moonlight Moth.
+					The Sister of the Night is always playful and happy,
+					trusting everyone instantly.
 					''' */
 			}
 
@@ -1368,8 +1407,10 @@ Mods: {
 				// DisplayName: Sunlight Butterfly
 				/* Tooltip:
 					'''
-					A artifact shaped after a deity of balance, its magic power scares the moon away
-					This butterfly resembles the red goddess who is more mature and serious.
+					Scares away the moon 
+					A artifact of time, modeled after the Sunlight Butterfly.
+					The Sister of Day is always strict and serious,
+					disliking the behavior of her sister.
 					''' */
 			}
 
@@ -1395,27 +1436,27 @@ Mods: {
 
 			OldSeaCrown: {
 				// DisplayName: Old Sea Crown
-				// Tooltip: A old crown found in the ocean, it is guessed that it didnt belong to a king as there are many of these found.
+				// Tooltip: A old crown found in the ocean, it is guessed that it was used as a basic accessory, since there are many.
 			}
 
 			SmileyMask: {
 				// DisplayName: Smiley Mask
-				// Tooltip: Maybe if you disguise as him, the Darklings wont attack you anymore.
+				// Tooltip: Maybe if you disguise as him, the Darklings won't attack you anymore.
 			}
 
 			VikingBoots: {
 				// DisplayName: Viking Boots
-				// Tooltip: lore soon.
+				// Tooltip: The boots of a normal modern Viking, not as strong as the Raider Armor, but still provides good protection.
 			}
 
 			VikingHelm: {
 				// DisplayName: Viking Helm
-				// Tooltip: lore soon
+				// Tooltip: The helm of a normal modern Viking, not as strong as the Raider Armor, but still provides good protection.
 			}
 
 			VikingPlate: {
 				// DisplayName: Viking Chestplate
-				// Tooltip: lore soon.
+				// Tooltip: The chestplate of a normal modern Viking, not as strong as the Raider Armor, but still provides good protection.
 			}
 
 			Retilazor: {
@@ -1425,16 +1466,21 @@ Mods: {
 
 			Cursemark: {
 				// DisplayName: Cursemark
-				// Tooltip: While you press the attack button, your mouse gains a damaging aura.
+				/* Tooltip:
+					'''
+					While you press the attack button, your mouse gains a damaging aura.
+					A cursemark signifies the presence of a overly powerful curse,
+					coming in all sorts of sizes, even be able to cover entire structures.
+					''' */
 			}
 
 			GreatMoonlight: {
-				// DisplayName: Great Moonlight
+				// DisplayName: False Moonlight
 				/* Tooltip:
 					'''
 					The blue crystal blade is composed only of light.
 					The lunatic Cultist is a insane fanatic of the moon and so stole this legendary blade to use it himself,
-					tho the Great Moonlight seems to not belong in this world and instead obeys an otherworldly moon.
+					but the blade instead obeys an otherworldly moon.
 					''' */
 			}
 
@@ -1444,7 +1490,7 @@ Mods: {
 					'''
 					Spin a crystal halberd around you that generates up to 2 light rings that spin around you as well.
 					If both rings of light are present and you stop attacking, the holy magic within them will heal you for 10 HP
-					+This weapon belonged to Adel, the general of the Hallow, he was noble but also stubborn
+					This weapon belonged to Adel, the general of the Hallow, he was noble but also stubborn
 					He fought in the great war against his arch nemesis Vertrarius, that was until his soul was trapped inside the Wall of Flesh
 					''' */
 			}
@@ -1454,7 +1500,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					A forbidden technique that transforms the user's thoughts into energy waves that burst out in all directions.
-					It is one of the forbidden techniques of old times, when the Creators did'nt knew the morals of life.
+					It is one of the forbidden techniques of old times, when the Creators didn't knew the morals of life.
 					As told in old secret records, the spell gets stronger the more malicious the user's thoughts are, resulting in a devastating shockwave.
 					''' */
 			}
@@ -1470,7 +1516,11 @@ Mods: {
 
 			AtlanteanTrident: {
 				// DisplayName: Atlantean Trident
-				// Tooltip: fdjpydsfhgpsdfughaofidjüaefogip.
+				/* Tooltip:
+					'''
+					Shoots multiple streams of water
+					Oceanic weapon from even before the grand ocean civilization
+					''' */
 			}
 
 			CoolingStaff: {
@@ -2312,23 +2362,89 @@ Mods: {
 			}
 
 			NumbMindMask: {
-				// DisplayName: Numb Mind Mask
-				// Tooltip: ""
+				// DisplayName: Mask of the Numbed Mind
+				/* Tooltip:
+					'''
+					Grants immunity to Madness
+					This mask was forged from a special alloy, it is supposed to fend off any mind invading effects
+					The people who made it only finished it shortly before madness rampaged across their city,
+					in that case, only a few selected members were actually protected against it.
+					''' */
 			}
 
 			CerebroAlloy: {
 				// DisplayName: Cerebro Alloy
-				// Tooltip: ""
+				// Tooltip: A special metal from a faraway civilization, its special properties can protect one's mind.
 			}
 
 			SoulRemnant: {
 				// DisplayName: Soul Remnant
-				// Tooltip: ""
+				// Tooltip: Weak and pathetic remains of a once powerful soul, its energy signature is now blank
 			}
 
 			ShadeEye: {
-				// DisplayName: Shade Eye
-				// Tooltip: ""
+				// DisplayName: Light Deprived Eye
+				/* Tooltip:
+					'''
+					The eyeball of a creature that was going to become an Ascendant, it seems to have been interrupted halfway through
+					It is covered in a weird pitch black substance, you can hear strange whispers eminating from it...
+					[c/FF2CD0C: I have watched you from afar for quite a while now, you have even overcome pure madness and its titans.]
+					[c/FF2CD0C: I wish to converse with you, so you may visit me using this eye when the time comes.]
+					''' */
+			}
+
+			Cassiopeia: {
+				// DisplayName: Cassiopeia
+				/* Tooltip:
+					'''
+					Summons a hacking star nerd to your side
+					E
+					''' */
+			}
+
+			Caph: {
+				// DisplayName: Caph
+				/* Tooltip:
+					'''
+					The sturdy star named Caph
+					Belongs to a constellation
+					''' */
+			}
+
+			Navi: {
+				// DisplayName: Navi
+				/* Tooltip:
+					'''
+					The toxic star named Navi
+					Belongs to a constellation
+					''' */
+			}
+
+			Ruchbah: {
+				// DisplayName: Ruchbah
+				/* Tooltip:
+					'''
+					The cute star named Ruchbah
+					Belongs to a constellation
+					''' */
+			}
+
+			Schedar: {
+				// DisplayName: Schedar
+				/* Tooltip:
+					'''
+					The fiery star named Schedar
+					Belongs to a constellation
+					''' */
+			}
+
+			Segin: {
+				// DisplayName: Segin
+				/* Tooltip:
+					'''
+					The dark star named Segin
+					Belongs to a constellation
+					''' */
 			}
 		}
 
@@ -2505,6 +2621,40 @@ Mods: {
 			// MadnessDog.DisplayName: Starving Madness
 			// Smiley.DisplayName: Smiley
 			// Taraha.DisplayName: Greater One
+		}
+
+		TownNPCMood: {
+			Dorira: {
+				// LoveNPC: "{NPCName} is so adorable, and I love adorable things!!!"
+				// LikeNPC: I really like having {NPCName} around, he is a great source of explosives for my wall bangs.
+				// DislikeNPC: No, get {NPCName} away from me, I want to keep my cheated Platinum Coins.
+				// HateNPC: I don't know why, but I just hate {NPCName}.
+				// LoveBiome: The nice warm sun, the soothing waves, it really is lovely here.
+				// LikeBiome: I really like it here, all this nature is really nice, but something is still missing.
+				// DislikeBiome: I really like to visit caves and play around in them but I rather have sunlight once in a while.
+				// HateBiome: I really can't stand this blazing heat, it feels like I'm being incinerated.
+				// NoHome: Uh... you don't happen to possess a room for me where I could stay?
+				// FarFromHome: How did I get here?
+				// Content: ok
+			}
+		}
+
+		Dialogue: {
+			Dorira: {
+				// GoblinDialogue: I came here because I heard the anomalies in this dimension are very bad, {0}'s money sucking service is DEFINETILY one.
+				// DemolitionistDialogue: When I go monster hunting, I will always buy {0}'s explosives from now on. Why I need bombs for hunting? You think a raw wall will do the trick? PAH!
+				// MechanicDialogue: "{0}'s father was a real celebrity I heard, a super engineer who built the craziest things. A shame he died in a fire some time ago."
+				// GenericDialogue1: When you are going to the Underworld, don't run into a wall.
+				// GenericDialogue2: serglhw3o85zhp35ognpügd1312mfghödfdlhgftzjmdzinhwüß046ihn
+				#Below is help dialogue
+				// ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
+				#Below is quest dialogue
+				// CassieQuestStart: I wanted to ask if you could do me a favor, when I got here I broke something important on accident. Scattered around are stars from said thing, I expect them to be in the Dungeon, the Underworld, the Aether, the Jungle and around money. Can you go and get them?
+				// CassieQuestClear: Thank you so much, here, this is what they were before. Since I trust you, you can keep it safe for me.
+			}
+
+			Taraha: {
+			}
 		}
 
 		Tiles: {
