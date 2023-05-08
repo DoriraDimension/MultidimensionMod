@@ -24,7 +24,7 @@ namespace MultidimensionMod.Items.Armor
 
 		public override void UpdateEquip(Player player)
 		{
-			player.GetCritChance(DamageClass.Generic) += 15;
+			player.GetCritChance(DamageClass.Generic) += 10;
 
 		}
 

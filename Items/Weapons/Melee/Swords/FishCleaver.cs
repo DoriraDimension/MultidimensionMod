@@ -8,8 +8,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults() 
 		{
-			// DisplayName.SetDefault("Fish Cleaver");
-			// Tooltip.SetDefault("Fish -Phiakitti 2021.");
 		}
 
 		public override void SetDefaults()
@@ -34,8 +32,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			CreateRecipe()
 			.AddIngredient(ItemID.BreakerBlade)
 			.AddIngredient(ItemID.Bass, 3)
-			.AddIngredient(ItemID.AtlanticCod, 3)
-			.AddIngredient(ItemID.PrincessFish, 3)
 			.AddIngredient(ItemID.RedSnapper, 3)
 			.AddIngredient(ItemID.Trout, 3)
 			.AddCondition(Condition.NearWater)

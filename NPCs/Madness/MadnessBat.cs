@@ -63,7 +63,7 @@ namespace MultidimensionMod.NPCs.Madness
             BaseAI.AIFlier(NPC, ref NPC.ai, true, 0.1f, 0.04f, 4f, 1.5f, true, 300);
             if (Ambush == 1)
             {
-                if (AmbushTimer == 120)
+                if (AmbushTimer == 160)
                 {
                     Vector2 victor = new(NPC.position.X + (NPC.width * 0.5f), NPC.position.Y + (NPC.height * 0.5f));
                     {

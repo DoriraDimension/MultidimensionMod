@@ -52,14 +52,5 @@ namespace MultidimensionMod.Items.Weapons.Summon
 		{
 			position = Main.MouseWorld;
 		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<BeeSoul>())
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 10)
-			.AddTile(ModContent.TileType<DimensionalForge>())
-			.Register();
-		}
 	}
 }

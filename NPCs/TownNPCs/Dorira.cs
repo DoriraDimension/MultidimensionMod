@@ -186,7 +186,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 									}
 								}
 							}
-							Main.npcChatText = QuestDialogue();
+							else
+							    Main.npcChatText = QuestDialogue();
 						}
 						break;
 

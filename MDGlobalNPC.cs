@@ -72,19 +72,19 @@ namespace MultidimensionMod
 			}
 			if (DrakePoison)
 			{
-				if (npc.lifeRegen > 0)
-				{
-					npc.lifeRegen = 0;
-				}
-				npc.lifeRegen -= 24;
 				if (npc.type == ModContent.NPCType<IceDrakeJuvenile>()) //Does more damage to these enemy types
-                {
+				{
 					if (npc.lifeRegen > 0)
 					{
 						npc.lifeRegen = 0;
 					}
 					npc.lifeRegen -= 36;
-                }
+				}
+				if (npc.lifeRegen > 0)
+				{
+					npc.lifeRegen = 0;
+				}
+				npc.lifeRegen -= 24;
 			}
 		}
 

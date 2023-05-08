@@ -25,6 +25,7 @@ namespace MultidimensionMod.Items.Armor
 		public override void UpdateEquip(Player player)
 		{
 			player.moveSpeed += 0.08f;
+			player.accFlipper = true;
 		}
 
 		public override void AddRecipes()

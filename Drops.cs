@@ -117,7 +117,6 @@ namespace MultidimensionMod
 
             if (NPC.type == NPCID.Plantera)
             {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BlackRoseScarf>(), 30));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PlantSoul>()));
             }
 

@@ -1,4 +1,4 @@
-The Multidimension Mod is a small content mod rn but will grow bigger as I gain experience and team members.
+The Multidimension is a growing content mod that aims to go with a multidimensional and outer gods thematic.
 
 Dimensions arent included yet but there are several planned that will be implemented in the future.
 Just telling you so you arent confused by the mods name, the mod is just named after a personal project.
@@ -7,11 +7,11 @@ The mod currently adds:
 
 - 100+ Weapons
 - 32 Accessories
-- 3 Armor Sets
-- 2 Pets
+- 2 Armor Sets
+- 3 Pets
 - 6 Vanity Items
 - 11 Enemies
-- 1 Boss and 2 minibosses
+- 2 Bosses and 2 minibosses
 - 1 Town NPC
 - 1 Biome
        Frozen Underworld: A frozen solid version of the underworld that takes up almost half of the regular one.

@@ -11,28 +11,22 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Void Matter Impacter");
-			// Tooltip.SetDefault("A massive void matter sword used to hit enemies with a hefty swing\nCharge to yeet enemies even further.");
 		}
 
 		public override void SetDefaults()
 		{
-			Item.damage = 48;
+			Item.damage = 61;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 62;
 			Item.height = 86;
 			Item.useTime = 32;
 			Item.useAnimation = 32;
-			Item.channel = true;
-			Item.useStyle = ItemUseStyleID.Shoot;
-			Item.noUseGraphic = true;
-			Item.noMelee = true;
-			Item.knockBack = 6;
+			Item.knockBack = 8;
 			Item.value = Item.sellPrice(silver: 23);
 			Item.rare = ItemRarityID.Orange;
 			Item.shootSpeed = 5f;
-			Item.autoReuse = false;
-			Item.shoot = ModContent.ProjectileType<DarkMatterImpacterProj>();
+			Item.autoReuse = true;
+			Item.UseSound = SoundID.Item1;
 		}
 
 		public override void AddRecipes()

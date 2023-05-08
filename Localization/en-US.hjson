@@ -1,4 +1,3 @@
-
 Mods: {
 	MultidimensionMod: {
 		Biomes: {
@@ -1535,7 +1534,11 @@ Mods: {
 
 			LophiiformesBaculum: {
 				DisplayName: Lophiiformes Baculum
-				Tooltip: A staff created from old blueprints found at the shores. The ancient depictions show it being used by wise magicians.
+				Tooltip:
+					'''
+					A staff created from old blueprints found at the shores.
+					The ancient depictions show it being used by wise magicians.
+					'''
 			}
 
 			MadnessStaff: {
@@ -1909,7 +1912,11 @@ Mods: {
 
 			XiphiasGladius: {
 				DisplayName: Xiphias Gladius
-				Tooltip: A sword created from old blueprints found at the shores. The ancient depictions show it being used to fend off preditory ocean creatures.
+				Tooltip:
+					'''
+					A sword created from old blueprints found at the shores.
+					The ancient depictions show it being used to fend off preditory ocean creatures.
+					'''
 			}
 
 			BlackDragonBow: {
@@ -1982,7 +1989,8 @@ Mods: {
 				DisplayName: Toxotes Arcus
 				Tooltip:
 					'''
-					A bow created from old blueprints found at the shores. The ancient depictions show it being used to hunt ocean creatures for food.
+					A bow created from old blueprints found at the shores.
+					The ancient depictions show it being used to hunt ocean creatures for food.
 					Shoots a burst of 4 arrows.
 					'''
 			}
@@ -2397,7 +2405,7 @@ Mods: {
 				DisplayName: Cassiopeia
 				Tooltip:
 					'''
-					Summons a hacking star nerd to your side
+					Summons a star nerd to your side
 					E
 					'''
 			}
@@ -2446,7 +2454,42 @@ Mods: {
 					Belongs to a constellation
 					'''
 			}
+
+			MadnessShroom: {
+				DisplayName: Madness Mushroom
+				Tooltip:
+					'''
+					Weird mushrooms that only grow while madness visits
+					Their cap contains madness infected juices that can be used for medicine
+					'''
+			}
+
+			EuniceFlagellum: {
+				DisplayName: Eunice Flagellum
+				Tooltip:
+					'''
+					A whip sword created from old blueprints found at the shores.
+					The ancient depictions show it being used by trained warriors I guess, I'm gonna change some of these tooltips.
+					'''
+			}
+
+			VoidArm: {
+				DisplayName: Arm from Beyond
+				Tooltip:
+					'''
+					g
+					g
+					'''
+			}
 		}
+
+		SetBonuses.NeroSet:
+			'''
+			Grants the ability to swim and you can move through water freely
+			Increases whip range by 40%
+			Increases movement speed by 15% and defense by 10 when submerged in liquid
+			Press the Armor Ability hotkey to place a Nero Construct at the cursor position
+			'''
 
 		Projectiles: {
 			KelpHookTip.DisplayName: KelpHook
@@ -2588,11 +2631,16 @@ Mods: {
 			Baller4.DisplayName: Dark Emoji
 			SmileyDeath.DisplayName: Smiley
 			SmileyPhase2.DisplayName: Smiley
+			Eunice.DisplayName: Eunice
+			VoidArmProj.DisplayName: Void Arm Proj
+			NeroConstruct.DisplayName: Nero Construct
+			NeroMissile.DisplayName: Nero Missile
 		}
 
 		Keybinds: {
 			Rose_Venom.DisplayName: Rose Venom
 			"Rose Venom.DisplayName": Mods.MultidimensionMod.Keybinds.Rose Venom.DisplayName
+			"Armor Ability.DisplayName": Armor  Ability
 		}
 
 		NPCs: {

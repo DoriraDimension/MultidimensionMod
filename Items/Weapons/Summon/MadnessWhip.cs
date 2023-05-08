@@ -1,6 +1,4 @@
 ﻿using MultidimensionMod.Projectiles.Summon.Whips;
-using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Tiles;
 using MultidimensionMod.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;

@@ -1,5 +1,6 @@
 ﻿using MultidimensionMod.Items.Bags;
 using MultidimensionMod.Projectiles.Summon.Minions;
+using MultidimensionMod.Projectiles.Summon.Sentries;
 using MultidimensionMod.Buffs.Ability;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.DataStructures;
 using Terraria.GameInput;
 using Terraria.Audio;
 
@@ -15,52 +17,30 @@ namespace MultidimensionMod.Common.Players
     public class MDPlayer : ModPlayer
     {
         public bool Healthy;
-
         public bool Blaze;
-
         public bool SmileyJr = false;
-
         public bool IgnaenHead = false;
-
         public bool DarkusCrit = false;
-
         public bool StarvingLarva = false;
-
         public bool Probe = false;
-
         public Item DiggerEngine;
-
         public bool HunterEye = false;
-
         public bool DesireEye = false;
-
         public bool NightEye = false;
-
         public bool ExplorerEye = false;
-
         public Item EyeoftheHunter;
-
         public Item EyeoftheNightwalker;
-
         public Item EyeofDesire;
-
         public Item EyeoftheExplorer;
-
         public bool Geodes;
-
         public bool Madness;
-
         public int MadnessTimer;
-
         public int MadnessCringe;
-
         public bool CalmMind;
-
         public bool RoseScarf = false;
-
         public bool RoseVenom = false;
-
         public bool DrakePoison = false;
+        public bool NeroSet = false;
 
         public override void ResetEffects()
         {
@@ -80,6 +60,7 @@ namespace MultidimensionMod.Common.Players
             RoseScarf = false;
             RoseVenom = false;
             DrakePoison = false;
+            NeroSet = false;
         }
 
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
@@ -254,6 +235,14 @@ namespace MultidimensionMod.Common.Players
             {
                 Player.AddBuff(ModContent.BuffType<RoseVenom>(), 900);
                 SoundEngine.PlaySound(SoundID.Item170, player.Center);
+            }
+            int sentry = ModContent.ProjectileType<NeroConstruct>();
+            if (MDKeybinds.ArmorAbility.JustPressed && NeroSet && player.ownedProjectileCounts[sentry] <= 0)
+            {
+                Vector2 velocity = new Vector2(0, 0);
+                IEntitySource source = player.GetSource_Misc("Nero Set");
+                Projectile.NewProjectile(source, Main.MouseWorld, velocity, sentry, 75, 0f, player.whoAmI);
+                SoundEngine.PlaySound(SoundID.DD2_DefenseTowerSpawn, player.Center);
             }
         }
     }

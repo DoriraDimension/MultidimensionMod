@@ -15,6 +15,8 @@ namespace MultidimensionMod.Common.Systems
         public static bool seenAether;
         public static bool downedSmiley;
         public static bool downedGrudge;
+        public static bool metAdel;
+        public static bool metVertrarius;
 
         public override void OnWorldLoad()
         {

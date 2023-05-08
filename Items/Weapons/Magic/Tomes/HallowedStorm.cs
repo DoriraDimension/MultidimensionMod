@@ -15,7 +15,6 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 {
 	public class HallowedStorm : ModItem
 	{
-		public static readonly SoundStyle UseSound = new SoundStyle("MultidimensionMod/Sounds/Item/HallowedEcho");
 		public override void SetStaticDefaults()
 		{
 		}
@@ -34,7 +33,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.value = Item.sellPrice(silver: 10);
 			Item.rare = ItemRarityID.Yellow;
-			Item.UseSound = HallowedStorm.UseSound;
+			Item.UseSound = SoundID.Item9;
 			Item.noMelee = true;
 			Item.shoot = ModContent.ProjectileType<PrismShards>();
 			Item.channel = true;

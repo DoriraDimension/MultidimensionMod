@@ -11,7 +11,6 @@ namespace MultidimensionMod.Projectiles.Ranged
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Destroyer Dual Laser");
 			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 3;
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
 		}
@@ -38,7 +37,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
-			target.AddBuff(BuffID.OnFire, 150);
+			target.AddBuff(323, 150);
 		}
 
 		public override bool PreDraw(ref Color lightColor)

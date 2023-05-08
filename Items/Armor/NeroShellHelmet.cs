@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Common.Players;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -29,21 +30,22 @@ namespace MultidimensionMod.Items.Armor
 
 		public override void UpdateArmorSet(Player player)
 		{
-			player.setBonus = "Increases max life by 40 gives the ability to swim and you can move through water freely.\nIncreases movement speed by 15% and defense by 10 when submerged in liquid.";
-			player.statLifeMax2 += 40;
-			player.accFlipper = true;
+			player.setBonus = Language.GetTextValue("Mods.MultidimensionMod.SetBonuses.NeroSet");
+			player.maxMinions += 2;
 			player.ignoreWater = true;
+			player.whipRangeMultiplier += 0.4f;
+			player.GetModPlayer<MDPlayer>().NeroSet = true;
 			ArmorIDs.Head.Sets.DrawHead[Item.headSlot] = false;
 			if (player.wet && !player.lavaWet && !player.honeyWet)
 			{
-				player.moveSpeed += 0.15f;
-				player.statDefense += 10;
+				player.moveSpeed += 0.20f;
+				player.statDefense += 15;
             }
 		}
 
 		public override void UpdateEquip(Player player)
 		{
-			player.GetDamage(DamageClass.Melee) += 0.18f;
+			player.GetDamage(DamageClass.Summon) += 0.12f;
 		}
 
 		public override void AddRecipes()

@@ -6,9 +6,10 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 {
 	public class Acceptance : ModProjectile
 	{
+		protected virtual float HoldoutRangeMin => 24f;
+		protected virtual float HoldoutRangeMax => 150f;
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Acceptance");
 		}
 
 		public override void SetDefaults()
@@ -33,41 +34,50 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 			set => Projectile.ai[0] = value;
 		}
 
-		public override void AI()
+		public override bool PreAI()
 		{
-			Player projOwner = Main.player[Projectile.owner];
-			Vector2 ownerMountedCenter = projOwner.RotatedRelativePoint(projOwner.MountedCenter, true);
-			Projectile.direction = projOwner.direction;
-			projOwner.heldProj = Projectile.whoAmI;
-			projOwner.itemTime = projOwner.itemAnimation;
-			Projectile.position.X = ownerMountedCenter.X - (float)(Projectile.width / 2);
-			Projectile.position.Y = ownerMountedCenter.Y - (float)(Projectile.height / 2);
-			if (!projOwner.frozen)
+			Player player = Main.player[Projectile.owner]; // Since we access the owner player instance so much, it's useful to create a helper local variable for this
+			int duration = player.itemAnimationMax; // Define the duration the projectile will exist in frames
+
+			player.heldProj = Projectile.whoAmI; // Update the player's held projectile id
+
+			// Reset projectile time left if necessary
+			if (Projectile.timeLeft > duration)
 			{
-				if (movementFactor == 0f)
-				{
-					movementFactor = 5f;
-					Projectile.netUpdate = true;
-				}
-				if (projOwner.itemAnimation < projOwner.itemAnimationMax / 3)
-				{
-					movementFactor -= 2.4f;
-				}
-				else
-				{
-					movementFactor += 1.8f;
-				}
+				Projectile.timeLeft = duration;
 			}
-			Projectile.position += Projectile.velocity * movementFactor;
-			if (projOwner.itemAnimation == 0)
+
+			Projectile.velocity = Vector2.Normalize(Projectile.velocity); // Velocity isn't used in this spear implementation, but we use the field to store the spear's attack direction.
+
+			float halfDuration = duration * 0.5f;
+			float progress;
+
+			// Here 'progress' is set to a value that goes from 0.0 to 1.0 and back during the item use animation.
+			if (Projectile.timeLeft < halfDuration)
 			{
-				Projectile.Kill();
+				progress = Projectile.timeLeft / halfDuration;
 			}
-			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.ToRadians(135f);
+			else
+			{
+				progress = (duration - Projectile.timeLeft) / halfDuration;
+			}
+
+			// Move the projectile from the HoldoutRangeMin to the HoldoutRangeMax and back, using SmoothStep for easing the movement
+			Projectile.Center = player.MountedCenter + Vector2.SmoothStep(Projectile.velocity * HoldoutRangeMin, Projectile.velocity * HoldoutRangeMax, progress);
+
+			// Apply proper rotation to the sprite.
 			if (Projectile.spriteDirection == -1)
 			{
-				Projectile.rotation -= MathHelper.ToRadians(90f);
+				// If sprite is facing left, rotate 45 degrees
+				Projectile.rotation += MathHelper.ToRadians(45f);
 			}
+			else
+			{
+				// If sprite is facing right, rotate 135 degrees
+				Projectile.rotation += MathHelper.ToRadians(135f);
+			}
+
+			return false; // Don't execute vanilla AI.
 		}
 	}
 }
