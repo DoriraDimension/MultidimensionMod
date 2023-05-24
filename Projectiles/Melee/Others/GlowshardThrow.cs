@@ -14,7 +14,6 @@ namespace MultidimensionMod.Projectiles.Melee.Others
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Glowshard");
 		}
 
 		public override void SetDefaults()
@@ -29,6 +28,7 @@ namespace MultidimensionMod.Projectiles.Melee.Others
 			Projectile.ignoreWater = true;
 			Projectile.extraUpdates = 1;
 			Projectile.tileCollide = false;
+			Projectile.ownerHitCheck = true;
 		}
 
 		public override void AI()

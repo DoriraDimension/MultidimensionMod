@@ -1,7 +1,7 @@
 using MultidimensionMod.Buffs.Potions;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Potions
@@ -10,8 +10,7 @@ namespace MultidimensionMod.Items.Potions
 	{
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Dimensional Shield Potion");
-            // Tooltip.SetDefault("Gives you a small fragmant of a dimensional serpents power. \nIncreases defense by 10 and reduces Damage taken by 20%.");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()
@@ -26,7 +25,7 @@ namespace MultidimensionMod.Items.Potions
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.rare = ItemRarityID.Orange;
-            Item.value = Item.sellPrice(silver: 19);
+            Item.value = Item.sellPrice(0, 0, 6, 0);
             Item.buffType = ModContent.BuffType<DimensionalShield>();
             Item.buffTime = 36000;
         }
@@ -36,7 +35,7 @@ namespace MultidimensionMod.Items.Potions
             CreateRecipe()
             .AddIngredient(ItemID.IronskinPotion)
             .AddIngredient(ItemID.EndurancePotion)
-            .AddTile(355)
+            .AddTile(TileID.AlchemyTable)
             .Register();
 
         }

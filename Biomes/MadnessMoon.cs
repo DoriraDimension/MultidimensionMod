@@ -26,13 +26,13 @@ namespace MultidimensionMod.Biomes
 
         public override void SpecialVisuals(Player player, bool isActive)
         {
-            SkyManager.Instance.Activate("MadnessMoonSky");
             if (isActive)
             {
-                if (Main.dayTime && !MDWorld.MadnessMoon)
+                if (Main.dayTime)
                 {
                     player.ManageSpecialBiomeVisuals("MultidimensionMod:Madness", false);
                 }
+                SkyManager.Instance.Activate("MadnessMoonSky");
             }
         }
 

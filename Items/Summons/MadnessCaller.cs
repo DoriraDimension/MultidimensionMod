@@ -1,12 +1,12 @@
 ﻿using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Common.Globals;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Chat;
 using Terraria.Localization;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Summons
 {
@@ -15,6 +15,7 @@ namespace MultidimensionMod.Items.Summons
 		public override void SetStaticDefaults()
 		{
 			ItemID.Sets.SortingPriorityBossSpawns[Item.type] = 12;
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -51,7 +52,7 @@ namespace MultidimensionMod.Items.Summons
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<MadnessFragment>(), 10)
-			.AddTile(134)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 	}

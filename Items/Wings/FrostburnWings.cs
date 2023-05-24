@@ -2,7 +2,7 @@
 using Terraria.ModLoader;
 using Terraria.DataStructures;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Wings
 {
@@ -11,8 +11,7 @@ namespace MultidimensionMod.Items.Wings
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Frostburn Wings");
-			// Tooltip.SetDefault("These wings are hot and cold at the same time, seems cool.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ArmorIDs.Wing.Sets.Stats[Item.wingSlot] = new WingStats(130, 6f, 2.5f);
 		}
 

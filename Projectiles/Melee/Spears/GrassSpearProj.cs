@@ -7,6 +7,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 {
 	public class GrassSpearProj : ModProjectile
 	{
+		public int Leaf;
 	    protected virtual float HoldoutRangeMin => 24f;
 	    protected virtual float HoldoutRangeMax => 145f;
 		public override void SetStaticDefaults()
@@ -61,6 +62,20 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 			// Move the projectile from the HoldoutRangeMin to the HoldoutRangeMax and back, using SmoothStep for easing the movement
 			Projectile.Center = player.MountedCenter + Vector2.SmoothStep(Projectile.velocity * HoldoutRangeMin, Projectile.velocity * HoldoutRangeMax, progress);
 
+			if (Projectile.timeLeft < halfDuration)
+            {
+				Leaf++;
+			}
+			if (Leaf == 1)
+            {
+				Vector2 velocity = Projectile.velocity;
+				Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(18));
+				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, perturbedSpeed * 2, ModContent.ProjectileType<JungleLeaf>(), (int)((double)((float)Projectile.damage) * 0.8f), 0f, Main.myPlayer);
+			}
+			if (Leaf > 2)
+            {
+				Leaf = 2;
+            }
 			// Apply proper rotation to the sprite.
 			if (Projectile.spriteDirection == -1)
 			{

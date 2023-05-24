@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Spears
 {
@@ -11,23 +12,21 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Molten Lance");
-			// Tooltip.SetDefault("Inflicts On Fire!\nInflicts Hellfire on crits");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
 			Item.damage = 25;
 			Item.useStyle = ItemUseStyleID.Shoot;
-			Item.useAnimation = 24;
-			Item.useTime = 24;
+			Item.useAnimation = 28;
+			Item.useTime = 28;
 			Item.shootSpeed = 3.7f;
 			Item.knockBack = 7f;
 			Item.width = 54;
 			Item.height = 56;
-			Item.scale = 1f;
-			Item.rare = ItemRarityID.Blue;
-			Item.value = Item.sellPrice(silver: 15);
+			Item.rare = ItemRarityID.Orange;
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.DamageType = DamageClass.Melee;
 			Item.noMelee = true;
 			Item.noUseGraphic = true;

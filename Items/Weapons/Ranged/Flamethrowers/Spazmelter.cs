@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
-using Terraria.DataStructures;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
@@ -12,6 +12,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -25,7 +26,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 0.3f;
-			Item.value = Item.sellPrice(gold: 3);
+			Item.value = Item.sellPrice(0, 1, 60, 0);
 			Item.rare = ItemRarityID.Pink;
 			Item.UseSound = SoundID.Item34;
 			Item.autoReuse = true;

@@ -1,6 +1,7 @@
-﻿using Terraria;
+﻿using MultidimensionMod.Tiles;
+using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Placeables
@@ -9,8 +10,7 @@ namespace MultidimensionMod.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Demon Altar");
-			// Tooltip.SetDefault("So you dont need to run to your local Corruption anymore.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -24,17 +24,17 @@ namespace MultidimensionMod.Items.Placeables
 			Item.useTime = 10;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
-			Item.rare = ItemRarityID.Green;
-			Item.value = Item.sellPrice(silver: 40);
-			Item.createTile = ModContent.TileType<Tiles.PlacedDemonAltar>();
+			Item.rare = ItemRarityID.White;
+			Item.value = Item.sellPrice(silver: 15);
+			Item.createTile = ModContent.TileType<PlacedDemonAltar>();
 		}
 
 		public override void AddRecipes()
 		{
 			CreateRecipe()
 			.AddIngredient(ItemID.ShadowScale, 15)
-			.AddIngredient(61, 30)
-			.AddTile(26)
+			.AddIngredient(ItemID.EbonstoneBlock, 30)
+			.AddTile(TileID.DemonAltar)
 			.Register();
 		}
 	}

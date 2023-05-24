@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -10,8 +11,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Awakened Archbird");
-			// Tooltip.SetDefault("A sword shaped like a legendary bird found in ancient depictions in the desert, it is full of dark flames.\nInscriptions say that one day the archbird will swoop down and bathe the earth in it's dark flames.\nShoots shadowflame tentacles when swung and slows enemies when hit for 5 seconds.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -25,7 +25,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 5;
 			Item.autoReuse = true;
-			Item.value = Item.sellPrice(gold: 3);
+			Item.value = Item.sellPrice(0, 3, 0, 0);
 			Item.rare = ItemRarityID.Lime;
 			Item.UseSound = SoundID.Item1;
 			Item.shoot = ProjectileID.ShadowFlame;
@@ -51,7 +51,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			{
 				Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(20));
 
-				Projectile.NewProjectileDirect(source, position, newVelocity, type, damage, knockback, player.whoAmI);
+				Projectile.NewProjectileDirect(source, position, newVelocity, type, (int)((double)(float)damage * 0.5), knockback, player.whoAmI);
 			}
 			return false; 
 		}
@@ -60,9 +60,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<DormantKing>())
-			.AddIngredient(ItemID.AncientBattleArmorMaterial, 2)
-			.AddIngredient(2766, 7)
-			.AddTile(134)
+			.AddIngredient(ItemID.LunarTabletFragment, 7)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 	}

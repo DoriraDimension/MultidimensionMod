@@ -21,13 +21,8 @@ namespace MultidimensionMod.Tiles
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();
-			// name.SetDefault("Ancient Dragon Skull");
 			AddMapEntry(new Color(206, 188, 156), name);
-		}
-
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<AncientDragonSkull>());
+			DustType = DustID.Bone;
 		}
 	}
 }

@@ -4,13 +4,13 @@ using MultidimensionMod.Items.Weapons.Magic.Others;
 using MultidimensionMod.Items.Weapons.Summon;
 using MultidimensionMod.Items.Vanity;
 using MultidimensionMod.Items.Accessories;
-using MultidimensionMod.Items.Placeables.Trophies;
 using MultidimensionMod.Items.Pets;
 using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.ItemDropRules;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Bags
 {
@@ -18,6 +18,7 @@ namespace MultidimensionMod.Items.Bags
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
 			ItemID.Sets.BossBag[Type] = true;
 			ItemID.Sets.PreHardmodeLikeBossBag[Type] = true;
 		}

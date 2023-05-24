@@ -32,7 +32,6 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
             TileID.Sets.DisableSmartCursor[Type] = true;
             AddMapEntry(new Color(25, 19, 39));
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsDoor);
-            ItemDrop = ModContent.ItemType<VoidMatterPlatform>();
             AdjTiles = new int[] { TileID.Platforms };
             DustType = ModContent.DustType<DarkDust>();
         }

@@ -1,8 +1,7 @@
-﻿using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Accessories
@@ -14,6 +13,7 @@ namespace MultidimensionMod.Items.Accessories
 			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(8, 5));
 			ItemID.Sets.AnimatesAsSoul[Item.type] = true;
 			ItemID.Sets.ItemNoGravity[Item.type] = true;
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -22,7 +22,7 @@ namespace MultidimensionMod.Items.Accessories
 			Item.height = 54;
 			Item.accessory = true;
 			Item.expert = true;
-			Item.value = Item.sellPrice(gold: 2);
+			Item.value = Item.sellPrice(0, 2, 0, 0);
 			Item.rare = ItemRarityID.Expert;
 		}
 

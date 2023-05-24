@@ -1,9 +1,7 @@
-﻿using MultidimensionMod.Common.Players;
-using MultidimensionMod.Rarities;
-using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -11,32 +9,20 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
-			Item.width = 40;
-			Item.height = 44;
+			Item.width = 46;
+			Item.height = 50;
 			Item.accessory = true;
-			Item.value = Item.sellPrice(gold: 7);
-			Item.rare = ModContent.RarityType<AseGneblessaArtifact>();
-		}
-
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			List<string> hotkey = MDKeybinds.RoseScarfKey.GetAssignedKeys();
-			foreach (TooltipLine line2 in list)
-			{
-				if (line2.Mod == "Terraria" && line2.Name == "Tooltip2")
-				{
-					line2.Text = "Press " + hotkey + " to imbue yourself with deadly toxins that eat away at your health in exchange for powerful thorns and defense";
-				}
-			}
+			Item.value = Item.sellPrice(0, 5, 0, 0);
+			Item.rare = ItemRarityID.Yellow;
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.GetModPlayer<MDPlayer>().RoseScarf = true;
 			player.thorns = 0.45f;
 		}
 
@@ -45,7 +31,7 @@ namespace MultidimensionMod.Items.Accessories
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<ThornScarf>())
 			.AddIngredient(ItemID.VialofVenom, 2)
-			.AddIngredient(ItemID.BlackFairyDust, 2)
+			.AddIngredient(ItemID.BlackFairyDust)
 			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}

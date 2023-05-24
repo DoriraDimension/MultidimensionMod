@@ -15,7 +15,6 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 {
 	public class SmileyDeath : ModProjectile
 	{
-		int timer = 0;
 		public override void SetStaticDefaults()
 		{
 			Main.projFrames[Projectile.type] = 11; //This is an animated Projectile

@@ -1,7 +1,7 @@
 ﻿using MultidimensionMod.Tiles;
 using Terraria;
 using Terraria.ModLoader;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ID;
 
 namespace MultidimensionMod.Items.Placeables.Banners
@@ -10,14 +10,13 @@ namespace MultidimensionMod.Items.Placeables.Banners
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Darkling Banner");
-			// Tooltip.SetDefault("Darklings are beings of pure dark matter, they hide inside the dungeon while their leader roams the land in search of someone.\nDarklings arent very strong alone and even kinda shy but can be threatening in groups.\nTheir original purpose is to spread darkness across the universe but they refuse to do so.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults()
 		{
 			Item.width = 12;
 			Item.height = 28;
-			Item.maxStack = 99;
+			Item.maxStack = 9999;
 			Item.useTurn = true;
 			Item.autoReuse = true;
 			Item.useAnimation = 15;
@@ -25,7 +24,7 @@ namespace MultidimensionMod.Items.Placeables.Banners
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
 			Item.rare = ItemRarityID.Blue;
-			Item.value = Item.sellPrice(silver: 3);
+			Item.value = Item.sellPrice(0, 0, 2, 0);
 			Item.createTile = ModContent.TileType<MonsterBanner>();
 			Item.placeStyle = 0;
 		}

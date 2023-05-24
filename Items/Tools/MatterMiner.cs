@@ -3,6 +3,7 @@ using MultidimensionMod.Tiles.Furniture.VoidMatter;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Tools
 {
@@ -10,8 +11,7 @@ namespace MultidimensionMod.Items.Tools
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Matter Miner");
-			// Tooltip.SetDefault("A void matter pickaxe made to mine any matter... and it still cannot mine anything thats higher tier than Cobalt or Palladium...");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()

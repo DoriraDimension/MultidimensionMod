@@ -6,17 +6,17 @@ using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 {
 	public class LophiiformesBaculum : ModItem
 	{
-		public int WaveTimer = 0;
+		public int BlastCount = 0;
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Lophiiformes Baculum");
-			// Tooltip.SetDefault("A staff created from old blueprints found at the shores. The ancient depictions show it being used by wise magicians.");
-			Item.staff[Item.type] = true; 
+			Item.staff[Item.type] = true;
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -31,7 +31,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 2;
-			Item.value = Item.sellPrice(gold: 1);
+			Item.value = Item.sellPrice(0, 5, 50, 0);
 			Item.rare = ItemRarityID.Yellow;
 			Item.UseSound = SoundID.Item20;
 			Item.autoReuse = true;
@@ -44,11 +44,11 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 		{
 			for (int i = 0; i < 4; i++)
 			{
-				Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(47)); 																																																																											
+				Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(25)); 																																																																											
 				Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
 			}
 
-			if (WaveTimer == 2)
+			if (BlastCount == 2)
             {
 				Projectile.NewProjectile(source, position.X, position.Y, velocity.X, velocity.Y, ModContent.ProjectileType<GiantWave>(), damage, knockback, player.whoAmI);
 			}
@@ -67,10 +67,10 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 
 		public override bool? UseItem(Player player)
 		{
-			WaveTimer += 1;
-			if (WaveTimer >= 3)
+			BlastCount += 1;
+			if (BlastCount >= 3)
 			{
-				WaveTimer = 0;
+				BlastCount = 0;
 			}
 			return true;
 		}

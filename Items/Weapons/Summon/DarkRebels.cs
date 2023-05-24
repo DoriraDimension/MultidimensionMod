@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Summon
 {
@@ -12,8 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Dark Rebels");
-			// Tooltip.SetDefault("Summons one of Smiley's trusted soldiers to fight for you.\nThe Darklings who hide in the dungeon are ready to fight whenever they get called to battle.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true;
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
 		}
@@ -29,7 +29,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.useTime = 36;
 			Item.useAnimation = 36;
 			Item.useStyle = ItemUseStyleID.Shoot;
-			Item.value = Item.sellPrice(silver: 10);
+			Item.value = Item.sellPrice(0, 0, 80, 0);
 			Item.rare = ItemRarityID.LightRed;
 			Item.UseSound = SoundID.NPCHit54;
 			Item.noMelee = true;

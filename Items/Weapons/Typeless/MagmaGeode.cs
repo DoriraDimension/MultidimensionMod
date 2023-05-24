@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Typeless
 {
@@ -9,8 +10,7 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Magma Geode");
-			// Tooltip.SetDefault("A geode found in the underworld.\nA blacksmith can break this open for you, sadly, there is none.\nRight click to recieve underworld minerals.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 20;
 		}
 
 		public override void SetDefaults()

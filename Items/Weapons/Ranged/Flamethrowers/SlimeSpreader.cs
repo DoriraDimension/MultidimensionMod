@@ -1,13 +1,8 @@
-﻿using System.Collections.Generic;
-using MultidimensionMod.Projectiles.Ranged;
-using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Tiles;
-using MultidimensionMod.Rarities;
+﻿using MultidimensionMod.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
-using Terraria.DataStructures;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
@@ -16,6 +11,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -30,8 +26,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 0.3f;
-			Item.value = Item.sellPrice(silver: 30);
-			Item.rare = ItemRarityID.Green;
+			Item.value = Item.sellPrice(0, 0, 60, 0);
+			Item.rare = ItemRarityID.Blue;
 			Item.UseSound = SoundID.Item34;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<GelCloud>();
@@ -49,7 +45,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 		{
 			CreateRecipe()
 			.AddIngredient(ItemID.Gel, 34)
-			.AddRecipeGroup("GoldBars", 16)
+			.AddRecipeGroup(Recipes.GoldPlatinum, 16)
 			.AddTile(TileID.Solidifier)
 			.Register();
 		}

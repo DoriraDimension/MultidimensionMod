@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -9,24 +10,24 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("The Fly");
-			// Tooltip.SetDefault("Swarm your foes with flies like flies swarm a rotting corpse.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
-			Item.CloneDefaults(ItemID.BeamSword);
-			Item.shootSpeed *= 0.75f;
-			Item.width = 38;
-			Item.height = 38;
 			Item.damage = 18;
 			Item.DamageType = DamageClass.Melee;
-			Item.value = Item.sellPrice(silver: 15);
+			Item.width = 38;
+			Item.height = 38;
+			Item.useStyle = ItemUseStyleID.Swing;
+			Item.useTime = 70;
+			Item.useAnimation = 33;
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.autoReuse = true;
 			Item.UseSound = SoundID.Item1;
 			Item.shoot = ModContent.ProjectileType<DecayFlyFriendly>();
-			Item.shootSpeed = 10f;
+			Item.shootSpeed = 13f;
 
 		}
 
@@ -35,13 +36,13 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			CreateRecipe()
 			.AddIngredient(ItemID.IronBroadsword)
 			.AddIngredient(ItemID.ShadowScale, 5)
-			.AddTile(16)
+			.AddTile(TileID.Anvils)
 			.Register();
 
 			CreateRecipe()
            .AddIngredient(ItemID.LeadBroadsword)
            .AddIngredient(ItemID.ShadowScale, 5)
-           .AddTile(16)
+           .AddTile(TileID.Anvils)
            .Register();
 		}
 	}

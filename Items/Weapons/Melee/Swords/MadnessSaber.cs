@@ -1,9 +1,11 @@
 ﻿using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Buffs.Debuffs;
+using MultidimensionMod.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -11,8 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Mindslicing Madness");
-			// Tooltip.SetDefault("A blade made from the flesh of creatures that attampted ascension\nInflicts madness on hit");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -22,10 +23,10 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.width = 42;
 			Item.height = 50;
 			Item.useStyle = ItemUseStyleID.Swing;
-			Item.useTime = 34;
-			Item.useAnimation = 34;
+			Item.useTime = 30;
+			Item.useAnimation = 30;
 			Item.knockBack = 5;
-			Item.value = Item.buyPrice(silver: 23);
+			Item.value = Item.buyPrice(0, 0, 60, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
@@ -34,7 +35,15 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void MeleeEffects(Player player, Rectangle hitbox)
 		{
+			if (Main.rand.NextBool(3))
+			{
+				Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<MadnessY>());
+			}
+		}
 
+		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
+		{
+			target.AddBuff(ModContent.BuffType<Madness>(), 600);
 		}
 
 		public override void AddRecipes()
@@ -43,11 +52,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			.AddIngredient(ModContent.ItemType<MadnessFragment>(), 12)
 			.AddTile(TileID.Anvils)
 			.Register();
-		}
-
-		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
-		{
-			target.AddBuff(ModContent.BuffType<Madness>(), 600);
 		}
 	}
 }

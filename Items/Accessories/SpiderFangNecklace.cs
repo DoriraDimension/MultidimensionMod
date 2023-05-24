@@ -1,6 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -8,6 +9,7 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -15,7 +17,7 @@ namespace MultidimensionMod.Items.Accessories
 			Item.width = 34;
 			Item.height = 42;
 			Item.accessory = true;
-			Item.value = Item.sellPrice(silver: 23);
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.LightRed;
 		}
 
@@ -27,9 +29,9 @@ namespace MultidimensionMod.Items.Accessories
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(3212)
+			.AddIngredient(ItemID.SharkToothNecklace)
 			.AddIngredient(ItemID.SpiderFang, 10)
-			.AddTile(18)
+			.AddTile(TileID.WorkBenches)
 			.Register();
 		}
 	}

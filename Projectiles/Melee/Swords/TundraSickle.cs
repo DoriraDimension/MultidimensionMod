@@ -11,7 +11,6 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Tundrana Sickle");
 		}
 
 		public override void SetDefaults()
@@ -28,17 +27,15 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void Kill(int timeLeft)
 		{
-			for (int i = 0; i < 1; i++)
-			{
-				SoundEngine.PlaySound(SoundID.Item27, base.Projectile.position);
-				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.BlueCrystalShard, 0f, 0f, 100, default(Color), 2f);
-				Main.dust[dustIndex].velocity *= 1.4f;
-			}
+			SoundEngine.PlaySound(SoundID.Item27, base.Projectile.position);
+			int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.BlueCrystalShard, 0f, 0f, 100, default(Color), 2f);
+			Main.dust[dustIndex].velocity *= 1.4f;
 		}
 
 		public override void AI()
 		{
 			Projectile.rotation += 0.4f * (float)Projectile.direction;
+			Projectile.spriteDirection = Projectile.direction;
 
 			if (Main.rand.NextBool(4))
 			{
@@ -46,11 +43,6 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 				Main.dust[num104].noGravity = true;
 				Main.dust[num104].velocity.X *= 0.3f;
 				Main.dust[num104].velocity.Y *= 0.3f;
-			}
-
-			if (Projectile.timeLeft % 20 == 19 && Projectile.owner == Main.myPlayer)
-			{
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0f, 15f, ModContent.ProjectileType<FrostSpike>(), (int)((double)((float)Projectile.damage) * 0.5), 0f, Projectile.owner);
 			}
 		}
 	}

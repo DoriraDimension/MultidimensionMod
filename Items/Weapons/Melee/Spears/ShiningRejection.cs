@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Spears
 {
@@ -9,8 +10,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Shining Rejection");
-			// Tooltip.SetDefault("Reject your enemies until they go away.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -23,9 +23,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 			Item.knockBack = 6.5f;
 			Item.width = 64;
 			Item.height = 64;
-			Item.scale = 1f;
 			Item.rare = ItemRarityID.Blue;
-			Item.value = Item.sellPrice(silver: 10);
+			Item.value = Item.sellPrice(0, 0, 50, 0);
 			Item.DamageType = DamageClass.Melee;
 			Item.noMelee = true;
 			Item.noUseGraphic = true;

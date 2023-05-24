@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Critters
 {
@@ -9,11 +10,12 @@ namespace MultidimensionMod.Items.Critters
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 5;
 		}
 
 		public override void SetDefaults()
 		{
-			Item.useStyle = 1;
+			Item.useStyle = ItemUseStyleID.Swing;
 			Item.autoReuse = true;
 			Item.useTurn = true;
 			Item.useAnimation = 15;
@@ -25,6 +27,7 @@ namespace MultidimensionMod.Items.Critters
 			Item.makeNPC = 360;
 			Item.noUseGraphic = true;
 			Item.CloneDefaults(ItemID.GlowingSnail);
+			Item.value = Item.sellPrice(0, 0, 15, 0);
 			Item.bait = 45;
 			Item.makeNPC = (short)ModContent.NPCType<BabyGlowmarin>();
 		}

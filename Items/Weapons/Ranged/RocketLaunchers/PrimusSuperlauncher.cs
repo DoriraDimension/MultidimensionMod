@@ -1,15 +1,11 @@
-﻿using System.Collections.Generic;
-using MultidimensionMod.Projectiles.Ranged;
-using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Tiles;
-using MultidimensionMod.Rarities;
+﻿using MultidimensionMod.Projectiles.Ranged;
 using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.Audio;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 {
@@ -17,8 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Primus Superlauncher");
-			// Tooltip.SetDefault("Shoots several Prime weapon based rockets.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -33,7 +28,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 6;
-			Item.value = Item.sellPrice(gold: 7);
+			Item.value = Item.sellPrice(0, 3, 0, 0);
 			Item.rare = ItemRarityID.Pink;
 			Item.autoReuse = true;
 			Item.shoot = ProjectileID.PurificationPowder;

@@ -1,7 +1,7 @@
 ﻿using MultidimensionMod.Tiles.Biomes.FrozenUnderworld;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
@@ -10,8 +10,7 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Abyssal Hellstone");
-			// Tooltip.SetDefault("Ice cold magic has turned this normally hot ore into a freezing rock.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
 		}
 
 		public override void SetDefaults()
@@ -25,16 +24,9 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 			Item.useTime = 10;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
+			Item.rare = ItemRarityID.Pink;
+			Item.value = Item.sellPrice(0, 0, 15, 0);
 			Item.createTile = ModContent.TileType<AbyssalHellstonePlaced>();
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ItemID.Hellstone)
-			.AddIngredient(ItemID.IceBlock)
-			.AddTile(TileID.IceMachine)
-			.Register();
 		}
 	}
 }

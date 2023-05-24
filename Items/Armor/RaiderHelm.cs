@@ -1,7 +1,7 @@
 ﻿using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Armor
@@ -11,13 +11,14 @@ namespace MultidimensionMod.Items.Armor
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
 			Item.width = 24;
 			Item.height = 26;
-			Item.value = Item.sellPrice(silver: 24);
+			Item.value = Item.sellPrice(0, 0, 40, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.defense = 9;
 			ArmorIDs.Head.Sets.DrawHead[Item.headSlot] = false;
@@ -40,7 +41,7 @@ namespace MultidimensionMod.Items.Armor
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<VikingRelic>(), 5)
-			.AddTile(134)
+			.AddTile(TileID.Anvils)
 			.Register();
 		}
 	}

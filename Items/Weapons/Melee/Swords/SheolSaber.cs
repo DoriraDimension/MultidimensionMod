@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -12,8 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Sheol Saber");
-			// Tooltip.SetDefault("A old relic augmented with demon powers, unleashes a hellish explosion on hit and has a chance to unleash several demon scythes.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -42,14 +42,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 		{
-			Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), target.Center.X, target.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<DemonExplosion>(), (int)((double)((float)Item.damage) * 0.3), 0f, Main.myPlayer);
-			if (Main.rand.Next(4) == 0)
-            {
-				for (int i = 0; i < 4; i++)
-				{
-					Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), target.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-9, 10)), ProjectileID.DemonScythe, (int)((double)((float)Item.damage) * 0.3f), 0f, Main.myPlayer);
-				}
-			}
+			Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), target.Center.X, target.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<DemonExplosion>(), (int)((double)((float)Item.damage) * 0.4), 0f, Main.myPlayer);
 		}
 
 		public override void AddRecipes()
@@ -58,8 +51,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		    .AddIngredient(ModContent.ItemType<BurningSaber>())
 			.AddIngredient(ItemID.DemoniteBar, 20)
 			.AddIngredient(ItemID.SoulofNight, 5)
-			.AddIngredient(ModContent.ItemType<Blight2>())
-			.AddTile(134)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 

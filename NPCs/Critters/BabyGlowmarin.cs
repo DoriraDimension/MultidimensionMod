@@ -65,7 +65,7 @@ namespace MultidimensionMod.NPCs.Critters
 			{
 				for (int i = 0; i < 6; i++)
 				{
-					int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, 200, 2 * hit.HitDirection, -2f);
+					int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Worm, 2 * hit.HitDirection, -2f);
 					if (Main.rand.NextBool(2))
 					{
 						Main.dust[dust].noGravity = true;

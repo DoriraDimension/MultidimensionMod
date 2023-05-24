@@ -1,10 +1,10 @@
 ﻿using MultidimensionMod.Rarities.Souls;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Souls
 {
@@ -12,8 +12,7 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Soul of Duke Fishron");
-			// Tooltip.SetDefault("A weird pigron mutation from the seas, he seems to have some sort of connection to the Storm and it's aggressive scouts.\nPerhaps the duke of the seas has a more important role than one thinks.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
 			ItemID.Sets.ItemNoGravity[Item.type] = true;
 		}

@@ -1,15 +1,11 @@
-﻿using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Projectiles.Magic;
+﻿using MultidimensionMod.Projectiles.Magic;
 using MultidimensionMod.Dusts;
-using MultidimensionMod.Tiles;
-using MultidimensionMod.Rarities;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Others
 {
@@ -17,6 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -25,13 +22,13 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.DamageType = DamageClass.Magic;
 			Item.width = 72;
 			Item.height = 72;
-			Item.useTime = 61;
-			Item.useAnimation = 30;
+			Item.useTime = 35;
+			Item.useAnimation = 20;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 6;
 			Item.autoReuse = true;
-			Item.value = Item.sellPrice(gold: 4);
-			Item.rare = ItemRarityID.White;
+			Item.value = Item.sellPrice(0, 5, 0, 0);
+			Item.rare = ItemRarityID.Cyan;
 			Item.UseSound = SoundID.Item1;
 			Item.shoot = ModContent.ProjectileType<MoonlightWave>();
 			Item.shootSpeed = 15f;
@@ -39,7 +36,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 
 		public override void MeleeEffects(Player player, Rectangle hitbox)
 		{
-			for (int i = 0; i < 3; i++)
+			for (int i = 0; i < 2; i++)
 			{
 				int dustIndex = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, (ModContent.DustType<Moondust>()));
 				Main.dust[dustIndex].noGravity = true;
@@ -70,6 +67,12 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 
 		public override void AddRecipes()
 		{
+			CreateRecipe()
+			.AddIngredient(ItemID.FragmentSolar, 2)
+			.AddIngredient(ItemID.FragmentVortex, 2)
+			.AddIngredient(ItemID.FragmentNebula, 2)
+			.AddIngredient(ItemID.FragmentStardust, 2)
+			.Register();
 			//CreateRecipe()
 			//.AddIngredient(ModContent.ItemType<MagicSword>())
 			//.AddTile(ModContent.TileType<DimensionalForge>())

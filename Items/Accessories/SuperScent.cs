@@ -1,9 +1,8 @@
 ﻿using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.Utilities;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -11,6 +10,7 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -21,7 +21,7 @@ namespace MultidimensionMod.Items.Accessories
 			Item.useAnimation = 15;
 			Item.useTime = 15;
 			Item.accessory = true;
-			Item.value = Item.sellPrice(silver: 14);
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Orange;
 			Item.buffType = (BuffID.Stinky);
 			Item.buffTime = 28800;
@@ -40,7 +40,7 @@ namespace MultidimensionMod.Items.Accessories
 			.AddIngredient(ModContent.ItemType<BaitLeaf>())
 			.AddIngredient(ItemID.JungleSpores, 5)
 			.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 3)
-			.AddTile(18)
+			.AddTile(TileID.WorkBenches)
 			.Register();
 		}
 	}

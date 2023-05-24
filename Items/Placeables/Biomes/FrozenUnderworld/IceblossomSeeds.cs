@@ -1,7 +1,7 @@
 ﻿using MultidimensionMod.Tiles.Biomes.FrozenUnderworld;
 using Terraria.ModLoader;
 using Terraria;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ID;
 
 namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
@@ -10,12 +10,13 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Iceblossom Seeds");
-			// Tooltip.SetDefault("cold seeds that will grow into a Iceblossom when planted on Cold Ash");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
 		}
 
 		public override void SetDefaults()
 		{
+			Item.width = 22;
+			Item.height = 18;
 			Item.autoReuse = true;
 			Item.useTurn = true;
 			Item.useStyle = ItemUseStyleID.Swing;
@@ -24,9 +25,8 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 			Item.maxStack = 9999;
 			Item.consumable = true;
 			Item.placeStyle = 0;
-			Item.width = 12;
-			Item.height = 14;
-			Item.value = 80;
+			Item.value = Item.sellPrice(0, 0, 0, 24);
+			Item.rare = ItemRarityID.White;
 			Item.createTile = ModContent.TileType<Iceblossom>();
 		}
 	}

@@ -2,14 +2,15 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Spears
 {
 	public class Soulpiercer : ModItem
 	{
-		public override void SetStaticDefaults() {
-			// DisplayName.SetDefault("Soulpiercer");
-			// Tooltip.SetDefault("Doesnt affect soulless beings.");
+		public override void SetStaticDefaults() 
+		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults() {
@@ -21,9 +22,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 			Item.knockBack = 7f;
 			Item.width = 54;
 			Item.height = 56;
-			Item.scale = 1f;
-			Item.rare = ItemRarityID.Blue;
-			Item.value = Item.sellPrice(silver: 15);
+			Item.rare = ItemRarityID.Green;
+			Item.value = Item.sellPrice(0, 0, 70, 0);
 			Item.DamageType = DamageClass.Melee;
 			Item.noMelee = true; 
 			Item.noUseGraphic = true; 

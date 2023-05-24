@@ -1,5 +1,4 @@
-﻿using MultidimensionMod.Items.Placeables.Banners;
-using MultidimensionMod.NPCs.Dungeon;
+﻿using MultidimensionMod.NPCs.Dungeon;
 using MultidimensionMod.NPCs.Corruption;
 using MultidimensionMod.NPCs.Tundra;
 using MultidimensionMod.NPCs.Ocean;
@@ -32,54 +31,9 @@ namespace MultidimensionMod.Tiles
 			TileObjectData.newTile.StyleWrapLimit = 111;
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
-			DustType = -1;
 			LocalizedText name = CreateMapEntryName();
-			// name.SetDefault("Banner");
 			AddMapEntry(new Color(13, 88, 130), name);
-		}
-
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			int style = frameX / 18;
-			string item;
-			switch (style)
-			{
-				case 0:
-					Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<DarklingBanner>());
-					break;
-				case 1:
-					Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<InfestedBanner>());
-					break;
-				case 2:
-					Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<TridentBanner>());
-					break;
-				case 3:
-					Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<GlowmarinBanner>());
-					break;
-				case 4:
-					Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<StormEelBanner>());
-					break;
-				case 5:
-					Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<ParrotLobsterBanner>());
-					break;
-				case 6:
-					Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<BabyGlowmarinBanner>());
-					break;
-				case 7:
-					Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<BbyDrakeBanner>());
-					break;
-				case 8:
-					Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<FrostburnSlimeBanner>());
-					break;
-				case 9:
-					Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<LesserSandEleBanner>());
-					break;
-				case 10:
-					Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<GilaBanner>());
-					break;
-				default:
-					return;
-			}
+			DustType = -1;
 		}
 
 		public override void NearbyEffects(int i, int j, bool closer)

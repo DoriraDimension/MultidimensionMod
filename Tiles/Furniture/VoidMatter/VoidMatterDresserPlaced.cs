@@ -38,7 +38,6 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			TileObjectData.addTile(Type);
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 			AdjTiles = new int[] { TileID.Dressers };
-			ItemDrop = ModContent.ItemType<VoidMatterDresser>();
 			LocalizedText name = CreateMapEntryName();
 			AddMapEntry(new Color(25, 19, 39), name);
 			DustType = ModContent.DustType<DarkDust>();
@@ -221,11 +220,5 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num) => num = fail ? 1 : 3;
-
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 48, 32, ItemDrop);
-			Chest.DestroyChest(i, j);
-		}
 	}
 }

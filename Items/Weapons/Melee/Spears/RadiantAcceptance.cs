@@ -4,6 +4,7 @@ using MultidimensionMod.Tiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Spears
 {
@@ -11,8 +12,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Radiant Acceptance");
-			// Tooltip.SetDefault("The awakened form of a rejective spear.\nAfter decades of rejection, you are finally accepted, now make the best of it.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -25,9 +25,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 			Item.knockBack = 7.5f;
 			Item.width = 74;
 			Item.height = 74;
-			Item.scale = 1f;
 			Item.rare = ItemRarityID.LightRed;
-			Item.value = Item.sellPrice(gold: 1);
+			Item.value = Item.sellPrice(0, 0, 95, 0);
 			Item.DamageType = DamageClass.Melee;
 			Item.noMelee = true;
 			Item.noUseGraphic = true;

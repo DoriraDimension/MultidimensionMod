@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Spears
 {
@@ -9,8 +10,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Poking Loser");
-			// Tooltip.SetDefault("Poke your enemies until they go away.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -23,15 +23,12 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 			Item.knockBack = 6.5f;
 			Item.width = 48;
 			Item.height = 48;
-			Item.scale = 1f;
 			Item.rare = ItemRarityID.Blue;
-			Item.value = Item.sellPrice(copper: 80);
-
+			Item.value = Item.sellPrice(0, 0, 10, 0);
 			Item.DamageType = DamageClass.Melee;
 			Item.noMelee = true;
 			Item.noUseGraphic = true;
 			Item.autoReuse = false;
-
 			Item.UseSound = SoundID.Item1;
 			Item.shoot = ModContent.ProjectileType<PokingLoserProj>();
 		}

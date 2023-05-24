@@ -1,7 +1,7 @@
 ﻿using MultidimensionMod.Tiles;
 using Terraria;
 using Terraria.ModLoader;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ID;
 
 namespace MultidimensionMod.Items.Placeables.Trophies
@@ -10,8 +10,7 @@ namespace MultidimensionMod.Items.Placeables.Trophies
 	{
 		public override void SetStaticDefaults()
         {
-			// DisplayName.SetDefault("SmileyTrophy");
-			// Tooltip.SetDefault("A chunk of dark matter that is produced by Smiley's body.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -26,7 +25,7 @@ namespace MultidimensionMod.Items.Placeables.Trophies
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
 			Item.rare = ItemRarityID.Blue;
-			Item.value = Item.sellPrice(gold: 1);
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.createTile = ModContent.TileType<BossTrophy>();
 			Item.placeStyle = 0;
 		}

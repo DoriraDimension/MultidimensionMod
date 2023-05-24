@@ -2,6 +2,8 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
+using Terraria.GameContent.Creative;
+using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -9,6 +11,7 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -16,7 +19,7 @@ namespace MultidimensionMod.Items.Accessories
 			Item.width = 24;
 			Item.height = 32;
 			Item.accessory = true;
-			Item.value = Item.sellPrice(silver: 4);
+			Item.value = Item.sellPrice(0, 0, 15, 0);
 			Item.rare = ItemRarityID.White;
 		}
 
@@ -24,7 +27,7 @@ namespace MultidimensionMod.Items.Accessories
 		{
 			if (player.wet && !player.lavaWet && !player.honeyWet && !player.immune)
 			{
-				player.KillMe(PlayerDeathReason.ByCustomReason(player.name + " died from the pain of wearing wet socks."), 1000.0, 0);
+				player.KillMe(PlayerDeathReason.ByCustomReason(player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.Socks")), 1000.0, 0);
 			}
 		}
 
@@ -32,7 +35,7 @@ namespace MultidimensionMod.Items.Accessories
 		{
 			CreateRecipe()
 			.AddIngredient(ItemID.Silk, 10)
-			.AddTile(332)
+			.AddTile(TileID.Loom)
 			.Register();
 		}
 	}

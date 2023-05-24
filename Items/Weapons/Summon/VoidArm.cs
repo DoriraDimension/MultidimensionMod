@@ -1,12 +1,10 @@
 ﻿using MultidimensionMod.Projectiles.Summon.Whips;
 using MultidimensionMod.Tiles.Furniture.VoidMatter;
 using MultidimensionMod.Items.Materials;
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.DataStructures;
-using System.Collections.Generic;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Summon
 {
@@ -14,6 +12,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -25,7 +24,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.useAnimation = 15;
 			Item.noUseGraphic = true;
 			Item.noMelee = true;
-			Item.value = Item.sellPrice(silver: 24);
+			Item.value = Item.sellPrice(0, 0, 70, 0);
 			Item.rare = ItemRarityID.Orange;
 			Item.DefaultToWhip(ModContent.ProjectileType<VoidArmProj>(), 37, 6, 20);
 			Item.shootSpeed = 6;
@@ -35,7 +34,6 @@ namespace MultidimensionMod.Items.Weapons.Summon
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddIngredient(ItemID.SwordWhip)
 				.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 10)
 				.AddTile(ModContent.TileType<EmptyKingsFabricatorPlaced>())
 				.Register();

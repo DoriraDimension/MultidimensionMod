@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace MultidimensionMod.Projectiles.Magic
 {
@@ -9,7 +10,6 @@ namespace MultidimensionMod.Projectiles.Magic
 		public override string Texture => "MultidimensionMod/Projectiles/NoTexture";
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Lophiiformes");
 		}
 
 		public override void SetDefaults()
@@ -27,7 +27,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
 			for (int i = 0; i < 15; i++)
 			{
-				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 68, 0f, 0f, 100, default(Color), 2f);
+				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.BlueCrystalShard, 0f, 0f, 100, default(Color), 2f);
 				Main.dust[dustIndex].noGravity = true;
 				Main.dust[dustIndex].alpha = 100;
 			}
@@ -95,7 +95,7 @@ namespace MultidimensionMod.Projectiles.Magic
 			{
 				for (int num477 = 0; num477 < 8; num477++)
 				{
-					int num478 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 68, 0f, 0f, 100, default(Color), 2f);
+					int num478 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.BlueCrystalShard, 0f, 0f, 100, default(Color), 2f);
 					Main.dust[num478].noGravity = true;
 					Dust dust86 = Main.dust[num478];
 					Dust dust2 = dust86;

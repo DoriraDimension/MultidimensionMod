@@ -9,7 +9,6 @@ namespace MultidimensionMod.Projectiles.Melee.Boomerangs
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Injector");
 		}
 
 		public override void SetDefaults()
@@ -27,6 +26,11 @@ namespace MultidimensionMod.Projectiles.Melee.Boomerangs
 		{
 			Projectile.type = ProjectileID.LightDisc;
 			return true;
+		}
+
+		public override void AI()
+        {
+			Projectile.spriteDirection = Projectile.direction;
 		}
 	}
 }

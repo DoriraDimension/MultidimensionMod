@@ -13,7 +13,6 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Dark Blast");
 		}
 
 		public override void SetDefaults()
@@ -25,6 +24,7 @@ namespace MultidimensionMod.Projectiles.Magic
 			Projectile.ignoreWater = true;
 			Projectile.tileCollide = true;
 			Projectile.penetrate = -1;
+			Projectile.usesLocalNPCImmunity = true;
 			Projectile.localNPCHitCooldown = -1;
 		}
 

@@ -1,7 +1,7 @@
-﻿using MultidimensionMod.Items.Placeables;
+﻿using MultidimensionMod.Tiles;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Placeables
@@ -10,8 +10,7 @@ namespace MultidimensionMod.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Broken Ancient Depiction");
-			// Tooltip.SetDefault("A big and heavy sandstone tablet, it seems to be broken and it's difficult to guess what it is showing.\nDont drop it on the ground, its fragile");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -26,15 +25,7 @@ namespace MultidimensionMod.Items.Placeables
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
 			Item.rare = ItemRarityID.White;
-			Item.value = Item.sellPrice(silver: 20);
-			Item.createTile = ModContent.TileType<Tiles.BrokenAncientDepiction>();
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<AncientDepictionItem>())
-			.Register();
+			Item.createTile = ModContent.TileType<BrokenAncientDepiction>();
 		}
 	}
 }

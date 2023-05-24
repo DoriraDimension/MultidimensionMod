@@ -1,13 +1,9 @@
 ﻿using MultidimensionMod.Projectiles.Summon.Whips;
-using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Tiles;
 using MultidimensionMod.Items.Materials;
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.DataStructures;
-using System.Collections.Generic;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Summon
 {
@@ -15,8 +11,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Tendril Whip");
-			// Tooltip.SetDefault("You can maybe eat it later...");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -28,7 +23,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.useAnimation = 23;
 			Item.noUseGraphic = true;
 			Item.noMelee = true;
-			Item.value = Item.sellPrice(silver: 14);
+			Item.value = Item.sellPrice(0, 0, 10, 0);
 			Item.rare = ItemRarityID.Blue;
 			Item.DefaultToWhip(ModContent.ProjectileType<TendrilWhip>(), 12, 1, 2);
 			Item.shootSpeed = 4;

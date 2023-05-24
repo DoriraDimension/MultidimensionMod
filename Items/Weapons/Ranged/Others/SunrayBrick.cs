@@ -1,14 +1,10 @@
 ﻿using MultidimensionMod.Projectiles.Ranged;
-using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Tiles;
-using MultidimensionMod.Rarities;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Others
 {
@@ -16,8 +12,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
-
 
 		public override void SetDefaults()
 		{
@@ -31,7 +27,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 			Item.noMelee = true;
 			Item.knockBack = 10;
 			Item.noUseGraphic = true;
-			Item.value = Item.sellPrice(gold: 8);
+			Item.value = Item.sellPrice(0, 2, 30, 0);
 			Item.rare = ItemRarityID.Lime;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;

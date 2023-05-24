@@ -1,7 +1,7 @@
 using MultidimensionMod.Buffs.Potions;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Potions
@@ -10,8 +10,7 @@ namespace MultidimensionMod.Items.Potions
 	{
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Fucking overpowered super hyper mega ultra extreme hacker potion of absolute death limited edition");
-            // Tooltip.SetDefault("If you buy now, you get nothing for free.");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()
@@ -26,7 +25,7 @@ namespace MultidimensionMod.Items.Potions
             Item.maxStack = 1;
             Item.consumable = true;
             Item.rare = -12;
-            Item.value = Item.sellPrice(platinum: 420);
+            Item.value = Item.sellPrice(9999, 100, 100, 100);
             Item.buffType = ModContent.BuffType<pap>();
             Item.buffTime = 3600000;
         }

@@ -1,8 +1,6 @@
-﻿using MultidimensionMod.Items.Placeables;
+﻿using MultidimensionMod.Dusts;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -22,9 +20,8 @@ namespace MultidimensionMod.Tiles
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();
-			// name.SetDefault("Dimensional Forge");
 			AddMapEntry(new Color(35, 189, 236), name);
-			DustType = 68;
+			DustType = ModContent.DustType<DimensionDust1>();
 			AnimationFrameHeight = 38;
 		}
 
@@ -33,16 +30,11 @@ namespace MultidimensionMod.Tiles
 			num = 5;
 		}
 
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<DimensionalForgeItem>());
-		}
-
 		public override void AnimateTile(ref int frame, ref int frameCounter)
 		{
 
 			frameCounter++;
-			if (frameCounter > 6) //make this number lower/bigger for faster/slower animation
+			if (frameCounter > 6) 
 			{
 				frameCounter = 0;
 				frame++;

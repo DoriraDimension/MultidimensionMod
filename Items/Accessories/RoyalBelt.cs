@@ -1,8 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.Utilities;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -11,6 +10,7 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -18,7 +18,7 @@ namespace MultidimensionMod.Items.Accessories
 			Item.width = 40;
 			Item.height = 30;
 			Item.accessory = true;
-			Item.value = Item.sellPrice(silver: 5);
+			Item.value = Item.sellPrice(0, 0, 50, 0);
 			Item.rare = ItemRarityID.Blue;
 			Item.defense = 3;
 		}

@@ -1,9 +1,9 @@
 ﻿using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Projectiles.Melee.Swords;
 using MultidimensionMod.Tiles.Furniture.VoidMatter;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -11,20 +11,21 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
 			Item.damage = 61;
 			Item.DamageType = DamageClass.Melee;
+			Item.useStyle = ItemUseStyleID.Swing;
 			Item.width = 62;
 			Item.height = 86;
-			Item.useTime = 32;
-			Item.useAnimation = 32;
+			Item.useTime = 34;
+			Item.useAnimation = 34;
 			Item.knockBack = 8;
-			Item.value = Item.sellPrice(silver: 23);
+			Item.value = Item.sellPrice(0, 0, 56, 0);
 			Item.rare = ItemRarityID.Orange;
-			Item.shootSpeed = 5f;
 			Item.autoReuse = true;
 			Item.UseSound = SoundID.Item1;
 		}

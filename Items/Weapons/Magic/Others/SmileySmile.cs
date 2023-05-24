@@ -1,12 +1,8 @@
 ﻿using MultidimensionMod.Projectiles.Magic;
-using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Tiles;
-using MultidimensionMod.Rarities;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Others
 {
@@ -14,8 +10,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Smiley's Dark Blast");
-			// Tooltip.SetDefault("A smiling stare.\nShoots dark energy beams that explode on hit");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -30,7 +25,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.noMelee = true;
 			Item.mana = 5;
 			Item.knockBack = 1;
-			Item.value = Item.sellPrice(gold: 1);
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Orange;
 			Item.UseSound = SoundID.DD2_SonicBoomBladeSlash;
 			Item.autoReuse = true;

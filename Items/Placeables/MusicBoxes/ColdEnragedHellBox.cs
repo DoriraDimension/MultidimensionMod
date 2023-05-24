@@ -1,6 +1,7 @@
 ﻿using MultidimensionMod.Tiles.MusicBoxes;
 using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Placeables.MusicBoxes
 {
@@ -9,6 +10,7 @@ namespace MultidimensionMod.Items.Placeables.MusicBoxes
 		public override void SetStaticDefaults()
 		{
 			MusicLoader.AddMusicBox(Mod, MusicLoader.GetMusicSlot(Mod, "Sounds/Music/FrozenUnderworld2"), ModContent.ItemType<ColdEnragedHellBox>(), ModContent.TileType<ColdEnragedHellBoxPlaced>());
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -23,7 +25,6 @@ namespace MultidimensionMod.Items.Placeables.MusicBoxes
 			Item.width = 32;
 			Item.height = 30;
 			Item.rare = ItemRarityID.LightRed;
-			Item.value = 0;
 			Item.accessory = true;
 		}
 	}

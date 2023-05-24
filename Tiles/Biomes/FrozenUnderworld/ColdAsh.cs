@@ -1,5 +1,4 @@
-﻿using MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -12,13 +11,12 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 		{
 			Main.tileSolid[Type] = true;
 			Main.tileBlockLight[Type] = true;
-			ItemDrop = ModContent.ItemType<ColdAshItem>();
 			AddMapEntry(new Color(200, 200, 200));
-			Main.tileMerge[Type][TileID.Ash] = true;
-			Main.tileMerge[TileID.Ash][Type] = true;
 			Main.tileMerge[Type][ModContent.TileType<AbyssalHellstonePlaced>()] = true;
+			Main.tileMerge[Type][ModContent.TileType<AbyssalHellstoneBrickPlaced>()] = true;
 			Main.tileMerge[Type][ModContent.TileType<SolidMagmaPlaced>()] = true;
 			Main.tileMerge[Type][ModContent.TileType<GlazedObsidianBrickPlaced>()] = true;
+			DustType = DustID.Snow;
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)

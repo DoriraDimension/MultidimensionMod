@@ -1,9 +1,9 @@
 ﻿using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 {
@@ -11,8 +11,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Bone Shottie");
-			// Tooltip.SetDefault("Spooky Scary Shotgun.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -26,11 +25,11 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 4;
-			Item.value = Item.sellPrice(silver: 10);
+			Item.value = Item.sellPrice(0, 0, 10, 0);
 			Item.rare = ItemRarityID.Orange;
 			Item.UseSound = SoundID.Item38;
 			Item.autoReuse = true;
-			Item.shoot = 10;
+			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 11f;
 			Item.useAmmo = AmmoID.Bullet;
 		}
@@ -44,7 +43,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 		{
 			CreateRecipe()
 			.AddIngredient(ItemID.Bone, 34)
-			.AddTile(300)
+			.AddTile(TileID.BoneWelder)
 			.Register();
 		}
 

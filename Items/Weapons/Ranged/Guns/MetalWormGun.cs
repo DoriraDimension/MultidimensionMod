@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.Audio;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 {
@@ -12,8 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Handheld Destroyer");
-			// Tooltip.SetDefault("The rotten flesh fell off and it evolved to take on the place of the Destroyer.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -27,10 +27,10 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 4;
-			Item.value = Item.sellPrice(gold: 3);
+			Item.value = Item.sellPrice(0, 3, 0, 0);
 			Item.rare = ItemRarityID.Pink;
 			Item.autoReuse = true;
-			Item.shoot = 10;
+			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 30f;
 			Item.useAmmo = AmmoID.Bullet;
 			Item.crit = 15;
@@ -52,7 +52,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<SnipeWorm>())
 			.AddIngredient(ItemID.SoulofMight, 12)
-			.AddTile(134)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 

@@ -1,9 +1,7 @@
 ﻿using MultidimensionMod.Rarities;
 using Terraria;
-using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.Utilities;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items
 {
@@ -11,6 +9,7 @@ namespace MultidimensionMod.Items
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()

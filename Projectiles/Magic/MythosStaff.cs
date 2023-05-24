@@ -14,7 +14,6 @@ namespace MultidimensionMod.Projectiles.Magic
 		public int ringTimer = 0;
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Lightstream Mythos");
 		}
 
 		public override void SetDefaults()
@@ -34,7 +33,7 @@ namespace MultidimensionMod.Projectiles.Magic
 		public override void Kill(int timeLeft)
 		{
 			Player player = Main.player[Projectile.owner];
-			if (ringTimer == 600)
+			if (ringTimer > 600)
 			{
 				player.statLife += 10;
 			}
@@ -66,9 +65,9 @@ namespace MultidimensionMod.Projectiles.Magic
 				SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), Projectile.position);
 				Projectile.NewProjectile(Projectile.GetSource_FromThis(), player.Center.X, player.Center.Y, 0f, 0f, ModContent.ProjectileType<MythosRing2>(), (int)((double)((float)Projectile.damage) * 0.5), 0f, Main.myPlayer);
 			}
-			if (ringTimer > 600)
+			if (ringTimer > 601)
             {
-				ringTimer = 600;
+				ringTimer = 601;
             }
 		}
 	}

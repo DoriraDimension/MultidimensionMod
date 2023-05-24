@@ -31,7 +31,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 		{
 			for (int i = 0; i < 1; i++)
 			{
-				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 5, 0f, 0f, 100, default(Color), 2f); //blood
+				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Blood, 0f, 0f, 100, default(Color), 2f); //blood
 				Main.dust[dustIndex].velocity *= 1.4f;
 			}
 		}

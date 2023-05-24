@@ -1,15 +1,11 @@
 ﻿using MultidimensionMod.Projectiles.Magic;
-using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Tiles;
-using MultidimensionMod.Rarities;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
-using Terraria.Audio;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 {
@@ -17,6 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -31,7 +28,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 			Item.useAnimation = 18;
 			Item.autoReuse = true;
 			Item.useStyle = ItemUseStyleID.Shoot;
-			Item.value = Item.sellPrice(silver: 10);
+			Item.value = Item.sellPrice(0, 3, 0, 0);
 			Item.rare = ItemRarityID.Yellow;
 			Item.UseSound = SoundID.Item9;
 			Item.noMelee = true;

@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 {
@@ -12,8 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Antlion Mandible Bow");
-			// Tooltip.SetDefault("A bow that was restored from old relics, its is made of Antlion Mandibles.\nShoots two Mandibles.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -27,11 +27,11 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 2;
-			Item.value = Item.sellPrice(silver: 34);
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item5;
 			Item.autoReuse = true;
-			Item.shoot = 10;
+			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 8f;
 			Item.useAmmo = AmmoID.Arrow;
 			Item.crit = 2;
@@ -53,7 +53,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<OldDustyBow>())
 			.AddIngredient(ItemID.AntlionMandible, 2)
-			.AddTile(377)
+			.AddTile(TileID.SharpeningStation)
 			.Register();
 		}
 	}

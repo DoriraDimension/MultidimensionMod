@@ -3,6 +3,7 @@ using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 {
@@ -10,8 +11,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Dune Chaser");
-			// Tooltip.SetDefault("Old desert magic used by ancient magicians, it shoots a bouncing ball of sand.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -26,7 +26,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 2;
-			Item.value = Item.sellPrice(silver: 12);
+			Item.value = Item.sellPrice(0, 0, 60, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item20;
 			Item.autoReuse = true;
@@ -41,7 +41,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 			.AddIngredient(ModContent.ItemType<ManaInfusedSandstone>(), 5)
 			.AddIngredient(ItemID.SandBlock, 25)
 			.AddIngredient(ItemID.AntlionMandible, 2)
-			.AddTile(16)
+			.AddTile(TileID.Anvils)
 			.Register();
 		}
 	}

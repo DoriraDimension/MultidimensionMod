@@ -67,7 +67,6 @@ namespace MultidimensionMod.Projectiles.Typeless
 			{
 				if (Projectile.owner == Main.myPlayer)
 				{
-					int stack = 20;
 					int choice = Main.rand.Next(5);
 					if (choice == 0)
 					{

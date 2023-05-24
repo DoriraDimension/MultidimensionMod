@@ -1,9 +1,8 @@
 ﻿using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.Utilities;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -12,6 +11,7 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -19,8 +19,8 @@ namespace MultidimensionMod.Items.Accessories
 			Item.width = 48;
 			Item.height = 48;
 			Item.accessory = true;
-			Item.value = Item.sellPrice(gold: 4);
-			Item.rare = ItemRarityID.Pink;
+			Item.value = Item.sellPrice(0, 3, 0, 0);
+			Item.rare = ItemRarityID.Yellow;
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
@@ -34,8 +34,8 @@ namespace MultidimensionMod.Items.Accessories
 			CreateRecipe()
 			.AddIngredient(ItemID.MagicQuiver)
 			.AddIngredient(ItemID.RangerEmblem)
-			.AddIngredient(ModContent.ItemType<Blight2>(), 2)
-			.AddTile(134)
+			.AddIngredient(ModContent.ItemType<Prismatine>(), 3)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 	}

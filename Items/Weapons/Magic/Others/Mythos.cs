@@ -1,14 +1,10 @@
-﻿using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Tiles;
-using MultidimensionMod.Projectiles.Magic;
-using MultidimensionMod.Rarities;
-using System.Collections.Generic;
+﻿using MultidimensionMod.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Others
 {
@@ -16,6 +12,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -29,7 +26,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.knockBack = 4.5f;
 			Item.width = 80;
 			Item.height = 38;
-			Item.value = Item.sellPrice(gold: 1);
+			Item.value = Item.sellPrice(0, 4, 0, 0);
 			Item.noMelee = true;
 			Item.noUseGraphic = true;
 			Item.channel = true;

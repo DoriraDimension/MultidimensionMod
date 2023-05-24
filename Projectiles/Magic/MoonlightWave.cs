@@ -11,7 +11,6 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Moonlight Wave");
 		}
 
 		public override void SetDefaults()
@@ -24,6 +23,7 @@ namespace MultidimensionMod.Projectiles.Magic
 			Projectile.tileCollide = false;
 			Projectile.light = 1.8f;
 			Projectile.hide = false;
+			Projectile.penetrate = -1;
 		}
 
 		public override void Kill(int timeLeft)

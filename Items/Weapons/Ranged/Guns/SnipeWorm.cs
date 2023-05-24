@@ -1,10 +1,8 @@
-﻿using System.Collections.Generic;
-using MultidimensionMod.Items.Materials;
+﻿using MultidimensionMod.Items.Materials;
 using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
-using Terraria.Localization;
-using Terraria.DataStructures;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Guns
@@ -13,8 +11,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Snipe Worm");
-			// Tooltip.SetDefault("A sniper rifle that was restored from old relics, it has rotten skin around its metal.\nConverts normal bullets into Cursed Bullets.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -28,11 +25,11 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 4;
-			Item.value = Item.sellPrice(silver: 23);
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item11;
 			Item.autoReuse = true;
-			Item.shoot = 10;
+			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 30f;
 			Item.useAmmo = AmmoID.Bullet;
 			Item.crit = 10;
@@ -48,7 +45,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<OldTaintedGun>())
 			.AddIngredient(ItemID.ShadowScale, 20)
-			.AddTile(377)
+			.AddTile(TileID.SharpeningStation)
 			.Register();
 		}
 	}

@@ -1,10 +1,10 @@
 ﻿using MultidimensionMod.Rarities;
-using System.Collections.Generic;
+using MultidimensionMod.Tiles.Ores;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Materials
@@ -13,6 +13,7 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 30;
 		}
 
 		public override void SetDefaults()
@@ -27,7 +28,7 @@ namespace MultidimensionMod.Items.Materials
 			Item.useTime = 10;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
-			Item.createTile = ModContent.TileType<Tiles.Ores.Dimensium>();
+			Item.createTile = ModContent.TileType<DimensiumPlaced>();
 		}
 
 		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)

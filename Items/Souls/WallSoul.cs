@@ -1,10 +1,10 @@
 ﻿using MultidimensionMod.Rarities.Souls;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Souls
 {
@@ -12,8 +12,7 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Soul of the Underworld");
-			// Tooltip.SetDefault("Ages ago the race of the underworld with great help of another race, captured and contained the forces of light and darkness.\nIn this world, neither light nor darkness are good or bad, but both forces possessed too much power over this place,\nthey were always conflicting with eachother which had influence on the world around them,\ncontaining them got rid of these problems but now you unleashed them again... make sure you are prepared.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
 			ItemID.Sets.ItemNoGravity[Item.type] = true;
 		}

@@ -6,6 +6,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 {
 	public class DuskBringerProj : ModProjectile
 	{
+		public int Crescent = 0;
 		protected virtual float HoldoutRangeMin => 24f;
 		protected virtual float HoldoutRangeMax => 165f;
 		public override void SetStaticDefaults()
@@ -58,6 +59,19 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 
 			// Move the projectile from the HoldoutRangeMin to the HoldoutRangeMax and back, using SmoothStep for easing the movement
 			Projectile.Center = player.MountedCenter + Vector2.SmoothStep(Projectile.velocity * HoldoutRangeMin, Projectile.velocity * HoldoutRangeMax, progress);
+
+			if (Projectile.timeLeft < halfDuration)
+            {
+				Crescent++;
+			}
+			if (Crescent == 1)
+            {
+				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity * 3, ModContent.ProjectileType<DuskCrescent>(), (int)((double)((float)Projectile.damage) * 0.8f), 0f, Main.myPlayer);
+			}
+			if (Crescent > 2)
+            {
+				Crescent = 2;
+            }
 
 			// Apply proper rotation to the sprite.
 			if (Projectile.spriteDirection == -1)

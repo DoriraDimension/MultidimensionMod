@@ -6,6 +6,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 {
@@ -13,9 +14,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Storm Scepter");
-			// Tooltip.SetDefault("Call forth a shower from the sky.\nRains Storm Droplets from above the mouse cursor");
 			Item.staff[Item.type] = true;
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -30,8 +30,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			Item.knockBack = 1f;
 			Item.DamageType = DamageClass.Magic;
 			Item.noMelee = true;
-			Item.value = Item.sellPrice(gold: 1);
-			Item.rare = ItemRarityID.Lime;
+			Item.value = Item.sellPrice(0, 4, 0, 0);
+			Item.rare = ItemRarityID.Yellow;
 			Item.mana = 7;
 			Item.shoot = ModContent.ProjectileType<StormDroplet>();
 			Item.shootSpeed = 20f;
@@ -47,7 +47,6 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			float num71 = (float)Main.mouseY + Main.screenPosition.Y - position.Y;
 			float num72 = (float)Math.Sqrt(num70 * num70 + num71 * num71);
 			float ai2 = num71 + position.Y;
-			int num99 = 5;
 				position = new Vector2(player.position.X + (float)player.width * 0.5f + (float)(Main.rand.Next(201) * -player.direction) + ((float)Main.mouseX + Main.screenPosition.X - player.position.X), player.MountedCenter.Y - 600f);
 				position.X = (position.X + player.Center.X) / 2f + (float)Main.rand.Next(-200, 201);
 				num70 = (float)Main.mouseX + Main.screenPosition.X - position.X;

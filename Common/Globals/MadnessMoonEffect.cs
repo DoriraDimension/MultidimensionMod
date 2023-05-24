@@ -10,7 +10,7 @@ namespace MultidimensionMod.Common.Globals
 {
     public class MadnessMoonEffect : ModSceneEffect
     {
-        public override int Music => MusicLoader.GetMusicSlot("AAMod/Sounds/Music/DreadMoon");
+        public override int Music => MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Madness");
         public override SceneEffectPriority Priority => SceneEffectPriority.Event;
         public override void SpecialVisuals(Terraria.Player player, bool isActive)
         {

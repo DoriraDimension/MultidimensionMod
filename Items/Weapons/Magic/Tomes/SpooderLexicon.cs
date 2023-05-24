@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 {
@@ -11,8 +12,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Arachnophobia");
-			// Tooltip.SetDefault("An entire book on how to defeat the fear of spiders, wait... WHY ARE THERE SPIDERS IN THIS BOOK?!\nShoots homing spiders and rarely a high velocity Albino Spider that deals double damage.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -27,7 +27,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 2;
-			Item.value = Item.sellPrice(silver: 12);
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item83;
 			Item.autoReuse = true;

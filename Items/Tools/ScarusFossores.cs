@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Tools
 {
@@ -9,8 +10,7 @@ namespace MultidimensionMod.Items.Tools
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Scarus Fossores");
-			// Tooltip.SetDefault("A pickaxe created from old blueprints found at the shores. The ancient depictions show it being used to carve out holes from reefs.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -36,7 +36,7 @@ namespace MultidimensionMod.Items.Tools
 			 CreateRecipe()
 			.AddIngredient(ModContent.ItemType<TidalQuartz>(), 5)
 			.AddIngredient(ItemID.HallowedBar, 12)
-			.AddTile(134)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 	}

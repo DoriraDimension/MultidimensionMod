@@ -1,13 +1,11 @@
 ﻿using MultidimensionMod.Buffs.Minions;
-using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Projectiles.Summon.Minions;
-using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Tiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Summon
 {
@@ -15,8 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Terror Nest");
-			// Tooltip.SetDefault("Summons a killer bee that grows sawblades when enemies are spotted.\nA rare bee species, adapted to hunt and kill prey.\nTheir honey contains special pollen that gives it a bloodred color, totally not the blood of their victims...");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true;
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
 		}
@@ -32,7 +29,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.useTime = 36;
 			Item.useAnimation = 36;
 			Item.useStyle = ItemUseStyleID.Shoot;
-			Item.value = Item.sellPrice(gold: 4);
+			Item.value = Item.sellPrice(0, 0, 90, 0);
 			Item.rare = ItemRarityID.LightRed;
 			Item.UseSound = SoundID.Item97;
 			Item.noMelee = true;

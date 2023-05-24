@@ -16,11 +16,10 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 		{
 			Main.tileSolid[Type] = true;
 			Main.tileBlockLight[Type] = true;
-			ItemDrop = ModContent.ItemType<VoidMatterMass>();
 			AddMapEntry(new Color(25, 19, 39));
 			Main.tileMergeDirt[Type] = true;
 			DustType = ModContent.DustType<DarkDust>();
-			HitSound = VoidMatterMassPlaced.MineSound;
+			HitSound = MineSound;
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)

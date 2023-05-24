@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Spears
 {
@@ -9,8 +10,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Winged Annoyance");
-			// Tooltip.SetDefault("Annoy your enemies until they go away.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -25,7 +25,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 			Item.height = 56;
 			Item.scale = 1f;
 			Item.rare = ItemRarityID.Blue;
-			Item.value = Item.sellPrice(silver: 2);
+			Item.value = Item.sellPrice(0, 0, 30, 0);
 			Item.DamageType = DamageClass.Melee;
 			Item.noMelee = true;
 			Item.noUseGraphic = true;

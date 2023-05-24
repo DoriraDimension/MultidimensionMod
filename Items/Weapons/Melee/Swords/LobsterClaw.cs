@@ -1,6 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -8,8 +9,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Lobster Claw");
-			// Tooltip.SetDefault("The claw of a Parrot Lobster, it's shiny.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -23,7 +23,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 1;
 			Item.autoReuse = true;
-			Item.value = Item.sellPrice(copper: 50);
+			Item.value = Item.sellPrice(0, 0, 40, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item1;
 		}

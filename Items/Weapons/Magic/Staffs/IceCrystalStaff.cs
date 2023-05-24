@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 {
@@ -12,9 +13,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Ice Crystal Staff");
-			// Tooltip.SetDefault("A staff that was restored from old relics, it shoots 3 icicles that burst into smaller icicles.");
 			Item.staff[Item.type] = true;
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 
@@ -30,7 +30,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 2;
-			Item.value = Item.sellPrice(silver: 90);
+			Item.value = Item.sellPrice(0, 2, 20, 0);
 			Item.rare = ItemRarityID.LightRed;
 			Item.UseSound = SoundID.Item20;
 			Item.autoReuse = true;
@@ -57,8 +57,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<CoolingStaff>())
 			.AddIngredient(ItemID.FrostCore)
-			.AddIngredient(ModContent.ItemType<IceblossomItem>(), 2)
-			.AddTile(134)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 	}

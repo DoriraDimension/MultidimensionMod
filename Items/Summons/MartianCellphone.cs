@@ -1,6 +1,6 @@
 ﻿using Terraria;
 using Terraria.ID;
-using Terraria.Audio;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Summons
@@ -9,18 +9,17 @@ namespace MultidimensionMod.Items.Summons
 	{
 		public override void SetStaticDefaults()
 		{
-			// base.DisplayName.SetDefault("Martian Cellphone");
-			// base.Tooltip.SetDefault("A cell phone with strange symbols on it, theres a phone number on the screen, call it?\nCalls the Martians.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
 			Item.width = 20;
 			Item.height = 32;
-			Item.rare = 8;
+			Item.rare = ItemRarityID.Yellow;
 			Item.useAnimation = 45;
 			Item.useTime = 45;
-			Item.useStyle = 4;
+			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.UseSound = SoundID.NPCHit39;
 		}
 
@@ -38,10 +37,10 @@ namespace MultidimensionMod.Items.Summons
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddRecipeGroup("AdamantiteBars", 8)
+			.AddRecipeGroup(Recipes.Adamantitanium, 8)
 			.AddIngredient(ItemID.LihzahrdPowerCell)
 			.AddIngredient(ItemID.Nanites, 36)
-			.AddTile(134)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 	}

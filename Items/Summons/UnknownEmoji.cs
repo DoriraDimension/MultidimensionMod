@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Audio;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Summons
 {
@@ -12,6 +13,7 @@ namespace MultidimensionMod.Items.Summons
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.SortingPriorityBossSpawns[Item.type] = 13;
 		}
 

@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.ToolsEnviromentChange
 {
@@ -12,8 +13,7 @@ namespace MultidimensionMod.Items.ToolsEnviromentChange
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Celestial Lepidoptera");
-			// Tooltip.SetDefault("A artifact shaped after the celestial deity of balance.\nCan be used to change day to night and vice versa.\nWhen needed the goddess sisters can combine their powers to create a energy projection resembling a giant purple colored goddess.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -23,14 +23,14 @@ namespace MultidimensionMod.Items.ToolsEnviromentChange
 			Item.rare = ItemRarityID.LightRed;
 			Item.useAnimation = 20;
 			Item.useTime = 20;
-			Item.useStyle = 4;
+			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.UseSound = SoundID.Item60;
 			Item.consumable = false;
 		}
 
 		public override bool? UseItem(Player player)
 		{
-			if (Main.netMode != 1 && Main.dayTime)
+			if (Main.netMode != NetmodeID.MultiplayerClient && Main.dayTime)
 			{
 				Main.dayTime = false;
 				Main.time = 0.0;

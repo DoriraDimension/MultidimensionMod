@@ -37,8 +37,6 @@ namespace MultidimensionMod.Common.Players
         public int MadnessTimer;
         public int MadnessCringe;
         public bool CalmMind;
-        public bool RoseScarf = false;
-        public bool RoseVenom = false;
         public bool DrakePoison = false;
         public bool NeroSet = false;
 
@@ -57,8 +55,6 @@ namespace MultidimensionMod.Common.Players
             ExplorerEye = false;
             Geodes = false;
             Madness = false;
-            RoseScarf = false;
-            RoseVenom = false;
             DrakePoison = false;
             NeroSet = false;
         }
@@ -229,13 +225,7 @@ namespace MultidimensionMod.Common.Players
 
         public override void ProcessTriggers(TriggersSet triggersSet)
         {
-            //Inflicts the Rose Venom debuff on the player when they press the bound key
             Player player = Main.LocalPlayer;
-            if (MDKeybinds.RoseScarfKey.JustPressed && RoseScarf && !player.HasBuff(ModContent.BuffType<RoseVenom>()))
-            {
-                Player.AddBuff(ModContent.BuffType<RoseVenom>(), 900);
-                SoundEngine.PlaySound(SoundID.Item170, player.Center);
-            }
             int sentry = ModContent.ProjectileType<NeroConstruct>();
             if (MDKeybinds.ArmorAbility.JustPressed && NeroSet && player.ownedProjectileCounts[sentry] <= 0)
             {

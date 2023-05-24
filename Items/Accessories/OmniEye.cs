@@ -6,6 +6,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -13,6 +14,7 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -20,7 +22,7 @@ namespace MultidimensionMod.Items.Accessories
 			Item.width = 40;
 			Item.height = 38;
 			Item.accessory = true;
-			Item.value = Item.sellPrice(silver: 5);
+			Item.value = Item.sellPrice(0, 3, 0, 0);
 			Item.rare = ItemRarityID.LightRed;
 		}
 
@@ -47,7 +49,7 @@ namespace MultidimensionMod.Items.Accessories
 				 SoundEngine.PlaySound(SoundID.DD2_EtherianPortalIdleLoop, Item.position);
 				 SoundEngine.PlaySound(SoundID.DD2_BetsyDeath, Item.position);
 			 })
-			.AddTile(26)
+			.AddTile(TileID.DemonAltar)
 			.Register();
 		}
 

@@ -1,8 +1,6 @@
-﻿using MultidimensionMod.Tiles.Biomes.FrozenUnderworld;
-using MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld;
+﻿using MultidimensionMod.Rarities;
 using Terraria;
-using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Materials
@@ -11,6 +9,7 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
 		}
 
 		public override void SetDefaults()
@@ -18,10 +17,8 @@ namespace MultidimensionMod.Items.Materials
 			Item.width = 22;
 			Item.height = 34;
 			Item.maxStack = 9999;
-		}
-
-		public override void AddRecipes()
-		{
+			Item.rare = ModContent.RarityType<AseGneblessaArtifact>();
+			Item.value = Item.sellPrice(0, 0, 10, 0);
 		}
 	}
 }

@@ -1,7 +1,7 @@
-﻿using MultidimensionMod.Buffs.Potions;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Potions
 {
@@ -9,8 +9,7 @@ namespace MultidimensionMod.Items.Potions
     {
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("KFC");
-            // Tooltip.SetDefault("Kevin's Fried Chicken.");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()
@@ -25,8 +24,8 @@ namespace MultidimensionMod.Items.Potions
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.rare = ItemRarityID.Green;
-            Item.value = Item.sellPrice(silver: 10);
-            Item.buffType = (BuffID.WellFed);
+            Item.value = Item.sellPrice(0, 0, 10, 0);
+            Item.buffType = BuffID.WellFed;
             Item.buffTime = 7200;
         }
     }

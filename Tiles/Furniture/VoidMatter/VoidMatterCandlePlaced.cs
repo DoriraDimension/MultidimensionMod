@@ -27,7 +27,6 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
             AdjTiles = new int[] { TileID.Candles };
             DustType = ModContent.DustType<DarkDust>();
-            ItemDrop = ModContent.ItemType<VoidMatterCandle>();
         }
 
         public override void NumDust(int i, int j, bool fail, ref int num)

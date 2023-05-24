@@ -1,10 +1,10 @@
 ﻿using MultidimensionMod.Rarities.Souls;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Souls
 {
@@ -12,8 +12,7 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Soul of the World Eater");
-			// Tooltip.SetDefault("A giant worm, responsible for the chasms in the corruption.\nThis creature might be named Eater of Worlds but it never actually consumed anything that size,\nit might got its name because of its size and habit to devour anything it finds.\nThe existence of this creature shows the potential of the corruption.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
 			ItemID.Sets.ItemNoGravity[Item.type] = true;
 		}

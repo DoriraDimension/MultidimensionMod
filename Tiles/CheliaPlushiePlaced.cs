@@ -1,7 +1,5 @@
-﻿using MultidimensionMod.Items.Placeables;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -21,14 +19,8 @@ namespace MultidimensionMod.Tiles
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();
-			// name.SetDefault("Chelia Plushie");
 			AddMapEntry(new Color(225, 71, 173), name);
 			DustType = 228;
-		}
-
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<CheliaPlushie>());
 		}
 	}
 }

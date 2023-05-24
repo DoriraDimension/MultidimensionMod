@@ -1,6 +1,6 @@
 ﻿using Terraria.ModLoader;
 using Terraria;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ID;
 
 namespace MultidimensionMod.Items.Materials
@@ -9,6 +9,7 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
 		}
 
 		public override void SetDefaults()
@@ -16,13 +17,14 @@ namespace MultidimensionMod.Items.Materials
 			Item.maxStack = 9999;
 			Item.width = 12;
 			Item.height = 14;
-			Item.value = 80;
+			Item.value = Item.sellPrice(0, 0, 0, 20);
+			Item.rare = ItemRarityID.White;
 			Item.useStyle = ItemUseStyleID.EatFood;
 			Item.useAnimation = 15;
 			Item.useTime = 15;
 			Item.UseSound = SoundID.Item2;
 			Item.consumable = true;
-			Item.buffType = (47); //Frozen
+			Item.buffType = 47; //Frozen
 			Item.buffTime = 900;
 		}
 	}

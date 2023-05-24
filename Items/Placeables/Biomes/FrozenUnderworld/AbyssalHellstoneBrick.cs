@@ -1,7 +1,7 @@
 ﻿using MultidimensionMod.Tiles.Biomes.FrozenUnderworld;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
@@ -10,8 +10,7 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Abyssal Hellstone Brick");
-			// Tooltip.SetDefault("what the brick.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
 		}
 
 		public override void SetDefaults()
@@ -25,15 +24,16 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 			Item.useTime = 10;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
+			Item.rare = ItemRarityID.White;
 			Item.createTile = ModContent.TileType<AbyssalHellstoneBrickPlaced>();
 		}
 
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ItemID.HellstoneBrick)
-			.AddIngredient(ItemID.IceBrick)
-			.AddTile(TileID.IceMachine)
+			.AddIngredient(ModContent.ItemType<AbyssalHellstone>())
+			.AddIngredient(ItemID.StoneBlock, 5)
+			.AddTile(TileID.Furnaces)
 			.Register();
 		}
 	}

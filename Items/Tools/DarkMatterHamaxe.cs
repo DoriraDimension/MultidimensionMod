@@ -3,6 +3,7 @@ using MultidimensionMod.Tiles.Furniture.VoidMatter;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Tools
 {
@@ -10,8 +11,7 @@ namespace MultidimensionMod.Items.Tools
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Void Matter Axe");
-			// Tooltip.SetDefault("A void matter axe that could cut down dark trees if they existed.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()

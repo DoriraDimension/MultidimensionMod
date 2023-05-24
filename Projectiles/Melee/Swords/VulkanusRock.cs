@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Volcanic Rock");
+
 		}
 
 		public override void SetDefaults()
@@ -25,6 +25,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			Projectile.tileCollide = true;
 			Projectile.hide = false;
 			Projectile.timeLeft = 300;
+			Projectile.ownerHitCheck = true;
 		}
 
 		public override void AI()
@@ -66,7 +67,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 		{
 			SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
 
-			int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 6, 0f, 0f, 69, default(Color), 2f);
+			int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.CrimsonTorch, 0f, 0f, 69, default(Color), 2f);
 			Main.dust[dustIndex].velocity *= 1.4f;
 		}
 

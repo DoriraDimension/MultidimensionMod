@@ -33,9 +33,8 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 
             MinPick = 10;
             MineResist = 0.1f;
-            DustType = DustID.Smoke;
+            DustType = DustID.Snow;
             HitSound = SoundID.Dig;
-            ItemDrop = ModContent.ItemType<ColdAshItem>();
         }
 
         public override void NumDust(int i, int j, bool fail, ref int num)

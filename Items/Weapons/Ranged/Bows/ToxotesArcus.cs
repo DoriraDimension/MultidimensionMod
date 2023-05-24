@@ -1,9 +1,11 @@
 ﻿using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Projectiles.Ranged;
 using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 {
@@ -12,8 +14,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 		public int WaveShot = 0;
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Toxotes Arcus");
-			// Tooltip.SetDefault("A bow created from old blueprints found at the shores. The ancient depictions show it being used to hunt ocean creatures for food.\nShoots a burst of 4 arrows.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -28,11 +29,11 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 3;
-			Item.value = Item.sellPrice(gold: 1);
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Yellow;
 			Item.UseSound = SoundID.Item5;
 			Item.autoReuse = true;
-			Item.shoot = 10;
+			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 25f;
 			Item.useAmmo = AmmoID.Arrow;
 			Item.crit = 9;
@@ -45,7 +46,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 			int nah = Projectile.NewProjectile(source, position.X, position.Y, velocity.X, velocity.Y, type, damage, knockback, player.whoAmI);
 			Main.projectile[nah].noDropItem = true;
 
-			if (WaveShot == 3)
+			if (WaveShot == 6)
             {
 				float rotation = MathHelper.ToRadians(15);
 
@@ -54,7 +55,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 				for (int i = 0; i < 2; i++)
 				{
 					Vector2 perturbedSpeed = velocity.RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (2 - 1))) * .2f;
-					Projectile.NewProjectile(source, position, perturbedSpeed, ProjectileID.WaterBolt, damage, knockback, player.whoAmI);
+					Projectile.NewProjectile(source, position, perturbedSpeed, ModContent.ProjectileType<TideArrowProj>(), damage, knockback, player.whoAmI);
 				}
 				return false;
 			}
@@ -64,7 +65,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 		public override bool? UseItem(Player player)
 		{
 			WaveShot += 1;
-			if (WaveShot >= 4)
+			if (WaveShot >= 7)
 			{
 				WaveShot = 0;
 			}
@@ -77,7 +78,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 			.AddIngredient(ModContent.ItemType<CoralBow>())
 			.AddIngredient(ModContent.ItemType<TidalQuartz>(), 6)
 			.AddIngredient(ItemID.HallowedBar, 13)
-			.AddTile(134)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 	}

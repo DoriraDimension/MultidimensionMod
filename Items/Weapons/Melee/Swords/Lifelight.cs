@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -12,8 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Lifelight");
-			// Tooltip.SetDefault("The awakened form of the Light's Bane that shows that even the most evil being can become good.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -22,11 +22,11 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 50;
 			Item.height = 50;
-			Item.useTime = 24;
-			Item.useAnimation = 24;
+			Item.useTime = 19;
+			Item.useAnimation = 19;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 3;
-			Item.value = Item.sellPrice(silver: 46);
+			Item.value = Item.sellPrice(0, 0, 46, 0);
 			Item.rare = ItemRarityID.Orange;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
@@ -38,8 +38,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		{
 			if (Main.rand.NextBool(5))
 			{
-				Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, (14));
-				Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, (57));
+				Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.Demonite);
+				Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.Enchanted_Gold);
 			}
 		}
 

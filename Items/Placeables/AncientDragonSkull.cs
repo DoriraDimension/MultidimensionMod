@@ -1,6 +1,7 @@
-﻿using Terraria;
+﻿using MultidimensionMod.Tiles;
+using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Placeables
@@ -9,8 +10,7 @@ namespace MultidimensionMod.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Ancient Dragon Skull");
-			// Tooltip.SetDefault("A dragon skull from old times, it is no longer cursed.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -24,9 +24,9 @@ namespace MultidimensionMod.Items.Placeables
 			Item.useTime = 10;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
-			Item.rare = ItemRarityID.Orange;
-			Item.value = Item.sellPrice(gold: 1);
-			Item.createTile = ModContent.TileType<Tiles.AncientDragonSkullPlaced>();
+			Item.rare = ItemRarityID.White;
+			Item.value = Item.sellPrice(0, 1, 0, 0);
+			Item.createTile = ModContent.TileType<AncientDragonSkullPlaced>();
 		}
 	}
 }

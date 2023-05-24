@@ -1,16 +1,16 @@
 using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 {
 	public class DeltaShark : ModItem
 	{
-		public override void SetStaticDefaults() {
-			// DisplayName.SetDefault("Delta Shark");
-			// Tooltip.SetDefault("65% chance to not consume ammo.\nA small juvenile robotic shark, watch out for his parents.");
+		public override void SetStaticDefaults() 
+		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults() {
@@ -23,11 +23,11 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			Item.useStyle = ItemUseStyleID.Shoot; 
 			Item.noMelee = true; 
 			Item.knockBack = 2;
-			Item.value = Item.sellPrice(gold: 2);
+			Item.value = Item.sellPrice(0, 5, 0, 0);
 			Item.rare = ItemRarityID.Cyan;
 			Item.UseSound = SoundID.Item11; 
 			Item.autoReuse = true;
-			Item.shoot = 20;
+			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 10f; 
 			Item.useAmmo = AmmoID.Bullet;
 			Item.crit = 12;
@@ -53,7 +53,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 
 		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
 		{
-			if (Main.rand.Next(4) == 0)
+			if (Main.rand.NextBool(4))
             {
                 type = ProjectileID.NanoBullet;
             }

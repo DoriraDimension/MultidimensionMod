@@ -408,8 +408,8 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 									phase2 = true;
 									NPC.dontTakeDamage = false;
 
-									darkling = Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center - new Vector2(0, 60), new Vector2(0, 0), ModContent.ProjectileType<Darkling>(), NPC.damage, 10f);
-									if (Main.expertMode) expertDarkling = Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(0, 60), new Vector2(0, 0), ModContent.ProjectileType<Darkling>(), NPC.damage, 10f);
+									darkling = Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center - new Vector2(0, 60), new Vector2(0, 0), ModContent.ProjectileType<BossDarkling>(), NPC.damage, 10f);
+									if (Main.expertMode) expertDarkling = Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(0, 60), new Vector2(0, 0), ModContent.ProjectileType<BossDarkling>(), NPC.damage, 10f);
 
 
 									bossMode = 0;

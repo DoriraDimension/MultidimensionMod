@@ -1,10 +1,10 @@
 ﻿using MultidimensionMod.Rarities.Souls;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Souls
 {
@@ -12,8 +12,7 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Soul of Skeletron");
-			// Tooltip.SetDefault("A curse, Skeletron was nothing more than the physical incarnation of a old curse,\nthis curse binds the one poor soul that has to carry it, to guard the dark dungeon for all eternity.\nA old clothier fell victim to this curse due to his own curiosity when he entered a place he wasnt supposed to enter.\nThe curses influence didn't just possess the old man but also created copies of its physical form to guard the dungeon on lower levels.\nThe origins of the curse lie deep within the dungeon itself, but only a fool would dare to find it.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
 			ItemID.Sets.ItemNoGravity[Item.type] = true;
 		}

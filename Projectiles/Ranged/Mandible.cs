@@ -30,7 +30,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 		{
 			for (int i = 0; i < 1; i++)
 			{
-				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 32, 0f, 0f, 100, default(Color), 2f); //sand
+				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Sand, 0f, 0f, 100, default(Color), 2f); //sand
 				Main.dust[dustIndex].velocity *= 1.4f;
 			}
 		}

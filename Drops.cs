@@ -30,11 +30,12 @@ namespace MultidimensionMod
 
             if (NPC.type == NPCID.KingSlime)
             {
-                SlimeCondition slemsoul = new SlimeCondition();
-                IItemDropRule conditionalRule = new LeadingConditionRule(slemsoul);
+                //SlimeCondition slemsoul = new SlimeCondition();
+                //IItemDropRule conditionalRule = new LeadingConditionRule(slemsoul);
+                //conditionalRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<KingSlimeSoul>()));
+                //npcLoot.Add(conditionalRule);
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RoyalBelt>(), 3));
-                conditionalRule.OnSuccess(npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<KingSlimeSoul>())));
-                npcLoot.Add(conditionalRule);
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<KingSlimeSoul>()));
             }
 
             if (NPC.type == NPCID.EyeofCthulhu)
@@ -57,7 +58,7 @@ namespace MultidimensionMod
             if (System.Array.IndexOf(new int[] { NPCID.EaterofWorldsBody, NPCID.EaterofWorldsHead, NPCID.EaterofWorldsTail }, NPC.type) > -1)
             {
                 LeadingConditionRule leadingConditionRule = new(new Conditions.LegacyHack_IsABoss());
-                leadingConditionRule.OnSuccess(npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WormSoul>())));
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<WormSoul>()));
                 npcLoot.Add(leadingConditionRule);
             }
 
@@ -65,7 +66,7 @@ namespace MultidimensionMod
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BrainSoul>()));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<NeuralWaves>(), 5));
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Comprehension>()));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Comprehension>(), 5));
             }
 
             if (NPC.type == NPCID.QueenBee)
@@ -101,7 +102,7 @@ namespace MultidimensionMod
             if (NPC.type == NPCID.Retinazer || NPC.type == NPCID.Spazmatism)
             {
                 LeadingConditionRule leadingConditionRule = new LeadingConditionRule(new Conditions.MissingTwin());
-                leadingConditionRule.OnSuccess(npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TwinSoul>())));
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<TwinSoul>()));
                 npcLoot.Add(leadingConditionRule);
             }
 
@@ -152,7 +153,7 @@ namespace MultidimensionMod
 
             if (NPC.type == NPCID.MartianSaucerCore)
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.CompanionCube, 100));
+                npcLoot.Add(ItemDropRule.Common(ItemID.CompanionCube, 20));
             }
 
             if (NPC.type == NPCID.Penguin)

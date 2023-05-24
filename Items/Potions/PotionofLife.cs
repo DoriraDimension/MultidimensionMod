@@ -1,7 +1,7 @@
 using MultidimensionMod.Buffs.Potions;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Potions
@@ -10,6 +10,7 @@ namespace MultidimensionMod.Items.Potions
 	{
         public override void SetStaticDefaults()
         {
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()
@@ -24,7 +25,7 @@ namespace MultidimensionMod.Items.Potions
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.rare = ItemRarityID.LightRed;
-            Item.value = Item.sellPrice(silver: 25);
+            Item.value = Item.sellPrice(0, 0, 10, 0);
             Item.buffType = ModContent.BuffType<LifePower>();
             Item.buffTime = 600;
         }
@@ -35,7 +36,7 @@ namespace MultidimensionMod.Items.Potions
             .AddIngredient(ItemID.RegenerationPotion)
             .AddIngredient(ItemID.LifeCrystal)
             .AddIngredient(ItemID.PixieDust, 10)
-            .AddTile(355)
+            .AddTile(TileID.AlchemyTable)
             .Register();
 
         }

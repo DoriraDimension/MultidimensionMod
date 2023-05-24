@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Bags
 {
@@ -11,6 +12,7 @@ namespace MultidimensionMod.Items.Bags
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 10;
 		}
 
 		public override void SetDefaults()
@@ -19,6 +21,7 @@ namespace MultidimensionMod.Items.Bags
 			Item.height = 30;
 			Item.rare = ItemRarityID.Blue;
 			Item.maxStack = 99;
+			Item.value = Item.sellPrice(0, 0, 5, 0);
 		}
 
 		public override bool CanRightClick()

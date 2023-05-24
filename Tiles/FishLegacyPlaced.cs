@@ -21,19 +21,13 @@ namespace MultidimensionMod.Tiles
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();
-			// name.SetDefault("Fish Cleaver Display");
 			AddMapEntry(new Color(159, 115, 87), name);
-			DustType = 0;
+			DustType = -1;
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)
 		{
 			num = 5;
-		}
-
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<FishLegacy>());
 		}
 	}
 }

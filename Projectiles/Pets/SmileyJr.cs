@@ -29,7 +29,6 @@ namespace MultidimensionMod.Projectiles.Pets
 				Projectile.timeLeft = 2;
 			}
 
-			int frameSpeed = 7;
 			Player projOwner = Main.player[Projectile.owner];
 			Projectile.frameCounter++;
 			if (projOwner.statLife >= projOwner.statLifeMax2 / 4 && Main.dayTime)

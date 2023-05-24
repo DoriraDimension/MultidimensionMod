@@ -1,7 +1,7 @@
 using MultidimensionMod.Buffs.Potions;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Potions
@@ -10,8 +10,7 @@ namespace MultidimensionMod.Items.Potions
 	{
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Merfolk Potion");
-            // Tooltip.SetDefault("Let's you breath underwater. \nGives you the ability to swim. \nIncreases movement speed by 10%.");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()
@@ -26,7 +25,7 @@ namespace MultidimensionMod.Items.Potions
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.rare = ItemRarityID.Orange;
-            Item.value = Item.sellPrice(silver: 21);
+            Item.value = Item.sellPrice(0, 0, 7, 0);
             Item.buffType = ModContent.BuffType<OceansBlessing>();
             Item.buffTime = 36000;
         }
@@ -36,7 +35,7 @@ namespace MultidimensionMod.Items.Potions
             CreateRecipe()
             .AddIngredient(ItemID.GillsPotion)
             .AddIngredient(ItemID.FlipperPotion)
-            .AddTile(355)
+            .AddTile(TileID.AlchemyTable)
             .Register();
 
         }

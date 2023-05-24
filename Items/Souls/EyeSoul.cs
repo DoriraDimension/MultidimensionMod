@@ -1,11 +1,9 @@
 ﻿using MultidimensionMod.Rarities.Souls;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria.DataStructures;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Souls
 {
@@ -13,8 +11,7 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Soul of the Eye");
-			// Tooltip.SetDefault("Yes, this eye actually had a soul on its own.\nThe ever watching eye, true eye or not, it doesnt matter, it was just waiting for another being to grow stronger.\nSome people call it the Eye of Judgement, the first test.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(7, 12));
 			ItemID.Sets.AnimatesAsSoul[Item.type] = true;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;

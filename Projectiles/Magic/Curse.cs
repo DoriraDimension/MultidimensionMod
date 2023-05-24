@@ -1,8 +1,4 @@
-﻿using MultidimensionMod.Dusts;
-using System;
-using System.IO;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -15,7 +11,6 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Cursemark");
 		}
 
 		public override void SetDefaults()
@@ -27,6 +22,8 @@ namespace MultidimensionMod.Projectiles.Magic
 			Projectile.ignoreWater = true;
 			Projectile.tileCollide = false;
 			Projectile.timeLeft = 5;
+			Projectile.localNPCHitCooldown = 30;
+			Projectile.ownerHitCheck = true;
 		}
 
 		public override void AI()
@@ -36,11 +33,6 @@ namespace MultidimensionMod.Projectiles.Magic
 				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Shadowflame, 0f, 0f, 100, default(Color), 2f);
 				Main.dust[dustIndex].velocity *= 1.4f;
 			}
-		}
-
-		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
-		{
-			target.AddBuff(BuffID.Slow, 30);
 		}
 	}
 }

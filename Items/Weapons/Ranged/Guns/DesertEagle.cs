@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Guns
@@ -10,8 +10,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Desert Eagle");
-			// Tooltip.SetDefault("Did someone squish this bird into a gun shape, wth?");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -25,11 +24,11 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 1;
-			Item.value = Item.sellPrice(silver: 26);
+			Item.value = Item.sellPrice(0, 0, 50, 0);
 			Item.rare = ItemRarityID.Blue;
 			Item.UseSound = SoundID.Item41;
 			Item.autoReuse = true;
-			Item.shoot = 10;
+			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 30f;
 			Item.useAmmo = AmmoID.Bullet;
 			Item.crit = 10;

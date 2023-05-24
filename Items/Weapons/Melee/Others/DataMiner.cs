@@ -3,6 +3,7 @@ using MultidimensionMod.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Others
 {
@@ -10,8 +11,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Data Miner");
-			// Tooltip.SetDefault("The dimensional gods allmight drill, used by him to tear rifts into the dimensions.\nInflicts Electrified.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -27,7 +27,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Others
 			Item.noMelee = true;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.knockBack = 2;
-			Item.value = Item.sellPrice(platinum: 1);
+			Item.value = Item.sellPrice(1, 0, 0, 0);
 			Item.rare = ModContent.RarityType<DoriraRarity>();
 			Item.UseSound = SoundID.Item23;
 			Item.autoReuse = true;

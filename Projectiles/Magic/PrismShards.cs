@@ -13,7 +13,6 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Prism Shard");
 			Main.projFrames[Projectile.type] = 3;
 		}
 
@@ -77,8 +76,8 @@ namespace MultidimensionMod.Projectiles.Magic
 			Main.dust[dustIndex].velocity *= 0.5f;
 			Main.dust[dustIndex].scale *= 0.5f;
 			int dustIndex2 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.PinkCrystalShard, 0f, 0f, 69, default(Color), 2f);
-			Main.dust[dustIndex].velocity *= 0.5f;
-			Main.dust[dustIndex].scale *= 0.5f;
+			Main.dust[dustIndex2].velocity *= 0.5f;
+			Main.dust[dustIndex2].scale *= 0.5f;
 		}
 	}
 }

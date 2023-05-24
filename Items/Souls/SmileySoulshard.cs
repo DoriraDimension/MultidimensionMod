@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Souls
 {
@@ -11,8 +12,7 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Smiley Soulshard");
-			// Tooltip.SetDefault("A shard that reflects the soul of a dark being.\nSmiley was born as a being of pure dark whos purpose was to spread darkness all across existence, but unlike his siblings, he refused to be evil.\nWhen his creator wasn't paying attention he left his home together with a small army of Darklings.\nNow he is hiding in the Terrarian world with hope to find a person strong enough to take on his creator.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
 			ItemID.Sets.ItemNoGravity[Item.type] = true;
 		}

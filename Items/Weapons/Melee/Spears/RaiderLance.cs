@@ -1,8 +1,8 @@
 ﻿using MultidimensionMod.Projectiles.Melee.Spears;
-using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Spears
 {
@@ -10,23 +10,21 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Raider Drakeslayer");
-			// Tooltip.SetDefault("Inflicts Drakeblood Poison.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
 			Item.damage = 27;
 			Item.useStyle = ItemUseStyleID.Shoot;
-			Item.useAnimation = 24;
-			Item.useTime = 24;
+			Item.useAnimation = 36;
+			Item.useTime = 36;
 			Item.shootSpeed = 3.2f;
 			Item.knockBack = 7f;
 			Item.width = 54;
 			Item.height = 56;
-			Item.scale = 1f;
-			Item.rare = ItemRarityID.Blue;
-			Item.value = Item.sellPrice(silver: 15);
+			Item.rare = ItemRarityID.Orange;
+			Item.value = Item.sellPrice(0, 0, 70, 0);
 			Item.DamageType = DamageClass.Melee;
 			Item.noMelee = true;
 			Item.noUseGraphic = true;

@@ -12,8 +12,6 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Dark Bolt");
-			Main.projFrames[Projectile.type] = 4;
 		}
 
 		public override void SetDefaults()
@@ -33,19 +31,18 @@ namespace MultidimensionMod.Projectiles.Magic
 			{
 				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Shadowflame, 0f, 0f, 100, default(Color), 2f);
 				Main.dust[dustIndex].velocity *= 1.4f;
-
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<DarkBlast>(), (int)((double)((float)Projectile.damage) * 0.5), 0f, Main.myPlayer);
 			}
+			Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<DarkBlast>(), (int)((double)((float)Projectile.damage) * 0.5), 0f, Main.myPlayer);
 		}
 
 		public override void AI()
 		{
 			for (int i = 0; i < 4; i++)
 			{
-				int num104 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 27, Projectile.velocity.X * 0.30f, Projectile.velocity.Y * 0.30f, 200, default(Color), 3f);
-				Main.dust[num104].noGravity = true;
-				Main.dust[num104].velocity.X *= 0.15f;
-				Main.dust[num104].velocity.Y *= 0.15f;
+				int num = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Shadowflame, Projectile.velocity.X * 0.30f, Projectile.velocity.Y * 0.30f, 200, default(Color), 3f);
+				Main.dust[num].noGravity = true;
+				Main.dust[num].velocity.X *= 0.15f;
+				Main.dust[num].velocity.Y *= 0.15f;
 			}
 
 			Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;

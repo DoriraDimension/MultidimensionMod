@@ -1,8 +1,15 @@
 Mods: {
 	MultidimensionMod: {
 		Biomes: {
-			// FrozenUnderworld.DisplayName: Frozen Underworld
-			// MadnessMoon.DisplayName: Night of Madness
+			FrozenUnderworld: {
+				// DisplayName: Frozen Underworld
+				// TownNPCDialogueName: the Frozen Underworld
+			}
+
+			MadnessMoon: {
+				// DisplayName: Night of Madness
+				// TownNPCDialogueName: the Madness Moon
+			}
 		}
 
 		Buffs: {
@@ -1753,13 +1760,8 @@ Mods: {
 			}
 
 			EclipseReaper: {
-				// DisplayName: Hidden Sun Soulcaller
-				/* Tooltip:
-					'''
-					A scythe from a well hidden and now extinct civilisation, it was once a ordinary weapon,
-					decorated with a bright white extension to show off the connection to their very own sun.
-					Though the scythe was retrieved and modified to now be able to summon the souls of the long lost residents.
-					''' */
+				// DisplayName: Hidden Sun Soulreaper
+				// Tooltip: Something about keeping the orphan in check
 			}
 
 			FishCleaver: {
@@ -2396,8 +2398,9 @@ Mods: {
 					'''
 					The eyeball of a creature that was going to become an Ascendant, it seems to have been interrupted halfway through
 					It is covered in a weird pitch black substance, you can hear strange whispers eminating from it...
-					[c/FF2CD0C: I have watched you from afar for quite a while now, you have even overcome pure madness and its titans.]
-					[c/FF2CD0C: I wish to converse with you, so you may visit me using this eye when the time comes.]
+					[c/FF2CD0C: I have watched you from afar for quite a while now, you have overcome pure madness and even its titans.]
+					[c/FF2CD0C: I wish to converse with you, but the time has not come yet.]
+					[c/FF2CD0C: This eye will guide you to me whenever fate wishes so.]
 					''' */
 			}
 
@@ -2635,6 +2638,9 @@ Mods: {
 			// VoidArmProj.DisplayName: Void Arm Proj
 			// NeroConstruct.DisplayName: Nero Construct
 			// NeroMissile.DisplayName: Nero Missile
+			// BossDarkling.DisplayName: Boss Darkling
+			// CursedBlast.DisplayName: Cursed Blast
+			// CursedBlastJr.DisplayName: Cursed Blast Jr
 		}
 
 		Keybinds: {
@@ -2655,7 +2661,30 @@ Mods: {
 			// OtherworldlyGlowmarin.DisplayName: Otherworldly Glowmarin
 			// ParrotLobster.DisplayName: Parrot Lobster
 			// StormFrontEel.DisplayName: Storm Front Eel
-			// Dorira.DisplayName: Dimensional God
+
+			Dorira: {
+				// DisplayName: Dimensional God
+
+				TownNPCMood: {
+					// Content: I am content.
+					// NoHome: I hate not having a home.
+					// FarFromHome: I am too far from home.
+					// LoveSpace: I love having so much space.
+					// DislikeCrowded: I dislike how crowded I am.
+					// HateCrowded: I hate how crowded I am.
+					// LoveBiome: I love {BiomeName}.
+					// LikeBiome: I like {BiomeName}.
+					// DislikeBiome: I dislike {BiomeName}.
+					// HateBiome: I hate {BiomeName}.
+					// LoveNPC: I love {NPCName}.
+					// LikeNPC: I like {NPCName}.
+					// DislikeNPC: I dislike {NPCName}.
+					// HateNPC: I hate {NPCName}.
+					// LikeNPC_Princess: I like {NPCName}.
+					// Princess_LovesNPC: I like {NPCName}.
+				}
+			}
+
 			// TownDrake.DisplayName: Ice Drake Juvenile
 			// FrostburnSlime.DisplayName: Frostburn Slime
 			// IceDrakeJuvenile.DisplayName: Ice Drake Juvenile
@@ -2668,7 +2697,29 @@ Mods: {
 			// MadnessBat2.DisplayName: Madness Gazer
 			// MadnessDog.DisplayName: Starving Madness
 			// Smiley.DisplayName: Smiley
-			// Taraha.DisplayName: Greater One
+
+			Taraha: {
+				// DisplayName: Greater One
+
+				TownNPCMood: {
+					// Content: I am content.
+					// NoHome: I hate not having a home.
+					// FarFromHome: I am too far from home.
+					// LoveSpace: I love having so much space.
+					// DislikeCrowded: I dislike how crowded I am.
+					// HateCrowded: I hate how crowded I am.
+					// LoveBiome: I love {BiomeName}.
+					// LikeBiome: I like {BiomeName}.
+					// DislikeBiome: I dislike {BiomeName}.
+					// HateBiome: I hate {BiomeName}.
+					// LoveNPC: I love {NPCName}.
+					// LikeNPC: I like {NPCName}.
+					// DislikeNPC: I dislike {NPCName}.
+					// HateNPC: I hate {NPCName}.
+					// LikeNPC_Princess: I like {NPCName}.
+					// Princess_LovesNPC: I like {NPCName}.
+				}
+			}
 		}
 
 		TownNPCMood: {
@@ -2750,6 +2801,9 @@ Mods: {
 			// PlacedDemonAltar.MapEntry: Demon Altar
 			// ColdEnragedHellBoxPlaced.MapEntry: Music Box
 			// MadnessBoxPlaced.MapEntry: Music Box
+			// DimensiumPlaced.MapEntry: Dimensium Placed
 		}
+
+		// DeathMessages.Socks: died from the pain of wearing wet socks.
 	}
 }

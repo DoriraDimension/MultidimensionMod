@@ -1,9 +1,8 @@
 ﻿using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.Utilities;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -12,6 +11,7 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -19,8 +19,8 @@ namespace MultidimensionMod.Items.Accessories
 			Item.width = 26;
 			Item.height = 24;
 			Item.accessory = true;
-			Item.value = Item.sellPrice(silver: 2);
-			Item.rare = ItemRarityID.Green;
+			Item.value = Item.sellPrice(0, 0, 60, 0);
+			Item.rare = ItemRarityID.Blue;
 			Item.defense = 4;
 		}
 
@@ -40,8 +40,8 @@ namespace MultidimensionMod.Items.Accessories
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<FrostScale>(), 5)
-			.AddRecipeGroup("IronBar", 10)
-			.AddTile(16)
+			.AddRecipeGroup(RecipeGroupID.IronBar, 8)
+			.AddTile(TileID.Anvils)
 			.Register();
 		}
 	}

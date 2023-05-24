@@ -2,6 +2,7 @@
 using Terraria.ID;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Summons
 {
@@ -9,8 +10,7 @@ namespace MultidimensionMod.Items.Summons
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Plant Murder Starter Set");
-			// Tooltip.SetDefault("Chop this little bulb to make the big plant very angry, now in a small starter pack for kids. No refund warranty.\nProduct is made and advertised by Dor Inc.\nSummons Plantera. ");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.SortingPriorityBossSpawns[Item.type] = 12; 
 		}
 
@@ -45,14 +45,14 @@ namespace MultidimensionMod.Items.Summons
 			.AddIngredient(ItemID.JungleSpores, 5)
 			.AddIngredient(ItemID.Vine, 2)
 			.AddIngredient(ItemID.CopperBar)
-			.AddTile(134)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 
 			CreateRecipe()
 		    .AddIngredient(ItemID.JungleSpores, 5)
 			.AddIngredient(ItemID.Vine, 2)
 			.AddIngredient(ItemID.TinBar)
-			.AddTile(134)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 	}

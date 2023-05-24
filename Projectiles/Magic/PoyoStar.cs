@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using MultidimensionMod.NPCs.Dungeon;
+using MultidimensionMod.NPCs.Bosses.Smiley;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -9,7 +10,6 @@ namespace MultidimensionMod.Projectiles.Magic
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Poyo Star");
 		}
 
 		public override void SetDefaults()
@@ -22,6 +22,14 @@ namespace MultidimensionMod.Projectiles.Magic
 		{
 			Projectile.type = ProjectileID.FallingStar;
 			return true;
+		}
+
+		public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
+		{
+			if (target.type >= ModContent.NPCType<Smiley>() || target.type >= ModContent.NPCType<Darkling>())
+			{
+				modifiers.FinalDamage += (int)5.0f;
+			}
 		}
 	}
 }

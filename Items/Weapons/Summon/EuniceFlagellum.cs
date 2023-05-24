@@ -1,11 +1,9 @@
 ﻿using MultidimensionMod.Projectiles.Summon.Whips;
 using MultidimensionMod.Items.Materials;
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.DataStructures;
-using System.Collections.Generic;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Summon
 {
@@ -13,6 +11,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -24,7 +23,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.useAnimation = 15;
 			Item.noUseGraphic = true;
 			Item.noMelee = true;
-			Item.value = Item.sellPrice(silver: 24);
+			Item.value = Item.sellPrice(0, 2, 0, 0);
 			Item.rare = ItemRarityID.Yellow;
 			Item.DefaultToWhip(ModContent.ProjectileType<Eunice>(), 100, 6, 26);
 			Item.shootSpeed = 6;

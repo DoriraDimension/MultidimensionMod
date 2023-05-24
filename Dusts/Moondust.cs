@@ -9,13 +9,15 @@ namespace MultidimensionMod.Dusts
 		{
 			dust.noGravity = true;
 			dust.scale = 1f;
+			dust.alpha = 0;
 		}
 
 		public override bool Update(Dust dust)
 		{
+			dust.alpha--;
 			dust.position += dust.velocity;
 			dust.rotation += 6f;
-			dust.scale -= 0.05f;
+			dust.scale -= 0.03f;
 			if (dust.scale < 0.1f)
 			{
 				dust.active = false;

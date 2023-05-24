@@ -1,8 +1,7 @@
 ﻿using MultidimensionMod.Projectiles.Melee.Boomerangs;
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
-using Terraria.DataStructures;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
@@ -11,22 +10,24 @@ namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Injector Scythe");
-			// Tooltip.SetDefault("A throwable scythe that was restored from old relics, inflicts the ichor debuff on hit for 3 seconds.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
-			Item.CloneDefaults(ItemID.Bananarang);
-			Item.shootSpeed *= 1f;
+			Item.damage = 65;
+			Item.DamageType = DamageClass.Melee;
+			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.width = 38;
 			Item.height = 52;
-			Item.damage = 65;
 			Item.useTime = 25;
 			Item.useAnimation = 25;
-			Item.value = Item.sellPrice(silver: 78);
+			Item.noUseGraphic = true;
+			Item.noMelee = true;
+			Item.value = Item.sellPrice(0, 2, 40, 0);
 			Item.rare = ItemRarityID.LightRed;
 			Item.shoot = ModContent.ProjectileType<InjectorScytheProj>();
+			Item.shootSpeed = 16;
 		}
 
 		public override void AddRecipes()
@@ -34,7 +35,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<FleshRipper>())
 			.AddIngredient(ItemID.Ichor, 8)
-			.AddTile(134)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 	}

@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 {
@@ -9,9 +10,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Ocean Trident");
-			// Tooltip.SetDefault("Ball penetrator.");
 			Item.staff[Item.type] = true;
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -26,7 +26,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 2;
-			Item.value = Item.sellPrice(copper: 34);
+			Item.value = Item.sellPrice(0, 0, 36, 0);
 			Item.rare = ItemRarityID.Blue;
 			Item.UseSound = SoundID.Item20;
 			Item.autoReuse = true;

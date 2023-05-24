@@ -1,9 +1,8 @@
 ﻿using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.Utilities;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -11,6 +10,7 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -18,16 +18,15 @@ namespace MultidimensionMod.Items.Accessories
 			Item.width = 26;
 			Item.height = 40;
 			Item.accessory = true;
-			Item.value = Item.sellPrice(silver: 2);
-			Item.rare = ItemRarityID.Green;
-			Item.defense = 2;
+			Item.value = Item.sellPrice(0, 0, 60, 0);
+			Item.rare = ItemRarityID.Blue;
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
 			if (player.ZoneDesert)
 			{
-				player.GetDamage(DamageClass.Generic) += 0.4f;
+				player.GetDamage(DamageClass.Generic) += 0.04f;
 				player.GetCritChance(DamageClass.Generic) += 4;
 			}
 
@@ -38,7 +37,7 @@ namespace MultidimensionMod.Items.Accessories
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<ManaInfusedSandstone>(), 5)
 			.AddIngredient(ItemID.Emerald)
-			.AddTile(16)
+			.AddTile(TileID.Anvils)
 			.Register();
 		}
 	}

@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using MultidimensionMod.Projectiles.Ranged;
+﻿using MultidimensionMod.Projectiles.Ranged;
 using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
-using Terraria.DataStructures;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Others
@@ -12,8 +11,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Gel Vac");
-			// Tooltip.SetDefault("Normally not used for combat, more of a rancher tool.\nShoots different kind of adorable slimes.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -27,11 +25,11 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 4;
-			Item.value = Item.sellPrice(silver: 58);
+			Item.value = Item.sellPrice(0, 0, 40, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item11;
 			Item.autoReuse = true;
-			Item.shoot = 10;
+			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 12f;
 			Item.useAmmo = AmmoID.Gel;
 		}
@@ -45,9 +43,9 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 		{
 			CreateRecipe()
 			.AddIngredient(ItemID.SlimeGun)
-			.AddIngredient(ItemID.Gel, 100)
+			.AddIngredient(ItemID.Gel, 50)
 			.AddIngredient(ItemID.Cloud, 25)
-			.AddTile(220)
+			.AddTile(TileID.Solidifier)
 			.Register();
 		}
 

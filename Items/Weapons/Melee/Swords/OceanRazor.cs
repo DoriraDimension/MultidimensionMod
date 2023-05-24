@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -9,8 +10,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Ocean Razor");
-			// Tooltip.SetDefault("This is definetily a knife with water thats salty.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -23,7 +23,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.useAnimation = 13;
 			Item.useStyle = ItemUseStyleID.Rapier;
 			Item.knockBack = 1.5f;
-			Item.value = Item.sellPrice(copper: 45);
+			Item.value = Item.sellPrice(0, 0, 40, 0);
 			Item.rare = ItemRarityID.Blue;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;

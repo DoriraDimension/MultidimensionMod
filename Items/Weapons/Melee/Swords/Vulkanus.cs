@@ -1,13 +1,9 @@
 ﻿using MultidimensionMod.Projectiles.Melee.Swords;
-using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Tiles;
-using MultidimensionMod.Rarities;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -15,6 +11,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -28,7 +25,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.reuseDelay = 25;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 7f;
-			Item.value = Item.sellPrice(gold: 1);
+			Item.value = Item.sellPrice(0, 4, 0, 0);
 			Item.rare = ItemRarityID.LightRed;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
@@ -36,11 +33,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.noUseGraphic = true;
 			Item.shoot = ModContent.ProjectileType<VulkanusThrow>();
 			Item.shootSpeed = 16f;
-		}
-
-		public override void MeleeEffects(Player player, Rectangle hitbox)
-		{
-			Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, (6));
 		}
 	}
 }

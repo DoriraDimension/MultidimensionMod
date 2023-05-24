@@ -1,12 +1,8 @@
-﻿using System.Collections.Generic;
-using MultidimensionMod.Projectiles.Magic;
+﻿using MultidimensionMod.Projectiles.Magic;
 using MultidimensionMod.Items.Materials;
-using System;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Staffs
@@ -15,8 +11,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Mindbursting Madness");
-			// Tooltip.SetDefault("A staff made from the flesh of creatures that attampted ascension\nHurls a bouncing sphere that becomes stronger after it bounces.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -31,7 +26,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.noMelee = true;
 			Item.knockBack = 2;
-			Item.value = Item.sellPrice(silver: 13);
+			Item.value = Item.sellPrice(0, 0, 75, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item20;
 			Item.autoReuse = true;
@@ -44,7 +39,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<MadnessFragment>(), 11)
-			.AddTile(16)
+			.AddTile(TileID.Anvils)
 			.Register();
 		}
 	}

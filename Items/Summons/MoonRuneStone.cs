@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Summons
 {
@@ -10,8 +11,7 @@ namespace MultidimensionMod.Items.Summons
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Moon Rune Stone");
-			// Tooltip.SetDefault("A rune only known inside the moon cult, it calls forth their insane leader.\nThis must be a very important artifact for the moon cult or else their leader wouldnt be so angry about you taking it.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.SortingPriorityBossSpawns[Item.type] = 12;
 		}
 
@@ -47,7 +47,7 @@ namespace MultidimensionMod.Items.Summons
 			.AddIngredient(ItemID.Ectoplasm, 2)
 			.AddIngredient(ItemID.SoulofNight, 5)
 			.AddIngredient(ItemID.BlueBrick, 10)
-			.AddTile(134)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 
 			CreateRecipe()
@@ -55,7 +55,7 @@ namespace MultidimensionMod.Items.Summons
             .AddIngredient(ItemID.Ectoplasm, 2)
             .AddIngredient(ItemID.SoulofNight, 5)
             .AddIngredient(ItemID.PinkBrick, 10)
-            .AddTile(134)
+            .AddTile(TileID.MythrilAnvil)
             .Register();
 
 			CreateRecipe()
@@ -63,7 +63,7 @@ namespace MultidimensionMod.Items.Summons
             .AddIngredient(ItemID.Ectoplasm, 2)
             .AddIngredient(ItemID.SoulofNight, 5)
             .AddIngredient(ItemID.GreenBrick, 10)
-            .AddTile(134)
+            .AddTile(TileID.MythrilAnvil)
             .Register();
 		}
 	}

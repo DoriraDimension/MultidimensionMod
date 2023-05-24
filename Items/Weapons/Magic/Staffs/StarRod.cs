@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 {
@@ -12,8 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Star Rod");
-			// Tooltip.SetDefault("The power of the stars is on your side.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -27,7 +27,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			Item.knockBack = 2f;
 			Item.DamageType = DamageClass.Magic;
 			Item.noMelee = true;
-			Item.value = Item.sellPrice(copper: 67);
+			Item.value = Item.sellPrice(0, 15, 0, 0);
 			Item.rare = ItemRarityID.Blue;
 			Item.mana = 4;
 			Item.shoot = ModContent.ProjectileType<PoyoStar>();
@@ -70,7 +70,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 		{
 			CreateRecipe()
 			.AddIngredient(ItemID.FallenStar)
-			.AddRecipeGroup("Wood", 5)
+			.AddRecipeGroup(RecipeGroupID.Wood, 5)
 			.AddTile(TileID.WorkBenches)
 			.Register();
 		}

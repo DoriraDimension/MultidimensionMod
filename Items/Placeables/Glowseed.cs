@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Placeables
 {
@@ -11,8 +12,7 @@ namespace MultidimensionMod.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Glowseed");
-			// Tooltip.SetDefault("A small glowing seed from another world. Instantly grows a glowtree when placed");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -26,8 +26,8 @@ namespace MultidimensionMod.Items.Placeables
 			Item.useTime = 10;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
-			Item.rare = ItemRarityID.Pink;
-			Item.value = Item.sellPrice(silver: 87);
+			Item.rare = ItemRarityID.White;
+			Item.value = Item.sellPrice(0, 0, 55, 0);
 			Item.createTile = ModContent.TileType<OceanicGlowtree>();
 		}
 

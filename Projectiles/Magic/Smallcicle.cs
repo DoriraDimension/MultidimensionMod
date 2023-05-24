@@ -11,7 +11,6 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Smallcicle");
 		}
 
 		public override void SetDefaults()
@@ -55,7 +54,7 @@ namespace MultidimensionMod.Projectiles.Magic
 		{
 			SoundEngine.PlaySound(SoundID.Item27, base.Projectile.position);
 
-			int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 67, 0f, 0f, 69, default(Color), 2f);
+			int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.IceRod, 0f, 0f, 69, default(Color), 2f);
 			Main.dust[dustIndex].velocity *= 1.4f;
 		}
 	}

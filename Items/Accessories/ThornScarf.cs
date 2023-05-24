@@ -1,8 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.Utilities;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -11,6 +10,7 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -18,8 +18,8 @@ namespace MultidimensionMod.Items.Accessories
 			Item.width = 36;
 			Item.height = 42;
 			Item.accessory = true;
-			Item.value = Item.sellPrice(silver: 5);
-			Item.rare = ItemRarityID.Orange;
+			Item.value = Item.sellPrice(0, 0, 40, 0);
+			Item.rare = ItemRarityID.Green;
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
@@ -34,7 +34,7 @@ namespace MultidimensionMod.Items.Accessories
 			.AddIngredient(ItemID.Stinger, 5)
             .AddIngredient(ItemID.Vine, 2)
 			.AddIngredient(ItemID.JungleSpores, 8)
-			.AddTile(304)
+			.AddTile(TileID.LivingLoom)
 			.Register();
 		}
 	}

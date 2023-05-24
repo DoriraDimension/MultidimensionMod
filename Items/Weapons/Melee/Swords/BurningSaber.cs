@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -12,8 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Hellfire Saber");
-			// Tooltip.SetDefault("A saber that was restored from old relics, spawns small fire clouds on hit.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -24,9 +24,9 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.height = 52;
 			Item.useTime = 21;
 			Item.useAnimation = 21;
-			Item.useStyle = 1;
+			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 3;
-			Item.value = Item.sellPrice(silver: 90);
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Orange;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
@@ -37,15 +37,14 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		{
 			if (Main.rand.NextBool(3))
 			{
-				Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, (6));
+				Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.Torch);
 			}
 		}
 
 		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 		{
-			{
-				Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), target.Center.X, target.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<Explosion>(), (int)((double)((float)Item.damage) * 0.2), 0f, Main.myPlayer);
-			}
+			Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), target.Center.X, target.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<Explosion>(), (int)((double)((float)Item.damage) * 0.2), 0f, Main.myPlayer);
+			target.AddBuff(BuffID.OnFire, 180);
 		}
 
 		public override void AddRecipes()
@@ -53,7 +52,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<OldPetrifiedBlade>())
 			.AddIngredient(ItemID.HellstoneBar, 15)
-			.AddTile(377)
+			.AddTile(TileID.SharpeningStation)
 			.Register();
 		}
 

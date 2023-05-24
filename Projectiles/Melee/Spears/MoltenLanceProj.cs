@@ -12,7 +12,6 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 		protected virtual float HoldoutRangeMax => 150f;
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Molten Lance");
 		}
 
 		public override void SetDefaults()
@@ -23,7 +22,6 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 			Projectile.penetrate = -1;
 			Projectile.scale = 1.3f;
 			Projectile.alpha = 0;
-
 			Projectile.hide = true;
 			Projectile.ownerHitCheck = true;
 			Projectile.DamageType = DamageClass.Melee;

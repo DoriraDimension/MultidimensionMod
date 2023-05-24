@@ -1,12 +1,9 @@
-﻿using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Tiles;
-using MultidimensionMod.Rarities;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -14,8 +11,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("All Shattering Bat");
-			// Tooltip.SetDefault("\nEnemies will be confused on hit.\nRight click fires Onyx Shots.\nIt may seem like a generic wooden bat, but this is actually a forbidden artifact\nIt was forged in ancient times, using a extinct form of energy");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			ItemID.Sets.ItemsThatAllowRepeatedRightClick[Item.type] = true;
 		}
 
 		public override void SetDefaults()
@@ -28,8 +25,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.useTime = 15;
 			Item.useAnimation = 15;
 			Item.knockBack = 15;
-			Item.value = Item.sellPrice(gold: 70);
-			Item.rare = ModContent.RarityType<AseGneblessaArtifact>();
+			Item.value = Item.sellPrice(0, 10, 0, 0);
+			Item.rare = ItemRarityID.Red;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.crit = 70; 
@@ -83,7 +80,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 		{
-			target.AddBuff(BuffID.Confused, 100);
+			target.AddBuff(BuffID.Confused, 180);
 		}
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
@@ -108,10 +105,17 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			.AddIngredient(ModContent.ItemType<WoodenBat>())
 			.AddIngredient(ItemID.Ebonwood, 300)
 			.AddIngredient(ItemID.SoulofNight, 23)
-			.AddIngredient(ItemID.LunarBar, 20)
-			.AddIngredient(ModContent.ItemType<Dimensium>(), 30)
-			.AddTile(ModContent.TileType<DimensionalForge>())
+			.AddIngredient(ItemID.LunarBar, 10)
+			.AddTile(TileID.LunarCraftingStation)
 			.Register();
+
+			CreateRecipe()
+            .AddIngredient(ModContent.ItemType<WoodenBat>())
+            .AddIngredient(ItemID.Shadewood, 300)
+            .AddIngredient(ItemID.SoulofNight, 23)
+            .AddIngredient(ItemID.LunarBar, 10)
+            .AddTile(TileID.LunarCraftingStation)
+            .Register();
 		}
 	}
 }

@@ -2,6 +2,7 @@ using MultidimensionMod.Projectiles.Melee.Swords;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -9,8 +10,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults() 
 		{
-			// DisplayName.SetDefault("D'irtagnan");
-			// Tooltip.SetDefault("Stab with the power of dirt.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -23,7 +23,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.useAnimation = 15;
 			Item.useStyle = ItemUseStyleID.Rapier;
 			Item.knockBack = 1.5f;
-			Item.value = Item.sellPrice(copper: 7);
+			Item.value = Item.sellPrice(0, 0, 0, 4);
 			Item.rare = ItemRarityID.Blue;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
@@ -38,7 +38,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		{
 			CreateRecipe()
 			.AddIngredient(ItemID.DirtBlock, 100)
-			.AddRecipeGroup("IronBar", 5)
+			.AddRecipeGroup(RecipeGroupID.IronBar, 5)
 			.AddIngredient(ItemID.GoldBar, 2)
 			.AddTile(TileID.Anvils)
 			.Register();

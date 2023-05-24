@@ -28,7 +28,6 @@ namespace MultidimensionMod.Tiles
             TileObjectData.addTile(Type);
             HitSound = SoundID.Grass;
             DustType = ModContent.DustType<MadnessB>();
-            ItemDrop = ModContent.ItemType<MadnessShroom>();
         }
         public override void NumDust(int i, int j, bool fail, ref int num)
         {

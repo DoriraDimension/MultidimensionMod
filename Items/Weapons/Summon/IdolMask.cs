@@ -1,15 +1,11 @@
 ﻿using MultidimensionMod.Buffs.Minions;
-using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Projectiles.Summon.Minions;
-using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Tiles;
-using MultidimensionMod.Rarities;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Summon
 {
@@ -17,8 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Mask of the Idol");
-			// Tooltip.SetDefault("mask that is funny clay man");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true;
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
 		}
@@ -34,7 +29,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.useTime = 36;
 			Item.useAnimation = 36;
 			Item.useStyle = ItemUseStyleID.Shoot;
-			Item.value = Item.sellPrice(gold: 4);
+			Item.value = Item.sellPrice(0, 4, 0, 0);
 			Item.rare = ItemRarityID.Lime;
 			Item.UseSound = SoundID.Item97;
 			Item.noMelee = true;

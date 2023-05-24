@@ -1,9 +1,8 @@
 ﻿using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.Utilities;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -11,6 +10,7 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -18,7 +18,7 @@ namespace MultidimensionMod.Items.Accessories
 			Item.width = 36;
 			Item.height = 48;
 			Item.accessory = true;
-			Item.value = Item.sellPrice(silver: 36);
+			Item.value = Item.sellPrice(0, 0, 80, 0);
 			Item.rare = ItemRarityID.Green;
 		}
 
@@ -35,16 +35,14 @@ namespace MultidimensionMod.Items.Accessories
             }
 			player.GetDamage(DamageClass.Ranged) += 0.05f;
 		    Lighting.AddLight((int)(player.Center.X / 16f), (int)(player.Center.Y / 16f), 0.15f, 0.6f, 0.8f);
-
-
 		}
 
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<Mushmatter>(), 10)
+			.AddIngredient(ModContent.ItemType<Mushmatter>(), 6)
 			.AddIngredient(ItemID.GlowingMushroom, 25)
-			.AddTile(16)
+			.AddTile(TileID.Anvils)
 			.Register();
 		}
 	}

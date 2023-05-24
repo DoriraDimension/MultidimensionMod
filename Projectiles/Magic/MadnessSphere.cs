@@ -13,7 +13,6 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Madness Sphere");
 		}
 
 		public override void SetDefaults()

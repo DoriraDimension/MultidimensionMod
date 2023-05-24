@@ -1,14 +1,10 @@
 ﻿using MultidimensionMod.Projectiles.Summon.Whips;
-using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Tiles;
-using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
-using System.Collections.Generic;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Summon
 {
@@ -16,6 +12,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -27,7 +24,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.useAnimation = 16;
 			Item.noUseGraphic = true;
 			Item.noMelee = true;
-			Item.value = Item.sellPrice(gold: 18);
+			Item.value = Item.sellPrice(0, 5, 0, 0);
 			Item.rare = ItemRarityID.Red;
 			Item.DefaultToWhip(ModContent.ProjectileType<TentacleWhip>(), 45, 2, 4);
 			Item.shootSpeed = 8;

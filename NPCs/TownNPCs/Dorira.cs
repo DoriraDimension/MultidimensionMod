@@ -44,7 +44,6 @@ namespace MultidimensionMod.NPCs.TownNPCs
 	            .SetBiomeAffection<OceanBiome>(AffectionLevel.Love)
 				.SetBiomeAffection<UndergroundBiome>(AffectionLevel.Dislike)
 				.SetBiomeAffection<DesertBiome>(AffectionLevel.Hate) //I am vulnurable to heat lol
-				.SetNPCAffection(NPCID.Princess, AffectionLevel.Love)
 				//.SetNPCAffection(ModContent.NPCType<Cultissima>(), AffectionLevel.Love)
 				.SetNPCAffection(NPCID.Demolitionist, AffectionLevel.Like) 
 	            .SetNPCAffection(NPCID.GoblinTinkerer, AffectionLevel.Dislike) 

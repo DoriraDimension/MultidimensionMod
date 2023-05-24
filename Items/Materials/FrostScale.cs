@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Materials
 {
@@ -9,6 +10,7 @@ namespace MultidimensionMod.Items.Materials
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
 		}
 
 		public override void SetDefaults()
@@ -16,17 +18,8 @@ namespace MultidimensionMod.Items.Materials
 			Item.width = 12;
 			Item.height = 12;
 			Item.maxStack = 9999;
-			Item.value = Item.sellPrice(copper: 32);
+			Item.value = Item.sellPrice(0, 0, 0, 20);
 			Item.rare = ItemRarityID.Green;
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<ManaInfusedSandstone>())
-			.AddIngredient(ModContent.ItemType<Dimensium>())
-			.AddTile(ModContent.TileType<DimensionalForge>())
-			.Register();
 		}
 	}
 }

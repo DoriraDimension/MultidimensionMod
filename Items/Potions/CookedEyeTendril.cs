@@ -1,7 +1,7 @@
 ﻿using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Potions
@@ -10,8 +10,7 @@ namespace MultidimensionMod.Items.Potions
     {
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Cooked Tendril");
-            // Tooltip.SetDefault("Good for the eyes.");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()
@@ -26,8 +25,8 @@ namespace MultidimensionMod.Items.Potions
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.rare = ItemRarityID.Green;
-            Item.value = Item.sellPrice(copper: 23);
-            Item.buffType = (BuffID.NightOwl);
+            Item.value = Item.sellPrice(0, 0, 0, 23);
+            Item.buffType = BuffID.NightOwl;
             Item.buffTime = 3600; 
         }
 
@@ -35,7 +34,7 @@ namespace MultidimensionMod.Items.Potions
         {
             CreateRecipe()
             .AddIngredient(ModContent.ItemType<EyeTendril>())
-            .AddTile(17)
+            .AddTile(TileID.Furnaces)
             .Register();
         }
     }

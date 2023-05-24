@@ -1,7 +1,5 @@
-﻿using MultidimensionMod.Items.Placeables;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -21,7 +19,6 @@ namespace MultidimensionMod.Tiles
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();
-			// name.SetDefault("Broken Ancient Depiction");
 			AddMapEntry(new Color(159, 115, 87), name);
 			DustType = 0;
 		}
@@ -29,11 +26,6 @@ namespace MultidimensionMod.Tiles
 		public override void NumDust(int i, int j, bool fail, ref int num)
 		{
 			num = 5;
-		}
-
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<BrokenAncientDepictionItem>());
 		}
 	}
 }

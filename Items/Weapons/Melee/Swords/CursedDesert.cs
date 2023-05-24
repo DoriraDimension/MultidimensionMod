@@ -1,7 +1,7 @@
 ﻿using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
@@ -10,8 +10,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Cursed Desert");
-			// Tooltip.SetDefault("A sword forged in the dark caves of the desert by a long shattered cult, it slows down enemies on hit for 2 seconds.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -25,7 +24,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 3;
 			Item.autoReuse = true;
-			Item.value = Item.sellPrice(silver: 17);
+			Item.value = Item.sellPrice(0, 0, 40, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item1;
 			Item.crit = 1;
@@ -42,7 +41,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			.AddIngredient(ItemID.Amber, 5)
 			.AddIngredient(ItemID.Deathweed, 2)
 			.AddIngredient(ModContent.ItemType<ManaInfusedSandstone>(), 4)
-			.AddTile(16)
+			.AddTile(TileID.Anvils)
 			.Register();
 		}
 	}

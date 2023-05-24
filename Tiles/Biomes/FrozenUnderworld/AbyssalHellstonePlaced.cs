@@ -16,12 +16,12 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			Main.tileLighted[Type] = true;
 			TileID.Sets.Ore[Type] = true;
 			Main.tileShine2[Type] = true;
-			MinPick = 110;
-			ItemDrop = ModContent.ItemType<AbyssalHellstone>();
+			MinPick = 195;
 			AddMapEntry(new Color(60, 99, 181));
 			Main.tileMerge[Type][ModContent.TileType<ColdAsh>()] = true;
 			Main.tileMergeDirt[Type] = true;
 			HitSound = SoundID.Tink;
+			DustType = DustID.Frost;
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)

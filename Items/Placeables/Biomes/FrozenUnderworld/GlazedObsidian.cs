@@ -1,8 +1,7 @@
 ﻿using MultidimensionMod.Tiles.Biomes.FrozenUnderworld;
-using MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
@@ -11,14 +10,13 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Glazed Obsidian");
-			// Tooltip.SetDefault("schmobdi.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
 		}
 
 		public override void SetDefaults()
 		{
-			Item.width = 12;
-			Item.height = 12;
+			Item.width = 20;
+			Item.height = 20;
 			Item.maxStack = 9999;
 			Item.useTurn = true;
 			Item.autoReuse = true;
@@ -26,15 +24,8 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 			Item.useTime = 10;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
+			Item.rare = ItemRarityID.White;
 			Item.createTile = ModContent.TileType<GlazedObsidianPlaced>();
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ItemID.Obsidian)
-			.AddTile(TileID.IceMachine)
-			.Register();
 		}
 	}
 }

@@ -1,11 +1,11 @@
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Projectiles.Melee.Swords;
-using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -13,6 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults() 
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -21,12 +22,12 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 76;
 			Item.height = 76;
-			Item.useTime = 23;
-			Item.useAnimation = 16;
+			Item.useTime = 33;
+			Item.useAnimation = 23;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 6;
 			Item.autoReuse = true;
-			Item.value = Item.sellPrice(gold: 2);
+			Item.value = Item.sellPrice(0, 5, 40, 0);
 			Item.rare = ItemRarityID.Pink;
 			Item.UseSound = SoundID.Item1;
 			Item.shoot = ModContent.ProjectileType<FrostSpike>();
@@ -46,7 +47,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 					Projectile.NewProjectileDirect(source, position, newVelocity, type, damage, knockback, player.whoAmI);
 				}
 			}
-			return false;
+			return true;
 		}
 
 		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
@@ -58,8 +59,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		{
 			CreateRecipe()
 			.AddIngredient(ItemID.Frostbrand, 1)
-			.AddIngredient(ModContent.ItemType<AbyssalHellstoneBar>(), 8)
-			.AddTile(134)
+			.AddIngredient(ModContent.ItemType<Prismatine>(), 2)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 	}

@@ -34,7 +34,7 @@ namespace MultidimensionMod.Projectiles.Magic
 			}
 			Projectile.rotation += 0.4f * (float)Projectile.direction;
 
-			int num104 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 32, Projectile.velocity.X * 0.2f, Projectile.velocity.Y * 0.2f, 100, default(Color), 2f);
+			int num104 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Sand, Projectile.velocity.X * 0.2f, Projectile.velocity.Y * 0.2f, 100, default(Color), 2f);
 			Main.dust[num104].noGravity = true;
 			Main.dust[num104].velocity.X *= 0.3f;
 			Main.dust[num104].velocity.Y *= 0.3f;

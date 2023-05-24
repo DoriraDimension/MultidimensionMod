@@ -1,11 +1,11 @@
 ﻿using MultidimensionMod.Buffs.Minions;
 using MultidimensionMod.Projectiles.Summon.Minions;
-using MultidimensionMod.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Summon
 {
@@ -13,8 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Servants of Blight");
-			// Tooltip.SetDefault("A long time ago a flying creepy creature roamed the night, with it's servants by it's side.\nBut one day it dissapeared and only left behind this gift.\nSummons the forgotten servant of the blighted crawler.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true;
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
 		}
@@ -30,7 +29,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.useTime = 36;
 			Item.useAnimation = 36;
 			Item.useStyle = ItemUseStyleID.Swing;
-			Item.value = Item.sellPrice(silver: 10);
+			Item.value = Item.sellPrice(0, 0, 87, 0);
 			Item.rare = ItemRarityID.Yellow;
 			Item.UseSound = SoundID.Item17;
 			Item.autoReuse = true;

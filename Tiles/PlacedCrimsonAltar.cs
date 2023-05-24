@@ -1,11 +1,9 @@
-﻿using MultidimensionMod.Items.Placeables;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using Terraria.DataStructures;
 
 namespace MultidimensionMod.Tiles
 {
@@ -22,20 +20,14 @@ namespace MultidimensionMod.Tiles
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();
-			// name.SetDefault("Crimson Altar");
 			AddMapEntry(new Color(165, 40, 44), name);
-			DustType = (1);
+			DustType = DustID.Shadewood;
 			AdjTiles = new int[] { 26 };
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)
 		{
 			num = fail ? 1 : 3;
-		}
-
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<CrimsonAltar>());
 		}
 	}
 }

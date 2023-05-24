@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 {
@@ -11,8 +12,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Thunderbubble Bow");
-			// Tooltip.SetDefault("Shoots electrified bubbles that explode into small gravity affected electric bolts that inflict electrified.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -26,11 +26,11 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 4;
-			Item.value = Item.sellPrice(gold: 3);
-			Item.rare = ItemRarityID.Lime;
+			Item.value = Item.sellPrice(0, 3, 0, 0);
+			Item.rare = ItemRarityID.Yellow;
 			Item.UseSound = SoundID.Item5;
 			Item.autoReuse = true;
-			Item.shoot = 10;
+			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 10f;
 			Item.useAmmo = AmmoID.Arrow;
 			Item.crit = 15;

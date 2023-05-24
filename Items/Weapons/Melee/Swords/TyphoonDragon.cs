@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -10,8 +11,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Typhoon Dragon");
-			// Tooltip.SetDefault("A sword used by powerful ancient ocean warriors? It may be logical when this weapon is compared to the other weapons from the deep ocean,\nbut this one is kinda odd as it possesses a weird energy inside, not found in any other weapon here.\nShoots mini sharkrons and releases typhoons and more mini sharkrons on enemy hits.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -22,9 +22,9 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.height = 120;
 			Item.useTime = 26;
 			Item.useAnimation = 26;
-			Item.useStyle = 1;
+			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 6;
-			Item.value = Item.sellPrice(gold: 5);
+			Item.value = Item.sellPrice(0, 5, 0, 0);
 			Item.rare = ItemRarityID.Yellow;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
@@ -35,7 +35,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 		{
-			Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), target.position.X + 0f + (float)Main.rand.Next(0, 151), player.position.Y + 0f, 0f, -6f, ProjectileID.Typhoon, (int)((double)((float)Item.damage) * 0.5), Main.myPlayer);
 			Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), target.position.X + 0f + (float)Main.rand.Next(0, 151), player.position.Y + 0f, 0f, -6f, ProjectileID.MiniSharkron, (int)((double)(float)Item.damage), Main.myPlayer);
 			Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), target.position.X + 0f + (float)Main.rand.Next(0, 151), player.position.Y + 0f, 0f, -6f, ProjectileID.MiniSharkron, (int)((double)(float)Item.damage), Main.myPlayer);
 		}

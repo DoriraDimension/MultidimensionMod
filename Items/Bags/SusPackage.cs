@@ -11,6 +11,7 @@ using MultidimensionMod.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Bags
 {
@@ -18,6 +19,7 @@ namespace MultidimensionMod.Items.Bags
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()

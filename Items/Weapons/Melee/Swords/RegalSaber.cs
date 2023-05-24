@@ -1,11 +1,7 @@
-﻿using System.Collections.Generic;
-using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Tiles;
-using MultidimensionMod.Rarities;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -14,6 +10,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public int Grow = 0;
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -27,7 +24,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 2;
 			Item.autoReuse = true;
-			Item.value = Item.sellPrice(silver: 30);
+			Item.value = Item.sellPrice(0, 0, 70, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item1;
 			Item.crit = 31;
@@ -60,8 +57,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			{
 				Item.damage = 11;
 				Item.scale = 1f;
-				Item.noMelee = false;
-				Item.noUseGraphic = false;
 				Grow = 0;
 			}
 			return true;
@@ -71,7 +66,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		{
 			CreateRecipe()
 			.AddIngredient(ItemID.Gel, 56)
-			.AddRecipeGroup("GoldBars", 12)
+			.AddRecipeGroup(Recipes.GoldPlatinum, 12)
 			.AddTile(TileID.Solidifier)
 			.Register();
 		}

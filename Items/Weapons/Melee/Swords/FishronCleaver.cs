@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -11,21 +12,20 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Fishron Cleaver");
-			// Tooltip.SetDefault("A big cleaver, designed like a mutated ocean creature, it was seen as a sign of strength.\nReleases typhoons on enemy hits.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
-			Item.damage = 83;
+			Item.damage = 86;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 98;
 			Item.height = 94;
 			Item.useTime = 28;
 			Item.useAnimation = 28;
-			Item.useStyle = 1;
-			Item.knockBack = 6;
-			Item.value = Item.sellPrice(gold: 2);
+			Item.useStyle = ItemUseStyleID.Swing;
+			Item.knockBack = 9;
+			Item.value = Item.sellPrice(0, 5, 0, 0);
 			Item.rare = ItemRarityID.Yellow;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;

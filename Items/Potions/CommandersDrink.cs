@@ -1,7 +1,7 @@
 ﻿using MultidimensionMod.Buffs.Potions;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Potions
@@ -10,8 +10,7 @@ namespace MultidimensionMod.Items.Potions
     {
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Commander's Drink");
-            // Tooltip.SetDefault("Become a true leader. \nIncreases summon damage by 20%.");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()
@@ -26,7 +25,7 @@ namespace MultidimensionMod.Items.Potions
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.rare = ItemRarityID.Blue;
-            Item.value = Item.sellPrice(silver: 3);
+            Item.value = Item.sellPrice(0, 0, 3, 0);
             Item.buffType = ModContent.BuffType<PerfectLeader>();
             Item.buffTime = 18000;
         }
@@ -37,7 +36,7 @@ namespace MultidimensionMod.Items.Potions
             .AddIngredient(ItemID.BottledWater)
             .AddIngredient(ItemID.Moonglow)
             .AddIngredient(ItemID.JungleSpores)
-            .AddTile(13)
+            .AddTile(TileID.Bottles)
             .Register();
         }
     }

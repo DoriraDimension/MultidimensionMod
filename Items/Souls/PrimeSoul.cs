@@ -1,10 +1,10 @@
 ﻿using MultidimensionMod.Rarities.Souls;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Souls
 {
@@ -12,8 +12,7 @@ namespace MultidimensionMod.Items.Souls
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Core of Skeletron Prime");
-			// Tooltip.SetDefault("A long forgotten mech in shape of a curse that was lying dormant for years, it was now reactivated when the forces of light and darkness were unleashed.\nAges ago someone found a sample of the Skeletron curse and recreated it as a mechanical form with even more weapons.\nIt's creator remains unknown... for now...");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
 			ItemID.Sets.ItemNoGravity[Item.type] = true;
 		}

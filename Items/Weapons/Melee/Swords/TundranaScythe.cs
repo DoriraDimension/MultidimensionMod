@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -12,6 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 	{
 		public override void SetStaticDefaults() 
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -25,26 +27,11 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 4;
 			Item.autoReuse = true;
-			Item.value = Item.sellPrice(gold: 3);
+			Item.value = Item.sellPrice(0, 3, 0, 0);
 			Item.rare = ItemRarityID.Lime;
 			Item.UseSound = SoundID.Item1;
 			Item.shoot = ModContent.ProjectileType<TundraSickle>();
 			Item.shootSpeed = 12f;
-		}
-
-		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-		{
-			return true;
-		}
-
-		public override void AddRecipes() 
-		{
-			CreateRecipe()
-			.AddIngredient(ItemID.IceSickle, 1)
-			.AddIngredient(ModContent.ItemType<AbyssalHellstoneBar>(), 8)
-			.AddIngredient(ModContent.ItemType<TidalQuartz>(), 5)
-			.AddTile(134)
-			.Register();
 		}
 	}
 }

@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Armor
 {
@@ -12,13 +13,14 @@ namespace MultidimensionMod.Items.Armor
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
 			Item.width = 26;
 			Item.height = 28;
-			Item.value = Item.sellPrice(gold: 3);
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Yellow;
 			Item.defense = 15;
 		}
@@ -53,7 +55,7 @@ namespace MultidimensionMod.Items.Armor
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<TidalQuartz>(), 6)
 			.AddIngredient(ItemID.HallowedBar, 7)
-			.AddTile(134)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 	}

@@ -1,9 +1,8 @@
 ﻿using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.Utilities;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -12,6 +11,7 @@ namespace MultidimensionMod.Items.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -19,7 +19,7 @@ namespace MultidimensionMod.Items.Accessories
 			Item.width = 26;
 			Item.height = 24;
 			Item.accessory = true;
-			Item.value = Item.sellPrice(silver: 34);
+			Item.value = Item.sellPrice(0, 1, 20, 50);
 			Item.rare = ItemRarityID.Green;
 			Item.defense = 5;
 		}
@@ -30,7 +30,7 @@ namespace MultidimensionMod.Items.Accessories
 			player.buffImmune[BuffID.Frozen] = true;
 			if (player.ZoneSnow || player.ZoneDesert)
 			{
-				player.GetDamage(DamageClass.Generic) += 0.4f;
+				player.GetDamage(DamageClass.Generic) += 0.04f;
 				player.GetCritChance(DamageClass.Generic) += 4;
 				player.statDefense += 6;
 				player.endurance += 0.04f;
@@ -47,7 +47,7 @@ namespace MultidimensionMod.Items.Accessories
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<DrakescaleShield>())
 			.AddIngredient(ModContent.ItemType<DesertNecklace>())
-			.AddTile(114)
+			.AddTile(TileID.TinkerersWorkbench)
 			.Register();
 		}
 	}

@@ -1,8 +1,9 @@
 ﻿using MultidimensionMod.Buffs.Debuffs;
+using MultidimensionMod.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace MultidimensionMod.Projectiles.Ranged
 {
@@ -14,8 +15,6 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Madness Bolt");
-			Main.projFrames[Projectile.type] = 4;
 		}
 
 		public override void SetDefaults()
@@ -28,7 +27,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.tileCollide = true;
 			Projectile.penetrate = 3;
 			Projectile.usesLocalNPCImmunity = true;
-			Projectile.localNPCHitCooldown = 5;
+			Projectile.localNPCHitCooldown = 10;
 		}
 
 		public override void Kill(int timeLeft)
@@ -51,7 +50,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 					Vector2 victor = Projectile.position;
 					victor -= Projectile.velocity * (A * 0.25f);
 					Projectile.alpha = 255;
-					int num448 = Dust.NewDust(victor, 1, 1, DustID.IchorTorch);
+					int num448 = Dust.NewDust(victor, 1, 1, ModContent.DustType<MadnessY>());
 					Main.dust[num448].noGravity = true;
 					Main.dust[num448].position = victor;
 					Main.dust[num448].scale *= (float)Main.rand.Next(40, 60) * 0.040f;

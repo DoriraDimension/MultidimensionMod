@@ -1,8 +1,8 @@
 ﻿using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.ToolsEnviromentChange
 {
@@ -10,8 +10,7 @@ namespace MultidimensionMod.Items.ToolsEnviromentChange
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Sunlight Butterfly");
-			// Tooltip.SetDefault("A artifact shaped after a deity of balance, its magic power scares the moon away\nThis butterfly resembles the red goddess who is more mature and serious.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -21,14 +20,14 @@ namespace MultidimensionMod.Items.ToolsEnviromentChange
 			Item.rare = ItemRarityID.Orange;
 			Item.useAnimation = 20;
 			Item.useTime = 20;
-			Item.useStyle = 4;
+			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.UseSound = SoundID.Item60;
 			Item.consumable = false;
 		}
 
 		public override bool? UseItem(Player player)
 		{
-			if (Main.netMode != 1)
+			if (Main.netMode != NetmodeID.MultiplayerClient)
 			{
 				Main.dayTime = true;
 				Main.time = 0.0;
@@ -41,8 +40,8 @@ namespace MultidimensionMod.Items.ToolsEnviromentChange
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<ManaInfusedSandstone>(), 8)
 			.AddIngredient(ItemID.Daybloom, 3)
-			.AddRecipeGroup("EvilSample", 6)
-			.AddTile(16)
+			.AddRecipeGroup(Recipes.EvilSample, 6)
+			.AddTile(TileID.Anvils)
 			.Register();
 		}
 	}

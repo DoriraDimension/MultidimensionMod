@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.DataStructures;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Others
 {
@@ -12,6 +12,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Others
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -28,7 +29,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Others
 			Item.noMelee = true;
 			Item.noUseGraphic = true;
 			Item.channel = true;
-			Item.value = Item.sellPrice(gold: 2);
+			Item.value = Item.sellPrice(0, 3, 0, 0);
 			Item.rare = ItemRarityID.Pink;
 			Item.UseSound = SoundID.Item1;
 			Item.shoot = ModContent.ProjectileType<GlowshardThrow>();

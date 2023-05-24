@@ -1,14 +1,10 @@
 ﻿using MultidimensionMod.Projectiles.Typeless;
-using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Tiles;
-using MultidimensionMod.Rarities;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Typeless
 {
@@ -16,8 +12,7 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("The Watchers");
-			// Tooltip.SetDefault("Grants the ability to fire a swarm of ever watching eyes.\nThe servants of the Eye of Judgement will some day become what their master is if given enough time.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 
@@ -33,7 +28,7 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 			Item.noMelee = true;
 			Item.knockBack = 2;
 			Item.noUseGraphic = true;
-			Item.value = Item.sellPrice(gold: 5);
+			Item.value = Item.sellPrice(0, 0, 50, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;

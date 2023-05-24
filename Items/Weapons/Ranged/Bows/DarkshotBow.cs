@@ -1,9 +1,11 @@
 ﻿using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Tiles.Furniture.VoidMatter;
 using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 {
@@ -11,8 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Darkshot Bow");
-			// Tooltip.SetDefault("A dark matter bow from the dark edge of the cosmos.\nShoots 3 arrows at once.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -26,11 +27,11 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 2;
-			Item.value = Item.sellPrice(silver: 7);
+			Item.value = Item.sellPrice(0, 0, 70, 0);
 			Item.rare = ItemRarityID.Orange;
 			Item.UseSound = SoundID.Item5;
 			Item.autoReuse = true;
-			Item.shoot = 10;
+			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 15f;
 			Item.useAmmo = AmmoID.Arrow;
 		}
@@ -50,7 +51,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 10)
-			.AddTile(26)
+			.AddTile(ModContent.TileType<EmptyKingsFabricatorPlaced>())
 			.Register();
 		}
 	}

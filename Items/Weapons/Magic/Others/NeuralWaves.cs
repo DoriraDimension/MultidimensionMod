@@ -1,14 +1,11 @@
 ﻿using MultidimensionMod.Projectiles.Magic;
-using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Tiles;
 using MultidimensionMod.Rarities;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Others
 {
@@ -16,13 +13,13 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			Item.staff[Item.type] = true;
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 
 		public override void SetDefaults()
 		{
-			Item.damage = 20;
+			Item.damage = 35;
 			Item.DamageType = DamageClass.Magic;
 			Item.mana = 10;
 			Item.width = 40;
@@ -31,9 +28,9 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.useAnimation = 100;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
-			Item.knockBack = 0;
+			Item.knockBack = 0.5f;
 			Item.noUseGraphic = true;
-			Item.value = Item.sellPrice(gold: 5);
+			Item.value = Item.sellPrice(0, 1, 36, 0);
 			Item.rare = ModContent.RarityType<AseGneblessaArtifact>();
 			Item.UseSound = SoundID.Item20;
 			Item.autoReuse = true;

@@ -1,7 +1,7 @@
 ﻿using MultidimensionMod.Tiles.Biomes.FrozenUnderworld;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
@@ -10,8 +10,7 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Cold Ash");
-			// Tooltip.SetDefault("Normal underworld ash that was cooled down by icy winds.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
 		}
 
 		public override void SetDefaults()
@@ -25,15 +24,8 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 			Item.useTime = 10;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
+			Item.rare = ItemRarityID.White;
 			Item.createTile = ModContent.TileType<ColdAsh>();
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ItemID.AshBlock)
-			.AddTile(TileID.IceMachine)
-			.Register();
 		}
 	}
 }

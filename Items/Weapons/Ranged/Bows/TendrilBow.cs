@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 {
@@ -12,8 +13,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Tendril Bow");
-			// Tooltip.SetDefault("Made with the tendrils of the big eye.\nHas a chance to shoot a small eyeball that deals 50% more damage.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -27,11 +27,11 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 2;
-			Item.value = Item.sellPrice(silver: 3);
+			Item.value = Item.sellPrice(0, 0, 25, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item5;
 			Item.autoReuse = true;
-			Item.shoot = 10;
+			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 12f;
 			Item.useAmmo = AmmoID.Arrow;
 		}
@@ -51,7 +51,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<EyeTendril>(), 5)
-			.AddTile(16)
+			.AddTile(TileID.Anvils)
 			.Register();
 		}
 	}

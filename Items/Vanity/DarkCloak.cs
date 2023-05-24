@@ -1,8 +1,6 @@
-﻿using MultidimensionMod.Items.Materials;
-using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Vanity
@@ -12,8 +10,7 @@ namespace MultidimensionMod.Items.Vanity
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Lonely Warrior's Cloak");
-			// Tooltip.SetDefault("The cloak of a lonely dark warrior.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -23,7 +20,7 @@ namespace MultidimensionMod.Items.Vanity
 			Item.accessory = true;
 			Item.vanity = true;
 			Item.rare = ItemRarityID.LightRed;
-			Item.value = Item.sellPrice(silver: 89);
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 		}
 	}
 }

@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Vanity
 {
@@ -10,15 +11,14 @@ namespace MultidimensionMod.Items.Vanity
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Viking Helm");
-			// Tooltip.SetDefault("lore soon");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
 			Item.width = 22;
 			Item.height = 22;
-			Item.value = Item.sellPrice(silver: 12);
+			Item.value = Item.sellPrice(0, 0, 20, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.vanity = true;
 		}
@@ -27,7 +27,7 @@ namespace MultidimensionMod.Items.Vanity
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<VikingRelic>(), 2)
-			.AddTile(134)
+			.AddTile(TileID.Anvils)
 			.Register();
 		}
 	}

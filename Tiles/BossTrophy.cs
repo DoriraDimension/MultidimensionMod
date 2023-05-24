@@ -26,18 +26,5 @@ namespace MultidimensionMod.Tiles
 			// name.SetDefault("Trophy");
 			AddMapEntry(new Color(120, 85, 60), name);
 		}
-
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			int item;
-			switch (frameX / 54)
-			{
-				case 0:
-					Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<SmileyTrophy>());
-					break;
-				default:
-					return;
-			}
-		}
 	}
 }

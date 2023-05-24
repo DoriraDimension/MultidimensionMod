@@ -34,7 +34,6 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 				Main.dust[dustIndex].velocity *= 1.4f;
 			}
 		}
-        public float rot;
 
         public override void AI()
         {

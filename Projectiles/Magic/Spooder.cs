@@ -11,7 +11,6 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Spooder");
 		}
 
 		public override void SetDefaults()
@@ -29,7 +28,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
 			for (int i = 0; i < 3; i++)
 			{
-				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 30, 0f, 0f, 100, default(Color), 2f);
+				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Web, 0f, 0f, 100, default(Color), 2f);
 				Main.dust[dustIndex].velocity *= 1.4f;
 			}
 		}

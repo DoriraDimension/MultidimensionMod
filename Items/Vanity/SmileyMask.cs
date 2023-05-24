@@ -1,7 +1,6 @@
-﻿using MultidimensionMod.Items.Materials;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Vanity
@@ -11,15 +10,14 @@ namespace MultidimensionMod.Items.Vanity
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Smiley Mask");
-			// Tooltip.SetDefault("Maybe if you disguise as him, the Darklings wont attack you anymore.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
 			Item.width = 24;
 			Item.height = 24;
-			Item.value = Item.sellPrice(silver: 70);
+			Item.value = Item.sellPrice(0, 0, 60, 0);
 			Item.rare = ItemRarityID.LightRed;
 			Item.vanity = true;
 			ArmorIDs.Head.Sets.DrawHead[Item.headSlot] = false;

@@ -14,7 +14,6 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Evil Ember, Vulkanus");
 		}
 
 		public override void SetDefaults()
@@ -25,8 +24,10 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			Projectile.aiStyle = -1;
 			Projectile.DamageType = DamageClass.Melee;
 			Projectile.ignoreWater = true;
-			Projectile.tileCollide = true;
+			Projectile.tileCollide = false;
 			Projectile.hide = false;
+			Projectile.timeLeft = 300;
+			Projectile.ownerHitCheck = true;
 		}
 
 		public override void Kill(int timeLeft)
@@ -37,6 +38,10 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void AI()
 		{
+			if (Projectile.timeLeft < 280)
+            {
+				Projectile.tileCollide = true;
+            }
 			Player player = Main.player[Projectile.owner];
 			player.heldProj = player.whoAmI;
 			Projectile.rotation += .3f * Projectile.direction;
@@ -66,5 +71,17 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 				Main.dust[dustIndex].velocity *= 1.4f;
 			}
 		}
+
+		public override bool OnTileCollide(Vector2 oldVelocity)
+        {
+			SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/FireExplosion"), Projectile.position);
+			for (int i = 0; i < 25; i++)
+			{
+				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.CrimsonTorch, 0f, 0f, 100, default(Color), 2f);
+				Main.dust[dustIndex].velocity *= 1.4f;
+			}
+			Projectile.Kill();
+			return false;
+        }
 	}
 }

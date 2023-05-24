@@ -1,9 +1,11 @@
 ﻿using MultidimensionMod.Buffs.Debuffs;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
-using Terraria.Audio;
+using Terraria.GameContent;
 using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Projectiles.Ranged
 {
@@ -31,13 +33,14 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void AI()
 		{
-			if (Projectile.timeLeft > 5)
+			Projectile.rotation += 0.2f;
+			Projectile.scale += 0.028f;
+			if (Projectile.timeLeft > 15)
 			{
 				Projectile.alpha -= 30;
 			}
 			else
 				Projectile.alpha += 60;
-			Projectile.scale += 0.028f;
 			if (Main.rand.NextBool(15))
 			{
 				Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.BlueTorch, Projectile.velocity.X * 0.10f, Projectile.velocity.Y * 0.10f, 6);
@@ -62,6 +65,18 @@ namespace MultidimensionMod.Projectiles.Ranged
 		public override void OnHitPlayer(Player target, Player.HurtInfo info)
 		{
 			target.AddBuff(ModContent.BuffType<BlazingSuffering>(), 180);
+		}
+
+		public override bool PreDraw(ref Color lightColor)
+		{
+			Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+			Vector2 position = Projectile.Center - Main.screenPosition;
+			Rectangle rect = new(0, 0, texture.Width, texture.Height);
+			Vector2 origin = new(texture.Width / 2f, texture.Height / 2f);
+
+			Main.EntitySpriteDraw(texture, position, new Rectangle?(rect), Projectile.GetAlpha(lightColor), Projectile.rotation, origin, Projectile.scale, SpriteEffects.None, 0);
+
+			return false;
 		}
 	}
 }

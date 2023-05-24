@@ -9,7 +9,6 @@ namespace MultidimensionMod.Projectiles.Melee.Boomerangs
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Flesh Ripper");
 		}
 
 		public override void SetDefaults()
@@ -22,6 +21,11 @@ namespace MultidimensionMod.Projectiles.Melee.Boomerangs
 		{
 			Projectile.type = ProjectileID.BloodyMachete;
 			return true;
+		}
+
+		public override void AI()
+		{
+			Projectile.spriteDirection = Projectile.direction;
 		}
 	}
 }

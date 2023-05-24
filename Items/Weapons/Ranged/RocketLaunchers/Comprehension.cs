@@ -1,14 +1,10 @@
 ﻿using MultidimensionMod.Projectiles.Ranged;
-using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Tiles;
-using MultidimensionMod.Rarities;
 using Terraria;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 {
@@ -16,8 +12,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Comprehension");
-			// Tooltip.SetDefault("Shoots 3 brain rockets that explode into a big invisible shockwave, the shockwave will cause braindamage and confuse enemies that are hit by it.\nWhen the brain had a moment in which its mind ascended for just a brief moment, it glimpsed past the abyss into the eternal void.\nWhatever it saw in these mere seconds, it broke the brain.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -31,7 +26,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 8;
-			Item.value = Item.sellPrice(gold: 6);
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.NPCHit13;
 			Item.autoReuse = true;

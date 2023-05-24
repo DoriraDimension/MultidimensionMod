@@ -2,7 +2,7 @@
 using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
-using Terraria.Localization;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Others
@@ -11,8 +11,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Dark Matter Launcher");
-			// Tooltip.SetDefault("You could basically shove the boss into this thing to use as ammo.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
@@ -26,7 +25,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 4;
-			Item.value = Item.sellPrice(gold: 1);
+			Item.value = Item.sellPrice(0, 0, 90, 0);
 			Item.rare = ItemRarityID.LightRed;
 			Item.UseSound = SoundID.Item11;
 			Item.autoReuse = true;
