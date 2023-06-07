@@ -11,6 +11,7 @@ namespace MultidimensionMod.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<EyeoftheExplorer>();
 		}
 
 		public override void SetDefaults()

@@ -1,3 +1,4 @@
+using MultidimensionMod.Items.Placeables;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -10,6 +11,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void SetStaticDefaults() 
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<FishLegacy>();
 		}
 
 		public override void SetDefaults()

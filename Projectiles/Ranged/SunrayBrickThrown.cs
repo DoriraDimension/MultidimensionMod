@@ -23,6 +23,9 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.ignoreWater = false;
 			Projectile.tileCollide = true;
 			Projectile.hide = false;
+			Projectile.penetrate = -1;
+			Projectile.usesLocalNPCImmunity = true;
+			Projectile.localNPCHitCooldown = -1;
 		}
 
 		public override void AI()

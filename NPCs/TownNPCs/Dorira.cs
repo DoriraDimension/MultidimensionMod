@@ -156,25 +156,13 @@ namespace MultidimensionMod.NPCs.TownNPCs
 						if (MDQuests.DoriraQuests == 0)
 						{
 							chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.CassieStart"));
-							int caph = player.FindItem(ModContent.ItemType<Caph>());
-							int segin = player.FindItem(ModContent.ItemType<Segin>());
-							int schedar = player.FindItem(ModContent.ItemType<Schedar>());
-							int ruchbah = player.FindItem(ModContent.ItemType<Ruchbah>());
-							int navi = player.FindItem(ModContent.ItemType<Navi>());
-							if (caph >= 0 && segin >= 0 && schedar >= 0 && ruchbah >= 0 && navi >= 0)
+							int teamStar = player.FindItem(ModContent.ItemType<TeamStar>());
+							if (teamStar >= 0)
 							{
-								player.inventory[caph].stack--;
-								player.inventory[segin].stack--;
-								player.inventory[schedar].stack--;
-								player.inventory[ruchbah].stack--;
-								player.inventory[navi].stack--;
-								if (player.inventory[caph].stack <= 0 && player.inventory[segin].stack <= 0 && player.inventory[schedar].stack <= 0 && player.inventory[ruchbah].stack <= 0 && player.inventory[navi].stack <= 0)
+								player.inventory[teamStar].stack--;
+								if (player.inventory[teamStar].stack <= 0)
 								{
-									player.inventory[caph] = new Item();
-									player.inventory[segin] = new Item();
-									player.inventory[schedar] = new Item();
-									player.inventory[ruchbah] = new Item();
-									player.inventory[navi] = new Item();
+									player.inventory[teamStar] = new Item();
 									player.QuickSpawnItem(source, ModContent.ItemType<Cassiopeia>(), 1);
 									Main.npcChatText = CassieDialogue();
 									MDQuests.DoriraQuests++;
@@ -226,58 +214,16 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
 		public override void AddShops()
 		{
+			var downedSmiley = new Condition("Conditions.DownedSmiley", () => DownedSystem.downedSmiley);
 			var npcShop = new NPCShop(Type, ShopName)
-			.Add(new Item(ModContent.ItemType<DimensionalForgeItem>())
-			{
-				shopCustomPrice = 10,
-				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
-			})
-			.Add(new Item(ModContent.ItemType<IronUndies>())
-			{
-				shopCustomPrice = 5,
-				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
-			})
-			.Add(new Item(ModContent.ItemType<BaitLeaf>())
-			{
-				shopCustomPrice = 7,
-				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
-			})
-			.Add(new Item(ModContent.ItemType<IronUndies>())
-			{
-				shopCustomPrice = 5,
-				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
-			})
-			.Add(new Item(ModContent.ItemType<ArchtyrantsFace>())
-			{
-				shopCustomPrice = 15,
-				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
-			})
-			//var DownedSmiley = new Condition("Conditions.DownedSmiley", () => DownedSystem.downedSmiley);
-			.Add(new Item(ModContent.ItemType<UnknownEmoji>())
-			{
-				shopCustomPrice = 3,
-				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
-			})
-			.Add(new Item(ModContent.ItemType<FishLegacy>())
-			{
-				shopCustomPrice = 10,
-				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
-			})
-			.Add(new Item(ModContent.ItemType<CheliaPlushie>())
-			{
-				shopCustomPrice = 16,
-				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
-			})
-			.Add(new Item(ModContent.ItemType<DataMiner>())
-			{
-				shopCustomPrice = 40,
-				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
-			})
-			.Add(new Item(ModContent.ItemType<WeirdStone>())
-			{
-				shopCustomPrice = 25,
-				shopSpecialCurrency = MultidimensionMod.DimensiumEuronen
-			});
+			.Add(new Item(ModContent.ItemType<DimensionalForgeItem>()) { shopCustomPrice = 10, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
+			.Add(new Item(ModContent.ItemType<IronUndies>()) { shopCustomPrice = 5, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
+			.Add(new Item(ModContent.ItemType<BaitLeaf>()) { shopCustomPrice = 7, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
+			.Add(new Item(ModContent.ItemType<ArchtyrantsFace>()) { shopCustomPrice = 15, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedSkeletron)
+			.Add(new Item(ModContent.ItemType<UnknownEmoji>()) { shopCustomPrice = 3, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, downedSmiley)
+			.Add(new Item(ModContent.ItemType<CheliaPlushie>()) { shopCustomPrice = 16, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedPlantera)
+			.Add(new Item(ModContent.ItemType<DataMiner>()) { shopCustomPrice = 40, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMoonLord);
+			npcShop.Register();
 		}
 
 		public override bool CanGoToStatue(bool toKingStatue)

@@ -20,7 +20,6 @@ namespace MultidimensionMod.Common.Players
         public bool Blaze;
         public bool SmileyJr = false;
         public bool IgnaenHead = false;
-        public bool DarkusCrit = false;
         public bool StarvingLarva = false;
         public bool Probe = false;
         public Item DiggerEngine;
@@ -45,7 +44,6 @@ namespace MultidimensionMod.Common.Players
             SmileyJr = false;
             IgnaenHead = false;
             Blaze = false;
-            DarkusCrit = false;
             StarvingLarva = false;
             Healthy = false;
             Probe = false;
@@ -121,13 +119,6 @@ namespace MultidimensionMod.Common.Players
         public override void OnHitNPCWithItem(Item item, NPC target, NPC.HitInfo hit, int damageDone)
         {
             Player player = Main.LocalPlayer;
-            if (DarkusCrit)
-            {
-                if (hit.Crit)
-                {
-
-                }
-            }
 
             if (StarvingLarva)
             {
@@ -142,13 +133,7 @@ namespace MultidimensionMod.Common.Players
         public override void OnHitNPCWithProj(Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
         {
             Player player = Main.LocalPlayer;
-            if (DarkusCrit)
-            {
-                if (hit.Crit)
-                {
 
-                }
-            }
             if (StarvingLarva)
             {
                 if (target.life > 0)

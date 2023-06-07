@@ -136,7 +136,6 @@ namespace MultidimensionMod
             if (NPC.type == NPCID.DukeFishron)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TidalQuartz>(), 1, 10, 15));
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TyphoonDragon>(), 30));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DukeSoul>()));
             }
 
@@ -281,11 +280,6 @@ namespace MultidimensionMod
             if (NPC.type == NPCID.UndeadViking || NPC.type == NPCID.ArmoredViking)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<VikingRelic>(), 1, 2, 3));
-            }
-
-            if (NPC.type == NPCID.GoblinSummoner)
-            {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DarkusSigil>(), 4));
             }
 
             if (NPC.type == NPCID.DarkCaster)

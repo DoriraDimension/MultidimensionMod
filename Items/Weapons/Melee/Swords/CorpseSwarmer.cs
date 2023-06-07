@@ -59,7 +59,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 				Vector2 value = new Vector2(Main.rand.Next(-100, 101), Main.rand.Next(-100, 101));
 				value.Normalize();
 				value *= (float)Main.rand.Next(10, 201) * 0.01f;
-				Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), player.Center.X, player.Center.Y, value.X, value.Y, ModContent.ProjectileType<DecayFlyFriendly>(), (int)((double)Item.damage * 0.3), hit.Knockback, player.whoAmI);
+				Projectile.NewProjectile(player.GetSource_ItemUse(player.HeldItem), player.Center.X, player.Center.Y, value.X, value.Y, ModContent.ProjectileType<DecayFlyFriendly>(), (int)((double)Item.damage * 0.3), hit.Knockback, player.whoAmI);
 			}
 			target.AddBuff(BuffID.Confused, 120);
 		}

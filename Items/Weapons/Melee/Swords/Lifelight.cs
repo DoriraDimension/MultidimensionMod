@@ -45,7 +45,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 		{
-			Projectile.NewProjectile(Item.GetSource_ItemUse(player.HeldItem), Main.MouseWorld, new Vector2(0, 0), ModContent.ProjectileType<LifelightBlade>(), (int)((double)((float)Item.damage) * 0.5f), 0f, Main.myPlayer);
+			Projectile.NewProjectile(player.GetSource_ItemUse(player.HeldItem), Main.MouseWorld, new Vector2(0, 0), ModContent.ProjectileType<LifelightBlade>(), (int)((double)((float)Item.damage) * 0.5f), 0f, Main.myPlayer);
 		}
 
 		public override void AddRecipes()

@@ -14,6 +14,7 @@ namespace MultidimensionMod.Items.Armor
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<NeroLanternHelm>();
 		}
 
 		public override void SetDefaults()
@@ -47,7 +48,7 @@ namespace MultidimensionMod.Items.Armor
 
 		public override void UpdateEquip(Player player)
 		{
-			player.GetDamage(DamageClass.Magic) += 0.12f;
+			player.GetDamage(DamageClass.Summon) += 0.12f;
 		}
 
 		public override void AddRecipes()

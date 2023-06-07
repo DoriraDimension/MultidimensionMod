@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
-using Terraria.DataStructures;
+using Terraria.ID;
 
 namespace MultidimensionMod.Projectiles.Melee.Spears
 {
@@ -89,6 +89,11 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 			}
 
 			return false; // Don't execute vanilla AI.
+		}
+
+		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+		{
+			target.AddBuff(BuffID.Poisoned, 240);
 		}
 	}
 }

@@ -53,7 +53,7 @@ namespace MultidimensionMod.NPCs.Tundra
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
 			   BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundSnow,
-				new FlavorTextBestiaryInfoElement("Juvenile Ice Drakes usually reside underground where they hunt down prey via ambush. They can be approached savely when they are asleep.")
+				new FlavorTextBestiaryInfoElement("Juvenile Ice Drakes usually reside underground where they hunt down prey via ambush. They can be approached savely when they are asleep. They really love gilded dishes.")
 			});
 		}
 

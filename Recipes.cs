@@ -239,7 +239,7 @@ namespace MultidimensionMod
 			deep.AddTile(TileID.Anvils);
 			deep.Register();
 
-			Recipe anal = Recipe.Create(ItemID.LifeformAnalyzer); //:)
+			Recipe anal = Recipe.Create(ItemID.LifeformAnalyzer); //People will shit themself from laughter when they find this
 			anal.AddRecipeGroup(RecipeGroupID.IronBar, 12);
 			anal.AddIngredient(ItemID.Gel, 30);
 			anal.AddIngredient(ItemID.GardenGnome);
@@ -516,6 +516,8 @@ namespace MultidimensionMod
 			prisma.AddTile(TileID.CrystalBall);
 			prisma.Register();
 			#endregion
+
+
 		}
 
 		public static RecipeGroup EvilPowder;

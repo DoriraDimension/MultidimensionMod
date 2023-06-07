@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MultidimensionMod.Items.Quest;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -7,6 +8,10 @@ namespace MultidimensionMod
 {
 	public class MDGlobalItem : GlobalItem
 	{
+		public override void SetStaticDefaults()
+        {
+			ItemID.Sets.ShimmerTransformToItem[ItemID.FallenStar] = ModContent.ItemType<TeamStar>();
+		}
 		public override void SetDefaults(Item item)
 		{
 			Player player = Main.LocalPlayer;

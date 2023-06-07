@@ -52,13 +52,5 @@ namespace MultidimensionMod.Items.Weapons.Summon
 		{
 			position = Main.MouseWorld;
 		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ItemID.Ectoplasm, 3)
-			.AddTile(TileID.MythrilAnvil)
-			.Register();
-		}
 	}
 }

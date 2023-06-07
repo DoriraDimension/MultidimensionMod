@@ -14,6 +14,7 @@ namespace MultidimensionMod.Items.Armor
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<NeroHammerheadMask>();
 		}
 
 		public override void SetDefaults()

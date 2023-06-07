@@ -1,6 +1,8 @@
 ﻿using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Summons;
-using MultidimensionMod.NPCs.TownNPCs;
+using MultidimensionMod.Items.Potions;
+using MultidimensionMod.Items.Weapons.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -20,6 +22,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 	[AutoloadHead]
 	class Taraha : ModNPC
 	{
+		//Yes, this is Example Mod code, stfu!!!
+
 		// Time of day for traveller to leave (6PM)
 		public const double despawnTime = 48600.0;
 
@@ -27,8 +31,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		// saved and loaded with the world in TravelingMerchantSystem
 		public static double spawnTime = double.MaxValue;
 
-		// The list of items in the traveler's shop. Saved with the world and set when the traveler spawns
-		public List<Item> shopItems = new List<Item>();
+		public const string ShopName = "Shop";
 
 		public override bool PreAI()
 		{
@@ -36,8 +39,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			{
 				// Here we despawn the NPC and send a message stating that the NPC has despawned
 				// LegacyMisc.35 is {0) has departed!
-				if (Main.netMode == NetmodeID.SinglePlayer) Main.NewText(Language.GetTextValue("LegacyMisc.35", NPC.FullName), 50, 125, 255);
-				else ChatHelper.BroadcastChatMessage(NetworkText.FromKey("LegacyMisc.35", NPC.GetFullNetName()), new Color(50, 125, 255));
+				if (Main.netMode == NetmodeID.SinglePlayer) Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.MiscNPCText.Taraha.Departing", NPC.FullName), 17, 113, 105);
+				else ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.MultidimensionMod.MiscNPCText.Taraha.Departing", NPC.GetFullNetName()), new Color(17, 113, 105));
 				NPC.active = false;
 				NPC.netSkip = -1;
 				NPC.life = 0;
@@ -58,7 +61,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 				// You can also add a day counter here to prevent the merchant from possibly spawning multiple days in a row.
 
 				// NPC won't spawn today if it stayed all night
-				if (!travelerIsThere && Main.rand.NextBool(4))
+				if (!travelerIsThere && NPC.downedBoss2 && Main.rand.NextBool(4))
 				{ // 4 = 25% Chance
 				  // Here we can make it so the NPC doesnt spawn at the EXACT same time every time it does spawn
 					spawnTime = GetRandomSpawnTime(5400, 8100); // minTime = 6:00am, maxTime = 7:30am
@@ -82,8 +85,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 				spawnTime = double.MaxValue;
 
 				// Annouce that the traveler has spawned in!
-				if (Main.netMode == NetmodeID.SinglePlayer) Main.NewText(Language.GetTextValue("Announcement.HasArrived", traveler.FullName), 50, 125, 255);
-				else ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Announcement.HasArrived", traveler.GetFullNetName()), new Color(50, 125, 255));
+				if (Main.netMode == NetmodeID.SinglePlayer) Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.MiscNPCText.Taraha.Arrival", traveler.FullName), 17, 198, 92);
+				else ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.MultidimensionMod.MiscNPCText.Taraha.Arrival", traveler.GetFullNetName()), new Color(17, 198, 92));
 			}
 		}
 
@@ -120,57 +123,21 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			return (maxTime - minTime) * Main.rand.NextDouble() + minTime;
 		}
 
-		public void CreateNewShop()
+		public override void AddShops()
 		{
-			// create a list of item ids
-			var itemIds = new List<int>();
-
-			// For each slot we add a switch case to determine what should go in that slot
-			switch (Main.rand.Next(1))
-			{
-				case 0:
-					itemIds.Add(ModContent.ItemType<MadnessFragment>());
-					break;
-            }
-            switch (Main.rand.Next(1))
-            {
-				case 0:
-					itemIds.Add(ModContent.ItemType<MadnessCaller>());
-					break;
-			}
-            switch (Main.rand.Next(1))
-			{
-				case 0:
-					itemIds.Add(ModContent.ItemType<Dimensium>());
-					break;
-            }
-            switch (Main.rand.Next(1))
-            {
-				case 0:
-					itemIds.Add(ModContent.ItemType<SoulRemnant>());
-					break;
-				case 1:
-					itemIds.Add(ItemID.PinkPearl);
-					break;
-            }
-            if (Main.hardMode)
-			{
-				itemIds.Add(ModContent.ItemType<CerebroAlloy>());
-			}
-
-            // convert to a list of items
-            shopItems = new List<Item>();
-			foreach (int itemId in itemIds)
-			{
-				Item item = new Item();
-				item.SetDefaults(itemId);
-				shopItems.Add(item);
-			}
+			var npcShop = new NPCShop(Type, ShopName)
+			.Add(new Item(ModContent.ItemType<CalmingPills>()) { shopCustomPrice = 10, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
+			.Add(new Item(ItemID.FallenStar) { shopCustomPrice = 3, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
+			.Add(new Item(ModContent.ItemType<MadnessCaller>()) { shopCustomPrice = 8, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.Hardmode)
+			.Add(new Item(ModContent.ItemType<CerebroAlloy>()) { shopCustomPrice = 2, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.Hardmode)
+			.Add(new Item(ModContent.ItemType<AstralTitansEyeJewel>()) { shopCustomPrice = 40, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMechBossAll)
+			.Add(new Item(ModContent.ItemType<marcO>()) { shopCustomPrice = 25, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMechBossAll);
+			npcShop.Register();
 		}
 
 		public override void SetStaticDefaults()
 		{
-			Main.npcFrameCount[NPC.type] = 25;
+			Main.npcFrameCount[NPC.type] = 1;
 			NPCID.Sets.ExtraFramesCount[NPC.type] = 9;
 			NPCID.Sets.AttackFrameCount[NPC.type] = 4;
 			NPCID.Sets.DangerDetectRange[NPC.type] = 700;
@@ -184,30 +151,19 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		{
 			NPC.townNPC = true;
 			NPC.friendly = true;
-			NPC.width = 122;
-			NPC.height = 144;
+			NPC.width = 60;
+			NPC.height = 100;
 			NPC.aiStyle = -1;
 			NPC.damage = 10;
 			NPC.defense = 15;
 			NPC.lifeMax = 1000;
-			NPC.knockBackResist = 0.5f;
+			NPC.knockBackResist = 0f;
 			TownNPCStayingHomeless = true;
-			CreateNewShop();
-		}
-
-		public override void SaveData(TagCompound tag)
-		{
-			tag["itemIds"] = shopItems;
-		}
-
-		public override void LoadData(TagCompound tag)
-		{
-			shopItems = tag.Get<List<Item>>("shopItems");
 		}
 
 		public override bool CanTownNPCSpawn(int numTownNPCs)
 		{
-			return false; // This should always be false, because we spawn in the Traveling Merchant manually
+			return false; // spawn manually so false
 		}
 
 		public override ITownNPCProfile TownNPCProfile()
@@ -228,21 +184,21 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
 			int dor = NPC.FindFirstNPC(ModContent.NPCType<Dorira>());
 
-			chat.Add("Hello, welcome, trade rarities?");
-			chat.Add("*eldritch gibberish*");
-			chat.Add("Madness is bad, be careful");
-			chat.Add("The LIGHT, so bright, so bright");
+			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue1"));
+			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue2"));
+			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue3"));
+			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue4"));
 			if (dor >= 0)
             {
-				chat.Add("Dorira, he traded powerful objects for… chocolate");
+				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.DoriraDialogue"));
 			}
 			if (Main.bloodMoon)
             {
-				chat.Add("...");
+				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.BloodMoonDialogue"));
             }
 			if (Main.slimeRain)
             {
-				chat.Add("Yum yum, gelatine heaven");
+				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.SlimeRainDialogue"));
             }
 
 			string dialogueLine = chat; // chat is implicitly cast to a string.
@@ -262,22 +218,25 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			}
 		}
 
-		public override void AddShops()
-		{
-			foreach (Item item in shopItems)
-			{
-				// We don't want "empty" items and unloaded items to appear
-				if (item == null || item.type == ItemID.None)
-					continue;
-
-				//shop.item[nextSlot].SetDefaults(item.type);
-				//nextSlot++;
-			}
-		}
-
 		public override void AI()
 		{
 			NPC.homeless = true; // Make sure it stays homeless
+		}
+
+		public override bool PreDraw(SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)
+		{
+			Texture2D portalTexture = ModContent.Request<Texture2D>("MultidimensionMod/NPCs/TownNPCs/TarahaPortal").Value;
+			Texture2D eyeTexture = ModContent.Request<Texture2D>("MultidimensionMod/NPCs/TownNPCs/Taraha").Value;
+			Vector2 position = NPC.Center - Main.screenPosition;
+			Rectangle rect = new(0, 0, portalTexture.Width, portalTexture.Height);
+			Rectangle eyeRect = new(0, 0, eyeTexture.Width, eyeTexture.Height);
+			Vector2 origin = new(portalTexture.Width / 2f, portalTexture.Height / 2f);
+			Vector2 eyeOrigin = new(eyeTexture.Width / 2f, eyeTexture.Height / 2f);
+
+			Main.EntitySpriteDraw(portalTexture, position, new Rectangle?(rect), NPC.GetAlpha(drawColor), NPC.rotation, origin, NPC.scale, SpriteEffects.None, 0);
+			Main.EntitySpriteDraw(eyeTexture, position, new Rectangle?(eyeRect), NPC.GetAlpha(drawColor), NPC.rotation, eyeOrigin, NPC.scale, SpriteEffects.None, 0);
+
+			return false;
 		}
 	}
 
