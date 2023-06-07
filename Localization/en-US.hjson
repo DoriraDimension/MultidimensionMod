@@ -116,7 +116,7 @@ Mods: {
 
 		Items: {
 			AstralTitansEyeJewel: {
-				DisplayName: Astral Titan's Eye Jewel
+				DisplayName: Creation Titan's Eye Jewel
 				Tooltip:
 					'''
 					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen by 2. 
@@ -2346,6 +2346,18 @@ Mods: {
 			HardmodeToggler: {
 				DisplayName: Hardmode Toggler
 				Tooltip: Toggles hardmode
+			}
+
+			DivineStarBlessing: {
+				DisplayName: Divine Star's Blessing
+				Tooltip:
+				    '''
+					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen.
+					Increases invincibility time and rains down stars after getting hit
+					The Divine Star was once the protector of the Scelestians, a last gift by the Astral Mother.
+					It is long dead by now, its dust covering the once glorius sunny plains of its home,
+					forcing its residents to ascend to the sky.
+					'''
 			}
 		}
 

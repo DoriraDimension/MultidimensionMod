@@ -30,6 +30,8 @@ namespace MultidimensionMod.Items.Accessories
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<AstralTitansEyeJewel>())
+			.AddIngredient(ModContent.ItemType<DivineStarBlessing>())
+			.AddIngredient(ItemID.LunarBar, 10)
 			.AddTile(TileID.LunarCraftingStation)
 			.Register();
 		}

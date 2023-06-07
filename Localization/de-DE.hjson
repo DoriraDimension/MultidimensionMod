@@ -2347,6 +2347,11 @@ Mods: {
 				// DisplayName: Hardmode Toggler
 				// Tooltip: Toggles hardmode
 			}
+
+			DivineStarBlessing: {
+				// DisplayName: Divine Star Blessing
+				// Tooltip: ""
+			}
 		}
 
 		/* SetBonuses.NeroSet:

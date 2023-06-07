@@ -130,7 +130,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			.Add(new Item(ItemID.FallenStar) { shopCustomPrice = 3, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
 			.Add(new Item(ModContent.ItemType<MadnessCaller>()) { shopCustomPrice = 8, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.Hardmode)
 			.Add(new Item(ModContent.ItemType<CerebroAlloy>()) { shopCustomPrice = 2, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.Hardmode)
-			.Add(new Item(ModContent.ItemType<AstralTitansEyeJewel>()) { shopCustomPrice = 40, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMechBossAll)
+			//.Add(new Item(ModContent.ItemType<AstralTitansEyeJewel>()) { shopCustomPrice = 40, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMechBossAll)
 			.Add(new Item(ModContent.ItemType<marcO>()) { shopCustomPrice = 25, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMechBossAll);
 			npcShop.Register();
 		}
