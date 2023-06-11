@@ -1,0 +1,5 @@
+.vscode/settings.json
+obj/
+obj/Debug/net6.0/MultidimensionMod.assets.cache
+obj/Debug/net6.0/MultidimensionMod.csproj.AssemblyReference.cache
+obj/Debug/net6.0/MultidimensionMod.GeneratedMSBuildEditorConfig.editorconfig
