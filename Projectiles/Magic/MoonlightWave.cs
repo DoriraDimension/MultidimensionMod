@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace MultidimensionMod.Projectiles.Magic
 {
@@ -30,9 +31,10 @@ namespace MultidimensionMod.Projectiles.Magic
 		{
 			for (int i = 0; i < 10; i++)
 			{
-				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<Moondust>(), 0f, 0f, 100, default(Color), 2f);
+				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.MagicMirror, 0f, 0f, 100, default(Color), 2f);
 				Main.dust[dustIndex].velocity *= 1.8f;
 				Main.dust[dustIndex].alpha = 50;
+				Main.dust[dustIndex].color = Color.MintCream;
 			}
 		}
 
@@ -57,10 +59,11 @@ namespace MultidimensionMod.Projectiles.Magic
 			}
 			for (int i = 0; i < 5; i++)
 			{
-				int num104 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<Moondust>(), Projectile.velocity.X * 0.30f, Projectile.velocity.Y * 0.30f, 68, default(Color), 1f);
-				Main.dust[num104].noGravity = true;
-				Main.dust[num104].velocity.X *= 0.15f;
-				Main.dust[num104].velocity.Y *= 0.15f;
+				int dusto = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.MagicMirror, Projectile.velocity.X * 0.30f, Projectile.velocity.Y * 0.30f, 68, default(Color), 1f);
+				Main.dust[dusto].noGravity = true;
+				Main.dust[dusto].velocity.X *= 0.15f;
+				Main.dust[dusto].velocity.Y *= 0.15f;
+				Main.dust[dusto].color = Color.MintCream;
 			}
 		}
 

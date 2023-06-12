@@ -38,9 +38,10 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 		{
 			for (int i = 0; i < 2; i++)
 			{
-				int dustIndex = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, (ModContent.DustType<Moondust>()));
+				int dustIndex = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.MagicMirror);
 				Main.dust[dustIndex].noGravity = true;
 				Main.dust[dustIndex].alpha = 50;
+				Main.dust[dustIndex].color = Color.MintCream;
 			}
 		}
 
