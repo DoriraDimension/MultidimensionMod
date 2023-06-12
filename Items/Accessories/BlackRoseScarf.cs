@@ -31,7 +31,7 @@ namespace MultidimensionMod.Items.Accessories
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<ThornScarf>())
 			.AddIngredient(ItemID.VialofVenom, 2)
-			.AddIngredient(ItemID.BlackFairyDust)
+			.AddIngredient(ItemID.Deathweed, 3)
 			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
