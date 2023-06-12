@@ -32,7 +32,7 @@ namespace MultidimensionMod.Items.Accessories
 			}
 			if (player.immune)
             {
-				player.wingTime += 4;
+				player.wingTime += 2;
             }
 		}
 	}

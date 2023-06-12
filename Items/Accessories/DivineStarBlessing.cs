@@ -37,6 +37,7 @@ namespace MultidimensionMod.Items.Accessories
 			.AddIngredient(ItemID.StarVeil)
 			.AddIngredient(ItemID.CharmofMyths)
 			.AddIngredient(ModContent.ItemType<Prismatine>(), 4)
+			//.AddIngredient(ModContent.ItemType<CelestialPlating>(), 4)
 			.AddTile(ModContent.TileType<DimensionalForge>())
 			.Register();
         }
