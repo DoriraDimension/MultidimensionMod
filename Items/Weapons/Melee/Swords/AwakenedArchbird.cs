@@ -35,7 +35,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void MeleeEffects(Player player, Rectangle hitbox)
 		{
-			Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, (27));
+			Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.Shadowflame);
 		}
 
 		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)

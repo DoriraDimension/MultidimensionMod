@@ -1706,7 +1706,7 @@ Mods: {
 				Tooltip:
 					'''
 					Slows down enemies on hit for 5 seconds
-					The hidden cult in the desert worhips a deity of destruction,
+					The hidden cult in the desert worships a deity of destruction,
 					a monstrous bird that will some day end us all.
 					'''
 			}
@@ -2510,6 +2510,8 @@ Mods: {
 			BossDarkling.DisplayName: Boss Darkling
 			CursedBlast.DisplayName: Cursed Blast
 			CursedBlastJr.DisplayName: Cursed Blast Jr
+			AtlanteanTridentStaff.DisplayName: Atlantean Trident Staff
+			VoidMatterArrow.DisplayName: Void Matter Arrow
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability

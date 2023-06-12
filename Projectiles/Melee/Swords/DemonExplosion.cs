@@ -36,5 +36,10 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			Main.dust[num104].velocity.X *= 0.15f;
 			Main.dust[num104].velocity.Y *= 0.15f;
 		}
+
+		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+		{
+			target.AddBuff(BuffID.OnFire3, 180);
+		}
 	}
 }
