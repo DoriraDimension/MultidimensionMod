@@ -32,7 +32,7 @@ namespace MultidimensionMod.Items.Accessories
 			{
 				player.GetDamage(DamageClass.Generic) += 0.04f;
 				player.GetCritChance(DamageClass.Generic) += 4;
-				player.statDefense += 6;
+				player.statDefense += 3;
 				player.endurance += 0.04f;
 			}
 			if (player.statLife <= player.statLifeMax2 * 0.5)
