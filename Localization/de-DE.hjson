@@ -116,11 +116,9 @@ Mods: {
 
 		Items: {
 			AstralTitansEyeJewel: {
-				// DisplayName: Astral Titan's Eye Jewel
+				// DisplayName: Creation Titan's Eye Jewel
 				/* Tooltip:
 					'''
-					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen by 2. 
-					Increases invincibility time and rains down stars after getting hit.
 					The Scelestians appreciate their titan and as such made replicas of its many crystal eyes,
 					these tokens are supposed to show their deep friendship.
 					''' */
@@ -160,10 +158,6 @@ Mods: {
 				// DisplayName: Creation Medaillon
 				/* Tooltip:
 					'''
-					Increases all damage by 10% and crit chance by 10%.
-					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen by 2.
-					Increases invincibility time and rains down stars after getting hit. 
-					Gives a variety of additional stat bonuses.
 					The divine medaillon that is only given to high ranked Scelestians, like the eye jewel,
 					this is a token of respect towards their titan.
 					Losing or breaking it is seen as a sign of great misfortune.
@@ -2307,7 +2301,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Summons a star nerd to your side
-					[c/1200FF:This is my very own treasure]
+					[c/00bcff:This is my very own treasure]
 					''' */
 			}
 
@@ -2349,8 +2343,15 @@ Mods: {
 			}
 
 			DivineStarBlessing: {
-				// DisplayName: Divine Star Blessing
-				// Tooltip: ""
+				// DisplayName: Divine Star's Blessing
+				/* Tooltip:
+					'''
+					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen.
+					Increases invincibility time and rains down stars after getting hit
+					The Divine Star was once the protector of the Scelestians, a last gift by the Astral Mother.
+					It is long dead by now, its dust covering the once glorius sunny plains of its home,
+					forcing its residents to ascend to the sky.
+					''' */
 			}
 		}
 
@@ -2603,7 +2604,7 @@ Mods: {
 				// GenericDialogue1: Hello, welcome, trade rarities?
 				// GenericDialogue2: *eldritch gibberish*
 				// GenericDialigue3: Madness is bad, be careful
-				// genericDialogue4: The LIGHT, so bright, so bright!
+				// GenericDialogue4: The LIGHT, so bright, so bright!
 				// DoriraDialogue: Dorira, he traded powerful objects for… chocolate...
 				// BloodMoonDialogue: ...
 				// SlimeRainDialogue: Yum yum, gelatine heaven!

@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Projectiles.Melee.Swords;
+using MultidimensionMod.Common.Globals.Items;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;

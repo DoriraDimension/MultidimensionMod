@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using MultidimensionMod.Common.Globals.Items;
+using Terraria;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 using Terraria.ModLoader;

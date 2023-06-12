@@ -2345,7 +2345,7 @@ Mods: {
 			DivineStarBlessing: {
 				DisplayName: Divine Star's Blessing
 				Tooltip:
-				    '''
+					'''
 					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen.
 					Increases invincibility time and rains down stars after getting hit
 					The Divine Star was once the protector of the Scelestians, a last gift by the Astral Mother.
