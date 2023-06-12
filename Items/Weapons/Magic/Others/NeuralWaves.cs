@@ -50,5 +50,15 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			}
 			return false;
 		}
+
+		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+		{
+			position = player.Center;
+		}
+
+		public override void UseItemFrame(Player player)
+		{
+			player.bodyFrame.Y = 5 * player.bodyFrame.Height;
+		}
 	}
 }
