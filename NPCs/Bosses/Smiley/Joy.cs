@@ -9,7 +9,7 @@ using Terraria.Audio;
 namespace MultidimensionMod.NPCs.Bosses.Smiley
 {
 
-    public class Baller2 : ModProjectile
+    public class Joy : ModProjectile
     {
         private int bounces;
         public override void SetStaticDefaults()

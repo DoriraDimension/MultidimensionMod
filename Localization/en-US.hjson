@@ -2512,6 +2512,9 @@ Mods: {
 			CursedBlastJr.DisplayName: Cursed Blast Jr
 			AtlanteanTridentStaff.DisplayName: Atlantean Trident Staff
 			VoidMatterArrow.DisplayName: Void Matter Arrow
+			Happy.DisplayName: Happy
+			Joy.DisplayName: Joy
+			Neutral.DisplayName: Neutral
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
