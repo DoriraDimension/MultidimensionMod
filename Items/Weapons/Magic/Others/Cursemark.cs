@@ -30,7 +30,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.knockBack = 0f;
 			Item.value = Item.sellPrice(0, 1, 20, 0);
 			Item.rare = ItemRarityID.Orange;
-			Item.autoReuse = true;
+			Item.channel = true;
 			Item.shoot = ModContent.ProjectileType<Curse>();
 		}
 
