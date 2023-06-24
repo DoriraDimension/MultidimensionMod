@@ -6,11 +6,13 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Others
 {
 	public class GreatMoonlight : ModItem
 	{
+		public int attackType = 0;
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -41,7 +43,6 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 				int dustIndex = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.MagicMirror);
 				Main.dust[dustIndex].noGravity = true;
 				Main.dust[dustIndex].alpha = 50;
-				Main.dust[dustIndex].color = Color.MintCream;
 			}
 		}
 

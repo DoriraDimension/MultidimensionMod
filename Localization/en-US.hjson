@@ -502,6 +502,8 @@ Mods: {
 					The breastplate of a Viking Raider, sturdy and very resistant.
 					During their battles against the drakes, they needed all protection they could get,
 					a small mistake meant death.
+					It was forged by combining their own alloys with the scales of their sworn enemies
+					this made them extremely resistant against any of their attacks.
 					'''
 			}
 
@@ -512,6 +514,8 @@ Mods: {
 					The helmet of a Viking Raider, sturdy and very resistant.
 					During their battles against the drakes, they needed all protection they could get,
 					a small mistake meant death.
+					It was forged by combining their own alloys with the scales of their sworn enemies
+					this made them extremely resistant against any of their attacks.
 					'''
 			}
 
@@ -522,6 +526,8 @@ Mods: {
 					The greaves of a Viking Raider, sturdy and very resistant.
 					During their battles against the drakes, they needed all protection they could get,
 					a small mistake meant death.
+					They were forged by combining their own alloys with the scales of their sworn enemies
+					this made them extremely resistant against any of their attacks.
 					'''
 			}
 
@@ -2515,6 +2521,7 @@ Mods: {
 			Happy.DisplayName: Happy
 			Joy.DisplayName: Joy
 			Neutral.DisplayName: Neutral
+			GreatMoonlightBlade.DisplayName: Great Moonlight Blade
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability

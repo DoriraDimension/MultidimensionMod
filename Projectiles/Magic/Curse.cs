@@ -7,7 +7,6 @@ namespace MultidimensionMod.Projectiles.Magic
 {
 	internal class Curse : ModProjectile
 	{
-
 		public override void SetStaticDefaults()
 		{
 		}
@@ -30,7 +29,7 @@ namespace MultidimensionMod.Projectiles.Magic
 		{
 			Projectile.Center = Main.MouseWorld;
 			Player player = Main.player[Projectile.owner];
-			if (!player.channel)
+			if (!player.channel || player.statMana <= 0)
             {
 				Projectile.Kill();
             }
