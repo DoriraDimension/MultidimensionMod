@@ -5,6 +5,7 @@ using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Accessories
 {
+	[AutoloadEquip(EquipType.Neck)]
 	public class BlackRoseScarf : ModItem
 	{
 		public override void SetStaticDefaults()

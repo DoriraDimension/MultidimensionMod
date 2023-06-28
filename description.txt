@@ -18,7 +18,7 @@ The mod currently adds:
 - A good variety of placeable furniture
 - Boss Souls acting as lore items with more uses added later.
 - Some changes to vanilla enemy lootpools and recipes for normally not craftable items.
-- Dozens of scrapped items, enemies and even bosses from Ancients Awakened make their return in this mod.
+- Dozens of items, enemies and even bosses from the Ancients Awakened 1.3 version make their return in this mod, remade, ready for a new life.
 
 I'm not really the best coder currently and have some bigger planned content, so help, even if its just helping me improve, is greatly appreciated.
 If you are a coder, spriter or musician and you are interested in this mod and want to help, join the mods discord server
