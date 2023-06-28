@@ -33,7 +33,7 @@ namespace MultidimensionMod.Common.Globals
                 MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Jungle Temple", 90, 120, 1.6f, 0, Color.Brown, "Isolated Chambers");
                 NPC.SetEventFlagCleared(ref DownedSystem.seenTemple, -1);
             }
-            if (Main.LocalPlayer.ZoneUnderworldHeight & !DownedSystem.seenHell)
+            if (Main.LocalPlayer.ZoneUnderworldHeight & !Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()) & !DownedSystem.seenHell)
             {
                 MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Underworld", 90, 120, 1.6f, 0, Color.OrangeRed, "Ashen Remnants");
                 NPC.SetEventFlagCleared(ref DownedSystem.seenHell, -1);

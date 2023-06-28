@@ -17,7 +17,7 @@ namespace MultidimensionMod.Items.Accessories
 		{
 			Item.width = 34;
 			Item.height = 36;
-			Item.useStyle = ItemUseStyleID.HoldUp;
+			Item.useStyle = ItemUseStyleID.Swing;
 			Item.useAnimation = 15;
 			Item.useTime = 15;
 			Item.accessory = true;
