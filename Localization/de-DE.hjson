@@ -1840,6 +1840,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Throw a blade of molten rock, the blade explodes into volcanic rocks on impact
+					The blade inflicts Blazing Suffering
 					This weapon belonged to Vertrarius, the strongest warrior of the dark forces, he is powerful and doesn't let any wound get to him
 					Vertrarius is not evil, he simply fights the Hallow out of boredom, violence is the most entertaining thing to him
 					''' */
@@ -1942,6 +1943,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					65% chance to not consume ammo.
+					Has a 25% chance to convert a shot bullet into a Nano Bullet
 					Metal General approved
 					''' */
 			}
@@ -1993,7 +1995,7 @@ Mods: {
 				// DisplayName: Rot Spit
 				/* Tooltip:
 					'''
-					Spits out a big ball of rotten flesh that attracts small devourers
+					Spits out a big ball of rotten flesh that attracts small devourers from below
 					Devourer will poison enemies on hit
 					''' */
 			}
@@ -2629,6 +2631,7 @@ Mods: {
 				// MechanicDialogue: "{0}'s father was a real celebrity I heard, a super engineer who built the craziest things. A shame he died in a fire some time ago."
 				// GenericDialogue1: When you are going to the Underworld, don't run into a wall.
 				// GenericDialogue2: serglhw3o85zhp35ognpügd1312mfghödfdlhgftzjmdzinhwüß046ihn
+				// GenericHardmodeDialogue1: Hey just between us two, if you happen to possess a sword made of fish, throw it into some weird liquid. ;)
 				#Below is help dialogue
 				// ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
 				#Below is quest dialogue
