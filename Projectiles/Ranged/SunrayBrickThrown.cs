@@ -11,7 +11,6 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Nuclear Bomb");
 		}
 
 		public override void SetDefaults()
@@ -23,7 +22,6 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.ignoreWater = false;
 			Projectile.tileCollide = true;
 			Projectile.hide = false;
-			Projectile.penetrate = -1;
 			Projectile.usesLocalNPCImmunity = true;
 			Projectile.localNPCHitCooldown = -1;
 		}
@@ -42,11 +40,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			}
 			else
 				SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/FireExplosion"), Projectile.position);
-
-			for (int i = 0; i < 50; i++)
-			{
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<CompletelyOutOfPlaceExplosionGif>(), (int)((double)((float)Projectile.damage) * 0.5), 0f, Main.myPlayer);
-			}
+			Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<CompletelyOutOfPlaceExplosionGif>(), (int)((double)((float)Projectile.damage) * 0.5), 0f, Main.myPlayer);
 		}
 	}
 }

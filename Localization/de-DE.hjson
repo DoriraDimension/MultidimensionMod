@@ -1876,7 +1876,12 @@ Mods: {
 
 			DarkshotBow: {
 				// DisplayName: Darkshot Bow
-				// Tooltip: Shoots 3 arrows at once.
+				/* Tooltip:
+					'''
+					Shoots 3 Void Matter arrows
+					Upon hitting an enemy, the arrows warp back to the player
+					Arrows that returned will keep flying until they hit something again
+					''' */
 			}
 
 			MadnessBow: {
@@ -2026,7 +2031,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Summons a tame juvenile Ice Drake to fight for you
-					[c/1200FF:I still have nightmares from the icy caves...]
+					[c/12fff7:I still have nightmares from the icy caves...]
 					''' */
 			}
 
@@ -2041,7 +2046,7 @@ Mods: {
 
 			MadnessWhip: {
 				// DisplayName: Mindpunishing Madness
-				// Tooltip: ""
+				// Tooltip: Inflicts Madness
 			}
 
 			marcO: {
@@ -2070,7 +2075,7 @@ Mods: {
 
 			Tentacle: {
 				// DisplayName: Celestial Tentacle
-				// Tooltip: ""
+				// Tooltip: Throws out 6 Moon lord tentacles at once
 			}
 
 			TerrorNest: {
