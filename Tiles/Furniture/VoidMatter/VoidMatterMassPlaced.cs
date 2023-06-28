@@ -10,7 +10,7 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 {
 	public class VoidMatterMassPlaced : ModTile
 	{
-		public static readonly SoundStyle MineSound = new SoundStyle("MultidimensionMod/Sounds/Custom/VoidMine", 3);
+		public static readonly SoundStyle MineSound = new SoundStyle("MultidimensionMod/Sounds/Tiles/VoidMine", 3);
 
 		public override void SetStaticDefaults()
 		{

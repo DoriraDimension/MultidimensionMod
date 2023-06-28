@@ -2255,7 +2255,7 @@ Mods: {
 				DisplayName: Vanilla Undowner
 				Tooltip:
 					'''
-					Left click to undown all Pre-Hardmode vanilla bosses
+					Left click to undown all Pre-Hardmode vanilla bosses except Wall of Flesh
 					Right click to undown all Hardmode vanilla bosses
 					'''
 			}
@@ -2522,6 +2522,7 @@ Mods: {
 			Joy.DisplayName: Joy
 			Neutral.DisplayName: Neutral
 			GreatMoonlightBlade.DisplayName: Great Moonlight Blade
+			LifelightSkywards.DisplayName: Lifelight Skywards
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability

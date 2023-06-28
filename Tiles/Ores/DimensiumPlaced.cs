@@ -9,7 +9,7 @@ namespace MultidimensionMod.Tiles.Ores
 {
 	public class DimensiumPlaced : ModTile
 	{
-		public static readonly SoundStyle MineSound = new SoundStyle("MultidimensionMod/Sounds/Custom/DimensiumMine", 3);
+		public static readonly SoundStyle MineSound = new SoundStyle("MultidimensionMod/Sounds/Tiles/DimensiumMine", 3);
 
 		public override void SetStaticDefaults()
 		{
