@@ -1757,7 +1757,13 @@ Mods: {
 
 			Lifelight: {
 				DisplayName: Lifelight
-				Tooltip: You have become the very thing you swore to destroy
+				Tooltip:
+					'''
+					You have become the very thing you swore to destroy
+					Swinging the sword channels light energy
+					Right clicking when it is at max light throws the blade skywards
+					Shortly after, 10 lightblades will rain from the sky
+					'''
 			}
 
 			LobsterClaw: {
@@ -2359,6 +2365,16 @@ Mods: {
 					forcing its residents to ascend to the sky.
 					'''
 			}
+
+			SufferingFlesh: {
+				DisplayName: Suffering Flesh
+				Tooltip: ""
+			}
+
+			Mindburner: {
+				DisplayName: Mindburner
+				Tooltip: A blowpipe can blow your mind but this one burns
+			}
 		}
 
 		SetBonuses.NeroSet:
@@ -2523,6 +2539,8 @@ Mods: {
 			Neutral.DisplayName: Neutral
 			GreatMoonlightBlade.DisplayName: Great Moonlight Blade
 			LifelightSkywards.DisplayName: Lifelight Skywards
+			SufferingFleshBall.DisplayName: Suffering Flesh
+			MadnessFlame.DisplayName: Madness Flame
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -2594,7 +2612,7 @@ Mods: {
 					DislikeNPC: Me always happy!
 					HateNPC: Me always happy!
 					LikeNPC_Princess: Me always happy!
-					Princess_LovesNPC: Me always happy!
+					Princess_LovesNPC: I've never seen a visitor like Taraha, how exciting!
 				}
 			}
 		}
