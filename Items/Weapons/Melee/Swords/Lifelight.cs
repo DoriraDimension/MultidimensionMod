@@ -54,6 +54,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			.AddIngredient(ItemID.LightsBane)
 			.AddIngredient(ItemID.SunplateBlock, 15)
 			.AddIngredient(ItemID.Bone, 4)
+			//.AddIngredient(ModContent.ItemType<PaleMatter>(), 4)
 			.AddIngredient(ModContent.ItemType<Dimensium>(), 10)
 			.AddTile(ModContent.TileType<DimensionalForge>())
 			.Register();
