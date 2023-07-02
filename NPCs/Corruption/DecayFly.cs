@@ -1,4 +1,5 @@
 ﻿using Terraria;
+using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
@@ -9,7 +10,6 @@ namespace MultidimensionMod.NPCs.Corruption
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Decay Fly");
 			Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.Bee];
 		}
 
@@ -30,7 +30,16 @@ namespace MultidimensionMod.NPCs.Corruption
 			AnimationType = NPCID.Bee;
 		}
 
-		public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCorruption,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.DecayFly")
+            });
+        }
+
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
 			return SpawnCondition.Corruption.Chance * 0.2f;
 		}

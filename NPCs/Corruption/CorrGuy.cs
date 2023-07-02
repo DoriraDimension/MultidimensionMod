@@ -15,7 +15,6 @@ namespace MultidimensionMod.NPCs.Corruption
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Infested Abomination");
 			Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.Crab];
 		}
 
@@ -41,7 +40,8 @@ namespace MultidimensionMod.NPCs.Corruption
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("It was possibly once human but is now just a disgusting thing, these weird creatures are hosts to a local species of rot loving flies. They drip green stinky goo everywhere they walk and spit disgusting liquid with every movement of their mouth.")
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCorruption,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Abomination")
 			});
 		}
 

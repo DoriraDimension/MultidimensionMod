@@ -16,6 +16,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using Terraria.Utilities;
+using Terraria.GameContent.Bestiary;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -161,7 +162,16 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			TownNPCStayingHomeless = true;
 		}
 
-		public override bool CanTownNPCSpawn(int numTownNPCs)
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Taraha")
+            });
+        }
+
+        public override bool CanTownNPCSpawn(int numTownNPCs)
 		{
 			return false; // spawn manually so false
 		}

@@ -44,7 +44,7 @@ namespace MultidimensionMod.NPCs.Madness
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Ohhhh shit, a bat.")
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.MadnessGazer")
             });
         }
 

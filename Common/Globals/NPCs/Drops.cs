@@ -11,7 +11,7 @@ using MultidimensionMod.Items.Weapons.Typeless;
 using MultidimensionMod.Items.Weapons.Summon;
 using MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers;
 using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Items.Summons;
+using MultidimensionMod.Items.Vanity;
 using Terraria;
 using Terraria.ID;
 using Terraria.GameContent.ItemDropRules;
@@ -137,6 +137,7 @@ namespace MultidimensionMod.Common.Globals.NPCs
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TidalQuartz>(), 1, 10, 15));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DukeSoul>()));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<OldSeaCrown>(), 20));
             }
 
             if (NPC.type == NPCID.CultistBoss)

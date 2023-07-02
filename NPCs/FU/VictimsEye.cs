@@ -46,7 +46,7 @@ namespace MultidimensionMod.NPCs.FU
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("The eye of a Victim, it became sentient after its host body started to show signs of weakness.")
+				new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VictimEye")
 			});
 		}
 

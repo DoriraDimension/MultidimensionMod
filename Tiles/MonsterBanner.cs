@@ -52,7 +52,7 @@ namespace MultidimensionMod.Tiles
 						type = ModContent.NPCType<CorrGuy>();
 						break;
 					case 2:
-						type = ModContent.NPCType<MagicTrident>();
+						//type = ModContent.NPCType<MagicTrident>();
 						break;
 					case 3:
 						type = ModContent.NPCType<OtherworldlyGlowmarin>();
@@ -70,7 +70,7 @@ namespace MultidimensionMod.Tiles
 						type = ModContent.NPCType<IceDrakeJuvenile>();
 						break;
 					case 8:
-						type = ModContent.NPCType<FrostburnSlime>();
+						//type = ModContent.NPCType<FrostburnSlime>();
 						break;
 					case 9:
 						type = ModContent.NPCType<LesserSandElemental>();

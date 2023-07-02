@@ -35,7 +35,7 @@ namespace MultidimensionMod.NPCs.FU
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Piles of cooled ash given live by the potent magic of the Frozen Underworld. They have no mind or soul, they only fly around on the icy winds, exploding into ash on impact.")
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Dusty")
             });
         }
 

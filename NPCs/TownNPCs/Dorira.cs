@@ -16,6 +16,7 @@ using Terraria.ModLoader;
 using Terraria.GameContent.Personalities;
 using System.Collections.Generic;
 using Terraria.Utilities;
+using Terraria.GameContent.Bestiary;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -67,7 +68,16 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			AnimationType = NPCID.Mechanic;
 		}
 
-		public override bool CanTownNPCSpawn(int numTownNPCs)
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Dorira")
+            });
+        }
+
+        public override bool CanTownNPCSpawn(int numTownNPCs)
 		{
 			for (int k = 0; k < 255; k++)
 			{

@@ -46,7 +46,7 @@ namespace MultidimensionMod.NPCs.Dungeon
 			{
 			   BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheDungeon,
 				BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.NightTime,
-				new FlavorTextBestiaryInfoElement("A entity that was created from Void Matter, they curiously approach people who pass by in the dungeon and only attack when threatened.")
+				new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Darkling")
 			});
 		}
 

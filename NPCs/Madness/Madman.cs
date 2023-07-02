@@ -42,7 +42,7 @@ namespace MultidimensionMod.NPCs.Madness
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("A simple man who witnessed the true horror beyond, no longer able to think like a normal person.")
+				new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Madman")
 			});
 		}
 

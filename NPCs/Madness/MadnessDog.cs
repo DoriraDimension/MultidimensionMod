@@ -44,7 +44,7 @@ namespace MultidimensionMod.NPCs.Madness
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("A gruesome creature that gazed into the lurking terror, its madness scarred mind forgot how to consume food and as such is driven by a neverending hunger.")
+				new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.MadnessStarving")
 			});
 		}
 

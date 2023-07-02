@@ -44,7 +44,7 @@ namespace MultidimensionMod.NPCs.Madness
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("A flying entity that mutated into a grotesque something, just touching its skin can lead to mind burns.")
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.MadnessFlier")
             });
         }
 

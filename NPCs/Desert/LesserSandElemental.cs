@@ -41,7 +41,9 @@ namespace MultidimensionMod.NPCs.Desert
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("They are actually crystalized mana surrounded by sand, created artificially by the Children of Rahlem. They will react hostile against anything that enters their desert. During sandstorms they become even more active and travel to the surface, sometimes following Sand Elementals.")
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundDesert,
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Events.Sandstorm,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.SandEle")
 			});
 		}
 

@@ -46,7 +46,7 @@ namespace MultidimensionMod.NPCs.FU
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("A poor soul that has lost everything to the Abyssal Sin. When the great devil of the Subzero Ridge took over their world, they left and went to the Underworld together with the icy winds. They have long forgotten who they even are.")
+				new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Victim")
 			});
 		}
 

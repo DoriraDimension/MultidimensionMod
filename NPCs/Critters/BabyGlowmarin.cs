@@ -40,7 +40,8 @@ namespace MultidimensionMod.NPCs.Critters
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("These small adorable fish are from another dimension, they reproduce really fast. Its small glow organs are already developed and work fine.")
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.BabyGlowmarin.")
 			});
 		}
 

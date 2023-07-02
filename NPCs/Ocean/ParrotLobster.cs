@@ -40,7 +40,8 @@ namespace MultidimensionMod.NPCs.Ocean
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("Odd lobster species that lives near the shores, the have a beak which gives them their name. Their meat is very tasty and can make a nice dish.")
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Lobster")
 			});
 		}
 

@@ -46,7 +46,7 @@ namespace MultidimensionMod.NPCs.FU
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("A weird creature that roams the frozen section of the underworld, hovering as if hanging on strings. They spit burning cold ash at everything that doesn't belong.")
+				new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Ashton")
 			});
 		}
 

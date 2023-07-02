@@ -10,6 +10,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.Utilities;
+using Terraria.GameContent.Bestiary;
 
 namespace MultidimensionMod.NPCs.TownPets
 {
@@ -29,6 +30,15 @@ namespace MultidimensionMod.NPCs.TownPets
 
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers(0) { Hide = true };
             NPCID.Sets.NPCBestiaryDrawOffset.Add(NPC.type, value);
+        }
+
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.PetDrake")
+            });
         }
 
         public override void SetDefaults()

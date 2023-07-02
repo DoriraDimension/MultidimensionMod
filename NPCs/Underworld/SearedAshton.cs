@@ -46,7 +46,7 @@ namespace MultidimensionMod.NPCs.Underworld
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
 				BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheUnderworld,
-				new FlavorTextBestiaryInfoElement("A subspecies of Ashton that adapted to live in the seething heat of the underworld, they spit hot burning ash clouds.")
+				new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.SearedAshton")
 			});
 		}
 
