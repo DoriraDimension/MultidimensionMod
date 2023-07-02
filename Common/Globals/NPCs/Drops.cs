@@ -1,7 +1,7 @@
 ﻿using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Potions;
-using MultidimensionMod.Items.Weapons.Melee.Swords;
+using MultidimensionMod.Items.Bags;
 using MultidimensionMod.Items.Weapons.Magic.Others;
 using MultidimensionMod.Items.Weapons.Ranged.Guns;
 using MultidimensionMod.Items.Weapons.Ranged.Others;
@@ -300,6 +300,11 @@ namespace MultidimensionMod.Common.Globals.NPCs
             if (NPC.type == NPCID.Drippler)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Watchers>(), 40));
+            }
+
+            if (NPC.type == NPCID.FireImp)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ImpBag>(), 100));
             }
         }
     }

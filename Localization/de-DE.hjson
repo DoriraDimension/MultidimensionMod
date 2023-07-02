@@ -1196,8 +1196,8 @@ Mods: {
 					'''
 					A plant that was brought to life by an experiment about granting life to inanimate objects.
 					She was granted a soul and the will to live and a simple task: "Protect the Jungle".
-					Unfortunately she never had a mind and so only executed her only task every day,
-					but for some reason, she still gets something that resembles anger when someone smashes her offspring.
+					Unfortunately she never had a mind and so did not care about this task,
+					she was only interested in protecting her offspring, lead by emotions only.
 					''' */
 			}
 
@@ -1246,7 +1246,7 @@ Mods: {
 					'''
 					A long forgotten pair of mechs in shape of two eyes that were lying dormant for years, 
 					it was now reactivated when the forces of light and darkness were unleashed.
-					It was built by a famous engineer with the purpose to possibly scout for possible threats.
+					It was built by a famous engineer, likely with the purpose to scout for possible threats.
 					''' */
 			}
 
@@ -1357,13 +1357,14 @@ Mods: {
 				// DisplayName: Celestial Lepidoptera
 				/* Tooltip:
 					'''
-					A artifact shaped after the celestial deity of balance.
+					An artifact shaped after the celestial deity of balance.
 					Can be used to change day to night and vice versa.
-					The Sisters of Balance did not always have this power over time, 
+					The Deity of Balance did not always have this power over time, 
 					previously there was a great species of serpents with that duty.
 					Unfortunately a chaotic force wiped most of them out.
 					To make up for this massive loss, 
-					two new entities were created to take their place.
+					a new entities was created to take their place,
+					this entity was much more reliable too.
 					''' */
 			}
 
@@ -1372,7 +1373,8 @@ Mods: {
 				/* Tooltip:
 					'''
 					Scares away the Sun
-					A artifact of time, modeled after the Moonlight Moth.
+					A artifact of time, modeled after the Moonlight Moth,
+					the avatar of the night.
 					The Sister of the Night is always playful and happy,
 					trusting everyone instantly.
 					''' */
@@ -1383,7 +1385,8 @@ Mods: {
 				/* Tooltip:
 					'''
 					Scares away the moon 
-					A artifact of time, modeled after the Sunlight Butterfly.
+					A artifact of time, modeled after the Sunlight Butterfly,
+					the avatar of day.
 					The Sister of Day is always strict and serious,
 					disliking the behavior of her sister.
 					''' */
@@ -1439,7 +1442,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					While you press the attack button, your mouse gains a damaging aura.
-					A cursemark signifies the presence of a overly powerful curse,
+					A cursemark signifies the presence of a powerful curse,
 					coming in all sorts of sizes, even be able to cover entire structures.
 					''' */
 			}
@@ -2375,12 +2378,32 @@ Mods: {
 
 			SufferingFlesh: {
 				// DisplayName: Suffering Flesh
-				// Tooltip: ""
+				// Tooltip: Inflicts Madness
 			}
 
 			Mindburner: {
 				// DisplayName: Mindburner
 				// Tooltip: A blowpipe can blow your mind but this one burns
+			}
+
+			ImpBodyPlate: {
+				// DisplayName: Imp Body
+				// Tooltip: Ancient Imp armor, it seems to be made from a special fabric not from this world.
+			}
+
+			ImpHead: {
+				// DisplayName: Imp Head
+				// Tooltip: Ancient Imp mask, it seems to be made from a special fabric not from this world.
+			}
+
+			ImpLegs: {
+				// DisplayName: Imp Legs
+				// Tooltip: Ancient Imp legs, it seems to be made from a special fabric not from this world.
+			}
+
+			ImpBag: {
+				// DisplayName: Imp Bag
+				// Tooltip: ""
 			}
 		}
 

@@ -32,7 +32,7 @@ namespace MultidimensionMod.Items
         {
             if (!Main.dedServ)
             {
-                MDSystem.Instance.TitleCardUIElement.DisplayTitle("Title Testing", 60, 90, 0.8f, 0, Color.LightSkyBlue, "There are bugs under your skin");
+                MDSystem.Instance.TitleCardUIElement.DisplayTitle("Get them out", 60, 90, 0.8f, 0, Color.LightSkyBlue, "There are bugs under your skin");
             }
             return true;
         }
