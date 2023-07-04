@@ -22,7 +22,7 @@ namespace MultidimensionMod.Items.Tools
 			Item.height = 32;
 			Item.useTime = 25;
 			Item.useAnimation = 25;
-			Item.axe = 30;
+			Item.axe = 20;
 			Item.hammer = 70;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 6;

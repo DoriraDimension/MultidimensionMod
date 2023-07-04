@@ -2418,6 +2418,25 @@ Mods: {
 					[c/fabd16:"Set them all ablaze with your many minions"]
 					'''
 			}
+
+			VikingBattleaxe: {
+				DisplayName: Viking Battleaxe
+				Tooltip: ""
+			}
+
+			BorealGreatbow: {
+				DisplayName: Boreal Greatbow
+				Tooltip:
+					'''
+					Shoots a greatarrow with heavy knockback that inflicts Frostburn.
+					With great arrows comes great knockback
+					'''
+			}
+
+			TundraFall: {
+				DisplayName: Tundra's Fall
+				Tooltip: Rains icicles from the cursor
+			}
 		}
 
 		SetBonuses.NeroSet:
@@ -2585,6 +2604,8 @@ Mods: {
 			SufferingFleshBall.DisplayName: Suffering Flesh
 			MadnessFlame.DisplayName: Madness Flame
 			Arguement.DisplayName: Arguement
+			FrostGreatarrow.DisplayName: Greatarrow
+			Fallcicle.DisplayName: Fallcicle
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
