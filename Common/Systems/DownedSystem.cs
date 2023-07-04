@@ -17,6 +17,7 @@ namespace MultidimensionMod.Common.Systems
         public static bool downedGrudge;
         public static bool metAdel;
         public static bool metVertrarius;
+        public static bool listenedToNonsense;
 
         public override void OnWorldLoad()
         {
@@ -26,6 +27,10 @@ namespace MultidimensionMod.Common.Systems
             seenTemple = false;
             seenAether = false;
             downedSmiley = false;
+            downedGrudge = false;
+            metAdel = false;
+            metVertrarius = false;
+            listenedToNonsense = false;
         }
 
         public override void OnWorldUnload()
@@ -36,6 +41,10 @@ namespace MultidimensionMod.Common.Systems
             seenTemple = false;
             seenAether = false;
             downedSmiley = false;
+            downedGrudge = false;
+            metAdel = false;
+            metVertrarius = false;
+            listenedToNonsense = false;
         }
 
         public override void SaveWorldData(TagCompound tag)
@@ -54,6 +63,14 @@ namespace MultidimensionMod.Common.Systems
                 downed.Add("seenAether");
             if (downedSmiley)
                 downed.Add("downedSmiley");
+            if (downedGrudge)
+                downed.Add("downedGrudge");
+            if (metAdel)
+                downed.Add("metAdel");
+            if (metVertrarius)
+                downed.Add("metVertrarius");
+            if (listenedToNonsense)
+                downed.Add("listenedToNonsense");
 
             tag["downed"] = downed;
         }
@@ -68,6 +85,10 @@ namespace MultidimensionMod.Common.Systems
             seenTemple = downed.Contains("seenTemple");
             seenAether = downed.Contains("seenAether");
             downedSmiley = downed.Contains("downedSmiley");
+            downedGrudge = downed.Contains("downedGrudge");
+            metAdel = downed.Contains("metAdel");
+            metVertrarius = downed.Contains("metVertrarius");
+            listenedToNonsense = downed.Contains("listenedToNonsense");
         }
 
         public override void NetSend(BinaryWriter writer)
@@ -79,7 +100,14 @@ namespace MultidimensionMod.Common.Systems
             flags[3] = seenTemple;
             flags[4] = seenAether;
             flags[5] = downedSmiley;
+            flags[6] = downedGrudge;
+            flags[7] = metAdel;
             writer.Write(flags);
+
+            var flags2 = new BitsByte();
+            flags2[0] = metVertrarius;
+            flags2[1] = listenedToNonsense;
+            writer.Write(flags2);
         }
 
         public override void NetReceive(BinaryReader reader)
@@ -91,6 +119,12 @@ namespace MultidimensionMod.Common.Systems
             seenTemple = flags[3];
             seenAether = flags[4];
             downedSmiley = flags[5];
+            downedGrudge = flags[6];
+            metAdel = flags[7];
+
+            BitsByte flags2 = reader.ReadByte();
+            metVertrarius = flags2[0];
+            listenedToNonsense = flags2[1];
         }
     }
 }

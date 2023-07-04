@@ -41,7 +41,7 @@ namespace MultidimensionMod.NPCs.Critters
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
-                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.BabyGlowmarin.")
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.BabyGlowmarin")
 			});
 		}
 

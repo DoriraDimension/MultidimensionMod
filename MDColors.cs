@@ -93,5 +93,9 @@ namespace MultidimensionMod
         public static Color EaterFlesh => new(116, 94, 97);
         public static Color EaterGoop => new(115, 127, 33);
 
+        //Adel color
+
+        public static Color AdelText => new(255, 0, 127);
+
     }
 }

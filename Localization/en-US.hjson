@@ -1095,10 +1095,10 @@ Mods: {
 					A young boy once dreamed of the day where he could meet a god in flesh,
 					a goal that he kept throughout his entire life.
 					Later in his life, when he went outside to pray at a nearby temple,
-					he got hit by a landslide caused by a ongoing thunderstorm,
+					he got hit by a landslide caused by an ongoing thunderstorm,
 					but he had luck in this misfortune, because he found something of great value.
 					Down in a cave at the bottom of a cliff, he found the Celestial Sigil,
-					a artifact that speaks about a deity named Cthulhu.
+					an artifact that speaks about a deity named Cthulhu.
 					Over time, the man dedicated himself to revive this forgotten god,
 					creating a cult and going more mad day by day.
 					[c/F4cf0cc:What was I thinking, I should have known this deity was not real,]
@@ -1257,6 +1257,8 @@ Mods: {
 					It is a flesh prison supposed to hold thousands of souls from both Hallowers and Dark forces.
 					It was brought into existence by the now extinct underworld civilization 
 					by fusing their bodies into one large magic imbued mass.
+					[c/786d74:You could swear you can hear a conversation happening]
+					Use to listen closer
 					'''
 			}
 
@@ -1463,8 +1465,10 @@ Mods: {
 					'''
 					Spin a crystal halberd around you that generates up to 2 light rings that spin around you as well.
 					If both rings of light are present and you stop attacking, the holy magic within them will heal you for 10 HP
-					This weapon belonged to Adel, the general of the Hallow, he was noble but also stubborn
-					He fought in the great war against his arch nemesis Vertrarius, that was until his soul was trapped inside the Wall of Flesh
+					[c/ff007f:Thank you for taking me with you.]
+					[c/ff007f:You know, Lord Sacres was always such a nice and pure soul.]
+					[c/ff007f:He cared about his people more than anything else. He even fought the neighboring lord to protect us.]
+					[c/ff007f:For the glory of the kingdom, we will not disappoint him!]
 					'''
 			}
 
@@ -1844,8 +1848,10 @@ Mods: {
 					'''
 					Throw a blade of molten rock, the blade explodes into volcanic rocks on impact
 					The blade inflicts Blazing Suffering
-					This weapon belonged to Vertrarius, the strongest warrior of the dark forces, he is powerful and doesn't let any wound get to him
-					Vertrarius is not evil, he simply fights the Hallow out of boredom, violence is the most entertaining thing to him
+					[c/ff8000:Thanks for picking me up by the way.]
+					[c/ff8000:This punk thinks we killed his lord even though we didn't do anything like that.]
+					[c/ff8000:And even then, it was HIS lord who started these pointless fights against us.]
+					[c/ff8000:If I see this guy ever again, I swear I'm gonna lose it]
 					'''
 			}
 
@@ -2387,25 +2393,25 @@ Mods: {
 			}
 
 			ImpBodyPlate: {
-				DisplayName: Imp Body
-				Tooltip: Ancient Imp armor, it seems to be made from a special fabric not from this world.
+				DisplayName: Imp Garb
+				Tooltip: Ancient Imp garb, it seems to be made from a special fabric not from this world.
 			}
 
 			ImpHead: {
-				DisplayName: Imp Head
-				Tooltip: Ancient Imp mask, it seems to be made from a special fabric not from this world.
+				DisplayName: Imp Hood
+				Tooltip: An ancient Imp hood, it seems to be made from a special fabric not from this world.
 			}
 
 			ImpLegs: {
-				DisplayName: Imp Legs
-				Tooltip: Ancient Imp legs, it seems to be made from a special fabric not from this world.
+				DisplayName: Imp Boots
+				Tooltip: Ancient Imp boots, it seems to be made from a special fabric not from this world.
 			}
 
 			ImpBag: {
 				DisplayName: Ragged Silk Bag
 				Tooltip:
 					'''
-					Right click to open
+					Right-click to open
 					A old bag carried by an Imp
 					It seems to contain several pieces of clothing
 					There is a note attached to it
@@ -2578,6 +2584,7 @@ Mods: {
 			LifelightSkywards.DisplayName: Lifelight Skywards
 			SufferingFleshBall.DisplayName: Suffering Flesh
 			MadnessFlame.DisplayName: Madness Flame
+			Arguement.DisplayName: Arguement
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -2652,6 +2659,9 @@ Mods: {
 					Princess_LovesNPC: I've never seen a visitor like Taraha, how exciting!
 				}
 			}
+
+			AdelSpirit.DisplayName: Adel von Gunresat
+			VertrariusSpirit.DisplayName: Vertrarius von Baaruun
 		}
 
 		Dialogue: {
@@ -2768,13 +2778,58 @@ Mods: {
 			Madman: A simple man who witnessed the true horror, no longer able to think like a normal person.
 			MadnessFlier: A flying entity that mutated into a grotesque something, just touching its skin hurts mentally.
 			MadnessGazer: A giant eyeball creature that flies by flapping its grotesque tentacles around. They might have been the eye of a unfortunate soul that witnessed the horrors.
-			MadnessStarved: A gruesome creature that gazed into the lurking terror, its madness scarred mind cannot properly comprehend the process of consumption anymore, leaving it in a terrible state, craving for food but not being able to die either.
+			MadnessStarving: A gruesome creature that gazed into the lurking terror, its madness scarred mind cannot properly comprehend the process of consumption anymore, leaving it in a terrible state, craving for food but not being able to die either.
 			MadTitan: A bulky creature that follows the horrors, its soul has been empowered by the madness energy inside it. It possesses an arm cannon with which it can fire massive amounts of madness, maybe suggesting that it might have been a normal gun at some point that fused with its holder.
 			PetDrake: Ice Drakes were normally very docile creatures, often enough even interacting with humans by themself. Though the war against the Vikings has left them scarred, now barely trusting anyone. Who knows, maybe some day, we can live in harmony again.
 			Dorira: The creator and administrator of the world's frame we live in, he has come to this world in order to fix what has been broken. Dorira might be a creator god but in reality he isn't powerful at all and relies more on his main system to control things.
 			Taraha: A dimensional traveler who loves to trade items. "Find something here, trade somewhere else", that is her slogan.
 			Smiley: The leader of the Darklings that hide inside the dungeon. His powers are unrivaled and respected amongst his followers and he is equally loved as well. In response to the incredible anger against his origins, his body turned pale to rebel against his darkness.
 			Grudge: The incarnation of despair and hope that piled up in the Frozen Underworld, born from the deep wishes of its residents and the abyssal magic that lurks inside. You have slain their biggest hope, so be assured, the winds are not happy about your slaughter.
+		}
+
+		SoulConversation: {
+			WallofFlesh: {
+				Arguement1: You sad fool, our downfall was your fault, now look at us, trapped inside this spirit cluster.
+				Arguement2: Only your country sized ego has left us in this situation!
+				Arguement3: You should just have given up, this war was stupid!
+				Arguement4: Says the one demon who only fought in it because he was bored.
+				Arguement5: You leading them was ultimately in our way.
+				Arguement6: In YOUR way?!
+				Arguement7: How about you learn that your land is not the center of the universe!!!
+				Arguement8: Hey, I think someone is listening.
+				Arguement9: Whoever you are, I think you agree with me, my opinion is superior isn’t it?
+				Arguement10: DON’T listen to this punk, he is talking nothing but garbage.
+				Arguement11: We will see who they agree with.
+				Arguement12: Seek out the glorious hallowed lands and prove my point.
+				Arguement13: Oooor you make the better choice and look for the Underworld instead.
+				Arguement14: It is up to you but we know you will choose the right way.
+				Arguement15: Ours
+				Arguement16: SHUT UP ALREADY!!!
+				Adel1: Ah...
+				Adel2: The remnants of my glorious home that remain in this world.
+				Adel3: This fills me with joy, seeing them once more.
+				Adel4: You know, I had to be with this entity for too long now.
+				Adel5: I am not interested in any more time together.
+				Adel6: May I ask you to do me a favor?.
+				Adel7: My lord was murdered by the forces of Baaruun and I want to avenge him.
+				Adel8: Take my weapon and let us fight against the unworthy together.
+				Adel9: Go forth and make my race proud!
+				Adel10: Adel's soul fades away into Mythos.
+				Vertrarius1: Ugh, finally
+				Vertrarius2: Took you long enough.
+				Vertrarius3: ...
+				Vertrarius4: It can't be!
+				Vertrarius5: I can sense his soul!
+				Vertrarius6: My friend, I had to hang out with this idiot for so long.
+				Vertrarius7: It was so damn tiring.
+				Vertrarius8: But now I'm free and I can sense someone important down here.
+				Vertrarius9: Would you lend a hand and help me find him?
+				Vertrarius10: Take my sword and let us travel together.
+				Vertrarius11: And while you're at it, kick someone's arse to hell!
+				Vertrarius12: Vertrarius' soul fades away into Vulkanus.
+			}
+
+			Cultist.Hi: Hi
 		}
 	}
 }
