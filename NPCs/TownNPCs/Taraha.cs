@@ -160,6 +160,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			NPC.lifeMax = 1000;
 			NPC.knockBackResist = 0f;
 			TownNPCStayingHomeless = true;
+			NPC.dontTakeDamage = true;
 		}
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
