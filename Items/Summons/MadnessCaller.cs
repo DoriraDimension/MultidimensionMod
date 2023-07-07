@@ -40,7 +40,7 @@ namespace MultidimensionMod.Items.Summons
 		public override bool? UseItem(Player player)
 		{
 			MDWorld.MadnessMoon = true;
-			string status = "You feel your mind burned...";
+			string status = "You feel your mind pierced...";
 			if (Main.netMode == NetmodeID.Server)
 				ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(status), Color.Gold);
 			else if (Main.netMode == NetmodeID.SinglePlayer)

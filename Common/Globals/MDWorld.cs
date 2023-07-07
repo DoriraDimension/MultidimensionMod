@@ -10,6 +10,8 @@ using Terraria.ModLoader;
 using Terraria.Chat;
 using Terraria.Localization;
 using Terraria.ModLoader.IO;
+using Mono.Cecil;
+using MultidimensionMod.Items.Materials;
 
 namespace MultidimensionMod.Common.Globals
 {
@@ -46,25 +48,22 @@ namespace MultidimensionMod.Common.Globals
             #region Night of Madness
             if (!Main.fastForwardTimeToDawn && !Main.fastForwardTimeToDusk)
             {
-                if (Main.time <= 1)
+                if (!Main.dayTime && Main.time == 0)
                 {
-                    if (Main.rand.NextBool(50))
+                    if (Main.rand.NextBool(10))
                     {
-                        if (!Main.dayTime && Main.time > 1)
+                        if (Main.netMode != NetmodeID.MultiplayerClient)
                         {
-                            if (Main.netMode != NetmodeID.MultiplayerClient)
+                            if (!MadnessMoon && NPC.downedBoss2)
                             {
-                                if (!MadnessMoon && NPC.downedBoss2)
+                                MadnessMoon = true;
+                                if (!Main.dayTime)
                                 {
-                                    MadnessMoon = true;
-                                    if (!Main.dayTime)
-                                    {
-                                        string status = "You feel your mind burned...";
-                                        if (Main.netMode == NetmodeID.Server)
-                                            ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(status), Color.Gold);
-                                        else if (Main.netMode == NetmodeID.SinglePlayer)
-                                            Main.NewText(Language.GetTextValue(status), Color.Gold);
-                                    }
+                                    string status = "You feel your mind pirced...";
+                                    if (Main.netMode == NetmodeID.Server)
+                                        ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(status), Color.Gold);
+                                    else if (Main.netMode == NetmodeID.SinglePlayer)
+                                        Main.NewText(Language.GetTextValue(status), Color.Gold);
                                 }
                             }
                         }
@@ -74,6 +73,10 @@ namespace MultidimensionMod.Common.Globals
             if (MadnessMoon && Main.dayTime)
             {
                 MadnessMoon = false;
+            }
+            if (MadnessMoon && Main.dayTime && Main.hardMode)
+            {
+                //Drops Light Depreived Eye
             }
             #endregion
         }

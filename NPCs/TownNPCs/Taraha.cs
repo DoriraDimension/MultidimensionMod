@@ -23,7 +23,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 	[AutoloadHead]
 	class Taraha : ModNPC
 	{
-		//Yes, this is Example Mod code, stfu!!!
+		//Yes, this is Example Mod code, shut the fish up!!!
 
 		// Time of day for traveller to leave (6PM)
 		public const double despawnTime = 48600.0;
@@ -53,7 +53,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
 		public static void UpdateTravelingMerchant()
 		{
-			bool travelerIsThere = (NPC.FindFirstNPC(ModContent.NPCType<Taraha>()) != -1); // Find a Merchant if there's one spawned in the world
+			bool travelerIsThere = NPC.FindFirstNPC(ModContent.NPCType<Taraha>()) != -1; // Find a Merchant if there's one spawned in the world
 
 			// Main.time is set to 0 each morning, and only for one update. Sundialling will never skip past time 0 so this is the place for 'on new day' code
 			if (Main.dayTime && Main.time == 0)
@@ -62,7 +62,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 				// You can also add a day counter here to prevent the merchant from possibly spawning multiple days in a row.
 
 				// NPC won't spawn today if it stayed all night
-				if (!travelerIsThere && NPC.downedBoss2 && Main.rand.NextBool(4))
+				if (!travelerIsThere && Main.rand.NextBool(4))
 				{ // 4 = 25% Chance
 				  // Here we can make it so the NPC doesnt spawn at the EXACT same time every time it does spawn
 					spawnTime = GetRandomSpawnTime(5400, 8100); // minTime = 6:00am, maxTime = 7:30am
@@ -98,11 +98,14 @@ namespace MultidimensionMod.NPCs.TownNPCs
 				return false;
 
 			// can't spawn if the sun or moondial is active
-			if (Main.fastForwardTimeToDawn && Main.fastForwardTimeToDusk)
+			if (Main.IsFastForwardingTime())
 				return false;
 
-			// can spawn if daytime, and between the spawn and despawn times
-			return Main.dayTime && Main.time >= spawnTime && Main.time < despawnTime;
+			if (!NPC.downedBoss2)
+				return false;
+
+            // can spawn if daytime, and between the spawn and despawn times
+            return Main.dayTime && Main.time >= spawnTime && Main.time < despawnTime;
 		}
 
 		private static bool IsNpcOnscreen(Vector2 center)
@@ -170,6 +173,11 @@ namespace MultidimensionMod.NPCs.TownNPCs
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
                 new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Taraha")
             });
+        }
+
+        public override bool UsesPartyHat()
+        {
+            return false;
         }
 
         public override bool CanTownNPCSpawn(int numTownNPCs)

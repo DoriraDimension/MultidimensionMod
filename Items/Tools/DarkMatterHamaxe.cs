@@ -23,7 +23,6 @@ namespace MultidimensionMod.Items.Tools
 			Item.useTime = 25;
 			Item.useAnimation = 25;
 			Item.axe = 20;
-			Item.hammer = 70;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 6;
 			Item.value = Item.sellPrice(silver: 6);
