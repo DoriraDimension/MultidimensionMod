@@ -1,8 +1,10 @@
 ﻿using MultidimensionMod.Projectiles.Magic;
+using MultidimensionMod.Items.Placeables.Banners;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using MultidimensionMod.Items.Accessories;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 {
@@ -12,7 +14,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 		{
 			Item.staff[Item.type] = true;
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-		}
+            ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<TridentBanner>();
+        }
 
 		public override void SetDefaults()
 		{

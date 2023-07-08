@@ -757,7 +757,11 @@ Mods: {
 
 			FrostburnSlimeBanner: {
 				DisplayName: Frostburn Slime Banner
-				Tooltip: ""
+				Tooltip:
+				    '''
+					Many years ago, a now extinct species of Ice Slime existed
+					These flying slimes frostbit everything they touched
+					'''
 			}
 
 			GilaBanner: {
@@ -792,7 +796,12 @@ Mods: {
 
 			TridentBanner: {
 				DisplayName: Magic Trident Banner
-				Tooltip: ""
+				Tooltip: 
+				    '''
+					A banner that depicts a trident
+					These tridents once roamed the sea after their masters vanished
+					Nowadays they no longer appear
+					'''
 			}
 
 			AbyssalHellstone: {
@@ -2618,12 +2627,10 @@ Mods: {
 			LesserSandElemental.DisplayName: Lesser Sand Elemental
 			Darkling.DisplayName: Darkling
 			Ashton.DisplayName: Ashton
-			MagicTrident.DisplayName: Magic Trident
 			OtherworldlyGlowmarin.DisplayName: Otherworldly Glowmarin
 			ParrotLobster.DisplayName: Parrot Lobster
 			StormFrontEel.DisplayName: Storm Front Eel
 			TownDrake.DisplayName: Ice Drake Juvenile
-			FrostburnSlime.DisplayName: Frostburn Slime
 			IceDrakeJuvenile.DisplayName: Ice Drake Juvenile
 			SearedAshton.DisplayName: Seared Ashton
 			Dusty.DisplayName: Dusty

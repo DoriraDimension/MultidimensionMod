@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Items.Quest;
+using MultidimensionMod.Items.Placeables.Banners;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
@@ -11,7 +12,8 @@ namespace MultidimensionMod.Common.Globals.Items
 		public override void SetStaticDefaults()
         {
 			ItemID.Sets.ShimmerTransformToItem[ItemID.FallenStar] = ModContent.ItemType<TeamStar>();
-		}
+            ItemID.Sets.ShimmerTransformToItem[ItemID.IceSlimeBanner] = ModContent.ItemType<FrostburnSlimeBanner>();
+        }
 		public override void SetDefaults(Item item)
 		{
 			Player player = Main.LocalPlayer;
