@@ -12,6 +12,7 @@ namespace MultidimensionMod.UI
 {
     public class TradingPanelUI : UIPanel
     {
+        //This was achieved with help from Mod of Redemption
         private Item InputItem;
         private Item OutputItem;
         private int InputStack;

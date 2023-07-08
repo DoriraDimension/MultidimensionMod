@@ -17,6 +17,7 @@ namespace MultidimensionMod.UI
 {
     public class TradingUI : UIState
     {
+        //This was achieved with help from Mod of Redemption
         private readonly UIImage BgSprite = new(ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/NoTexture"));
         public static bool Visible = false;
         public static bool EldritchWoman = false;

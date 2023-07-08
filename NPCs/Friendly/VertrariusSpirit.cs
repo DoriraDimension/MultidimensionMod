@@ -9,6 +9,7 @@ using Terraria.Localization;
 using MultidimensionMod.Base;
 using Terraria.ID;
 using Terraria.Audio;
+using Terraria.GameContent.Bestiary;
 
 namespace MultidimensionMod.NPCs.Friendly
 {
@@ -27,6 +28,15 @@ namespace MultidimensionMod.NPCs.Friendly
             NPC.dontTakeDamage = true;
             NPC.noGravity = true;
             NPC.alpha = 110;
+        }
+
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheUnderworld,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Vertrarius")
+            });
         }
 
         public override void OnSpawn(IEntitySource source)

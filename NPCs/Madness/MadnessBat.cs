@@ -38,6 +38,7 @@ namespace MultidimensionMod.NPCs.Madness
             NPC.aiStyle = 14;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
+            SpawnModBiomes = new int[1] { ModContent.GetInstance<MadnessMoon>().Type };
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

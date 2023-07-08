@@ -2764,6 +2764,8 @@ Mods: {
 			ColdEnragedHellBoxPlaced.MapEntry: Music Box
 			MadnessBoxPlaced.MapEntry: Music Box
 			DimensiumPlaced.MapEntry: Dimensium
+			FrostburnSlimeBannerPlaced.MapEntry: Frostburn Slime Banner
+			TridentBannerPlaced.MapEntry: Magic Trident Banner
 		}
 
 		DeathMessages.Socks: died from the pain of wearing wet socks.
@@ -2804,6 +2806,8 @@ Mods: {
 			PetDrake: Ice Drakes were normally very docile creatures, often enough even interacting with humans by themself. Though the war against the Vikings has left them scarred, now barely trusting anyone. Who knows, maybe some day, we can live in harmony again.
 			Dorira: The creator and administrator of the world's frame we live in, he has come to this world in order to fix what has been broken. Dorira might be a creator god but in reality he isn't powerful at all and relies more on his main system to control things.
 			Taraha: A dimensional traveler who loves to trade items. "Find something here, trade somewhere else", that is her slogan.
+			Adel: Originating from a neighboring world, this hallowed warrior wishes to avenge his beloved lord. He wields the Lightstream Mythos with which he has slain many foes. He was the first to declare war against Baaruun, against his new lord's will.
+			Vertrarius: A grumpy demon who wields the Evil Ember, Vulkanus. He is lazy and does not care about anyone but his lord, making him the most unreliable person in existence. When Gunresat declared war against Baaruun, he fought as their leader out of boredom.
 			Smiley: The leader of the Darklings that hide inside the dungeon. His powers are unrivaled and respected amongst his followers and he is equally loved as well. In response to the incredible anger against his origins, his body turned pale to rebel against his darkness.
 			Grudge: The incarnation of despair and hope that piled up in the Frozen Underworld, born from the deep wishes of its residents and the abyssal magic that lurks inside. You have slain their biggest hope, so be assured, the winds are not happy about your slaughter.
 		}

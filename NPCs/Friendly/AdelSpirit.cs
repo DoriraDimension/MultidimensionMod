@@ -8,6 +8,7 @@ using Terraria.DataStructures;
 using Terraria.Localization;
 using Terraria.Audio;
 using MultidimensionMod.Base;
+using Terraria.GameContent.Bestiary;
 
 namespace MultidimensionMod.NPCs.Friendly
 {
@@ -26,6 +27,15 @@ namespace MultidimensionMod.NPCs.Friendly
             NPC.dontTakeDamage = true;
             NPC.noGravity = true;
             NPC.alpha = 110;
+        }
+
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheHallow,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Adel")
+            });
         }
 
         public override void OnSpawn(IEntitySource source)
