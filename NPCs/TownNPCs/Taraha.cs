@@ -3,6 +3,7 @@ using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Summons;
 using MultidimensionMod.Items.Potions;
 using MultidimensionMod.Items.Weapons.Summon;
+using MultidimensionMod.UI;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -17,6 +18,7 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using Terraria.Utilities;
 using Terraria.GameContent.Bestiary;
+using Terraria.Audio;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -31,8 +33,6 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		// the time of day the traveler will spawn (double.MaxValue for no spawn)
 		// saved and loaded with the world in TravelingMerchantSystem
 		public static double spawnTime = double.MaxValue;
-
-		public const string ShopName = "Shop";
 
 		public override bool PreAI()
 		{
@@ -127,18 +127,6 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			return (maxTime - minTime) * Main.rand.NextDouble() + minTime;
 		}
 
-		public override void AddShops()
-		{
-			var npcShop = new NPCShop(Type, ShopName)
-			.Add(new Item(ModContent.ItemType<CalmingPills>()) { shopCustomPrice = 10, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
-			.Add(new Item(ItemID.FallenStar) { shopCustomPrice = 3, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
-			.Add(new Item(ModContent.ItemType<MadnessCaller>()) { shopCustomPrice = 8, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.Hardmode)
-			.Add(new Item(ModContent.ItemType<CerebroAlloy>()) { shopCustomPrice = 2, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.Hardmode)
-			//.Add(new Item(ModContent.ItemType<AstralTitansEyeJewel>()) { shopCustomPrice = 40, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMechBossAll)
-			.Add(new Item(ModContent.ItemType<marcO>()) { shopCustomPrice = 25, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMechBossAll);
-			npcShop.Register();
-		}
-
 		public override void SetStaticDefaults()
 		{
 			Main.npcFrameCount[NPC.type] = 1;
@@ -149,7 +137,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			NPCID.Sets.AttackTime[NPC.type] = 90;
 			NPCID.Sets.AttackAverageChance[NPC.type] = 30;
 			NPCID.Sets.HatOffsetY[NPC.type] = 4;
-		}
+            NPCID.Sets.NoTownNPCHappiness[Type] = true;
+        }
 
 		public override void SetDefaults()
 		{
@@ -226,18 +215,19 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
 		public override void SetChatButtons(ref string button, ref string button2)
 		{
-			button = Language.GetTextValue("LegacyInterface.28");
+			button = "Trade";
 		}
 
-		public override void OnChatButtonClicked(bool firstButton, ref string shopName)
-		{
-			if (firstButton)
-			{
-				shopName = "Shop";
-			}
-		}
+        public override void OnChatButtonClicked(bool firstButton, ref string shopName)
+        {
+            if (firstButton)
+            {
+                SoundEngine.PlaySound(SoundID.MenuOpen);
+                TradingUI.Visible = true;
+            }
+        }
 
-		public override void AI()
+        public override void AI()
 		{
 			NPC.homeless = true; // Make sure it stays homeless
 		}

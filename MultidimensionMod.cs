@@ -29,8 +29,12 @@ namespace MultidimensionMod
 
 		public static int DimensiumEuronen;
 
-		//Thanks to Lion8cake for the help with the background and heat distortion ILs.
-		public override void Load()
+        public UserInterface TradingUILayer;
+
+        public TradingUI TradingUIElement;
+
+        //Thanks to Lion8cake for the help with the background and heat distortion ILs.
+        public override void Load()
 		{
 			DimensiumEuronen = CustomCurrencyManager.RegisterCurrency(new MDCurrency(ModContent.ItemType<Dimensium>(), 999L, "Dimensium"));
 			Terraria.IL_Main.DrawUnderworldBackgroudLayer += ILMainDrawUnderworldBackgroundLayer;
@@ -39,7 +43,7 @@ namespace MultidimensionMod
 			SkyManager.Instance["MadnessMoonSky"] = new MadnessMoonSky();
 			Filters.Scene["MultidimensionMod:Madness"] = new Filter(new ScreenShaderData("FilterMiniTower").UseColor(0.8f, 0.6f, 0.2f).UseOpacity(0.5f), EffectPriority.High);
 			base.Load();
-		}
+        }
 
 		#region Madness looky looky
 		public static void PremultiplyTexture(Texture2D texture)
@@ -268,7 +272,11 @@ namespace MultidimensionMod
 	public class MDSystem : ModSystem
 	{
 		public static MDSystem Instance { get; private set; }
-		public MDSystem()
+
+        public UserInterface TradingUILayer;
+
+        public TradingUI TradingUIElement;
+        public MDSystem()
 		{
 			Instance = this;
 		}
@@ -284,7 +292,11 @@ namespace MultidimensionMod
 				TitleUILayer = new UserInterface();
 				TitleCardUIElement = new TitleCard();
 				TitleUILayer.SetState(TitleCardUIElement);
-			}
+
+                TradingUILayer = new UserInterface();
+                TradingUIElement = new TradingUI();
+                TradingUILayer.SetState(TradingUIElement);
+            }
 		}
 
 		public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
@@ -298,7 +310,8 @@ namespace MultidimensionMod
 			if (MouseTextIndex != -1)
 			{
 				AddInterfaceLayer(layers, TitleUILayer, TitleCardUIElement, MouseTextIndex + 3, TitleCard.Showing, "Title Card");
-			}
+                AddInterfaceLayer(layers, TradingUILayer, TradingUIElement, MouseTextIndex + 7, TradingUI.Visible, "Trade");
+            }
 		}
 
 		public static void AddInterfaceLayer(List<GameInterfaceLayer> layers, UserInterface userInterface, UIState state, int index, bool visible, string customName = null) //Code created by Scalie
@@ -323,5 +336,11 @@ namespace MultidimensionMod
 					return true;
 				}, InterfaceScaleType.UI));
 		}
-	}
+
+        public override void UpdateUI(GameTime gameTime)
+        {
+            if (TradingUILayer?.CurrentState != null && TradingUI.Visible)
+                TradingUILayer.Update(gameTime);
+        }
+    }
 }
