@@ -34,7 +34,7 @@ Developer:
 
 Contributor:
 
--DUSTI  spriting
+-kcragon  spriting
 -naka  spriting
 -HybridDeath  coding
 -EggsBenedict  ideas
@@ -46,3 +46,4 @@ Special Thanks:
 
 -ZSolar1  For making the old wiki logo
 -Lion8cake  For the help with the Frozen Underworld ILs.
+-TheDoctorDallin  For alling me to use old Ancients Awakened concepts.

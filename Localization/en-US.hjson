@@ -758,7 +758,7 @@ Mods: {
 			FrostburnSlimeBanner: {
 				DisplayName: Frostburn Slime Banner
 				Tooltip:
-				    '''
+					'''
 					Many years ago, a now extinct species of Ice Slime existed
 					These flying slimes frostbit everything they touched
 					'''
@@ -796,8 +796,8 @@ Mods: {
 
 			TridentBanner: {
 				DisplayName: Magic Trident Banner
-				Tooltip: 
-				    '''
+				Tooltip:
+					'''
 					A banner that depicts a trident
 					These tridents once roamed the sea after their masters vanished
 					Nowadays they no longer appear

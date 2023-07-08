@@ -63,7 +63,6 @@ namespace MultidimensionMod.Biomes
 			int biomeRadius = 675;
 
 			Point originCenter = new((int)PlaceBiomeX, (int)PlaceBiomeY);
-
 			// TILE CONVERSIONS
 			WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
 			{
@@ -107,12 +106,12 @@ namespace MultidimensionMod.Biomes
 				new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
  				new SetModTile(grass, true, true)
             }));
-			{
+            {
 				WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
 				{
 				new InWorld(),
 				new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
-				new Actions.SetLiquid(ModContent.TileType<SolidMagmaPlaced>(), 0)
+				new Actions.SetLiquid(0, 0)
 				}));
 			}
 			WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
