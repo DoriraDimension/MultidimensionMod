@@ -12,7 +12,6 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Big Blob");
 		}
 
 		public override void SetDefaults()
@@ -50,12 +49,6 @@ namespace MultidimensionMod.Projectiles.Ranged
 		public override void Kill(int timeLeft)
 		{
 			SoundEngine.PlaySound(SoundID.NPCDeath1, Projectile.position);
-
-			for (int i = 0; i < 4; i++)
-			{
-				int a = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y - 25f, Main.rand.Next(-23, 9) * .25f, Main.rand.Next(-23, -5) * .25f, ModContent.ProjectileType<DarkMatterBlob2>(), (int)(Projectile.damage * .5f), 0, Projectile.owner);
-			}
-
 			int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<DarkDust>(), 0f, 0f, 100, default(Color), 2f);
 			Main.dust[dustIndex].velocity *= 1.4f;
 		}

@@ -4,7 +4,7 @@ using MultidimensionMod.Items.Pets;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Placeables.Trophies;
 using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Items.Weapons.Melee.Swords;
+using MultidimensionMod.Items.Weapons.Melee.Flails;
 using MultidimensionMod.Items.Weapons.Ranged.Others;
 using MultidimensionMod.Items.Weapons.Magic.Others;
 using MultidimensionMod.Items.Weapons.Summon;

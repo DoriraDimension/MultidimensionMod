@@ -1,4 +1,4 @@
-﻿using MultidimensionMod.Items.Weapons.Melee.Swords;
+﻿using MultidimensionMod.Items.Weapons.Melee.Flails;
 using MultidimensionMod.Items.Weapons.Ranged.Others;
 using MultidimensionMod.Items.Weapons.Magic.Others;
 using MultidimensionMod.Items.Weapons.Summon;

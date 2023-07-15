@@ -1493,7 +1493,7 @@ Mods: {
 
 			SmileySmile: {
 				DisplayName: Smiley's Dark Blast
-				Tooltip: Shoots dark energy beams that explode on hit
+				Tooltip: Shoots void energy beams that explode on hit
 			}
 
 			AtlanteanTrident: {
@@ -1788,8 +1788,8 @@ Mods: {
 			}
 
 			LonelySword: {
-				DisplayName: Lonely Sword
-				Tooltip: Shoots a dark orb straight from 1995.
+				DisplayName: Rising Light
+				Tooltip: ""
 			}
 
 			MadnessSaber: {
@@ -1991,8 +1991,12 @@ Mods: {
 			}
 
 			DarkMatterLauncher: {
-				DisplayName: Dark Matter Launcher
-				Tooltip: You could basically shove the boss into this thing to use as ammo
+				DisplayName: Void Matter Launcher
+				Tooltip:
+					'''
+					Shoots 8 Void Matter blobs
+					Shoots a big blob alongside the smaller ones that does more damage
+					'''
 			}
 
 			GelVac: {
@@ -2446,6 +2450,17 @@ Mods: {
 				DisplayName: Tundra's Fall
 				Tooltip: Rains icicles from the cursor
 			}
+
+			PaleMatter: {
+				DisplayName: Pale Matter
+				Tooltip:
+				    '''
+					Unique Void Matter that went through a change
+					Smiley despises his origins, so in order to escape his own darkness
+					he wished to not be dark anymore.
+					His body turned pale in response to his undying will.
+					'''
+			}
 		}
 
 		SetBonuses.NeroSet:
@@ -2530,8 +2545,8 @@ Mods: {
 			BubbleBolt.DisplayName: Bubble Bolt
 			CompletelyOutOfPlaceExplosionGif.DisplayName: Explosion gif that was ripped from google
 			CursedRay.DisplayName: Blast
-			DarkMatterBlob.DisplayName: Big Blob
-			DarkMatterBlob2.DisplayName: Small Blob
+			DarkMatterBlob.DisplayName: Void Blob
+			DarkMatterBlob2.DisplayName: Small Void Blob
 			DestroyerDualLaser.DisplayName: Destroyer Dual Laser
 			Dragonpiercer.DisplayName: Dragonpiercer
 			EctoflareArrow.DisplayName: EctoflareArrow
@@ -2615,6 +2630,7 @@ Mods: {
 			Arguement.DisplayName: Arguement
 			FrostGreatarrow.DisplayName: Greatarrow
 			Fallcicle.DisplayName: Fallcicle
+			RisingLightFlail.DisplayName: Rising Light
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability

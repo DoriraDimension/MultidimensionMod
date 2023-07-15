@@ -42,7 +42,7 @@ namespace MultidimensionMod.Items.Accessories
 			.AddIngredient(ModContent.ItemType<StinkyPaste>())
 			.AddIngredient(ModContent.ItemType<BaitLeaf>())
 			.AddIngredient(ItemID.JungleSpores, 5)
-			.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 3)
+			.AddIngredient(ModContent.ItemType<PaleMatter>(), 3)
 			.AddTile(TileID.WorkBenches)
 			.Register();
 		}
