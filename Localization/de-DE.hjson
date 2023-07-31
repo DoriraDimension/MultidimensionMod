@@ -1493,7 +1493,7 @@ Mods: {
 
 			SmileySmile: {
 				// DisplayName: Smiley's Dark Blast
-				// Tooltip: Shoots dark energy beams that explode on hit
+				// Tooltip: Shoots void energy beams that explode on hit
 			}
 
 			AtlanteanTrident: {
@@ -1789,7 +1789,7 @@ Mods: {
 
 			LonelySword: {
 				// DisplayName: Rising Light
-				// Tooltip: Shoots dark orbs straight from 1995 while being swung.
+				// Tooltip: ""
 			}
 
 			MadnessSaber: {
@@ -2453,7 +2453,13 @@ Mods: {
 
 			PaleMatter: {
 				// DisplayName: Pale Matter
-				// Tooltip: ""
+				/* Tooltip:
+					'''
+					Unique Void Matter that went through a change
+					Smiley despises his origins, so in order to escape his own darkness
+					he wished to not be dark anymore.
+					His body turned pale in response to his undying will.
+					''' */
 			}
 		}
 

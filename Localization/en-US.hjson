@@ -2333,7 +2333,7 @@ Mods: {
 					It is covered in a weird pitch black substance, you can hear strange whispers eminating from it...
 					[c/FF2CD0C:I have watched you from afar for quite a while now, you have overcome pure madness and even its titans.]
 					[c/FF2CD0C:I wish to converse with you, but the time has not come yet.]
-					[c/FF2CD0C:This eye will guide you to me whenever fate wishes so.]
+					[c/FF2CD0C:This eye will guide you to me whenever fate wills it so.]
 					'''
 			}
 
@@ -2454,7 +2454,7 @@ Mods: {
 			PaleMatter: {
 				DisplayName: Pale Matter
 				Tooltip:
-				    '''
+					'''
 					Unique Void Matter that went through a change
 					Smiley despises his origins, so in order to escape his own darkness
 					he wished to not be dark anymore.
