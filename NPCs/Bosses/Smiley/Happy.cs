@@ -34,7 +34,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 
                 SoundEngine.PlaySound(SoundID.Item93, Projectile.position);
 
-                Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Clentaminator_Red, (float)((a.Next() % 100) / 100), (float)((a.Next() % 100) / 100), 0, default, 1.5f);   //spawns dust behind it, this is a spectral light blue dust. 15 is the dust, change that to what you want.
+                Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Ichor, (float)((a.Next() % 100) / 100), (float)((a.Next() % 100) / 100), 0, default, 1.5f);   //spawns dust behind it, this is a spectral light blue dust. 15 is the dust, change that to what you want.
 
 
             }
@@ -47,33 +47,19 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 
             //this is Projectile dust
 
-            int DustID2 = Dust.NewDust(Projectile.position + Projectile.velocity, Projectile.width, Projectile.height, DustID.Ice_Purple, Projectile.velocity.X * -0.1f, Projectile.velocity.Y * -0.1f, 0, default, 1.25f);   //spawns dust behind it, this is a spectral light blue dust lol
+            int DustID2 = Dust.NewDust(Projectile.position + Projectile.velocity, Projectile.width, Projectile.height, DustID.Ichor, Projectile.velocity.X * -0.1f, Projectile.velocity.Y * -0.1f, 0, default, 1.25f);   //spawns dust behind it, this is a spectral light blue dust lol
             Main.dust[DustID2].noGravity = true;
 
 
             //this make that the Projectile faces the right way
             Projectile.rotation = (float)Math.Atan2((double)Projectile.velocity.Y, (double)Projectile.velocity.X) + 1.57f;
-
-
             Projectile.localAI[0] += 1f;
-            //Projectile.alpha = (int)Projectile.localAI[0] * 2;
-
             if (Projectile.localAI[0] > 10 * 60f) //Projectile time left before disappears
             {
 
                 Projectile.Kill();
             }
-            // Loop through the 20 animation frames, spending 15 ticks on each.
-            if (++Projectile.frameCounter >= 30)
-            {
-                Projectile.frameCounter = 0;
-                if (++Projectile.frame >= 20)
-                {
-                    Projectile.frame = 0;
-                }
-            }
         }
-
     }
 }
 

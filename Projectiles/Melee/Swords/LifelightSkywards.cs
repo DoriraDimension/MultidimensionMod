@@ -36,7 +36,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			}
 			for (int i = 0; i < 10; i++)
 			{
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X + (float)Main.rand.Next(-400, 400), Projectile.Center.Y, 0f, -15f, ModContent.ProjectileType<LifelightBlade>(), (int)((double)((float)Projectile.damage) * 0.5), 0f, Main.myPlayer);
+				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X + (float)Main.rand.Next(-400, 400), Projectile.Center.Y, 0f, -15f, ModContent.ProjectileType<LifelightBlade>(), (int)((double)((float)Projectile.damage) * 1.5), 0f, Main.myPlayer);
 			}
 		}
 

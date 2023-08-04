@@ -117,7 +117,7 @@ namespace MultidimensionMod.Common.Globals
         public override void NetReceive(BinaryReader reader)
         {
             BitsByte flags = reader.ReadByte();
-            MadnessMoon = flags[2];
+            MadnessMoon = flags[0];
         }
     }
 }

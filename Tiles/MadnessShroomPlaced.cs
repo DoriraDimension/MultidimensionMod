@@ -29,6 +29,7 @@ namespace MultidimensionMod.Tiles
             TileObjectData.addTile(Type);
             HitSound = SoundID.Grass;
             DustType = ModContent.DustType<MadnessB>();
+            RegisterItemDrop(ModContent.ItemType<MadnessShroom>(), 1);
         }
         public override void NumDust(int i, int j, bool fail, ref int num)
         {
@@ -37,11 +38,6 @@ namespace MultidimensionMod.Tiles
         public override void AnimateIndividualTile(int type, int i, int j, ref int TileFrameXOffset, ref int TileFrameYOffset)
         {
             TileFrameXOffset = i % 1 * 18;
-        }
-
-        public override void KillMultiTile(int i, int j, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<MadnessShroom>());
         }
     }
 }

@@ -2333,7 +2333,7 @@ Mods: {
 					It is covered in a weird pitch black substance, you can hear strange whispers eminating from it...
 					[c/FF2CD0C:I have watched you from afar for quite a while now, you have overcome pure madness and even its titans.]
 					[c/FF2CD0C:I wish to converse with you, but the time has not come yet.]
-					[c/FF2CD0C:This eye will guide you to me whenever fate wishes so.]
+					[c/FF2CD0C:This eye will guide you to me whenever fate wills it so.]
 					''' */
 			}
 
@@ -2631,6 +2631,7 @@ Mods: {
 			// FrostGreatarrow.DisplayName: Greatarrow
 			// Fallcicle.DisplayName: Fallcicle
 			// RisingLightFlail.DisplayName: Rising Light
+			// DarkEmotion.DisplayName: Dark Emotion
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -2706,6 +2707,7 @@ Mods: {
 
 			// AdelSpirit.DisplayName: Adel von Gunresat
 			// VertrariusSpirit.DisplayName: Vertrarius von Baaruun
+			// SmileyYY.DisplayName: Smiley Y Y
 		}
 
 		Dialogue: {

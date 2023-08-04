@@ -2631,6 +2631,7 @@ Mods: {
 			FrostGreatarrow.DisplayName: Greatarrow
 			Fallcicle.DisplayName: Fallcicle
 			RisingLightFlail.DisplayName: Rising Light
+			DarkEmotion.DisplayName: Dark Emotion
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -2706,6 +2707,7 @@ Mods: {
 
 			AdelSpirit.DisplayName: Adel von Gunresat
 			VertrariusSpirit.DisplayName: Vertrarius von Baaruun
+			SmileyYY.DisplayName: Smiley Y Y
 		}
 
 		Dialogue: {

@@ -134,7 +134,7 @@ namespace MultidimensionMod.NPCs.TownPets
                 "Popsicle",
                 "Sheegoth",
                 "Rundas",
-                "Kyu",
+                "Kyurem",
                 "Tundrana",
                 "UwU"
             };
