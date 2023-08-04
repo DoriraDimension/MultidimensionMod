@@ -43,6 +43,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 
         public override void AI()
         {
+            Projectile.velocity *= 1.005f;
             Projectile.spriteDirection = -1 * Projectile.direction;
 
             //this is Projectile dust
