@@ -17,6 +17,10 @@ namespace MultidimensionMod.NPCs.Friendly
         public override void SetStaticDefaults()
         {
             Main.npcFrameCount[NPC.type] = 2;
+            var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+            {
+                CustomTexturePath = "MultidimensionMod/NPCs/Bestiary/AdelBestiary",
+            };
         }
 
         public override void SetDefaults()

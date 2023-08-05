@@ -20,6 +20,8 @@ namespace MultidimensionMod.Biomes
             return (player.ZoneSkyHeight || player.ZoneOverworldHeight) && MDWorld.MadnessMoon;
         }
 
+        public override string BackgroundPath => "MultidimensionMod/Backgrounds/Map/MadnessMap";
+
         public override string BestiaryIcon => "MultidimensionMod/Biomes/MadnessIcon";
 
 

@@ -1,5 +1,6 @@
 ﻿using MultidimensionMod.Items.Placeables.Banners;
 using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Common.Systems;
 using System;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -100,6 +101,10 @@ namespace MultidimensionMod.NPCs.Dungeon
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
+			if (DownedSystem.downedSmiley)
+			{
+                return SpawnCondition.OverworldNight.Chance * 0.1f;
+            }
 			return SpawnCondition.Dungeon.Chance * 0.1f;
 		}
 

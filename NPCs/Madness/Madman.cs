@@ -24,14 +24,14 @@ namespace MultidimensionMod.NPCs.Madness
 
 		public override void SetDefaults()
 		{
-			NPC.width = 114;
+			NPC.width = 48;
 			NPC.height = 58;
 			NPC.damage = 60;
 			NPC.defense = 10;
 			NPC.lifeMax = 500;
-			NPC.HitSound = SoundID.NPCHit54;
-			NPC.DeathSound = SoundID.NPCDeath52;
-			NPC.value = Item.buyPrice(0, 0, 1, 40);
+            NPC.HitSound = SoundID.NPCHit1;
+            NPC.DeathSound = SoundID.NPCDeath2;
+            NPC.value = Item.buyPrice(0, 0, 1, 40);
 			NPC.knockBackResist = 0.5f;
 			NPC.aiStyle = -1;
 			Banner = NPC.type;
@@ -79,8 +79,10 @@ namespace MultidimensionMod.NPCs.Madness
 		{
 			if (NPC.life <= 0)
 			{
-
-			}
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MadmanGore1").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MadmanGore2").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MadmanGore3").Type, 1);
+            }
 		}
 
 		public override void OnHitPlayer(Player target, Player.HurtInfo info)

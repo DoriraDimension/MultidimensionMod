@@ -24,8 +24,8 @@ namespace MultidimensionMod.NPCs.Madness
         }
         public override void SetDefaults()
         {
-            NPC.width = 30;
-            NPC.height = 66;
+            NPC.width = 40;
+            NPC.height = 40;
             NPC.damage = 5;
             NPC.defense = 10;
             NPC.lifeMax = 300;
@@ -155,6 +155,9 @@ namespace MultidimensionMod.NPCs.Madness
                 {
                     Dust.NewDust(NPC.position, NPC.width, NPC.height, Main.rand.NextBool(2) ? ModContent.DustType<MadnessP>() : ModContent.DustType<MadnessB>(), hit.HitDirection, -1f, 0);
                 }
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/GazerGore1").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/GazerGore2").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/GazerGore3").Type, 1);
             }
         }
 

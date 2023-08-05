@@ -20,7 +20,7 @@ namespace MultidimensionMod.NPCs.Corruption
 
 		public override void SetDefaults()
 		{
-			NPC.width = 44;
+			NPC.width = 38;
 			NPC.height = 46;
 			NPC.damage = 23;
 			NPC.defense = 12;

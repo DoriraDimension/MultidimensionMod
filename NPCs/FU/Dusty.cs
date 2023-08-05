@@ -16,6 +16,10 @@ namespace MultidimensionMod.NPCs.FU
 {
     public class Dusty : ModNPC
     {
+        public override void SetStaticDefaults()
+        {
+            NPCID.Sets.CountsAsCritter[Type] = true;
+        }
         public override void SetDefaults()
         {
             NPC.width = 32;
@@ -60,13 +64,13 @@ namespace MultidimensionMod.NPCs.FU
             {
                 Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Smoke, 0f, 0f, 100, default(Color), 2f);
             }
-            NPC.active = false;
         }
 
         public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
         {
            target.AddBuff(BuffID.Blackout, 300);
-
+            SoundEngine.PlaySound(SoundID.NPCDeath6 with { Volume = .2f }, NPC.position);
+            NPC.active = false;
         }
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)

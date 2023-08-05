@@ -28,8 +28,8 @@ namespace MultidimensionMod.NPCs.Madness
 			NPC.damage = 60;
 			NPC.defense = 10;
 			NPC.lifeMax = 500;
-			NPC.HitSound = SoundID.NPCHit54;
-			NPC.DeathSound = SoundID.NPCDeath52;
+			NPC.HitSound = SoundID.NPCHit1;
+			NPC.DeathSound = SoundID.NPCDeath5;
 			NPC.value = Item.buyPrice(0, 0, 1, 40);
 			NPC.knockBackResist = 0.0f;
 			NPC.lavaImmune = false;
@@ -86,8 +86,10 @@ namespace MultidimensionMod.NPCs.Madness
 		{
 			if (NPC.life <= 0)
 			{
-
-			}
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MadnessDogGore1").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MadnessDogGore2").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MadnessDogGore3").Type, 1);
+            }
 		}
 
 		public override void FindFrame(int frameHeight)

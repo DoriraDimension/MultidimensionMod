@@ -150,7 +150,11 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 		public override void SetStaticDefaults()
 		{
 			Main.npcFrameCount[NPC.type] = 20;
-		}
+            var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+            {
+                CustomTexturePath = "ExampleMod/Content/NPCs/SmileyBestiary",
+            };
+        }
 
 		public override void SetDefaults()
 		{
@@ -274,12 +278,13 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 								if (bossTime % 22 == 0)
 								{
 									moveTo = player.Center + new Vector2(-30f, -150);
-								}
+                                    NPC.netUpdate = true;
+                                }
 								if (bossTime % 66 == 0)
 								{
 									moveTo = player.Center + new Vector2(30f, -150);
-								}
-                                NPC.netUpdate = true;
+                                    NPC.netUpdate = true;
+                                }
 
                                 //NPC.position = moveTo; //direct mvoe
 

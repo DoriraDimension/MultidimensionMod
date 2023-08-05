@@ -50,7 +50,7 @@ namespace MultidimensionMod.NPCs.FU
 			});
 		}
 
-		public override void AI()
+        public override void AI()
 		{
 			if (NPC.velocity.X > 0)
 			{
@@ -78,7 +78,7 @@ namespace MultidimensionMod.NPCs.FU
 					for (int i = 0; i < 5; i++)
 					{
 						Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(30));
-						Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<AshCloud>(), (int)((double)((float)NPC.damage) * 1.5), 0f, Main.myPlayer);
+						Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<AshCloud>(), (int)((double)((float)NPC.damage) * NPC.damage), 0f, Main.myPlayer);
 					}
 					Blargh = 0;
 				}

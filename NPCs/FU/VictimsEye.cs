@@ -25,8 +25,8 @@ namespace MultidimensionMod.NPCs.FU
 
 		public override void SetDefaults()
 		{
-			NPC.width = 50;
-			NPC.height = 65;
+			NPC.width = 14;
+			NPC.height = 14;
 			NPC.damage = 60;
 			NPC.defense = 10;
 			NPC.lifeMax = 250;
