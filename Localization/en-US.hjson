@@ -2461,6 +2461,11 @@ Mods: {
 					His body turned pale in response to his undying will.
 					'''
 			}
+
+			SmileyRelic: {
+				DisplayName: Smiley Relic
+				Tooltip: ""
+			}
 		}
 
 		SetBonuses.NeroSet:

@@ -9,6 +9,7 @@ using MultidimensionMod.Items.Weapons.Ranged.Others;
 using MultidimensionMod.Items.Weapons.Magic.Others;
 using MultidimensionMod.Items.Weapons.Summon;
 using MultidimensionMod.Common.Systems;
+using MultidimensionMod.Items.Placeables.Relics;
 using System;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -35,7 +36,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 		int darkling;
 		int expertDarkling;
 		Vector2 moveTo;
-		bool phase2 = false;
+		public bool phase2 = false;
 		Vector2 dashPos;
 		bool animatedStart = false;
 		int charges = 0;
@@ -97,7 +98,8 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<DarkMatterClump>(), 1, 15, 20));
             NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<SmileySoulshard>()));
 			NPCloot.Add(ItemDropRule.BossBag(ModContent.ItemType<SmileyBag>()));
-		    notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SmileyTrophy>(), 10));
+            NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<SmileyRelic>()));
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SmileyTrophy>(), 10));
 			notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<LonelyWarriorsVisor>(), 10));
 			notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<DarkCloak>()));
 			notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<CuteEmoji>(), 10));
@@ -120,7 +122,6 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 			}
 			if (!DownedSystem.downedSmiley)
 			{
-				Main.NewText("Are you..?", Color.Black);
 				DownedSystem.downedSmiley = true;
 				if (Main.netMode == NetmodeID.Server)
 				{
@@ -177,14 +178,20 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 			NPC.HitSound = SoundID.NPCHit1;
 			NPC.DeathSound = SoundID.NPCDeath7;
 			NPC.netUpdate = true;
-            //NPC.BossBar = phase2 ? ModContent.GetInstance<SmileyBossBar>() : ModContent.GetInstance<SmileyBossBar2>();
+            NPC.BossBar = /*phase2 ?*/ ModContent.GetInstance<SmileyBossBar2>() /*: ModContent.GetInstance<SmileyBossBar>()*/;
             if (!Main.dedServ)
 			{
 				Music = MusicID.Boss2;
 			}
 		}
 
-		public override void ApplyDifficultyAndPlayerScaling(int numPlayers, float balance, float bossAdjustment)
+        public override bool? DrawHealthBar(byte hbPosition, ref float scale, ref Vector2 position)
+        {
+            scale = 1.0f;
+            return null;
+        }
+
+        public override void ApplyDifficultyAndPlayerScaling(int numPlayers, float balance, float bossAdjustment)
 		{
 			NPC.lifeMax = (int)(NPC.lifeMax * 0.6f * bossAdjustment);
 			NPC.damage = (int)(NPC.damage * 0.6f);
