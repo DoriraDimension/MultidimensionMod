@@ -5,6 +5,12 @@ namespace MultidimensionMod
 {
     public class MDColors
     {
+        //Normal rarities
+        public static Color Rarity12 => new Color(239, 0, 243);
+        public static Color Rarity13 => new Color(0, 125, 243);
+        public static Color Rarity14 => new Color(255, 22, 0);
+        public static Color Rarity15 => new Color(0, 178, 107);
+
         //???
         public static Color BossSoulRed => new(130, 0, 0);
         public static Color BossSoulPink => new(172, 37, 139);
