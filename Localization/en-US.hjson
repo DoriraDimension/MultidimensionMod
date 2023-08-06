@@ -2637,6 +2637,7 @@ Mods: {
 			Fallcicle.DisplayName: Fallcicle
 			RisingLightFlail.DisplayName: Rising Light
 			DarkEmotion.DisplayName: Dark Emotion
+			VictimPellet.DisplayName: Victim Pellet
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability

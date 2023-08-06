@@ -27,11 +27,11 @@ namespace MultidimensionMod.NPCs.FU
 		{
 			NPC.width = 14;
 			NPC.height = 14;
-			NPC.damage = 60;
+			NPC.damage = 30;
 			NPC.defense = 10;
 			NPC.lifeMax = 250;
-			NPC.HitSound = SoundID.NPCHit54;
-			NPC.DeathSound = SoundID.NPCDeath52;
+			NPC.HitSound = SoundID.NPCHit1;
+			NPC.DeathSound = SoundID.NPCDeath1;
 			NPC.value = Item.buyPrice(0, 0, 1, 40);
 			NPC.knockBackResist = 0.30f;
 			NPC.lavaImmune = false;
@@ -68,14 +68,14 @@ namespace MultidimensionMod.NPCs.FU
 
 			BaseAI.AISkull(NPC, ref NPC.ai, false, 4, 300, .011f, .020f);
 			float distanceToPlayer = Vector2.Distance(player.Center, NPC.Center);
-			if (distanceToPlayer <= 400) //Only runs the code below if the enemy is close enough
+			if (distanceToPlayer <= 800) //Only runs the code below if the enemy is close enough
 			{
 				Shoot++;
 				if (Shoot >= 100)
 				{
-					SoundEngine.PlaySound(SoundID.NPCDeath13 with { Volume = 0.5f }, NPC.position);
+					SoundEngine.PlaySound(SoundID.Item20 with { Volume = 0.5f }, NPC.position);
 					Vector2 velocity = Vector2.Normalize(player.Center - NPC.Center) * 10f;
-					Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, velocity, ModContent.ProjectileType<AshCloud>(), (int)((double)((float)NPC.damage) * 1.5), 0f, Main.myPlayer);
+					Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, velocity, ModContent.ProjectileType<VictimPellet>(), NPC.damage, 0f, Main.myPlayer);
 					Shoot = 0;
 				}
 			}

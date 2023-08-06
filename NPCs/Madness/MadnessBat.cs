@@ -20,12 +20,12 @@ namespace MultidimensionMod.NPCs.Madness
         int AmbushTimer = 0;
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[NPC.type] = 4;
+            Main.npcFrameCount[NPC.type] = 7;
         }
         public override void SetDefaults()
         {
-            NPC.width = 30;
-            NPC.height = 30;
+            NPC.width = 40;
+            NPC.height = 35;
             NPC.damage = 5;
             NPC.defense = 4;
             NPC.lifeMax = 20;

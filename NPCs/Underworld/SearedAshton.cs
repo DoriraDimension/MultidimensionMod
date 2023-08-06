@@ -20,7 +20,7 @@ namespace MultidimensionMod.NPCs.Underworld
 
 		public override void SetStaticDefaults()
 		{
-			Main.npcFrameCount[NPC.type] = 5;
+			Main.npcFrameCount[NPC.type] = 6;
 		}
 
 		public override void SetDefaults()
@@ -71,7 +71,7 @@ namespace MultidimensionMod.NPCs.Underworld
 			if (distanceToPlayer <= 250) //Only runs the code below if the enemy is close enough
 			{
 				Blargh++;
-				if (Blargh >= 100)
+				if (Blargh >= 180)
 				{
 					SoundEngine.PlaySound(SoundID.NPCDeath13 with { Volume = 0.5f }, NPC.position);
 					Vector2 velocity = Vector2.Normalize(player.Center - NPC.Center) * 10f;
@@ -117,11 +117,15 @@ namespace MultidimensionMod.NPCs.Underworld
 			{
 				NPC.frameCounter = 0.0;
 				NPC.frame.Y += frameHeight;
-				if (NPC.frame.Y >= Main.npcFrameCount[NPC.type] * frameHeight)
+				if (NPC.frame.Y >= 4 * frameHeight)
 				{
 					NPC.frame.Y = 0;
 				}
 			}
-		}
+            if (Blargh >= 160)
+            {
+                NPC.frame.Y = 5 * frameHeight;
+            }
+        }
 	}
 }

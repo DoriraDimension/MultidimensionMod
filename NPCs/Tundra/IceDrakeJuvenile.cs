@@ -208,7 +208,11 @@ namespace MultidimensionMod.NPCs.Tundra
 				{
 					frame = 8;
 				}
-			}
+                if (NPC.frame.Y < 8 * frameHeight)
+                {
+                    NPC.frame.Y = 8 * frameHeight;
+                }
+            }
 			if (!hasBeenFed && NPC.life < NPC.lifeMax)
 			{
 				if (++NPC.frameCounter > 4)
@@ -219,7 +223,7 @@ namespace MultidimensionMod.NPCs.Tundra
 					{
 						frame = 0;
 					}
-				}
+                }
 			}
 			NPC.frame.Y = frame * frameHeight;
 		}

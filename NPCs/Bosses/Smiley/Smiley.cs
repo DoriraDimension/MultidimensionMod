@@ -685,7 +685,11 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 					{
 						NPC.frame.Y = 13 * frameHeight;
 					}
-				}
+                    if (NPC.frame.Y < 13 * frameHeight)
+                    {
+                        NPC.frame.Y = 13 * frameHeight;
+                    }
+                }
 			}
 			if (NPC.life == 1)
 			{

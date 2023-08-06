@@ -18,6 +18,7 @@ namespace MultidimensionMod.NPCs.FU
     {
         public override void SetStaticDefaults()
         {
+            Main.npcFrameCount[NPC.type] = 5;
             NPCID.Sets.CountsAsCritter[Type] = true;
         }
         public override void SetDefaults()
@@ -80,6 +81,20 @@ namespace MultidimensionMod.NPCs.FU
                 return 0.01f;
             }
             return base.SpawnChance(spawnInfo);
+        }
+
+        public override void FindFrame(int frameHeight)
+        {
+            NPC.frameCounter += 1.0;
+            if (NPC.frameCounter >= 7.0)
+            {
+                NPC.frameCounter = 0.0;
+                NPC.frame.Y += frameHeight;
+                if (NPC.frame.Y >= 5 * frameHeight)
+                {
+                    NPC.frame.Y = 0;
+                }
+            }
         }
     }
 }

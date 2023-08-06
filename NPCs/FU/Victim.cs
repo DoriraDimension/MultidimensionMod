@@ -11,6 +11,9 @@ using Terraria.ModLoader.Utilities;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader;
 using Terraria.Audio;
+using Mono.Cecil;
+using MultidimensionMod.Projectiles.Magic;
+using System.Diagnostics;
 
 namespace MultidimensionMod.NPCs.FU
 {
@@ -20,14 +23,14 @@ namespace MultidimensionMod.NPCs.FU
 
 		public override void SetStaticDefaults()
 		{
-			Main.npcFrameCount[NPC.type] = 7;
+			Main.npcFrameCount[NPC.type] = 12;
 		}
 
 		public override void SetDefaults()
 		{
 			NPC.width = 50;
 			NPC.height = 65;
-			NPC.damage = 60;
+			NPC.damage = 55;
 			NPC.defense = 10;
 			NPC.lifeMax = 250;
 			NPC.HitSound = SoundID.NPCHit54;
@@ -69,19 +72,21 @@ namespace MultidimensionMod.NPCs.FU
 
 			BaseAI.AISkull(NPC, ref NPC.ai, false, 4, 300, .011f, .020f);
 			float distanceToPlayer = Vector2.Distance(player.Center, NPC.Center);
-			if (distanceToPlayer <= 250) //Only runs the code below if the enemy is close enough
+			if (distanceToPlayer <= 700) //Only runs the code below if the enemy is close enough
 			{
 				Quadshot++;
 				if (Quadshot >= 100)
 				{
-					SoundEngine.PlaySound(SoundID.NPCDeath13 with { Volume = 0.5f }, NPC.position);
-					Vector2 velocity = Vector2.Normalize(player.Center - NPC.Center) * 10f;
-					for (int i = 0; i < 5; i++)
-					{
-						Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(30));
-						Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<AshCloud>(), (int)((double)((float)NPC.damage) * NPC.damage), 0f, Main.myPlayer);
-					}
-					Quadshot = 0;
+					SoundEngine.PlaySound(SoundID.Item20 with { Volume = 0.5f }, NPC.position);
+                    Vector2 velocity = Vector2.Normalize(player.Center - NPC.Center) * 10f;
+                    for (int i = 0; i < 3; i++)
+                    {
+                        int numProj = 3;
+                        float rotation = MathHelper.ToRadians(14f);
+                        Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedBy(MathHelper.Lerp(0f - rotation, rotation, (float)(i / (numProj - 1))));
+                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<VictimPellet>(), NPC.damage, 0f, Main.myPlayer);
+                    }
+                    Quadshot = 0;
 				}
 			}
 			if (NPC.life <= NPC.lifeMax / 2 && !Main.hardMode) //Main.hardMode Will later be replaced with the Grudge downed bool
@@ -89,7 +94,8 @@ namespace MultidimensionMod.NPCs.FU
 				spawn++;
 				if (spawn <= 1)
 				{
-					NPC.active = false;
+                    SoundEngine.PlaySound(SoundID.NPCDeath6 with { Volume = .2f }, NPC.position);
+                    NPC.active = false;
 					Item.NewItem(NPC.GetSource_Loot(), NPC.position, NPC.Size, ModContent.ItemType<DevilSilk>(), 1);
 					spawn = 2;
 				}
@@ -138,11 +144,29 @@ namespace MultidimensionMod.NPCs.FU
 			{
 				NPC.frameCounter = 0.0;
 				NPC.frame.Y += frameHeight;
-				if (NPC.frame.Y >= Main.npcFrameCount[NPC.type] * frameHeight)
+                if (NPC.life >= NPC.lifeMax / 2)
 				{
-					NPC.frame.Y = 0;
-				}
-			}
+                    if (NPC.frame.Y >= 3 * frameHeight)
+                    {
+                        NPC.frame.Y = 0 * frameHeight;
+                    }
+                }
+                else if (NPC.life <= NPC.lifeMax / 2 && Main.hardMode)
+				{
+                    if (NPC.frame.Y >= 11 * frameHeight)
+                    {
+                        NPC.frame.Y = 5 * frameHeight;
+                    }
+                    if (NPC.frame.Y < 5 * frameHeight)
+                    {
+                        NPC.frame.Y = 5 * frameHeight;
+                    }
+                }
+                if (NPC.life >= NPC.lifeMax / 2 && Quadshot >= 95)
+                {
+                    NPC.frame.Y = 4 * frameHeight;
+                }
+            }
 		}
 	}
 }
