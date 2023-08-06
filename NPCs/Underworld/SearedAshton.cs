@@ -38,8 +38,9 @@ namespace MultidimensionMod.NPCs.Underworld
 			NPC.noGravity = true;
 			NPC.noTileCollide = true;
 			NPC.aiStyle = -1;
-			Banner = NPC.type;
-		}
+            Banner = NPC.type;
+            BannerItem = ModContent.ItemType<SearedAshtonBanner>();
+        }
 
 		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
 		{

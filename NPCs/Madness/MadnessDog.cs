@@ -36,8 +36,9 @@ namespace MultidimensionMod.NPCs.Madness
 			NPC.noGravity = false;
 			NPC.noTileCollide = false;
 			NPC.aiStyle = -1;
-			Banner = NPC.type;
-			SpawnModBiomes = new int[1] { ModContent.GetInstance<MadnessMoon>().Type };
+            Banner = NPC.type;
+            BannerItem = ModContent.ItemType<MadnessDogBanner>();
+            SpawnModBiomes = new int[1] { ModContent.GetInstance<MadnessMoon>().Type };
 		}
 
 		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

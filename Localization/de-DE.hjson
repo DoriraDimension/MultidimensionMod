@@ -2466,6 +2466,41 @@ Mods: {
 				// DisplayName: Smiley Relic
 				// Tooltip: ""
 			}
+
+			AshtonBanner: {
+				// DisplayName: Ashton Banner
+				// Tooltip: ""
+			}
+
+			MadmanBanner: {
+				// DisplayName: Madman Banner
+				// Tooltip: ""
+			}
+
+			MadnessBat2Banner: {
+				// DisplayName: Madness Bat2 Banner
+				// Tooltip: ""
+			}
+
+			MadnessBatBanner: {
+				// DisplayName: Madness Bat Banner
+				// Tooltip: ""
+			}
+
+			MadnessDogBanner: {
+				// DisplayName: Madness Dog Banner
+				// Tooltip: ""
+			}
+
+			SearedAshtonBanner: {
+				// DisplayName: Seared Ashton Banner
+				// Tooltip: ""
+			}
+
+			VictimBanner: {
+				// DisplayName: Victim Banner
+				// Tooltip: ""
+			}
 		}
 
 		/* SetBonuses.NeroSet:

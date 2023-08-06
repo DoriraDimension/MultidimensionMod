@@ -34,8 +34,9 @@ namespace MultidimensionMod.NPCs.Madness
             NPC.value = Item.buyPrice(0, 0, 1, 40);
 			NPC.knockBackResist = 0.5f;
 			NPC.aiStyle = -1;
-			Banner = NPC.type;
-			SpawnModBiomes = new int[1] { ModContent.GetInstance<MadnessMoon>().Type };
+            Banner = NPC.type;
+            BannerItem = ModContent.ItemType<MadmanBanner>();
+            SpawnModBiomes = new int[1] { ModContent.GetInstance<MadnessMoon>().Type };
 		}
 
 		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

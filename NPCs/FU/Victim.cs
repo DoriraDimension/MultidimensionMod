@@ -42,7 +42,8 @@ namespace MultidimensionMod.NPCs.FU
 			NPC.noTileCollide = true;
 			NPC.aiStyle = -1;
 			Banner = NPC.type;
-			SpawnModBiomes = new int[1] { ModContent.GetInstance<FrozenUnderworld>().Type };
+            BannerItem = ModContent.ItemType<VictimBanner>();
+            SpawnModBiomes = new int[1] { ModContent.GetInstance<FrozenUnderworld>().Type };
 		}
 
 		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

@@ -11,6 +11,7 @@ using Terraria.ModLoader.Utilities;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.Bestiary;
 using Terraria.Audio;
+using MultidimensionMod.Items.Placeables.Banners;
 
 namespace MultidimensionMod.NPCs.Madness
 {
@@ -38,6 +39,8 @@ namespace MultidimensionMod.NPCs.Madness
             NPC.aiStyle = 14;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
+            Banner = NPC.type;
+            BannerItem = ModContent.ItemType<MadnessBat2Banner>();
             SpawnModBiomes = new int[1] { ModContent.GetInstance<MadnessMoon>().Type };
         }
 
