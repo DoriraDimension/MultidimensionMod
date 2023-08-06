@@ -25,28 +25,6 @@ namespace MultidimensionMod.Items.Souls
 			Item.rare = ModContent.RarityType<SmileySoulRarity>();
 		}
 
-		public override void ModifyTooltips(List<TooltipLine> list)
-		{
-			foreach (TooltipLine Item in list)
-			{
-				if (Item.Mod == "Terraria" && Item.Name == "ItemName")
-				{
-					switch (Main.GameUpdateCount / 60 % 3)
-					{
-						case 0:
-							Item.OverrideColor = new Color(255, 242, 0);
-							break;
-						case 1:
-							Item.OverrideColor = new Color(120, 13, 255);
-							break;
-						case 2:
-							Item.OverrideColor = new Color(19, 19, 22);
-							break;
-					}
-				}
-			}
-		}
-
 		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
 		{
 			Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Souls/SmileySoulshard").Value;
