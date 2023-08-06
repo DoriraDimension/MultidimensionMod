@@ -27,5 +27,5 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 			Item.rare = ItemRarityID.White;
 			Item.createTile = ModContent.TileType<GlazedObsidianPlaced>();
 		}
-	}
+    }
 }
