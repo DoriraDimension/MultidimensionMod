@@ -10,10 +10,9 @@ namespace MultidimensionMod.Projectiles.Magic
 {
 	internal class PrismShards : ModProjectile
 	{
-
-		public override void SetStaticDefaults()
+        public bool unbound;
+        public override void SetStaticDefaults()
 		{
-			Main.projFrames[Projectile.type] = 3;
 		}
 
 		public override void SetDefaults()
@@ -23,8 +22,8 @@ namespace MultidimensionMod.Projectiles.Magic
 			Projectile.friendly = true;
 			Projectile.DamageType = DamageClass.Magic;
 			Projectile.ignoreWater = true;
-			Projectile.tileCollide = true;
-		}
+			Projectile.tileCollide = false;
+        }
 
 		public override void AI()
 		{
@@ -40,20 +39,12 @@ namespace MultidimensionMod.Projectiles.Magic
 					Projectile.Kill();
 					return;
 				}
-
-				Projectile.localAI[0] += 1f;
-
-				double deg = Projectile.ai[1];
-				double rad = deg * (Math.PI / 180);
-				double dist = 60;
-
-				Projectile.position.X = player.Center.X - (int)(Math.Cos(rad) * dist) - Projectile.width / 2;
-				Projectile.position.Y = player.Center.Y - (int)(Math.Sin(rad) * dist) - Projectile.height / 2;
-				Projectile.rotation = (float)rad;
-
-				Projectile.ai[1] += 7.5f;
-				Projectile.tileCollide = false;
-			}
+				if (!unbound)
+				{
+                    Projectile.direction = player.direction;
+                    Projectile.velocity = player.velocity;
+                }
+            }
 			else if (Projectile.ai[0] == 0f)
             {
 				float speed = 21f;
@@ -68,6 +59,10 @@ namespace MultidimensionMod.Projectiles.Magic
 				Projectile.timeLeft = 120;
 				Projectile.ai[0] = 1f;
 			}
+			if (!player.channel)
+			{
+                unbound = true;
+            }
 		}
 
 		public override void Kill(int timeLeft)
