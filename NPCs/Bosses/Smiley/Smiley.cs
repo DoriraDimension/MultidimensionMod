@@ -21,6 +21,8 @@ using static Terraria.GameContent.Animations.IL_Actions.NPCs;
 using MultidimensionMod.Base;
 using MultidimensionMod.Dusts;
 using Terraria.Audio;
+using MonoMod.Core.Platforms;
+using MultidimensionMod.UI;
 
 //if you see base.velocity.Y += -7f that means theres a jump
 
@@ -50,7 +52,8 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
         public static int phase2HeadSlot = -1;
         public bool blink = false;
 		public int transition = 0;
-		private int bossMode
+        public bool TitleCard = false;
+        private int bossMode
 		{
 			get => (int)NPC.ai[0];
 			set => NPC.ai[0] = value;
@@ -201,6 +204,14 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 
 		public override void AI()
 		{
+            if (!TitleCard)
+            {
+                if (!Main.dedServ)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle("Smiley", 60, 90, 1.0f, 0, Color.Yellow, "Rebel of the Void");
+                    TitleCard = true;
+                }
+            }
             if (Main.rand.NextBool(60))
             {
                 blink = true;

@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using MultidimensionMod.Rarities.Souls;
 
 namespace MultidimensionMod.Items.Souls
 {
@@ -19,9 +20,9 @@ namespace MultidimensionMod.Items.Souls
 
 		public override void SetDefaults()
 		{
-			Item.width = 24;
-			Item.height = 24;
-			Item.rare = ItemRarityID.LightRed;
+			Item.width = 30;
+			Item.height = 36;
+			Item.rare = ModContent.RarityType<SmileySoulRarity>();
 		}
 
 		public override void ModifyTooltips(List<TooltipLine> list)

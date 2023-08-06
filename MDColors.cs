@@ -80,6 +80,10 @@ namespace MultidimensionMod
 
         //Smiley Soulshard colors
 
+        public static Color SmileyYellow => new(255, 242, 0);
+
+        public static Color SmileyPale => new(214, 214, 214);
+
         //Wall Soul colors
         public static Color WallFlesh => new(158, 48, 83);
         public static Color WallDark => new(162, 95, 234);
