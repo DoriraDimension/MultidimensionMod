@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Rarities.Souls;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -21,5 +22,10 @@ namespace MultidimensionMod.Items.Souls
 			Item.height = 38;
 			Item.rare = ModContent.RarityType<EmpressSoulRarity>();
 		}
-	}
+
+        public override Color? GetAlpha(Color lightColor)
+        {
+            return MDColors.Rainbow;
+        }
+    }
 }

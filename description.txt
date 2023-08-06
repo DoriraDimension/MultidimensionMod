@@ -1,4 +1,5 @@
-The Multidimension is a growing lore-based content mod that aims to go with a multidimensional and outer gods thematic.
+Awakened Light is a growing lore-based content mod that aims to go with a multidimensional and outer gods thematic.
+This mod also readds and reworks the old Ancients Awakened mod and integrates it into its lore.
 
 Dimensions arent included yet but there are several planned to be implemented in the future.
 
@@ -10,7 +11,7 @@ The mod currently adds:
 - 3 Pets
 - 6 Vanity Items
 - 11 Enemies
-- 2 Bosses and 2 minibosses
+- 1 Bosse
 - 2 NPCs
 - 1 Town Pet
 - 1 Biome
@@ -18,7 +19,7 @@ The mod currently adds:
 - A good variety of placeable furniture
 - Boss Souls acting as lore items with more uses added later.
 - Some changes to vanilla enemy lootpools and recipes for normally not craftable items.
-- Dozens of items, enemies and even bosses from the Ancients Awakened 1.3 version make their return in this mod, remade, ready for a new life.
+- A reworked version of the old Ancients Awakened mod.
 
 I'm not really the best coder currently and have some bigger planned content, so help, even if its just helping me improve, is greatly appreciated.
 If you are a coder, spriter or musician and you are interested in this mod and want to help, join the mods discord server
@@ -46,4 +47,4 @@ Special Thanks:
 
 -ZSolar1  For making the old wiki logo
 -Lion8cake  For the help with the Frozen Underworld ILs.
--TheDoctorDallin  For alling me to use old Ancients Awakened concepts.
+-TheDoctorDallin  For alling me to use the old Ancients Awakened mod.

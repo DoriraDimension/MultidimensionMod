@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using MultidimensionMod.Base;
 using Terraria;
 
 namespace MultidimensionMod
@@ -106,6 +107,10 @@ namespace MultidimensionMod
         //Adel color
 
         public static Color AdelText => new(255, 0, 127);
+
+        //Other
+
+        public static Color Rainbow => BaseUtility.MultiLerpColor(Main.LocalPlayer.miscCounter % 100 / 100f, Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.LightBlue, Color.Blue, Color.Purple, Color.Red);
 
     }
 }
