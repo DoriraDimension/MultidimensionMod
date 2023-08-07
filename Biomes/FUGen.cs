@@ -11,6 +11,7 @@ using Terraria.WorldBuilding;
 using Terraria.ModLoader;
 using MultidimensionMod.Base;
 using Terraria.GameContent.Generation;
+using static tModPorter.ProgressUpdate;
 
 namespace MultidimensionMod.Biomes
 {
@@ -24,7 +25,11 @@ namespace MultidimensionMod.Biomes
 			{
 				tasks.Insert(BiomesIndex + 1, new PassLegacy("Frozen Underworld", FrozenUnderworldGen));
 			}
-		}
+            if (BiomesIndex != -1)
+            {
+                tasks.Insert(BiomesIndex + 1, new PassLegacy("Frozen Underworld lava removal", RemoveLavaOnlyInHell));
+            }
+        }
 
 		private void FrozenUnderworldGen(GenerationProgress progress, GameConfiguration configuration)
         {
@@ -106,22 +111,101 @@ namespace MultidimensionMod.Biomes
 				new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
  				new SetModTile(grass, true, true)
             }));
+            if (Main.maxTilesY <= 100)
             {
-				WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
-				{
-				new InWorld(),
-				new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
-				new Actions.SetLiquid(0, 0)
-				}));
-			}
-			WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
-{
+                WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
+                {
+                    new InWorld(),
+                    new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
+                    new Actions.SetLiquid(0, 0),
+                    new SetModTile(lava, true, true)
+                }));
+            }
+            WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
+            {
 				new InWorld(),
 				new Modifiers.OnlyTiles(new ushort[]{ 374 }), //Lava Dropper
 				new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
 				new Actions.ClearTile()
             }));
-		}
+
+            /*int radiusLeft = (int)(Center.X / 16f - radius);
+            int radiusRight = (int)(Center.X / 16f + radius);
+            int radiusUp = (int)(Center.Y / 16f - radius);
+            int radiusDown = (int)(Center.Y / 16f + radius);
+            if (radiusLeft < 15) { radiusLeft = 15; }
+            if (radiusRight > Main.maxTilesX - 15) { radiusRight = Main.maxTilesX - 15; }
+            if (radiusUp < 15) { radiusUp = 15; }
+            if (radiusDown > Main.maxTilesY - 15) { radiusDown = Main.maxTilesY - 15; }
+
+            float distRad = radius * 16f;
+            for (int x1 = radiusLeft; x1 <= radiusRight; x1++)
+            {
+                for (int y1 = radiusUp; y1 <= radiusDown; y1++)
+                {
+                    double dist = Vector2.Distance(new Vector2(x1 * 16f + 8f, y1 * 16f + 8f), Center);
+                    if (!WorldGen.InWorld(x1, y1, 0)) continue;
+                    if (dist < distRad && Framing.GetTileSafely(x1, y1) != null)
+                    {
+                        Framing.GetTileSafely(i, j).LiquidAmount = 0;
+                        Framing.GetTileSafely(i, j).ClearTile();
+                        WorldGen.PlaceTile(i, j, TileIDthing);
+                    }
+                }
+            }*/
+        }
+
+		private void RemoveLavaOnlyInHell(GenerationProgress progress, GameConfiguration configuration)
+		{
+            progress.Message = "Getting rid of lava";
+            float PlaceBiomeX = (int)(Main.maxTilesX / 7f);
+
+            int e = Main.UnderworldLayer;
+            while (Main.tile[(int)PlaceBiomeX, e] != null && !Main.tile[(int)PlaceBiomeX, e].HasTile)
+            {
+                e++;
+            }
+            for (int l = (int)PlaceBiomeX - 25; l < (int)PlaceBiomeX + 25; l++)
+            {
+                for (int m = e - 6; m < e + 90; m++)
+                {
+                    if (Main.tile[l, m] != null && Main.tile[l, m].HasTile)
+                    {
+                        int type = Main.tile[l, m].TileType;
+                        if (type == TileID.Cloud || type == TileID.RainCloud || type == TileID.Sunplate)
+                        {
+                            e++;
+                            if (!Main.tile[l, m].HasTile)
+                            {
+                                e++;
+                            }
+                        }
+                    }
+                }
+            }
+            float PlaceBiomeY = e;
+
+            ushort lava = (ushort)ModContent.TileType<SolidMagmaPlaced>();
+
+            int lavaWidth = 1500;
+			int lavaHeight = 300;
+			int petrifiedH = 100;
+			int petrifiedW = 1300;
+
+            Point originCenter = new((int)PlaceBiomeX - 675, (int)PlaceBiomeY);
+			Point originCenter2 = new((int)PlaceBiomeX, (int)PlaceBiomeY + 100);
+            // TILE CONVERSIONS
+            WorldUtils.Gen(originCenter, new Shapes.Rectangle(lavaWidth, lavaHeight), Actions.Chain(new GenAction[]
+            {
+            new InWorld(),
+            new Actions.SetLiquid(0, 0),
+            }));
+           /* WorldUtils.Gen(originCenter2, new Shapes.Rectangle(petrifiedH, petrifiedW), Actions.Chain(new GenAction[]
+            {
+            new InWorld(),
+            new SetModTile(lava, true, true)
+            }));*/
+        }
 	}
 	public class GenUtils
 	{
