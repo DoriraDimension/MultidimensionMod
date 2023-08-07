@@ -31,6 +31,7 @@ namespace MultidimensionMod.Projectiles.Pets
         {
             Player player = Main.player[Projectile.owner];
             player.dino = false;
+            CheckActive(player);
 
             if (Projectile.ai[0] == 1)
             {

@@ -65,6 +65,15 @@ namespace MultidimensionMod.Common.Players
             };
         }
 
+        public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
+        {
+            if (attempt.rare && !attempt.inLava && !attempt.inHoney)
+            {
+                itemDrop = ModContent.ItemType<EnergyFish>();
+                return;
+            }
+        }
+
         public override void UpdateBadLifeRegen()
         {
             Player player = Main.LocalPlayer;

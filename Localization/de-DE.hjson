@@ -3,12 +3,12 @@ Mods: {
 		Biomes: {
 			FrozenUnderworld: {
 				// DisplayName: Frozen Underworld
-				// TownNPCDialogueName: the Frozen Underworld
+				// TownNPCDialogueName: The Frozen Underworld
 			}
 
 			MadnessMoon: {
 				// DisplayName: Night of Madness
-				// TownNPCDialogueName: the Madness Moon
+				// TownNPCDialogueName: The Madness Moon
 			}
 		}
 
@@ -30,7 +30,7 @@ Mods: {
 
 			DarkRebelsBuff: {
 				// DisplayName: Dark Rebel
-				// Description: One of Smiley's trusted soldiers helps you in battle
+				// Description: A brave Darkling is aiding you in battle
 			}
 
 			DrakeBuff: {
@@ -100,22 +100,12 @@ Mods: {
 
 			RoseVenom: {
 				// DisplayName: Rose Venom
-				// Description: Mods.MultidimensionMod.Buffs.RoseVenom.Description
-			}
-
-			MasterMage: {
-				// DisplayName: Master Mage
-				// Description: Mods.MultidimensionMod.Buffs.MasterMage.Description
-			}
-
-			PerfectLeader: {
-				// DisplayName: Perfect Leader
-				// Description: Mods.MultidimensionMod.Buffs.PerfectLeader.Description
+				// Description: There is poison under your skin, take it off, get it out
 			}
 
 			CosimaBuff: {
-				// DisplayName: Cosima Buff
-				// Description: Mods.MultidimensionMod.Buffs.CosimaBuff.Description
+				// DisplayName: Cassiopeia
+				// Description: Just hacked herself into your life
 			}
 		}
 
@@ -124,8 +114,9 @@ Mods: {
 				// DisplayName: Creation Titan's Eye Jewel
 				/* Tooltip:
 					'''
-					The Scelestians appreciate their titan and as such made replicas of its many crystal eyes,
-					these tokens are supposed to show their deep friendship.
+					One of the creation titan's many crystal eyes that fell off from natural causes.
+					Scelestians like to keep them as special tokens of good fortune,
+					showing their deep friendship with the titan.
 					''' */
 			}
 
@@ -183,7 +174,6 @@ Mods: {
 				// DisplayName: Digger Engine
 				/* Tooltip:
 					'''
-					A excavator engine used in the Destroyer to mine minerals incredibly fast.
 					Increases mining speed by 35% and spawns friendly Probes when you get hit.
 					The engine located in the Destroyer's head, it was designed to be as efficient as possible,
 					completely ignoring the amount of fuel it would consume.
@@ -196,7 +186,6 @@ Mods: {
 				/* Tooltip:
 					'''
 					Increases defense by 4 and damage reduction by 4% when in the Snow biome.
-					Gives immunity to chilled and frozen
 					A metal base, reinforced with drake scales.
 					Drake scales react to temperature and harden when the environment becomes colder,
 					travellers would often pick up shed scales from juveniles and use them for various tools,
@@ -208,7 +197,7 @@ Mods: {
 				// DisplayName: Eye of the Greed
 				/* Tooltip:
 					'''
-					A true greed can find every treasure.
+					[c/e8b722:A true greed can find every treasure.]
 					Your greedy eyes can now see treasures.
 					Has a chance to inflict the Cursed debuff when you get it
 					Greed is a terrible sin, affecting everyone the same,
@@ -221,7 +210,7 @@ Mods: {
 				// DisplayName: Eye of the Explorer
 				/* Tooltip:
 					'''
-					A true adventurer can sense traps and danger.
+					[c/93a4d8:A true adventurer can sense traps and danger.]
 					You can see danger sources.
 					Has a chance to inflict the Slow debuff when you get it
 					It is said that an adventurer developes a sixth sense for danger,
@@ -235,7 +224,7 @@ Mods: {
 				// DisplayName: Eye of the Hunter
 				/* Tooltip:
 					'''
-					A true hunter can sense its prey.
+					[c/7c091d:A true hunter can sense its prey.]
 					You can now sense your enemies everywhere.
 					Has a chance to inflict the Weak debuff when you get it
 					Hunters come in many different shapes, some prefer to lurk and ambush,
@@ -248,7 +237,7 @@ Mods: {
 				// DisplayName: Eye of the Nightwalker
 				/* Tooltip:
 					'''
-					A true resident of the night can see through the darkness.
+					[c/007437:A true resident of the night can see through the darkness.]
 					You now have improved vision at night.
 					Has a chance to inflict the Blackout debuff when you get it
 					They lurk through the night, when everything sleeps, 
@@ -310,7 +299,7 @@ Mods: {
 				// DisplayName: Omni Eye
 				/* Tooltip:
 					'''
-					You... can... see. Beware not to get blinded by it's forbidden magic.
+					[c/650670:You... can... see. Beware not to get blinded by it's forbidden magic.]
 					Highlights danger sources, enemies and treasures, also gives nightvision
 					The eye that sees all, a gaze upon us, definetily a sight to behold,
 					if only this artifact wasn't just as dangerous as it is helpful.
@@ -401,7 +390,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Increases minion damage by 6%
-					You can rub it onto your skin to smell like shit
+					You can rub it onto your skin to smell like crap
 					The inside of jungle slimes has a weird rotten smell,
 					it was often used by lihzahrds to protect themself from predators
 					''' */
@@ -432,7 +421,7 @@ Mods: {
 					'''
 					Reflects 15% of damage back to the enemy if they touch you
 					Old natives of the jungle would wear this to hurt animals that attack them but would also hurt themself,
-					a small price to pay to be able to escape a attacking predator
+					a small price to pay to be able to escape an attacking predator
 					''' */
 			}
 
@@ -468,6 +457,7 @@ Mods: {
 				// DisplayName: Nero Hammerhead Mask
 				/* Tooltip:
 					'''
+					Greatly extends underwater breathing
 					Increases summon damage by 12%
 					A mask created from ancient blueprints engraved in a stone tablet
 					''' */
@@ -477,6 +467,7 @@ Mods: {
 				// DisplayName: Nero Lantern Helm
 				/* Tooltip:
 					'''
+					Greatly extends underwater breathing
 					Increases summon damage by 12%
 					A helm created from ancient blueprints engraved in a stone tablet
 					''' */
@@ -486,6 +477,7 @@ Mods: {
 				// DisplayName: Nero Predator Head
 				/* Tooltip:
 					'''
+					Greatly extends underwater breathing
 					Increases summon damage by 12%
 					A head helmet created from ancient blueprints engraved in a stone tablet
 					''' */
@@ -495,7 +487,8 @@ Mods: {
 				// DisplayName: Nero Shell Helmet
 				/* Tooltip:
 					'''
-					Increases summon damage by 18%
+					Greatly extends underwater breathing
+					Increases summon damage by 12%
 					A helmet created from ancient blueprints engraved in a stone tablet
 					''' */
 			}

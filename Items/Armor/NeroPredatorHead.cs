@@ -36,6 +36,7 @@ namespace MultidimensionMod.Items.Armor
 			player.setBonus = Language.GetTextValue("Mods.MultidimensionMod.SetBonuses.NeroSet");
 			player.maxMinions += 2;
 			player.ignoreWater = true;
+			player.accDivingHelm = true;
 			player.whipRangeMultiplier += 0.4f;
 			player.GetModPlayer<MDPlayer>().NeroSet = true;
 			ArmorIDs.Head.Sets.DrawHead[Item.headSlot] = false;
