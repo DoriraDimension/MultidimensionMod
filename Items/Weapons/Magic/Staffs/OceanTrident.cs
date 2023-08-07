@@ -33,8 +33,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			Item.rare = ItemRarityID.Blue;
 			Item.UseSound = SoundID.Item20;
 			Item.autoReuse = true;
-			Item.shoot = ModContent.ProjectileType<Wave>();
-			Item.shootSpeed = 15f;
+			Item.shoot = ModContent.ProjectileType<SaltwaterBolt>();
+			Item.shootSpeed = 32f;
 		}
 
 		public override void AddRecipes()

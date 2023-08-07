@@ -2673,6 +2673,8 @@ Mods: {
 			RisingLightFlail.DisplayName: Rising Light
 			DarkEmotion.DisplayName: Dark Emotion
 			VictimPellet.DisplayName: Victim Pellet
+			OceanicBolt.DisplayName: Oceanic Bolt
+			SaltwaterBolt.DisplayName: Saltwater Bolt
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability

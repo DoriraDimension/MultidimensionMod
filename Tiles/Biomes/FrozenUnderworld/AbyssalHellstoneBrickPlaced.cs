@@ -11,11 +11,9 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 		public override void SetStaticDefaults()
 		{
 			Main.tileSolid[Type] = true;
-			Main.tileMergeDirt[57] = false;
 			Main.tileBlockLight[Type] = true;
 			AddMapEntry(new Color(76, 143, 207));
 			Main.tileMerge[Type][ModContent.TileType<ColdAsh>()] = true;
-			Main.tileMergeDirt[Type] = true;
 			HitSound = SoundID.Tink;
 			DustType = DustID.Frost;
 		}
