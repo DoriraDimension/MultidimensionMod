@@ -112,6 +112,11 @@ Mods: {
 				DisplayName: Perfect Leader
 				Description: Mods.MultidimensionMod.Buffs.PerfectLeader.Description
 			}
+
+			CosimaBuff: {
+				DisplayName: Cosima Buff
+				Description: Mods.MultidimensionMod.Buffs.CosimaBuff.Description
+			}
 		}
 
 		Items: {
@@ -2675,6 +2680,7 @@ Mods: {
 			VictimPellet.DisplayName: Victim Pellet
 			OceanicBolt.DisplayName: Oceanic Bolt
 			SaltwaterBolt.DisplayName: Saltwater Bolt
+			Cosima.DisplayName: Cosima
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
