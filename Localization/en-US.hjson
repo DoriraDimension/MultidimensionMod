@@ -564,7 +564,11 @@ Mods: {
 
 			Blight2: {
 				DisplayName: Mad Titan's Soul
-				Tooltip: The soul of a madness titan, their unique souls made them resist death through mind incineration
+				Tooltip:
+				    '''
+					The soul of a madness titan, their unique souls made them resist death through mind incineration.
+					It seems to currently be carried by a Madness Gazer.
+					'''
 			}
 
 			DarkMatterClump: {

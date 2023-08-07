@@ -2,6 +2,7 @@
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Base;
+using MultidimensionMod.Items;
 using System;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -76,7 +77,11 @@ namespace MultidimensionMod.NPCs.Madness
 		public override void ModifyNPCLoot(NPCLoot NPCloot)
 		{
 			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MadnessFragment>(), 1, 1, 3));
-		}
+            if (Main.rand.NextBool(100))
+            {
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<ShadeEye>(), 1));
+            }
+        }
 
 		public override void OnHitPlayer(Player target, Player.HurtInfo info)
 		{

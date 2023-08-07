@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Items.Placeables.Banners;
+using MultidimensionMod.Items;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Base;
@@ -74,7 +75,11 @@ namespace MultidimensionMod.NPCs.Madness
 		public override void ModifyNPCLoot(NPCLoot NPCloot)
 		{
 			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MadnessFragment>(), 3, 1, 2));
-		}
+            if (Main.rand.NextBool(100))
+            {
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<ShadeEye>(), 1));
+            }
+        }
 
 		public override void HitEffect(NPC.HitInfo hit)
 		{

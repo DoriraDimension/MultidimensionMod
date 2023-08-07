@@ -2,6 +2,7 @@
 using MultidimensionMod.Dusts;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Base;
+using MultidimensionMod.Items;
 using System;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -169,6 +170,14 @@ namespace MultidimensionMod.NPCs.Madness
             if (Main.rand.NextBool(3))
             {
                 NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MadnessFragment>(), 1, 1, 2));
+            }
+            if (Main.rand.NextBool(20))
+            {
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<Blight2>(), 1));
+            }
+            if (Main.rand.NextBool(100))
+            {
+                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<ShadeEye>(), 1));
             }
         }
 
