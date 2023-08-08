@@ -122,13 +122,17 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			{
 				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.MechanicDialogue", Main.npc[WrenchWoman].GivenName));
 			}
-			if (Main.hardMode)
+            if (Main.hardMode)
             {
 				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericHardmodeDialogue1"));
 			}
 			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue1"));
 			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue2"));
-			return chat;
+            if (NPC.downedBoss2)
+            {
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue3"));
+            }
+            return chat;
 		}
 
 		private static int ChatNumber = 0;
@@ -206,7 +210,12 @@ namespace MultidimensionMod.NPCs.TownNPCs
         {
 			WeightedRandom<string> chat = new(Main.rand);
 			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.ColdHellHelp"));
-			return chat;
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.DimensiumHelp"));
+            if (Main.rand.NextBool(100))
+            {
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.TouchGrassHelp"));
+            }
+            return chat;
 		}
 
 		public static string QuestDialogue()

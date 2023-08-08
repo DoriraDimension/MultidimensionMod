@@ -134,14 +134,8 @@ namespace MultidimensionMod.NPCs.Madness
 
         public override void ModifyNPCLoot(NPCLoot NPCloot)
         {
-            if (Main.rand.NextBool(3))
-            {
-                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MadnessFragment>(), 1, 1, 2));
-            }
-            if (Main.rand.NextBool(100))
-            {
-                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<ShadeEye>(), 1));
-            }
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MadnessFragment>(), 3, 1, 2));
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<ShadeEye>(), 100));
         }
 
         public override void OnHitPlayer(Player target, Player.HurtInfo info)

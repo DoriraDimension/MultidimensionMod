@@ -29,7 +29,12 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			num = fail ? 1 : 3;
 		}
 
-		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
+        public override bool CanExplode(int i, int j)
+        {
+            return false;
+        }
+
+        public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
 		{
 			r = 0.5f;
 			g = 0.5f;

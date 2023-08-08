@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Projectiles.Melee.Spears;
+using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -42,7 +43,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<VikingPolearm>())
-			.AddIngredient(ItemID.Bone, 12)
+			.AddIngredient(ModContent.ItemType<AbyssalHellstoneBar>(), 12)
 			.AddTile(TileID.Anvils)
 			.Register();
 		}

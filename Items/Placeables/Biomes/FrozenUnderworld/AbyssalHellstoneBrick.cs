@@ -24,7 +24,7 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 			Item.useTime = 10;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
-			Item.rare = ItemRarityID.White;
+			Item.rare = ItemRarityID.Pink;
 			Item.createTile = ModContent.TileType<AbyssalHellstoneBrickPlaced>();
 		}
 

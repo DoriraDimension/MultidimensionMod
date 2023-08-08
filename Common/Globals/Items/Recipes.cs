@@ -82,6 +82,7 @@ namespace MultidimensionMod.Common.Globals.Items
 			Recipe waterwalk = Recipe.Create(ItemID.WaterWalkingBoots); 
 			waterwalk.AddIngredient(ItemID.Leather, 5);
 			waterwalk.AddIngredient(ItemID.WaterWalkingPotion, 3);
+			waterwalk.AddIngredient(ItemID.Starfish, 5);
 			waterwalk.AddTile(TileID.WorkBenches);
 			waterwalk.Register();
 
@@ -377,14 +378,6 @@ namespace MultidimensionMod.Common.Globals.Items
 			#endregion
 
 			#region Tools
-			Recipe mirror = Recipe.Create(ItemID.MagicMirror);
-			mirror.AddRecipeGroup(RecipeGroupID.IronBar, 3);
-			mirror.AddIngredient(ItemID.FallenStar, 3);
-			mirror.AddIngredient(ItemID.Glass, 5);
-			mirror.AddIngredient(ItemID.RecallPotion, 5);
-			mirror.AddTile(TileID.Anvils);
-			mirror.Register();
-
 			Recipe mirror2 = Recipe.Create(ItemID.IceMirror);
 			mirror2.AddIngredient(ModContent.ItemType<VikingRelic>(), 3);
 			mirror2.AddIngredient(ItemID.FallenStar, 3);

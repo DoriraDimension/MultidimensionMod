@@ -23,7 +23,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.height = 86;
 			Item.useTime = 34;
 			Item.useAnimation = 34;
-			Item.knockBack = 8;
+			Item.knockBack = 14;
 			Item.value = Item.sellPrice(0, 0, 56, 0);
 			Item.rare = ItemRarityID.Orange;
 			Item.autoReuse = true;

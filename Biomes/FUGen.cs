@@ -187,7 +187,7 @@ namespace MultidimensionMod.Biomes
 
             ushort lava = (ushort)ModContent.TileType<SolidMagmaPlaced>();
 
-            int lavaWidth = 1500;
+            int lavaWidth = 1300;
 			int lavaHeight = 300;
 			int petrifiedH = 100;
 			int petrifiedW = 1300;
