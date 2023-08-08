@@ -18,7 +18,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 
 		public override void SetDefaults()
 		{
-			Item.damage = 89;
+			Item.damage = 107;
 			Item.DamageType = DamageClass.Ranged;
 			Item.width = 68;
 			Item.height = 22;
@@ -33,7 +33,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 30f;
 			Item.useAmmo = AmmoID.Bullet;
-			Item.crit = 15;
+			Item.crit = 25;
 		}
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)

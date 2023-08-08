@@ -18,12 +18,12 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 
 		public override void SetDefaults()
 		{
-			Item.damage = 14;
+			Item.damage = 17;
 			Item.DamageType = DamageClass.Ranged;
 			Item.width = 24;
 			Item.height = 30;
-			Item.useTime = 40;
-			Item.useAnimation = 40;
+			Item.useTime = 36;
+			Item.useAnimation = 36;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 2;

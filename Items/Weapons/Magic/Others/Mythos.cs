@@ -17,7 +17,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 
 		public override void SetDefaults()
 		{
-			Item.damage = 56;
+			Item.damage = 49;
 			Item.DamageType = DamageClass.Magic;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.useTime = 20;

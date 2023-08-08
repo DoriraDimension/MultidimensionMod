@@ -26,6 +26,11 @@ namespace MultidimensionMod.Common.Globals
             }
         }
 
+        public override void SetStaticDefaults()
+        {
+            Main.tileMerge[TileID.Ash][TileID.Hellstone] = true;
+        }
+
         public override void Drop(int i, int j, int type)
         {
             if (Main.player[Main.myPlayer].GetModPlayer<MDPlayer>().Geodes)

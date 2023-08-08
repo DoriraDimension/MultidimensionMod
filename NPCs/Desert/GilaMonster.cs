@@ -19,7 +19,7 @@ namespace MultidimensionMod.NPCs.Desert
 			NPC.CloneDefaults(NPCID.Crab);
 			NPC.width = 70;
 			NPC.height = 26;
-			NPC.damage = 26;
+			NPC.damage = 55;
 			NPC.defense = 20;
 			NPC.lifeMax = 210;
 			NPC.HitSound = SoundID.NPCHit1;

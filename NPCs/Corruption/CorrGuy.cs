@@ -20,11 +20,11 @@ namespace MultidimensionMod.NPCs.Corruption
 
 		public override void SetDefaults()
 		{
-			NPC.width = 38;
-			NPC.height = 46;
+			NPC.width = 32;
+			NPC.height = 50;
 			NPC.damage = 23;
 			NPC.defense = 12;
-			NPC.lifeMax = 100;
+			NPC.lifeMax = 50;
 			NPC.HitSound = SoundID.NPCHit1;
 			NPC.DeathSound = SoundID.NPCDeath2;
 			NPC.value = Item.buyPrice(0, 0, 1, 50);

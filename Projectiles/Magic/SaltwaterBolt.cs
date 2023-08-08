@@ -29,6 +29,8 @@ namespace MultidimensionMod.Projectiles.Magic
 			Projectile.penetrate = 3;
 			Projectile.timeLeft = 300;
 			AIType = ProjectileID.Bullet;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 3;
 
         }
 

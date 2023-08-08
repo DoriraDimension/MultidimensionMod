@@ -24,7 +24,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
         public override bool? ModifyInfo(ref BigProgressBarInfo info, ref float life, ref float lifeMax, ref float shield, ref float shieldMax)
         {
             NPC npc = Main.npc[info.npcIndexToAimAt];
-            if (!npc.active || npc.life >= npc.lifeMax / 2)
+            if (!npc.active /*|| npc.life >= npc.lifeMax / 2*/)
                 return false;
 
             bossHeadIndex = npc.GetBossHeadTextureIndex();

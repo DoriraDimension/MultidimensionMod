@@ -27,8 +27,8 @@ namespace MultidimensionMod.NPCs.Underworld
 		{
 			NPC.width = 54;
 			NPC.height = 110;
-			NPC.damage = 60;
-			NPC.defense = 10;
+			NPC.damage = 65;
+			NPC.defense = 20;
 			NPC.lifeMax = 500;
 			NPC.HitSound = SoundID.NPCHit54;
 			NPC.DeathSound = SoundID.NPCDeath52;
@@ -79,7 +79,8 @@ namespace MultidimensionMod.NPCs.Underworld
 					for (int i = 0; i < 5; i++)
 					{
 						Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(30));
-						Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<BurningAshCloud>(), (int)((double)((float)NPC.damage) * 1.5), 0f, Main.myPlayer);
+                        perturbedSpeed *= 1f - Main.rand.NextFloat(0.3f);
+                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<BurningAshCloud>(), (int)((double)((float)NPC.damage) * 1.5), 0f, Main.myPlayer);
 					}
 					Blargh = 0;
 				}
@@ -97,7 +98,6 @@ namespace MultidimensionMod.NPCs.Underworld
 
 		public override void ModifyNPCLoot(NPCLoot NPCloot)
 		{
-			NPCloot.Add(ItemDropRule.Common(ItemID.HellstoneBar, 1, 1, 3));
 		}
 
 		public override void HitEffect(NPC.HitInfo hit)

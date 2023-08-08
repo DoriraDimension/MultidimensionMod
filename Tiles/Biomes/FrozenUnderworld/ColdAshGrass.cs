@@ -25,6 +25,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
             TileID.Sets.CanBeClearedDuringOreRunner[Type] = true;
             TileID.Sets.Conversion.MergesWithDirtInASpecialWay[Type] = true;
             Main.tileMerge[Type][ModContent.TileType<ColdAsh>()] = true;
+            Main.tileMerge[Type][TileID.Ash] = true;
             Main.tileSolid[Type] = true;
             Main.tileBlockLight[Type] = true;
 

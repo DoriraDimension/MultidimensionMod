@@ -67,7 +67,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 			}
 			if (Crescent == 1)
             {
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity * 3, ModContent.ProjectileType<DuskCrescent>(), (int)((double)((float)Projectile.damage) * 0.8f), 0f, Main.myPlayer);
+				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity * 3, ModContent.ProjectileType<DuskCrescent>(), (int)((double)((float)Projectile.damage) * 0.6f), 0f, Main.myPlayer);
 			}
 			if (Crescent > 2)
             {

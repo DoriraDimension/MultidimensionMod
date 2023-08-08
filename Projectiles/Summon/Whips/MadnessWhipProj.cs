@@ -19,13 +19,16 @@ namespace MultidimensionMod.Projectiles.Summon.Whips
 		public override void SetDefaults()
 		{
 			Projectile.DefaultToWhip();
-		}
+            Projectile.WhipSettings.Segments = 15;
+            Projectile.WhipSettings.RangeMultiplier = 0.9f;
+        }
 
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			target.AddBuff(ModContent.BuffType<Madness>(), 120);
 			Main.player[Projectile.owner].MinionAttackTargetNPC = target.whoAmI;
-		}
+            Projectile.damage = (int)(Projectile.damage * 0.7f);
+        }
 
 		private void DrawLine(List<Vector2> list)
 		{
@@ -40,7 +43,7 @@ namespace MultidimensionMod.Projectiles.Summon.Whips
 				Vector2 diff = list[i + 1] - element;
 
 				float rotation = diff.ToRotation() - MathHelper.PiOver2;
-				Color color = Lighting.GetColor(element.ToTileCoordinates(), Color.White);
+				Color color = Lighting.GetColor(element.ToTileCoordinates(), MDColors.ShadeYellow);
 				Vector2 scale = new Vector2(1, (diff.Length() + 2) / frame.Height);
 
 				Main.EntitySpriteDraw(texture, pos - Main.screenPosition, frame, color, rotation, origin, scale, SpriteEffects.None, 0);

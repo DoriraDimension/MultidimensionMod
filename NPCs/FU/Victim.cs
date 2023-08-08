@@ -30,9 +30,9 @@ namespace MultidimensionMod.NPCs.FU
 		{
 			NPC.width = 50;
 			NPC.height = 65;
-			NPC.damage = 55;
+			NPC.damage = 35;
 			NPC.defense = 10;
-			NPC.lifeMax = 250;
+			NPC.lifeMax = 500;
 			NPC.HitSound = SoundID.NPCHit54;
 			NPC.DeathSound = SoundID.NPCDeath52;
 			NPC.value = Item.buyPrice(0, 0, 1, 40);
@@ -57,6 +57,10 @@ namespace MultidimensionMod.NPCs.FU
 		public int spawn;
 		public override void AI()
 		{
+			if (Main.hardMode)
+			{
+				NPC.damage = 60;
+			}
 			if (NPC.velocity.X > 0)
 			{
 				NPC.spriteDirection = 1;

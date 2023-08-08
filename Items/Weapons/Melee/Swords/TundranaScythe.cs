@@ -18,7 +18,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void SetDefaults()
 		{
-			Item.damage = 79;
+			Item.damage = 90;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 76;
 			Item.height = 76;

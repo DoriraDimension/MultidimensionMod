@@ -21,7 +21,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 
 		public override void SetDefaults()
 		{
-			Item.damage = 87;
+			Item.damage = 72;
 			Item.DamageType = DamageClass.Magic;
 			Item.mana = 16;
 			Item.width = 52;

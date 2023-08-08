@@ -26,7 +26,7 @@ namespace MultidimensionMod.NPCs.Ocean
 			NPC.width = 80;
 			NPC.height = 80;
 			NPC.damage = 85;
-			NPC.defense = 30;
+			NPC.defense = 35;
 			NPC.lifeMax = 2000;
 			NPC.HitSound = SoundID.NPCHit9;
 			NPC.DeathSound = SoundID.NPCDeath33;

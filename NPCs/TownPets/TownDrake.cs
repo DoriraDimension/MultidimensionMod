@@ -45,7 +45,7 @@ namespace MultidimensionMod.NPCs.TownPets
             NPC.CloneDefaults(NPCID.TownDog);
 
             AIType = NPCID.TownDog;
-            NPC.lifeMax = 300;
+            NPC.lifeMax = 400;
             NPC.defense = 15;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;

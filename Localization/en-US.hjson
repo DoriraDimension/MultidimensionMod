@@ -565,7 +565,7 @@ Mods: {
 			Blight2: {
 				DisplayName: Mad Titan's Soul
 				Tooltip:
-				    '''
+					'''
 					The soul of a madness titan, their unique souls made them resist death through mind incineration.
 					It seems to currently be carried by a Madness Gazer.
 					'''
@@ -574,7 +574,7 @@ Mods: {
 			DarkMatterClump: {
 				DisplayName: Void Matter
 				Tooltip:
-				    '''
+					'''
 					The physical incarnation of the nothingness outside our plain of existence.
 					A strange fog is emitting from it,
 					must be a reaction to the energy signature of our existence.
@@ -1055,7 +1055,7 @@ Mods: {
 
 			MerfolkPotion: {
 				DisplayName: Merfolk Potion
-				Tooltip: Grants the ability to swim and breathe underwater. 
+				Tooltip: Grants the ability to swim and breathe underwater.
 			}
 
 			PotionofLife: {
@@ -1502,7 +1502,7 @@ Mods: {
 			AtlanteanTrident: {
 				DisplayName: Atlantean Trident
 				Tooltip:
-				    '''
+					'''
 					Shoots multiple streams of water
 					Fires a saltwater trident every 5 shots
 					Saltwater tridents rain down water streams on the cursor position on hit
@@ -1517,7 +1517,7 @@ Mods: {
 			LophiiformesBaculum: {
 				DisplayName: Lophiiformes Baculum
 				Tooltip:
-				    '''
+					'''
 					A magic staff created from ancient blueprints engraved in a stone tablet
 					Shoots homing water blasts
 					Fires a oceanic trident every 3 shots
@@ -1533,7 +1533,7 @@ Mods: {
 			OceanTrident: {
 				DisplayName: Ocean Trident
 				Tooltip:
-				    '''
+					'''
 					Fires a saltwater trident
 					Saltwater tridents rain down water streams on the cursor position on hit
 					'''
@@ -2125,6 +2125,8 @@ Mods: {
 				Tooltip:
 					'''
 					Summons a killer bee that grows sawblades when enemies are spotted.
+					You must have at least 2 empty minion slots to summon.
+					Only one bee can be alive at a time.
 					A rare bee species, adapted to hunt and kill prey.
 					Their honey contains blood that stuck to them during their hunts, giving it a bloodred color.
 					'''
@@ -2675,6 +2677,7 @@ Mods: {
 			OceanicBolt.DisplayName: Oceanic Trident
 			SaltwaterBolt.DisplayName: Saltwater Trident
 			Cosima.DisplayName: Cosima
+			AtlanteanTridentStaff.DisplayName: Atlantean Trident Staff
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability

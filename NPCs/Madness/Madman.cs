@@ -27,9 +27,9 @@ namespace MultidimensionMod.NPCs.Madness
 		{
 			NPC.width = 48;
 			NPC.height = 58;
-			NPC.damage = 60;
+			NPC.damage = 30;
 			NPC.defense = 10;
-			NPC.lifeMax = 500;
+			NPC.lifeMax = 160;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath2;
             NPC.value = Item.buyPrice(0, 0, 1, 40);

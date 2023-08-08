@@ -20,8 +20,8 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.damage = 37;
 			Item.width = 42;
 			Item.height = 42;
-			Item.useTime = 15;
-			Item.useAnimation = 15;
+			Item.useTime = 17;
+			Item.useAnimation = 17;
 			Item.noUseGraphic = true;
 			Item.noMelee = true;
 			Item.value = Item.sellPrice(0, 0, 70, 0);

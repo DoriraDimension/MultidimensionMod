@@ -13,7 +13,6 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Forgotten Servant");
 			Main.projFrames[Projectile.type] = 4;
 			ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
 			Main.projPet[Projectile.type] = true;
@@ -31,7 +30,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 			Projectile.minionSlots = 1f;
 			Projectile.penetrate = -1;
 			Projectile.usesLocalNPCImmunity = true;
-			Projectile.localNPCHitCooldown = 10;
+			Projectile.localNPCHitCooldown = 15;
 		}
 
 		public override bool? CanCutTiles()

@@ -45,7 +45,7 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 {
                     if (!Main.dedServ)
                     {
-                       MDSystem.Instance.TitleCardUIElement.DisplayTitle("King Slime", 60, 90, 1.0f, 0, Color.LightBlue, "Geletic Ruler");
+                       MDSystem.Instance.TitleCardUIElement.DisplayTitle("King Slime", 60, 90, 1.0f, 0, MDColors.KingSlimeBlue, "Geletic Ruler");
                        KingTitleCard = true;
                     }
                 }

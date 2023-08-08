@@ -26,7 +26,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
             Projectile.hostile = true;
             Projectile.tileCollide = true;
             Projectile.ignoreWater = false;
-            Projectile.light = 0.4f;
+            Projectile.light = 0.8f;
             Projectile.timeLeft = 240;
         }
         public override void Kill(int timeLeft)
@@ -96,6 +96,3 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
         }
     }
 }
-
-
-

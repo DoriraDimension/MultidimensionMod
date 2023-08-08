@@ -27,9 +27,9 @@ namespace MultidimensionMod.NPCs.FU
 		{
 			NPC.width = 14;
 			NPC.height = 14;
-			NPC.damage = 30;
-			NPC.defense = 10;
-			NPC.lifeMax = 250;
+			NPC.damage = 50;
+			NPC.defense = 0;
+			NPC.lifeMax = 200;
 			NPC.HitSound = SoundID.NPCHit1;
 			NPC.DeathSound = SoundID.NPCDeath1;
 			NPC.value = Item.buyPrice(0, 0, 1, 40);

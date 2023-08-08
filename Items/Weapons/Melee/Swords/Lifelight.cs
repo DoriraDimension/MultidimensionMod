@@ -69,7 +69,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			if (player.altFunctionUse == 2 && Light == 10)
             {
 				Light = 0;
-				Projectile.NewProjectile(player.GetSource_ItemUse(player.HeldItem), player.Center.X, player.Center.Y, 0f, -15f, ModContent.ProjectileType<LifelightSkywards>(), (int)((double)((float)Item.damage) * 2.0), 0f, Main.myPlayer);
+				Projectile.NewProjectile(player.GetSource_ItemUse(player.HeldItem), player.Center.X, player.Center.Y, 0f, -15f, ModContent.ProjectileType<LifelightSkywards>(), (int)((double)((float)Item.damage) * 1.7), 0f, Main.myPlayer);
 			}
 			return true;
         }

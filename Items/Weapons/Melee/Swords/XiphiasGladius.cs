@@ -16,7 +16,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void SetDefaults()
 		{
-			Item.damage = 53;
+			Item.damage = 49;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 54;
 			Item.height = 58;
@@ -28,7 +28,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.value = Item.sellPrice(0, 3, 0, 0);
 			Item.rare = ItemRarityID.Yellow;
 			Item.UseSound = SoundID.Item1;
-			Item.crit = 11;
 			Item.noMelee = true;
 			Item.noUseGraphic = true;
 			Item.shoot = ModContent.ProjectileType<XiphiasGladiusStab>();

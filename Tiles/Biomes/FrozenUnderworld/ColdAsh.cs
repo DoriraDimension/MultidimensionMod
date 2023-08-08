@@ -16,7 +16,8 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			Main.tileMerge[Type][ModContent.TileType<AbyssalHellstoneBrickPlaced>()] = true;
 			Main.tileMerge[Type][ModContent.TileType<SolidMagmaPlaced>()] = true;
 			Main.tileMerge[Type][ModContent.TileType<GlazedObsidianBrickPlaced>()] = true;
-			DustType = DustID.Snow;
+            Main.tileMerge[Type][TileID.Ash] = true;
+            DustType = DustID.Snow;
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)

@@ -17,7 +17,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 
 		public override void SetDefaults()
 		{
-			Item.damage = 50;
+			Item.damage = 30;
 			Item.DamageType = DamageClass.Ranged;
 			Item.width = 64;
 			Item.height = 84;

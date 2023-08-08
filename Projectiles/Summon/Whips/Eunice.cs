@@ -19,7 +19,9 @@ namespace MultidimensionMod.Projectiles.Summon.Whips
 		public override void SetDefaults()
 		{
 			Projectile.DefaultToWhip();
-		}
+            Projectile.WhipSettings.Segments = 8;
+            Projectile.WhipSettings.RangeMultiplier = 1.4f;
+        }
 
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{

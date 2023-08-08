@@ -28,9 +28,9 @@ namespace MultidimensionMod.NPCs.Madness
         {
             NPC.width = 40;
             NPC.height = 35;
-            NPC.damage = 5;
-            NPC.defense = 4;
-            NPC.lifeMax = 20;
+            NPC.damage = 25;
+            NPC.defense = 6;
+            NPC.lifeMax = 140;
             NPC.noGravity = true;
             NPC.noTileCollide = false;
             NPC.knockBackResist = 0.5f;

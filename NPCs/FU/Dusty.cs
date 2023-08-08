@@ -27,7 +27,7 @@ namespace MultidimensionMod.NPCs.FU
             NPC.height = 32;
             NPC.damage = 50;
             NPC.defense = 5;
-            NPC.lifeMax = 100;
+            NPC.lifeMax = 1;
             NPC.aiStyle = -1;
             NPC.noGravity = true;
             NPC.noTileCollide = true;

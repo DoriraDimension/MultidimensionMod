@@ -13,7 +13,8 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			Main.tileMergeDirt[57] = true;
 			Main.tileBlockLight[Type] = true;
 			Main.tileMerge[Type][ModContent.TileType<ColdAsh>()] = true;
-			AddMapEntry(new Color(90, 84, 150));
+            Main.tileMerge[Type][TileID.ObsidianBrick] = true;
+            AddMapEntry(new Color(90, 84, 150));
 			Main.tileMergeDirt[Type] = true;
 			HitSound = SoundID.Tink;
 			DustType = DustID.Obsidian;

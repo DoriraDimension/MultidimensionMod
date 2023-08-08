@@ -19,7 +19,9 @@ namespace MultidimensionMod.Projectiles.Summon.Whips
 		public override void SetDefaults()
 		{
 			Projectile.DefaultToWhip();
-		}
+            Projectile.WhipSettings.Segments = 20;
+            Projectile.WhipSettings.RangeMultiplier = 0.7f;
+        }
 
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
@@ -39,7 +41,7 @@ namespace MultidimensionMod.Projectiles.Summon.Whips
 				Vector2 diff = list[i + 1] - element;
 
 				float rotation = diff.ToRotation() - MathHelper.PiOver2;
-				Color color = Lighting.GetColor(element.ToTileCoordinates(), Color.White);
+				Color color = Lighting.GetColor(element.ToTileCoordinates(), Color.Red);
 				Vector2 scale = new Vector2(1, (diff.Length() + 2) / frame.Height);
 
 				Main.EntitySpriteDraw(texture, pos - Main.screenPosition, frame, color, rotation, origin, scale, SpriteEffects.None, 0);

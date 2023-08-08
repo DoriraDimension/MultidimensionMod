@@ -16,7 +16,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
 
 		public override void SetDefaults()
 		{
-			Item.damage = 19;
+			Item.damage = 26;
 			Item.DamageType = DamageClass.Melee;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.width = 30;

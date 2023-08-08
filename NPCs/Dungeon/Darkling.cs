@@ -27,7 +27,7 @@ namespace MultidimensionMod.NPCs.Dungeon
 			NPC.width = 46;
 			NPC.height = 46;
 			NPC.damage = 45;
-			NPC.defense = 3;
+			NPC.defense = 10;
 			NPC.lifeMax = 120;
 			NPC.HitSound = SoundID.NPCHit54;
 			NPC.DeathSound = SoundID.NPCDeath52;

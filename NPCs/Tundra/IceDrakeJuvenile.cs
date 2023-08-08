@@ -35,9 +35,9 @@ namespace MultidimensionMod.NPCs.Tundra
 			NPC.dontTakeDamageFromHostiles = true;
 			NPC.width = 34;
 			NPC.height = 22;
-			NPC.damage = 16;
-			NPC.defense = 13;
-			NPC.lifeMax = 50;
+			NPC.damage = 31;
+			NPC.defense = 15;
+			NPC.lifeMax = 100;
 			NPC.HitSound = SoundID.NPCHit1;
 			NPC.DeathSound = SoundID.NPCDeath1;
 			NPC.value = Item.buyPrice(0, 0, 0, 90);

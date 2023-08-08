@@ -16,10 +16,10 @@ namespace MultidimensionMod.NPCs.Corruption
 		public override void SetDefaults()
 		{
 			NPC.CloneDefaults(NPCID.Bee);
-			NPC.width = 18;
-			NPC.height = 18;
+			NPC.width = 14;
+			NPC.height = 14;
 			NPC.damage = 10;
-			NPC.defense = 4;
+			NPC.defense = 0;
 			NPC.lifeMax = 10;
 			NPC.HitSound = SoundID.NPCHit1;
 			NPC.DeathSound = SoundID.NPCDeath1;

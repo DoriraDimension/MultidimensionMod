@@ -19,7 +19,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 
 		public override void SetDefaults()
 		{
-			Item.damage = 35;
+			Item.damage = 19;
 			Item.DamageType = DamageClass.Magic;
 			Item.mana = 10;
 			Item.width = 40;
