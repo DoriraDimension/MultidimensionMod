@@ -25,7 +25,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			AdjTiles = new int[] { TileID.OpenDoor };
 			TileID.Sets.CloseDoorID[Type] = ModContent.TileType<VoidMatterDoorClosed>();
-			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsDoor);
+            RegisterItemDrop(ModContent.ItemType<VoidMatterDoor>(), 0);
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsDoor);
 			TileObjectData.newTile.Width = 2;
 			TileObjectData.newTile.Height = 3;
 			TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile, 1, 0);

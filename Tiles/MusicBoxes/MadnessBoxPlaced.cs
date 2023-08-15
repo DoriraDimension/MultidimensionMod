@@ -6,6 +6,7 @@ using Terraria.DataStructures;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using MultidimensionMod.Items.Placeables;
 
 namespace MultidimensionMod.Tiles.MusicBoxes
 {
@@ -23,7 +24,8 @@ namespace MultidimensionMod.Tiles.MusicBoxes
 			TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();
 			AddMapEntry(new Color(200, 200, 200), name);
-		}
+            RegisterItemDrop(ModContent.ItemType<MadnessBox>(), 1);
+        }
 
 		public override void MouseOver(int i, int j)
 		{
