@@ -31,9 +31,6 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
             for (int k = 0; k < 12; k++)
             {
                 Random a = new Random();
-
-                SoundEngine.PlaySound(SoundID.Item93, Projectile.position);
-
                 Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Ichor, (float)((a.Next() % 100) / 100), (float)((a.Next() % 100) / 100), 0, default, 1.5f);   //spawns dust behind it, this is a spectral light blue dust. 15 is the dust, change that to what you want.
 
 

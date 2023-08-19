@@ -38,6 +38,7 @@ namespace MultidimensionMod.Common.Players
         public bool CalmMind;
         public bool DrakePoison = false;
         public bool NeroSet = false;
+        public bool SinnerSet = false;
 
         public override void ResetEffects()
         {
@@ -137,6 +138,10 @@ namespace MultidimensionMod.Common.Players
                 }
                 player.statLife += 5; //Heals the player for 5 HP if an enemy dies from a melee attack
             }
+            if (SinnerSet && item.CountsAsClass(DamageClass.Magic))
+            {
+                target.AddBuff(BuffID.Frostburn, 120);
+            }
         }
 
         public override void OnHitNPCWithProj(Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
@@ -150,6 +155,10 @@ namespace MultidimensionMod.Common.Players
                     return;
                 }
                 player.statLife += 5; //Heals the player for 5 HP if an enemy dies from a projectile
+            }
+            if (SinnerSet && proj.CountsAsClass(DamageClass.Magic))
+            {
+                target.AddBuff(BuffID.Frostburn, 120);
             }
         }
 

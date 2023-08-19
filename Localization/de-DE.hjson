@@ -2517,16 +2517,56 @@ Mods: {
 				// DisplayName: Victim Banner
 				// Tooltip: ""
 			}
+
+			HellFlake: {
+				// DisplayName: Hell Flake
+				// Tooltip: ""
+			}
+
+			SinnersVeilGreaves: {
+				// DisplayName: Sinners Veil Greaves
+				/* Tooltip:
+					'''
+					Increases maximum mana by 30
+					Increases magic damage by 4%
+					''' */
+			}
+
+			SinnersVeilHood: {
+				// DisplayName: Sinners Veil Hood
+				/* Tooltip:
+					'''
+					Increases maximum mana by 30
+					Increases magic damage by 4%
+					''' */
+			}
+
+			SinnersVeilRobe: {
+				// DisplayName: Sinners Veil Robe
+				/* Tooltip:
+					'''
+					Increases maximum mana by 30
+					Increases magic damage by 4%
+					''' */
+			}
 		}
 
-		/* SetBonuses.NeroSet:
-			'''
-			Grants the ability to swim and move through water freely
-			Increases whip range by 40%
-			Increases movement speed by 15% and defense by 10 when submerged in liquid
-			Press the Armor Ability hotkey to place a Nero Construct at the cursor position
-			Once placed, it cannot be repositioned until it disappeared
-			''' */
+		SetBonuses: {
+			/* NeroSet:
+				'''
+				Grants the ability to swim and move through water freely
+				Increases whip range by 40%
+				Increases movement speed by 15% and defense by 10 when submerged in liquid
+				Press the Armor Ability hotkey to place a Nero Construct at the cursor position
+				Once placed, it cannot be repositioned until it disappeared
+				''' */
+			/* SinnerSet:
+				'''
+				All magic attacks inflict Frostburn
+				Increases mana regeneration
+				Reduces mana cost by 20%
+				''' */
+		}
 
 		Projectiles: {
 			// KelpHookTip.DisplayName: KelpHook
@@ -2678,6 +2718,7 @@ Mods: {
 			// SaltwaterBolt.DisplayName: Saltwater Trident
 			// Cosima.DisplayName: Cosima
 			// AtlanteanTridentStaff.DisplayName: Atlantean Trident Staff
+			// HellFlakeProj.DisplayName: Hell Flake Proj
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
