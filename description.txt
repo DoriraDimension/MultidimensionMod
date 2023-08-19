@@ -5,7 +5,7 @@ The mod currently adds:
 
 - 100+ Weapons
 - 32 Accessories
-- 2 Armor Sets
+- 3 Armor Sets
 - 3 Pets
 - Several Vanity Items
 - 18 Enemies
@@ -19,7 +19,7 @@ The mod currently adds:
 - Some changes to vanilla enemy lootpools and recipes for normally not craftable items.
 - A reworked version of the old Ancients Awakened mod. [Note that the mod is added and reworked over the course of several updates]
 
-I'm not really the best coder currently and have some bigger planned content, so help, even if its just helping me improve, is greatly appreciated.
+I'm not really the best coder currently and have some bigger planned content, so help, even if it's just helping me improve, is greatly appreciated.
 If you are a coder, spriter or musician and you are interested in this mod and want to help, join the mods discord server
 Or just do it for news I guess, lol.
 
@@ -29,6 +29,7 @@ Developer:
 -DrVoodoo  musician
 -Enigmatic  spriting
 -TailsTheFox92  coding
+-Karve  coding
 
 
 Contributor:
@@ -36,10 +37,8 @@ Contributor:
 -kcragon  spriting
 -naka  spriting
 -HybridDeath  coding
--EggsBenedict  ideas
 -nebs  coding
 -torra th  spriting
--Rocketlauncher269  spriting
 
 Special Thanks:
 

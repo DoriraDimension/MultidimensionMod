@@ -22,15 +22,15 @@ namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
             Item.useStyle = ItemUseStyleID.Swing;
             Item.width = 50;
             Item.height = 50;
-            Item.useTime = 25;
-            Item.useAnimation = 25;
+            Item.useTime = 20;
+            Item.useAnimation = 20;
             Item.noUseGraphic = true;
             Item.noMelee = true;
             Item.autoReuse = true;
             Item.value = Item.sellPrice(0, 2, 40, 0);
             Item.rare = ItemRarityID.LightRed;
             Item.shoot = ModContent.ProjectileType<HellFlakeProj>();
-            Item.shootSpeed = 16;
+            Item.shootSpeed = 24;
         }
 
         public override bool CanUseItem(Player player)

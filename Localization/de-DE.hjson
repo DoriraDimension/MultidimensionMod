@@ -2524,7 +2524,7 @@ Mods: {
 			}
 
 			SinnersVeilGreaves: {
-				// DisplayName: Sinners Veil Greaves
+				// DisplayName: Sinner's Veil Greaves
 				/* Tooltip:
 					'''
 					Increases maximum mana by 30
@@ -2533,7 +2533,7 @@ Mods: {
 			}
 
 			SinnersVeilHood: {
-				// DisplayName: Sinners Veil Hood
+				// DisplayName: Sinner's Veil Hood
 				/* Tooltip:
 					'''
 					Increases maximum mana by 30
@@ -2542,7 +2542,7 @@ Mods: {
 			}
 
 			SinnersVeilRobe: {
-				// DisplayName: Sinners Veil Robe
+				// DisplayName: Sinner's Veil Robe
 				/* Tooltip:
 					'''
 					Increases maximum mana by 30
