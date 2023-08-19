@@ -15,6 +15,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			AddMapEntry(new Color(76, 143, 207));
 			Main.tileMerge[Type][ModContent.TileType<ColdAsh>()] = true;
             Main.tileMerge[Type][TileID.HellstoneBrick] = true;
+            Main.tileMerge[TileID.HellstoneBrick][Type] = true;
             HitSound = SoundID.Tink;
 			DustType = DustID.Frost;
 		}

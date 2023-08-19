@@ -27,7 +27,7 @@ namespace MultidimensionMod.Common.Globals
             }
             if (Main.LocalPlayer.ZoneDungeon & !DownedSystem.seenDungeon)
             {
-                MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Dungeon", 90, 120, 1.6f, 0, Color.DarkGray, "Halls of Sin");
+                MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Dungeon", 90, 120, 1.6f, 0, Color.DarkGray, "Accursed Halls");
                 NPC.SetEventFlagCleared(ref DownedSystem.seenDungeon, -1);
             }
             if (Main.LocalPlayer.ZoneLihzhardTemple & !DownedSystem.seenTemple)
