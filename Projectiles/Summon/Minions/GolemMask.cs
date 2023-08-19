@@ -67,7 +67,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 						bool lineOfSight = Collision.CanHitLine(Projectile.position, Projectile.width, Projectile.height, npc.position, npc.width, npc.height);
 						bool closeThroughWall = between < 700f;
 
-						if (((closest && inRange) || !foundTarget) && (lineOfSight || closeThroughWall))
+						if (((closest && inRange) || !foundTarget) && lineOfSight)
 						{
 							distanceFromTarget = between;
 							targetCenter = npc.Center;
@@ -90,10 +90,9 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 			{
 				Projectile.timeLeft = 2;
 			}
-
-			if (foundTarget)
+            if (foundTarget)
 			{
-				ballTimer++;
+                ballTimer++;
 				laserTimer++;
 				Vector2 direction = targetCenter - Projectile.Center;
 				direction.Normalize();
