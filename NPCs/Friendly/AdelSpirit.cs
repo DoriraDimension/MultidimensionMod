@@ -21,6 +21,7 @@ namespace MultidimensionMod.NPCs.Friendly
             {
                 CustomTexturePath = "MultidimensionMod/NPCs/Bestiary/AdelBestiary",
             };
+            NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, drawModifier);
         }
 
         public override void SetDefaults()

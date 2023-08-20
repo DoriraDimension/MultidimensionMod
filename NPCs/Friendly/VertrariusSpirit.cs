@@ -20,8 +20,9 @@ namespace MultidimensionMod.NPCs.Friendly
             Main.npcFrameCount[NPC.type] = 2;
             var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
             {
-                CustomTexturePath = "MultidimensionMod/NPCs/Bestiary/VetrariusBestiary",
+                CustomTexturePath = "MultidimensionMod/NPCs/Bestiary/VertrariusBestiary",
             };
+            NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, drawModifier);
         }
 
         public override void SetDefaults()
