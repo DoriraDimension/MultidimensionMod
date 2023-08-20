@@ -95,7 +95,7 @@ namespace MultidimensionMod.Common.Players
                     player.lifeRegen = 0;
                 }
                 player.lifeRegenTime = 0;
-                if (MadnessTimer >= 220)
+                if (MadnessTimer >= 160)
                 {
                     MadnessCringe += 5; //Increases the damage this debuff does
                     if (CalmMind)
@@ -105,9 +105,9 @@ namespace MultidimensionMod.Common.Players
                     }
                     MadnessTimer = 0; //resets the time until the next level
                 }
-                if (MadnessCringe >= 20) //If the damage level would go above 20, it gets reset to 20 instead
+                if (MadnessCringe >= 40) //If the damage level would go above 40, it gets reset to 20 instead
                 {
-                    MadnessCringe = 20; //Maximum damage the debuff can do
+                    MadnessCringe = 40; //Maximum damage the debuff can do
                 }
                 player.lifeRegen -= MadnessCringe;
             }
@@ -122,7 +122,7 @@ namespace MultidimensionMod.Common.Players
                 {
                     player.lifeRegen = 0;
                 }
-                player.lifeRegen -= 24;
+                player.lifeRegen -= 16;
             }
         }
 

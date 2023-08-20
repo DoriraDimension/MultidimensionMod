@@ -92,13 +92,8 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 		public override void ModifyNPCLoot(NPCLoot NPCloot)
 		{
             LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
-            for (int i = 0; i < 15; i++)
-			{
-				NPCloot.Add(ItemDropRule.Common(ItemID.Heart));
-			}
 			Main.NewText("Smiley has been defeated!", Color.Purple);
-            NPCloot.Add(ItemDropRule.Common(ItemID.GoldCoin, 1, 11, 11));
-            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<DarkMatterClump>(), 1, 15, 20));
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<PaleMatter>(), 1, 5, 10));
             NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<SmileySoulshard>()));
 			NPCloot.Add(ItemDropRule.BossBag(ModContent.ItemType<SmileyBag>()));
             NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<SmileyRelic>()));
@@ -150,14 +145,24 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 			Projectile.NewProjectile(NPC.GetSource_FromAI(), position, (NPC.DirectionTo(targetPosition + (player.velocity * 25)).RotatedBy(MathHelper.ToRadians(projAngle))) * projSpeed, type, damage, 0f, Main.myPlayer);
 		}
 
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.NightTime,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Smiley")
+            });
+        }
 
-		public override void SetStaticDefaults()
+
+        public override void SetStaticDefaults()
 		{
 			Main.npcFrameCount[NPC.type] = 20;
             var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
             {
-                CustomTexturePath = "ExampleMod/Content/NPCs/SmileyBestiary",
+                CustomTexturePath = "MultidimensionMod/NPCs/Bestiary/SmileyBestiary",
             };
+            NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, drawModifier);
         }
 
 		public override void SetDefaults()

@@ -17,7 +17,6 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			Main.tileSolid[Type] = true;
 			Main.tileBlockLight[Type] = true;
 			AddMapEntry(new Color(25, 19, 39));
-			Main.tileMergeDirt[Type] = true;
 			DustType = ModContent.DustType<DarkDust>();
 			HitSound = MineSound;
 		}

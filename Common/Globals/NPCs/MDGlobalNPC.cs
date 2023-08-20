@@ -54,7 +54,7 @@ namespace MultidimensionMod
 				{
 					npc.lifeRegen = 0;
 				}
-				if (MadnessTimer >= 220)
+				if (MadnessTimer >= 160)
 				{
 					MadnessCringe += 10; //Increases the damage this debuff does
 					MadnessTimer = 0; //resets the time until the next level
@@ -78,13 +78,13 @@ namespace MultidimensionMod
 					{
 						npc.lifeRegen = 0;
 					}
-					npc.lifeRegen -= 36;
+					npc.lifeRegen -= 24;
 				}
 				if (npc.lifeRegen > 0)
 				{
 					npc.lifeRegen = 0;
 				}
-				npc.lifeRegen -= 24;
+				npc.lifeRegen -= 16;
 			}
 		}
 
