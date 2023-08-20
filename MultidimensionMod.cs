@@ -17,29 +17,41 @@ using ReLogic.Content;
 using Terraria.GameContent;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
+using Terraria.Graphics.Light;
 
 namespace MultidimensionMod
 {
 	public class MultidimensionMod : Mod
 	{
-		//Many things here in the mod are made possible by Ancients Awakened, so pay them a visit!
+		//Many things here in the mod are made possible by Ancients Awakened, so pay them a visit too!
 		internal static MultidimensionMod Instance;
 
 		internal bool vanillaLoaded = true;
 
 		public static int DimensiumEuronen;
 
-		//Thanks to Lion8cake for the help with the background and heat distortion ILs.
-		public override void Load()
+        public UserInterface TradingUILayer;
+
+        public TradingUI TradingUIElement;
+
+        //Thanks to Lion8cake for the help with the Frozen Underworld ILs.
+        public override void Load()
 		{
 			DimensiumEuronen = CustomCurrencyManager.RegisterCurrency(new MDCurrency(ModContent.ItemType<Dimensium>(), 999L, "Dimensium"));
 			Terraria.IL_Main.DrawUnderworldBackgroudLayer += ILMainDrawUnderworldBackgroundLayer;
-			//Terraria.IL_Main.Player.UpdateBiomes += NoHeap;
-			//IL.Terraria.Liquid.Update += Evaporation;
-			SkyManager.Instance["MadnessMoonSky"] = new MadnessMoonSky();
+            Terraria.IL_Player.UpdateBiomes += NoHeat;
+            Terraria.Graphics.Light.On_TileLightScanner.ApplyHellLight += TileLightScanner_ApplyHellLight;
+            SkyManager.Instance["MadnessMoonSky"] = new MadnessMoonSky();
 			Filters.Scene["MultidimensionMod:Madness"] = new Filter(new ScreenShaderData("FilterMiniTower").UseColor(0.8f, 0.6f, 0.2f).UseOpacity(0.5f), EffectPriority.High);
 			base.Load();
-		}
+        }
+
+		public override void Unload()
+        {
+            Terraria.IL_Main.DrawUnderworldBackgroudLayer -= ILMainDrawUnderworldBackgroundLayer;
+            Terraria.IL_Player.UpdateBiomes -= NoHeat;
+            Terraria.Graphics.Light.On_TileLightScanner.ApplyHellLight -= TileLightScanner_ApplyHellLight;
+        }
 
 		#region Madness looky looky
 		public static void PremultiplyTexture(Texture2D texture)
@@ -237,38 +249,62 @@ namespace MultidimensionMod
 				}
 			});
 		}
-		#endregion
+        #endregion
 
-		#region Frozen Underworld heat distortion IL
-		private void NoHeap(ILContext il)
-		{
-			var c = new ILCursor(il);
-			try
-			{
-				c.GotoNext(MoveType.After,
-					i => i.MatchLdstr("HeatDistortion"),
-					i => i.MatchLdsfld<Main>("UseHeatDistortion"));
+        #region Frozen Underworld Heat Distortion removing
+        private void NoHeat(ILContext il)
+        {
+            var c = new ILCursor(il);
+            try
+            {
+                c.GotoNext(MoveType.After,
+                    i => i.MatchLdstr("HeatDistortion"),
+                    i => i.MatchLdsfld<Main>("UseHeatDistortion"));
 
-				c.EmitDelegate((bool useHeatDistortion) => {
-					if (Main.LocalPlayer.InModBiome<FrozenUnderworld>())
-					{
+                c.EmitDelegate((bool useHeatDistortion) =>
+                {
+                    if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()))
+                    {
 						return false;
-					}
-					return useHeatDistortion;
-				});
-			}
-			catch (Exception e)
-			{
-				Logger.Error(e.Message);
-			}
-		}
-		#endregion
-	}
+                    }
+                    return useHeatDistortion;
+                });
+            }
+            catch (Exception e)
+            {
+                Logger.Error(e.Message);
+            }
+        }
+        #endregion
 
-	public class MDSystem : ModSystem
+        #region Underworld Lighting Removing
+        private void TileLightScanner_ApplyHellLight(Terraria.Graphics.Light.On_TileLightScanner.orig_ApplyHellLight orig, TileLightScanner self, Tile tile, int x, int y, ref Vector3 lightColor)
+        {
+            orig.Invoke(self, tile, x, y, ref lightColor);
+            if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()))
+            {
+                if ((!tile.HasTile || !Main.tileNoSunLight[tile.TileType] || ((tile.Slope != 0 || tile.IsHalfBlock) && Main.tile[x, y - 1].LiquidAmount == 0 && Main.tile[x, y + 1].LiquidAmount == 0 && Main.tile[x - 1, y].LiquidAmount == 0 && Main.tile[x + 1, y].LiquidAmount == 0)) && (Main.wallLight[tile.WallType] || tile.WallType == 73 || tile.WallType == 227) && tile.LiquidAmount < 200 && (!tile.IsHalfBlock || Main.tile[x, y - 1].LiquidAmount < 200))
+                {
+                    lightColor = new Vector3(0.06f, 0.06f, 0.06f);
+                }
+                if ((!tile.HasTile || tile.IsHalfBlock || !Main.tileNoSunLight[tile.TileType]) && tile.LiquidAmount < byte.MaxValue)
+                {
+                    lightColor = new Vector3(0.06f, 0.06f, 0.06f);
+                }
+                lightColor = new Vector3(0.06f, 0.06f, 0.06f);
+            }
+        }
+        #endregion
+    }
+
+    public class MDSystem : ModSystem
 	{
 		public static MDSystem Instance { get; private set; }
-		public MDSystem()
+
+        public UserInterface TradingUILayer;
+
+        public TradingUI TradingUIElement;
+        public MDSystem()
 		{
 			Instance = this;
 		}
@@ -284,7 +320,11 @@ namespace MultidimensionMod
 				TitleUILayer = new UserInterface();
 				TitleCardUIElement = new TitleCard();
 				TitleUILayer.SetState(TitleCardUIElement);
-			}
+
+                TradingUILayer = new UserInterface();
+                TradingUIElement = new TradingUI();
+                TradingUILayer.SetState(TradingUIElement);
+            }
 		}
 
 		public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
@@ -298,7 +338,8 @@ namespace MultidimensionMod
 			if (MouseTextIndex != -1)
 			{
 				AddInterfaceLayer(layers, TitleUILayer, TitleCardUIElement, MouseTextIndex + 3, TitleCard.Showing, "Title Card");
-			}
+                AddInterfaceLayer(layers, TradingUILayer, TradingUIElement, MouseTextIndex + 7, TradingUI.Visible, "Trade");
+            }
 		}
 
 		public static void AddInterfaceLayer(List<GameInterfaceLayer> layers, UserInterface userInterface, UIState state, int index, bool visible, string customName = null) //Code created by Scalie
@@ -323,5 +364,11 @@ namespace MultidimensionMod
 					return true;
 				}, InterfaceScaleType.UI));
 		}
-	}
+
+        public override void UpdateUI(GameTime gameTime)
+        {
+            if (TradingUILayer?.CurrentState != null && TradingUI.Visible)
+                TradingUILayer.Update(gameTime);
+        }
+    }
 }

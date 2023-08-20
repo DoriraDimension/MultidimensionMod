@@ -65,7 +65,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
         {
 			if (player.statLife <= player.statLifeMax2 / 2)
             {
-				damage *= 0.5f;
+				damage *= 2.0f;
             }
         }
 

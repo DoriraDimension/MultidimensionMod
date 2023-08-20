@@ -12,7 +12,6 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Lifelight Holy Blade");
 		}
 
 		public override void SetDefaults()
@@ -22,8 +21,8 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			Projectile.friendly = true;
 			Projectile.DamageType = DamageClass.Melee;
 			Projectile.tileCollide = true;
-			Projectile.penetrate = 4;
-			Projectile.timeLeft = 200;
+			Projectile.penetrate = -1;
+			Projectile.timeLeft = 500;
 		}
 
 		public override void Kill(int timeLeft)
@@ -37,8 +36,8 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
         public override void AI()
         {
-			Projectile.spriteDirection = Projectile.direction;
-			Projectile.rotation += 0.4f * (float)Projectile.direction;
+			Projectile.velocity.Y = 30;
+			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2 - MathHelper.PiOver4 * Projectile.spriteDirection;
 		}
 	}
 }

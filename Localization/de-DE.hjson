@@ -3,12 +3,12 @@ Mods: {
 		Biomes: {
 			FrozenUnderworld: {
 				// DisplayName: Frozen Underworld
-				// TownNPCDialogueName: the Frozen Underworld
+				// TownNPCDialogueName: The Frozen Underworld
 			}
 
 			MadnessMoon: {
 				// DisplayName: Night of Madness
-				// TownNPCDialogueName: the Madness Moon
+				// TownNPCDialogueName: The Madness Moon
 			}
 		}
 
@@ -30,7 +30,7 @@ Mods: {
 
 			DarkRebelsBuff: {
 				// DisplayName: Dark Rebel
-				// Description: One of Smiley's trusted soldiers helps you in battle
+				// Description: A brave Darkling is aiding you in battle
 			}
 
 			DrakeBuff: {
@@ -100,29 +100,23 @@ Mods: {
 
 			RoseVenom: {
 				// DisplayName: Rose Venom
-				// Description: Mods.MultidimensionMod.Buffs.RoseVenom.Description
+				// Description: There is poison under your skin, take it off, get it out
 			}
 
-			MasterMage: {
-				// DisplayName: Master Mage
-				// Description: Mods.MultidimensionMod.Buffs.MasterMage.Description
-			}
-
-			PerfectLeader: {
-				// DisplayName: Perfect Leader
-				// Description: Mods.MultidimensionMod.Buffs.PerfectLeader.Description
+			CosimaBuff: {
+				// DisplayName: Cassiopeia
+				// Description: Just hacked herself into your life
 			}
 		}
 
 		Items: {
 			AstralTitansEyeJewel: {
-				// DisplayName: Astral Titan's Eye Jewel
+				// DisplayName: Creation Titan's Eye Jewel
 				/* Tooltip:
 					'''
-					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen by 2. 
-					Increases invincibility time and rains down stars after getting hit.
-					The Scelestians appreciate their titan and as such made replicas of its many crystal eyes,
-					these tokens are supposed to show their deep friendship.
+					One of the creation titan's many crystal eyes that fell off from natural causes.
+					Scelestians like to keep them as special tokens of good fortune,
+					showing their deep friendship with the titan.
 					''' */
 			}
 
@@ -160,10 +154,6 @@ Mods: {
 				// DisplayName: Creation Medaillon
 				/* Tooltip:
 					'''
-					Increases all damage by 10% and crit chance by 10%.
-					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen by 2.
-					Increases invincibility time and rains down stars after getting hit. 
-					Gives a variety of additional stat bonuses.
 					The divine medaillon that is only given to high ranked Scelestians, like the eye jewel,
 					this is a token of respect towards their titan.
 					Losing or breaking it is seen as a sign of great misfortune.
@@ -184,7 +174,6 @@ Mods: {
 				// DisplayName: Digger Engine
 				/* Tooltip:
 					'''
-					A excavator engine used in the Destroyer to mine minerals incredibly fast.
 					Increases mining speed by 35% and spawns friendly Probes when you get hit.
 					The engine located in the Destroyer's head, it was designed to be as efficient as possible,
 					completely ignoring the amount of fuel it would consume.
@@ -197,7 +186,6 @@ Mods: {
 				/* Tooltip:
 					'''
 					Increases defense by 4 and damage reduction by 4% when in the Snow biome.
-					Gives immunity to chilled and frozen
 					A metal base, reinforced with drake scales.
 					Drake scales react to temperature and harden when the environment becomes colder,
 					travellers would often pick up shed scales from juveniles and use them for various tools,
@@ -209,7 +197,7 @@ Mods: {
 				// DisplayName: Eye of the Greed
 				/* Tooltip:
 					'''
-					A true greed can find every treasure.
+					[c/e8b722:A true greed can find every treasure.]
 					Your greedy eyes can now see treasures.
 					Has a chance to inflict the Cursed debuff when you get it
 					Greed is a terrible sin, affecting everyone the same,
@@ -222,7 +210,7 @@ Mods: {
 				// DisplayName: Eye of the Explorer
 				/* Tooltip:
 					'''
-					A true adventurer can sense traps and danger.
+					[c/93a4d8:A true adventurer can sense traps and danger.]
 					You can see danger sources.
 					Has a chance to inflict the Slow debuff when you get it
 					It is said that an adventurer developes a sixth sense for danger,
@@ -236,7 +224,7 @@ Mods: {
 				// DisplayName: Eye of the Hunter
 				/* Tooltip:
 					'''
-					A true hunter can sense its prey.
+					[c/7c091d:A true hunter can sense its prey.]
 					You can now sense your enemies everywhere.
 					Has a chance to inflict the Weak debuff when you get it
 					Hunters come in many different shapes, some prefer to lurk and ambush,
@@ -249,7 +237,7 @@ Mods: {
 				// DisplayName: Eye of the Nightwalker
 				/* Tooltip:
 					'''
-					A true resident of the night can see through the darkness.
+					[c/007437:A true resident of the night can see through the darkness.]
 					You now have improved vision at night.
 					Has a chance to inflict the Blackout debuff when you get it
 					They lurk through the night, when everything sleeps, 
@@ -311,7 +299,7 @@ Mods: {
 				// DisplayName: Omni Eye
 				/* Tooltip:
 					'''
-					You... can... see. Beware not to get blinded by it's forbidden magic.
+					[c/650670:You... can... see. Beware not to get blinded by its forbidden magic.]
 					Highlights danger sources, enemies and treasures, also gives nightvision
 					The eye that sees all, a gaze upon us, definetily a sight to behold,
 					if only this artifact wasn't just as dangerous as it is helpful.
@@ -402,7 +390,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Increases minion damage by 6%
-					You can rub it onto your skin to smell like shit
+					You can rub it onto your skin to smell like crap
 					The inside of jungle slimes has a weird rotten smell,
 					it was often used by lihzahrds to protect themself from predators
 					''' */
@@ -433,7 +421,7 @@ Mods: {
 					'''
 					Reflects 15% of damage back to the enemy if they touch you
 					Old natives of the jungle would wear this to hurt animals that attack them but would also hurt themself,
-					a small price to pay to be able to escape a attacking predator
+					a small price to pay to be able to escape an attacking predator
 					''' */
 			}
 
@@ -469,6 +457,7 @@ Mods: {
 				// DisplayName: Nero Hammerhead Mask
 				/* Tooltip:
 					'''
+					Greatly extends underwater breathing
 					Increases summon damage by 12%
 					A mask created from ancient blueprints engraved in a stone tablet
 					''' */
@@ -478,6 +467,7 @@ Mods: {
 				// DisplayName: Nero Lantern Helm
 				/* Tooltip:
 					'''
+					Greatly extends underwater breathing
 					Increases summon damage by 12%
 					A helm created from ancient blueprints engraved in a stone tablet
 					''' */
@@ -487,6 +477,7 @@ Mods: {
 				// DisplayName: Nero Predator Head
 				/* Tooltip:
 					'''
+					Greatly extends underwater breathing
 					Increases summon damage by 12%
 					A head helmet created from ancient blueprints engraved in a stone tablet
 					''' */
@@ -496,7 +487,8 @@ Mods: {
 				// DisplayName: Nero Shell Helmet
 				/* Tooltip:
 					'''
-					Increases summon damage by 18%
+					Greatly extends underwater breathing
+					Increases summon damage by 12%
 					A helmet created from ancient blueprints engraved in a stone tablet
 					''' */
 			}
@@ -508,6 +500,8 @@ Mods: {
 					The breastplate of a Viking Raider, sturdy and very resistant.
 					During their battles against the drakes, they needed all protection they could get,
 					a small mistake meant death.
+					It was forged by combining their own alloys with the scales of their sworn enemies
+					this made them extremely resistant against any of their attacks.
 					''' */
 			}
 
@@ -518,6 +512,8 @@ Mods: {
 					The helmet of a Viking Raider, sturdy and very resistant.
 					During their battles against the drakes, they needed all protection they could get,
 					a small mistake meant death.
+					It was forged by combining their own alloys with the scales of their sworn enemies
+					this made them extremely resistant against any of their attacks.
 					''' */
 			}
 
@@ -528,6 +524,8 @@ Mods: {
 					The greaves of a Viking Raider, sturdy and very resistant.
 					During their battles against the drakes, they needed all protection they could get,
 					a small mistake meant death.
+					They were forged by combining their own alloys with the scales of their sworn enemies
+					this made them extremely resistant against any of their attacks.
 					''' */
 			}
 
@@ -566,12 +564,21 @@ Mods: {
 
 			Blight2: {
 				// DisplayName: Mad Titan's Soul
-				// Tooltip: The soul of a madness titan, their unique souls made them resist death through mind incineration
+				/* Tooltip:
+					'''
+					The soul of a madness titan, their unique souls made them resist death through mind incineration.
+					It seems to currently be carried by a Madness Gazer.
+					''' */
 			}
 
 			DarkMatterClump: {
 				// DisplayName: Void Matter
-				// Tooltip: The physical incarnation of the nothingness outside our plain of existence. There are strange crystals stuck inside the mass
+				/* Tooltip:
+					'''
+					The physical incarnation of the nothingness outside our plain of existence.
+					A strange fog is emitting from it,
+					must be a reaction to the energy signature of our existence.
+					''' */
 			}
 
 			Dimensium: {
@@ -594,7 +601,8 @@ Mods: {
 				/* Tooltip:
 					'''
 					The scale of a juvenile ice drake, its cold and soft.
-					Ice Drakes reside underground until they become too big for the small ice caves
+					Ice Drakes reside underground until they become too big for the small ice caves.
+					You can notice where a nest has been in the past by the amount of scales found in one spot.
 					''' */
 			}
 
@@ -602,8 +610,8 @@ Mods: {
 				// DisplayName: Iceblossom
 				/* Tooltip:
 					'''
-					A kind of flora found in the Frozen Underworld, its ancestor, the Fireblossom, adapted to the environment to survive
-					The influence of the icy magic made this plant dangerous to eat
+					A kind of flora found in the Frozen Underworld, its ancestor, the Fireblossom, adapted to the environment to survive.
+					Eating this is a horrible idea.
 					''' */
 			}
 
@@ -611,20 +619,20 @@ Mods: {
 				// DisplayName: Fragment of Madness
 				/* Tooltip:
 					'''
-					Madness-soaked piece of flesh, it still hasn't lost its mind burning capabilities
-					The yellow essence known as madness originates from outside our realm,
-					somewhere in a dark corner of our universe
+					Madness-soaked piece of flesh, it still hasn't lost its mind burning capabilities.
+					Only a gaze touched being may carry this through the night,
+					always remembering that face.
 					''' */
 			}
 
 			ManaInfusedSandstone: {
 				// DisplayName: Mana Sandstone
-				// Tooltip: Sandstone remains of a Lesser Sand Elemental, it still pulsates with pure mana
+				// Tooltip: Sandstone remains of a Lesser Sand Elemental, it still pulsates with pure mana.
 			}
 
 			Mushmatter: {
 				// DisplayName: Mushmatter
-				// Tooltip: Fungus Flesh from a glowing monarch, it is unlike any other normal mushroom found here.
+				// Tooltip: Fungus Flesh from a glowing mushroom infested creature, it is unlike any other normal mushroom found here.
 			}
 
 			OldDustyBow: {
@@ -695,9 +703,9 @@ Mods: {
 				/* Tooltip:
 					'''
 					A piece of icy history
-					This special plating was only forged in the tundra by the Vikings during their neverending war against the drakes
-					It was way more durable than drake scales and were useful even outside the tundra
-					The plating once had a name but was lost in time
+					This special plating was only forged in the tundra by the Vikings during their neverending war against the drakes.
+					It was way more durable than drake scales and useful even outside the tundra.
+					The plating once had a name but was lost in time.
 					''' */
 			}
 
@@ -757,7 +765,11 @@ Mods: {
 
 			FrostburnSlimeBanner: {
 				// DisplayName: Frostburn Slime Banner
-				// Tooltip: ""
+				/* Tooltip:
+					'''
+					Many years ago, a now extinct species of Ice Slime existed
+					These flying slimes frostbit everything they touched
+					''' */
 			}
 
 			GilaBanner: {
@@ -792,7 +804,12 @@ Mods: {
 
 			TridentBanner: {
 				// DisplayName: Magic Trident Banner
-				// Tooltip: ""
+				/* Tooltip:
+					'''
+					A banner that depicts a trident
+					These tridents once roamed the sea after their masters vanished
+					Nowadays they no longer appear
+					''' */
 			}
 
 			AbyssalHellstone: {
@@ -837,8 +854,8 @@ Mods: {
 				// DisplayName: Solid Magma
 				/* Tooltip:
 					'''
-					Lava that was frozen solid by the icy magic of the Frozen Underworld
-					It feels like as if it would dissolve into liquid any second despite being solid rock.
+					Lava that was frozen solid by the icy magic of the Frozen Underworld.
+					It feels like it's moving despite being solid rock.
 					''' */
 			}
 
@@ -998,7 +1015,7 @@ Mods: {
 				// DisplayName: Music Box (Frozen Underworld)
 				/* Tooltip:
 					'''
-					Frigid Sins
+					Plays Frigid Sins
 					By DrVoodoo
 					''' */
 			}
@@ -1026,7 +1043,7 @@ Mods: {
 				// DisplayName: Dimensional Shield Potion
 				/* Tooltip:
 					'''
-					Summons a bubble of dimensional energy around you. 
+					Summons an invisible bubble of dimensional energy around you. 
 					Increases defense by 10 and reduces Damage taken by 20%.
 					''' */
 			}
@@ -1038,11 +1055,7 @@ Mods: {
 
 			MerfolkPotion: {
 				// DisplayName: Merfolk Potion
-				/* Tooltip:
-					'''
-					Let's you breath underwater. 
-					Gives you the ability to swim. 
-					''' */
+				// Tooltip: Grants the ability to swim and breathe underwater.
 			}
 
 			PotionofLife: {
@@ -1081,8 +1094,8 @@ Mods: {
 				// DisplayName: Soul of the Brain
 				/* Tooltip:
 					'''
-					A soul? This is the cheap excuse of a soul, made to imitate a real one,
-					with that the brain hoped to be saved from its ongoing misery.
+					A soul? This is the cheap excuse of a soul, made to imitate a real one.
+					With that, the brain hoped to be saved from its ongoing misery.
 					Its body and soul lost, the brain lost itself, without a soul guiding it.
 					It wished to have a body again, but that wish ended in a disgusting mess of crimson flesh.
 					''' */
@@ -1095,10 +1108,10 @@ Mods: {
 					A young boy once dreamed of the day where he could meet a god in flesh,
 					a goal that he kept throughout his entire life.
 					Later in his life, when he went outside to pray at a nearby temple,
-					he got hit by a landslide caused by a ongoing thunderstorm,
+					he got hit by a landslide caused by an ongoing thunderstorm,
 					but he had luck in this misfortune, because he found something of great value.
 					Down in a cave at the bottom of a cliff, he found the Celestial Sigil,
-					a artifact that speaks about a deity named Cthulhu.
+					an artifact that speaks about a deity named Cthulhu.
 					Over time, the man dedicated himself to revive this forgotten god,
 					creating a cult and going more mad day by day.
 					[c/F4cf0cc:What was I thinking, I should have known this deity was not real,]
@@ -1130,11 +1143,12 @@ Mods: {
 				// DisplayName: Soul of the Light Empress
 				/* Tooltip:
 					'''
-					When the Hallow was still a place of beauty, this fae goddess served as their protector.
-					One can easily invoke her wrath by killing a small Lacewing butterfly since they were
-					seen as a beloved pet back in the day.
-					Her birth originates back to a beautiful star that rests somewhere in the Hallow,
-					though unlike a normal child, she was never given a name, since to protect, she doesn't need one.
+					She was once the guardian angel of the kingdom of Gunresat, protecting it with all her might.
+					She is bound to it by a spell, created by their ancestors when they were in need of this protection.
+					That is the sole reason why she fought in the war between Gunresat and Baaruun,
+					she was dragged there by force using the ancient spell.
+					But when the armies got captured, she was able to roam free, free from her shackles,
+					and there she now found a new purpose in protecting something with her own will, small Prismatic Lacewings.
 					''' */
 			}
 
@@ -1151,10 +1165,10 @@ Mods: {
 				// DisplayName: Core of a Golem
 				/* Tooltip:
 					'''
-					When the lands were scorched to ashes, the lihzahrds locked themself in their temple to be safe. 
+					When the lands were scorched to ashes long ago, the lihzahrds locked themself in their temple to be safe. 
 					To be really sure that nothing enters and kills them all, they created a golem made of the same material as their temple. 
 					It was modeled after the sun deity they see in their dreams, powered by pure solar energy. 
-					The Golem isn’t much, a solid protector against unwanted guests, but not a fighting machine either.
+					The Golem isn’t much, a solid protector against unwanted guests, but not a fighter either.
 					''' */
 			}
 
@@ -1162,7 +1176,7 @@ Mods: {
 				// DisplayName: Soul of the King Slime
 				/* Tooltip:
 					'''
-					A large group of Blue Slimes got hit by a dimensional energy strike,
+					A large group of Blue Slimes got hit by a massive energy strike,
 					that hit fused them together into a massive ruler of all slimey.
 					It is unknown where he got his crown or who the person inside him is.
 					''' */
@@ -1196,8 +1210,8 @@ Mods: {
 					'''
 					A plant that was brought to life by an experiment about granting life to inanimate objects.
 					She was granted a soul and the will to live and a simple task: "Protect the Jungle".
-					Unfortunately she never had a mind and so only executed her only task every day,
-					but for some reason, she still gets something that resembles anger when someone smashes her offspring.
+					Unfortunately she never had a mind and so did not care about this task,
+					she was only interested in protecting her offspring, lead by emotions only.
 					''' */
 			}
 
@@ -1228,9 +1242,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					The echo of a powerful soul flows through this shard.
-					Smiley is disgusted by his own origins, so much even that his body turned white
-					to rebel against what he truly is.
-					He was born from void, forged by an empty emperor so that the pointless mass could grow stronger.
+					Smiley was born from void, forged by an empty emperor so that the pointless mass could grow stronger.
 					But something was different, he had a mind of his own, a soul to feel emotions...
 					He had own wishes, did not want to obey his master, and this obviously angered said master.
 					In a conflict they battled, Smiley stood no chance, but his brethren react differently now.
@@ -1246,7 +1258,7 @@ Mods: {
 					'''
 					A long forgotten pair of mechs in shape of two eyes that were lying dormant for years, 
 					it was now reactivated when the forces of light and darkness were unleashed.
-					It was built by a famous engineer with the purpose to possibly scout for possible threats.
+					It was built by a famous engineer, likely with the purpose to scout for possible threats.
 					''' */
 			}
 
@@ -1254,9 +1266,11 @@ Mods: {
 				// DisplayName: Soul of the Underworld
 				/* Tooltip:
 					'''
-					It is a flesh prison supposed to hold thousands of souls from both Hallowers and Dark forces.
-					It was brought into existence by the now extinct underworld civilization 
+					It is a flesh prison supposed to hold thousands of souls from both light and dark forces.
+					It was brought into existence by the old underworld civilization 
 					by fusing their bodies into one large magic imbued mass.
+					[c/786d74:You could swear you can hear a conversation happening]
+					Use to listen closer
 					''' */
 			}
 
@@ -1324,7 +1338,7 @@ Mods: {
 					'''
 					A weird smiling pile of dark matter pulsing with energy.
 					Summons Smiley at night
-					Warning, boss is extremely unstable in multiplayer and will despawn in all cases.
+					Warning, boss is currently extremely unstable in multiplayer and will despawn in all cases.
 					''' */
 			}
 
@@ -1357,13 +1371,14 @@ Mods: {
 				// DisplayName: Celestial Lepidoptera
 				/* Tooltip:
 					'''
-					A artifact shaped after the celestial deity of balance.
+					An artifact shaped after the celestial deity of balance.
 					Can be used to change day to night and vice versa.
-					The Sisters of Balance did not always have this power over time, 
+					The Deity of Balance did not always have this power over time, 
 					previously there was a great species of serpents with that duty.
 					Unfortunately a chaotic force wiped most of them out.
 					To make up for this massive loss, 
-					two new entities were created to take their place.
+					a new entity was created to take their place,
+					this entity was much more reliable too.
 					''' */
 			}
 
@@ -1372,8 +1387,9 @@ Mods: {
 				/* Tooltip:
 					'''
 					Scares away the Sun
-					A artifact of time, modeled after the Moonlight Moth.
-					The Sister of the Night is always playful and happy,
+					A artifact of time, modeled after the Moonlight Moth,
+					the avatar of the night.
+					At night, the goddes of balance is always playful and happy,
 					trusting everyone instantly.
 					''' */
 			}
@@ -1383,9 +1399,10 @@ Mods: {
 				/* Tooltip:
 					'''
 					Scares away the moon 
-					A artifact of time, modeled after the Sunlight Butterfly.
-					The Sister of Day is always strict and serious,
-					disliking the behavior of her sister.
+					A artifact of time, modeled after the Sunlight Butterfly,
+					the avatar of day.
+					At day, the goddess of balance is always strict and serious,
+					pulling no jokes.
 					''' */
 			}
 
@@ -1406,7 +1423,7 @@ Mods: {
 
 			LonelyWarriorsVisor: {
 				// DisplayName: Lonely Warrior's Visor
-				// Tooltip: The Visor of a dark warrior.
+				// Tooltip: The Visor of a lonely dark warrior.
 			}
 
 			OldSeaCrown: {
@@ -1439,7 +1456,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					While you press the attack button, your mouse gains a damaging aura.
-					A cursemark signifies the presence of a overly powerful curse,
+					A cursemark signifies the presence of a powerful curse,
 					coming in all sorts of sizes, even be able to cover entire structures.
 					''' */
 			}
@@ -1460,8 +1477,10 @@ Mods: {
 					'''
 					Spin a crystal halberd around you that generates up to 2 light rings that spin around you as well.
 					If both rings of light are present and you stop attacking, the holy magic within them will heal you for 10 HP
-					This weapon belonged to Adel, the general of the Hallow, he was noble but also stubborn
-					He fought in the great war against his arch nemesis Vertrarius, that was until his soul was trapped inside the Wall of Flesh
+					[c/ff007f:Thank you for taking me with you.]
+					[c/ff007f:You know, Lord Sacres was always such a nice and pure soul.]
+					[c/ff007f:He cared about his people more than anything else. He even fought the neighboring lord to protect us.]
+					[c/ff007f:For the glory of the kingdom, we will not disappoint him!]
 					''' */
 			}
 
@@ -1470,19 +1489,24 @@ Mods: {
 				/* Tooltip:
 					'''
 					A forbidden technique that transforms the user's thoughts into energy waves that burst out in all directions.
-					It is one of the forbidden techniques, mostly used by the worst people there is.
+					Being a forbidden technique, it was mostly used by the worst people there is.
 					As told in old secret records, the spell gets stronger the more malicious the user's thoughts are, resulting in a devastating shockwave.
 					''' */
 			}
 
 			SmileySmile: {
 				// DisplayName: Smiley's Dark Blast
-				// Tooltip: Shoots dark energy beams that explode on hit
+				// Tooltip: Shoots void energy beams that explode on hit
 			}
 
 			AtlanteanTrident: {
 				// DisplayName: Atlantean Trident
-				// Tooltip: Shoots multiple streams of water
+				/* Tooltip:
+					'''
+					Shoots multiple streams of water
+					Fires a saltwater trident every 5 shots
+					Saltwater tridents rain down water streams on the cursor position on hit
+					''' */
 			}
 
 			CoolingStaff: {
@@ -1492,7 +1516,13 @@ Mods: {
 
 			LophiiformesBaculum: {
 				// DisplayName: Lophiiformes Baculum
-				// Tooltip: A magic staff created from ancient blueprints engraved in a stone tablet
+				/* Tooltip:
+					'''
+					A magic staff created from ancient blueprints engraved in a stone tablet
+					Shoots homing water blasts
+					Fires a oceanic trident every 3 shots
+					Oceanic tridents rain down water streams on the cursor position on hit
+					''' */
 			}
 
 			MadnessStaff: {
@@ -1502,7 +1532,11 @@ Mods: {
 
 			OceanTrident: {
 				// DisplayName: Ocean Trident
-				// Tooltip: Fires a large water orb
+				/* Tooltip:
+					'''
+					Fires a saltwater trident
+					Saltwater tridents rain down water streams on the cursor position on hit
+					''' */
 			}
 
 			StarRod: {
@@ -1549,19 +1583,19 @@ Mods: {
 
 			InjectorScythe: {
 				// DisplayName: Injector Scythe
-				// Tooltip: Inflicts the ichor debuff on hit for 3 seconds.
+				// Tooltip: Inflicts Ichor on hit.
 			}
 
 			DataMiner: {
 				// DisplayName: Data Miner
 				/* Tooltip:
 					'''
-					The dimensional gods allmighty drill, used by him to tear rifts into the dimensions.
+					The dimensional gods allmighty drill, used by him to tear rifts into dimensions.
 					Inflicts Electrified.
 					Dorira always wanted his own world and leave his old one behind
 					When this opportunity striked, he did not hesitate
 					Over the course of a long long time, he finally managed to create his very own world after many failed prototypes.
-					Today it is known as the Multidimension, a energy flooded dimension that attracts all kinds of entities.
+					Today it is known as Caelis, a energy flooded dimension that attracts all kinds of entities.
 					''' */
 			}
 
@@ -1569,7 +1603,7 @@ Mods: {
 				// DisplayName: Oceanic Glowshard
 				/* Tooltip:
 					'''
-					A otherworldly blade from the back of a Glowmarin.
+					A glowing fin from the back of a Glowmarin.
 					Throws out a rotating blade that can be controlled with the cursor.
 					''' */
 			}
@@ -1621,7 +1655,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					The ascended form of a rejective spear
-					After decades of rejection, you are finally accepted, now make the best of it
+					After years of rejection, you are finally accepted, now make the best of it
 					''' */
 			}
 
@@ -1667,9 +1701,9 @@ Mods: {
 				// DisplayName: Awakened Archbird
 				/* Tooltip:
 					'''
-					A sword shaped like a legendary bird found in ancient depictions in the desert, it is full of dark flames.
-					Inscriptions say that one day the archbird will swoop down and bathe the earth in it's dark flames.
 					Shoots shadowflame tentacles when swung and slows enemies when hit for 5 seconds.
+					The sword is shaped like a legendary bird found in ancient depictions in the desert, it is full of dark flames.
+					Inscriptions say that one day the archbird will swoop down and bathe the earth in it's dark flames.
 					''' */
 			}
 
@@ -1682,9 +1716,9 @@ Mods: {
 				// DisplayName: Corpse Swarmer
 				/* Tooltip:
 					'''
-					Control the perfect swarm of rot loving flies
 					Shoots two Decay Flies on every swing and enemy hits
 					Has a chance to shoot a big one
+					Control the perfect swarm of rot loving flies
 					''' */
 			}
 
@@ -1712,7 +1746,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Slows down enemies on hit for 5 seconds
-					The hidden cult in the desert worhips a deity of destruction,
+					The hidden cult in the desert worships a deity of destruction,
 					a monstrous bird that will some day end us all.
 					''' */
 			}
@@ -1757,7 +1791,13 @@ Mods: {
 
 			Lifelight: {
 				// DisplayName: Lifelight
-				// Tooltip: You have become the very thing you swore to destroy
+				/* Tooltip:
+					'''
+					Swinging the sword channels light energy
+					Right clicking when it is at max light throws the blade skywards
+					Shortly after, 10 lightblades will rain from the sky
+					You have become the very thing you swore to destroy
+					''' */
 			}
 
 			LobsterClaw: {
@@ -1766,8 +1806,8 @@ Mods: {
 			}
 
 			LonelySword: {
-				// DisplayName: Lonely Sword
-				// Tooltip: Shoots a dark orb straight from 1995.
+				// DisplayName: Rising Light
+				// Tooltip: ""
 			}
 
 			MadnessSaber: {
@@ -1782,14 +1822,13 @@ Mods: {
 
 			RegalSaber: {
 				// DisplayName: Regal Saber
-				// Tooltip: The blade grows with every swing until it resets after the forth
+				// Tooltip: The blade grows with every swing until it resets after the fourth
 			}
 
 			ShatteringBat: {
 				// DisplayName: All Shattering Bat
 				/* Tooltip:
 					'''
-
 					Enemies will be confused on hit.
 					Right click fires Onyx Shots.
 					''' */
@@ -1810,7 +1849,7 @@ Mods: {
 					'''
 					A cursed thrusting sword empowered by malicious runes.
 					The curses that were laid onto this weapon are ancient and have no counterspell,
-					the hex isnt at its peak though and as such wont be able to cause any overly major harm
+					the hex isnt at its peak though and as such wont be able to cause any major harm
 					''' */
 			}
 
@@ -1834,8 +1873,11 @@ Mods: {
 				/* Tooltip:
 					'''
 					Throw a blade of molten rock, the blade explodes into volcanic rocks on impact
-					This weapon belonged to Vertrarius, the strongest warrior of the dark forces, he is powerful and doesn't let any wound get to him
-					Vertrarius is not evil, he simply fights the Hallow out of boredom, violence is the most entertaining thing to him
+					The blade inflicts Blazing Suffering
+					[c/ff8000:Thanks for picking me up by the way.]
+					[c/ff8000:This punk thinks we killed his lord even though we didn't do anything like that.]
+					[c/ff8000:And even then, it was HIS lord who started these pointless fights against us.]
+					[c/ff8000:If I see this guy ever again, I swear I'm gonna lose it]
 					''' */
 			}
 
@@ -1870,7 +1912,12 @@ Mods: {
 
 			DarkshotBow: {
 				// DisplayName: Darkshot Bow
-				// Tooltip: Shoots 3 arrows at once.
+				/* Tooltip:
+					'''
+					Shoots 3 Void Matter arrows
+					Upon hitting an enemy, the arrows warp back to the player
+					Arrows that returned will keep flying until they hit something again
+					''' */
 			}
 
 			MadnessBow: {
@@ -1918,7 +1965,7 @@ Mods: {
 
 			Spazmelter: {
 				// DisplayName: Spazmelter
-				// Tooltip: Shoots cursed flames
+				// Tooltip: Shoots a stream of cursed flames
 			}
 
 			BoneShottie: {
@@ -1931,6 +1978,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					65% chance to not consume ammo.
+					Has a 25% chance to convert a shot bullet into a Nano Bullet
 					Metal General approved
 					''' */
 			}
@@ -1960,8 +2008,12 @@ Mods: {
 			}
 
 			DarkMatterLauncher: {
-				// DisplayName: Dark Matter Launcher
-				// Tooltip: You could basically shove the boss into this thing to use as ammo
+				// DisplayName: Void Matter Launcher
+				/* Tooltip:
+					'''
+					Shoots 8 Void Matter blobs
+					Shoots a big blob alongside the smaller ones that does more damage
+					''' */
 			}
 
 			GelVac: {
@@ -1982,7 +2034,7 @@ Mods: {
 				// DisplayName: Rot Spit
 				/* Tooltip:
 					'''
-					Spits out a big ball of rotten flesh that attracts small devourers
+					Spits out a big ball of rotten flesh that attracts small devourers from below
 					Devourer will poison enemies on hit
 					''' */
 			}
@@ -2010,8 +2062,8 @@ Mods: {
 				// DisplayName: Dark Rebels
 				/* Tooltip:
 					'''
-					Summons one of Smiley's trusted soldiers to fight for you.
-					The Darklings who hide in the dungeon are ready to fight whenever they get called to battle.
+					Summons a brave Darklings who is ready to defeat void.
+					Only the bravest Darklings who hide in the dungeon will go outside on their own.
 					''' */
 			}
 
@@ -2020,7 +2072,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Summons a tame juvenile Ice Drake to fight for you
-					[c/1200FF:I still have nightmares from the icy caves...]
+					[c/12fff7:I still have nightmares from the icy caves...]
 					''' */
 			}
 
@@ -2030,21 +2082,22 @@ Mods: {
 					'''
 					Summons a Golem mask above you
 					The mask shoots lasers and fireballs at enemies
+					He judges every single one of you
 					''' */
 			}
 
 			MadnessWhip: {
 				// DisplayName: Mindpunishing Madness
-				// Tooltip: ""
+				// Tooltip: Inflicts Madness
 			}
 
 			marcO: {
 				// DisplayName: Servants of Blight
 				/* Tooltip:
 					'''
-					A long time ago a flying creepy creature roamed the night, with it's servants by it's side.
-					But one day it dissapeared and only left behind this gift.
 					Summons the forgotten servant of the blighted crawler.
+					A long time ago a flying creepy creature roamed the night, with it's servants by it's side.
+					But one day it disappeared and only left behind this gift.
 					''' */
 			}
 
@@ -2052,8 +2105,8 @@ Mods: {
 				// DisplayName: Sand Bun
 				/* Tooltip:
 					'''
-					People always talk about Sand Cake, but what about Sand Buns?
 					Summons a Lesser Sand Elemental to fight for you
+					People always talk about Sand Cake, but what about Sand Buns?
 					''' */
 			}
 
@@ -2064,7 +2117,7 @@ Mods: {
 
 			Tentacle: {
 				// DisplayName: Celestial Tentacle
-				// Tooltip: ""
+				// Tooltip: Throws out 6 Moon lord tentacles at once
 			}
 
 			TerrorNest: {
@@ -2072,6 +2125,8 @@ Mods: {
 				/* Tooltip:
 					'''
 					Summons a killer bee that grows sawblades when enemies are spotted.
+					You must have at least 2 empty minion slots to summon.
+					Only one bee can be alive at a time.
 					A rare bee species, adapted to hunt and kill prey.
 					Their honey contains blood that stuck to them during their hunts, giving it a bloodred color.
 					''' */
@@ -2182,13 +2237,8 @@ Mods: {
 				/* Tooltip:
 					'''
 					Grants the ability to fire a swarm of ever watching eyes
-					The servants of the Eye of Judgement will some day become what their master is if given enough time.
+					The servants of the Eye of Cthulhu will some day become what their master is if given enough time.
 					''' */
-			}
-
-			FrostburnWings: {
-				// DisplayName: Frostburn Wings
-				// Tooltip: These wings are hot and cold at the same time, seems cool.
 			}
 
 			VoidMatterMass: {
@@ -2224,7 +2274,7 @@ Mods: {
 			}
 
 			MadnessCaller: {
-				// DisplayName: Ascendant's Eye
+				// DisplayName: Eye of the Witness
 				// Tooltip: Eat this eye to awaken the madness that lurks in the shadows
 			}
 
@@ -2232,7 +2282,7 @@ Mods: {
 				// DisplayName: Music Box (Frozen Underworld - Enraged)
 				/* Tooltip:
 					'''
-					Raging Sins
+					Plays Raging Sins
 					By DrVoodoo
 					''' */
 			}
@@ -2255,7 +2305,7 @@ Mods: {
 				// DisplayName: Vanilla Undowner
 				/* Tooltip:
 					'''
-					Left click to undown all Pre-Hardmode vanilla bosses
+					Left click to undown all Pre-Hardmode vanilla bosses except Wall of Flesh
 					Right click to undown all Hardmode vanilla bosses
 					''' */
 			}
@@ -2294,11 +2344,11 @@ Mods: {
 				// DisplayName: Light Deprived Eye
 				/* Tooltip:
 					'''
-					The eyeball of a creature that was going to become an Ascendant, it seems to have been interrupted halfway through
+					The eyeball of a creature that was going to mutate into a madness monstrosity, it seems to have been interrupted halfway through
 					It is covered in a weird pitch black substance, you can hear strange whispers eminating from it...
 					[c/FF2CD0C:I have watched you from afar for quite a while now, you have overcome pure madness and even its titans.]
 					[c/FF2CD0C:I wish to converse with you, but the time has not come yet.]
-					[c/FF2CD0C:This eye will guide you to me whenever fate wishes so.]
+					[c/FF2CD0C:This eye will guide you to me whenever fate wills it so.]
 					''' */
 			}
 
@@ -2307,7 +2357,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Summons a star nerd to your side
-					[c/1200FF:This is my very own treasure]
+					[c/00bcff:This is my very own treasure]
 					''' */
 			}
 
@@ -2315,8 +2365,9 @@ Mods: {
 				// DisplayName: Madness Mushroom
 				/* Tooltip:
 					'''
-					Weird mushrooms that only grow while madness visits
-					Their cap contains madness infected juices that can be used for medicine
+					Weird mushrooms that only grow while madness visits.
+					Their cap contains madness infected juices that can be used for medicine.
+					Handle with extreme caution!
 					''' */
 			}
 
@@ -2331,7 +2382,7 @@ Mods: {
 			}
 
 			TeamStar: {
-				// DisplayName: Team Star
+				// DisplayName: The star team
 				/* Tooltip:
 					'''
 					A star cluster that was a constellation before it was shattered
@@ -2349,18 +2400,173 @@ Mods: {
 			}
 
 			DivineStarBlessing: {
-				// DisplayName: Divine Star Blessing
+				// DisplayName: Divine Star's Blessing
+				/* Tooltip:
+					'''
+					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen.
+					Increases invincibility time and rains down stars after getting hit
+					The Divine Star was once the protector of the Scelestians, a last gift by the Astral Mother.
+					It is long dead by now, its dust covering the once glorius sunny plains of its home,
+					forcing its residents to ascend to the sky.
+					''' */
+			}
+
+			SufferingFlesh: {
+				// DisplayName: Suffering Flesh
+				// Tooltip: Inflicts Madness
+			}
+
+			Mindburner: {
+				// DisplayName: Mindburner
+				// Tooltip: A blowpipe can blow your mind but this one burns
+			}
+
+			ImpBodyPlate: {
+				// DisplayName: Imp Garb
+				// Tooltip: Ancient Imp garb, it seems to be made from a special fabric.
+			}
+
+			ImpHead: {
+				// DisplayName: Imp Hood
+				// Tooltip: An ancient Imp hood, it seems to be made from a special fabric.
+			}
+
+			ImpLegs: {
+				// DisplayName: Imp Boots
+				// Tooltip: Ancient Imp boots, it seems to be made from a special fabric.
+			}
+
+			ImpBag: {
+				// DisplayName: Ragged Silk Bag
+				/* Tooltip:
+					'''
+					Right-click to open
+					A old bag carried by an Imp
+					It seems to contain several pieces of clothing
+					There is a note attached to it
+					[c/fabd16:"Set them all ablaze with your many minions"]
+					''' */
+			}
+
+			VikingBattleaxe: {
+				// DisplayName: Viking Battleaxe
 				// Tooltip: ""
+			}
+
+			BorealGreatbow: {
+				// DisplayName: Boreal Greatbow
+				/* Tooltip:
+					'''
+					Shoots a greatarrow with heavy knockback that inflicts Frostburn.
+					With great arrows comes great knockback
+					''' */
+			}
+
+			TundraFall: {
+				// DisplayName: Tundra's Fall
+				// Tooltip: Rains icicles from the cursor
+			}
+
+			PaleMatter: {
+				// DisplayName: Pale Matter
+				/* Tooltip:
+					'''
+					Unique Void Matter that went through a change
+					Smiley despises his origins, so in order to escape his own darkness
+					he wished to not be dark anymore.
+					His body turned pale in response to his undying will.
+					''' */
+			}
+
+			SmileyRelic: {
+				// DisplayName: Smiley Relic
+				// Tooltip: ""
+			}
+
+			AshtonBanner: {
+				// DisplayName: Ashton Banner
+				// Tooltip: ""
+			}
+
+			MadmanBanner: {
+				// DisplayName: Madman Banner
+				// Tooltip: ""
+			}
+
+			MadnessBat2Banner: {
+				// DisplayName: Madness Gazer Banner
+				// Tooltip: ""
+			}
+
+			MadnessBatBanner: {
+				// DisplayName: Madness Flier Banner
+				// Tooltip: ""
+			}
+
+			MadnessDogBanner: {
+				// DisplayName: Starving Madness Banner
+				// Tooltip: ""
+			}
+
+			SearedAshtonBanner: {
+				// DisplayName: Seared Ashton Banner
+				// Tooltip: ""
+			}
+
+			VictimBanner: {
+				// DisplayName: Victim Banner
+				// Tooltip: ""
+			}
+
+			HellFlake: {
+				// DisplayName: Hell Flake
+				// Tooltip: ""
+			}
+
+			SinnersVeilGreaves: {
+				// DisplayName: Sinner's Veil Greaves
+				/* Tooltip:
+					'''
+					Increases maximum mana by 30
+					Increases magic damage by 4%
+					''' */
+			}
+
+			SinnersVeilHood: {
+				// DisplayName: Sinner's Veil Hood
+				/* Tooltip:
+					'''
+					Increases maximum mana by 30
+					Increases magic damage by 4%
+					''' */
+			}
+
+			SinnersVeilRobe: {
+				// DisplayName: Sinner's Veil Robe
+				/* Tooltip:
+					'''
+					Increases maximum mana by 30
+					Increases magic damage by 4%
+					''' */
 			}
 		}
 
-		/* SetBonuses.NeroSet:
-			'''
-			Grants the ability to swim and you can move through water freely
-			Increases whip range by 40%
-			Increases movement speed by 15% and defense by 10 when submerged in liquid
-			Press the Armor Ability hotkey to place a Nero Construct at the cursor position
-			''' */
+		SetBonuses: {
+			/* NeroSet:
+				'''
+				Grants the ability to swim and move through water freely
+				Increases whip range by 40%
+				Increases movement speed by 15% and defense by 10 when submerged in liquid
+				Press the Armor Ability hotkey to place a Nero Construct at the cursor position
+				Once placed, it cannot be repositioned until it disappeared
+				''' */
+			/* SinnerSet:
+				'''
+				All magic attacks inflict Frostburn
+				Increases mana regeneration
+				Reduces mana cost by 20%
+				''' */
+		}
 
 		Projectiles: {
 			// KelpHookTip.DisplayName: KelpHook
@@ -2369,7 +2575,6 @@ Mods: {
 			// Curse.DisplayName: Cursemark
 			// DarkBlast.DisplayName: Dark Blast
 			// DarkBolt.DisplayName: Dark Bolt
-			// GiantWave.DisplayName: Giant Wave
 			// Icicle.DisplayName: Icicle
 			// Lophiiformes.DisplayName: Lophiiformes
 			// MadnessSphere.DisplayName: Madness Sphere
@@ -2380,7 +2585,6 @@ Mods: {
 			// NeuralWave.DisplayName: Neural Wave
 			// PoyoStar.DisplayName: Poyo Star
 			// PrismShards.DisplayName: Prism Shard
-			// RedLazor.DisplayName: Red Lazor
 			// SandBallz.DisplayName: Sand Ball
 			// Smallcicle.DisplayName: Smallcicle
 			// SpazBall.DisplayName: Spazzic Bolt
@@ -2388,11 +2592,10 @@ Mods: {
 			// SpazzicFlame.DisplayName: Spazzic Flame
 			// Spooder.DisplayName: Spooder
 			// StormDroplet.DisplayName: Storm Droplet
-			// Wave.DisplayName: Wave
 			// Weeeeeeeee.DisplayName: Sonic the Spooder
 			// FleshRipperProj.DisplayName: Flesh Ripper
 			// InjectorScytheProj.DisplayName: Injector
-			// DataMinerProj.DisplayName: Data Miner Proj
+			// DataMinerProj.DisplayName: Data Miner
 			// GlowshardThrow.DisplayName: Glowshard
 			// Acceptance.DisplayName: Acceptance
 			// DuskBringerProj.DisplayName: Dusk Bringer
@@ -2403,14 +2606,12 @@ Mods: {
 			// MoltenLanceProj.DisplayName: Molten Lance
 			// PokingFoolProj.DisplayName: Poking Fool
 			// PokingLoserProj.DisplayName: Poking Loser
-			// QueensSting.DisplayName: Queen Bee's sting sting
 			// RaiderLanceProj.DisplayName: Raider Lance
 			// ShiningRejectionProj.DisplayName: Shining Rejection
 			// SoulpiercerProj.DisplayName: Soulpiercer
 			// VikingPolearmProj.DisplayName: Viking Drakeslayer
 			// WingedAnnoyanceProj.DisplayName: Winged Annoyance
 			// WingedNuisanceProj.DisplayName: Winged Nuisance
-			// AbyssalSoul.DisplayName: Abyssal Soul
 			// BigFly.DisplayName: Big Decay Fly
 			// DarkMatterImpacterProj.DisplayName: Void Matter Impacter
 			// DecayFlyFriendly.DisplayName: Friendly Decay Fly
@@ -2421,7 +2622,6 @@ Mods: {
 			// Glowshard.DisplayName: Glowshard
 			// HexStab.DisplayName: Hex Rapier
 			// HiddenSunScythe.DisplayName: Hidden Sun Scythe
-			// ImpactZone.DisplayName: Void Matter Impact
 			// LifelightBlade.DisplayName: Lifelight Holy Blade
 			// OceanRazorStab.DisplayName: Ocean Razor Waterblade
 			// OGMatterBall.DisplayName: Dark Matter Ball
@@ -2431,52 +2631,50 @@ Mods: {
 			// XiphiasGladiusStab.DisplayName: Xiphias Gladius Waterblade
 			// IgnaenHead.DisplayName: Ignaen's Head
 			// SmileyJr.DisplayName: Smiley Jr
-			// Braindamage.DisplayName: Spazzic Explosion
+			// Braindamage.DisplayName: Braindamage
 			// BrainRocket.DisplayName: Brain Rocket
 			// BubbleBolt.DisplayName: Bubble Bolt
 			// CompletelyOutOfPlaceExplosionGif.DisplayName: Explosion gif that was ripped from google
 			// CursedRay.DisplayName: Blast
-			// DarkMatterBlob.DisplayName: Big Blob
-			// DarkMatterBlob2.DisplayName: Small Blob
+			// DarkMatterBlob.DisplayName: Void Blob
+			// DarkMatterBlob2.DisplayName: Small Void Blob
 			// DestroyerDualLaser.DisplayName: Destroyer Dual Laser
 			// Dragonpiercer.DisplayName: Dragonpiercer
 			// EctoflareArrow.DisplayName: EctoflareArrow
 			// FireSlime.DisplayName: Fire Slime
 			// ForbiddenArrow.DisplayName: Forbidden Arrow
 			// GelCloud.DisplayName: Gel Cloud
-			// HarpoonProj.DisplayName: Stormfisher Harpoon
 			// HoneySlime.DisplayName: Honey Slime
 			// LesserDevourer.DisplayName: Lesser Devourer
 			// MadnessBolt.DisplayName: Madness Bolt
-			// Mandible.DisplayName: Spinning Mandible
+			// Mandible.DisplayName: Mandible
 			// PinkSlime.DisplayName: Pink Slime
 			// PrimusCannon.DisplayName: Primus Cannon
 			// PrimusCannonball.DisplayName: Primus Cannonball
 			// PrimusLaser.DisplayName: Primus Laser
 			// PrimusSaw.DisplayName: Primus Saw
 			// PrimusVice.DisplayName: Primus Vice
-			// QueenKunai.DisplayName: Queen Kunai
 			// RetinusBeam.DisplayName: Retinus Beam
-			// RetinusBlasterHoldOut.DisplayName: Retinus Blaster Hold Out
-			// RottenSpit.DisplayName: Rotten Spit
+			// RetinusBlasterHoldOut.DisplayName: Retinus Blaster
+			// RottenSpit.DisplayName: Rotten Spit Ball
 			// ShradesDemise.DisplayName: Shrades Demise
 			// SpazmicFlame.DisplayName: Spazmic Flame
 			// SunrayBrickThrown.DisplayName: Nuclear Bomb
 			// Thunderbubble.DisplayName: Thunderbubble
 			// TidalBubble.DisplayName: Tide Bubble
-			// TideArrowProj.DisplayName: Forbidden Arrow
+			// TideArrowProj.DisplayName: Tide Arrow
 			// DarkRebelsMinion.DisplayName: Dark Rebel
 			// FlyingSand.DisplayName: Lesser Sand Elemental
 			// FriendlyProbe.DisplayName: Friendly Probe
 			// GolemFireball.DisplayName: Fireball
-			// GolemLaser.DisplayName: Golem Laser
+			// GolemLaser.DisplayName: Laser
 			// GolemMask.DisplayName: Golem Mask
 			// IceDrakeOfDOOM.DisplayName: Tamed Ice Drake Juvenile
 			// ServantofOcram2.DisplayName: Forgotten Servant
 			// TerrorBee.DisplayName: Terror Bee
-			// MadnessWhipProj.DisplayName: Madness Whip Proj
+			// MadnessWhipProj.DisplayName: Mindpunishing Madness
 			// TendrilWhip.DisplayName: Tendril Whip
-			// TentacleWhip.DisplayName: Tentacle Whip
+			// TentacleWhip.DisplayName: Celestial Tentacle
 			// BloodGeodeThrown.DisplayName: Blood Geode
 			// BloodTear.DisplayName: Blood Tear
 			// DecayGeodeThrown.DisplayName: Decay Geode
@@ -2491,24 +2689,36 @@ Mods: {
 			// OreGeodeThrown.DisplayName: Ore Geode
 			// SandExplosion.DisplayName: Sandsplosion
 			// SandstoneGeodeThrown.DisplayName: Sandstone Geode
-			// ShradesDemisePhase2.DisplayName: Shrades Demise Phase2
+			// ShradesDemisePhase2.DisplayName: Shrades Demise Phase 2
 			// AshCloud.DisplayName: Ash Cloud
 			// BurningAshCloud.DisplayName: Burning Ash Cloud
 			// FreezerSpray.DisplayName: Freezer Spray
 			// MelterSpray.DisplayName: Melter Spray
-			// Baller.DisplayName: Smiling Emoji
-			// Baller2.DisplayName: Happy Emoji
-			// Baller3.DisplayName: Neutral Emoji
-			// Baller4.DisplayName: Dark Emoji
-			// SmileyDeath.DisplayName: Smiley
-			// SmileyPhase2.DisplayName: Smiley
 			// Eunice.DisplayName: Eunice Flagellum
-			// VoidArmProj.DisplayName: Void Arm
+			// VoidArmProj.DisplayName: Arm from Beyond
 			// NeroConstruct.DisplayName: Nero Construct
 			// NeroMissile.DisplayName: Nero Missile
-			// BossDarkling.DisplayName: Boss Darkling
 			// CursedBlast.DisplayName: Cursed Blast
 			// CursedBlastJr.DisplayName: Cursed Blast Jr
+			// VoidMatterArrow.DisplayName: Void Matter Arrow
+			// Happy.DisplayName: Happy Emoji
+			// Joy.DisplayName: Joy Emoji
+			// Neutral.DisplayName: Neutral Emoji
+			// GreatMoonlightBlade.DisplayName: Great Moonlight Blade
+			// LifelightSkywards.DisplayName: Lifelight Skywards
+			// SufferingFleshBall.DisplayName: Suffering Flesh
+			// MadnessFlame.DisplayName: Madness Flame
+			// Arguement.DisplayName: Arguement
+			// FrostGreatarrow.DisplayName: Viking Greatarrow
+			// Fallcicle.DisplayName: Fallcicle
+			// RisingLightFlail.DisplayName: Rising Light
+			// DarkEmotion.DisplayName: Dark Emotion
+			// VictimPellet.DisplayName: Victim Pellet
+			// OceanicBolt.DisplayName: Oceanic Trident
+			// SaltwaterBolt.DisplayName: Saltwater Trident
+			// Cosima.DisplayName: Cosima
+			// AtlanteanTridentStaff.DisplayName: Atlantean Trident Staff
+			// HellFlakeProj.DisplayName: Hell Flake Proj
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -2521,17 +2731,15 @@ Mods: {
 			// LesserSandElemental.DisplayName: Lesser Sand Elemental
 			// Darkling.DisplayName: Darkling
 			// Ashton.DisplayName: Ashton
-			// MagicTrident.DisplayName: Magic Trident
 			// OtherworldlyGlowmarin.DisplayName: Otherworldly Glowmarin
 			// ParrotLobster.DisplayName: Parrot Lobster
 			// StormFrontEel.DisplayName: Storm Front Eel
 			// TownDrake.DisplayName: Ice Drake Juvenile
-			// FrostburnSlime.DisplayName: Frostburn Slime
 			// IceDrakeJuvenile.DisplayName: Ice Drake Juvenile
 			// SearedAshton.DisplayName: Seared Ashton
 			// Dusty.DisplayName: Dusty
 			// Victim.DisplayName: Victim
-			// VictimsEye.DisplayName: Victims Eye
+			// VictimsEye.DisplayName: Victim's Eye
 			// Madman.DisplayName: Madman
 			// MadnessBat.DisplayName: Madness Flier
 			// MadnessBat2.DisplayName: Madness Gazer
@@ -2580,9 +2788,12 @@ Mods: {
 					// DislikeNPC: Me always happy!
 					// HateNPC: Me always happy!
 					// LikeNPC_Princess: Me always happy!
-					// Princess_LovesNPC: Me always happy!
+					// Princess_LovesNPC: I've never seen a visitor like Taraha, how exciting!
 				}
 			}
+
+			// AdelSpirit.DisplayName: Adel von Gunresat
+			// VertrariusSpirit.DisplayName: Vertrarius von Baaruun
 		}
 
 		Dialogue: {
@@ -2592,8 +2803,12 @@ Mods: {
 				// MechanicDialogue: "{0}'s father was a real celebrity I heard, a super engineer who built the craziest things. A shame he died in a fire some time ago."
 				// GenericDialogue1: When you are going to the Underworld, don't run into a wall.
 				// GenericDialogue2: serglhw3o85zhp35ognpügd1312mfghödfdlhgftzjmdzinhwüß046ihn
+				// GenericDialogue3: I've had a weird feeling since a while, its as if everything could go mad any second...
+				// GenericHardmodeDialogue1: Hey just between us two, if you happen to possess a sword made of fish, throw it into some weird liquid. ;)
 				#Below is help dialogue
 				// ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
+				// DimensiumHelp: You can find Dimensium by doing many different things. Killing, mining, fishing, and so much more.
+				// TouchGrassHelp: Go outside
 				#Below is quest dialogue
 				// CassieQuestStart: I wanted to ask if you could do me a favor, during my travel here something important got seperated from me. Could you maybe try and get it back? It might have fallen like a star from the sky, if only there was a matter that could transform it back into its original form.
 				// CassieQuestClear: Thank you so much, here, this is what they were before. Since I trust you, you can keep it safe for me.
@@ -2602,8 +2817,8 @@ Mods: {
 			Taraha: {
 				// GenericDialogue1: Hello, welcome, trade rarities?
 				// GenericDialogue2: *eldritch gibberish*
-				// GenericDialigue3: Madness is bad, be careful
-				// genericDialogue4: The LIGHT, so bright, so bright!
+				// GenericDialogue3: Madness is bad, be careful
+				// GenericDialogue4: The LIGHT, so bright, so bright!
 				// DoriraDialogue: Dorira, he traded powerful objects for… chocolate...
 				// BloodMoonDialogue: ...
 				// SlimeRainDialogue: Yum yum, gelatine heaven!
@@ -2612,7 +2827,7 @@ Mods: {
 
 		MiscNPCText: {
 			Taraha: {
-				// Arrival: A portal has opened near your town.
+				// Arrival: A portal has opened near the center.
 				// Departing: The portal has closed, until next time.
 			}
 		}
@@ -2663,6 +2878,8 @@ Mods: {
 			// ColdEnragedHellBoxPlaced.MapEntry: Music Box
 			// MadnessBoxPlaced.MapEntry: Music Box
 			// DimensiumPlaced.MapEntry: Dimensium
+			// FrostburnSlimeBannerPlaced.MapEntry: Frostburn Slime Banner
+			// TridentBannerPlaced.MapEntry: Magic Trident Banner
 		}
 
 		// DeathMessages.Socks: died from the pain of wearing wet socks.
@@ -2676,6 +2893,82 @@ Mods: {
 					// Tooltip: Adds new items to Town NPCs shops.
 				}
 			}
+		}
+
+		Bestiary: {
+			// Abomination: It was possibly once human but is now just a disgusting thing. These weird creatures are hosts to a local species of rot loving flies. They drip green stinky goo everywhere they walk and spit disgusting liquid with every movement of their mouth.
+			// DecayFly: A species of fly that loves the decay of the Corruption, they often nest inside of living creatures.
+			// BabyGlowmarin: These small adorable fish are from another dimension, they reproduce really fast. Its small glow organs are already developed and work fine.
+			// Gilania: Big reptiles that live in the desert, their bite is venomous. They will rest underground at day to escape the blazing desert sun and come out at night.
+			// SandEle: They are actually crystalized mana surrounded by sand, created artificially by a cult. They will react hostile against anything that enters their desert. During sandstorms they become even more active and travel to the surface, sometimes following Sand Elementals.
+			// Darkling: A entity that was created from Void Matter, they curiously approach people who pass by in the dungeon and only attack when threatened.
+			// Ashton: A weird creature that roams the frozen section of the underworld, hovering as if hanging on strings. They spit burning cold ash at everything that doesn't belong.
+			// SearedAshton: A subspecies of Ashton that adapted to live in the seething heat of the underworld, they spit hot burning ash clouds.
+			// IceDrakeJuvenile: Juvenile Ice Drakes usually reside underground where they hunt down prey via ambush. They can be approached savely when they are asleep. They really love gilded dishes.
+			// Glowmarin: A fish from another dimension, they have glowing organs all over their body, suggesting that they originally lived in deeper waters.
+			// Lobster: Odd lobster species that lives near the shores, the have a beak which gives them their name. Their meat is very tasty and can make a nice dish.
+			// StormEel: The great storm eels, only active during storms, when the sea is harsh and unforgiving. Many people believe they are scouts, scouts of something deep under the ocean, that is why these creatures are seen as an omen of even worse to come
+			// Dusty: Piles of cooled ash given life by the potent magic of the Frozen Underworld. They have no mind or soul, they only fly around on the icy winds, exploding into ash on impact.
+			// Victim: A poor soul that has lost everything to the Abyssal Sin. When the great devil of the Subzero Ridge took over their world, they left and went to the Underworld together with the icy winds. They have long forgotten who they even are.
+			// VictimEye: The eye of a Victim, it became sentient after its host body started to show signs of weakness.
+			// IceDemon: A demon that has managed to adapt to the icy winds of the Frozen Underworld. They utelize powerful magic spears but... there must be something slumbering deep within.
+			// Madman: A simple man who witnessed the true horror, no longer able to think like a normal person.
+			// MadnessFlier: A flying entity that mutated into a grotesque something, just touching its skin hurts mentally.
+			// MadnessGazer: A giant eyeball creature that flies by flapping its grotesque tentacles around. They might have been the eye of a unfortunate soul that witnessed the horrors.
+			// MadnessStarving: A gruesome creature that gazed into the lurking terror, its madness scarred mind cannot properly comprehend the process of consumption anymore, leaving it in a terrible state, craving for food but not being able to die either.
+			// MadTitan: A bulky creature that follows the horrors, its soul has been empowered by the madness energy inside it. It possesses an arm cannon with which it can fire massive amounts of madness, maybe suggesting that it might have been a normal gun at some point that fused with its holder.
+			// PetDrake: Ice Drakes were normally very docile creatures, often enough even interacting with humans by themself. Though the war against the Vikings has left them scarred, now barely trusting anyone. Who knows, maybe some day, we can live in harmony again.
+			// Dorira: The creator and administrator of the world's frame we live in, he has come to this world in order to fix what has been broken. Dorira might be a creator god but in reality he isn't powerful at all and relies more on his main system to control things.
+			// Taraha: A dimensional traveler who loves to trade items. "Find something here, trade somewhere else", that is her slogan.
+			// Adel: Originating from a neighboring kingdom, this hallowed warrior wishes to avenge his beloved lord. He wields the Lightstream Mythos with which he has slain many foes. He was the first to declare war against Baaruun, against his new lord's will.
+			// Vertrarius: A grumpy demon who wields the Evil Ember, Vulkanus. He is lazy and does not care about anyone but his lord, making him the most unreliable person in existence. When Gunresat declared war against Baaruun, he fought as their leader out of boredom.
+			// Smiley: The leader of the Darklings that hide inside the dungeon. His powers are unrivaled and respected amongst his followers and he is equally loved as well. In response to the incredible anger against his origins, his body turned pale to rebel against his darkness.
+			// Grudge: The incarnation of despair and hope that piled up in the Frozen Underworld, born from the deep wishes of its residents and the abyssal magic that lurks inside. You have slain their biggest hope, so be assured, the winds are not happy about your slaughter.
+		}
+
+		SoulConversation: {
+			WallofFlesh: {
+				// Arguement1: You sad fool, our downfall was your fault, now look at us, trapped inside this spirit cluster.
+				// Arguement2: Only your country sized ego has left us in this situation!
+				// Arguement3: You should just have given up, this war was stupid!
+				// Arguement4: Says the one demon who only fought in it because he was bored.
+				// Arguement5: You leading them was ultimately in our way.
+				// Arguement6: In YOUR way?!
+				// Arguement7: How about you learn that your land is not the center of the universe!!!
+				// Arguement8: Hey, I think someone is listening.
+				// Arguement9: Whoever you are, I think you agree with me, my opinion is superior isn’t it?
+				// Arguement10: DON’T listen to this punk, he is talking nothing but garbage.
+				// Arguement11: We will see who they agree with.
+				// Arguement12: Seek out the glorious hallowed lands and prove my point.
+				// Arguement13: Oooor you make the better choice and look for the Underworld instead.
+				// Arguement14: It is up to you but we know you will choose the right way.
+				// Arguement15: Ours
+				// Arguement16: SHUT UP ALREADY!!!
+				// Adel1: Ah...
+				// Adel2: The remnants of my glorious home that remain in this world.
+				// Adel3: This fills me with joy, seeing them once more.
+				// Adel4: You know, I had to be with this entity for too long now.
+				// Adel5: I am not interested in any more time together.
+				// Adel6: May I ask you to do me a favor?.
+				// Adel7: My lord was murdered by the forces of Baaruun and I want to avenge him.
+				// Adel8: Take my weapon and let us fight against the unworthy together.
+				// Adel9: Go forth and make my race proud!
+				// Adel10: Adel's soul fades away into Mythos.
+				// Vertrarius1: Ugh, finally
+				// Vertrarius2: Took you long enough.
+				// Vertrarius3: ...
+				// Vertrarius4: It can't be!
+				// Vertrarius5: I can sense his soul!
+				// Vertrarius6: My friend, I had to hang out with this idiot for so long.
+				// Vertrarius7: It was so damn tiring.
+				// Vertrarius8: But now I'm free and I can sense someone important down here.
+				// Vertrarius9: Would you lend a hand and help me find him?
+				// Vertrarius10: Take my sword and let us travel together.
+				// Vertrarius11: And while you're at it, kick someone's arse to hell!
+				// Vertrarius12: Vertrarius' soul fades away into Vulkanus.
+			}
+
+			// Cultist.Hi: Hi
 		}
 	}
 }

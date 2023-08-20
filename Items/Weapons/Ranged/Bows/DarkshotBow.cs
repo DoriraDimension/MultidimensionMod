@@ -1,5 +1,6 @@
 ﻿using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Tiles.Furniture.VoidMatter;
+using MultidimensionMod.Projectiles.Ranged;
 using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
@@ -18,12 +19,12 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 
 		public override void SetDefaults()
 		{
-			Item.damage = 28;
+			Item.damage = 16;
 			Item.DamageType = DamageClass.Ranged;
 			Item.width = 24;
 			Item.height = 30;
-			Item.useTime = 27;
-			Item.useAnimation = 27;
+			Item.useTime = 40;
+			Item.useAnimation = 40;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 2;
@@ -38,6 +39,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
+			type = ModContent.ProjectileType<VoidMatterArrow>();
 			for (int i = 0; i < 3; i++)
 			{
 				Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(6));

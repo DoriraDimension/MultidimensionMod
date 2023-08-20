@@ -31,7 +31,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void AI()
 		{
-			Projectile.rotation += 0.2f;
+			Projectile.rotation += 2 + Main.rand.Next(4);
 			Projectile.scale += 0.028f;
 			if (Projectile.timeLeft > 15)
 			{

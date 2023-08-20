@@ -19,7 +19,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 
 		public override void SetDefaults()
 		{
-			Item.damage = 35;
+			Item.damage = 19;
 			Item.DamageType = DamageClass.Magic;
 			Item.mana = 10;
 			Item.width = 40;
@@ -49,6 +49,16 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 				Projectile.NewProjectile(source, player.Center.X, player.Center.Y, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<NeuralWave>(), damage, knockback, player.whoAmI);
 			}
 			return false;
+		}
+
+		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+		{
+			position = player.Center;
+		}
+
+		public override void UseItemFrame(Player player)
+		{
+			player.bodyFrame.Y = 5 * player.bodyFrame.Height;
 		}
 	}
 }

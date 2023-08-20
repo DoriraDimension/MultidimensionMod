@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Projectiles.Ranged;
+using MultidimensionMod.Common.Globals.Items;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -16,7 +17,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 
 		public override void SetDefaults()
 		{
-			Item.damage = 15;
+			Item.damage = 8;
 			Item.DamageType = DamageClass.Ranged;
 			Item.width = 46;
 			Item.height = 20;

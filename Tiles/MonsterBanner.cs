@@ -4,6 +4,9 @@ using MultidimensionMod.NPCs.Tundra;
 using MultidimensionMod.NPCs.Ocean;
 using MultidimensionMod.NPCs.Desert;
 using MultidimensionMod.NPCs.Critters;
+using MultidimensionMod.NPCs.Underworld;
+using MultidimensionMod.NPCs.FU;
+using MultidimensionMod.NPCs.Madness;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -52,7 +55,7 @@ namespace MultidimensionMod.Tiles
 						type = ModContent.NPCType<CorrGuy>();
 						break;
 					case 2:
-						type = ModContent.NPCType<MagicTrident>();
+						//type = ModContent.NPCType<MagicTrident>();
 						break;
 					case 3:
 						type = ModContent.NPCType<OtherworldlyGlowmarin>();
@@ -70,7 +73,7 @@ namespace MultidimensionMod.Tiles
 						type = ModContent.NPCType<IceDrakeJuvenile>();
 						break;
 					case 8:
-						type = ModContent.NPCType<FrostburnSlime>();
+						//type = ModContent.NPCType<FrostburnSlime>();
 						break;
 					case 9:
 						type = ModContent.NPCType<LesserSandElemental>();
@@ -78,7 +81,28 @@ namespace MultidimensionMod.Tiles
 					case 10:
 						type = ModContent.NPCType<GilaMonster>();
 						break;
-					default:
+                    case 11:
+                        type = ModContent.NPCType<SearedAshton>();
+                        break;
+                    case 12:
+                        type = ModContent.NPCType<Ashton>();
+                        break;
+                    case 13:
+                        type = ModContent.NPCType<Victim>();
+                        break;
+                    case 14:
+                        type = ModContent.NPCType<MadnessBat>();
+                        break;
+                    case 15:
+                        type = ModContent.NPCType<MadnessBat2>();
+                        break;
+                    case 16:
+                        type = ModContent.NPCType<MadnessDog>();
+                        break;
+                    case 17:
+                        type = ModContent.NPCType<Madman>();
+                        break;
+                    default:
 						return;
 				}
 				Main.SceneMetrics.NPCBannerBuff[type] = true;

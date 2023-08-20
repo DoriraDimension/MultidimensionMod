@@ -1,10 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
+using MultidimensionMod.Base;
 using Terraria;
 
 namespace MultidimensionMod
 {
     public class MDColors
     {
+        //Normal rarities
+        public static Color Rarity12 => new Color(239, 0, 243);
+        public static Color Rarity13 => new Color(0, 125, 243);
+        public static Color Rarity14 => new Color(255, 22, 0);
+        public static Color Rarity15 => new Color(0, 178, 107);
+
         //???
         public static Color BossSoulRed => new(130, 0, 0);
         public static Color BossSoulPink => new(172, 37, 139);
@@ -80,6 +87,10 @@ namespace MultidimensionMod
 
         //Smiley Soulshard colors
 
+        public static Color SmileyYellow => new(255, 242, 0);
+
+        public static Color SmileyPale => new(214, 214, 214);
+
         //Wall Soul colors
         public static Color WallFlesh => new(158, 48, 83);
         public static Color WallDark => new(162, 95, 234);
@@ -92,6 +103,14 @@ namespace MultidimensionMod
         //Eater of Worlds Soul colors
         public static Color EaterFlesh => new(116, 94, 97);
         public static Color EaterGoop => new(115, 127, 33);
+
+        //Adel color
+
+        public static Color AdelText => new(255, 0, 127);
+
+        //Other
+
+        public static Color Rainbow => BaseUtility.MultiLerpColor(Main.LocalPlayer.miscCounter % 100 / 100f, Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.LightBlue, Color.Blue, Color.Purple, Color.Red);
 
     }
 }

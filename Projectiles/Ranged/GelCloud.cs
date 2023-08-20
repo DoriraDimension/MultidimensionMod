@@ -12,7 +12,6 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Gel Cloud");
 		}
 
 		public override void SetDefaults()
@@ -29,6 +28,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.extraUpdates = 2;
 			Projectile.usesLocalNPCImmunity = true;
 			Projectile.localNPCHitCooldown = 10;
+			Projectile.ownerHitCheck = true;
 		}
 
 		public override void AI()

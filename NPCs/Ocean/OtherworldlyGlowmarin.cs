@@ -42,7 +42,8 @@ namespace MultidimensionMod.NPCs.Ocean
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("A fish from another dimension, they have glowing organs all over their body, suggesting that they originally lived in deeper waters..")
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Glowmarin")
 			});
 		}
 

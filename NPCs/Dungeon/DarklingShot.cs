@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using MultidimensionMod.Dusts;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
@@ -12,7 +13,6 @@ namespace MultidimensionMod.NPCs.Dungeon
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Void Bolt");
 			Main.projFrames[Projectile.type] = 4;
 		}
 
@@ -31,25 +31,27 @@ namespace MultidimensionMod.NPCs.Dungeon
 
 			for (int i = 0; i < 50; i++)
 			{
-				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Shadowflame, 0f, 0f, 100, default(Color), 2f);
+				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<VoidDustG>(), 0f, 0f, 100, default(Color), 2f);
 				Main.dust[dustIndex].velocity *= 1.4f;
-				int dustIndex2 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Frost, 0f, 0f, 100, default(Color), 2f);
+                Main.dust[dustIndex].noGravity = true;
+                int dustIndex2 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<VoidDustM>(), 0f, 0f, 100, default(Color), 2f);
 				Main.dust[dustIndex2].velocity *= 1.4f;
-			}
+                Main.dust[dustIndex2].noGravity = true;
+            }
 		}
 
 		public override void AI()
 		{
 			for (int i = 0; i < 4; i++)
 			{
-				int purple = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Shadowflame, Projectile.velocity.X * 0.30f, Projectile.velocity.Y * 0.30f, 200, default(Color), 3f);
+				int purple = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<VoidDustG>(), Projectile.velocity.X * 0.30f, Projectile.velocity.Y * 0.30f, 200, default(Color), 3f);
 				Main.dust[purple].noGravity = true;
 				Main.dust[purple].velocity.X *= 0.15f;
-				Main.dust[purple].velocity.Y *= 0.15f;
+				Main.dust[purple].velocity.Y *= 0.35f;
 			}
 			for (int i = 0; i < 2; i++)
             {
-				int blue = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Frost, Projectile.velocity.X * 0.30f, Projectile.velocity.Y * 0.30f, 200, default(Color), 3f);
+				int blue = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<VoidDustM>(), Projectile.velocity.X * 0.30f, Projectile.velocity.Y * 0.30f, 200, default(Color), 3f);
 				Main.dust[blue].noGravity = true;
 				Main.dust[blue].velocity.X *= 0.15f;
 				Main.dust[blue].velocity.Y *= 0.15f;

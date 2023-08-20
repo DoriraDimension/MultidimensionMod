@@ -35,6 +35,7 @@ namespace MultidimensionMod.Items.Accessories
 			.AddIngredient(ItemID.MagicQuiver)
 			.AddIngredient(ItemID.RangerEmblem)
 			.AddIngredient(ModContent.ItemType<Prismatine>(), 3)
+			//.AddIngredient(ModContent.ItemType<CelestialPlating>(), 3)
 			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}

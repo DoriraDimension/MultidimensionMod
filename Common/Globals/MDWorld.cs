@@ -10,6 +10,8 @@ using Terraria.ModLoader;
 using Terraria.Chat;
 using Terraria.Localization;
 using Terraria.ModLoader.IO;
+using Mono.Cecil;
+using MultidimensionMod.Items.Materials;
 
 namespace MultidimensionMod.Common.Globals
 {
@@ -25,7 +27,7 @@ namespace MultidimensionMod.Common.Globals
             }
             if (Main.LocalPlayer.ZoneDungeon & !DownedSystem.seenDungeon)
             {
-                MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Dungeon", 90, 120, 1.6f, 0, Color.DarkGray, "Halls of Sin");
+                MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Dungeon", 90, 120, 1.6f, 0, Color.DarkGray, "Accursed Halls");
                 NPC.SetEventFlagCleared(ref DownedSystem.seenDungeon, -1);
             }
             if (Main.LocalPlayer.ZoneLihzhardTemple & !DownedSystem.seenTemple)
@@ -33,7 +35,7 @@ namespace MultidimensionMod.Common.Globals
                 MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Jungle Temple", 90, 120, 1.6f, 0, Color.Brown, "Isolated Chambers");
                 NPC.SetEventFlagCleared(ref DownedSystem.seenTemple, -1);
             }
-            if (Main.LocalPlayer.ZoneUnderworldHeight & !DownedSystem.seenHell)
+            if (Main.LocalPlayer.ZoneUnderworldHeight & !Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()) & !DownedSystem.seenHell)
             {
                 MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Underworld", 90, 120, 1.6f, 0, Color.OrangeRed, "Ashen Remnants");
                 NPC.SetEventFlagCleared(ref DownedSystem.seenHell, -1);
@@ -46,25 +48,22 @@ namespace MultidimensionMod.Common.Globals
             #region Night of Madness
             if (!Main.fastForwardTimeToDawn && !Main.fastForwardTimeToDusk)
             {
-                if (Main.time <= 1)
+                if (!Main.dayTime && Main.time == 0)
                 {
-                    if (Main.rand.NextBool(50))
+                    if (Main.rand.NextBool(10))
                     {
-                        if (!Main.dayTime && Main.time > 1)
+                        if (Main.netMode != NetmodeID.MultiplayerClient)
                         {
-                            if (Main.netMode != NetmodeID.MultiplayerClient)
+                            if (!MadnessMoon && NPC.downedBoss2)
                             {
-                                if (!MadnessMoon && NPC.downedBoss2)
+                                MadnessMoon = true;
+                                if (!Main.dayTime)
                                 {
-                                    MadnessMoon = true;
-                                    if (!Main.dayTime)
-                                    {
-                                        string status = "You feel your mind burned...";
-                                        if (Main.netMode == NetmodeID.Server)
-                                            ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(status), Color.Gold);
-                                        else if (Main.netMode == NetmodeID.SinglePlayer)
-                                            Main.NewText(Language.GetTextValue(status), Color.Gold);
-                                    }
+                                    string status = "You feel your mind pirced...";
+                                    if (Main.netMode == NetmodeID.Server)
+                                        ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(status), Color.Gold);
+                                    else if (Main.netMode == NetmodeID.SinglePlayer)
+                                        Main.NewText(Language.GetTextValue(status), Color.Gold);
                                 }
                             }
                         }
@@ -74,6 +73,10 @@ namespace MultidimensionMod.Common.Globals
             if (MadnessMoon && Main.dayTime)
             {
                 MadnessMoon = false;
+            }
+            if (MadnessMoon && Main.dayTime && Main.hardMode)
+            {
+                //Drops Light Depreived Eye
             }
             #endregion
         }
@@ -114,7 +117,7 @@ namespace MultidimensionMod.Common.Globals
         public override void NetReceive(BinaryReader reader)
         {
             BitsByte flags = reader.ReadByte();
-            MadnessMoon = flags[2];
+            MadnessMoon = flags[0];
         }
     }
 }

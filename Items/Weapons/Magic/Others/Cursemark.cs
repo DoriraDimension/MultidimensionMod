@@ -17,7 +17,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 
 		public override void SetDefaults()
 		{
-			Item.damage = 24;
+			Item.damage = 22;
 			Item.DamageType = DamageClass.Magic;
 			Item.mana = 3;
 			Item.width = 28;
@@ -28,15 +28,19 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.noMelee = true;
 			Item.noUseGraphic = true;
 			Item.knockBack = 0f;
+			Item.autoReuse = true;
 			Item.value = Item.sellPrice(0, 1, 20, 0);
 			Item.rare = ItemRarityID.Orange;
-			Item.autoReuse = true;
+			Item.channel = true;
 			Item.shoot = ModContent.ProjectileType<Curse>();
 		}
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-		{
-			Projectile.NewProjectile(source, Main.MouseWorld, velocity, type, damage, knockback, player.whoAmI);
+        {
+            if (player.ownedProjectileCounts[Item.shoot] <= 0)
+            {
+				Projectile.NewProjectile(source, Main.MouseWorld, velocity, type, damage, knockback, player.whoAmI);
+			}
 			return false;
 		}
 	}

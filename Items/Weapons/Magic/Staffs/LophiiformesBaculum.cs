@@ -21,7 +21,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 
 		public override void SetDefaults()
 		{
-			Item.damage = 87;
+			Item.damage = 72;
 			Item.DamageType = DamageClass.Magic;
 			Item.mana = 16;
 			Item.width = 52;
@@ -50,7 +50,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 
 			if (BlastCount == 2)
             {
-				Projectile.NewProjectile(source, position.X, position.Y, velocity.X, velocity.Y, ModContent.ProjectileType<GiantWave>(), damage, knockback, player.whoAmI);
+				Projectile.NewProjectile(source, position.X, position.Y, velocity.X * 2, velocity.Y * 2, ModContent.ProjectileType<OceanicBolt>(), damage, knockback, player.whoAmI);
 			}
 			return false;
 		}

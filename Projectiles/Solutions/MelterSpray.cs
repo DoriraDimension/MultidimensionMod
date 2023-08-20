@@ -53,7 +53,7 @@ namespace MultidimensionMod.Projectiles.Solutions
 						ConvertTile(k, l, (ushort)TileID.AshVines);
 					}
 
-					int wallType = Main.tile[k, l].WallType;
+                    int wallType = Main.tile[k, l].WallType;
 					//no walls yet :(
 				}
 			}

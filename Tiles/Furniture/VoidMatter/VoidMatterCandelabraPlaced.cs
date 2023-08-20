@@ -43,5 +43,30 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
                 b = 0.7f;
             }
         }
+
+        public override void HitWire(int i, int j)
+        {
+            int left = i - Main.tile[i, j].TileFrameX / 18 % 2;
+            int top = j - Main.tile[i, j].TileFrameY / 18 % 2;
+            for (int x = left; x < left + 2; x++)
+            {
+                for (int y = top; y < top + 2; y++)
+                {
+
+                    if (Main.tile[x, y].TileFrameX >= 36)
+                        Main.tile[x, y].TileFrameX -= 36;
+                    else
+                        Main.tile[x, y].TileFrameX += 36;
+                }
+            }
+            if (Wiring.running)
+            {
+                Wiring.SkipWire(left, top);
+                Wiring.SkipWire(left, top + 1);
+                Wiring.SkipWire(left + 1, top);
+                Wiring.SkipWire(left + 1, top + 1);
+            }
+            NetMessage.SendTileSquare(-1, left, top + 1, 2);
+        }
     }
 }

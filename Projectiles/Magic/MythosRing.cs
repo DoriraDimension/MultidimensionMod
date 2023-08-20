@@ -47,6 +47,7 @@ namespace MultidimensionMod.Projectiles.Magic
 			Projectile.rotation += .3f * player.direction;
 			Projectile.spriteDirection = player.direction;
 			Projectile.Center = player.Center;
+			Projectile.light = 0.5f;
 		}
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Projectiles.Magic;
+using MultidimensionMod.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -46,7 +47,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			}
 			if (BlastCount == 4)
             {
-			    Projectile.NewProjectile(source, position.X, position.Y, velocity.X, velocity.Y, ModContent.ProjectileType<Wave>(), damage, knockback, player.whoAmI);
+			    int immunity = Projectile.NewProjectile(source, position.X, position.Y, velocity.X * 2, velocity.Y * 2, ModContent.ProjectileType<SaltwaterBolt>(), damage, knockback, player.whoAmI);
+				Main.projectile[immunity].localNPCHitCooldown = 10;
             }
 
 			return false;
@@ -67,6 +69,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<OceanTrident>())
 			.AddIngredient(ItemID.AquaScepter)
+			.AddIngredient(ModContent.ItemType<AbyssalHellstoneBar>(), 10)
 			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}

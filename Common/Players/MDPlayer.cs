@@ -38,6 +38,7 @@ namespace MultidimensionMod.Common.Players
         public bool CalmMind;
         public bool DrakePoison = false;
         public bool NeroSet = false;
+        public bool SinnerSet = false;
 
         public override void ResetEffects()
         {
@@ -65,6 +66,15 @@ namespace MultidimensionMod.Common.Players
             };
         }
 
+        public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
+        {
+            if (attempt.rare && !attempt.inLava && !attempt.inHoney)
+            {
+                itemDrop = ModContent.ItemType<EnergyFish>();
+                return;
+            }
+        }
+
         public override void UpdateBadLifeRegen()
         {
             Player player = Main.LocalPlayer;
@@ -85,7 +95,7 @@ namespace MultidimensionMod.Common.Players
                     player.lifeRegen = 0;
                 }
                 player.lifeRegenTime = 0;
-                if (MadnessTimer >= 220)
+                if (MadnessTimer >= 160)
                 {
                     MadnessCringe += 5; //Increases the damage this debuff does
                     if (CalmMind)
@@ -95,9 +105,9 @@ namespace MultidimensionMod.Common.Players
                     }
                     MadnessTimer = 0; //resets the time until the next level
                 }
-                if (MadnessCringe >= 20) //If the damage level would go above 20, it gets reset to 20 instead
+                if (MadnessCringe >= 40) //If the damage level would go above 40, it gets reset to 20 instead
                 {
-                    MadnessCringe = 20; //Maximum damage the debuff can do
+                    MadnessCringe = 40; //Maximum damage the debuff can do
                 }
                 player.lifeRegen -= MadnessCringe;
             }
@@ -112,7 +122,7 @@ namespace MultidimensionMod.Common.Players
                 {
                     player.lifeRegen = 0;
                 }
-                player.lifeRegen -= 24;
+                player.lifeRegen -= 16;
             }
         }
 
@@ -128,6 +138,10 @@ namespace MultidimensionMod.Common.Players
                 }
                 player.statLife += 5; //Heals the player for 5 HP if an enemy dies from a melee attack
             }
+            if (SinnerSet && item.CountsAsClass(DamageClass.Magic))
+            {
+                target.AddBuff(BuffID.Frostburn, 120);
+            }
         }
 
         public override void OnHitNPCWithProj(Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
@@ -141,6 +155,10 @@ namespace MultidimensionMod.Common.Players
                     return;
                 }
                 player.statLife += 5; //Heals the player for 5 HP if an enemy dies from a projectile
+            }
+            if (SinnerSet && proj.CountsAsClass(DamageClass.Magic))
+            {
+                target.AddBuff(BuffID.Frostburn, 120);
             }
         }
 

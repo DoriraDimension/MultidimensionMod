@@ -10,14 +10,13 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 {
 	public class VoidMatterMassPlaced : ModTile
 	{
-		public static readonly SoundStyle MineSound = new SoundStyle("MultidimensionMod/Sounds/Custom/VoidMine", 3);
+		public static readonly SoundStyle MineSound = new SoundStyle("MultidimensionMod/Sounds/Tiles/VoidMine", 3);
 
 		public override void SetStaticDefaults()
 		{
 			Main.tileSolid[Type] = true;
 			Main.tileBlockLight[Type] = true;
 			AddMapEntry(new Color(25, 19, 39));
-			Main.tileMergeDirt[Type] = true;
 			DustType = ModContent.DustType<DarkDust>();
 			HitSound = MineSound;
 		}

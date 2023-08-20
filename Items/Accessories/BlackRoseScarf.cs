@@ -5,6 +5,7 @@ using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Accessories
 {
+	[AutoloadEquip(EquipType.Neck)]
 	public class BlackRoseScarf : ModItem
 	{
 		public override void SetStaticDefaults()
@@ -31,7 +32,7 @@ namespace MultidimensionMod.Items.Accessories
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<ThornScarf>())
 			.AddIngredient(ItemID.VialofVenom, 2)
-			.AddIngredient(ItemID.BlackFairyDust)
+			.AddIngredient(ItemID.Deathweed, 3)
 			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}

@@ -2,11 +2,13 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using Terraria.Audio;
 
 namespace MultidimensionMod.Items.Accessories
 {
 	public class StinkyPaste : ModItem
 	{
+		public static readonly SoundStyle Stink = new SoundStyle("MultidimensionMod/Sounds/Custom/Stinky");
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -19,6 +21,7 @@ namespace MultidimensionMod.Items.Accessories
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.useAnimation = 15;
 			Item.useTime = 15;
+			Item.UseSound = Stink;
 			Item.accessory = true;
 			Item.value = Item.sellPrice(0, 0, 20, 0);
 			Item.rare = ItemRarityID.Green;

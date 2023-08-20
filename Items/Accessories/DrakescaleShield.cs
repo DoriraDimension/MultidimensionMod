@@ -26,11 +26,9 @@ namespace MultidimensionMod.Items.Accessories
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.buffImmune[BuffID.Chilled] = true;
-			player.buffImmune[BuffID.Frozen] = true;
 			if (player.ZoneSnow)
             {
-				player.statDefense += 4;
+				player.statDefense += 2;
 				player.endurance += 0.04f;
 			}
 

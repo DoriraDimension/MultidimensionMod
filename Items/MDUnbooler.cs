@@ -30,6 +30,9 @@ namespace MultidimensionMod.Items
             DownedSystem.seenDungeon = false;
             DownedSystem.seenTemple = false;
             DownedSystem.seenAether = false;
+            DownedSystem.metAdel = false;
+            DownedSystem.metVertrarius = false;
+            DownedSystem.listenedToNonsense = false;
 
             if (Main.netMode == NetmodeID.Server)
                 NetMessage.SendData(MessageID.WorldData);

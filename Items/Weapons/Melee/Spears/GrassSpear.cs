@@ -15,7 +15,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 
 		public override void SetDefaults()
 		{
-			Item.damage = 16;
+			Item.damage = 19;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.useAnimation = 31;
 			Item.useTime = 31;

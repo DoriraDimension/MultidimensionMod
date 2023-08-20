@@ -20,10 +20,15 @@ namespace MultidimensionMod.Common.Globals
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<Iceblossom>(), mute: true);
             }
 
-            if (type == TileID.Grass && Main.rand.NextBool(3000) && MDWorld.MadnessMoon)
+            if (type == TileID.Grass && Main.rand.NextBool(1500) && MDWorld.MadnessMoon)
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<MadnessShroomPlaced>(), mute: true);
             }
+        }
+
+        public override void SetStaticDefaults()
+        {
+            Main.tileMerge[TileID.Ash][TileID.Hellstone] = true;
         }
 
         public override void Drop(int i, int j, int type)

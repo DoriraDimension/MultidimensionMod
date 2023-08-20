@@ -10,6 +10,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.Utilities;
+using Terraria.GameContent.Bestiary;
 
 namespace MultidimensionMod.NPCs.TownPets
 {
@@ -18,7 +19,6 @@ namespace MultidimensionMod.NPCs.TownPets
     {
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Ice Drake Juvenile");
             Main.npcFrameCount[Type] = 6;
             NPCID.Sets.ExtraFramesCount[Type] = 0;
             NPCID.Sets.AttackFrameCount[Type] = 0;
@@ -31,12 +31,21 @@ namespace MultidimensionMod.NPCs.TownPets
             NPCID.Sets.NPCBestiaryDrawOffset.Add(NPC.type, value);
         }
 
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.PetDrake")
+            });
+        }
+
         public override void SetDefaults()
         {
             NPC.CloneDefaults(NPCID.TownDog);
 
             AIType = NPCID.TownDog;
-            NPC.lifeMax = 300;
+            NPC.lifeMax = 400;
             NPC.defense = 15;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
@@ -125,7 +134,7 @@ namespace MultidimensionMod.NPCs.TownPets
                 "Popsicle",
                 "Sheegoth",
                 "Rundas",
-                "Kyu",
+                "Kyurem",
                 "Tundrana",
                 "UwU"
             };

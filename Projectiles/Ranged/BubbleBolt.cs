@@ -11,11 +11,10 @@ namespace MultidimensionMod.Projectiles.Ranged
 {
 	internal class BubbleBolt : ModProjectile
 	{
+		public override string Texture => "MultidimensionMod/Projectiles/NoTexture";
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Bubble Bolt");
-			Main.projFrames[Projectile.type] = 4;
 		}
 
 		public override void SetDefaults()
@@ -38,21 +37,15 @@ namespace MultidimensionMod.Projectiles.Ranged
 		{
 			for (int i = 0; i < 1; i++)
 			{
-				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<StormDust>(), 0f, 0f, 100, default(Color), 2f);
+				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Electric, 0f, 0f, 100, default(Color), 1f);
 				Main.dust[dustIndex].velocity *= 1.4f;
 			}
 		}
 
 		public override void AI()
 		{
-			if (++Projectile.frameCounter >= 5)
-			{
-				Projectile.frameCounter = 0;
-				if (++Projectile.frame >= 4)
-				{
-					Projectile.frame = 0;
-				}
-			}
+			int dusto = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Electric, Projectile.velocity.X * 0.30f, Projectile.velocity.Y * 0.30f, 68, default(Color), 1f);
+			Main.dust[dusto].noGravity = true;
 
 			if (Projectile.ai[0] >= 360f)
 			{
@@ -63,12 +56,11 @@ namespace MultidimensionMod.Projectiles.Ranged
 			{
 				Projectile.velocity.Y = 16f;
 			}
-			Projectile.rotation += 0.4f * (float)Projectile.direction;
 		}
 
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
-			target.AddBuff(BuffID.Electrified, 900);
+			target.AddBuff(BuffID.Electrified, 300);
 		}
 
 		public override bool? CanHitNPC(NPC target)

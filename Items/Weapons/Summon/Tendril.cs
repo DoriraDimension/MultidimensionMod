@@ -16,7 +16,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 
 		public override void SetDefaults()
 		{
-			Item.damage = 12;
+			Item.damage = 10;
 			Item.width = 30;
 			Item.height = 34;
 			Item.useTime = 23;

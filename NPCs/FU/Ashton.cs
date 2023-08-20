@@ -20,15 +20,15 @@ namespace MultidimensionMod.NPCs.FU
 
 		public override void SetStaticDefaults()
 		{
-			Main.npcFrameCount[NPC.type] = 5;
+			Main.npcFrameCount[NPC.type] = 6;
 		}
 
 		public override void SetDefaults()
 		{
 			NPC.width = 54;
 			NPC.height = 110;
-			NPC.damage = 60;
-			NPC.defense = 10;
+			NPC.damage = 70;
+			NPC.defense = 20;
 			NPC.lifeMax = 500;
 			NPC.HitSound = SoundID.NPCHit54;
 			NPC.DeathSound = SoundID.NPCDeath52;
@@ -39,18 +39,19 @@ namespace MultidimensionMod.NPCs.FU
 			NPC.noTileCollide = true;
 			NPC.aiStyle = -1;
 			Banner = NPC.type;
-			SpawnModBiomes = new int[1] { ModContent.GetInstance<FrozenUnderworld>().Type };
+            BannerItem = ModContent.ItemType<AshtonBanner>();
+            SpawnModBiomes = new int[1] { ModContent.GetInstance<FrozenUnderworld>().Type };
 		}
 
 		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("A weird creature that roams the frozen section of the underworld, hovering as if hanging on strings. They spit burning cold ash at everything that doesn't belong.")
+				new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Ashton")
 			});
 		}
 
-		public override void AI()
+        public override void AI()
 		{
 			if (NPC.velocity.X > 0)
 			{
@@ -71,14 +72,15 @@ namespace MultidimensionMod.NPCs.FU
 			if (distanceToPlayer <= 250) //Only runs the code below if the enemy is close enough
 			{
 				Blargh++;
-				if (Blargh >= 100)
+				if (Blargh >= 180)
 				{
 					SoundEngine.PlaySound(SoundID.NPCDeath13 with { Volume = 0.5f }, NPC.position);
 					Vector2 velocity = Vector2.Normalize(player.Center - NPC.Center) * 10f;
 					for (int i = 0; i < 5; i++)
 					{
 						Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(30));
-						Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<AshCloud>(), (int)((double)((float)NPC.damage) * 1.5), 0f, Main.myPlayer);
+                        perturbedSpeed *= 1f - Main.rand.NextFloat(0.3f);
+                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<AshCloud>(), NPC.damage, 0f, Main.myPlayer);
 					}
 					Blargh = 0;
 				}
@@ -96,7 +98,6 @@ namespace MultidimensionMod.NPCs.FU
 
 		public override void ModifyNPCLoot(NPCLoot NPCloot)
 		{
-			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<AbyssalHellstoneBar>(), 1, 1, 3));
 		}
 
 		public override void HitEffect(NPC.HitInfo hit)
@@ -117,10 +118,14 @@ namespace MultidimensionMod.NPCs.FU
 			{
 				NPC.frameCounter = 0.0;
 				NPC.frame.Y += frameHeight;
-				if (NPC.frame.Y >= Main.npcFrameCount[NPC.type] * frameHeight)
+				if (NPC.frame.Y >= 4 * frameHeight)
 				{
 					NPC.frame.Y = 0;
 				}
+			}
+			if (Blargh >= 160)
+			{
+				NPC.frame.Y = 5 * frameHeight;
 			}
 		}
 	}

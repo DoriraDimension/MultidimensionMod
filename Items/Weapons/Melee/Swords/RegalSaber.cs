@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using MultidimensionMod.Common.Globals.Items;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
@@ -19,15 +20,15 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 40;
 			Item.height = 50;
-			Item.useTime = 15;
-			Item.useAnimation = 15;
+			Item.useTime = 20;
+			Item.useAnimation = 20;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 2;
 			Item.autoReuse = true;
 			Item.value = Item.sellPrice(0, 0, 70, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item1;
-			Item.crit = 31;
+			Item.crit = 11;
 		}
 
 		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)

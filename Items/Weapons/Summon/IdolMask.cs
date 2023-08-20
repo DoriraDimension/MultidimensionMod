@@ -31,7 +31,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.value = Item.sellPrice(0, 4, 0, 0);
 			Item.rare = ItemRarityID.Lime;
-			Item.UseSound = SoundID.Item97;
+			Item.UseSound = SoundID.NPCHit41;
 			Item.noMelee = true;
 			Item.buffType = ModContent.BuffType<MaskBuff>();
 			Item.shoot = ModContent.ProjectileType<GolemMask>();

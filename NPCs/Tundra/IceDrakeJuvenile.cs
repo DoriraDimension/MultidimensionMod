@@ -35,9 +35,9 @@ namespace MultidimensionMod.NPCs.Tundra
 			NPC.dontTakeDamageFromHostiles = true;
 			NPC.width = 34;
 			NPC.height = 22;
-			NPC.damage = 16;
-			NPC.defense = 13;
-			NPC.lifeMax = 50;
+			NPC.damage = 31;
+			NPC.defense = 15;
+			NPC.lifeMax = 100;
 			NPC.HitSound = SoundID.NPCHit1;
 			NPC.DeathSound = SoundID.NPCDeath1;
 			NPC.value = Item.buyPrice(0, 0, 0, 90);
@@ -53,7 +53,7 @@ namespace MultidimensionMod.NPCs.Tundra
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
 			   BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundSnow,
-				new FlavorTextBestiaryInfoElement("Juvenile Ice Drakes usually reside underground where they hunt down prey via ambush. They can be approached savely when they are asleep. They really love gilded dishes.")
+				new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.IceDrakeJuvenile")
 			});
 		}
 
@@ -208,7 +208,11 @@ namespace MultidimensionMod.NPCs.Tundra
 				{
 					frame = 8;
 				}
-			}
+                if (NPC.frame.Y < 8 * frameHeight)
+                {
+                    NPC.frame.Y = 8 * frameHeight;
+                }
+            }
 			if (!hasBeenFed && NPC.life < NPC.lifeMax)
 			{
 				if (++NPC.frameCounter > 4)
@@ -219,7 +223,7 @@ namespace MultidimensionMod.NPCs.Tundra
 					{
 						frame = 0;
 					}
-				}
+                }
 			}
 			NPC.frame.Y = frame * frameHeight;
 		}

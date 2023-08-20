@@ -69,7 +69,7 @@ namespace MultidimensionMod.Projectiles.Summon.Sentries
 						bool lineOfSight = Collision.CanHitLine(Projectile.position, Projectile.width, Projectile.height, npc.position, npc.width, npc.height);
 						bool closeThroughWall = between < 700f;
 
-						if (((closest && inRange) || !foundTarget) && (lineOfSight || closeThroughWall))
+						if (((closest && inRange) || !foundTarget) && lineOfSight)
 						{
 							distanceFromTarget = between;
 							targetCenter = npc.Center;
@@ -83,9 +83,8 @@ namespace MultidimensionMod.Projectiles.Summon.Sentries
 			{
 				Projectile.Kill();
 			}
-
-			if (foundTarget)
-			{
+            if (foundTarget)
+            {
 				shootTimer++;
 				Vector2 direction = targetCenter - Projectile.Center;
 				direction.Normalize();

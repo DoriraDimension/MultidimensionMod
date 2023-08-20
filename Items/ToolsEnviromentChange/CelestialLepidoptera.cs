@@ -33,12 +33,12 @@ namespace MultidimensionMod.Items.ToolsEnviromentChange
 			if (Main.netMode != NetmodeID.MultiplayerClient && Main.dayTime)
 			{
 				Main.dayTime = false;
-				Main.time = 0.0;
+				Main.time = 0;
 			}
 			else
             {
 				Main.dayTime = true;
-				Main.time = 0.0;
+				Main.time = 0;
             }
 			return true;
 		}

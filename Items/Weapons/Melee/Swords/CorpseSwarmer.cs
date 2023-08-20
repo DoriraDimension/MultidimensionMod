@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Projectiles.Melee.Swords;
+using MultidimensionMod.Common.Globals.Items;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -17,7 +18,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void SetDefaults()
 		{
-			Item.damage = 52;
+			Item.damage = 48;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 64;
 			Item.height = 68;

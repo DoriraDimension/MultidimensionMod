@@ -13,7 +13,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
     {
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
+           /* Main.tileFrameImportant[Type] = true;
             Main.tileNoAttach[Type] = true;
             Main.tileLavaDeath[Type] = true;
             TileID.Sets.CommonSapling[Type] = true;
@@ -36,7 +36,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
             TileObjectData.addTile(Type);
             AddMapEntry(new Color(6, 32, 44));
             DustType = DustID.Smoke;
-            AdjTiles = new int[] { TileID.Saplings };
+            AdjTiles = new int[] { TileID.Saplings };*/
         }
         public override void NumDust(int i, int j, bool fail, ref int num) => num = fail ? 1 : 3;
         public override void RandomUpdate(int i, int j)

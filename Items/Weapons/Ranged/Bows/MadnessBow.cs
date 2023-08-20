@@ -20,10 +20,10 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 		{
 			Item.damage = 14;
 			Item.DamageType = DamageClass.Ranged;
-			Item.width =34;
+			Item.width = 34;
 			Item.height = 50;
 			Item.useTime = 5;
-			Item.reuseDelay = 40;
+			Item.reuseDelay = 30;
 			Item.useAnimation = 10;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;

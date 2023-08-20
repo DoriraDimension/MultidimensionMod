@@ -3,6 +3,7 @@ using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Summons;
 using MultidimensionMod.Items.Potions;
 using MultidimensionMod.Items.Weapons.Summon;
+using MultidimensionMod.UI;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -16,13 +17,15 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using Terraria.Utilities;
+using Terraria.GameContent.Bestiary;
+using Terraria.Audio;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
 	[AutoloadHead]
 	class Taraha : ModNPC
 	{
-		//Yes, this is Example Mod code, stfu!!!
+		//Yes, this is Example Mod code, shut the fish up!!!
 
 		// Time of day for traveller to leave (6PM)
 		public const double despawnTime = 48600.0;
@@ -30,8 +33,6 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		// the time of day the traveler will spawn (double.MaxValue for no spawn)
 		// saved and loaded with the world in TravelingMerchantSystem
 		public static double spawnTime = double.MaxValue;
-
-		public const string ShopName = "Shop";
 
 		public override bool PreAI()
 		{
@@ -52,7 +53,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
 		public static void UpdateTravelingMerchant()
 		{
-			bool travelerIsThere = (NPC.FindFirstNPC(ModContent.NPCType<Taraha>()) != -1); // Find a Merchant if there's one spawned in the world
+			bool travelerIsThere = NPC.FindFirstNPC(ModContent.NPCType<Taraha>()) != -1; // Find a Merchant if there's one spawned in the world
 
 			// Main.time is set to 0 each morning, and only for one update. Sundialling will never skip past time 0 so this is the place for 'on new day' code
 			if (Main.dayTime && Main.time == 0)
@@ -61,7 +62,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 				// You can also add a day counter here to prevent the merchant from possibly spawning multiple days in a row.
 
 				// NPC won't spawn today if it stayed all night
-				if (!travelerIsThere && NPC.downedBoss2 && Main.rand.NextBool(4))
+				if (!travelerIsThere && Main.rand.NextBool(4))
 				{ // 4 = 25% Chance
 				  // Here we can make it so the NPC doesnt spawn at the EXACT same time every time it does spawn
 					spawnTime = GetRandomSpawnTime(5400, 8100); // minTime = 6:00am, maxTime = 7:30am
@@ -97,11 +98,14 @@ namespace MultidimensionMod.NPCs.TownNPCs
 				return false;
 
 			// can't spawn if the sun or moondial is active
-			if (Main.fastForwardTimeToDawn && Main.fastForwardTimeToDusk)
+			if (Main.IsFastForwardingTime())
 				return false;
 
-			// can spawn if daytime, and between the spawn and despawn times
-			return Main.dayTime && Main.time >= spawnTime && Main.time < despawnTime;
+			if (!NPC.downedBoss2)
+				return false;
+
+            // can spawn if daytime, and between the spawn and despawn times
+            return Main.dayTime && Main.time >= spawnTime && Main.time < despawnTime;
 		}
 
 		private static bool IsNpcOnscreen(Vector2 center)
@@ -123,18 +127,6 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			return (maxTime - minTime) * Main.rand.NextDouble() + minTime;
 		}
 
-		public override void AddShops()
-		{
-			var npcShop = new NPCShop(Type, ShopName)
-			.Add(new Item(ModContent.ItemType<CalmingPills>()) { shopCustomPrice = 10, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
-			.Add(new Item(ItemID.FallenStar) { shopCustomPrice = 3, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
-			.Add(new Item(ModContent.ItemType<MadnessCaller>()) { shopCustomPrice = 8, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.Hardmode)
-			.Add(new Item(ModContent.ItemType<CerebroAlloy>()) { shopCustomPrice = 2, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.Hardmode)
-			//.Add(new Item(ModContent.ItemType<AstralTitansEyeJewel>()) { shopCustomPrice = 40, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMechBossAll)
-			.Add(new Item(ModContent.ItemType<marcO>()) { shopCustomPrice = 25, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMechBossAll);
-			npcShop.Register();
-		}
-
 		public override void SetStaticDefaults()
 		{
 			Main.npcFrameCount[NPC.type] = 1;
@@ -145,7 +137,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			NPCID.Sets.AttackTime[NPC.type] = 90;
 			NPCID.Sets.AttackAverageChance[NPC.type] = 30;
 			NPCID.Sets.HatOffsetY[NPC.type] = 4;
-		}
+            NPCID.Sets.NoTownNPCHappiness[Type] = true;
+        }
 
 		public override void SetDefaults()
 		{
@@ -159,9 +152,24 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			NPC.lifeMax = 1000;
 			NPC.knockBackResist = 0f;
 			TownNPCStayingHomeless = true;
+			NPC.dontTakeDamage = true;
 		}
 
-		public override bool CanTownNPCSpawn(int numTownNPCs)
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Taraha")
+            });
+        }
+
+        public override bool UsesPartyHat()
+        {
+            return false;
+        }
+
+        public override bool CanTownNPCSpawn(int numTownNPCs)
 		{
 			return false; // spawn manually so false
 		}
@@ -207,18 +215,19 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
 		public override void SetChatButtons(ref string button, ref string button2)
 		{
-			button = Language.GetTextValue("LegacyInterface.28");
+			button = "Trade";
 		}
 
-		public override void OnChatButtonClicked(bool firstButton, ref string shopName)
-		{
-			if (firstButton)
-			{
-				shopName = "Shop";
-			}
-		}
+        public override void OnChatButtonClicked(bool firstButton, ref string shopName)
+        {
+            if (firstButton)
+            {
+                SoundEngine.PlaySound(SoundID.MenuOpen);
+                TradingUI.Visible = true;
+            }
+        }
 
-		public override void AI()
+        public override void AI()
 		{
 			NPC.homeless = true; // Make sure it stays homeless
 		}

@@ -19,7 +19,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void SetDefaults()
 		{
-			Item.damage = 62;
+			Item.damage = 64;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 72;
 			Item.height = 56;
@@ -43,6 +43,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 16)
 			.AddIngredient(ModContent.ItemType<MadnessFragment>(), 10)
 			.AddIngredient(ItemID.Ectoplasm, 6)
+			.AddIngredient(ModContent.ItemType<Prismatine>(), 2)
 			.AddIngredient(ModContent.ItemType<Blight2>())
 			.AddIngredient(ModContent.ItemType<Dimensium>(), 17)
 			.AddTile(ModContent.TileType<DimensionalForge>())

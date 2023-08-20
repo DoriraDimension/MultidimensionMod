@@ -38,7 +38,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
-			Projectile.NewProjectile(source, position, velocity, type, damage, knockback, Main.myPlayer);
+			Projectile.NewProjectile(source, new Vector2(player.Center.X + (float)Main.rand.Next(-60, 60), player.Center.Y + (float)Main.rand.Next(-60, 60)), velocity, type, damage, knockback, Main.myPlayer);
 			return player.ownedProjectileCounts[Item.shoot] < 20;
 		}
 

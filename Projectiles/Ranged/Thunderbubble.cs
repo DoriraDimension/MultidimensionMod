@@ -12,8 +12,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Thunderbubble");
-			Main.projFrames[Projectile.type] = 4;
+			Main.projFrames[Projectile.type] = 8;
 		}
 
 		public override void SetDefaults()
@@ -38,7 +37,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 			for (int i = 0; i < 2; i++)
 			{
-				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<StormDust>(), 0f, 0f, 100, default(Color), 2f);
+				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Electric, 0f, 0f, 100, default(Color), 1f);
 				Main.dust[dustIndex].velocity *= 1.4f;
 			}
 		}
@@ -58,10 +57,10 @@ namespace MultidimensionMod.Projectiles.Ranged
 				Projectile.velocity.Y = 16f;
 			}
 
-			if (++Projectile.frameCounter >= 5)
+			if (++Projectile.frameCounter >= 9)
 			{
 				Projectile.frameCounter = 0;
-				if (++Projectile.frame >= 4)
+				if (++Projectile.frame >= 8)
 				{
 					Projectile.frame = 0;
 				}
@@ -79,7 +78,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 		{
 			for (int i = 0; i < 5; i++)
 			{
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y - 16f, Main.rand.Next(-10, 11) * .25f, Main.rand.Next(-10, -5) * .25f, ModContent.ProjectileType<BubbleBolt>(), (int)(Projectile.damage * .5f), 0, Projectile.owner);
+				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y - 16f, Main.rand.Next(-11, 11) * .25f, -7 * .75f, ModContent.ProjectileType<BubbleBolt>(), (int)(Projectile.damage * .5f), 0, Projectile.owner);
 
 			}
 		}

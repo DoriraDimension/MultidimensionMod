@@ -4,11 +4,12 @@ using MultidimensionMod.Items.Pets;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Placeables.Trophies;
 using MultidimensionMod.Items.Souls;
-using MultidimensionMod.Items.Weapons.Melee.Swords;
+using MultidimensionMod.Items.Weapons.Melee.Flails;
 using MultidimensionMod.Items.Weapons.Ranged.Others;
 using MultidimensionMod.Items.Weapons.Magic.Others;
 using MultidimensionMod.Items.Weapons.Summon;
 using MultidimensionMod.Common.Systems;
+using MultidimensionMod.Items.Placeables.Relics;
 using System;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -16,15 +17,20 @@ using Terraria.ID;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader;
+using static Terraria.GameContent.Animations.IL_Actions.NPCs;
+using MultidimensionMod.Base;
+using MultidimensionMod.Dusts;
+using Terraria.Audio;
+using MonoMod.Core.Platforms;
+using MultidimensionMod.UI;
 
 //if you see base.velocity.Y += -7f that means theres a jump
 
 namespace MultidimensionMod.NPCs.Bosses.Smiley
-
 {
-	[AutoloadBossHead]
+    [AutoloadBossHead]
 
-	public class Smiley : ModNPC
+    public class Smiley : ModNPC
 	{
 		public float Timer;
 		int backupTimer = 0;
@@ -32,7 +38,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 		int darkling;
 		int expertDarkling;
 		Vector2 moveTo;
-		bool phase2 = false;
+		public bool phase2 = false;
 		Vector2 dashPos;
 		bool animatedStart = false;
 		int charges = 0;
@@ -41,8 +47,13 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 		int ProjectileTimeStamp;
 		bool startLeft = Main.rand.NextBool();
 		private bool phase1 = true;
-		int fuckYou = 0;
-		private int bossMode
+		int dustSpawn = 0;
+		int dustSpawn2 = 0;
+        public static int phase2HeadSlot = -1;
+        public bool blink = false;
+		public int transition = 0;
+        public bool TitleCard = false;
+        private int bossMode
 		{
 			get => (int)NPC.ai[0];
 			set => NPC.ai[0] = value;
@@ -53,7 +64,24 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 			set => NPC.ai[1] = value;
 		}
 
-		public override void BossLoot(ref string name, ref int potionType)
+        public override void Load()
+        {
+            // We want to give it a second boss head icon, so we register one
+            string texture = BossHeadTexture + "2"; // Our texture is called "ClassName_Head_Boss_SecondStage"
+            phase2HeadSlot = Mod.AddBossHeadTexture(texture, -1); // -1 because we already have one registered via the [AutoloadBossHead] attribute, it would overwrite it otherwise
+        }
+
+        public override void BossHeadSlot(ref int index)
+        {
+            int slot = phase2HeadSlot;
+            if (phase2 && slot != -1)
+            {
+                // If the boss is in its second stage, display the other head icon instead
+                index = slot;
+            }
+        }
+
+        public override void BossLoot(ref string name, ref int potionType)
         {
 			potionType = ItemID.HealingPotion;
 			if (!Main.expertMode && Main.rand.NextBool(7))
@@ -63,50 +91,35 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 		}
 		public override void ModifyNPCLoot(NPCLoot NPCloot)
 		{
-			for (int i = 0; i < 15; i++)
-			{
-				NPCloot.Add(ItemDropRule.Common(ItemID.Heart));
-			}
+            LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
 			Main.NewText("Smiley has been defeated!", Color.Purple);
-			NPCloot.Add(ItemDropRule.Common(ItemID.GoldCoin, 1, 11, 11));
-			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<DarkMatterClump>(), 1, 15, 20));
-			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<SmileySoulshard>()));
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<PaleMatter>(), 1, 5, 10));
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<SmileySoulshard>()));
 			NPCloot.Add(ItemDropRule.BossBag(ModContent.ItemType<SmileyBag>()));
-			if (Main.rand.NextBool(10))
-			{
-				NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<SmileyTrophy>()));
-			}
-			if (Main.rand.NextBool(10))
-			{
-				NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<LonelyWarriorsVisor>()));
-				NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<DarkCloak>()));
-			}
-			if (Main.rand.NextBool(8))
-			{
-				NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<CuteEmoji>()));
-			}
+            NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<SmileyRelic>()));
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SmileyTrophy>(), 10));
+			notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<LonelyWarriorsVisor>(), 10));
+			notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<DarkCloak>()));
+			notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<CuteEmoji>(), 10));
 			int choice = Main.rand.Next(4);
 			if (choice == 0)
             {
-				NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<LonelySword>()));
+				notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<LonelySword>()));
 			}
 			if (choice == 1)
 			{
-				NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<DarkMatterLauncher>()));
+				notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<DarkMatterLauncher>()));
 			}
 			if (choice == 2)
 			{
-				NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<SmileySmile>()));
+				notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SmileySmile>()));
 			}
 			if (choice == 3)
 			{
-				NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<DarkRebels>()));
+				notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<DarkRebels>()));
 			}
 			if (!DownedSystem.downedSmiley)
 			{
-				Main.NewText("I see...", MDColors.DoriraColor);
-				Main.NewText("You defeated the exiled soldier of darkness...", MDColors.DoriraColor);
-				Main.NewText("You may be the one who he AND I were looking for.", MDColors.DoriraColor);
 				DownedSystem.downedSmiley = true;
 				if (Main.netMode == NetmodeID.Server)
 				{
@@ -132,11 +145,25 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 			Projectile.NewProjectile(NPC.GetSource_FromAI(), position, (NPC.DirectionTo(targetPosition + (player.velocity * 25)).RotatedBy(MathHelper.ToRadians(projAngle))) * projSpeed, type, damage, 0f, Main.myPlayer);
 		}
 
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.NightTime,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Smiley")
+            });
+        }
 
-		public override void SetStaticDefaults()
+
+        public override void SetStaticDefaults()
 		{
-			Main.npcFrameCount[NPC.type] = 11;
-		}
+			Main.npcFrameCount[NPC.type] = 20;
+            var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+            {
+                CustomTexturePath = "MultidimensionMod/NPCs/Bestiary/SmileyBestiary",
+            };
+            NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, drawModifier);
+        }
 
 		public override void SetDefaults()
 		{
@@ -159,26 +186,43 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 			NPC.HitSound = SoundID.NPCHit1;
 			NPC.DeathSound = SoundID.NPCDeath7;
 			NPC.netUpdate = true;
-			if (!Main.dedServ)
+            NPC.BossBar = /*phase2 ?*/ ModContent.GetInstance<SmileyBossBar2>() /*: ModContent.GetInstance<SmileyBossBar>()*/;
+            if (!Main.dedServ)
 			{
 				Music = MusicID.Boss2;
 			}
 		}
 
-		public override void ApplyDifficultyAndPlayerScaling(int numPlayers, float balance, float bossAdjustment)
+        public override bool? DrawHealthBar(byte hbPosition, ref float scale, ref Vector2 position)
+        {
+            scale = 1.0f;
+            return null;
+        }
+
+        public override void ApplyDifficultyAndPlayerScaling(int numPlayers, float balance, float bossAdjustment)
 		{
 			NPC.lifeMax = (int)(NPC.lifeMax * 0.6f * bossAdjustment);
 			NPC.damage = (int)(NPC.damage * 0.6f);
 		}
 
+		public int ImmaGetYa = 0;
+
 		public override void AI()
 		{
-			bossTime++;
-
-
-
+            if (!TitleCard)
+            {
+                if (!Main.dedServ)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle("Smiley", 60, 90, 1.0f, 0, Color.Yellow, "Rebel of the Void");
+                    TitleCard = true;
+                }
+            }
+            if (Main.rand.NextBool(60))
+            {
+                blink = true;
+            }
+            bossTime++;
 			Vector2 desVel = new Vector2(0f, -0.05f);
-
 			Player player = Main.player[NPC.target];
 
 			//Main.NewText(bossTime,default,true);
@@ -186,31 +230,23 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 			{
 				if (!canDie)
 				{
-
-
-
-
-
 					if (!animatedStart)
 					{
 						bossMode = -1;
-
 					}
 
 					if (NPC.life != 1)
 					{
 						if (phase1)
 						{
-
 							if (NPC.life <= NPC.lifeMax / 2)
 							{
 								phase1 = false;
 								NPC.dontTakeDamage = true;
 								nextTimeStamp = bossTime + 120;
 								bossMode = 9;
-
-
-							}
+								NPC.netUpdate = true;
+                            }
 							if (bossMode == -1)
 							{
 								NPC.TargetClosest(true);
@@ -218,29 +254,26 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 								{
 									if (startLeft)
 									{
-										NPC.Center = player.Center + new Vector2(-100, 600);
-
+										NPC.Center = player.Center + new Vector2(-180, 0);
 									}
 									else
 									{
-										NPC.Center = player.Center + new Vector2(100, 600);
-
+										NPC.Center = player.Center + new Vector2(180, 0);
 									}
-									NPC.alpha = 0;
 									charges = 1;
-
 								}
 								if (charges == 1)
 								{
-									NPC.Center += new Vector2(0, -4);
-
-									if (NPC.Center.Y <= player.Center.Y - 150)
+                                    NPC.alpha-= 5;
+                                    ImmaGetYa++;
+                                    if (ImmaGetYa >= 150)
 									{
-										//play laugh ani and freeze
 										nextTimeStamp = bossTime + 120;
 										charges = 2;
+										ImmaGetYa = 150;
 									}
-								}
+                                    NPC.netUpdate = true;
+                                }
 
 								if (bossTime >= nextTimeStamp && charges == 2)
 								{
@@ -251,8 +284,6 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 								}
 
 							}
-
-
 
 							if (bossMode == 0)
 							{
@@ -270,16 +301,17 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 								if (bossTime % 22 == 0)
 								{
 									moveTo = player.Center + new Vector2(-30f, -150);
-								}
+                                    NPC.netUpdate = true;
+                                }
 								if (bossTime % 66 == 0)
 								{
 									moveTo = player.Center + new Vector2(30f, -150);
-								}
+                                    NPC.netUpdate = true;
+                                }
 
+                                //NPC.position = moveTo; //direct mvoe
 
-								//NPC.position = moveTo; //direct mvoe
-
-								float speed = 8f;
+                                float speed = 8f;
 								Vector2 move = moveTo - NPC.Center;
 								float magnitude = (float)Math.Sqrt(move.X * move.X + move.Y * move.Y);
 								if (magnitude > speed)
@@ -297,14 +329,14 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 								if (bossTime >= nextTimeStamp)
 								{
 									dashPos = NPC.DirectionTo(Main.player[NPC.target].position) * 15f;
-									for (int i = 0; i < 12; i++) Dust.NewDust(NPC.Center, NPC.width, NPC.height, DustID.AmberBolt, Main.rand.Next(6) - 5, Main.rand.Next(6) - 5);
-									NPC.velocity = dashPos;
+									for (int i = 0; i < 12; i++) Dust.NewDust(NPC.Center, NPC.width, NPC.height, ModContent.DustType<VoidDustG>(), Main.rand.Next(6) - 5, Main.rand.Next(6) - 5);
+                                    for (int i = 0; i < 12; i++) Dust.NewDust(NPC.Center, NPC.width, NPC.height, ModContent.DustType<VoidDustM>(), Main.rand.Next(6) - 5, Main.rand.Next(6) - 5);
+                                    NPC.velocity = dashPos;
 									nextTimeStamp = bossTime + 45 + Main.rand.Next(10) - 10;
 									charges++;
 
 									bossMode = 1;
 								}
-
 							}
 
 							if (bossMode == 1)
@@ -321,40 +353,33 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 							{
 								if (bossTime >= ProjectileTimeStamp)
 								{
-									switch (shotType)
+                                    switch (shotType)
 									{
 										case 0:
-											shootTrackedProjAtPlayer(ModContent.ProjectileType<Baller>(), 0, 15f, NPC.damage + 5, NPC.Center, player.Center, player);
+											shootTrackedProjAtPlayer(ModContent.ProjectileType<Happy>(), 0, 15f, NPC.damage + 5, NPC.Center, player.Center, player);
 											break;
 										case 1:
-											shootTrackedProjAtPlayer(ModContent.ProjectileType<Baller2>(), 0, 10f, NPC.damage - 5, NPC.Center, player.Center, player);
+											shootTrackedProjAtPlayer(ModContent.ProjectileType<Joy>(), 0, 10f, NPC.damage - 5, NPC.Center, player.Center, player);
 											break;
 										case 2:
-											shootTrackedProjAtPlayer(ModContent.ProjectileType<Baller3>(), 0, 0f, NPC.damage, NPC.Center, player.Center, player);
+											shootTrackedProjAtPlayer(ModContent.ProjectileType<Neutral>(), 0, 0f, NPC.damage, NPC.Center, player.Center, player);
 											break;
 
 										default:
-											shootTrackedProjAtPlayer(ModContent.ProjectileType<Baller>(), 0, 15f, NPC.damage + 5, NPC.Center, player.Center, player);
+											shootTrackedProjAtPlayer(ModContent.ProjectileType<Happy>(), 0, 15f, NPC.damage + 5, NPC.Center, player.Center, player);
 											break;
 									}
-
 									ProjectileTimeStamp = bossTime + 30;
 									charges++;
-								}
+                                }
 								if (charges == 4)
 								{
 									charges = 0;
 									bossMode = 0;
 								}
-
-
-								NPC.TargetClosest(true);
-
+                                NPC.netUpdate = true;
+                                NPC.TargetClosest(true);
 								NPC.spriteDirection = -1 * NPC.direction;
-
-
-
-
 								if (bossTime % 22 == 0)
 								{
 									moveTo = player.Center + new Vector2(-30f, -150);
@@ -363,8 +388,6 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 								{
 									moveTo = player.Center + new Vector2(30f, -150);
 								}
-
-
 								//NPC.position = moveTo; //direct mvoe
 
 								float speed = 8f;
@@ -382,7 +405,6 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 									move *= speed / magnitude;
 								}
 								NPC.velocity = move;
-
 							}
 						}
 						if (!phase1 && !phase2)
@@ -398,51 +420,69 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 									Vector2 center = NPC.Center;
 									center.X -= 1;
 									NPC.velocity *= 0;
-									NPC.ai[3] = Projectile.NewProjectile(NPC.GetSource_FromAI(), center, new Vector2(0, 0), ModContent.ProjectileType<SmileyPhase2>(), 0, 0, 0);
-									NPC.frame.Y = 90 * 7;
-									NPC.alpha = 255;
+                                    NPC.alpha = 255;
+                                    NPC.frame.Y = 90 * 7;
 									bossMode = -5;
-								}
-								if (Main.projectile[(int)NPC.ai[3]].ai[1] == 1 || backupTimer >= 6 * 60)
+                                    dustSpawn++;
+                                    if (dustSpawn == 1)
+                                    {
+                                        for (int m = 0; m < 20; m++)
+                                        {
+                                            int dustID = Dust.NewDust(new Vector2(NPC.Center.X - 1, NPC.Center.Y - 1), 2, 2, ModContent.DustType<VoidDustG>(), 0f, 0f, 100, Color.White, 1.6f);
+                                            Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(6f, 0f), m / (float)20 * 6.28f);
+                                            Main.dust[dustID].noLight = false;
+                                            Main.dust[dustID].noGravity = true;
+                                        }
+                                        for (int m = 0; m < 20; m++)
+                                        {
+                                            int dustID = Dust.NewDust(new Vector2(NPC.Center.X - 1, NPC.Center.Y - 1), 2, 2, ModContent.DustType<VoidDustM>(), 0f, 0f, 100, Color.White, 2f);
+                                            Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(9f, 0f), m / (float)20 * 6.28f);
+                                            Main.dust[dustID].noLight = false;
+                                            Main.dust[dustID].noGravity = true;
+                                        }
+                                        if (dustSpawn >= 2)
+                                        {
+                                            dustSpawn = 2;
+                                        }
+                                    }
+                                    SoundEngine.PlaySound(SoundID.NPCDeath6 with { Volume = .2f }, NPC.position);
+                                }
+								if (backupTimer >= 6 * 60)
 								{
-									phase2 = true;
-									NPC.dontTakeDamage = false;
-
-									darkling = Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center - new Vector2(0, 60), new Vector2(0, 0), ModContent.ProjectileType<BossDarkling>(), NPC.damage, 10f);
-									if (Main.expertMode) expertDarkling = Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(0, 60), new Vector2(0, 0), ModContent.ProjectileType<BossDarkling>(), NPC.damage, 10f);
-
-
+                                    phase2 = true;
+                                    NPC.dontTakeDamage = false;
 									bossMode = 0;
 									backupTimer = 0;
-
-
 								}
-								/*for(int i = 0; i < 4; i++)
-								{
-									//Gore.NewGore(NPC.Center, Utils.RandomVector2(new Terraria.Utilities.UnifiedRandom(), 1, 10), mod.GetGoreSlot("Gores/P1gore"));
-								}*/
-
-
 							}
-
 						}
 						if (phase2)
 						{
-
 							shotType += 0.1f;
-							//proj, pointrot, timer, radi(neg)
-							Main.projectile[darkling].Center = NPC.Center - Vector2.One.RotatedBy(shotType) * -60;
-							Main.projectile[darkling].timeLeft = 99;
-							if (Main.expertMode)
-							{
-								Main.projectile[expertDarkling].Center = NPC.Center + Vector2.One.RotatedBy(shotType) * -60;
-								Main.projectile[expertDarkling].timeLeft = 99;
-
-
-							}
-
 							NPC.alpha = 0;
-							if (bossMode == 0)
+							dustSpawn2++;
+							if (dustSpawn2 == 1)
+							{
+                                for (int m = 0; m < 20; m++)
+                                {
+                                    int dustID = Dust.NewDust(new Vector2(NPC.Center.X - 1, NPC.Center.Y - 1), 2, 2, ModContent.DustType<VoidDustG>(), 0f, 0f, 100, Color.White, 1.6f);
+                                    Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(6f, 0f), m / (float)20 * 6.28f);
+                                    Main.dust[dustID].noLight = false;
+                                    Main.dust[dustID].noGravity = true;
+                                }
+                                for (int m = 0; m < 20; m++)
+                                {
+                                    int dustID = Dust.NewDust(new Vector2(NPC.Center.X - 1, NPC.Center.Y - 1), 2, 2, ModContent.DustType<VoidDustM>(), 0f, 0f, 100, Color.White, 2f);
+                                    Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(9f, 0f), m / (float)20 * 6.28f);
+                                    Main.dust[dustID].noLight = false;
+                                    Main.dust[dustID].noGravity = true;
+                                }
+								if (dustSpawn2 >= 2)
+								{
+                                    dustSpawn2 = 2;
+                                }
+                            }
+                            if (bossMode == 0)
 							{
 
 								NPC.TargetClosest(true);
@@ -485,8 +525,9 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 								if (bossTime >= nextTimeStamp)
 								{
 									dashPos = NPC.DirectionTo(Main.player[NPC.target].position) * 20;
-									for (int i = 0; i < 12; i++) Dust.NewDust(NPC.Center, NPC.width, NPC.height, DustID.AmberBolt, Main.rand.Next(6) - 5, Main.rand.Next(6) - 5);
-									NPC.velocity = dashPos;
+									for (int i = 0; i < 12; i++) Dust.NewDust(NPC.Center, NPC.width, NPC.height, ModContent.DustType<VoidDustG>(), Main.rand.Next(6) - 5, Main.rand.Next(6) - 5);
+                                    for (int i = 0; i < 12; i++) Dust.NewDust(NPC.Center, NPC.width, NPC.height, ModContent.DustType<VoidDustM>(), Main.rand.Next(6) - 5, Main.rand.Next(6) - 5);
+                                    NPC.velocity = dashPos;
 									nextTimeStamp = bossTime + 35 + Main.rand.Next(10) - 10;
 									charges++;
 
@@ -509,15 +550,15 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 							{
 								if (bossTime >= ProjectileTimeStamp)
 								{
-									switch (shotType)
+                                    switch (shotType)
 									{
 
-										default:
-											shootTrackedProjAtPlayer(ModContent.ProjectileType<Baller4>(), 0, 10f, NPC.damage + 5, NPC.Center, player.Center, player);
+                                        default:
+											shootTrackedProjAtPlayer(ModContent.ProjectileType<DarkEmotion>(), 0, 10f, NPC.damage + 5, NPC.Center, player.Center, player);
 											break;
 									}
 
-									ProjectileTimeStamp = bossTime + 30;
+                                    ProjectileTimeStamp = bossTime + 30;
 									charges++;
 								}
 								if (charges == 6)
@@ -526,13 +567,9 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 									bossMode = 0;
 								}
 
-
 								NPC.TargetClosest(true);
 
 								NPC.spriteDirection = -1 * NPC.direction;
-
-
-
 
 								if (bossTime % 22 == 0)
 								{
@@ -542,7 +579,6 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 								{
 									moveTo = player.Center + new Vector2(30f, -150);
 								}
-
 
 								//NPC.position = moveTo; //direct mvoe
 
@@ -563,8 +599,6 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 								NPC.velocity = move;
 
 							}
-
-							//Main.NewText("you're not ready for my SPIN MOVE");
 						}
 					}
 				}
@@ -573,25 +607,26 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 					backupTimer++;
 					if (bossMode == 56)
 					{
-
-						Main.projectile[darkling].Kill();
-						if (Main.expertMode) Main.projectile[expertDarkling].Kill();
 						Vector2 center = NPC.Center;
 						center.X -= 1;
 						NPC.velocity *= 0;
-						fuckYou = Projectile.NewProjectile(NPC.GetSource_FromAI(), center, new Vector2(0, 0), ModContent.ProjectileType<SmileyDeath>(), 0, 0, 0);
-						NPC.frame.Y = 90 * 7;
-						NPC.alpha = 255;
+						NPC.frame.Y = 90 * 20;
 						bossMode = 57;
 					}
 
-
-					if ((Main.projectile[fuckYou].ai[1] == 1 && bossMode == 57) || backupTimer >= 6 * 60)
+					if (NPC.life == 1)
+					{
+						NPC.dontTakeDamage = true;
+						bossMode = -1;
+                        NPC.alpha++;
+                    }
+					if (NPC.alpha == 255)
 					{
 						NPC.active = false;
 						NPC.life = 0;
-
-					}
+						NPC.netUpdate = true;
+                        NPC.NPCLoot();
+                    }
 				}
 			}
 
@@ -607,11 +642,8 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 					{
 						NPC.timeLeft = 360;
 					}
-
 				}
-
 			}
-
 		}
 
 		public override bool CheckDead()
@@ -640,19 +672,21 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 			}
 			if (!phase2)
 			{
-				if (bossMode == 0 || bossMode == 1 || bossMode == 2)
+				if (bossMode == 0 || bossMode == 1)
 				{
-					if (bossTime % 5 == 0)
+                    if (blink)
 					{
-						NPC.frame.Y += frameHeight;
-						if (NPC.frame.Y == frameHeight * 6)
-						{
-							NPC.frame.Y = 0;
-
-						}
-
-					}
-				}
+                        if (bossTime % 5 == 0)
+                        {
+                            NPC.frame.Y += frameHeight;
+                            if (NPC.frame.Y == frameHeight * 6)
+                            {
+                                NPC.frame.Y = 0;
+                                blink = false;
+                            }
+                        }
+                    }
+                }
 				if (bossMode == -1)
 				{
 					NPC.frame.Y = frameHeight * 3;
@@ -663,18 +697,20 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 				if (bossTime % 10 == 0)
 				{
 					NPC.frame.Y += frameHeight;
-					if (NPC.frame.Y == frameHeight * 11)
+					if (NPC.frame.Y == frameHeight * 18)
 					{
-						NPC.frame.Y = frameHeight * 7;
-
+						NPC.frame.Y = 13 * frameHeight;
 					}
-
-				}
+                    if (NPC.frame.Y < 13 * frameHeight)
+                    {
+                        NPC.frame.Y = 13 * frameHeight;
+                    }
+                }
 			}
-
-
-
+			if (NPC.life == 1)
+			{
+				NPC.frame.Y = 16 * frameHeight;
+			}
 		}
-
 	}
 }

@@ -27,7 +27,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 4;
 			Item.autoReuse = true;
-			Item.value = Item.sellPrice(gold: 1);
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Pink;
 			Item.UseSound = SoundID.Item1;
 		}
@@ -43,6 +43,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			Projectile.NewProjectile(player.GetSource_ItemUse(player.HeldItem), target.Center.X, target.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<DemonExplosion>(), (int)((double)((float)Item.damage) * 0.4), 0f, Main.myPlayer);
+			target.AddBuff(BuffID.OnFire3, 180);
 		}
 
 		public override void AddRecipes()

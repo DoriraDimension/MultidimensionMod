@@ -17,7 +17,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void SetDefaults()
 		{
-			Item.damage = 86;
+			Item.damage = 97;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 98;
 			Item.height = 94;
@@ -41,7 +41,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 				{
 					Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(30));
 					newVelocity *= 1f - Main.rand.NextFloat(0.3f);
-					Projectile.NewProjectileDirect(source, position, newVelocity, type, (int)((double)((float)Item.damage) * 0.2), 0f, player.whoAmI);
+					Projectile.NewProjectileDirect(source, position, newVelocity, type, (int)((double)((float)Item.damage) * 0.4), 0f, player.whoAmI);
 				}
 			}
 			return false;

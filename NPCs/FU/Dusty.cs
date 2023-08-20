@@ -16,13 +16,18 @@ namespace MultidimensionMod.NPCs.FU
 {
     public class Dusty : ModNPC
     {
+        public override void SetStaticDefaults()
+        {
+            Main.npcFrameCount[NPC.type] = 5;
+            NPCID.Sets.CountsAsCritter[Type] = true;
+        }
         public override void SetDefaults()
         {
             NPC.width = 32;
             NPC.height = 32;
             NPC.damage = 50;
             NPC.defense = 5;
-            NPC.lifeMax = 100;
+            NPC.lifeMax = 1;
             NPC.aiStyle = -1;
             NPC.noGravity = true;
             NPC.noTileCollide = true;
@@ -35,7 +40,7 @@ namespace MultidimensionMod.NPCs.FU
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Piles of cooled ash given live by the potent magic of the Frozen Underworld. They have no mind or soul, they only fly around on the icy winds, exploding into ash on impact.")
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Dusty")
             });
         }
 
@@ -60,13 +65,13 @@ namespace MultidimensionMod.NPCs.FU
             {
                 Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Smoke, 0f, 0f, 100, default(Color), 2f);
             }
-            NPC.active = false;
         }
 
         public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
         {
            target.AddBuff(BuffID.Blackout, 300);
-
+            SoundEngine.PlaySound(SoundID.NPCDeath6 with { Volume = .2f }, NPC.position);
+            NPC.active = false;
         }
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
@@ -76,6 +81,20 @@ namespace MultidimensionMod.NPCs.FU
                 return 0.01f;
             }
             return base.SpawnChance(spawnInfo);
+        }
+
+        public override void FindFrame(int frameHeight)
+        {
+            NPC.frameCounter += 1.0;
+            if (NPC.frameCounter >= 7.0)
+            {
+                NPC.frameCounter = 0.0;
+                NPC.frame.Y += frameHeight;
+                if (NPC.frame.Y >= 5 * frameHeight)
+                {
+                    NPC.frame.Y = 0;
+                }
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using MultidimensionMod.Items.Weapons.Melee.Swords;
+﻿using MultidimensionMod.Items.Weapons.Melee.Flails;
 using MultidimensionMod.Items.Weapons.Ranged.Others;
 using MultidimensionMod.Items.Weapons.Magic.Others;
 using MultidimensionMod.Items.Weapons.Summon;
@@ -43,7 +43,7 @@ namespace MultidimensionMod.Items.Bags
 			Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<SmileyMask>(), 7));
 			Itemloot.Add(ItemDropRule.OneFromOptions(1, ModContent.ItemType<LonelySword>(), ModContent.ItemType<DarkMatterLauncher>(), ModContent.ItemType<SmileySmile>(), ModContent.ItemType<DarkRebels>()));
 			Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<ShadowEmoji>()));
-			Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<DarkMatterClump>(), 1, 20, 25));
+			Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<PaleMatter>(), 1, 5, 10));
 			Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<CuteEmoji>(), 1));
 			Itemloot.Add(ItemDropRule.FewFromOptions(1, ModContent.ItemType<LonelyWarriorsVisor>(), ModContent.ItemType<DarkCloak>()));
 		}

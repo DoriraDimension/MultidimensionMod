@@ -13,7 +13,6 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 	{
 		public override void SetStaticDefaults()
 		{
-			// base.DisplayName.SetDefault("Friendly Probe");
 			ProjectileID.Sets.MinionSacrificable[Projectile.type] = true;
 			ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
 		}
@@ -34,27 +33,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 
 		public override void AI()
 		{
-			Projectile.frameCounter++;
-			if (Projectile.frameCounter >= 8)
-			{
-				Projectile.frameCounter = 0;
-				Projectile.frame++;
-			}
-			if (Projectile.frame > 5)
-			{
-				Projectile.frame = 0;
-			}
 			Player player = Main.player[Projectile.owner];
-			Projectile.frameCounter++;
-			if (Projectile.frameCounter > 8)
-			{
-				Projectile.frame++;
-				Projectile.frameCounter = 0;
-			}
-			if (Projectile.frame > 4)
-			{
-				Projectile.frame = 0;
-			}
 			float num3 = (float)Main.rand.Next(90, 111) * 0.01f;
 			num3 *= Main.essScale;
 			Lighting.AddLight(Projectile.Center, 1f * num3, 0f * num3, 0.15f * num3);
@@ -121,14 +100,14 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 			}
 			if (player.HasMinionAttackTargetNPC)
 			{
-				NPC nPC = Main.npc[player.MinionAttackTargetNPC];
-				if (nPC.CanBeChasedBy(Projectile))
+				NPC npc = Main.npc[player.MinionAttackTargetNPC];
+				if (npc.CanBeChasedBy(Projectile))
 				{
-					float num9 = Vector2.Distance(nPC.Center, Projectile.Center);
-					if (((Vector2.Distance(Projectile.Center, vector) > num9 && num9 < num4) || !flag3) && Collision.CanHitLine(Projectile.position, Projectile.width, Projectile.height, nPC.position, nPC.width, nPC.height))
+					float num9 = Vector2.Distance(npc.Center, Projectile.Center);
+					if (((Vector2.Distance(Projectile.Center, vector) > num9 && num9 < num4) || !flag3) && Collision.CanHitLine(Projectile.position, Projectile.width, Projectile.height, npc.position, npc.width, npc.height))
 					{
 						num4 = num9;
-						vector = nPC.Center;
+						vector = npc.Center;
 						flag3 = true;
 					}
 				}

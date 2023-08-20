@@ -19,7 +19,7 @@ namespace MultidimensionMod.NPCs.Desert
 			NPC.CloneDefaults(NPCID.Crab);
 			NPC.width = 70;
 			NPC.height = 26;
-			NPC.damage = 26;
+			NPC.damage = 55;
 			NPC.defense = 20;
 			NPC.lifeMax = 210;
 			NPC.HitSound = SoundID.NPCHit1;
@@ -37,7 +37,10 @@ namespace MultidimensionMod.NPCs.Desert
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("Big reptiles that live in the desert, their bite is venomous. They will rest underground at day to escape the blazing desert sun and come out at night..")
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Desert,
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.NightTime,
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundDesert,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Gilania")
 			});
 		}
 

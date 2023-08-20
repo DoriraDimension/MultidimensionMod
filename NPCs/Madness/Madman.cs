@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Items.Placeables.Banners;
+using MultidimensionMod.Items;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Base;
@@ -24,25 +25,26 @@ namespace MultidimensionMod.NPCs.Madness
 
 		public override void SetDefaults()
 		{
-			NPC.width = 114;
+			NPC.width = 48;
 			NPC.height = 58;
-			NPC.damage = 60;
+			NPC.damage = 30;
 			NPC.defense = 10;
-			NPC.lifeMax = 500;
-			NPC.HitSound = SoundID.NPCHit54;
-			NPC.DeathSound = SoundID.NPCDeath52;
-			NPC.value = Item.buyPrice(0, 0, 1, 40);
+			NPC.lifeMax = 160;
+            NPC.HitSound = SoundID.NPCHit1;
+            NPC.DeathSound = SoundID.NPCDeath2;
+            NPC.value = Item.buyPrice(0, 0, 1, 40);
 			NPC.knockBackResist = 0.5f;
 			NPC.aiStyle = -1;
-			Banner = NPC.type;
-			SpawnModBiomes = new int[1] { ModContent.GetInstance<MadnessMoon>().Type };
+            Banner = NPC.type;
+            BannerItem = ModContent.ItemType<MadmanBanner>();
+            SpawnModBiomes = new int[1] { ModContent.GetInstance<MadnessMoon>().Type };
 		}
 
 		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("A simple man who witnessed the true horror beyond, no longer able to think like a normal person.")
+				new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Madman")
 			});
 		}
 
@@ -73,14 +75,17 @@ namespace MultidimensionMod.NPCs.Madness
 		public override void ModifyNPCLoot(NPCLoot NPCloot)
 		{
 			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MadnessFragment>(), 3, 1, 2));
-		}
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<ShadeEye>(), 100));
+        }
 
 		public override void HitEffect(NPC.HitInfo hit)
 		{
 			if (NPC.life <= 0)
 			{
-
-			}
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MadmanGore1").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MadmanGore2").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MadmanGore3").Type, 1);
+            }
 		}
 
 		public override void OnHitPlayer(Player target, Player.HurtInfo info)

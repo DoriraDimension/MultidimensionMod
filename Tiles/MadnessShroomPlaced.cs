@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Tiles
 {
@@ -28,6 +29,7 @@ namespace MultidimensionMod.Tiles
             TileObjectData.addTile(Type);
             HitSound = SoundID.Grass;
             DustType = ModContent.DustType<MadnessB>();
+            RegisterItemDrop(ModContent.ItemType<MadnessShroom>(), 1);
         }
         public override void NumDust(int i, int j, bool fail, ref int num)
         {

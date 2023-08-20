@@ -34,6 +34,14 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
             num = 1;
         }
 
+        public override void HitWire(int i, int j)
+        {
+            if (Main.tile[i, j].TileFrameX >= 18)
+                Main.tile[i, j].TileFrameX -= 18;
+            else
+                Main.tile[i, j].TileFrameX += 18;
+        }
+
         public override void MouseOver(int i, int j)
         {
             Player player = Main.LocalPlayer;

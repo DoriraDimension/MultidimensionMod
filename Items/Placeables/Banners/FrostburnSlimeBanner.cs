@@ -1,4 +1,4 @@
-﻿using MultidimensionMod.Tiles;
+﻿using MultidimensionMod.Tiles.Furniture;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
@@ -26,8 +26,7 @@ namespace MultidimensionMod.Items.Placeables.Banners
 			Item.consumable = true;
 			Item.rare = ItemRarityID.Blue;
 			Item.value = Item.sellPrice(0, 0, 2, 0);
-			Item.createTile = ModContent.TileType<MonsterBanner>();
-			Item.placeStyle = 8;
+			Item.createTile = ModContent.TileType<FrostburnSlimeBannerPlaced>();
 		}
 	}
 }

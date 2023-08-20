@@ -12,7 +12,6 @@ namespace MultidimensionMod.Projectiles.Ranged
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Forbidden Arrow");
 			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 5;
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
 		}
@@ -34,7 +33,6 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void AI()
 		{
-			Projectile.rotation = Projectile.velocity.ToRotation() - (float)Math.PI / 2f;
 		}
 
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)

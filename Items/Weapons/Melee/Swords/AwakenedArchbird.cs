@@ -16,12 +16,12 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void SetDefaults()
 		{
-			Item.damage = 98;
+			Item.damage = 87;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 118;
 			Item.height = 118;
-			Item.useTime = 16;
-			Item.useAnimation = 16;
+			Item.useTime = 19;
+			Item.useAnimation = 19;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 5;
 			Item.autoReuse = true;
@@ -35,7 +35,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
 		public override void MeleeEffects(Player player, Rectangle hitbox)
 		{
-			Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, (27));
+			Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.Shadowflame);
 		}
 
 		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)

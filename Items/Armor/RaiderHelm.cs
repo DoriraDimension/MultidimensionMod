@@ -41,6 +41,7 @@ namespace MultidimensionMod.Items.Armor
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<VikingRelic>(), 5)
+			.AddIngredient(ModContent.ItemType<FrostScale>(), 3)
 			.AddTile(TileID.Anvils)
 			.Register();
 		}

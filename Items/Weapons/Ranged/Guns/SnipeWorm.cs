@@ -16,7 +16,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 
 		public override void SetDefaults()
 		{
-			Item.damage = 43;
+			Item.damage = 49;
 			Item.DamageType = DamageClass.Ranged;
 			Item.width = 64;
 			Item.height = 22;
@@ -32,7 +32,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 30f;
 			Item.useAmmo = AmmoID.Bullet;
-			Item.crit = 10;
+			Item.crit = 15;
 		}
 
 		public override Vector2? HoldoutOffset()

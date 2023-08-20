@@ -26,5 +26,58 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 				Item.NewItem(new EntitySource_TileBreak(i, j), new Vector2((float)(i * 16) + 8f, (float)(j * 16) + 8f), 2996);
 			}
 		}
-	}
+
+        public override bool TileFrame(int i, int j, ref bool resetFrame, ref bool noBreak)
+        {
+            Tile tileAbove = Framing.GetTileSafely(i, j - 1);
+            int type = -1;
+            if (tileAbove.HasTile && !tileAbove.BottomSlope)
+            {
+                type = tileAbove.TileType;
+            }
+
+            if (type == ModContent.TileType<ColdAshGrass>() || type == Type)
+            {
+                return true;
+            }
+
+            WorldGen.KillTile(i, j);
+            return true;
+        }
+
+        public override void RandomUpdate(int i, int j)
+        {
+            Tile tileBelow = Framing.GetTileSafely(i, j + 1);
+            if (WorldGen.genRand.NextBool(15) && !tileBelow.HasTile && tileBelow.LiquidType != LiquidID.Lava)
+            {
+                bool placeVine = false;
+                int yTest = j;
+                while (yTest > j - 10)
+                {
+                    Tile testTile = Framing.GetTileSafely(i, yTest);
+                    if (testTile.BottomSlope)
+                    {
+                        break;
+                    }
+                    else if (!testTile.HasTile || testTile.TileType != ModContent.TileType<ColdAshGrass>())
+                    {
+                        yTest--;
+                        continue;
+                    }
+                    placeVine = true;
+                    break;
+                }
+                if (placeVine)
+                {
+                    tileBelow.TileType = Type;
+                    tileBelow.HasTile = true;
+                    WorldGen.SquareTileFrame(i, j + 1, true);
+                    if (Main.netMode == NetmodeID.Server)
+                    {
+                        NetMessage.SendTileSquare(-1, i, j + 1, 3, TileChangeType.None);
+                    }
+                }
+            }
+        }
+    }
 }

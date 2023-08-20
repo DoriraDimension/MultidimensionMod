@@ -34,6 +34,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Others
 			Item.rare = ItemRarityID.Pink;
 			Item.shoot = ModContent.ProjectileType<RetinusBlasterHoldOut>();
 			Item.shootSpeed = 15f;
+			Item.crit = 30;
 		}
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)

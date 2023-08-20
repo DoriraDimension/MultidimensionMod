@@ -1,5 +1,6 @@
 ﻿using MultidimensionMod.Items.Placeables.Banners;
 using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Common.Systems;
 using System;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -26,7 +27,7 @@ namespace MultidimensionMod.NPCs.Dungeon
 			NPC.width = 46;
 			NPC.height = 46;
 			NPC.damage = 45;
-			NPC.defense = 3;
+			NPC.defense = 10;
 			NPC.lifeMax = 120;
 			NPC.HitSound = SoundID.NPCHit54;
 			NPC.DeathSound = SoundID.NPCDeath52;
@@ -46,7 +47,7 @@ namespace MultidimensionMod.NPCs.Dungeon
 			{
 			   BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheDungeon,
 				BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.NightTime,
-				new FlavorTextBestiaryInfoElement("A entity that was created from Void Matter, they curiously approach people who pass by in the dungeon and only attack when threatened.")
+				new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Darkling")
 			});
 		}
 
@@ -100,6 +101,10 @@ namespace MultidimensionMod.NPCs.Dungeon
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
+			if (DownedSystem.downedSmiley)
+			{
+                return SpawnCondition.OverworldNight.Chance * 0.1f;
+            }
 			return SpawnCondition.Dungeon.Chance * 0.1f;
 		}
 

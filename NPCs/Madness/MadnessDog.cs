@@ -2,6 +2,7 @@
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Base;
+using MultidimensionMod.Items;
 using System;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -25,26 +26,27 @@ namespace MultidimensionMod.NPCs.Madness
 		{
 			NPC.width = 114;
 			NPC.height = 58;
-			NPC.damage = 60;
-			NPC.defense = 10;
-			NPC.lifeMax = 500;
-			NPC.HitSound = SoundID.NPCHit54;
-			NPC.DeathSound = SoundID.NPCDeath52;
+			NPC.damage = 40;
+			NPC.defense = 0;
+			NPC.lifeMax = 100;
+			NPC.HitSound = SoundID.NPCHit1;
+			NPC.DeathSound = SoundID.NPCDeath5;
 			NPC.value = Item.buyPrice(0, 0, 1, 40);
 			NPC.knockBackResist = 0.0f;
 			NPC.lavaImmune = false;
 			NPC.noGravity = false;
 			NPC.noTileCollide = false;
 			NPC.aiStyle = -1;
-			Banner = NPC.type;
-			SpawnModBiomes = new int[1] { ModContent.GetInstance<MadnessMoon>().Type };
+            Banner = NPC.type;
+            BannerItem = ModContent.ItemType<MadnessDogBanner>();
+            SpawnModBiomes = new int[1] { ModContent.GetInstance<MadnessMoon>().Type };
 		}
 
 		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("A gruesome creature that gazed into the lurking terror, its madness scarred mind forgot how to consume food and as such is driven by a neverending hunger.")
+				new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.MadnessStarving")
 			});
 		}
 
@@ -74,8 +76,9 @@ namespace MultidimensionMod.NPCs.Madness
 
 		public override void ModifyNPCLoot(NPCLoot NPCloot)
 		{
-			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MadnessFragment>(), 1, 1, 3));
-		}
+			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MadnessFragment>(), 3, 1, 3));
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<ShadeEye>(), 100));
+        }
 
 		public override void OnHitPlayer(Player target, Player.HurtInfo info)
 		{
@@ -86,8 +89,10 @@ namespace MultidimensionMod.NPCs.Madness
 		{
 			if (NPC.life <= 0)
 			{
-
-			}
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MadnessDogGore1").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MadnessDogGore2").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MadnessDogGore3").Type, 1);
+            }
 		}
 
 		public override void FindFrame(int frameHeight)

@@ -15,17 +15,16 @@ namespace MultidimensionMod.NPCs.Corruption
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Infested Abomination");
 			Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.Crab];
 		}
 
 		public override void SetDefaults()
 		{
-			NPC.width = 44;
-			NPC.height = 46;
+			NPC.width = 32;
+			NPC.height = 50;
 			NPC.damage = 23;
 			NPC.defense = 12;
-			NPC.lifeMax = 100;
+			NPC.lifeMax = 50;
 			NPC.HitSound = SoundID.NPCHit1;
 			NPC.DeathSound = SoundID.NPCDeath2;
 			NPC.value = Item.buyPrice(0, 0, 1, 50);
@@ -41,7 +40,8 @@ namespace MultidimensionMod.NPCs.Corruption
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("It was possibly once human but is now just a disgusting thing, these weird creatures are hosts to a local species of rot loving flies. They drip green stinky goo everywhere they walk and spit disgusting liquid with every movement of their mouth.")
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCorruption,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Abomination")
 			});
 		}
 

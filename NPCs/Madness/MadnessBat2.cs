@@ -2,6 +2,7 @@
 using MultidimensionMod.Dusts;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Base;
+using MultidimensionMod.Items;
 using System;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -11,6 +12,7 @@ using Terraria.ModLoader.Utilities;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.Bestiary;
 using Terraria.Audio;
+using MultidimensionMod.Items.Placeables.Banners;
 
 namespace MultidimensionMod.NPCs.Madness
 {
@@ -24,11 +26,11 @@ namespace MultidimensionMod.NPCs.Madness
         }
         public override void SetDefaults()
         {
-            NPC.width = 30;
-            NPC.height = 66;
-            NPC.damage = 5;
-            NPC.defense = 10;
-            NPC.lifeMax = 300;
+            NPC.width = 40;
+            NPC.height = 40;
+            NPC.damage = 64;
+            NPC.defense = 30;
+            NPC.lifeMax = 700;
             NPC.noGravity = true;
             NPC.noTileCollide = false;
             NPC.knockBackResist = 0.5f;
@@ -38,13 +40,16 @@ namespace MultidimensionMod.NPCs.Madness
             NPC.aiStyle = 14;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
+            Banner = NPC.type;
+            BannerItem = ModContent.ItemType<MadnessBat2Banner>();
+            SpawnModBiomes = new int[1] { ModContent.GetInstance<MadnessMoon>().Type };
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Ohhhh shit, a bat.")
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.MadnessGazer")
             });
         }
 
@@ -154,15 +159,17 @@ namespace MultidimensionMod.NPCs.Madness
                 {
                     Dust.NewDust(NPC.position, NPC.width, NPC.height, Main.rand.NextBool(2) ? ModContent.DustType<MadnessP>() : ModContent.DustType<MadnessB>(), hit.HitDirection, -1f, 0);
                 }
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/GazerGore1").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/GazerGore2").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/GazerGore3").Type, 1);
             }
         }
 
         public override void ModifyNPCLoot(NPCLoot NPCloot)
         {
-            if (Main.rand.NextBool(3))
-            {
-                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MadnessFragment>(), 1, 1, 2));
-            }
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MadnessFragment>(), 3, 1, 2));
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<Blight2>(), 20));
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<ShadeEye>(), 100));
         }
 
         public override void OnHitPlayer(Player target, Player.HurtInfo info)

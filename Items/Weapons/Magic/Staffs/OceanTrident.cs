@@ -1,8 +1,10 @@
 ﻿using MultidimensionMod.Projectiles.Magic;
+using MultidimensionMod.Items.Placeables.Banners;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using MultidimensionMod.Items.Accessories;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 {
@@ -12,11 +14,12 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 		{
 			Item.staff[Item.type] = true;
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-		}
+            ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<TridentBanner>();
+        }
 
 		public override void SetDefaults()
 		{
-			Item.damage = 19;
+			Item.damage = 15;
 			Item.DamageType = DamageClass.Magic;
 			Item.mana = 6;
 			Item.width = 40;
@@ -30,8 +33,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			Item.rare = ItemRarityID.Blue;
 			Item.UseSound = SoundID.Item20;
 			Item.autoReuse = true;
-			Item.shoot = ModContent.ProjectileType<Wave>();
-			Item.shootSpeed = 15f;
+			Item.shoot = ModContent.ProjectileType<SaltwaterBolt>();
+			Item.shootSpeed = 32f;
 		}
 
 		public override void AddRecipes()

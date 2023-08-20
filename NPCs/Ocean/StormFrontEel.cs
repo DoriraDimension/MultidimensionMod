@@ -26,7 +26,7 @@ namespace MultidimensionMod.NPCs.Ocean
 			NPC.width = 80;
 			NPC.height = 80;
 			NPC.damage = 85;
-			NPC.defense = 30;
+			NPC.defense = 35;
 			NPC.lifeMax = 2000;
 			NPC.HitSound = SoundID.NPCHit9;
 			NPC.DeathSound = SoundID.NPCDeath33;
@@ -43,7 +43,9 @@ namespace MultidimensionMod.NPCs.Ocean
 		{
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
 			{
-				new FlavorTextBestiaryInfoElement("					The great storm eels, only active during storms, when the sea is harsh and unforgiving. Many people believe they are scouts, scouts of someone or something deep under the ocean, that is why these creatures are seen as an omen of even worse to come")
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Events.Rain,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.StormEel")
 			});
 		}
 

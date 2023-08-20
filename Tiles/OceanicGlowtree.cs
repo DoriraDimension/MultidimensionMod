@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using MultidimensionMod.Items.Placeables;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
@@ -21,12 +22,14 @@ namespace MultidimensionMod.Tiles
 			TileObjectData.newTile.CoordinateWidth = 16;
 			TileObjectData.newTile.CoordinatePadding = 2;
 			TileObjectData.newTile.RandomStyleRange = 3;
-			TileID.Sets.DisableSmartCursor[Type] = true;
+            TileID.Sets.DisableSmartCursor[Type] = true;
 			TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();
 			AddMapEntry(new Color(31, 22, 45), name);
 			DustType = 68;
-		}
+            RegisterItemDrop(ModContent.ItemType<Glowseed>(), 1);
+            RegisterItemDrop(ModContent.ItemType<Glowseed>(), 2);
+        }
 
 		public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
 		{

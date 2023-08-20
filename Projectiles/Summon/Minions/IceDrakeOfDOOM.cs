@@ -31,7 +31,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 			Projectile.minionSlots = 0.5f;
 			Projectile.penetrate = -1;
 			Projectile.usesLocalNPCImmunity = true;
-			Projectile.localNPCHitCooldown = 10;
+			Projectile.localNPCHitCooldown = 15;
 		}
 
 		public override bool? CanCutTiles()

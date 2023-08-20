@@ -2,6 +2,7 @@ using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Dusts;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Base;
+using MultidimensionMod.Items;
 using System;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -11,6 +12,7 @@ using Terraria.ModLoader.Utilities;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.Bestiary;
 using Terraria.Audio;
+using MultidimensionMod.Items.Placeables.Banners;
 
 namespace MultidimensionMod.NPCs.Madness
 {
@@ -20,15 +22,15 @@ namespace MultidimensionMod.NPCs.Madness
         int AmbushTimer = 0;
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[NPC.type] = 4;
+            Main.npcFrameCount[NPC.type] = 7;
         }
         public override void SetDefaults()
         {
-            NPC.width = 30;
-            NPC.height = 30;
-            NPC.damage = 5;
-            NPC.defense = 4;
-            NPC.lifeMax = 20;
+            NPC.width = 40;
+            NPC.height = 35;
+            NPC.damage = 25;
+            NPC.defense = 6;
+            NPC.lifeMax = 140;
             NPC.noGravity = true;
             NPC.noTileCollide = false;
             NPC.knockBackResist = 0.5f;
@@ -38,13 +40,16 @@ namespace MultidimensionMod.NPCs.Madness
             NPC.aiStyle = 14;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
+            Banner = NPC.type;
+            BannerItem = ModContent.ItemType<MadnessBatBanner>();
+            SpawnModBiomes = new int[1] { ModContent.GetInstance<MadnessMoon>().Type };
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("A flying entity that mutated into a grotesque something, just touching its skin can lead to mind burns.")
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.MadnessFlier")
             });
         }
 
@@ -129,10 +134,8 @@ namespace MultidimensionMod.NPCs.Madness
 
         public override void ModifyNPCLoot(NPCLoot NPCloot)
         {
-            if (Main.rand.NextBool(3))
-            {
-                NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MadnessFragment>(), 1, 1, 2));
-            }
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MadnessFragment>(), 3, 1, 2));
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<ShadeEye>(), 100));
         }
 
         public override void OnHitPlayer(Player target, Player.HurtInfo info)

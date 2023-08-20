@@ -6,6 +6,8 @@ using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Tiles.Furniture.VoidMatter;
 
 namespace MultidimensionMod.Items.Weapons.Summon
 {
@@ -20,7 +22,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 
 		public override void SetDefaults()
 		{
-			Item.damage = 32;
+			Item.damage = 22;
 			Item.DamageType = DamageClass.Summon;
 			Item.knockBack = 1f;
 			Item.mana = 10;
@@ -49,5 +51,13 @@ namespace MultidimensionMod.Items.Weapons.Summon
 		{
 			position = Main.MouseWorld;
 		}
-	}
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<PaleMatter>(), 5)
+                .AddTile(ModContent.TileType<EmptyKingsFabricatorPlaced>())
+                .Register();
+        }
+    }
 }
