@@ -35,7 +35,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 		{
 			Player player = Main.player[Projectile.owner];
 			player.heldProj = player.whoAmI;
-			Projectile.Center = player.Center + Vector2.UnitY * (player.gfxOffY - 60f);
+			Projectile.Center = player.Center + Vector2.UnitY * (player.gfxOffY - 70f);
 
 			float distanceFromTarget = 700f;
 			Vector2 targetCenter = Projectile.position;
