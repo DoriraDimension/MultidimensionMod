@@ -27,13 +27,13 @@ namespace MultidimensionMod.Common.Globals
             int ShiniesIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Shinies"));
             if (ShiniesIndex != -1)
             {
-                tasks.Insert(ShiniesIndex + 1, new PassLegacy("Creating Chaos Ores", DimensiumGen));
+                tasks.Insert(ShiniesIndex + 1, new PassLegacy("Crystalizing dimensional energy", DimensiumGen));
             }
         }
 
         private void DimensiumGen(GenerationProgress progress, GameConfiguration configuration)
         {
-            progress.Message = "Generating Chaotic minerals";
+            progress.Message = "Crystalizing dimensional energy";
 
             for (int k = 0; k < (int)(Main.maxTilesX * Main.maxTilesY * 0.00006); k++)
             {

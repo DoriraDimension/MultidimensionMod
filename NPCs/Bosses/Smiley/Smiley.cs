@@ -118,14 +118,6 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 			{
 				notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<DarkRebels>()));
 			}
-			if (!DownedSystem.downedSmiley)
-			{
-				DownedSystem.downedSmiley = true;
-				if (Main.netMode == NetmodeID.Server)
-				{
-					NetMessage.SendData(MessageID.WorldData); // Immediately inform clients of new world state.
-				}
-			}
 		}
 		private void shootTrackedProjAtPlayer(int type, int projAngle, float projSpeed, int damage, Vector2 position, Vector2 targetPosition, Player player)
 		{
@@ -626,6 +618,14 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 						NPC.life = 0;
 						NPC.netUpdate = true;
                         NPC.NPCLoot();
+                        if (!DownedSystem.downedSmiley)
+                        {
+                            DownedSystem.downedSmiley = true;
+                            if (Main.netMode == NetmodeID.Server)
+                            {
+                                NetMessage.SendData(MessageID.WorldData); // Immediately inform clients of new world state.
+                            }
+                        }
                     }
 				}
 			}

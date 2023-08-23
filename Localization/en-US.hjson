@@ -2554,7 +2554,7 @@ Mods: {
 		SetBonuses: {
 			NeroSet:
 				'''
-				Grants the ability to swim and move through water freely
+				Grants the ability to freely move through water
 				Increases whip range by 40%
 				Increases movement speed by 15% and defense by 10 when submerged in liquid
 				Press the Armor Ability hotkey to place a Nero Construct at the cursor position
