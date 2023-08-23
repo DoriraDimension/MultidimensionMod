@@ -89,7 +89,7 @@ namespace MultidimensionMod.NPCs.FU
                         int numProj = 3;
                         float rotation = MathHelper.ToRadians(14f);
                         Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedBy(MathHelper.Lerp(0f - rotation, rotation, (float)(i / (numProj - 1))));
-                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<VictimPellet>(), NPC.damage, 0f, Main.myPlayer);
+                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<VictimPellet>(), NPC.damage / 3, 0f, Main.myPlayer);
                     }
                     Quadshot = 0;
 				}

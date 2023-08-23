@@ -80,7 +80,7 @@ namespace MultidimensionMod.NPCs.FU
 					{
 						Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(30));
                         perturbedSpeed *= 1f - Main.rand.NextFloat(0.3f);
-                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<AshCloud>(), NPC.damage, 0f, Main.myPlayer);
+                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<AshCloud>(), NPC.damage / 4, 0f, Main.myPlayer);
 					}
 					Blargh = 0;
 				}

@@ -1907,7 +1907,7 @@ Mods: {
 
 			CoralBow: {
 				// DisplayName: Coral Bow
-				// Tooltip: ""
+				// Tooltip: Shoots a Tide Arrow every 5th shot
 			}
 
 			DarkshotBow: {
@@ -2062,7 +2062,7 @@ Mods: {
 				// DisplayName: Dark Rebels
 				/* Tooltip:
 					'''
-					Summons a brave Darklings who is ready to defeat void.
+					Summons a brave Darkling who is ready to defeat the void.
 					Only the bravest Darklings who hide in the dungeon will go outside on their own.
 					''' */
 			}
@@ -2945,8 +2945,8 @@ Mods: {
 				// Arguement15: Ours
 				// Arguement16: SHUT UP ALREADY!!!
 				// Adel1: Ah...
-				// Adel2: The remnants of my glorious home that remain in this world.
-				// Adel3: This fills me with joy, seeing them once more.
+				// Adel2: These hallowed lands, they are just like home.
+				// Adel3: Thank you for taking me here, this fills me with joy.
 				// Adel4: You know, I had to be with this entity for too long now.
 				// Adel5: I am not interested in any more time together.
 				// Adel6: May I ask you to do me a favor?.

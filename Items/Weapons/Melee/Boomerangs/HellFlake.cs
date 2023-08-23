@@ -26,6 +26,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
             Item.useAnimation = 20;
             Item.noUseGraphic = true;
             Item.noMelee = true;
+            Item.knockBack = 3f;
             Item.autoReuse = true;
             Item.value = Item.sellPrice(0, 2, 40, 0);
             Item.rare = ItemRarityID.LightRed;

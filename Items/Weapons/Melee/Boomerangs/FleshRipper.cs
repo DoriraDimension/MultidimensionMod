@@ -26,7 +26,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
 			Item.noUseGraphic = true;
 			Item.noMelee = true;
 			Item.useAnimation = 45;
-			Item.value = Item.sellPrice(0, 1, 0, 0);
+            Item.knockBack = 3f;
+            Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.shoot = ModContent.ProjectileType<FleshRipperProj>();
 			Item.shootSpeed = 14;

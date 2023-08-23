@@ -27,7 +27,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			Item.knockBack = 2f;
 			Item.DamageType = DamageClass.Magic;
 			Item.noMelee = true;
-			Item.value = Item.sellPrice(0, 15, 0, 0);
+			Item.value = Item.sellPrice(0, 0, 15, 0);
 			Item.rare = ItemRarityID.Blue;
 			Item.mana = 4;
 			Item.shoot = ModContent.ProjectileType<PoyoStar>();

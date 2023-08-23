@@ -113,11 +113,14 @@ namespace MultidimensionMod
 			if (spawnInfo.Player.InModBiome<FrozenUnderworld>())
 			{
 				pool.Clear();
-				pool.Add(ModContent.NPCType<Ashton>(), 0.1f);
 				//pool.Add(ModContent.NPCType<IceDemon>(), 0.3f);
 				pool.Add(ModContent.NPCType<Victim>(), 0.1f);
 				//pool.Add(ModContent.NPCType<VeilImp>(), 0.2f);
 				pool.Add(ModContent.NPCType<Dusty>(), 0.1f);
+				if (Main.hardMode)
+				{
+                    pool.Add(ModContent.NPCType<Ashton>(), 0.1f);
+                }
 			}
 			if (spawnInfo.Player.InModBiome<MadnessMoon>())
             {

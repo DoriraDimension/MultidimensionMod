@@ -72,6 +72,7 @@ namespace MultidimensionMod.Common.Globals.NPCs
             if (NPC.type == NPCID.QueenBee)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BeeSoul>()));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TerrorNest>(), 10));
             }
 
             if (NPC.type == NPCID.SkeletronHead)

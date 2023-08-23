@@ -24,7 +24,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
 			Item.useAnimation = 25;
 			Item.noUseGraphic = true;
 			Item.noMelee = true;
-			Item.autoReuse = true;
+            Item.knockBack = 5f;
+            Item.autoReuse = true;
 			Item.value = Item.sellPrice(0, 2, 40, 0);
 			Item.rare = ItemRarityID.LightRed;
 			Item.shoot = ModContent.ProjectileType<InjectorScytheProj>();

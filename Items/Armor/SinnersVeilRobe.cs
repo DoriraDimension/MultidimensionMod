@@ -13,6 +13,7 @@ namespace MultidimensionMod.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+            ArmorIDs.Body.Sets.HidesTopSkin[Item.bodySlot] = true;
         }
 
         public override void SetDefaults()
@@ -28,10 +29,6 @@ namespace MultidimensionMod.Items.Armor
         {
             player.statManaMax2 += 30;
             player.GetDamage(DamageClass.Magic) += 0.04f;
-            ArmorIDs.Body.Sets.HidesTopSkin[Item.bodySlot] = true;
-            ArmorIDs.Body.Sets.HidesArms[Item.bodySlot] = true;
-            ArmorIDs.Body.Sets.HidesHands[Item.bodySlot] = true;
-
         }
 
         public override void AddRecipes()

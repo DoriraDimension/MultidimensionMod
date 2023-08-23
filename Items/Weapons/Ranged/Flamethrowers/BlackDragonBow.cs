@@ -25,7 +25,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 			Item.useAnimation = 30;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true; 
-			Item.knockBack = 4;
+			Item.knockBack = 0;
 			Item.value = Item.sellPrice(0, 10, 0, 0);
 			Item.rare = ModContent.RarityType<AseGneblessaArtifact>();
 			Item.UseSound = SoundID.Item34; 

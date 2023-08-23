@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Tiles.MusicBoxes;
+using MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
@@ -27,5 +28,15 @@ namespace MultidimensionMod.Items.Placeables.MusicBoxes
 			Item.rare = ItemRarityID.LightRed;
 			Item.accessory = true;
 		}
-	}
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddIngredient(ItemID.MusicBox)
+            .AddIngredient(ModContent.ItemType<AbyssalHellstone>(), 10)
+            .AddIngredient(ModContent.ItemType<ColdAshItem>(), 20)
+            .AddTile(TileID.HeavyWorkBench)
+            .Register();
+        }
+    }
 }
