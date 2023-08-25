@@ -138,6 +138,11 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			NPCID.Sets.AttackAverageChance[NPC.type] = 30;
 			NPCID.Sets.HatOffsetY[NPC.type] = 4;
             NPCID.Sets.NoTownNPCHappiness[Type] = true;
+            var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+            {
+                CustomTexturePath = "MultidimensionMod/NPCs/Bestiary/TarahaBestiary",
+            };
+            NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, drawModifier);
         }
 
 		public override void SetDefaults()

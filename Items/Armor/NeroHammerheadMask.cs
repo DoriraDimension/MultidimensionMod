@@ -23,7 +23,7 @@ namespace MultidimensionMod.Items.Armor
 			Item.height = 28;
 			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Yellow;
-			Item.defense = 13;
+			Item.defense = 15;
 		}
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)

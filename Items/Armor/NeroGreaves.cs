@@ -20,7 +20,7 @@ namespace MultidimensionMod.Items.Armor
 			Item.height = 14;
 			Item.value = Item.sellPrice(0, 1, 0, 0);
 		    Item.rare = ItemRarityID.Yellow;
-			Item.defense = 15;
+			Item.defense = 13;
 		}
 
 		public override void UpdateEquip(Player player)
