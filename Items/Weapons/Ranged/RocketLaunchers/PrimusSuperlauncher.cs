@@ -38,7 +38,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
-			SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Item/LauncherShot"), player.position);
+			SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/LauncherShot"), player.position);
 			return true;
 		}
 

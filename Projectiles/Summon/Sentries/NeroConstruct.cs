@@ -91,7 +91,7 @@ namespace MultidimensionMod.Projectiles.Summon.Sentries
 				if (shootTimer == 50)
 				{
 					shootTimer = 0;
-					SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Item/LauncherShot"), Projectile.position);
+					SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/LauncherShot"), Projectile.position);
 					Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, direction * 12, ModContent.ProjectileType<NeroMissile>(), 75, 3, player.whoAmI);
 
 				}
