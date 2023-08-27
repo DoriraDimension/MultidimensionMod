@@ -1002,7 +1002,7 @@ Mods: {
 			}
 
 			VoidMatterWorkBench: {
-				DisplayName: Void Matter Workbench
+				DisplayName: Void Matter Work Bench
 				Tooltip: Tools of darkness are crafted on this.
 			}
 

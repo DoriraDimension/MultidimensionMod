@@ -34,6 +34,7 @@ namespace MultidimensionMod.Items.Materials
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<AbyssalHellstone>(), 3)
+			.AddTile(TileID.AdamantiteForge)
 			.Register();
 		}
 	}
