@@ -2549,6 +2549,11 @@ Mods: {
 					Increases magic damage by 4%
 					'''
 			}
+
+			MyceliumSeeds: {
+				DisplayName: Mycelium Seeds
+				Tooltip: Places Scarlet Mycelium on dirt
+			}
 		}
 
 		SetBonuses: {
