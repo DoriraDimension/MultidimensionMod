@@ -19,6 +19,7 @@ namespace MultidimensionMod.Water
         public override int GetDropletGore()
         {
             //return ModContent.Find<ModGore>("Water/MushroomDroplet").Type;
+            return 8;
         }
 
         public override void LightColorMultiplier(ref float r, ref float g, ref float b)

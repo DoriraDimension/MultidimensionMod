@@ -2564,6 +2564,11 @@ Mods: {
 				DisplayName: Red Mushroom Block
 				Tooltip: ""
 			}
+
+			Mushroots: {
+				DisplayName: Mushroots
+				Tooltip: ""
+			}
 		}
 
 		SetBonuses: {

@@ -2561,7 +2561,12 @@ Mods: {
 			}
 
 			MushroomBlock: {
-				// DisplayName: Mushroom Block
+				// DisplayName: Red Mushroom Block
+				// Tooltip: ""
+			}
+
+			Mushroots: {
+				// DisplayName: Mushroots
 				// Tooltip: ""
 			}
 		}

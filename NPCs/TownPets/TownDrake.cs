@@ -26,7 +26,7 @@ namespace MultidimensionMod.NPCs.TownPets
             NPCID.Sets.HatOffsetY[Type] = NPCID.Sets.HatOffsetY[NPCID.TownDog];
             NPCID.Sets.NPCFramingGroup[Type] = NPCID.Sets.NPCFramingGroup[NPCID.TownDog];
             NPCID.Sets.IsTownPet[Type] = true;
-
+            NPCID.Sets.NoTownNPCHappiness[Type] = true;
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers(0) { Hide = true };
             NPCID.Sets.NPCBestiaryDrawOffset.Add(NPC.type, value);
         }
