@@ -2559,6 +2559,11 @@ Mods: {
 				// DisplayName: Mycelium Seeds
 				// Tooltip: Places Scarlet Mycelium on dirt
 			}
+
+			MushroomBlock: {
+				// DisplayName: Mushroom Block
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
