@@ -12,13 +12,13 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
         {
             Main.tileFrameImportant[Type] = true;
             Main.tileCut[Type] = true;
-
             Main.tileMergeDirt[Type] = true;
             Main.tileLighted[Type] = false;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
             TileObjectData.newTile.RandomStyleRange = 5;
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.addTile(Type);
+            TileID.Sets.SwaysInWindBasic[Type] = true;
             RegisterItemDrop(ItemID.Mushroom);
             DustType = ModContent.DustType<MushroomDust>();
             HitSound = SoundID.Grass;
@@ -29,5 +29,4 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             num = 10;
         }
     }
-
 }

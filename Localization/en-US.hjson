@@ -10,6 +10,11 @@ Mods: {
 				DisplayName: Night of Madness
 				TownNPCDialogueName: The Madness Moon
 			}
+
+			ShroomForest: {
+				DisplayName: Shroom Forest
+				TownNPCDialogueName: the Shroom Forest
+			}
 		}
 
 		Buffs: {
