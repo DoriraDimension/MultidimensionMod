@@ -2739,6 +2739,7 @@ Mods: {
 			// Cosima.DisplayName: Cosima
 			// AtlanteanTridentStaff.DisplayName: Atlantean Trident Staff
 			// HellFlakeProj.DisplayName: Hell Flake Proj
+			// MonarchRUNAWAY.DisplayName: Monarch R U N A W A Y
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -2814,6 +2815,7 @@ Mods: {
 
 			// AdelSpirit.DisplayName: Adel von Gunresat
 			// VertrariusSpirit.DisplayName: Vertrarius von Baaruun
+			// MushroomMonarch.DisplayName: Mushroom Monarch
 		}
 
 		Dialogue: {
