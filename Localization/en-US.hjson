@@ -1026,7 +1026,7 @@ Mods: {
 			}
 
 			SmileyTrophy: {
-				DisplayName: SmileyTrophy
+				DisplayName: Smiley Trophy
 				Tooltip: ""
 			}
 
@@ -2738,8 +2738,10 @@ Mods: {
 			SaltwaterBolt.DisplayName: Saltwater Trident
 			Cosima.DisplayName: Cosima
 			AtlanteanTridentStaff.DisplayName: Atlantean Trident Staff
-			HellFlakeProj.DisplayName: Hell Flake Proj
+			HellFlakeProj.DisplayName: Hell Flake
 			MonarchRUNAWAY.DisplayName: Monarch R U N A W A Y
+			FakeMonarchMushroom.DisplayName: Monarch Mushroom
+			MonarchRUNAWAYPlayerKill.DisplayName: Monarch R U N A W A Y
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -2816,6 +2818,7 @@ Mods: {
 			AdelSpirit.DisplayName: Adel von Gunresat
 			VertrariusSpirit.DisplayName: Vertrarius von Baaruun
 			MushroomMonarch.DisplayName: Mushroom Monarch
+			RedMushling.DisplayName: Red Mushling
 		}
 
 		Dialogue: {
