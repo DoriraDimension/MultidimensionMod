@@ -27,7 +27,7 @@ namespace MultidimensionMod.Items.Summons
             Item.rare = ItemRarityID.Blue;
             Item.useAnimation = 30;
             Item.useTime = 30;
-            Item.useStyle = ItemUseStyleID.HoldUp;
+            Item.useStyle = ItemUseStyleID.EatFood;
             Item.consumable = true;
         }
 
