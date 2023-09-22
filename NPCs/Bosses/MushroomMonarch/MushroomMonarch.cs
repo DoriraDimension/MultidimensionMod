@@ -94,7 +94,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             if (!Main.dedServ)
-                Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/FeudalFungus");
+                Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Monarch");
         }
 
         public override bool? DrawHealthBar(byte hbPosition, ref float scale, ref Vector2 position)

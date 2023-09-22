@@ -12,7 +12,7 @@ namespace MultidimensionMod.Biomes
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
 
-        //public override int Music => MusicLoader.GetMusicSlot(Mod, "Sounds/Music/ShroomForest")
+        public override int Music => MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Shroom");
 
         public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => ModContent.GetInstance<ShroomForestBackground>();
 
