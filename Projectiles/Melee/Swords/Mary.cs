@@ -54,12 +54,18 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
                 if (scream == 120)
                 {
-                    for (int i = 0; i < Main.npc.Length; i++)
+                    for (int i = 0; i < Main.maxNPCs; i++)
                     {
                         NPC target = Main.npc[i];
                         if (target.HasBuff(ModContent.BuffType<MarysWrath>()))
                         {
-                            target.life -= 150;
+                            if (!target.immortal)
+                            {
+                                if (Main.netMode != 1)
+                                {
+                                    target.SimpleStrikeNPC(150, 0, false, 0f, DamageClass.Melee, false, 0, true);
+                                }
+                            }
                             target.RequestBuffRemoval(ModContent.BuffType<MarysWrath>());
                         }
                     }
