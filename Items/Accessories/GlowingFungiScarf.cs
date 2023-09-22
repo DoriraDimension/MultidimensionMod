@@ -40,7 +40,7 @@ namespace MultidimensionMod.Items.Accessories
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<Mushmatter>(), 6)
+			.AddIngredient(ModContent.ItemType<GlowingMushmatter>(), 6)
 			.AddIngredient(ItemID.GlowingMushroom, 25)
 			.AddTile(TileID.Anvils)
 			.Register();

@@ -59,7 +59,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<DormantKing>())
 			.AddIngredient(ItemID.LunarTabletFragment, 7)
 			.AddTile(TileID.MythrilAnvil)
 			.Register();

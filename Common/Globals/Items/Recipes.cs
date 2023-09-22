@@ -22,6 +22,7 @@ namespace MultidimensionMod.Common.Globals.Items
 			anklet.AddIngredient(ItemID.Vine, 2);
 			anklet.AddIngredient(ItemID.JungleSpores, 10);
 			anklet.AddIngredient(ItemID.Cloud, 12);
+			anklet.AddIngredient(ItemID.BeeWax, 3);
 			anklet.AddTile(TileID.LivingLoom);
 			anklet.Register();
 
@@ -127,6 +128,7 @@ namespace MultidimensionMod.Common.Globals.Items
 
 			Recipe potionStone = Recipe.Create(ItemID.PhilosophersStone);
 			potionStone.AddIngredient(ItemID.LifeCrystal, 2);
+			potionStone.AddIngredient(ModContent.ItemType<Mushmatter>(), 3);
 			potionStone.AddIngredient(ItemID.GreaterHealingPotion, 5);
 			potionStone.AddIngredient(ModContent.ItemType<PotionofLife>());
 			potionStone.AddIngredient(ItemID.SoulofLight ,10);
@@ -366,14 +368,9 @@ namespace MultidimensionMod.Common.Globals.Items
 			slime.AddTile(TileID.WorkBenches);
 			slime.Register();
 
-			Recipe boner = Recipe.Create(ItemID.BoneSword);
-			boner.AddIngredient(ItemID.Bone, 33);
-			boner.AddTile(TileID.BoneWelder);
-			boner.Register();
-
 			Recipe mushrang = Recipe.Create(ItemID.Shroomerang);
 			mushrang.AddIngredient(ItemID.WoodenBoomerang);
-			mushrang.AddIngredient(ModContent.ItemType<Mushmatter>(), 5);
+			mushrang.AddIngredient(ModContent.ItemType<GlowingMushmatter>(), 5);
 			mushrang.AddTile(TileID.WorkBenches);
 			#endregion
 
@@ -449,14 +446,14 @@ namespace MultidimensionMod.Common.Globals.Items
 			Recipe worm = Recipe.Create(ItemID.TruffleWorm);
 			worm.AddIngredient(ItemID.Worm);
 			worm.AddIngredient(ItemID.GlowingMushroom, 20);
-			worm.AddIngredient(ModContent.ItemType<Mushmatter>(), 6);
+			worm.AddIngredient(ModContent.ItemType<GlowingMushmatter>(), 6);
 			worm.AddTile(TileID.Autohammer);
 			worm.Register();
 
 			Recipe HP = Recipe.Create(ItemID.LifeCrystal);
 			HP.AddIngredient(ItemID.BottledHoney);
 			HP.AddIngredient(ItemID.Ruby, 2);
-			HP.AddIngredient(ModContent.ItemType<Mushmatter>(), 3);
+			HP.AddIngredient(ModContent.ItemType<GlowingMushmatter>(), 3);
 			HP.Register();
 
 			Recipe corrSolution = Recipe.Create(ItemID.PurpleSolution, 50);

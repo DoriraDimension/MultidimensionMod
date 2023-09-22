@@ -33,11 +33,6 @@ namespace MultidimensionMod.Common.Globals.Items
 			{
 				item.autoReuse = true;
 			}
-			if (item.type == ItemID.BoneSword)
-			{
-				item.damage = 31;
-				item.autoReuse = true;
-			}
 			if (item.type == ItemID.Blinkroot)
             {
 				item.useStyle = ItemUseStyleID.EatFood;

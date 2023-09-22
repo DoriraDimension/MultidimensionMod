@@ -12,6 +12,7 @@ using MultidimensionMod.Items.Weapons.Summon;
 using MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers;
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Vanity;
+using MultidimensionMod.Items.Weapons.Melee.Swords;
 using Terraria;
 using Terraria.ID;
 using Terraria.GameContent.ItemDropRules;
@@ -307,6 +308,11 @@ namespace MultidimensionMod.Common.Globals.NPCs
             if (NPC.type == NPCID.FireImp)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ImpBag>(), 100));
+            }
+
+            if (NPC.type == NPCID.BloodZombie)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BloodyMary>(), 1));
             }
         }
     }

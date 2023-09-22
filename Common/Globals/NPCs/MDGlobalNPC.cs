@@ -13,6 +13,8 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
 using Terraria.ModLoader.IO;
+using MultidimensionMod.Buffs.Debuffs;
+using MultidimensionMod.Projectiles.Melee.Swords;
 
 namespace MultidimensionMod
 {
@@ -29,6 +31,8 @@ namespace MultidimensionMod
 		public int MadnessCringe;
 
 		public bool DrakePoison;
+
+		public bool MarysWrath;
 
 		public override void ResetEffects(NPC npc)
 		{
@@ -106,7 +110,17 @@ namespace MultidimensionMod
 				}
 				Lighting.AddLight(npc.position, 0.1f, 0.2f, 0.7f);
 			}
-		}
+            if (MarysWrath)
+            {
+                if (Main.rand.Next(6) < 3)
+                {
+                    int dust = Dust.NewDust(npc.position - new Vector2(2f, 2f), npc.width + 4, npc.height + 4, DustID.Blood, npc.velocity.X * 0.4f, npc.velocity.Y * 0.4f, 100, default(Color), 1f);
+                    Main.dust[dust].noGravity = true;
+                    Main.dust[dust].velocity *= 1.8f;
+                    Main.dust[dust].velocity.Y -= 0.5f;
+                }
+            }
+        }
 
 		public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)
         {

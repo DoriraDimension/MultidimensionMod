@@ -49,15 +49,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 			.AddIngredient(ModContent.ItemType<Dimensium>(), 15)
 			.AddTile(ModContent.TileType<DimensionalForge>())
 			.Register();
-
-			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<ShiningRejection>())
-			.AddIngredient(ItemID.GoldDust, 5)
-			.AddIngredient(ItemID.SoulofLight, 10)
-            .AddIngredient(ModContent.ItemType<PaleMatter>(), 3)
-            .AddIngredient(ModContent.ItemType<Dimensium>(), 15)
-			.AddTile(ModContent.TileType<DimensionalForge>())
-			.Register();
 		}
 	}
 }

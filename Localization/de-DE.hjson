@@ -112,6 +112,11 @@ Mods: {
 				// DisplayName: Cassiopeia
 				// Description: Just hacked herself into your life
 			}
+
+			MarysWrath: {
+				// Description: A ghostly presence is watching you
+				// DisplayName: Mary's Wrath
+			}
 		}
 
 		Items: {
@@ -637,7 +642,11 @@ Mods: {
 
 			Mushmatter: {
 				// DisplayName: Mushmatter
-				// Tooltip: Fungus Flesh from a glowing mushroom infested creature, it is unlike any other normal mushroom found here.
+				/* Tooltip:
+					'''
+					A piece of fungal flesh from a royal mushroom creature
+					It is of high quality
+					''' */
 			}
 
 			OldDustyBow: {
@@ -2569,6 +2578,36 @@ Mods: {
 				// DisplayName: Mushroots
 				// Tooltip: ""
 			}
+
+			GlowingMushmatter: {
+				// DisplayName: Glowing Mushmatter
+				/* Tooltip:
+					'''
+					A piece of glowing fungal flesh
+					It radiates a weird otherwordly aura
+					''' */
+			}
+
+			IntimidatingMushroom: {
+				// DisplayName: King's Cap
+				/* Tooltip:
+					'''
+					A very pricey mushroom only found in the Scarlet Mycelium Forest
+					Eating it is said to awaken secret powers... 
+					or stir up unwanted fury of a sleeping king
+					''' */
+			}
+
+			BloodyMary: {
+				// DisplayName: Bloody Mary
+				/* Tooltip:
+					'''
+					Hitting enemies with the blade inflicts them with the Mary's Wrath debuff
+					Right clicking will summon Mary who will scream after a few seconds
+					Any enemy that had the Mary's Wrath debuff on them takes 150 damage and gets their debuff removed
+					It was never just folklore
+					''' */
+			}
 		}
 
 		SetBonuses: {
@@ -2742,6 +2781,7 @@ Mods: {
 			// MonarchRUNAWAY.DisplayName: Monarch R U N A W A Y
 			// FakeMonarchMushroom.DisplayName: Monarch Mushroom
 			// MonarchRUNAWAYPlayerKill.DisplayName: Monarch R U N A W A Y
+			// Mary.DisplayName: Mary
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
