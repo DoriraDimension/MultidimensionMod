@@ -1,0 +1,54 @@
+using MultidimensionMod.Projectiles.Magic;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace MultidimensionMod.Items.Weapons.Magic.Others
+{
+    public class Etheral : ModItem
+	{
+		public override void SetStaticDefaults()
+		{
+			//DisplayName.SetDefault("Etheral");
+			//Tooltip.SetDefault(" \"If in the wrong hands, it can cause devastating damage, so don't give it to me\" \n-TheRedstoneBro");
+		}
+
+        public override void SetDefaults()
+		{
+            Item.useStyle = ItemUseStyleID.Shoot;
+            Item.useAnimation = 7;
+            Item.useTime = 7;
+            Item.mana = 10;
+            Item.shootSpeed = 16f;
+            Item.knockBack = 0f;
+            Item.width = 122;
+            Item.reuseDelay = 5;
+            Item.height = 32;
+            Item.damage = 180;
+            Item.UseSound = SoundID.Item13;
+            Item.channel = true;
+            Item.shoot = ModContent.ProjectileType<EtheralProj>();
+            Item.value = Item.sellPrice(0, 20, 0, 0);
+            Item.noMelee = true;
+            Item.DamageType = DamageClass.Magic;
+            Item.autoReuse = true;
+			Item.noUseGraphic = true;
+            Item.rare = ItemRarityID.Cyan;
+            
+		}
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddIngredient(ItemID.ChargedBlasterCannon)
+            .AddIngredient(ItemID.FragmentSolar, 3)
+            .AddIngredient(ItemID.FragmentVortex, 3)
+            .AddIngredient(ItemID.FragmentNebula, 3)
+            .AddIngredient(ItemID.FragmentStardust, 3)
+            .AddTile(TileID.LunarCraftingStation)
+            .Register();
+        }
+    }
+}

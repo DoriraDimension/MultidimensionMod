@@ -2608,6 +2608,16 @@ Mods: {
 					It was never just folklore
 					'''
 			}
+
+			Etheral: {
+				DisplayName: Etheral
+				Tooltip: Fires a continuous light beam
+			}
+
+			EtheralEX: {
+				DisplayName: Etheral Moonlight
+				Tooltip: Fires several continuous light beams
+			}
 		}
 
 		SetBonuses: {
@@ -2782,6 +2792,10 @@ Mods: {
 			FakeMonarchMushroom.DisplayName: Monarch Mushroom
 			MonarchRUNAWAYPlayerKill.DisplayName: Monarch R U N A W A Y
 			Mary.DisplayName: Mary
+			EtheralBeam.DisplayName: Etheral Beam
+			EtheralProj.DisplayName: Etheral Proj
+			EtheralEXProj.DisplayName: Etheral E X Proj
+			EtheralLaserEX.DisplayName: Etheral Laser E X
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
