@@ -35,7 +35,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 	        Item.value = Item.sellPrice(0, 30, 0, 0);
             Item.channel = true;
             Item.shoot = ModContent.ProjectileType<EtheralEXProj>();
-            Item.shootSpeed = 30f;           
+            Item.shootSpeed = 30f;
+            Item.rare = ItemRarityID.Cyan;
         }
 
         public override void AddRecipes()

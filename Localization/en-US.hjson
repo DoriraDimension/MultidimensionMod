@@ -2611,12 +2611,24 @@ Mods: {
 
 			Etheral: {
 				DisplayName: Etheral
-				Tooltip: Fires a continuous light beam
+				Tooltip:
+					'''
+					Fires a continuous light beam
+					Tiny crystal jaws that yearn for their true purpose,
+					taken from their home and stripped from their true light,
+					waiting for it to finally appear.
+					'''
 			}
 
 			EtheralEX: {
 				DisplayName: Etheral Moonlight
-				Tooltip: Fires several continuous light beams
+				Tooltip:
+					'''
+					Fires several continuous light beams
+					The true Moonlight reveals itself,
+					illuminating what was once guided by impure light,
+					ending its eternal search at last.
+					'''
 			}
 		}
 

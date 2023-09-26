@@ -110,6 +110,14 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
         public int FlyTimer = 0;
         public int ShittingMyself = 0;
         public int AISwitch = 0;
+
+        public override bool? CanFallThroughPlatforms()
+        {
+            Player player = Main.player[NPC.target];
+            if ((player.Center.Y - NPC.Center.Y) > 150f)
+                return true;
+            return false;
+        }
 		
         public override void AI()
         {
@@ -149,7 +157,6 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     return;
                 }
             }
-
             ShittingMyself++;
             if (ShittingMyself == 300)
             {
