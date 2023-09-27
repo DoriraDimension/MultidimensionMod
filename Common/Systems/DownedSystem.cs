@@ -19,6 +19,7 @@ namespace MultidimensionMod.Common.Systems
         public static bool metAdel;
         public static bool metVertrarius;
         public static bool listenedToNonsense;
+        public static bool seenMushroom;
 
         public override void OnWorldLoad()
         {
@@ -32,6 +33,7 @@ namespace MultidimensionMod.Common.Systems
             metAdel = false;
             metVertrarius = false;
             listenedToNonsense = false;
+            seenMushroom = false;
         }
 
         public override void OnWorldUnload()
@@ -46,6 +48,7 @@ namespace MultidimensionMod.Common.Systems
             metAdel = false;
             metVertrarius = false;
             listenedToNonsense = false;
+            seenMushroom = false;
         }
 
         public override void SaveWorldData(TagCompound tag)
@@ -72,6 +75,8 @@ namespace MultidimensionMod.Common.Systems
                 downed.Add("metVertrarius");
             if (listenedToNonsense)
                 downed.Add("listenedToNonsense");
+            if (seenMushroom)
+                downed.Add("seenMushroom");
 
             tag["downed"] = downed;
         }
@@ -90,6 +95,7 @@ namespace MultidimensionMod.Common.Systems
             metAdel = downed.Contains("metAdel");
             metVertrarius = downed.Contains("metVertrarius");
             listenedToNonsense = downed.Contains("listenedToNonsense");
+            seenMushroom = downed.Contains("seenMushroom");
         }
 
         public override void NetSend(BinaryWriter writer)
@@ -108,6 +114,7 @@ namespace MultidimensionMod.Common.Systems
             var flags2 = new BitsByte();
             flags2[0] = metVertrarius;
             flags2[1] = listenedToNonsense;
+            flags2[2] = seenMushroom;
             writer.Write(flags2);
         }
 
@@ -126,6 +133,7 @@ namespace MultidimensionMod.Common.Systems
             BitsByte flags2 = reader.ReadByte();
             metVertrarius = flags2[0];
             listenedToNonsense = flags2[1];
+            seenMushroom = flags2[2];
         }
     }
 }

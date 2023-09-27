@@ -2630,6 +2630,21 @@ Mods: {
 					ending its eternal search at last.
 					''' */
 			}
+
+			MushroomSoul: {
+				// Tooltip: ""
+				// DisplayName: Mushroom Soul
+			}
+
+			GlowshroomSoul: {
+				// Tooltip: ""
+				// DisplayName: Glowshroom Soul
+			}
+
+			MonarchRelic: {
+				// Tooltip: ""
+				// DisplayName: Monarch Relic
+			}
 		}
 
 		SetBonuses: {

@@ -120,12 +120,6 @@ namespace MultidimensionMod.Common.Globals.Items
 			panic.AddTile(TileID.DemonAltar);
 			panic.Register();
 
-			Recipe magnet = Recipe.Create(ItemID.CelestialMagnet);
-			magnet.AddIngredient(ItemID.FallenStar, 10);
-			magnet.AddRecipeGroup(GoldPlatinum, 10);
-			magnet.AddTile(TileID.SkyMill);
-			magnet.Register();
-
 			Recipe potionStone = Recipe.Create(ItemID.PhilosophersStone);
 			potionStone.AddIngredient(ItemID.LifeCrystal, 2);
 			potionStone.AddIngredient(ModContent.ItemType<Mushmatter>(), 3);
@@ -390,12 +384,6 @@ namespace MultidimensionMod.Common.Globals.Items
 			discord.AddTile(TileID.MythrilAnvil);
 			discord.Register();
 
-			Recipe key = Recipe.Create(ItemID.ShadowKey);
-			key.AddIngredient(ItemID.GoldenKey);
-			key.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 8);
-			key.AddTile(TileID.DemonAltar);
-			key.Register();
-
 			Recipe bucket = Recipe.Create(ItemID.BottomlessBucket);
 			bucket.AddIngredient(ItemID.WaterBucket);
 			bucket.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 5);
@@ -431,7 +419,7 @@ namespace MultidimensionMod.Common.Globals.Items
 
 			Recipe sharp = Recipe.Create(ItemID.SharpeningStation);
 			sharp.AddIngredient(ItemID.StoneBlock, 30);
-			sharp.AddRecipeGroup(RecipeGroupID.Wood, 25);
+			sharp.AddIngredient(620, 25); //Wood from the jungle where the lion sleep tomorrow night
 			sharp.AddTile(TileID.HeavyWorkBench);
 			sharp.Register();
 
@@ -449,12 +437,6 @@ namespace MultidimensionMod.Common.Globals.Items
 			worm.AddIngredient(ModContent.ItemType<GlowingMushmatter>(), 6);
 			worm.AddTile(TileID.Autohammer);
 			worm.Register();
-
-			Recipe HP = Recipe.Create(ItemID.LifeCrystal);
-			HP.AddIngredient(ItemID.BottledHoney);
-			HP.AddIngredient(ItemID.Ruby, 2);
-			HP.AddIngredient(ModContent.ItemType<GlowingMushmatter>(), 3);
-			HP.Register();
 
 			Recipe corrSolution = Recipe.Create(ItemID.PurpleSolution, 50);
 			corrSolution.AddIngredient(ItemID.RedSolution, 50);

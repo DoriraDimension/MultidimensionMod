@@ -104,6 +104,14 @@ namespace MultidimensionMod
         public static Color EaterFlesh => new(116, 94, 97);
         public static Color EaterGoop => new(115, 127, 33);
 
+        //Mushroom Monarch Soul colors
+        public static Color MushMonOrange => new(237, 160, 69);
+        public static Color MushMonRed => new(198, 52, 52);
+
+        //Feudal Fungus Soul colors
+        public static Color FeudalPaleYellow => new(171, 173, 130);
+        public static Color FeudalBlue => new(0, 128, 255);
+
         //Adel color
 
         public static Color AdelText => new(255, 0, 127);

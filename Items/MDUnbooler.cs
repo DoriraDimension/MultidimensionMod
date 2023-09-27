@@ -33,6 +33,7 @@ namespace MultidimensionMod.Items
             DownedSystem.metAdel = false;
             DownedSystem.metVertrarius = false;
             DownedSystem.listenedToNonsense = false;
+            DownedSystem.seenMushroom = false;
 
             if (Main.netMode == NetmodeID.Server)
                 NetMessage.SendData(MessageID.WorldData);
