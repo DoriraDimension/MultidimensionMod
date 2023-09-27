@@ -1,4 +1,10 @@
 using MultidimensionMod.Base;
+using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Items.Souls;
+using MultidimensionMod.Items.Bags;
+using MultidimensionMod.Items.Placeables.Relics;
+using MultidimensionMod.Items.Placeables.Trophies;
+using MultidimensionMod.Items.Pets;
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -6,7 +12,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-
+using Terraria.GameContent.ItemDropRules;
 
 namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
 {
@@ -15,16 +21,16 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
     {
         public bool TitleCard = false;
         public override void SendExtraAI(BinaryWriter writer)
-		{
-			base.SendExtraAI(writer);
-			if(Main.netMode == NetmodeID.Server || Main.dedServ)
-			{
-				writer.Write(internalAI[0]);
-				writer.Write(internalAI[1]);
+        {
+            base.SendExtraAI(writer);
+            if(Main.netMode == NetmodeID.Server || Main.dedServ)
+            {
+                writer.Write(internalAI[0]);
+                writer.Write(internalAI[1]);
                 writer.Write(internalAI[2]);
                 writer.Write(internalAI[3]);
             }
-		}
+        }
 
 		public override void ReceiveExtraAI(BinaryReader reader)
 		{
@@ -529,6 +535,30 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             potionType = ItemID.LesserHealingPotion;
             //DownedSystem.downedMonarch = true;
             Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<MonarchRUNAWAY>(), 0, 0);
+            if (!Main.expertMode && Main.rand.NextBool(7))
+            {
+                //Item.NewItem(NPC.GetSource_Loot(), NPC.getRect(), ModContent.ItemType<MonarchMask>());
+            }
+        }
+
+        public override void ModifyNPCLoot(NPCLoot NPCloot)
+        {
+            LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<Mushmatter>(), 1, 5, 10));
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MushroomSoul>()));
+            NPCloot.Add(ItemDropRule.BossBag(ModContent.ItemType<MonarchBag>()));
+            NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<MonarchRelic>()));
+            //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<MonarchTrophy>(), 10));
+            //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusSporeBag>(), 10));
+            int choice = Main.rand.Next(2);
+            if (choice == 0)
+            {
+                //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<VineCap>()));
+            }
+            if (choice == 1)
+            {
+                //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<>()));
+            }
         }
 
         public override void ApplyDifficultyAndPlayerScaling(int numPlayers, float balance, float bossAdjustment)

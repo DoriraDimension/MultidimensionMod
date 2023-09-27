@@ -167,7 +167,7 @@ namespace MultidimensionMod.Common.Players
             Player player = Main.LocalPlayer;
             if (item.type == ItemID.Mushroom && player.GetModPlayer<MDPlayer>().Healthy)
             {
-                item.healLife = 60; //Makes Mushrooms heal more HP when the Healthy Cap accessory is equipped
+                item.healLife = 40; //Makes Mushrooms heal more HP when the Healthy Cap accessory is equipped
             }
             else if (item.type == ItemID.Mushroom && !player.GetModPlayer<MDPlayer>().Healthy)
             {

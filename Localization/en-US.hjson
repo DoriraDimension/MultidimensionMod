@@ -2634,7 +2634,7 @@ Mods: {
 			MushroomSoul: {
 				DisplayName: Scarlet Soul Spore
 				Tooltip:
-				    '''
+					'''
 					The Mushroom Monarch, a true ruler of mushrooms,
 					he rules over the Scarlet Mycelium Forest, a small forest of red mushrooms.
 					The monarch was once mindless, but he was granted a will when the glowing royalty
@@ -2645,7 +2645,7 @@ Mods: {
 			GlowshroomSoul: {
 				DisplayName: Indigo Soul Spore
 				Tooltip:
-				    '''
+					'''
 					The Feudal Fungus, just like his brother, rules over a type of mushroom.
 					He rules over the blue glowing mushrooms underground, due to his strength,
 					he has way more influence, his glow stretching all over the continent's caverns.
@@ -2656,6 +2656,11 @@ Mods: {
 			MonarchRelic: {
 				Tooltip: ""
 				DisplayName: Mushroom Monarch Relic
+			}
+
+			MonarchBag: {
+				Tooltip: ""
+				DisplayName: Treasure Bag
 			}
 		}
 

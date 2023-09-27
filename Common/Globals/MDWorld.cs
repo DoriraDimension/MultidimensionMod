@@ -45,10 +45,10 @@ namespace MultidimensionMod.Common.Globals
                 MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Aether", 90, 120, 1.6f, 0, Color.Pink, "Hidden Starry Sky");
                 NPC.SetEventFlagCleared(ref DownedSystem.seenAether, -1);
             }
-            if (Main.LocalPlayer.ZoneShimmer & !DownedSystem.seenAether)
+            if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<ShroomForest>()) & !DownedSystem.seenMushroom)
             {
                 MDSystem.Instance.TitleCardUIElement.DisplayTitle("Scarlet Mycelium Forest", 90, 120, 1.6f, 0, Color.Red, "Royal Woods");
-                NPC.SetEventFlagCleared(ref DownedSystem.seenAether, -1);
+                NPC.SetEventFlagCleared(ref DownedSystem.seenMushroom, -1);
             }
             #region Night of Madness
             if (!Main.fastForwardTimeToDawn && !Main.fastForwardTimeToDusk)
