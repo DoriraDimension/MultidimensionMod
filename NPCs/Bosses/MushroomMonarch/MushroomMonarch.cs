@@ -5,6 +5,8 @@ using MultidimensionMod.Items.Bags;
 using MultidimensionMod.Items.Placeables.Relics;
 using MultidimensionMod.Items.Placeables.Trophies;
 using MultidimensionMod.Items.Pets;
+using MultidimensionMod.Items.Weapons.Melee.Boomerangs;
+using MultidimensionMod.Items.Weapons.Ranged.Bows;
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -553,11 +555,11 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             int choice = Main.rand.Next(2);
             if (choice == 0)
             {
-                //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<VineCap>()));
+                notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<Musharang>()));
             }
             if (choice == 1)
             {
-                //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<>()));
+                notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<Mushbow>()));
             }
         }
 

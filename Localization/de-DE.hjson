@@ -2660,7 +2660,22 @@ Mods: {
 
 			MonarchBag: {
 				// Tooltip: ""
-				// DisplayName: Monarch Bag
+				// DisplayName: Treasure Bag
+			}
+
+			Musharang: {
+				// DisplayName: Monarcharang
+				// Tooltip: ""
+			}
+
+			Mushbow: {
+				// DisplayName: Scarlet String
+				/* Tooltip:
+					'''
+					Right click to imbue the bow with your life and shoot a Bloodshroom Arrow
+					These arrows need 10 HP to be shot and deal thrice as much damage
+					When a Bloodshroom Arrow hits an enemy, you get healed by 5 HP
+					''' */
 			}
 		}
 
@@ -2840,6 +2855,8 @@ Mods: {
 			// EtheralProj.DisplayName: Etheral Proj
 			// EtheralEXProj.DisplayName: Etheral E X Proj
 			// EtheralLaserEX.DisplayName: Etheral Laser E X
+			// MusharangProj.DisplayName: Musharang Proj
+			// BloodshroomArrow.DisplayName: Bloodshroom Arrow
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability

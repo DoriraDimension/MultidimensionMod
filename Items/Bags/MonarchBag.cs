@@ -1,7 +1,5 @@
-﻿using MultidimensionMod.Items.Weapons.Melee.Flails;
-using MultidimensionMod.Items.Weapons.Ranged.Others;
-using MultidimensionMod.Items.Weapons.Magic.Others;
-using MultidimensionMod.Items.Weapons.Summon;
+﻿using MultidimensionMod.Items.Weapons.Melee.Boomerangs;
+using MultidimensionMod.Items.Weapons.Ranged.Bows;
 using MultidimensionMod.Items.Vanity;
 using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Pets;
@@ -42,8 +40,8 @@ namespace MultidimensionMod.Items.Bags
         public override void ModifyItemLoot(ItemLoot Itemloot)
         {
             //Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<MonarchMask>(), 7));
-            //Itemloot.Add(ItemDropRule.OneFromOptions(1, ModContent.ItemType<VineCap>(), ModContent.ItemType<>()));
-            //Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<>()));
+            Itemloot.Add(ItemDropRule.OneFromOptions(1, ModContent.ItemType<Musharang>(), ModContent.ItemType<Mushbow>()));
+            //Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<expert thing>()));
             Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<Mushmatter>(), 1, 5, 10));
             //Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<SusSporeBag>(), 1));
         }
