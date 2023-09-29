@@ -64,7 +64,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			target.AddBuff(BuffID.CursedInferno, 240, false);
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
         {
 
         }

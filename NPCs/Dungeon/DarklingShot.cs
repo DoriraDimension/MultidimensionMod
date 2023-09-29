@@ -25,7 +25,7 @@ namespace MultidimensionMod.NPCs.Dungeon
 			Projectile.tileCollide = false;
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			SoundEngine.PlaySound(SoundID.Item8, Projectile.position);
 

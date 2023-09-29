@@ -46,7 +46,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			}
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			SoundEngine.PlaySound(SoundID.NPCDeath1, Projectile.position);
 			int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<DarkDust>(), 0f, 0f, 100, default(Color), 2f);

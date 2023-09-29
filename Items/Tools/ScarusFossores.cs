@@ -29,7 +29,8 @@ namespace MultidimensionMod.Items.Tools
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.tileBoost += 3;
-		}
+            Item.attackSpeedOnlyAffectsWeaponAnimation = true;
+        }
 
 		public override void AddRecipes()
 		{

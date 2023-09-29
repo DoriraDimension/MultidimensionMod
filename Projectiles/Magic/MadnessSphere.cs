@@ -66,7 +66,7 @@ namespace MultidimensionMod.Projectiles.Magic
 			return false;
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			int pieCut = 20;
 			for (int m = 0; m < pieCut; m++)

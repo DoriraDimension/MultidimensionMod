@@ -158,7 +158,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			NPC.knockBackResist = 0f;
 			TownNPCStayingHomeless = true;
 			NPC.dontTakeDamage = true;
-		}
+            NPC.noGravity = true;
+        }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {

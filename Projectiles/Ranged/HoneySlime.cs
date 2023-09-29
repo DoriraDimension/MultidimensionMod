@@ -57,7 +57,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Main.LocalPlayer.AddBuff(BuffID.Honey, 120);
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			SoundEngine.PlaySound(SoundID.NPCDeath1, Projectile.position);
 

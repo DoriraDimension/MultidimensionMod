@@ -29,7 +29,8 @@ namespace MultidimensionMod.Items.Tools
 			Item.rare = ItemRarityID.Orange;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
-		}
+            Item.attackSpeedOnlyAffectsWeaponAnimation = true;
+        }
 
 		public override void AddRecipes()
 		{

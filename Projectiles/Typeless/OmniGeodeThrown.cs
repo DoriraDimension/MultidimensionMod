@@ -44,7 +44,7 @@ namespace MultidimensionMod.Projectiles.Typeless
             Projectile.rotation += 0.4f * (float)Projectile.direction;
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             Player player = Main.LocalPlayer;
             SoundEngine.PlaySound(SoundID.Dig, Projectile.position);

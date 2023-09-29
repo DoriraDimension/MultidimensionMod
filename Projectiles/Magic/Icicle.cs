@@ -23,7 +23,7 @@ namespace MultidimensionMod.Projectiles.Magic
 			Projectile.tileCollide = true;
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			SoundEngine.PlaySound(SoundID.Item27, base.Projectile.position);
 

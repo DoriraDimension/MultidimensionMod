@@ -16,8 +16,6 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
             TileID.Sets.Grass[Type] = true;
             TileID.Sets.ChecksForMerge[Type] = true;
             TileID.Sets.NeedsGrassFraming[Type] = true;
-            TileID.Sets.NeedsGrassFramingDirt[Type] = TileID.Dirt;
-            TileID.Sets.CanBeDugByShovel[Type] = true;
             TileID.Sets.ResetsHalfBrickPlacementAttempt[Type] = true;
             TileID.Sets.DoesntPlaceWithTileReplacement[Type] = true;
             TileID.Sets.SpreadOverground[Type] = true;
@@ -45,7 +43,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
             if (!fail)
             {
                 fail = true;
-                Framing.GetTileSafely(i, j).TileType = TileID.Dirt;
+                Framing.GetTileSafely(i, j).TileType = (ushort)ModContent.TileType<ColdAsh>();
             }
         }
 

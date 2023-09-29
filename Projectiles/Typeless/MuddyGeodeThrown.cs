@@ -78,7 +78,7 @@ namespace MultidimensionMod.Projectiles.Typeless
             return false;
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			Player player = Main.LocalPlayer;
 			SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
