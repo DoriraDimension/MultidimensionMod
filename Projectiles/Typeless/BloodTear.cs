@@ -24,7 +24,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 			Projectile.tileCollide = true;
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Water_Crimson, 0f, 0f, 100, default(Color), 2f);
 			Main.dust[dustIndex].velocity *= 1.4f;

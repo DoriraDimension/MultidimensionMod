@@ -26,7 +26,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.tileCollide = true;
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			for (int i = 0; i < 1; i++)
 			{

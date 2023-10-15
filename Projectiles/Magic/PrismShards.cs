@@ -65,7 +65,7 @@ namespace MultidimensionMod.Projectiles.Magic
             }
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.BlueCrystalShard, 0f, 0f, 69, default(Color), 2f);
 			Main.dust[dustIndex].velocity *= 0.5f;

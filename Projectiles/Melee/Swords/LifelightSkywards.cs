@@ -26,7 +26,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			Projectile.penetrate = -1;
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			SoundEngine.PlaySound(SoundID.DD2_WitherBeastAuraPulse with { Volume = 2.0f }, Projectile.position);
 			for (int i = 0; i < 3; i++)

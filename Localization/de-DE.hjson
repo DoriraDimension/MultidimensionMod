@@ -2687,6 +2687,22 @@ Mods: {
 				// DisplayName: Monarch Trophy
 				// Tooltip: ""
 			}
+
+			TheAncientChaos: {
+				// DisplayName: The Ancient Chaos
+				/* Tooltip:
+					'''
+					The path has split,
+					one leads to a new beginning,
+					one leads to a bright but dark future.
+					Both will go their way until the end of time.
+					''' */
+			}
+
+			TheVulcano: {
+				// DisplayName: The Vulcano
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -2868,6 +2884,8 @@ Mods: {
 			// MusharangProj.DisplayName: Musharang Proj
 			// BloodshroomArrow.DisplayName: Bloodshroom Arrow
 			// YtriumShard.DisplayName: Yttrium Shard
+			// Vulcan.DisplayName: Vulcan
+			// VulcanExplosion.DisplayName: Vulcan Explosion
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -3033,6 +3051,7 @@ Mods: {
 			// TridentBannerPlaced.MapEntry: Magic Trident Banner
 			// MonarchTrophyPlaced.MapEntry: Monarch Trophy Placed
 			// SmileyTrophyPlaced.MapEntry: Smiley Trophy Placed
+			// TheAncientChaosPlaced.MapEntry: The Ancient Chaos
 		}
 
 		// DeathMessages.Socks: died from the pain of wearing wet socks.

@@ -33,7 +33,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			return new Color(255, 255, 255, 0) * (1f - (float)Projectile.alpha / 255f);
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			for (int i = 0; i < 1; i++)
 			{

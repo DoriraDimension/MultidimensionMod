@@ -30,7 +30,7 @@ namespace MultidimensionMod.Projectiles.Magic
 			Projectile.localNPCHitCooldown = 20;
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			Player player = Main.player[Projectile.owner];
 			if (ringTimer > 600)

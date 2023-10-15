@@ -31,7 +31,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.rotation += 0.2f * (float)Projectile.direction;
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 
 			if (Main.hardMode && Main.rand.NextFloat() < .0500f)

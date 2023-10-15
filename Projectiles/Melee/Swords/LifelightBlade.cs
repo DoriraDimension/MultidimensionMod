@@ -25,7 +25,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			Projectile.timeLeft = 500;
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			for (int i = 0; i < 3; i++)
 			{

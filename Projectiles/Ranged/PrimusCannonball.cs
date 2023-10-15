@@ -42,7 +42,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			}
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			SoundEngine.PlaySound(SoundID.NPCDeath14, Projectile.position);
 		}

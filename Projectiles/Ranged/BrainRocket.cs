@@ -26,7 +26,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.hide = false;
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			SoundEngine.PlaySound(SoundID.NPCDeath14, Projectile.position);
 			Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<Braindamage>(), (int)((double)((float)Projectile.damage) * 0.8), 0f, Main.myPlayer);

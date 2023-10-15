@@ -24,7 +24,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 			Projectile.penetrate = -1;
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 
 		}

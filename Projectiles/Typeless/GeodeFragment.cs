@@ -71,7 +71,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 			return false;
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Dirt, 0f, 0f, 69, default(Color), 2f);
 			Main.dust[dustIndex].velocity *= 0.5f;
