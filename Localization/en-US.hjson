@@ -2677,6 +2677,16 @@ Mods: {
 					When a Bloodshroom Arrow hits an enemy, you get healed by 5 HP
 					'''
 			}
+
+			YtriumStaff: {
+				DisplayName: Yttrium Staff
+				Tooltip: Shoots 3 Yttrium Shards that shatter into 2 Topaz Bolts each.
+			}
+
+			MonarchTrophy: {
+				DisplayName: Monarch Trophy
+				Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -2857,6 +2867,7 @@ Mods: {
 			EtheralLaserEX.DisplayName: Etheral Laser E X
 			MusharangProj.DisplayName: Musharang Proj
 			BloodshroomArrow.DisplayName: Bloodshroom Arrow
+			YtriumShard.DisplayName: Yttrium Shard
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -3020,6 +3031,8 @@ Mods: {
 			DimensiumPlaced.MapEntry: Dimensium
 			FrostburnSlimeBannerPlaced.MapEntry: Frostburn Slime Banner
 			TridentBannerPlaced.MapEntry: Magic Trident Banner
+			MonarchTrophyPlaced.MapEntry: Monarch Trophy Placed
+			SmileyTrophyPlaced.MapEntry: Smiley Trophy Placed
 		}
 
 		DeathMessages.Socks: died from the pain of wearing wet socks.
@@ -3110,5 +3123,7 @@ Mods: {
 
 			Cultist.Hi: Hi
 		}
+
+		DropConditions.HardmodeCondition: Drops in Hardmode.
 	}
 }

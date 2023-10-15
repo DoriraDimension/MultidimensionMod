@@ -13,6 +13,8 @@ using MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers;
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Vanity;
 using MultidimensionMod.Items.Weapons.Melee.Swords;
+using MultidimensionMod.Items.Weapons.Magic.Staffs;
+using MultidimensionMod.Common.ItemDropRules.DropConditions;
 using Terraria;
 using Terraria.ID;
 using Terraria.GameContent.ItemDropRules;
@@ -313,6 +315,11 @@ namespace MultidimensionMod.Common.Globals.NPCs
             if (NPC.type == NPCID.BloodZombie)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BloodyMary>(), 1));
+            }
+
+            if (NPC.type == NPCID.Crab)
+            {
+                npcLoot.Add(ItemDropRule.ByCondition(new HardmodeCondition(), ModContent.ItemType<YtriumStaff>(), 20));
             }
         }
     }
