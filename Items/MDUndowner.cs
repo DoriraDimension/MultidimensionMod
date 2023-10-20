@@ -26,6 +26,7 @@ namespace MultidimensionMod.Items
         public override bool? UseItem(Player player)
         {
             DownedSystem.downedSmiley = false;
+            DownedSystem.downedMonarch = false;
 
             if (Main.netMode == NetmodeID.Server)
                 NetMessage.SendData(MessageID.WorldData);

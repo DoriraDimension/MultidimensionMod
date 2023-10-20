@@ -5,6 +5,7 @@ using MultidimensionMod.Items.Bags;
 using MultidimensionMod.Items.Placeables.Relics;
 using MultidimensionMod.Items.Placeables.Trophies;
 using MultidimensionMod.Items.Pets;
+using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Items.Weapons.Melee.Boomerangs;
 using MultidimensionMod.Items.Weapons.Ranged.Bows;
 using System;
@@ -535,7 +536,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
         public override void BossLoot(ref string name, ref int potionType)
         {
             potionType = ItemID.LesserHealingPotion;
-            //DownedSystem.downedMonarch = true;
+            DownedSystem.downedMonarch = true;
             Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<MonarchRUNAWAY>(), 0, 0);
             if (!Main.expertMode && Main.rand.NextBool(7))
             {

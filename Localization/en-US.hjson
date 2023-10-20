@@ -2703,6 +2703,80 @@ Mods: {
 				DisplayName: The Vulcano
 				Tooltip: Turns gel into an explosive lob of magma
 			}
+
+			Blue: {
+				DisplayName: Coastal Tide Truffle
+				Tooltip:
+					'''
+					A unique blue mushroom that grows at the shores of the ocean, 
+					its roots allow it to grow in sand.
+					'''
+			}
+
+			Brown: {
+				DisplayName: Lampshade
+				Tooltip: A brown mushroom that got its name from its lamp-like shape.
+			}
+
+			Gray: {
+				DisplayName: Jellytail
+				Tooltip:
+					'''
+					A small gray mushroom that is shaped like a jellyfish with a single tendril, 
+					almost giving it the illusion of being a tail.
+					'''
+			}
+
+			Green: {
+				DisplayName: Dryadicar
+				Tooltip: A lime green mushroom, its minty taste has made it very famous amongst many.
+			}
+
+			Orange: {
+				DisplayName: Little Ember
+				Tooltip: A slightly spicy mushroom that is often used as seasoning in many recipes for a little extra pep.
+			}
+
+			Pink: {
+				DisplayName: Wild Lollipop
+				Tooltip: A pink mushroom that got its name from the almost perfect circular cap.
+			}
+
+			Purple: {
+				DisplayName: Mystikus
+				Tooltip:
+					'''
+					A purple mushroom species that emits a weirdly sweet smell, 
+					breathing in too much of it can result in hallucinations.
+					'''
+			}
+
+			Rainbow: {
+				DisplayName: Prismatic Lightcap
+				Tooltip:
+					'''
+					Extremely rare mushroom species that only the most dedicated mushroom hunters can find. 
+					It has great adaptability and can be used for almost anything.
+					'''
+			}
+
+			Red: {
+				DisplayName: Devilscap
+				Tooltip:
+					'''
+					A red hot spicy mushroom with horn-like protrusions on its cap,
+					the stem looks like a devil’s tail if uprooted.
+					'''
+			}
+
+			Yellow: {
+				DisplayName: Moldy Giantslayer
+				Tooltip:
+					'''
+					A sickly yellow mushroom who’s smell can knock out the largest predator. 
+					Besides that, it tastes very good.
+					'''
+			}
 		}
 
 		SetBonuses: {
@@ -2920,7 +2994,7 @@ Mods: {
 					Content: ok
 					NoHome: Uh... you don't happen to possess a room for me where I could stay?
 					FarFromHome: How did I get here?
-					LoveSpace: Its amazing to have so much room, makes it easier to practice with my sword!
+					LoveSpace: It's amazing to have so much room, makes it easier to practice with my sword!
 					DislikeCrowded: You know, I really like people around, but not this many.
 					HateCrowded: I hate big groups I hate big groups I hate big groups I hate big groups
 					LoveBiome: The nice warm sun, the soothing waves, it really is lovely here.
@@ -2963,6 +3037,29 @@ Mods: {
 			VertrariusSpirit.DisplayName: Vertrarius von Baaruun
 			MushroomMonarch.DisplayName: Mushroom Monarch
 			RedMushling.DisplayName: Red Mushling
+
+			MushroomHeir: {
+				DisplayName: Mushroom Heir
+
+				TownNPCMood: {
+					Content: I feel pretty funky right now.
+					NoHome: Bro, do you have a couch I can chill on?
+					FarFromHome: Uh, the trip got me pretty far away.
+					LoveSpace: Less people around means less people asking about weird substances.
+					DislikeCrowded: I have noticed people staring at me, it's bothering me. I'd like less people around
+					HateCrowded: So many people keep asking me about my "stuff", I want to go elsewhere.
+					LoveBiome: Maybe if I stay here, I can see my uncle again!
+					LikeBiome: This magical place is pretty cool, maybe I find some mystical mushrooms here.
+					DislikeBiome: This place is boring as heck.
+					HateBiome: I don't want to be here, get me out of here. This just reminds me too much of my old man.
+					LoveNPC: Oh {NPCName} is so awesome, she throws the most coolio parties ever. I mean the secret VIP ones, not this boring Happy Birthday crap.
+					LikeNPC: It's cool to have another mushroom around, {NPCName} is really chill too.
+					DislikeNPC: I sometimes hear {NPCName} breathing behind my door at night... he is creepy...
+					HateNPC: DUDE! Why is dad here?! This place SUCKS!
+					LikeNPC_Princess: For some werid reason my brain wants to like {NPCName}, but I don't want to.
+					Princess_LovesNPC: "{NPCName} is such a funny little goober, I want to just squeeze him!"
+				}
+			}
 		}
 
 		Dialogue: {
@@ -2991,6 +3088,30 @@ Mods: {
 				DoriraDialogue: Dorira, he traded powerful objects for… chocolate...
 				BloodMoonDialogue: ...
 				SlimeRainDialogue: Yum yum, gelatine heaven!
+			}
+
+			Dappercap: {
+				FatherDialogue: DAD, GET THE HELL AWAY FROM HERE!
+				UncleDialogue: OMG uncle Umos, hi!
+				ClothTruffleDialogue: So, sometimes I see [name of clothier] sneak into [name of truffle]’s house at night. You think there is something going on between them?
+				AldinDialogue: I once met this awesome mushroom enthusiast, he was pretty chill and cool. He told me he wanted to find 7 mushrooms to do whatever, probably bend space-time or something. Anyways, he disappeared without a trace and I have not seen him since then.
+				GenericDialogue1: My uncle is so cool, unlike my boring as hell dad. He EVEN GLOWS, can you believe that??
+				GenericDialogue2: Hey between you and me, I'm pretty sure my uncle is a hallucinogenic!!
+				GenericDialogue3: I had this friend of mine named Malcolm, I got several awesome mushrooms from him, but then he suddenly stopped, saying something like "I have to be a better person". Bleh… weirdo.
+				GenericDialogue4: Dem mushromz hit hart todai
+				GenericDialogue5: So I talked to this guy once who really seemed to like mushrooms, it was a nice conversation until he mentioned he preferred my dad over my uncle. I was like “DUDE HOW?” and he kept going with how awesome he is. I told him to shroom himself and left him alone with a moldy one, hope the smell unrots his brain.
+				GenericDialogue6: Sometimes my dad was so annoying that I told him to finally go get some milk.
+				GenericDialogue7: I heard there is a kingdom full of mushroom people, but it’s not ruled by a mushroom, do you think it’s real?
+				#Below is Alch Mushroom dialogue
+				TradeSuccess1: Yo awesome, take these for your work.
+				TradeSuccess2: uhhhhhhhhhhh
+				TradeFail1: Idk if you understand the concept of trading but you do indeed need to give me something of interest, this isn’t god damn donation central.
+				TradeFail2: Hello? You understand me? You need to give thingie so I give thingie. So GET your ass out unless you need something important.
+				MadnessTrade: HOLY COW! I have no idea where you found this but these mushrooms are EXTREMELY rare. There is only one species in my possession that I could give you for such a beauty.
+				DyeItemTrade: Oh thanks, how did you know I was hungry?
+				#Below is first time talk dialogue
+				FirstTalk1: I saw you gave my dad a good thrashing, so I guess you’re cool.
+				FirstTalk2: Yes bro, you don’t know how much I hate that guy, hope he went to cry in a corner. I’m Deadly Dappercap btw, the deadliest fungus in town, I love to get around and gather some really funky shrooms. Let’s say you bring me some valuable things and I will give you some of them. But if anyone asks, they aren’t from me, understood?
 			}
 		}
 
@@ -3092,6 +3213,7 @@ Mods: {
 			PetDrake: Ice Drakes were normally very docile creatures, often enough even interacting with humans by themself. Though the war against the Vikings has left them scarred, now barely trusting anyone. Who knows, maybe some day, we can live in harmony again.
 			Dorira: The creator and administrator of the world's frame we live in, he has come to this world in order to fix what has been broken. Dorira might be a creator god but in reality he isn't powerful at all and relies more on his main system to control things.
 			Taraha: A dimensional traveler who loves to trade items. "Find something here, trade somewhere else", that is her slogan.
+			Dappercap: The Mushroom Monarch's son, really nobody knows how in the world this works but here he is. He is up to mischief, hates everything he doesn't see as "cool" and even deals with illegal mushrooms. Maybe if you act cool enough, he will share them with you too.
 			Adel: Originating from a neighboring kingdom, this hallowed warrior wishes to avenge his beloved lord. He wields the Lightstream Mythos with which he has slain many foes. He was the first to declare war against Baaruun, against his new lord's will.
 			Vertrarius: A grumpy demon who wields the Evil Ember, Vulkanus. He is lazy and does not care about anyone but his lord, making him the most unreliable person in existence. When Gunresat declared war against Baaruun, he fought as their leader out of boredom.
 			Smiley: The leader of the Darklings that hide inside the dungeon. His powers are unrivaled and respected amongst his followers and he is equally loved as well. In response to the incredible anger against his origins, his body turned pale to rebel against his darkness.

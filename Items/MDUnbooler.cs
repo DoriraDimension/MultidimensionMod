@@ -32,6 +32,7 @@ namespace MultidimensionMod.Items
             DownedSystem.seenAether = false;
             DownedSystem.metAdel = false;
             DownedSystem.metVertrarius = false;
+            DownedSystem.metDapper = false;
             DownedSystem.listenedToNonsense = false;
             DownedSystem.seenMushroom = false;
 

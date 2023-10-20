@@ -1,6 +1,7 @@
 ﻿using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Tiles;
 using MultidimensionMod.Items.Potions;
+using MultidimensionMod.Items.Mushrooms;
 using Terraria.ModLoader;
 using Terraria;
 using Terraria.Localization;
@@ -487,10 +488,624 @@ namespace MultidimensionMod.Common.Globals.Items
 			prisma.AddIngredient(ItemID.FragmentStardust, 20);
 			prisma.AddTile(TileID.CrystalBall);
 			prisma.Register();
-			#endregion
+            #endregion
 
+            #region Alchemical Mushroom potion recipes
+            Recipe ammo = Recipe.Create(ItemID.AmmoReservationPotion, 3);
+			ammo.AddIngredient(ItemID.BottledWater);
+            ammo.AddIngredient(ModContent.ItemType<Gray>());
+            ammo.AddIngredient(ItemID.Moonglow);
+            ammo.AddTile(TileID.Bottles);
+            ammo.Register();
 
-		}
+            Recipe archery = Recipe.Create(ItemID.ArcheryPotion, 3);
+            archery.AddIngredient(ItemID.BottledWater);
+            archery.AddIngredient(ModContent.ItemType<Orange>());
+            archery.AddIngredient(ItemID.Daybloom);
+            archery.AddTile(TileID.Bottles);
+            archery.Register();
+
+            Recipe battle = Recipe.Create(ItemID.BattlePotion, 3);
+            battle.AddIngredient(ItemID.BottledWater);
+            battle.AddIngredient(ModContent.ItemType<Purple>());
+            battle.AddIngredient(ItemID.Deathweed);
+            battle.AddTile(TileID.Bottles);
+            battle.Register();
+
+            Recipe biome = Recipe.Create(ItemID.BiomeSightPotion, 3);
+            biome.AddIngredient(ItemID.BottledWater);
+            biome.AddIngredient(ModContent.ItemType<Pink>());
+            biome.AddIngredient(ItemID.GrassSeeds, 15);
+            biome.AddTile(TileID.Bottles);
+            biome.Register();
+
+            Recipe builder = Recipe.Create(ItemID.BuilderPotion, 3);
+            builder.AddIngredient(ItemID.BottledWater);
+            builder.AddIngredient(ModContent.ItemType<Brown>());
+            builder.AddIngredient(ItemID.Blinkroot);
+            builder.AddTile(TileID.Bottles);
+            builder.Register();
+
+            Recipe calming = Recipe.Create(ItemID.CalmingPotion, 3);
+            calming.AddIngredient(ItemID.BottledWater);
+            calming.AddIngredient(ModContent.ItemType<Blue>());
+            calming.AddIngredient(ItemID.Daybloom);
+            calming.AddTile(TileID.Bottles);
+            calming.Register();
+
+            Recipe crate = Recipe.Create(ItemID.CratePotion, 3);
+            crate.AddIngredient(ItemID.BottledWater);
+            crate.AddIngredient(ModContent.ItemType<Brown>());
+            crate.AddIngredient(ItemID.Waterleaf);
+            crate.AddTile(TileID.Bottles);
+            crate.Register();
+
+            Recipe danger = Recipe.Create(ItemID.TrapsightPotion, 3); //Dangersense
+            danger.AddIngredient(ItemID.BottledWater);
+            danger.AddIngredient(ModContent.ItemType<Orange>());
+            danger.AddIngredient(ItemID.Shiverthorn);
+            danger.AddTile(TileID.Bottles);
+            danger.Register();
+
+            Recipe endurance = Recipe.Create(ItemID.EndurancePotion, 3);
+            endurance.AddIngredient(ItemID.BottledWater);
+            endurance.AddIngredient(ModContent.ItemType<Gray>());
+            endurance.AddIngredient(ItemID.Blinkroot);
+            endurance.AddTile(TileID.Bottles);
+            endurance.Register();
+
+            Recipe featherfall = Recipe.Create(ItemID.FeatherfallPotion, 3);
+            featherfall.AddIngredient(ItemID.BottledWater);
+            featherfall.AddIngredient(ModContent.ItemType<Blue>());
+            featherfall.AddIngredient(ItemID.Feather);
+            featherfall.AddTile(TileID.Bottles);
+            featherfall.Register();
+
+            Recipe fishing = Recipe.Create(ItemID.FishingPotion, 3);
+            fishing.AddIngredient(ItemID.BottledWater);
+            fishing.AddIngredient(ModContent.ItemType<Green>());
+            fishing.AddIngredient(ItemID.Waterleaf);
+            fishing.AddTile(TileID.Bottles);
+            fishing.Register();
+
+            Recipe flipper = Recipe.Create(ItemID.FlipperPotion, 3);
+            flipper.AddIngredient(ItemID.BottledWater);
+            flipper.AddIngredient(ModContent.ItemType<Blue>());
+            flipper.AddIngredient(ItemID.Waterleaf);
+            flipper.AddTile(TileID.Bottles);
+            flipper.Register();
+
+            Recipe gills = Recipe.Create(ItemID.GillsPotion, 3);
+            gills.AddIngredient(ItemID.BottledWater);
+            gills.AddIngredient(ModContent.ItemType<Blue>());
+            gills.AddIngredient(ItemID.Coral);
+            gills.AddTile(TileID.Bottles);
+            gills.Register();
+
+            Recipe gravity = Recipe.Create(ItemID.GravitationPotion, 3);
+            gravity.AddIngredient(ItemID.BottledWater);
+            gravity.AddIngredient(ModContent.ItemType<Purple>());
+            gravity.AddIngredient(ItemID.Feather);
+            gravity.AddTile(TileID.Bottles);
+            gravity.Register();
+
+            Recipe bigLuck = Recipe.Create(ItemID.LuckPotionGreater, 3);
+            bigLuck.AddIngredient(ItemID.BottledWater);
+            bigLuck.AddIngredient(ModContent.ItemType<Pink>());
+            bigLuck.AddIngredient(ItemID.LadyBug);
+            bigLuck.AddTile(TileID.Bottles);
+            bigLuck.Register();
+
+            Recipe midLuck = Recipe.Create(ItemID.LuckPotion, 3);
+            midLuck.AddIngredient(ItemID.BottledWater);
+            midLuck.AddIngredient(ModContent.ItemType<Gray>());
+            midLuck.AddIngredient(ItemID.LadyBug);
+            midLuck.AddTile(TileID.Bottles);
+            midLuck.Register();
+
+            Recipe smallLuck = Recipe.Create(ItemID.LuckPotionLesser, 3);
+            smallLuck.AddIngredient(ItemID.BottledWater);
+            smallLuck.AddIngredient(ModContent.ItemType<Gray>());
+            smallLuck.AddIngredient(ItemID.Waterleaf);
+            smallLuck.AddTile(TileID.Bottles);
+            smallLuck.Register();
+
+            Recipe heart = Recipe.Create(ItemID.HeartreachPotion, 3);
+            heart.AddIngredient(ItemID.BottledWater);
+            heart.AddIngredient(ModContent.ItemType<Pink>());
+            heart.AddIngredient(ItemID.Daybloom);
+            heart.AddTile(TileID.Bottles);
+            heart.Register();
+
+            Recipe hunter = Recipe.Create(ItemID.HunterPotion, 3);
+            hunter.AddIngredient(ItemID.BottledWater);
+            hunter.AddIngredient(ModContent.ItemType<Orange>());
+            hunter.AddIngredient(ItemID.Daybloom);
+            hunter.AddTile(TileID.Bottles);
+            hunter.Register();
+
+            Recipe inferno = Recipe.Create(ItemID.InfernoPotion, 3);
+            inferno.AddIngredient(ItemID.BottledWater);
+            inferno.AddIngredient(ModContent.ItemType<Red>());
+            inferno.AddIngredient(ItemID.Fireblossom);
+            inferno.AddTile(TileID.Bottles);
+            inferno.Register();
+
+            Recipe gone = Recipe.Create(ItemID.InvisibilityPotion, 3);
+            gone.AddIngredient(ItemID.BottledWater);
+            gone.AddIngredient(ModContent.ItemType<Blue>());
+            gone.AddIngredient(ItemID.Moonglow);
+            gone.AddTile(TileID.Bottles);
+            gone.Register();
+
+            Recipe thereIsBugsUnderYourIronSkinTakeItOff = Recipe.Create(ItemID.IronskinPotion, 3);
+            thereIsBugsUnderYourIronSkinTakeItOff.AddIngredient(ItemID.BottledWater);
+            thereIsBugsUnderYourIronSkinTakeItOff.AddIngredient(ModContent.ItemType<Yellow>());
+            thereIsBugsUnderYourIronSkinTakeItOff.AddIngredient(ItemID.IronOre, 3);
+            thereIsBugsUnderYourIronSkinTakeItOff.AddTile(TileID.Bottles);
+            thereIsBugsUnderYourIronSkinTakeItOff.Register();
+
+            Recipe life = Recipe.Create(ItemID.LifeforcePotion, 3);
+            life.AddIngredient(ItemID.BottledWater);
+            life.AddIngredient(ModContent.ItemType<Red>());
+            life.AddIngredient(ItemID.Prismite);
+            life.AddTile(TileID.Bottles);
+            life.Register();
+
+            Recipe Harry = Recipe.Create(ItemID.MagicPowerPotion, 3);
+            Harry.AddIngredient(ItemID.BottledWater);
+            Harry.AddIngredient(ModContent.ItemType<Purple>());
+            Harry.AddIngredient(ItemID.FallenStar);
+            Harry.AddTile(TileID.Bottles);
+            Harry.Register();
+
+            Recipe manaRegen = Recipe.Create(ItemID.ManaRegenerationPotion, 3);
+            manaRegen.AddIngredient(ItemID.BottledWater);
+            manaRegen.AddIngredient(ModContent.ItemType<Pink>());
+            manaRegen.AddIngredient(ItemID.Moonglow);
+            manaRegen.AddTile(TileID.Bottles);
+            manaRegen.Register();
+
+            Recipe aMINE = Recipe.Create(ItemID.MiningPotion, 3);
+            aMINE.AddIngredient(ItemID.BottledWater);
+            aMINE.AddIngredient(ModContent.ItemType<Gray>());
+            aMINE.AddIngredient(ItemID.Blinkroot);
+            aMINE.AddTile(TileID.Bottles);
+            aMINE.Register();
+
+            Recipe owl = Recipe.Create(ItemID.NightOwlPotion, 3);
+            owl.AddIngredient(ItemID.BottledWater);
+            owl.AddIngredient(ModContent.ItemType<Green>());
+            owl.AddIngredient(ItemID.Daybloom);
+            owl.AddTile(TileID.Bottles);
+            owl.Register();
+
+            Recipe thereIsBugsUnderYourObsidianSkinTakeItOff = Recipe.Create(ItemID.ObsidianSkinPotion, 3);
+            thereIsBugsUnderYourObsidianSkinTakeItOff.AddIngredient(ItemID.BottledWater);
+            thereIsBugsUnderYourObsidianSkinTakeItOff.AddIngredient(ModContent.ItemType<Purple>());
+			thereIsBugsUnderYourObsidianSkinTakeItOff.AddIngredient(ItemID.Obsidian, 2);
+            thereIsBugsUnderYourObsidianSkinTakeItOff.AddTile(TileID.Bottles);
+            thereIsBugsUnderYourObsidianSkinTakeItOff.Register();
+
+            Recipe rage = Recipe.Create(ItemID.RagePotion, 3);
+            rage.AddIngredient(ItemID.BottledWater);
+            rage.AddIngredient(ModContent.ItemType<Red>());
+            rage.AddIngredient(ItemID.Deathweed);
+            rage.AddTile(TileID.Bottles);
+            rage.Register();
+
+            Recipe regen = Recipe.Create(ItemID.RegenerationPotion, 3);
+            regen.AddIngredient(ItemID.BottledWater);
+            regen.AddIngredient(ModContent.ItemType<Pink>());
+            regen.AddIngredient(ItemID.Mushroom, 3);
+            regen.AddTile(TileID.Bottles);
+            regen.Register();
+
+            Recipe shine = Recipe.Create(ItemID.ShinePotion, 3);
+            shine.AddIngredient(ItemID.BottledWater);
+            shine.AddIngredient(ModContent.ItemType<Yellow>());
+            shine.AddIngredient(ItemID.GlowingMushroom);
+            shine.AddTile(TileID.Bottles);
+            shine.Register();
+
+            Recipe sonar = Recipe.Create(ItemID.SonarPotion, 3);
+            sonar.AddIngredient(ItemID.BottledWater);
+            sonar.AddIngredient(ModContent.ItemType<Green>());
+            sonar.AddIngredient(ItemID.Coral);
+            sonar.AddTile(TileID.Bottles);
+            sonar.Register();
+
+            Recipe spelunker = Recipe.Create(ItemID.SpelunkerPotion, 3);
+            spelunker.AddIngredient(ItemID.BottledWater);
+            spelunker.AddIngredient(ModContent.ItemType<Yellow>());
+            spelunker.AddIngredient(ItemID.GoldOre, 3);
+            spelunker.AddTile(TileID.Bottles);
+            spelunker.Register();
+
+            Recipe spelunker2 = Recipe.Create(ItemID.SpelunkerPotion, 3);
+            spelunker2.AddIngredient(ItemID.BottledWater);
+            spelunker2.AddIngredient(ModContent.ItemType<Yellow>());
+            spelunker2.AddIngredient(ItemID.PlatinumOre, 3);
+            spelunker2.AddTile(TileID.Bottles);
+            spelunker2.Register();
+
+            Recipe ew = Recipe.Create(ItemID.StinkPotion, 3);
+            ew.AddIngredient(ItemID.BottledWater);
+            ew.AddIngredient(ModContent.ItemType<Green>());
+            ew.AddIngredient(ItemID.Stinkfish);
+            ew.AddTile(TileID.Bottles);
+            ew.Register();
+
+            Recipe summon = Recipe.Create(ItemID.SummoningPotion, 3);
+            summon.AddIngredient(ItemID.BottledWater);
+            summon.AddIngredient(ModContent.ItemType<Green>());
+            summon.AddIngredient(ItemID.Moonglow);
+            summon.AddTile(TileID.Bottles);
+            summon.Register();
+
+            Recipe flash = Recipe.Create(ItemID.SwiftnessPotion, 3);
+            flash.AddIngredient(ItemID.BottledWater);
+            flash.AddIngredient(ModContent.ItemType<Green>());
+            flash.AddIngredient(ItemID.Blinkroot);
+            flash.AddTile(TileID.Bottles);
+            flash.Register();
+
+            Recipe stingy = Recipe.Create(ItemID.ThornsPotion, 3);
+            stingy.AddIngredient(ItemID.BottledWater);
+            stingy.AddIngredient(ModContent.ItemType<Green>());
+            stingy.AddIngredient(ItemID.Cactus, 3);
+            stingy.AddTile(TileID.Bottles);
+            stingy.Register();
+
+            Recipe titan = Recipe.Create(ItemID.TitanPotion, 3);
+            titan.AddIngredient(ItemID.BottledWater);
+            titan.AddIngredient(ModContent.ItemType<Green>());
+            titan.AddIngredient(ItemID.Bone, 3);
+            titan.AddTile(TileID.Bottles);
+            titan.Register();
+
+            Recipe warm = Recipe.Create(ItemID.WarmthPotion, 3);
+            warm.AddIngredient(ItemID.BottledWater);
+            warm.AddIngredient(ModContent.ItemType<Orange>());
+            warm.AddIngredient(ItemID.FrostMinnow);
+            warm.AddTile(TileID.Bottles);
+            warm.Register();
+
+            Recipe jesus = Recipe.Create(ItemID.WaterWalkingPotion, 3);
+            jesus.AddIngredient(ItemID.BottledWater);
+            jesus.AddIngredient(ModContent.ItemType<Blue>());
+            jesus.AddIngredient(ItemID.Waterleaf);
+            jesus.AddTile(TileID.Bottles);
+            jesus.Register();
+
+            Recipe wrath = Recipe.Create(ItemID.WrathPotion, 3);
+            wrath.AddIngredient(ItemID.BottledWater);
+            wrath.AddIngredient(ModContent.ItemType<Red>());
+            wrath.AddIngredient(ItemID.Deathweed);
+            wrath.AddTile(TileID.Bottles);
+            wrath.Register();
+
+            Recipe ImComingHome = Recipe.Create(ItemID.RecallPotion, 6);
+            ImComingHome.AddIngredient(ItemID.BottledWater);
+            ImComingHome.AddIngredient(ModContent.ItemType<Blue>());
+            ImComingHome.AddIngredient(ItemID.SpecularFish);
+            ImComingHome.AddTile(TileID.Bottles);
+            ImComingHome.Register();
+
+            Recipe ImComingHomeAndLeaveAgain = Recipe.Create(ItemID.PotionOfReturn, 3);
+            ImComingHomeAndLeaveAgain.AddIngredient(ItemID.BottledWater);
+            ImComingHomeAndLeaveAgain.AddIngredient(ModContent.ItemType<Purple>());
+            ImComingHomeAndLeaveAgain.AddIngredient(ItemID.Obsidifish);
+            ImComingHomeAndLeaveAgain.AddTile(TileID.Bottles);
+            ImComingHomeAndLeaveAgain.Register();
+
+            Recipe teleport = Recipe.Create(ItemID.TeleportationPotion, 3);
+            teleport.AddIngredient(ItemID.BottledWater);
+            teleport.AddIngredient(ModContent.ItemType<Purple>());
+            teleport.AddIngredient(ItemID.ChaosFish);
+            teleport.AddTile(TileID.Bottles);
+            teleport.Register();
+
+            Recipe wormBossHole = Recipe.Create(ItemID.WormholePotion, 6);
+            wormBossHole.AddIngredient(ItemID.BottledWater);
+            wormBossHole.AddIngredient(ModContent.ItemType<Blue>());
+            wormBossHole.AddIngredient(ItemID.SpecularFish);
+            wormBossHole.AddTile(TileID.Bottles);
+            wormBossHole.Register();
+
+            Recipe warrior = Recipe.Create(ModContent.ItemType<WarriorsThermos>(), 3);
+            warrior.AddIngredient(ItemID.BottledWater);
+            warrior.AddIngredient(ModContent.ItemType<Red>());
+            warrior.AddIngredient(ItemID.Fireblossom);
+            warrior.AddTile(TileID.Bottles);
+            warrior.Register();
+            #endregion
+
+            #region Alchemical Rainbow Mushroom recipes
+            Recipe ammoR = Recipe.Create(ItemID.AmmoReservationPotion, 3);
+            ammoR.AddIngredient(ItemID.BottledWater);
+            ammoR.AddIngredient(ModContent.ItemType<Rainbow>());
+            ammoR.AddTile(TileID.Bottles);
+            ammoR.Register();
+
+            Recipe archeryR = Recipe.Create(ItemID.ArcheryPotion, 3);
+            archeryR.AddIngredient(ItemID.BottledWater);
+            archeryR.AddIngredient(ModContent.ItemType<Rainbow>());
+            archeryR.AddTile(TileID.Bottles);
+            archeryR.Register();
+
+            Recipe battleR = Recipe.Create(ItemID.BattlePotion, 3);
+            battleR.AddIngredient(ItemID.BottledWater);
+            battleR.AddIngredient(ModContent.ItemType<Rainbow>());
+            battleR.AddTile(TileID.Bottles);
+            battleR.Register();
+
+            Recipe biomeR = Recipe.Create(ItemID.BiomeSightPotion, 3);
+            biomeR.AddIngredient(ItemID.BottledWater);
+            biomeR.AddIngredient(ModContent.ItemType<Rainbow>());
+            biomeR.AddTile(TileID.Bottles);
+            biomeR.Register();
+
+            Recipe builderR = Recipe.Create(ItemID.BuilderPotion, 3);
+            builderR.AddIngredient(ItemID.BottledWater);
+            builderR.AddIngredient(ModContent.ItemType<Rainbow>());
+            builderR.AddTile(TileID.Bottles);
+            builderR.Register();
+
+            Recipe calmingR = Recipe.Create(ItemID.CalmingPotion, 3);
+            calmingR.AddIngredient(ItemID.BottledWater);
+            calmingR.AddIngredient(ModContent.ItemType<Rainbow>());
+            calmingR.AddTile(TileID.Bottles);
+            calmingR.Register();
+
+            Recipe crateR = Recipe.Create(ItemID.CratePotion, 3);
+            crateR.AddIngredient(ItemID.BottledWater);
+            crateR.AddIngredient(ModContent.ItemType<Rainbow>());
+            crateR.AddTile(TileID.Bottles);
+            crateR.Register();
+
+            Recipe dangerR = Recipe.Create(ItemID.TrapsightPotion, 3); //Dangersense
+            dangerR.AddIngredient(ItemID.BottledWater);
+            dangerR.AddIngredient(ModContent.ItemType<Rainbow>());
+            dangerR.AddTile(TileID.Bottles);
+            dangerR.Register();
+
+            Recipe enduranceR = Recipe.Create(ItemID.EndurancePotion, 3);
+            enduranceR.AddIngredient(ItemID.BottledWater);
+            enduranceR.AddIngredient(ModContent.ItemType<Rainbow>());
+            enduranceR.AddTile(TileID.Bottles);
+            enduranceR.Register();
+
+            Recipe featherfallR = Recipe.Create(ItemID.FeatherfallPotion, 3);
+            featherfallR.AddIngredient(ItemID.BottledWater);
+            featherfallR.AddIngredient(ModContent.ItemType<Rainbow>());
+            featherfallR.AddTile(TileID.Bottles);
+            featherfallR.Register();
+
+            Recipe fishingR = Recipe.Create(ItemID.FishingPotion, 3);
+            fishingR.AddIngredient(ItemID.BottledWater);
+            fishingR.AddIngredient(ModContent.ItemType<Rainbow>());
+            fishingR.AddTile(TileID.Bottles);
+            fishingR.Register();
+
+            Recipe flipperR = Recipe.Create(ItemID.FlipperPotion, 3);
+            flipperR.AddIngredient(ItemID.BottledWater);
+            flipperR.AddIngredient(ModContent.ItemType<Rainbow>());
+            flipperR.AddTile(TileID.Bottles);
+            flipperR.Register();
+
+            Recipe gillsR = Recipe.Create(ItemID.GillsPotion, 3);
+            gillsR.AddIngredient(ItemID.BottledWater);
+            gillsR.AddIngredient(ModContent.ItemType<Rainbow>());
+            gillsR.AddTile(TileID.Bottles);
+            gillsR.Register();
+
+            Recipe gravityR = Recipe.Create(ItemID.GravitationPotion, 3);
+            gravityR.AddIngredient(ItemID.BottledWater);
+            gravityR.AddIngredient(ModContent.ItemType<Rainbow>());
+            gravityR.AddTile(TileID.Bottles);
+            gravityR.Register();
+
+            Recipe bigLuckR = Recipe.Create(ItemID.LuckPotionGreater, 3);
+            bigLuckR.AddIngredient(ItemID.BottledWater);
+            bigLuckR.AddIngredient(ModContent.ItemType<Rainbow>());
+            bigLuckR.AddTile(TileID.Bottles);
+            bigLuckR.Register();
+
+            Recipe midLuckR = Recipe.Create(ItemID.LuckPotion, 3);
+            midLuckR.AddIngredient(ItemID.BottledWater);
+            midLuckR.AddIngredient(ModContent.ItemType<Rainbow>());
+            midLuckR.AddTile(TileID.Bottles);
+            midLuckR.Register();
+
+            Recipe smallLuckR = Recipe.Create(ItemID.LuckPotionLesser, 3);
+            smallLuckR.AddIngredient(ItemID.BottledWater);
+            smallLuckR.AddIngredient(ModContent.ItemType<Rainbow>());
+            smallLuckR.AddTile(TileID.Bottles);
+            smallLuckR.Register();
+
+            Recipe heartR = Recipe.Create(ItemID.HeartreachPotion, 3);
+            heartR.AddIngredient(ItemID.BottledWater);
+            heartR.AddIngredient(ModContent.ItemType<Rainbow>());
+            heartR.AddTile(TileID.Bottles);
+            heartR.Register();
+
+            Recipe hunterR = Recipe.Create(ItemID.HunterPotion, 3);
+            hunterR.AddIngredient(ItemID.BottledWater);
+            hunterR.AddIngredient(ModContent.ItemType<Rainbow>());
+            hunterR.AddTile(TileID.Bottles);
+            hunterR.Register();
+
+            Recipe infernoR = Recipe.Create(ItemID.InfernoPotion, 3);
+            infernoR.AddIngredient(ItemID.BottledWater);
+            infernoR.AddIngredient(ModContent.ItemType<Rainbow>());
+            infernoR.AddTile(TileID.Bottles);
+            infernoR.Register();
+
+            Recipe goneR = Recipe.Create(ItemID.InvisibilityPotion, 3);
+            goneR.AddIngredient(ItemID.BottledWater);
+            goneR.AddIngredient(ModContent.ItemType<Rainbow>());
+            goneR.AddTile(TileID.Bottles);
+            goneR.Register();
+
+            Recipe thereIsBugsUnderYourIronSkinTakeItOffR = Recipe.Create(ItemID.IronskinPotion, 3);
+            thereIsBugsUnderYourIronSkinTakeItOffR.AddIngredient(ItemID.BottledWater);
+            thereIsBugsUnderYourIronSkinTakeItOffR.AddIngredient(ModContent.ItemType<Rainbow>());
+            thereIsBugsUnderYourIronSkinTakeItOffR.AddTile(TileID.Bottles);
+            thereIsBugsUnderYourIronSkinTakeItOffR.Register();
+
+            Recipe lifeR = Recipe.Create(ItemID.LifeforcePotion, 3);
+            lifeR.AddIngredient(ItemID.BottledWater);
+            lifeR.AddIngredient(ModContent.ItemType<Rainbow>());
+            lifeR.AddTile(TileID.Bottles);
+            lifeR.Register();
+
+            Recipe HarryR = Recipe.Create(ItemID.MagicPowerPotion, 3);
+            HarryR.AddIngredient(ItemID.BottledWater);
+            HarryR.AddIngredient(ModContent.ItemType<Rainbow>());
+            HarryR.AddTile(TileID.Bottles);
+            HarryR.Register();
+
+            Recipe manaRegenR = Recipe.Create(ItemID.ManaRegenerationPotion, 3);
+            manaRegenR.AddIngredient(ItemID.BottledWater);
+            manaRegenR.AddIngredient(ModContent.ItemType<Rainbow>());
+            manaRegenR.AddTile(TileID.Bottles);
+            manaRegenR.Register();
+
+            Recipe aMINER = Recipe.Create(ItemID.MiningPotion, 3);
+            aMINER.AddIngredient(ItemID.BottledWater);
+            aMINER.AddIngredient(ModContent.ItemType<Rainbow>());
+            aMINER.AddTile(TileID.Bottles);
+            aMINER.Register();
+
+            Recipe owlR = Recipe.Create(ItemID.NightOwlPotion, 3);
+            owlR.AddIngredient(ItemID.BottledWater);
+            owlR.AddIngredient(ModContent.ItemType<Rainbow>());
+            owlR.AddTile(TileID.Bottles);
+            owlR.Register();
+
+            Recipe thereIsBugsUnderYourObsidianSkinTakeItOffR = Recipe.Create(ItemID.ObsidianSkinPotion, 3);
+            thereIsBugsUnderYourObsidianSkinTakeItOffR.AddIngredient(ItemID.BottledWater);
+            thereIsBugsUnderYourObsidianSkinTakeItOffR.AddIngredient(ModContent.ItemType<Rainbow>());
+            thereIsBugsUnderYourObsidianSkinTakeItOffR.AddTile(TileID.Bottles);
+            thereIsBugsUnderYourObsidianSkinTakeItOffR.Register();
+
+            Recipe rageR = Recipe.Create(ItemID.RagePotion, 3);
+            rageR.AddIngredient(ItemID.BottledWater);
+            rageR.AddIngredient(ModContent.ItemType<Rainbow>());
+            rageR.AddTile(TileID.Bottles);
+            rageR.Register();
+
+            Recipe regenR = Recipe.Create(ItemID.RegenerationPotion, 3);
+            regenR.AddIngredient(ItemID.BottledWater);
+            regenR.AddIngredient(ModContent.ItemType<Rainbow>());
+            regenR.AddTile(TileID.Bottles);
+            regenR.Register();
+
+            Recipe shineR = Recipe.Create(ItemID.ShinePotion, 3);
+            shineR.AddIngredient(ItemID.BottledWater);
+            shineR.AddIngredient(ModContent.ItemType<Rainbow>());
+            shineR.AddTile(TileID.Bottles);
+            shineR.Register();
+
+            Recipe sonarR = Recipe.Create(ItemID.SonarPotion, 3);
+            sonarR.AddIngredient(ItemID.BottledWater);
+            sonarR.AddIngredient(ModContent.ItemType<Rainbow>());
+            sonarR.AddTile(TileID.Bottles);
+            sonarR.Register();
+
+            Recipe spelunkerR = Recipe.Create(ItemID.SpelunkerPotion, 3);
+            spelunkerR.AddIngredient(ItemID.BottledWater);
+            spelunkerR.AddIngredient(ModContent.ItemType<Rainbow>());
+            spelunkerR.AddTile(TileID.Bottles);
+            spelunkerR.Register();
+
+            Recipe ewR = Recipe.Create(ItemID.StinkPotion, 3);
+            ewR.AddIngredient(ItemID.BottledWater);
+            ewR.AddIngredient(ModContent.ItemType<Rainbow>());
+            ewR.AddTile(TileID.Bottles);
+            ewR.Register();
+
+            Recipe summonR = Recipe.Create(ItemID.SummoningPotion, 3);
+            summonR.AddIngredient(ItemID.BottledWater);
+            summonR.AddIngredient(ModContent.ItemType<Rainbow>());
+            summonR.AddTile(TileID.Bottles);
+            summonR.Register();
+
+            Recipe flashR = Recipe.Create(ItemID.SwiftnessPotion, 3);
+            flashR.AddIngredient(ItemID.BottledWater);
+            flashR.AddIngredient(ModContent.ItemType<Rainbow>());
+            flashR.AddTile(TileID.Bottles);
+            flashR.Register();
+
+            Recipe stingyR = Recipe.Create(ItemID.ThornsPotion, 3);
+            stingyR.AddIngredient(ItemID.BottledWater);
+            stingyR.AddIngredient(ModContent.ItemType<Rainbow>());
+            stingyR.AddTile(TileID.Bottles);
+            stingyR.Register();
+
+            Recipe titanR = Recipe.Create(ItemID.TitanPotion, 3);
+            titanR.AddIngredient(ItemID.BottledWater);
+            titanR.AddIngredient(ModContent.ItemType<Rainbow>());
+            titanR.AddTile(TileID.Bottles);
+            titanR.Register();
+
+            Recipe warmR = Recipe.Create(ItemID.WarmthPotion, 3);
+            warmR.AddIngredient(ItemID.BottledWater);
+            warmR.AddIngredient(ModContent.ItemType<Rainbow>());
+            warmR.AddTile(TileID.Bottles);
+            warmR.Register();
+
+            Recipe jesusR = Recipe.Create(ItemID.WaterWalkingPotion, 3);
+            jesusR.AddIngredient(ItemID.BottledWater);
+            jesusR.AddIngredient(ModContent.ItemType<Rainbow>());
+            jesusR.AddTile(TileID.Bottles);
+            jesusR.Register();
+
+            Recipe wrathR = Recipe.Create(ItemID.WrathPotion, 3);
+            wrathR.AddIngredient(ItemID.BottledWater);
+            wrathR.AddIngredient(ModContent.ItemType<Rainbow>());
+            wrathR.AddTile(TileID.Bottles);
+            wrathR.Register();
+
+            Recipe ImComingHomeR = Recipe.Create(ItemID.RecallPotion, 6);
+            ImComingHomeR.AddIngredient(ItemID.BottledWater);
+            ImComingHomeR.AddIngredient(ModContent.ItemType<Rainbow>());
+            ImComingHomeR.AddTile(TileID.Bottles);
+            ImComingHomeR.Register();
+
+            Recipe ImComingHomeAndLeaveAgainR = Recipe.Create(ItemID.PotionOfReturn, 3);
+            ImComingHomeAndLeaveAgainR.AddIngredient(ItemID.BottledWater);
+            ImComingHomeAndLeaveAgainR.AddIngredient(ModContent.ItemType<Rainbow>());
+            ImComingHomeAndLeaveAgainR.AddTile(TileID.Bottles);
+            ImComingHomeAndLeaveAgainR.Register();
+
+            Recipe teleportR = Recipe.Create(ItemID.TeleportationPotion, 3);
+            teleportR.AddIngredient(ItemID.BottledWater);
+            teleportR.AddIngredient(ModContent.ItemType<Rainbow>());
+            teleportR.AddTile(TileID.Bottles);
+            teleportR.Register();
+
+            Recipe wormBossHoleR = Recipe.Create(ItemID.WormholePotion, 6);
+            wormBossHoleR.AddIngredient(ItemID.BottledWater);
+            wormBossHoleR.AddIngredient(ModContent.ItemType<Rainbow>());
+            wormBossHoleR.AddTile(TileID.Bottles);
+            wormBossHoleR.Register();
+
+            Recipe warriorR = Recipe.Create(ModContent.ItemType<WarriorsThermos>(), 3);
+            warriorR.AddIngredient(ItemID.BottledWater);
+            warriorR.AddIngredient(ModContent.ItemType<Rainbow>());
+            warriorR.AddTile(TileID.Bottles);
+            warriorR.Register();
+
+            Recipe red = Recipe.Create(ItemID.RedPotion);
+            red.AddIngredient(ItemID.BottledWater);
+            red.AddIngredient(ModContent.ItemType<Rainbow>());
+            red.AddIngredient(ModContent.ItemType<Red>(), 2);
+            red.AddTile(TileID.Bottles);
+            red.Register();
+            #endregion
+        }
 
 		public static RecipeGroup EvilPowder;
 		public static RecipeGroup EvilSample;
