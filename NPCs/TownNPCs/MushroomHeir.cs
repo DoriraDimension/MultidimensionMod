@@ -23,6 +23,7 @@ using Terraria.GameContent.Bestiary;
 using System;
 using Terraria.DataStructures;
 using Terraria.GameContent.ItemDropRules;
+using Terraria.ModLoader.IO;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -175,7 +176,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
             string talk1 = "I am?";
             string talk2 = "Understood";
             button = Language.GetTextValue("LegacyInterface.28");
-            button2 = "Give balls";
+            button2 = "Give Rare Plant";
         }
 
         public override void OnChatButtonClicked(bool firstButton, ref string shopName)
@@ -191,7 +192,10 @@ namespace MultidimensionMod.NPCs.TownNPCs
                 var source = player.GetSource_OpenItem(Type);
 
                 int Special = player.FindItem(ModContent.ItemType<MadnessShroom>());
-                int Item = player.FindItem(ItemID.DirtBlock);
+                int Item = player.FindItem(3385);
+                int Item2 = player.FindItem(3386);
+                int Item3 = player.FindItem(3387);
+                int Item4 = player.FindItem(3388);
 
                 int DyeRed = player.FindItem(ItemID.RedHusk);
                 int DyeOrange = player.FindItem(ItemID.OrangeBloodroot);
@@ -227,6 +231,156 @@ namespace MultidimensionMod.NPCs.TownNPCs
                     if (player.inventory[Item].stack <= 0)
                     {
                         player.inventory[Item] = new Item();
+                    }
+
+                    Main.npcChatText = TradeSuccess();
+                    int choice = Main.rand.Next(9);
+                    if (choice == 0)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Red>(), 3);
+                    }
+                    else if (choice == 1)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Orange>(), 3);
+                    }
+                    else if (choice == 2)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Green>(), 3);
+                    }
+                    else if (choice == 3)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Brown>(), 3);
+                    }
+                    else if (choice == 4)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Gray>(), 3);
+                    }
+                    else if (choice == 5)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Blue>(), 3);
+                    }
+                    else if (choice == 6)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Pink>(), 3);
+                    }
+                    else if (choice == 7)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Purple>(), 3);
+                    }
+                    else if (choice == 8)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Yellow>(), 3);
+                    }
+
+                    SoundEngine.PlaySound(SoundID.Chat);
+                    return;
+                }
+                else if (Item2 >= 0)
+                {
+                    player.inventory[Item2].stack--;
+                    if (player.inventory[Item2].stack <= 0)
+                    {
+                        player.inventory[Item2] = new Item();
+                    }
+
+                    Main.npcChatText = TradeSuccess();
+                    int choice = Main.rand.Next(9);
+                    if (choice == 0)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Red>(), 3);
+                    }
+                    else if (choice == 1)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Orange>(), 3);
+                    }
+                    else if (choice == 2)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Green>(), 3);
+                    }
+                    else if (choice == 3)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Brown>(), 3);
+                    }
+                    else if (choice == 4)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Gray>(), 3);
+                    }
+                    else if (choice == 5)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Blue>(), 3);
+                    }
+                    else if (choice == 6)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Pink>(), 3);
+                    }
+                    else if (choice == 7)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Purple>(), 3);
+                    }
+                    else if (choice == 8)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Yellow>(), 3);
+                    }
+
+                    SoundEngine.PlaySound(SoundID.Chat);
+                    return;
+                }
+                else if (Item3 >= 0)
+                {
+                    player.inventory[Item3].stack--;
+                    if (player.inventory[Item3].stack <= 0)
+                    {
+                        player.inventory[Item3] = new Item();
+                    }
+
+                    Main.npcChatText = TradeSuccess();
+                    int choice = Main.rand.Next(9);
+                    if (choice == 0)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Red>(), 3);
+                    }
+                    else if (choice == 1)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Orange>(), 3);
+                    }
+                    else if (choice == 2)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Green>(), 3);
+                    }
+                    else if (choice == 3)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Brown>(), 3);
+                    }
+                    else if (choice == 4)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Gray>(), 3);
+                    }
+                    else if (choice == 5)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Blue>(), 3);
+                    }
+                    else if (choice == 6)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Pink>(), 3);
+                    }
+                    else if (choice == 7)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Purple>(), 3);
+                    }
+                    else if (choice == 8)
+                    {
+                        player.QuickSpawnItem(source, ModContent.ItemType<Yellow>(), 3);
+                    }
+
+                    SoundEngine.PlaySound(SoundID.Chat);
+                    return;
+                }
+                else if (Item4 >= 0)
+                {
+                    player.inventory[Item4].stack--;
+                    if (player.inventory[Item4].stack <= 0)
+                    {
+                        player.inventory[Item4] = new Item();
                     }
 
                     Main.npcChatText = TradeSuccess();
