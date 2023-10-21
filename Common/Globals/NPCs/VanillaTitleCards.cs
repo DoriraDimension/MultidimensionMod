@@ -69,7 +69,7 @@ namespace MultidimensionMod.Common.Globals.NPCs
             {
                 EyeTitleCard = false;
             }
-            if (npc.type == NPCID.EaterofWorldsHead)
+            if (npc.type == NPCID.EaterofWorldsBody)
             {
                 if (!WormTitleCard)
                 {

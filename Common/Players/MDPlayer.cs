@@ -11,6 +11,7 @@ using Terraria.ModLoader;
 using Terraria.DataStructures;
 using Terraria.GameInput;
 using Terraria.Audio;
+using Terraria.Localization;
 
 namespace MultidimensionMod.Common.Players
 {
@@ -39,6 +40,7 @@ namespace MultidimensionMod.Common.Players
         public bool DrakePoison = false;
         public bool NeroSet = false;
         public bool SinnerSet = false;
+        public bool MonarchHeart = false;
 
         public override void ResetEffects()
         {
@@ -56,6 +58,7 @@ namespace MultidimensionMod.Common.Players
             Madness = false;
             DrakePoison = false;
             NeroSet = false;
+            MonarchHeart = false;
         }
 
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
@@ -73,6 +76,10 @@ namespace MultidimensionMod.Common.Players
                 itemDrop = ModContent.ItemType<EnergyFish>();
                 return;
             }
+        }
+
+        public override void PreUpdate()
+        {
         }
 
         public override void UpdateBadLifeRegen()
@@ -124,12 +131,43 @@ namespace MultidimensionMod.Common.Players
                 }
                 player.lifeRegen -= 16;
             }
+            if (MonarchHeart)
+            {
+                if (player.lifeRegen > 0)
+                {
+                    player.lifeRegen = 0;
+                }
+                player.lifeRegen -= 12;
+                if (Main.hardMode)
+                {
+                    if (player.lifeRegen > 0)
+                    {
+                        player.lifeRegen = 0;
+                    }
+                    player.lifeRegen -= 20;
+                }
+                if (NPC.downedMoonlord)
+                {
+                    if (Main.hardMode)
+                    {
+                        if (player.lifeRegen > 0)
+                        {
+                            player.lifeRegen = 0;
+                        }
+                        player.lifeRegen -= 30;
+                    }
+                }
+                if (player.statLife == 0)
+                {
+                    player.KillMe(PlayerDeathReason.ByCustomReason(player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.MonarchHeart")), 1000.0, 0);
+                }
+            }
         }
 
         public override void OnHitNPCWithItem(Item item, NPC target, NPC.HitInfo hit, int damageDone)
         {
             Player player = Main.LocalPlayer;
-
+            int useTimeSub = item.useTime / 2; //Gets the usetime of the held weapon
             if (StarvingLarva)
             {
                 if (target.life > 0)
@@ -142,12 +180,23 @@ namespace MultidimensionMod.Common.Players
             {
                 target.AddBuff(BuffID.Frostburn, 120);
             }
+            if (MonarchHeart)
+            {
+                if (damageDone >= 20)
+                {
+                    player.statLife += 20;
+                }
+                else
+                    //This is calculated by dividing the dealt damage by 15 and the halved useTime of the used weapon
+                    player.statLife += (int)Math.Floor((double)damageDone / 15 + useTimeSub); 
+            }
         }
 
         public override void OnHitNPCWithProj(Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
         {
             Player player = Main.LocalPlayer;
-
+            Item item = player.HeldItem;
+            int useTimeSub = item.useTime / 2;
             if (StarvingLarva)
             {
                 if (target.life > 0)
@@ -159,6 +208,15 @@ namespace MultidimensionMod.Common.Players
             if (SinnerSet && proj.CountsAsClass(DamageClass.Magic))
             {
                 target.AddBuff(BuffID.Frostburn, 120);
+            }
+            if (MonarchHeart)
+            {
+                if (damageDone >= 200)
+                {
+                    player.statLife += 13;
+                }
+                else
+                    player.statLife += (int)Math.Floor((double)damageDone / 15 + useTimeSub);
             }
         }
 
