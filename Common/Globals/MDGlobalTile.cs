@@ -2,6 +2,7 @@
 using MultidimensionMod.Tiles;
 using MultidimensionMod.Items.Weapons.Typeless;
 using MultidimensionMod.Common.Players;
+using MultidimensionMod.Tiles.Biomes.ShroomForest;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -20,7 +21,7 @@ namespace MultidimensionMod.Common.Globals
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<Iceblossom>(), mute: true);
             }
 
-            if (type == TileID.Grass && Main.rand.NextBool(1500) && MDWorld.MadnessMoon)
+            if (type == TileID.Grass || type == TileID.JungleGrass || type == TileID.CorruptGrass || type == TileID.CorruptJungleGrass || type == TileID.CrimsonGrass || type == TileID.CrimsonJungleGrass || type == TileID.MushroomGrass || type == ModContent.TileType<Mycelium>() || type == TileID.HallowedGrass && Main.rand.NextBool(1500) && MDWorld.MadnessMoon)
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<MadnessShroomPlaced>(), mute: true);
             }
