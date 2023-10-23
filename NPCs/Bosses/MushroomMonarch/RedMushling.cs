@@ -23,13 +23,13 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
         {
             NPC.lifeMax = 50;
             NPC.damage = 6;
-            NPC.defense = 5; 
+            NPC.defense = 5;
             NPC.knockBackResist = 1f;
             NPC.value = Item.sellPrice(0, 0, 0, 0);
             NPC.aiStyle = -1;
             NPC.width = 30;
             NPC.height = 40;
-            NPC .npcSlots = 0f;
+            NPC.npcSlots = 0f;
             NPC.netAlways = true;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
@@ -114,6 +114,16 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             else
             {
                 NPC.frame.Y = 42 * 6;
+            }
+        }
+
+        public override void HitEffect(NPC.HitInfo hit)
+        {
+            if (NPC.life <= 0)
+            {
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/RedMushGore1").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/RedMushGore2").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/RedMushGore3").Type, 1);
             }
         }
     }

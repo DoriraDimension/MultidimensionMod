@@ -124,7 +124,17 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             return null;
         }
 
-		public float[] internalAI = new float[4];
+        public override void HitEffect(NPC.HitInfo hit)
+        {
+            if (NPC.life <= 0)
+            {
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MonarchGore1").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MonarchGore2").Type, 1);
+            }
+        }
+
+
+        public float[] internalAI = new float[4];
         public int SummonTimer = 0;
         public int MarathonTimer = 0;
         public int JumpTimer = 0;
