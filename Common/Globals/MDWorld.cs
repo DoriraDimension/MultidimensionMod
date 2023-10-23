@@ -1,5 +1,6 @@
 ﻿using MultidimensionMod.Biomes;
 using MultidimensionMod.Common.Systems;
+using MultidimensionMod.NPCs.TownNPCs;
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -11,13 +12,14 @@ using Terraria.Chat;
 using Terraria.Localization;
 using Terraria.ModLoader.IO;
 using Mono.Cecil;
-using MultidimensionMod.Items.Materials;
 
 namespace MultidimensionMod.Common.Globals
 {
     public class MDWorld : ModSystem
     {
         public static bool MadnessMoon;
+        public static int TposeTimer;
+        public static int BoxTimer;
         public override void PostUpdateWorld()
         {
             if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()) & !DownedSystem.seenFU)
@@ -86,6 +88,14 @@ namespace MultidimensionMod.Common.Globals
             #endregion
         }
 
+        public override void PostUpdateNPCs()
+        {
+            if (Terraria.NPC.AnyNPCs(ModContent.NPCType<DoriraTpose>()))
+                TposeTimer++;
+            if (Terraria.NPC.AnyNPCs(ModContent.NPCType<Dapperbox>()))
+                BoxTimer++;
+        }
+
         public override void OnWorldLoad()
         {
             MadnessMoon = false;
@@ -96,6 +106,12 @@ namespace MultidimensionMod.Common.Globals
             MadnessMoon = false;
         }
 
+        public override void ClearWorld()
+        {
+            TposeTimer = 0;
+            BoxTimer = 0;
+        }
+
         public override void SaveWorldData(TagCompound tag)
         {
             var lists = new List<string>();
@@ -104,12 +120,18 @@ namespace MultidimensionMod.Common.Globals
                 lists.Add("MadnessMoon");
 
             tag["lists"] = lists;
+
+            tag["tposeTimer"] = TposeTimer;
+            tag["boxTimer"] = BoxTimer;
         }
 
         public override void LoadWorldData(TagCompound tag)
         {
             var lists = tag.GetList<string>("lists");
             MadnessMoon = lists.Contains("MadnessMoon");
+
+            TposeTimer = tag.GetInt("tposeTimer");
+            BoxTimer = tag.GetInt("boxTimer");
         }
 
         public override void NetSend(BinaryWriter writer)
@@ -117,12 +139,18 @@ namespace MultidimensionMod.Common.Globals
             var flags = new BitsByte();
             flags[0] = MadnessMoon;
             writer.Write(flags);
+
+            writer.Write(TposeTimer);
+            writer.Write(BoxTimer);
         }
 
         public override void NetReceive(BinaryReader reader)
         {
             BitsByte flags = reader.ReadByte();
             MadnessMoon = flags[0];
+
+            TposeTimer = reader.ReadInt32();
+            BoxTimer = reader.ReadInt32();
         }
     }
 }

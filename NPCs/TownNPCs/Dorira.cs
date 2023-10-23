@@ -9,14 +9,16 @@ using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Common.Globals;
 using MultidimensionMod.Projectiles.Ranged;
 using MultidimensionMod.Items.Quest;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.GameContent.Personalities;
-using System.Collections.Generic;
 using Terraria.Utilities;
 using Terraria.GameContent.Bestiary;
+using Terraria.Audio;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -61,7 +63,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			NPC.aiStyle = 7;
 			NPC.damage = 27;
 			NPC.defense = 17;
-			NPC.lifeMax = 10000;
+			NPC.lifeMax = 3007;
 			NPC.HitSound = SoundID.NPCHit1;
 			NPC.DeathSound = SoundID.NPCDeath1;
 			NPC.knockBackResist = 0f;
@@ -75,6 +77,20 @@ namespace MultidimensionMod.NPCs.TownNPCs
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
                 new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Dorira")
             });
+        }
+
+        public override bool CheckDead()
+        {
+            MDWorld.TposeTimer = 0;
+            Main.NewText("Dorira's mind got trapped in the cosmos.", Color.Red.R, Color.Red.G, Color.Red.B);
+            SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Glitch"));
+            NPC.SetDefaults(ModContent.NPCType<DoriraTpose>());
+            NPC.life = 1;
+
+            if (Main.netMode == NetmodeID.Server)
+                NetMessage.SendData(MessageID.WorldData);
+
+            return false;
         }
 
         public override bool CanTownNPCSpawn(int numTownNPCs)

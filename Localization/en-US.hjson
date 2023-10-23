@@ -2996,6 +2996,8 @@ Mods: {
 			MadnessBat2.DisplayName: Madness Gazer
 			MadnessDog.DisplayName: Starving Madness
 			Smiley.DisplayName: Smiley
+			DoriraTpose.DisplayName: Tposing Dorira
+			Dapperbox.DisplayName: Just a regular box
 
 			Dorira: {
 				DisplayName: Dimensional God
@@ -3088,6 +3090,8 @@ Mods: {
 				#Below is quest dialogue
 				CassieQuestStart: I wanted to ask if you could do me a favor, during my travel here something important got seperated from me. Could you maybe try and get it back? It might have fallen like a star from the sky, if only there was a matter that could transform it back into its original form.
 				CassieQuestClear: Thank you so much, here, this is what they were before. Since I trust you, you can keep it safe for me.
+				#Below is tpose dialogue
+				Tpose: He seems to be experiencing something real funky.
 			}
 
 			Taraha: {
@@ -3122,6 +3126,8 @@ Mods: {
 				#Below is first time talk dialogue
 				FirstTalk1: I saw you gave my dad a good thrashing, so I guess you’re cool.
 				FirstTalk2: Yes bro, you don’t know how much I hate that guy, hope he went to cry in a corner. I’m Deadly Dappercap btw, the deadliest fungus in town, I love to get around and gather some really funky shrooms. Let’s say you bring me some valuable things and I will give you some of them. But if anyone asks, they aren’t from me, understood?
+				#Below is box dialogue
+				Box: Ey, go away, you are going to reveal my location if you keep talking to me. I will not come out until I know its safe again.
 			}
 		}
 

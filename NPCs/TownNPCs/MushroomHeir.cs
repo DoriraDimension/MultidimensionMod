@@ -11,19 +11,18 @@ using MultidimensionMod.Common.Globals;
 using MultidimensionMod.Projectiles.Ranged;
 using MultidimensionMod.Items.Quest;
 using MultidimensionMod.Biomes;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.GameContent.Personalities;
-using System.Collections.Generic;
 using Terraria.Utilities;
 using Terraria.Audio;
 using Terraria.GameContent.Bestiary;
-using System;
 using Terraria.DataStructures;
 using Terraria.GameContent.ItemDropRules;
-using Terraria.ModLoader.IO;
+using Microsoft.Xna.Framework;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -83,6 +82,19 @@ namespace MultidimensionMod.NPCs.TownNPCs
             {
                 new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Dappercap")
             });
+        }
+
+        public override bool CheckDead()
+        {
+            MDWorld.TposeTimer = 0;
+            Main.NewText("Dappercap went into hiding.", Color.Red.R, Color.Red.G, Color.Red.B);
+            NPC.SetDefaults(ModContent.NPCType<Dapperbox>());
+            NPC.life = 1;
+
+            if (Main.netMode == NetmodeID.Server)
+                NetMessage.SendData(MessageID.WorldData);
+
+            return false;
         }
 
         public override bool CanTownNPCSpawn(int numTownNPCs)
