@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.GameContent.Bestiary;
 
 namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
 {
@@ -14,6 +15,8 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
         {
             //DisplayName.SetDefault("Mushling");
             Main.npcFrameCount[NPC.type] = 7;
+            NPCID.Sets.DontDoHardmodeScaling[Type] = true;
+            NPCID.Sets.CantTakeLunchMoney[Type] = true;
         }
 
         public override void SetDefaults()
@@ -25,11 +28,20 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPC.value = Item.sellPrice(0, 0, 0, 0);
             NPC.aiStyle = -1;
             NPC.width = 30;
-            NPC.height = 44;
+            NPC.height = 40;
             NPC .npcSlots = 0f;
             NPC.netAlways = true;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
+        }
+
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.UIInfoProvider = new CommonEnemyUICollectionInfoProvider(ContentSamples.NpcBestiaryCreditIdsByNpcNetIds[ModContent.NPCType<MushroomMonarch>()], quickUnlock: true);
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.RedMushling")
+            });
         }
 
         public override void AI()
@@ -39,6 +51,14 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             if (target == null)
             {
                 NPC.TargetClosest();
+            }
+            if (target.Center.X > NPC.Center.X)
+            {
+                NPC.spriteDirection = -1;
+            }
+            else
+            {
+                NPC.spriteDirection = 1;
             }
             float speedUp = 0.06f;
             float maxVel = 2.5f;
@@ -84,16 +104,16 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                 if (NPC.frameCounter > 8)
                 {
                     NPC.frameCounter = 0;
-                    NPC.frame.Y += 44;
+                    NPC.frame.Y += 42;
                 }
-                if (NPC.frame.Y > 44 * 6)
+                if (NPC.frame.Y > 42 * 6)
                 {
                     NPC.frame.Y = 0;
                 }
             }
             else
             {
-                NPC.frame.Y = 44 * 6;
+                NPC.frame.Y = 42 * 6;
             }
         }
     }

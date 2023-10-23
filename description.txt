@@ -9,10 +9,10 @@ The mod currently adds:
 - 3 Pets
 - Several Vanity Items
 - 18 Enemies
-- 1 Boss
-- 2 Town NPCs
+- 3 Bosses
+- 3 Town NPCs
 - 1 Town Pet
-- 1 Biome
+- 2 Biomes
 - 1 Event
 - Several pieces of placeable furniture
 - Boss Souls acting as lore items with more uses added later.

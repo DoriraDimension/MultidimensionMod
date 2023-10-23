@@ -155,6 +155,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
                 CustomTexturePath = "MultidimensionMod/NPCs/Bestiary/SmileyBestiary",
             };
             NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, drawModifier);
+            NPCID.Sets.CantTakeLunchMoney[Type] = true;
         }
 
 		public override void SetDefaults()

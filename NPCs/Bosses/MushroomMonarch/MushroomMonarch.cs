@@ -5,6 +5,7 @@ using MultidimensionMod.Items.Bags;
 using MultidimensionMod.Items.Placeables.Relics;
 using MultidimensionMod.Items.Placeables.Trophies;
 using MultidimensionMod.Items.Pets;
+using MultidimensionMod.Biomes;
 using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Items.Weapons.Melee.Boomerangs;
 using MultidimensionMod.Items.Weapons.Ranged.Bows;
@@ -16,6 +17,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.ItemDropRules;
+using Terraria.GameContent.Bestiary;
 
 namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
 {
@@ -35,7 +37,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             }
         }
 
-		public override void ReceiveExtraAI(BinaryReader reader)
+        public override void ReceiveExtraAI(BinaryReader reader)
 		{
 			base.ReceiveExtraAI(reader);
 			if(Main.netMode == NetmodeID.MultiplayerClient)
@@ -83,6 +85,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
         {
             // DisplayName.SetDefault("Mushroom Monarch");
             Main.npcFrameCount[NPC.type] = 12;
+            NPCID.Sets.CantTakeLunchMoney[Type] = true;
         }
 
         public override void SetDefaults()
@@ -94,7 +97,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPC.value = Item.sellPrice(0, 0, 50, 0);
             NPC.aiStyle = -1;
             NPC.width = 50;
-            NPC.height = 108;
+            NPC.height = 100;
             NPC.npcSlots = 1f;
             NPC.boss = true;
             NPC.noGravity = false;
@@ -104,6 +107,15 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPC.DeathSound = SoundID.NPCDeath1;
             if (!Main.dedServ)
                 Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Monarch");
+            SpawnModBiomes = new int[1] { ModContent.GetInstance<ShroomForest>().Type };
+        }
+
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.MushroomMonarch")
+            });
         }
 
         public override bool? DrawHealthBar(byte hbPosition, ref float scale, ref Vector2 position)
