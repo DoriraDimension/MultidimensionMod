@@ -21,9 +21,15 @@ namespace MultidimensionMod.Common.Globals
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<Iceblossom>(), mute: true);
             }
 
-            if (type == TileID.Grass || type == TileID.JungleGrass || type == TileID.CorruptGrass || type == TileID.CorruptJungleGrass || type == TileID.CrimsonGrass || type == TileID.CrimsonJungleGrass || type == TileID.MushroomGrass || type == ModContent.TileType<Mycelium>() || type == TileID.HallowedGrass && Main.rand.NextBool(1500) && MDWorld.MadnessMoon)
+            if (type == TileID.Grass || type == TileID.JungleGrass || type == TileID.CorruptGrass || type == TileID.CorruptJungleGrass || type == TileID.CrimsonGrass || type == TileID.CrimsonJungleGrass || type == TileID.MushroomGrass || type == ModContent.TileType<Mycelium>() || type == TileID.HallowedGrass)
             {
-                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<MadnessShroomPlaced>(), mute: true);
+                if (MDWorld.MadnessMoon)
+                {
+                    if (Main.rand.NextBool(1500))
+                    {
+                        WorldGen.PlaceTile(i, j - 1, ModContent.TileType<MadnessShroomPlaced>(), mute: true);
+                    }
+                }
             }
         }
 

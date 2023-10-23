@@ -1,4 +1,4 @@
-﻿using MultidimensionMod.Backgrounds;
+﻿/*using MultidimensionMod.Backgrounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,7 +11,7 @@ namespace MultidimensionMod
 {
     public class ALMenu : ModMenu
     {
-       /* public override Asset<Texture2D> Logo => base.Logo;
+        public override Asset<Texture2D> Logo => base.Logo;
 
         public override Asset<Texture2D> SunTexture => ModContent.Request<Texture2D>($"{menuAssetPath}/AeiosSun");
 
@@ -26,6 +26,6 @@ namespace MultidimensionMod
         public override void OnSelected()
         {
             SoundEngine.PlaySound(new (Mod, "Sounds/Custom/Glitch"));
-        }*/
+        }
     }
-}
+}*/

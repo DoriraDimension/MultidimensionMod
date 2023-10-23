@@ -1,5 +1,6 @@
 ﻿using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Dusts;
+using MultidimensionMod.Tiles.Biomes.ShroomForest;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -24,7 +25,15 @@ namespace MultidimensionMod.Tiles
             TileID.Sets.IgnoredByGrowingSaplings[Type] = true;
             TileObjectData.newTile.AnchorValidTiles = new int[]
             {
-                TileID.Grass
+                TileID.Grass,
+                TileID.JungleGrass,
+                TileID.CorruptGrass,
+                TileID.CorruptJungleGrass,
+                TileID.CrimsonGrass,
+                TileID.CrimsonJungleGrass,
+                TileID.MushroomGrass,
+                TileID.HallowedGrass,
+                ModContent.TileType<Mycelium>()
             };
             TileObjectData.addTile(Type);
             HitSound = SoundID.Grass;
