@@ -195,13 +195,13 @@ namespace MultidimensionMod.NPCs.TownNPCs
             string talk1 = "I am?";
             string talk2 = "Understood";
             button = Language.GetTextValue("LegacyInterface.28");
-            if (madness >= 0)
-            {
-                button2 = "Give Madness Mushroom";
-            }
-            else if (reality >= 0)
+            if (reality >= 0)
             {
                 button2 = "Give the weird mushroom";
+            }
+            else if (madness >= 0)
+            {
+                button2 = "Give Madness Mushroom";
             }
             else
                 button2 = "Give Rare Plant";

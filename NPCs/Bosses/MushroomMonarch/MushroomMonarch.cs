@@ -5,10 +5,12 @@ using MultidimensionMod.Items.Bags;
 using MultidimensionMod.Items.Placeables.Relics;
 using MultidimensionMod.Items.Placeables.Trophies;
 using MultidimensionMod.Items.Pets;
+using MultidimensionMod.Common.Players;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Items.Weapons.Melee.Boomerangs;
 using MultidimensionMod.Items.Weapons.Ranged.Bows;
+using MultidimensionMod.Common.ItemDropRules.DropConditions;
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -18,6 +20,8 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.Bestiary;
+using MultidimensionMod.Items.Mushrooms;
+using Terraria.GameContent;
 
 namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
 {
@@ -573,7 +577,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MushroomSoul>()));
             NPCloot.Add(ItemDropRule.BossBag(ModContent.ItemType<MonarchBag>()));
             NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<MonarchRelic>()));
-            //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<MonarchTrophy>(), 10));
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MonarchTrophy>(), 10));
             //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusSporeBag>(), 10));
             int choice = Main.rand.Next(2);
             if (choice == 0)

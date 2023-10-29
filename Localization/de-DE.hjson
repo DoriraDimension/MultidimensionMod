@@ -2794,12 +2794,18 @@ Mods: {
 					'''
 					An otherworldly mushroom that seems to distort space-time around it.
 					Just holding this in your hand makes you uncomfortable.
+					Maybe you aren't worthy enough to bathe in its presence.
 					''' */
 			}
 
 			Mushrune: {
-				// DisplayName: Mushrune
-				// Tooltip: ""
+				// DisplayName: Ethereal Mushrune
+				/* Tooltip:
+					'''
+					A mushroom shaped object, consisting of dark energy, it has a cosmic rune embedded into it.
+					Consume to increase maximum mana by 50
+					Only one may be used
+					''' */
 			}
 		}
 
@@ -3100,6 +3106,7 @@ Mods: {
 				// GenericDialogue2: serglhw3o85zhp35ognpügd1312mfghödfdlhgftzjmdzinhwüß046ihn
 				// GenericDialogue3: I've had a weird feeling since a while, its as if everything could go mad any second...
 				// GenericHardmodeDialogue1: Hey just between us two, if you happen to possess a sword made of fish, throw it into some weird liquid. ;)
+				// MushroomDialogue: I had a dream where you showed me all of these alchemy mushrooms in a glowing mushroom biome. I think you did that after defeating a weird stone construct powered by solar energy, OH and you were wearing some kind of mushy heart.
 				#Below is help dialogue
 				// ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
 				// DimensiumHelp: You can find Dimensium by doing many different things. Killing, mining, fishing, and so much more.
@@ -3306,6 +3313,9 @@ Mods: {
 			// Cultist.Hi: Hi
 		}
 
-		// DropConditions.HardmodeCondition: Drops in Hardmode.
+		DropConditions: {
+			// HardmodeCondition: Drops in Hardmode.
+			// RealityCondition: Drops by doing unessecery complicated stuff.
+		}
 	}
 }
