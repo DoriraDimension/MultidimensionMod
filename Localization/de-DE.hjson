@@ -2787,6 +2787,20 @@ Mods: {
 					The health drain becomes stronger in hardmode and again after defeating Moon Lord
 					''' */
 			}
+
+			RealityBendingShroom: {
+				// DisplayName: Reality-Bending Mushroom
+				/* Tooltip:
+					'''
+					An otherworldly mushroom that seems to distort space-time around it.
+					Just holding this in your hand makes you uncomfortable.
+					''' */
+			}
+
+			Mushrune: {
+				// DisplayName: Mushrune
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -3068,10 +3082,13 @@ Mods: {
 					// LikeNPC: It's cool to have another mushroom around, {NPCName} is really chill too.
 					// DislikeNPC: I sometimes hear {NPCName} breathing behind my door at night... he is creepy...
 					// HateNPC: DUDE! Why is dad here?! This place SUCKS!
-					// LikeNPC_Princess: For some werid reason my brain wants to like {NPCName}, but I don't want to.
+					// LikeNPC_Princess: For some weird reason my brain wants to like {NPCName}, but I don't want to.
 					// Princess_LovesNPC: "{NPCName} is such a funny little goober, I want to just squeeze him!"
 				}
 			}
+
+			// AldinGrabberEscape.DisplayName: ???
+			// AldinGrabber.DisplayName: ???
 		}
 
 		Dialogue: {
@@ -3107,7 +3124,7 @@ Mods: {
 			Dappercap: {
 				// FatherDialogue: DAD, GET THE HELL AWAY FROM HERE!
 				// UncleDialogue: OMG uncle Umos, hi!
-				// ClothTruffleDialogue: So, sometimes I see [name of clothier] sneak into [name of truffle]’s house at night. You think there is something going on between them?
+				// ClothTruffleDialogue: So, sometimes I see {0} sneak into {0}’s house at night. You think there is something going on between them?
 				// AldinDialogue: I once met this awesome mushroom enthusiast, he was pretty chill and cool. He told me he wanted to find 7 mushrooms to do whatever, probably bend space-time or something. Anyways, he disappeared without a trace and I have not seen him since then.
 				// GenericDialogue1: My uncle is so cool, unlike my boring as hell dad. He EVEN GLOWS, can you believe that??
 				// GenericDialogue2: Hey between you and me, I'm pretty sure my uncle is a hallucinogenic!!
@@ -3128,6 +3145,9 @@ Mods: {
 				// FirstTalk2: Yes bro, you don’t know how much I hate that guy, hope he went to cry in a corner. I’m Deadly Dappercap btw, the deadliest fungus in town, I love to get around and gather some really funky shrooms. Let’s say you bring me some valuable things and I will give you some of them. But if anyone asks, they aren’t from me, understood?
 				#Below is box dialogue
 				// Box: Ey, go away, you are going to reveal my location if you keep talking to me. I will not come out until I know its safe again.
+				#Below is reality shroom event dialogue
+				// AldinGrab1: I don't even know this mushroom, thats how rare it must be. It makes me feel weird though, so I'm not sure if I want this. WHAT THE HECK!?
+				// AldinGrab2: Well... that was something I guess.
 			}
 		}
 

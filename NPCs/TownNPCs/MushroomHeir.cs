@@ -23,6 +23,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.DataStructures;
 using Terraria.GameContent.ItemDropRules;
 using Microsoft.Xna.Framework;
+using MultidimensionMod.NPCs.Friendly;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -136,10 +137,6 @@ namespace MultidimensionMod.NPCs.TownNPCs
             {
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.UncleDialogue"));
             }*/
-            if ((FungusBungus & SkeletronSlave) >= 0 && Main.rand.NextBool(4))
-            {
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.ClothTruffleDialogue", Main.npc[FungusBungus].GivenName, Main.npc[SkeletronSlave].GivenName));
-            }
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue1"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue2"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue3"));
@@ -181,14 +178,33 @@ namespace MultidimensionMod.NPCs.TownNPCs
             return chat;
         }
 
+        public static string AldinChat()
+        {
+            WeightedRandom<string> chat = new WeightedRandom<string>();
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.AldinGrab1"));
+            return chat;
+        }
+
         private static int ChatNumber = 0;
 
         public override void SetChatButtons(ref string button, ref string button2)
         {
+            Player player = Main.LocalPlayer;
+            int madness = player.FindItem(ModContent.ItemType<MadnessShroom>());
+            int reality = player.FindItem(ModContent.ItemType<RealityBendingShroom>());
             string talk1 = "I am?";
             string talk2 = "Understood";
             button = Language.GetTextValue("LegacyInterface.28");
-            button2 = "Give Rare Plant";
+            if (madness >= 0)
+            {
+                button2 = "Give Madness Mushroom";
+            }
+            else if (reality >= 0)
+            {
+                button2 = "Give the weird mushroom";
+            }
+            else
+                button2 = "Give Rare Plant";
         }
 
         public override void OnChatButtonClicked(bool firstButton, ref string shopName)
@@ -203,6 +219,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
                 Player player = Main.LocalPlayer;
                 var source = player.GetSource_OpenItem(Type);
 
+                int reality = player.FindItem(ModContent.ItemType<RealityBendingShroom>());
                 int Special = player.FindItem(ModContent.ItemType<MadnessShroom>());
                 int Item = player.FindItem(3385);
                 int Item2 = player.FindItem(3386);
@@ -223,7 +240,18 @@ namespace MultidimensionMod.NPCs.TownNPCs
                 int DyePink = player.FindItem(ItemID.PinkPricklyPear);
                 int DyeGray = player.FindItem(ItemID.BlackInk);
 
-                if (Special >= 0)
+                if (reality >= 0)
+                {
+                    player.inventory[reality].stack--;
+                    if (player.inventory[reality].stack <= 0)
+                    {
+                        player.inventory[reality] = new Item();
+                    }
+                    Main.npcChatText = AldinChat();
+                    SoundEngine.PlaySound(SoundID.Thunder);
+                    NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X + 10, (int)NPC.Center.Y, ModContent.NPCType<AldinGrabber>());
+                }
+                else if (Special >= 0)
                 {
                     player.inventory[Special].stack--;
                     if (player.inventory[Special].stack <= 0)
