@@ -2807,6 +2807,16 @@ Mods: {
 					Only one may be used
 					''' */
 			}
+
+			MushroomBlockWall: {
+				// DisplayName: Mushroom Block Wall
+				// Tooltip: ""
+			}
+
+			ConfusingMushroom: {
+				// DisplayName: Confusing Mushroom
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -3095,6 +3105,7 @@ Mods: {
 
 			// AldinGrabberEscape.DisplayName: ???
 			// AldinGrabber.DisplayName: ???
+			// FeudalFungus.DisplayName: Feudal Fungus
 		}
 
 		Dialogue: {
@@ -3105,8 +3116,17 @@ Mods: {
 				// GenericDialogue1: When you are going to the Underworld, don't run into a wall.
 				// GenericDialogue2: serglhw3o85zhp35ognpügd1312mfghödfdlhgftzjmdzinhwüß046ihn
 				// GenericDialogue3: I've had a weird feeling since a while, its as if everything could go mad any second...
+				// GenericDialogue4: Do you know this mod named Awakened Light? Yeah, me neither.
+				// GenericDialogue5: Oh yeah, so there was once this guy who was incredible racist against Goblins. Well I killed him, no hesitation. Okay actually I just simply didn't like that guy.
+				// GenericDialogue6: Insert something very interesting here
+				// GenericDialogue7: There is fungus among us.
+				// GenericDialogue8: I suddenly have the urge to write an entire essay about why people should stop making flying pigs.
+				// GenericDialogue9: Keep your safe safe.
+				// GenericDialogue10: Do you ever want to start a conversation but everything that comes out is just "the"?
+				// GenericDialogue11: The best game design choice ever made was giving the desert furry a secret one-shot attack.
+				// GenericDialogue12: I hope I can fix everything somehow...
 				// GenericHardmodeDialogue1: Hey just between us two, if you happen to possess a sword made of fish, throw it into some weird liquid. ;)
-				// MushroomDialogue: I had a dream where you showed me all of these alchemy mushrooms in a glowing mushroom biome. I think you did that after defeating a weird stone construct powered by solar energy, OH and you were wearing some kind of mushy heart.
+				// MushroomDialogue: I had a dream where you showed me all of these alchemy mushrooms in a glowing mushroom biome while shopping with me. I think you did that after defeating a weird stone construct powered by solar energy, OH and you were wearing some kind of mushy heart.
 				#Below is help dialogue
 				// ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
 				// DimensiumHelp: You can find Dimensium by doing many different things. Killing, mining, fishing, and so much more.

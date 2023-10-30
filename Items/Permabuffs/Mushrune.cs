@@ -21,6 +21,14 @@ namespace MultidimensionMod.Items.Permabuffs
         public override void SetDefaults()
         {
             Item.CloneDefaults(ItemID.ManaCrystal);
+            Item.width = 34;
+            Item.height = 38;
+            Item.rare = ItemRarityID.Cyan;
+            Item.useAnimation = 20;
+            Item.useTime = 20;
+            Item.useStyle = ItemUseStyleID.HoldUp;
+            Item.UseSound = SoundID.Thunder;
+            Item.consumable = true;
         }
 
         public override bool CanUseItem(Player player)

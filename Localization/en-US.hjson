@@ -2807,6 +2807,16 @@ Mods: {
 					Only one may be used
 					'''
 			}
+
+			MushroomBlockWall: {
+				DisplayName: Mushroom Block Wall
+				Tooltip: ""
+			}
+
+			ConfusingMushroom: {
+				DisplayName: Confusing Mushroom
+				Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -3095,6 +3105,7 @@ Mods: {
 
 			AldinGrabberEscape.DisplayName: ???
 			AldinGrabber.DisplayName: ???
+			FeudalFungus.DisplayName: Feudal Fungus
 		}
 
 		Dialogue: {
