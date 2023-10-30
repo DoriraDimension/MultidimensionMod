@@ -2817,6 +2817,33 @@ Mods: {
 				DisplayName: Confusing Mushroom
 				Tooltip: ""
 			}
+
+			FungusBox: {
+				DisplayName: Music Box (Feudal Fungus)
+				Tooltip:
+				    '''
+					Plays Bioluminescent Beatdown
+					By SpectralAves
+					'''
+			}
+
+			MonarchBox: {
+				DisplayName: Music Box (Mushroom Monarch)
+				Tooltip:
+					'''
+					Plays Fungal Face-off
+					By SpectralAves
+					'''
+			}
+
+			ShroomForestBox: {
+				DisplayName: Music Box (Scarlet Mycelium Forest)
+				Tooltip:
+					'''
+					Plays Regrowth
+					By SpectralAves
+					'''
+			}
 		}
 
 		SetBonuses: {
@@ -3236,6 +3263,9 @@ Mods: {
 			MonarchTrophyPlaced.MapEntry: Monarch Trophy Placed
 			SmileyTrophyPlaced.MapEntry: Smiley Trophy Placed
 			TheAncientChaosPlaced.MapEntry: The Ancient Chaos
+			FungusBoxPlaced.MapEntry: Music Box
+			MonarchBoxPlaced.MapEntry: Music Box
+			ShroomForestBoxPlaced.MapEntry: Music Box
 		}
 
 		DeathMessages: {

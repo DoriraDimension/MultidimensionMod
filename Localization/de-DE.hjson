@@ -2817,6 +2817,21 @@ Mods: {
 				// DisplayName: Confusing Mushroom
 				// Tooltip: ""
 			}
+
+			FungusBox: {
+				// DisplayName: Fungus Box
+				// Tooltip: ""
+			}
+
+			MonarchBox: {
+				// DisplayName: Monarch Box
+				// Tooltip: ""
+			}
+
+			ShroomForestBox: {
+				// DisplayName: Shroom Forest Box
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -3236,6 +3251,9 @@ Mods: {
 			// MonarchTrophyPlaced.MapEntry: Monarch Trophy Placed
 			// SmileyTrophyPlaced.MapEntry: Smiley Trophy Placed
 			// TheAncientChaosPlaced.MapEntry: The Ancient Chaos
+			// FungusBoxPlaced.MapEntry: Fungus Box Placed
+			// MonarchBoxPlaced.MapEntry: Monarch Box Placed
+			// ShroomForestBoxPlaced.MapEntry: Shroom Forest Box Placed
 		}
 
 		DeathMessages: {
