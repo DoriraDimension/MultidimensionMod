@@ -2,6 +2,7 @@
 using MultidimensionMod.NPCs.FU;
 using MultidimensionMod.NPCs.Madness;
 using MultidimensionMod.Biomes;
+using MultidimensionMod.Dusts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,11 +35,14 @@ namespace MultidimensionMod
 
 		public bool MarysWrath;
 
+		public bool Nihil;
+
 		public override void ResetEffects(NPC npc)
 		{
 			Blaze = false;
 			Madness = false;
 			DrakePoison = false;
+			Nihil = false;
 		}
 
 		public override void UpdateLifeRegen(NPC npc, ref int damage)
@@ -115,6 +119,16 @@ namespace MultidimensionMod
                 if (Main.rand.Next(6) < 3)
                 {
                     int dust = Dust.NewDust(npc.position - new Vector2(2f, 2f), npc.width + 4, npc.height + 4, DustID.Blood, npc.velocity.X * 0.4f, npc.velocity.Y * 0.4f, 100, default(Color), 1f);
+                    Main.dust[dust].noGravity = true;
+                    Main.dust[dust].velocity *= 1.8f;
+                    Main.dust[dust].velocity.Y -= 0.5f;
+                }
+            }
+            if (Nihil)
+            {
+                if (Main.rand.Next(6) < 3)
+                {
+                    int dust = Dust.NewDust(npc.position - new Vector2(2f, 2f), npc.width + 4, npc.height + 4, ModContent.DustType<DarkDust>(), npc.velocity.X * 0.4f, npc.velocity.Y * 0.4f, 100, default(Color), 1f);
                     Main.dust[dust].noGravity = true;
                     Main.dust[dust].velocity *= 1.8f;
                     Main.dust[dust].velocity.Y -= 0.5f;

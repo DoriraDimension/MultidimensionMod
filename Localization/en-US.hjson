@@ -117,6 +117,16 @@ Mods: {
 				Description: A ghostly presence is watching you
 				DisplayName: Mary's Wrath
 			}
+
+			VoidDashCooldown: {
+				DisplayName: Void Dash Cooldown
+				Description: Void invincibility is disabled
+			}
+
+			Nihil: {
+				DisplayName: Nihil
+				Description: Mods.MultidimensionMod.Buffs.Nihil.Description
+			}
 		}
 
 		Items: {
@@ -338,12 +348,14 @@ Mods: {
 			}
 
 			ShadowEmoji: {
-				DisplayName: Shadow Emoji
+				DisplayName: Darklight Visage
 				Tooltip:
 					'''
-					Smiley's ability to smile, even in the darkest days is truly inspiring.
-					Grants +2 minion slots and increases minion damage by 5%.
-					Increases movement speed by 15% when below 30% health.
+					Grants a void dash that has invincibility frames and also allows dashing downwards
+					Dashing into an enemy or projectile removes the i-frame granting void energy
+					Void energy is replenished after 10 seconds
+					Dashing into an enemy inflicts them with the Nihil debuff for 2 seconds
+					Enemies inflicted with Nihil lose all their defense
 					'''
 			}
 
@@ -2821,7 +2833,7 @@ Mods: {
 			FungusBox: {
 				DisplayName: Music Box (Feudal Fungus)
 				Tooltip:
-				    '''
+					'''
 					Plays Bioluminescent Beatdown
 					By SpectralAves
 					'''

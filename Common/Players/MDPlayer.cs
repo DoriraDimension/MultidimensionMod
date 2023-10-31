@@ -1,6 +1,7 @@
 ﻿using MultidimensionMod.Items.Bags;
 using MultidimensionMod.Projectiles.Summon.Minions;
 using MultidimensionMod.Projectiles.Summon.Sentries;
+using MultidimensionMod.Buffs.Debuffs;
 using MultidimensionMod.Buffs.Ability;
 using System;
 using System.Collections.Generic;
