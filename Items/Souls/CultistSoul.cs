@@ -4,6 +4,9 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework;
+using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Souls
 {
@@ -24,5 +27,24 @@ namespace MultidimensionMod.Items.Souls
 			Item.height = 40;
 			Item.rare = ModContent.RarityType<CultistSoulRarity>();
 		}
-	}
+
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+            if (Main.keyState.PressingShift())
+            {
+                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.CultistSoul.Talk"))
+                {
+                };
+                tooltips.Add(line);
+            }
+            else
+            {
+                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Listen"))
+                {
+                    OverrideColor = Color.Gray,
+                };
+                tooltips.Add(line);
+            }
+        }
+    }
 }

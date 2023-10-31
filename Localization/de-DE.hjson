@@ -132,7 +132,8 @@ Mods: {
 		Items: {
 			AstralTitansEyeJewel: {
 				// DisplayName: Creation Titan's Eye Jewel
-				/* Tooltip:
+				// Tooltip: Does nothing at the moment
+				/* Lore:
 					'''
 					One of the creation titan's many crystal eyes that fell off from natural causes.
 					Scelestians like to keep them as special tokens of good fortune,
@@ -155,6 +156,9 @@ Mods: {
 					'''
 					Roses are as beautiful as they are dangerous.
 					Reflects 45% of damage back to the enemy if they touch you
+					''' */
+				/* Lore:
+					'''
 					Some Jungle people went overboard with their protection, wearing toxic scarfs from a now extinct flora
 					These are extremely dangerous for the wearer as just a single missstep could inject its deadly toxins,
 					killing them over the course of a couple minutes.
@@ -173,7 +177,8 @@ Mods: {
 
 			CreationMedaillon: {
 				// DisplayName: Creation Medaillon
-				/* Tooltip:
+				// Tooltip: Does nothing right now
+				/* Lore:
 					'''
 					The divine medaillon that is only given to high ranked Scelestians, like the eye jewel,
 					this is a token of respect towards their titan.
@@ -190,6 +195,9 @@ Mods: {
 					The initial damage depends on your maximum mana
 					All mana is lost upon triggering this effect
 					Shockwave damage gets doubled upon entering hardmode
+					''' */
+				/* Lore:
+					'''
 					A necklace crafted with mana infused sandstone, its gem only reacts to the dry aura of the desert
 					The barren lands have an aura unlike any other, it makes you wonder what actually caused them to exist
 					''' */
@@ -197,9 +205,9 @@ Mods: {
 
 			DiggerEngine: {
 				// DisplayName: Digger Engine
-				/* Tooltip:
+				// Tooltip: Increases mining speed by 35% and spawns friendly Probes when you get hit.
+				/* Lore:
 					'''
-					Increases mining speed by 35% and spawns friendly Probes when you get hit.
 					The engine located in the Destroyer's head, it was designed to be as efficient as possible,
 					completely ignoring the amount of fuel it would consume.
 					It basically served as the worm's brain, sending out the various probes embedded in its segments.
@@ -212,6 +220,9 @@ Mods: {
 					'''
 					Increases defense by 4 and damage reduction by 4% when in the Snow biome
 					Getting hit while in the snow biome will release frost scales that linger on the ground for a short time
+					''' */
+				/* Lore:
+					'''
 					Drake scales react to temperature and harden when the environment becomes colder,
 					travellers would often pick up shed scales from juveniles and use them for various tools,
 					unlike the Vikings who took them by force.
@@ -225,6 +236,9 @@ Mods: {
 					[c/e8b722:A true greed can find every treasure.]
 					Your greedy eyes can now see treasures.
 					Has a chance to inflict the Cursed debuff when you get it
+					''' */
+				/* Lore:
+					'''
 					Greed is a terrible sin, affecting everyone the same,
 					theft, murder and other even worse things, all because the mind craves more.
 					This way even a honest man can be affected by it and not even the purest soul will be able to escape.
@@ -238,6 +252,9 @@ Mods: {
 					[c/93a4d8:A true adventurer can sense traps and danger.]
 					You can see danger sources.
 					Has a chance to inflict the Slow debuff when you get it
+					''' */
+				/* Lore:
+					'''
 					It is said that an adventurer developes a sixth sense for danger,
 					seeing traps before they even went around the corner.
 					Maybe it isn't as stupid to think this way, this world is full of magic,
@@ -252,6 +269,9 @@ Mods: {
 					[c/7c091d:A true hunter can sense its prey.]
 					You can now sense your enemies everywhere.
 					Has a chance to inflict the Weak debuff when you get it
+					''' */
+				/* Lore:
+					'''
 					Hunters come in many different shapes, some prefer to lurk and ambush,
 					some rather chase down their prey and others just bruteforce their way through.
 					Whatever path you chose, a hunter is a hunter, no matter the style of killing.
@@ -265,6 +285,9 @@ Mods: {
 					[c/007437:A true resident of the night can see through the darkness.]
 					You now have improved vision at night.
 					Has a chance to inflict the Blackout debuff when you get it
+					''' */
+				/* Lore:
+					'''
 					They lurk through the night, when everything sleeps, 
 					terrors nobody wishes to ever witness.
 					The night is dangerous, so people wanted to see,
@@ -278,6 +301,9 @@ Mods: {
 					'''
 					Increases armor penetration by 12.
 					Grants the ability to breathe underwater
+					''' */
+				/* Lore:
+					'''
 					They are often found in shallow waters buried in the sand
 					Probably a great trophy for hunting down such a beast
 					''' */
@@ -326,6 +352,9 @@ Mods: {
 					'''
 					[c/650670:You... can... see. Beware not to get blinded by its forbidden magic.]
 					Highlights danger sources, enemies and treasures, also gives nightvision
+					''' */
+				/* Lore:
+					'''
 					The eye that sees all, a gaze upon us, definetily a sight to behold,
 					if only this artifact wasn't just as dangerous as it is helpful.
 					Using it grants the wearer the ability to see unseen things,
@@ -370,6 +399,9 @@ Mods: {
 					'''
 					Increases arrow damage by 10%, ranged damage by 10% and greatly increases arrow speed 
 					20% chance to not consume arrows.
+					''' */
+				/* Lore:
+					'''
 					Sidane was never serious about his work, always carelessly playing around and yet,
 					he is a high ranked member of the Scelestian Council.
 					Despite his careless nature, he is still dedicated to protect his people,
@@ -403,9 +435,9 @@ Mods: {
 
 			StarvingLarva: {
 				// DisplayName: Starving Larva
-				/* Tooltip:
+				// Tooltip: You recover 5HP on enemy kills.
+				/* Lore:
 					'''
-					You recover 5HP on enemy kills.
 					The world devouring worms always hunger for more prey,
 					a integrated instinct that keeps them going.
 					Maybe its a curse or a joke from mother nature.
@@ -418,6 +450,9 @@ Mods: {
 					'''
 					Increases minion damage by 6%
 					You can rub it onto your skin to smell like crap
+					''' */
+				/* Lore:
+					'''
 					The inside of jungle slimes has a weird rotten smell,
 					it was often used by lihzahrds to protect themself from predators
 					''' */
@@ -444,9 +479,9 @@ Mods: {
 
 			ThornScarf: {
 				// DisplayName: Thorn Scarf
-				/* Tooltip:
+				// Tooltip: Reflects 15% of damage back to the enemy if they touch you
+				/* Lore:
 					'''
-					Reflects 15% of damage back to the enemy if they touch you
 					Old natives of the jungle would wear this to hurt animals that attack them but would also hurt themself,
 					a small price to pay to be able to escape an attacking predator
 					''' */
@@ -522,9 +557,9 @@ Mods: {
 
 			RaiderChest: {
 				// DisplayName: Raider Chestplate
-				/* Tooltip:
+				// Tooltip: The breastplate of a Viking Raider, sturdy and very resistant.
+				/* Lore:
 					'''
-					The breastplate of a Viking Raider, sturdy and very resistant.
 					During their battles against the drakes, they needed all protection they could get,
 					a small mistake meant death.
 					It was forged by combining their own alloys with the scales of their sworn enemies
@@ -534,9 +569,9 @@ Mods: {
 
 			RaiderHelm: {
 				// DisplayName: Raider Helmet
-				/* Tooltip:
+				// Tooltip: The helmet of a Viking Raider, sturdy and very resistant.
+				/* Lore:
 					'''
-					The helmet of a Viking Raider, sturdy and very resistant.
 					During their battles against the drakes, they needed all protection they could get,
 					a small mistake meant death.
 					It was forged by combining their own alloys with the scales of their sworn enemies
@@ -546,9 +581,9 @@ Mods: {
 
 			RaiderLegs: {
 				// DisplayName: Raider Greaves
-				/* Tooltip:
+				// Tooltip: The greaves of a Viking Raider, sturdy and very resistant.
+				/* Lore:
 					'''
-					The greaves of a Viking Raider, sturdy and very resistant.
 					During their battles against the drakes, they needed all protection they could get,
 					a small mistake meant death.
 					They were forged by combining their own alloys with the scales of their sworn enemies
@@ -756,9 +791,9 @@ Mods: {
 
 			CuteEmoji: {
 				// DisplayName: Cute Emoji
-				/* Tooltip:
+				// Tooltip: Summons Smiley's adorable follower.
+				/* Lore:
 					'''
-					Summons Smiley's adorable follower.
 					At some point a young darkling decided to follow and imitate Smiley, a cute behavior that he couldn't just ignore.
 					He simply called him Smiley Jr and allowed him to follow him around wherever he goes.
 					''' */
@@ -1145,6 +1180,9 @@ Mods: {
 					an artifact that speaks about a deity named Cthulhu.
 					Over time, the man dedicated himself to revive this forgotten god,
 					creating a cult and going more mad day by day.
+					''' */
+				/* Talk:
+					'''
 					[c/F4cf0cc:What was I thinking, I should have known this deity was not real,]
 					[c/F4cf0cc:this pathetic husk was not even worth my effort, my dream was always a fraud.]
 					''' */
@@ -1335,12 +1373,12 @@ Mods: {
 
 			MoonRuneStone: {
 				// DisplayName: Moon Rune Stone
-				/* Tooltip:
+				// Tooltip: Summons the Lunatic Cultist
+				/* Lore:
 					'''
 					A rune only known inside the moon cult, it calls forth their insane leader.
 					Tries were made to speed up the revival ritual, these runes are part of that,
 					but all tries never worked and only made the leader's mood worse.
-					Summons the Lunatic Cultist
 					''' */
 			}
 
@@ -1348,8 +1386,8 @@ Mods: {
 				// DisplayName: Moth Attractor
 				/* Tooltip:
 					'''
-					It's interesting how easy it is to lure in moths with just light, so if we make a bigger lamp we attract bigger moths, right?.
 					Summons a Mothron during an eclipse. 
+					It's interesting how easy it is to lure in moths with just light, so if we make a bigger lamp we attract bigger moths, right?.
 					''' */
 			}
 
@@ -1357,9 +1395,9 @@ Mods: {
 				// DisplayName: Plant Murder Starter Set
 				/* Tooltip:
 					'''
+					Summons Plantera. 
 					Chop this little bulb to make the big plant very angry, now in a small starter pack for kids. No refund warranty.
 					Product is made and advertised by Dor Inc.
-					Summons Plantera. 
 					''' */
 			}
 
@@ -1404,6 +1442,9 @@ Mods: {
 					'''
 					An artifact shaped after the celestial deity of balance.
 					Can be used to change day to night and vice versa.
+					''' */
+				/* Lore:
+					'''
 					The Deity of Balance did not always have this power over time, 
 					previously there was a great species of serpents with that duty.
 					Unfortunately a chaotic force wiped most of them out.
@@ -1415,10 +1456,10 @@ Mods: {
 
 			MoonlightMoth: {
 				// DisplayName: Moonlight Moth
-				/* Tooltip:
+				// Tooltip: "Scares the sun away "
+				/* Lore:
 					'''
-					Scares away the Sun
-					A artifact of time, modeled after the Moonlight Moth,
+					This artifact of time was modeled after the Moonlight Moth,
 					the avatar of the night.
 					At night, the goddes of balance is always playful and happy,
 					trusting everyone instantly.
@@ -1427,10 +1468,10 @@ Mods: {
 
 			SunlightButterfly: {
 				// DisplayName: Sunlight Butterfly
-				/* Tooltip:
+				// Tooltip: "Scares the moon away "
+				/* Lore:
 					'''
-					Scares away the moon 
-					A artifact of time, modeled after the Sunlight Butterfly,
+					This artifact of time was modeled after the Sunlight Butterfly,
 					the avatar of day.
 					At day, the goddess of balance is always strict and serious,
 					pulling no jokes.
@@ -1484,9 +1525,9 @@ Mods: {
 
 			Cursemark: {
 				// DisplayName: Cursemark
-				/* Tooltip:
+				// Tooltip: While you press the attack button, your mouse gains a damaging aura
+				/* Lore:
 					'''
-					While you press the attack button, your mouse gains a damaging aura.
 					A cursemark signifies the presence of a powerful curse,
 					coming in all sorts of sizes, even be able to cover entire structures.
 					''' */
@@ -1497,7 +1538,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					The blue crystal blade is composed only of light.
-					The lunatic Cultist is a insane fanatic of the moon and so stole this legendary blade to use it himself,
+					The lunatic Cultist is an insane fanatic of the moon and so stole this legendary blade to use it himself,
 					but the blade instead obeys an otherworldly moon.
 					''' */
 			}
@@ -1508,6 +1549,9 @@ Mods: {
 					'''
 					Spin a crystal halberd around you that generates up to 2 light rings that spin around you as well.
 					If both rings of light are present and you stop attacking, the holy magic within them will heal you for 10 HP
+					''' */
+				/* Talk:
+					'''
 					[c/ff007f:Thank you for taking me with you.]
 					[c/ff007f:You know, Lord Sacres was always such a nice and pure soul.]
 					[c/ff007f:He cared about his people more than anything else. He even fought the neighboring lord to protect us.]
@@ -1517,7 +1561,8 @@ Mods: {
 
 			NeuralWaves: {
 				// DisplayName: Neural Waves
-				/* Tooltip:
+				// Tooltip: Sends out mind shockwaves around the player
+				/* Lore:
 					'''
 					A forbidden technique that transforms the user's thoughts into energy waves that burst out in all directions.
 					Being a forbidden technique, it was mostly used by the worst people there is.
@@ -1602,8 +1647,8 @@ Mods: {
 				// DisplayName: Arachnophobia
 				/* Tooltip:
 					'''
-					An entire book on how to defeat the fear of spiders, wait... WHY ARE THERE SPIDERS IN THIS BOOK?!
 					Shoots homing spiders and rarely a high velocity Albino Spider that deals double damage.
+					An entire book on how to defeat the fear of spiders, wait... WHY ARE THERE SPIDERS IN THIS BOOK?!
 					''' */
 			}
 
@@ -1619,10 +1664,10 @@ Mods: {
 
 			DataMiner: {
 				// DisplayName: Data Miner
-				/* Tooltip:
+				// Tooltip: Holds out a charged drill that inflicts Electrified.
+				/* Lore:
 					'''
-					The dimensional gods allmighty drill, used by him to tear rifts into dimensions.
-					Inflicts Electrified.
+					This drill was used by the dimensional to tear rifts into dimensions.
 					Dorira always wanted his own world and leave his old one behind
 					When this opportunity striked, he did not hesitate
 					Over the course of a long long time, he finally managed to create his very own world after many failed prototypes.
@@ -1730,9 +1775,9 @@ Mods: {
 
 			AwakenedArchbird: {
 				// DisplayName: Awakened Archbird
-				/* Tooltip:
+				// Tooltip: Shoots shadowflame tentacles when swung and slows enemies when hit for 5 seconds
+				/* Lore:
 					'''
-					Shoots shadowflame tentacles when swung and slows enemies when hit for 5 seconds.
 					The sword is shaped like a legendary bird found in ancient depictions in the desert, it is full of dark flames.
 					Inscriptions say that one day the archbird will swoop down and bathe the earth in it's dark flames.
 					''' */
@@ -1788,7 +1833,10 @@ Mods: {
 					'''
 					Fires a rotating scythe that slowly deccelerates
 					Hitting an enemy with the scythe directly will inflict max charged Madness for 4 seconds
-					A scythe forged inside the core of a dark star, hidden away underground
+					''' */
+				/* Lore:
+					'''
+					This scythe was forged inside the core of a dark star, hidden away underground.
 					It is unknown what its true purpose was but at some point it must have been used to fight madness.
 					The entire weapon is practically soaked in it, 
 					just a small wound will be enough to fully destroy someones mind in an instant.
@@ -1891,9 +1939,9 @@ Mods: {
 
 			TundranaScythe: {
 				// DisplayName: Tundrana Scythe
-				/* Tooltip:
+				// Tooltip: Shoots rotating sickles
+				/* Lore:
 					'''
-					Shoots rotating sickles
 					A scythe from a world beyhond the freezing fog of the Frozen Underworld, 
 					it was once used by some sort of royal guard.
 					''' */
@@ -1905,7 +1953,10 @@ Mods: {
 					'''
 					Throw a blade of molten rock, the blade explodes into volcanic rocks on impact
 					The blade inflicts Blazing Suffering
-					[c/ff8000:Thanks for picking me up by the way.]
+					''' */
+				/* Talk:
+					'''
+						[c/ff8000:Thanks for picking me up by the way.]
 					[c/ff8000:This punk thinks we killed his lord even though we didn't do anything like that.]
 					[c/ff8000:And even then, it was HIS lord who started these pointless fights against us.]
 					[c/ff8000:If I see this guy ever again, I swear I'm gonna lose it]
@@ -2051,8 +2102,8 @@ Mods: {
 				// DisplayName: Gel Vac
 				/* Tooltip:
 					'''
-					Normally not used for combat, more of a rancher tool.
 					Shoots different kinds of adorable slimes
+					Normally not used for combat, more of a rancher tool.
 					''' */
 			}
 
@@ -2124,9 +2175,9 @@ Mods: {
 
 			marcO: {
 				// DisplayName: Servants of Blight
-				/* Tooltip:
+				// Tooltip: Summons the forgotten servant of the blighted crawler.
+				/* Lore:
 					'''
-					Summons the forgotten servant of the blighted crawler.
 					A long time ago a flying creepy creature roamed the night, with it's servants by it's side.
 					But one day it disappeared and only left behind this gift.
 					''' */
@@ -2158,6 +2209,9 @@ Mods: {
 					Summons a killer bee that grows sawblades when enemies are spotted.
 					You must have at least 2 empty minion slots to summon.
 					Only one bee can be alive at a time.
+					''' */
+				/* Lore:
+					'''
 					A rare bee species, adapted to hunt and kill prey.
 					Their honey contains blood that stuck to them during their hunts, giving it a bloodred color.
 					''' */
@@ -2352,9 +2406,9 @@ Mods: {
 
 			NumbMindMask: {
 				// DisplayName: Mask of the Numbed Mind
-				/* Tooltip:
+				// Tooltip: Grants immunity to Madness
+				/* Lore:
 					'''
-					Grants immunity to Madness
 					This mask was forged from a special alloy, it is supposed to fend off any mind invading effects
 					The people who made it only finished it shortly before madness rampaged across their city,
 					in that case, only a few selected members were actually protected against it.
@@ -2377,6 +2431,9 @@ Mods: {
 					'''
 					The eyeball of a creature that was going to mutate into a madness monstrosity, it seems to have been interrupted halfway through
 					It is covered in a weird pitch black substance, you can hear strange whispers eminating from it...
+					''' */
+				/* Talk:
+					'''
 					[c/FF2CD0C:I have watched you from afar for quite a while now, you have overcome pure madness and even its titans.]
 					[c/FF2CD0C:I wish to converse with you, but the time has not come yet.]
 					[c/FF2CD0C:This eye will guide you to me whenever fate wills it so.]
@@ -2434,8 +2491,11 @@ Mods: {
 				// DisplayName: Divine Star's Blessing
 				/* Tooltip:
 					'''
-					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen.
+					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen
 					Increases invincibility time and rains down stars after getting hit
+					''' */
+				/* Lore:
+					'''
 					The Divine Star was once the protector of the Scelestians, a last gift by the Astral Mother.
 					It is long dead by now, its dust covering the once glorius sunny plains of its home,
 					forcing its residents to ascend to the sky.
@@ -2500,7 +2560,8 @@ Mods: {
 
 			PaleMatter: {
 				// DisplayName: Pale Matter
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					Unique Void Matter that went through a change
 					Smiley despises his origins, so in order to escape his own darkness
@@ -2628,9 +2689,9 @@ Mods: {
 
 			Etheral: {
 				// DisplayName: Etheral
-				/* Tooltip:
+				// Tooltip: Fires a continuous light beam
+				/* Lore:
 					'''
-					Fires a continuous light beam
 					Tiny crystal jaws that yearn for their true purpose,
 					taken from their home and stripped from their true light,
 					waiting for it to finally appear.
@@ -2639,9 +2700,9 @@ Mods: {
 
 			EtheralEX: {
 				// DisplayName: Etheral Moonlight
-				/* Tooltip:
+				// Tooltip: Fires several continuous light beams
+				/* Lore:
 					'''
-					Fires several continuous light beams
 					The true Moonlight reveals itself,
 					illuminating what was once guided by impure light,
 					ending its eternal search at last.
@@ -3385,6 +3446,11 @@ Mods: {
 		DropConditions: {
 			// HardmodeCondition: Drops in Hardmode.
 			// RealityCondition: Drops by doing unessecery complicated stuff.
+		}
+
+		SpecialTooltips: {
+			// Viewer: Hold [Shift] to view lore
+			// Listen: Holy [Shift] to listen closer
 		}
 	}
 }

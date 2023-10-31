@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Others
 {
@@ -35,9 +36,28 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
             Item.DamageType = DamageClass.Magic;
             Item.autoReuse = true;
 			Item.noUseGraphic = true;
-            Item.rare = ItemRarityID.Cyan;
-            
+            Item.rare = ItemRarityID.Cyan;     
 		}
+
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+            if (Main.keyState.PressingShift())
+            {
+                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.Etheral.Lore"))
+                {
+                    OverrideColor = Color.LightGray
+                };
+                tooltips.Add(line);
+            }
+            else
+            {
+                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Viewer"))
+                {
+                    OverrideColor = Color.Gray,
+                };
+                tooltips.Add(line);
+            }
+        }
 
         public override void AddRecipes()
         {

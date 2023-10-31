@@ -7,6 +7,9 @@ using Terraria.GameContent.Creative;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework;
+using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -36,7 +39,27 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.shootSpeed = 9f;
 		}
 
-		public override void AddRecipes()
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+            if (Main.keyState.PressingShift())
+            {
+                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.EclipseReaper.Lore"))
+                {
+                    OverrideColor = Color.LightGray
+                };
+                tooltips.Add(line);
+            }
+            else
+            {
+                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Viewer"))
+                {
+                    OverrideColor = Color.Gray,
+                };
+                tooltips.Add(line);
+            }
+        }
+
+        public override void AddRecipes()
 		{
 			CreateRecipe()
 			.AddIngredient(ItemID.DeathSickle)
