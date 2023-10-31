@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using MultidimensionMod.Common.Players;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -30,9 +31,10 @@ namespace MultidimensionMod.Items.Accessories
             {
 				player.statDefense += 2;
 				player.endurance += 0.04f;
-			}
+            }
+            player.GetModPlayer<MDPlayer>().DrakeShield = true;
 
-		}
+        }
 
 		public override void AddRecipes()
 		{

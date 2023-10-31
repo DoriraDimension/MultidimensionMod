@@ -1,7 +1,8 @@
 ﻿using MultidimensionMod.Items.Bags;
 using MultidimensionMod.Projectiles.Summon.Minions;
 using MultidimensionMod.Projectiles.Summon.Sentries;
-using MultidimensionMod.Buffs.Debuffs;
+using MultidimensionMod.Projectiles.Typeless;
+using MultidimensionMod.Projectiles.Magic;
 using MultidimensionMod.Buffs.Ability;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ using Terraria.DataStructures;
 using Terraria.GameInput;
 using Terraria.Audio;
 using Terraria.Localization;
+using MultidimensionMod.Items.Materials;
 
 namespace MultidimensionMod.Common.Players
 {
@@ -42,6 +44,11 @@ namespace MultidimensionMod.Common.Players
         public bool NeroSet = false;
         public bool SinnerSet = false;
         public bool MonarchHeart = false;
+        public bool DrakeShield = false;
+        public Item DrakescaleShield;
+        public Item ColdDesertShield;
+        public bool DesertNeck = false;
+        public Item DesertNecklace;
 
         public override void ResetEffects()
         {
@@ -60,6 +67,8 @@ namespace MultidimensionMod.Common.Players
             DrakePoison = false;
             NeroSet = false;
             MonarchHeart = false;
+            DrakeShield = false;
+            DesertNeck = false;
         }
 
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
@@ -246,6 +255,44 @@ namespace MultidimensionMod.Common.Players
                     Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<FriendlyProbe>(), (int)info.Damage + 40, 0f, Player.whoAmI);
                 }
             }
+            if (DrakeShield && !Player.lavaWet)
+            {
+                if (Main.myPlayer == Player.whoAmI)
+                {
+                    for (int i = 0; i < 2; i++)
+                    {
+                        Item item = DrakescaleShield;
+                        Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.Next(-11, 11) * .25f, -7 * .75f), ModContent.ProjectileType<FrostScaleProj>(), (int)info.Damage + 18, 0f, Player.whoAmI);
+                    }
+                }
+            }
+            if (DrakeShield && !Player.lavaWet)
+            {
+                if (Main.myPlayer == Player.whoAmI)
+                {
+                    for (int i = 0; i < 2; i++)
+                    {
+                        Item item = ColdDesertShield;
+                        Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.Next(-11, 11) * .25f, -7 * .75f), ModContent.ProjectileType<FrostScaleProj>(), (int)info.Damage + 18, 0f, Player.whoAmI);
+                    }
+                }
+            }
+            if (DesertNeck && Player.statMana == Player.statManaMax)
+            {
+                int damage = Player.statManaMax;
+                if (Main.hardMode)
+                {
+                    damage = Player.statManaMax * 2;
+                }
+                if (Main.myPlayer == Player.whoAmI)
+                {
+                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/ManaBurst"));
+                    Player.statMana -= Player.statMana;
+                    Item item = DesertNecklace;
+                    Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(0, 0), ModContent.ProjectileType<ManaShockwave>(), (int)info.Damage + damage, 0f, Player.whoAmI);
+                }
+            }
+            #region Eye accessory debuffs
             //Gives the player certain debuffs and plays a sound if they get hit while wearing an eye accessory
             if (this.HunterEye)
             {
@@ -283,6 +330,7 @@ namespace MultidimensionMod.Common.Players
                     SoundEngine.PlaySound(SoundID.DD2_BetsyDeath, player.position);
                 }
             }
+            #endregion
         }
 
         public override void ProcessTriggers(TriggersSet triggersSet)

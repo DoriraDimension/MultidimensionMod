@@ -167,6 +167,7 @@ Mods: {
 					'''
 					Increases all damage and crit chance by 4%, increases defense by 6 and damage reduction by 4% when in the Desert or Snow biome.
 					Increases defense by 4 when under 50% life
+					Getting hit while in the snow biome will release frost scales that linger on the ground for a short time
 					''' */
 			}
 
@@ -185,6 +186,10 @@ Mods: {
 				/* Tooltip:
 					'''
 					Increases all damage and crit chance by 4% when in the Desert.
+					Getting hit while mana is completely full will trigger a shockwave that scales with magic damage and ignores 20 defense
+					The initial damage depends on your maximum mana
+					All mana is lost upon triggering this effect
+					Shockwave damage gets doubled upon entering hardmode
 					A necklace crafted with mana infused sandstone, its gem only reacts to the dry aura of the desert
 					The barren lands have an aura unlike any other, it makes you wonder what actually caused them to exist
 					''' */
@@ -205,8 +210,8 @@ Mods: {
 				// DisplayName: Drakescale Shield
 				/* Tooltip:
 					'''
-					Increases defense by 4 and damage reduction by 4% when in the Snow biome.
-					A metal base, reinforced with drake scales.
+					Increases defense by 4 and damage reduction by 4% when in the Snow biome
+					Getting hit while in the snow biome will release frost scales that linger on the ground for a short time
 					Drake scales react to temperature and harden when the environment becomes colder,
 					travellers would often pick up shed scales from juveniles and use them for various tools,
 					unlike the Vikings who took them by force.
@@ -3039,6 +3044,8 @@ Mods: {
 			// YtriumShard.DisplayName: Yttrium Shard
 			// Vulcan.DisplayName: Vulcan Magma
 			// VulcanExplosion.DisplayName: Vulcan Explosion
+			// FrostScaleProj.DisplayName: Frost Scale Proj
+			// ManaShockwave.DisplayName: Mana Shockwave
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability

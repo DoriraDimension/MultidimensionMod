@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Common.Players;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -29,10 +30,10 @@ namespace MultidimensionMod.Items.Accessories
 				player.GetDamage(DamageClass.Generic) += 0.04f;
 				player.GetCritChance(DamageClass.Generic) += 4;
 			}
-
+			player.GetModPlayer<MDPlayer>().DesertNeck = true;
 		}
 
-		public override void AddRecipes()
+        public override void AddRecipes()
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<ManaInfusedSandstone>(), 5)
