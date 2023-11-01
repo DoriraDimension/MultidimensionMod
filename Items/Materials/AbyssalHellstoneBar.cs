@@ -21,13 +21,13 @@ namespace MultidimensionMod.Items.Materials
 			Item.maxStack = 9999;
 			Item.value = Item.sellPrice(0, 0, 90, 0);
 			Item.rare = ItemRarityID.Pink;
-			//Item.useTurn = true;
-			//Item.autoReuse = true;
-			//Item.useAnimation = 15;
-			//Item.useTime = 10;
-			//Item.useStyle = ItemUseStyleID.Swing;
-			//Item.consumable = true;
-			//Item.createTile = ModContent.TileType<AbyssalHellstoneBarPlaced>();
+			Item.useTurn = true;
+			Item.autoReuse = true;
+			Item.useAnimation = 15;
+			Item.useTime = 10;
+			Item.useStyle = ItemUseStyleID.Swing;
+			Item.consumable = true;
+			Item.createTile = ModContent.TileType<AbyssalHellstoneBarPlaced>();
 		}
 
 		public override void AddRecipes()
