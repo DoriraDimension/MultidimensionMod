@@ -1,8 +1,13 @@
 ﻿using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Projectiles.Summon.Minions;
+using MultidimensionMod.Common.Players;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using Terraria.Audio;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -15,34 +20,51 @@ namespace MultidimensionMod.Items.Accessories
 
 		public override void SetDefaults()
 		{
-			Item.width = 36;
-			Item.height = 48;
+			Item.width = 30;
+			Item.height = 46;
 			Item.accessory = true;
 			Item.value = Item.sellPrice(0, 0, 80, 0);
-			Item.rare = ItemRarityID.Green;
+			Item.rare = ItemRarityID.Pink;
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-		    if (player.ZoneGlowshroom && Main.hardMode)
+            player.GetModPlayer<MDPlayer>().Symbio = true;
+            if (player.GetModPlayer<MDPlayer>().Mario >= 12000)
 			{
-				player.statLifeMax2 += 25;
-				player.endurance += 0.05f;
-			}
-			else if (player.ZoneGlowshroom)
-            {
-				player.statLifeMax2 += 10;
+                Lighting.AddLight((int)(player.Center.X / 16f), (int)(player.Center.Y / 16f), 0.25f, 0.6f, 0.8f);
             }
-			player.GetDamage(DamageClass.Ranged) += 0.05f;
-		    Lighting.AddLight((int)(player.Center.X / 16f), (int)(player.Center.Y / 16f), 0.15f, 0.6f, 0.8f);
+			else
+                Lighting.AddLight((int)(player.Center.X / 16f), (int)(player.Center.Y / 16f), 0.15f, 0.6f, 0.8f);
 		}
 
-		public override void AddRecipes()
+        public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
+        {
+            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Accessories/GlowingFungiScarf_Glow").Value;
+            spriteBatch.Draw
+            (
+                texture,
+                new Vector2
+                (
+                    Item.position.X - Main.screenPosition.X + Item.width * 0.5f,
+                    Item.position.Y - Main.screenPosition.Y + Item.height - texture.Height * 0.5f
+                ),
+                new Rectangle(0, 0, texture.Width, texture.Height),
+                Color.White,
+                rotation,
+                texture.Size() * 0.5f,
+                scale,
+                SpriteEffects.None,
+                0f
+            );
+        }
+
+        public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<GlowingMushmatter>(), 6)
-			.AddIngredient(ItemID.GlowingMushroom, 25)
-			.AddTile(TileID.Anvils)
+			.AddIngredient(ModContent.ItemType<GlowingMushmatter>(), 12)
+			.AddIngredient(ItemID.SoulofMight, 7)
+			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
 	}

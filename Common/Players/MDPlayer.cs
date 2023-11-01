@@ -4,6 +4,7 @@ using MultidimensionMod.Projectiles.Summon.Sentries;
 using MultidimensionMod.Projectiles.Typeless;
 using MultidimensionMod.Projectiles.Magic;
 using MultidimensionMod.Buffs.Ability;
+using MultidimensionMod.Items.Accessories;
 using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
@@ -49,6 +50,9 @@ namespace MultidimensionMod.Common.Players
         public Item ColdDesertShield;
         public bool DesertNeck = false;
         public Item DesertNecklace;
+        public bool Symbio = false;
+        public int Mario;
+        public int GiveBirth;
 
         public override void ResetEffects()
         {
@@ -69,6 +73,25 @@ namespace MultidimensionMod.Common.Players
             MonarchHeart = false;
             DrakeShield = false;
             DesertNeck = false;
+            Symbio = false;
+        }
+
+        public override void UpdateDead()
+        {
+            if (!Symbio)
+            {
+                Mario = 0;
+                GiveBirth = 0;
+            }
+        }
+
+        public override void UpdateEquips()
+        {
+            if (!Symbio)
+            {
+                Mario = 0;
+                GiveBirth = 0;
+            }
         }
 
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
@@ -90,6 +113,35 @@ namespace MultidimensionMod.Common.Players
 
         public override void PreUpdate()
         {
+        }
+
+        public override void PostUpdateMiscEffects()
+        {
+            if (Symbio)
+            {
+                int damage = 75;
+                Mario++;
+                if (Mario >= 3000 && Mario < 6000) //Stage 1 initiated
+                {
+                    Player.endurance += 0.05f;
+                }
+                else if (Mario >= 6000 && Mario < 12000) //Stage 2 initiated
+                {
+                    Player.endurance -= 0.10f;
+                }
+                else if (Mario >= 12000) //Stage 3 initiated
+                {
+                    GiveBirth++;
+                    Player.statLifeMax2 += 20;
+                    Mario = 12000;
+                }
+                if (GiveBirth == 240)
+                {
+                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Blurb"));
+                    Projectile.NewProjectile(Player.GetSource_Accessory(new Item(ModContent.ItemType<GlowingFungiScarf>())), Player.Center, new Vector2(0, 0), ModContent.ProjectileType<SymbioHatchling>(), damage, 0f, Player.whoAmI);
+                    GiveBirth = 0;
+                }
+            }
         }
 
         public override void UpdateBadLifeRegen()

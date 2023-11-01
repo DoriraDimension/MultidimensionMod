@@ -125,7 +125,7 @@ Mods: {
 
 			Nihil: {
 				// DisplayName: Nihil
-				// Description: Mods.MultidimensionMod.Buffs.Nihil.Description
+				// Description: Void energy has disabled defense
 			}
 		}
 
@@ -135,7 +135,7 @@ Mods: {
 				// Tooltip: Does nothing at the moment
 				/* Lore:
 					'''
-					One of the creation titan's many crystal eyes that fell off from natural causes.
+					One of the creation titan's many crystal eyes that fell off.
 					Scelestians like to keep them as special tokens of good fortune,
 					showing their deep friendship with the titan.
 					''' */
@@ -159,7 +159,7 @@ Mods: {
 					''' */
 				/* Lore:
 					'''
-					Some Jungle people went overboard with their protection, wearing toxic scarfs from a now extinct flora
+					Some Jungle people went overboard with their protection, wearing toxic scarfs for self defense.
 					These are extremely dangerous for the wearer as just a single missstep could inject its deadly toxins,
 					killing them over the course of a couple minutes.
 					''' */
@@ -171,7 +171,11 @@ Mods: {
 					'''
 					Increases all damage and crit chance by 4%, increases defense by 6 and damage reduction by 4% when in the Desert or Snow biome.
 					Increases defense by 4 when under 50% life
-					Getting hit while in the snow biome will release frost scales that linger on the ground for a short time
+					Getting hit will release frost scales that linger on the ground for a short time
+					Getting hit while mana is completely full will trigger a shockwave that scales with magic damage and ignores 20 defense
+					The initial damage depends on your maximum mana
+					All mana is lost upon triggering this effect
+					Shockwave damage gets doubled upon entering hardmode
 					''' */
 			}
 
@@ -182,6 +186,8 @@ Mods: {
 					'''
 					The divine medaillon that is only given to high ranked Scelestians, like the eye jewel,
 					this is a token of respect towards their titan.
+					The three triangles and eye represent the aspects of Origin, those aspects being mind, soul and body,
+					as well as the deity itself in the center.
 					Losing or breaking it is seen as a sign of great misfortune.
 					''' */
 			}
@@ -219,7 +225,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Increases defense by 4 and damage reduction by 4% when in the Snow biome
-					Getting hit while in the snow biome will release frost scales that linger on the ground for a short time
+					Getting hit will release frost scales that linger on the ground for a short time
 					''' */
 				/* Lore:
 					'''
@@ -310,13 +316,16 @@ Mods: {
 			}
 
 			GlowingFungiScarf: {
-				// DisplayName: Glowing Fungi Scarf
+				// DisplayName: Mark of Symbiosis
 				/* Tooltip:
 					'''
-					A scarf made out of several mushrooms, it glows.
-					Increases ranged damage by 5%.
-					Increases max life by 10 when in a glowing mushroom biome
-					Increases max life by 25 and damage reduction by 5% when in a glowing mushroom biome in hardmode.
+					You emit blue light
+					You deepen your symbiosis with the mushrooms over time, symbiosis has 3 stages
+					Stage 1: Damage reduction is increased by 5%
+					Stage 2: Damage reduction is decreased by 10%
+					Stage 3: The brightness of your glow is greatly increased and you periodically release mushroom hatchlings
+					Additionally, max life is increased by 20
+					Equipping the Healthy Cap grants the hatchlings weak lifesteal
 					''' */
 			}
 
@@ -343,6 +352,13 @@ Mods: {
 					Grants geodes unique effects depending on their type
 					New effects are added when entering hardmode
 					Increases the chance of obtaining Geodes drastically
+					''' */
+				/* Lore:
+					'''
+					Geodes like this are often referred to as "Earthen Treasures", 
+					since they contain a good amount of energy and rare minerals.
+					It is said that they are the shedded remnant of a serpent's rocky skin,
+					a reputation that lured many great adventurers deep underground, only to never return.
 					''' */
 			}
 
@@ -390,6 +406,12 @@ Mods: {
 					Void energy is replenished after 10 seconds
 					Dashing into an enemy inflicts them with the Nihil debuff for 2 seconds
 					Enemies inflicted with Nihil lose all their defense
+					''' */
+				/* Lore:
+					'''
+					Void energy does not belong here, and it was never supposed to mix with dimensional energy.
+					But here we are, void matter that was tainted by light and turned bright, 
+					with the darkness still trying to reclaim its property.
 					''' */
 			}
 
@@ -464,7 +486,14 @@ Mods: {
 					'''
 					Gives immunity to electrified.
 					Increases movement speed by 8%, damage by 5% and defense by 5 when it is raining
-					The storm is a untamed force of nature and so are the Eels that follow it
+					''' */
+				/* Lore:
+					'''
+					It is not rare that one can observe these creatures during storms at beaches,
+					but never approach one, as it will most likely be the last thing you see.
+					Even worse, sometimes they can be seen carrying their living prey off into the distance,
+					towards a faraway sea where you will be lost forever.
+					The storm is an untamed force of nature and so are the Eels that follow it
 					''' */
 			}
 
@@ -483,7 +512,7 @@ Mods: {
 				/* Lore:
 					'''
 					Old natives of the jungle would wear this to hurt animals that attack them but would also hurt themself,
-					a small price to pay to be able to escape an attacking predator
+					a small price to pay to be able to escape an attacking predator.
 					''' */
 			}
 
@@ -562,7 +591,7 @@ Mods: {
 					'''
 					During their battles against the drakes, they needed all protection they could get,
 					a small mistake meant death.
-					It was forged by combining their own alloys with the scales of their sworn enemies
+					It was forged by combining their own alloys with the scales of their sworn enemies,
 					this made them extremely resistant against any of their attacks.
 					''' */
 			}
@@ -574,7 +603,7 @@ Mods: {
 					'''
 					During their battles against the drakes, they needed all protection they could get,
 					a small mistake meant death.
-					It was forged by combining their own alloys with the scales of their sworn enemies
+					It was forged by combining their own alloys with the scales of their sworn enemies,
 					this made them extremely resistant against any of their attacks.
 					''' */
 			}
@@ -586,7 +615,7 @@ Mods: {
 					'''
 					During their battles against the drakes, they needed all protection they could get,
 					a small mistake meant death.
-					They were forged by combining their own alloys with the scales of their sworn enemies
+					They were forged by combining their own alloys with the scales of their sworn enemies,
 					this made them extremely resistant against any of their attacks.
 					''' */
 			}
@@ -635,7 +664,8 @@ Mods: {
 
 			DarkMatterClump: {
 				// DisplayName: Void Matter
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					The physical incarnation of the nothingness outside our plain of existence.
 					A strange fog is emitting from it,
@@ -646,6 +676,11 @@ Mods: {
 			Dimensium: {
 				// DisplayName: Dimensium
 				/* Tooltip:
+					'''
+					Used as fuel for most Dimensional Forge item recipes
+					Can be used as currency for certain shops
+					''' */
+				/* Lore:
 					'''
 					The most common dimensional energy in form of a crystal
 					It is a valuable source of energy amongst the people who know of its existence
@@ -660,7 +695,8 @@ Mods: {
 
 			FrostScale: {
 				// DisplayName: Frost Scale
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					The scale of a juvenile ice drake, its cold and soft.
 					Ice Drakes reside underground until they become too big for the small ice caves.
@@ -679,7 +715,8 @@ Mods: {
 
 			MadnessFragment: {
 				// DisplayName: Fragment of Madness
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					Madness-soaked piece of flesh, it still hasn't lost its mind burning capabilities.
 					Only a gaze touched being may carry this through the night,
@@ -766,9 +803,9 @@ Mods: {
 
 			VikingRelic: {
 				// DisplayName: Viking Relic
-				/* Tooltip:
+				// Tooltip: A piece of icy history
+				/* Lore:
 					'''
-					A piece of icy history
 					This special plating was only forged in the tundra by the Vikings during their neverending war against the drakes.
 					It was way more durable than drake scales and useful even outside the tundra.
 					The plating once had a name but was lost in time.
@@ -938,7 +975,7 @@ Mods: {
 				// DisplayName: Chelia Plushie
 				/* Tooltip:
 					'''
-					A cuddly plushie designed after a starborn.
+					A cuddly plushie designed after the second oldest starborn.
 					Why is Dorira selling these?
 					''' */
 			}
@@ -1445,12 +1482,12 @@ Mods: {
 					''' */
 				/* Lore:
 					'''
-					The Deity of Balance did not always have this power over time, 
-					previously there was a great species of serpents with that duty.
-					Unfortunately a chaotic force wiped most of them out.
-					To make up for this massive loss, 
-					a new entity was created to take their place,
-					this entity was much more reliable too.
+					The Deity of Balance came into existence when its predecessors
+					were not able to fulfill their duty anymore.
+					It exists in all dimensions, managing the concept of time everywhere at once,
+					being way more efficient than any other time deity.
+					Time is an important aspect of our universe, without it,
+					nothing can change and evolve, a aspect that is worth protecting.
 					''' */
 			}
 
@@ -1530,6 +1567,7 @@ Mods: {
 					'''
 					A cursemark signifies the presence of a powerful curse,
 					coming in all sorts of sizes, even be able to cover entire structures.
+					To destroy such an influence, one must destroy the curse's origin itself.
 					''' */
 			}
 
@@ -1564,7 +1602,7 @@ Mods: {
 				// Tooltip: Sends out mind shockwaves around the player
 				/* Lore:
 					'''
-					A forbidden technique that transforms the user's thoughts into energy waves that burst out in all directions.
+					This forbidden technique transforms the user's thoughts into energy waves that burst out in all directions.
 					Being a forbidden technique, it was mostly used by the worst people there is.
 					As told in old secret records, the spell gets stronger the more malicious the user's thoughts are, resulting in a devastating shockwave.
 					''' */
@@ -1667,7 +1705,7 @@ Mods: {
 				// Tooltip: Holds out a charged drill that inflicts Electrified.
 				/* Lore:
 					'''
-					This drill was used by the dimensional to tear rifts into dimensions.
+					This drill was used by the dimensional god to tear rifts into dimensions.
 					Dorira always wanted his own world and leave his old one behind
 					When this opportunity striked, he did not hesitate
 					Over the course of a long long time, he finally managed to create his very own world after many failed prototypes.
@@ -1771,15 +1809,26 @@ Mods: {
 			WingedNuisance: {
 				// DisplayName: Winged Nuisance
 				// Tooltip: Annoy your enemies until they go away
+				/* Lore:
+					'''
+					The winged spear of a hated entity nobody wishes to be near of.
+					Even if you approach it with a neutral intention, your mind becomes twisted,
+					your hatred stirs up and you cannot resist the urge to attack.
+					Only a powerful protection spell can save one from this hatred,
+					but even if you aren't affected, nobody would believe you.
+					''' */
 			}
 
 			AwakenedArchbird: {
-				// DisplayName: Awakened Archbird
+				// DisplayName: Phoenix God Flamescar
 				// Tooltip: Shoots shadowflame tentacles when swung and slows enemies when hit for 5 seconds
 				/* Lore:
 					'''
-					The sword is shaped like a legendary bird found in ancient depictions in the desert, it is full of dark flames.
-					Inscriptions say that one day the archbird will swoop down and bathe the earth in it's dark flames.
+					This ceremonial sword was used to burn marks into the skin of cult members, 
+					a painful process.
+					The purple mark shows true dedication to their god and must be done to fully join their cult,
+					anyone who refused was exiled as a heretic.
+					Outside of those ceremonies, this weapon was used by the cult leader for various dark rituals.
 					''' */
 			}
 
@@ -1928,7 +1977,7 @@ Mods: {
 					'''
 					A cursed thrusting sword empowered by malicious runes.
 					The curses that were laid onto this weapon are ancient and have no counterspell,
-					the hex isnt at its peak though and as such wont be able to cause any major harm
+					the hex isn't at its peak though and as such won't be able to cause any major harm
 					''' */
 			}
 
@@ -1939,11 +1988,12 @@ Mods: {
 
 			TundranaScythe: {
 				// DisplayName: Tundrana Scythe
-				// Tooltip: Shoots rotating sickles
+				// Tooltip: Shoots rotating ice sickles
 				/* Lore:
 					'''
-					A scythe from a world beyhond the freezing fog of the Frozen Underworld, 
-					it was once used by some sort of royal guard.
+					This weaponry was used by Royal Reaper Guards of the Subzero Ridge,
+					a world from beyond the freezing fog of the Frozen Underworld.
+					It has lost most of its power over time.
 					''' */
 			}
 
@@ -1956,7 +2006,7 @@ Mods: {
 					''' */
 				/* Talk:
 					'''
-						[c/ff8000:Thanks for picking me up by the way.]
+					[c/ff8000:Thanks for picking me up by the way.]
 					[c/ff8000:This punk thinks we killed his lord even though we didn't do anything like that.]
 					[c/ff8000:And even then, it was HIS lord who started these pointless fights against us.]
 					[c/ff8000:If I see this guy ever again, I swear I'm gonna lose it]
@@ -2067,7 +2117,7 @@ Mods: {
 
 			DesertEagle: {
 				// DisplayName: Desert Eagle
-				// Tooltip: Did someone squish this bird into a gun shape, wth?
+				// Tooltip: The lamest joke all across dimensions.
 			}
 
 			MetalWormGun: {
@@ -2084,7 +2134,7 @@ Mods: {
 				// DisplayName: Cursed Maw
 				/* Tooltip:
 					'''
-					A grotesque weapon, almost seems to be alive...
+					This grotesque weapon almost seems to be alive...
 					Shoots a cursed fireball that erupts into smaller flames upon hitting an enemy
 					''' */
 			}
@@ -2144,7 +2194,7 @@ Mods: {
 				// DisplayName: Dark Rebels
 				/* Tooltip:
 					'''
-					Summons a brave Darkling who is ready to defeat the void.
+					Calls a brave Darkling to your side, ready to defeat the void.
 					Only the bravest Darklings who hide in the dungeon will go outside on their own.
 					''' */
 			}
@@ -2333,10 +2383,11 @@ Mods: {
 
 			DevilSilk: {
 				// DisplayName: Devilish Silk
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
-					Soft silk cloth worn by Victims, it somehow stays warm, even in this frozen environment
-					It is said that this warmth comes from the sins of a great devil, integrated into this cloth
+					Soft silk cloth worn by Victims, it somehow stays warm, even in this frozen environment.
+					It is said that this warmth comes from the sins of a great devil, integrated into this cloth.
 					''' */
 			}
 
@@ -2390,7 +2441,7 @@ Mods: {
 				// DisplayName: Vanilla Undowner
 				/* Tooltip:
 					'''
-					Left click to undown all Pre-Hardmode vanilla bosses except Wall of Flesh
+					Left click to undown all Pre-Hardmode vanilla bosses except the Wall of Flesh
 					Right click to undown all Hardmode vanilla bosses
 					''' */
 			}
@@ -2409,9 +2460,8 @@ Mods: {
 				// Tooltip: Grants immunity to Madness
 				/* Lore:
 					'''
-					This mask was forged from a special alloy, it is supposed to fend off any mind invading effects
-					The people who made it only finished it shortly before madness rampaged across their city,
-					in that case, only a few selected members were actually protected against it.
+					Its production started too late and only a few were finished, 
+					madness creeped and only those chosen could resist with their help.
 					''' */
 			}
 
@@ -2532,7 +2582,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Right-click to open
-					A old bag carried by an Imp
+					An old bag carried by an Imp
 					It seems to contain several pieces of clothing
 					There is a note attached to it
 					[c/fabd16:"Set them all ablaze with your many minions"]
@@ -2672,7 +2722,7 @@ Mods: {
 					'''
 					A very pricey mushroom only found in the Scarlet Mycelium Forest
 					Eating it is said to awaken secret powers... 
-					or stir up unwanted fury of a sleeping king
+					or stir up unwanted fury of a sleeping king.
 					''' */
 			}
 
@@ -2786,7 +2836,7 @@ Mods: {
 				// DisplayName: Coastal Tide Truffle
 				/* Tooltip:
 					'''
-					A unique blue mushroom that grows at the shores of the ocean, 
+					A unique blue mushroom that grows at the shores oceans, 
 					its roots allow it to grow in sand.
 					''' */
 			}
@@ -2871,8 +2921,8 @@ Mods: {
 				/* Tooltip:
 					'''
 					An otherworldly mushroom that seems to distort space-time around it.
-					Just holding this in your hand makes you uncomfortable.
-					Maybe you aren't worthy enough to bathe in its presence.
+					Just holding this in your hand makes you uncomfortable,
+					maybe you aren't worthy enough to bathe in its presence.
 					''' */
 			}
 
@@ -2892,8 +2942,8 @@ Mods: {
 			}
 
 			ConfusingMushroom: {
-				// DisplayName: Confusing Mushroom
-				// Tooltip: ""
+				// DisplayName: Feudal Fungus caller
+				// Tooltip: Callers the Fungus Feud
 			}
 
 			FungusBox: {
@@ -3107,6 +3157,7 @@ Mods: {
 			// VulcanExplosion.DisplayName: Vulcan Explosion
 			// FrostScaleProj.DisplayName: Frost Scale Proj
 			// ManaShockwave.DisplayName: Mana Shockwave
+			// SymbioHatchling.DisplayName: Symbio Hatchling
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -3450,7 +3501,7 @@ Mods: {
 
 		SpecialTooltips: {
 			// Viewer: Hold [Shift] to view lore
-			// Listen: Holy [Shift] to listen closer
+			// Listen: Hold [Shift] to listen closer
 		}
 	}
 }

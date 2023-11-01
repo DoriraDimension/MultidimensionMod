@@ -51,6 +51,7 @@ namespace MultidimensionMod.Items.Accessories
             }
         }
 
+        //pretty much Shade Cloak, Dashmaster and Sharp Shadow from Hollow Knight lol
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.GetModPlayer<VoidDashPlayer>().VoidDashEquipped = true;

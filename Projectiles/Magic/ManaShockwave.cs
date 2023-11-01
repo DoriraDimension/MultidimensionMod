@@ -27,7 +27,7 @@ namespace MultidimensionMod.Projectiles.Magic
             Projectile.penetrate = -1;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = -1;
-            Projectile.timeLeft = 180;
+            Projectile.timeLeft = 90;
             Projectile.scale = 1;
             Projectile.alpha = 200;
             Projectile.ArmorPenetration = 20;
@@ -35,7 +35,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
         public override void AI()
         {
-            Projectile.scale += 0.060f;
+            Projectile.scale += 0.085f;
         }
 
         public override bool PreDraw(ref Color lightColor)
