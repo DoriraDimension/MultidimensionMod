@@ -36,10 +36,15 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 			Item.channel = true;
 		}
 
-		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+        public override bool CanUseItem(Player player)
+        {
+            return player.ownedProjectileCounts[Item.shoot] < 20;
+        }
+
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
 			Projectile.NewProjectile(source, new Vector2(player.Center.X + (float)Main.rand.Next(-60, 60), player.Center.Y + (float)Main.rand.Next(-60, 60)), velocity, type, damage, knockback, Main.myPlayer);
-			return player.ownedProjectileCounts[Item.shoot] < 20;
+			return false;
 		}
 
 		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)

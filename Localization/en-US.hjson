@@ -1628,7 +1628,7 @@ Mods: {
 				Tooltip:
 					'''
 					A staff that was restored from an old relic.
-					It summons a freezing aura at the cursor position that inflicts Frostburn
+					Summons a freezing aura at the cursor position that inflicts Frostburn
 					'''
 			}
 

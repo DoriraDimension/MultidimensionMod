@@ -16,6 +16,7 @@ using Terraria.GameInput;
 using Terraria.Audio;
 using Terraria.Localization;
 using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Dusts;
 
 namespace MultidimensionMod.Common.Players
 {
@@ -224,6 +225,10 @@ namespace MultidimensionMod.Common.Players
                     player.KillMe(PlayerDeathReason.ByCustomReason(player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.MonarchHeart")), 1000.0, 0);
                 }
             }
+        }
+
+        public override void DrawEffects(PlayerDrawSet drawInfo, ref float r, ref float g, ref float b, ref float a, ref bool fullBright)
+        {
         }
 
         public override void OnHitNPCWithItem(Item item, NPC target, NPC.HitInfo hit, int damageDone)

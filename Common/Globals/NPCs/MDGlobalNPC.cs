@@ -136,7 +136,7 @@ namespace MultidimensionMod
             }
         }
 
-		public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)
+        public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)
         {
 			if (spawnInfo.Player.InModBiome<FrozenUnderworld>())
 			{

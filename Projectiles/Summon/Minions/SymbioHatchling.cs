@@ -21,7 +21,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
             Projectile.width = 34;
             Projectile.height = 34;
             Projectile.friendly = true;
-            Projectile.DamageType = DamageClass.Generic;
+            Projectile.DamageType = DamageClass.Summon;
             Projectile.tileCollide = true;
             Projectile.timeLeft = 300;
         }

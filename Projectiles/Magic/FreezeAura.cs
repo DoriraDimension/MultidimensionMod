@@ -26,7 +26,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
         public override void AI()
         {
-            if (Main.rand.NextBool(3))
+            if (Main.rand.NextBool(2))
             {
                 int num104 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.IceTorch, Projectile.velocity.X * 0.30f, Projectile.velocity.Y * 0.30f, 200, default(Color), 3f);
                 Main.dust[num104].noGravity = true;
