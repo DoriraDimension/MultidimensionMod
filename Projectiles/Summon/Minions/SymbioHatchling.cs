@@ -26,11 +26,6 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
             Projectile.timeLeft = 300;
         }
 
-        public override void OnKill(int timeLeft)
-        {
-            SoundEngine.PlaySound(SoundID.NPCHit1, Projectile.position);
-        }
-
         public override void AI()
         {
             int frameSpeed = 6;
@@ -114,6 +109,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
+            SoundEngine.PlaySound(SoundID.NPCHit1, Projectile.position);
             Player player = Main.player[Projectile.owner];
             if (player.GetModPlayer<MDPlayer>().Healthy)
             {

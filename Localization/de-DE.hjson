@@ -1625,7 +1625,11 @@ Mods: {
 
 			CoolingStaff: {
 				// DisplayName: Cooling Staff
-				// Tooltip: A staff that was restored from an old relic, it shoots a icicle that bursts into 4 smaller icicles.
+				/* Tooltip:
+					'''
+					A staff that was restored from an old relic.
+					It summons a freezing aura at the cursor position that inflicts Frostburn
+					''' */
 			}
 
 			LophiiformesBaculum: {
@@ -3158,6 +3162,7 @@ Mods: {
 			// FrostScaleProj.DisplayName: Frost Scale Proj
 			// ManaShockwave.DisplayName: Mana Shockwave
 			// SymbioHatchling.DisplayName: Symbio Hatchling
+			// FreezeAura.DisplayName: Freeze Aura
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
