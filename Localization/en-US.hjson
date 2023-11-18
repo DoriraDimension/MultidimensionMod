@@ -2976,6 +2976,20 @@ Mods: {
 					By SpectralAves
 					'''
 			}
+
+			RottenMemory: {
+				DisplayName: Rotten Memory
+				Tooltip:
+					'''
+					The memory of a past life, the rotting corpse of what once was.
+					A life before its independence existed
+					'''
+			}
+
+			TheDapperCap: {
+				DisplayName: The Dapper Cap
+				Tooltip: A stylish mushroom cap only worn by the coolest fun guys
+			}
 		}
 
 		SetBonuses: {
@@ -3402,6 +3416,7 @@ Mods: {
 			FungusBoxPlaced.MapEntry: Music Box
 			MonarchBoxPlaced.MapEntry: Music Box
 			ShroomForestBoxPlaced.MapEntry: Music Box
+			RottenMemoryPlaced.MapEntry: Rotten Memory
 		}
 
 		DeathMessages: {

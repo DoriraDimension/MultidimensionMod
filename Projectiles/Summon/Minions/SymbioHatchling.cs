@@ -4,6 +4,8 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.GameContent;
 
 namespace MultidimensionMod.Projectiles.Summon.Minions
 {
@@ -115,6 +117,19 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
             {
                 player.Heal(2);
             }
+        }
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Player player = Main.player[Projectile.owner];
+            Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+            if (player.GetModPlayer<MDPlayer>().Healthy)
+            {
+                texture = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Summon/Minions/SymbioHatchlingRed").Value;
+            }
+            int frameHeight = texture.Height / 5;
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, new Rectangle(0, frameHeight * Projectile.frame, texture.Width, frameHeight), Color.White, Projectile.rotation, new Vector2(texture.Width, frameHeight) * .5f, Vector2.One, SpriteEffects.None, 0);
+            return false;
         }
     }
 }

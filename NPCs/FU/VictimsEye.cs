@@ -38,7 +38,6 @@ namespace MultidimensionMod.NPCs.FU
 			NPC.noGravity = true;
 			NPC.noTileCollide = true;
 			NPC.aiStyle = -1;
-			Banner = NPC.type;
 			SpawnModBiomes = new int[1] { ModContent.GetInstance<FrozenUnderworld>().Type };
 		}
 

@@ -5,6 +5,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Audio;
 
 namespace MultidimensionMod.Projectiles.Summon.Minions
 {
@@ -96,7 +97,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 			Vector2 targetCenter = Projectile.position;
 			bool foundTarget = false;
 
-			if (player.HasMinionAttackTargetNPC)
+            if (player.HasMinionAttackTargetNPC)
 			{
 				NPC npc = Main.npc[player.MinionAttackTargetNPC];
 				float between = Vector2.Distance(npc.Center, Projectile.Center);
@@ -137,9 +138,9 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 			float speed = 8f;
 			float inertia = 20f;
 
-			if (foundTarget)
+            if (foundTarget)
 			{
-				if (distanceFromTarget > 40f)
+                if (distanceFromTarget > 40f)
 				{
 					Vector2 direction = targetCenter - Projectile.Center;
 					direction.Normalize();
@@ -177,10 +178,10 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 					Projectile.rotation += MathHelper.Pi;
 				}
 			}
-			#endregion
+            #endregion
 
-			#region Animation and visuals
-			if (!foundTarget)
+            #region Animation and visuals
+            if (!foundTarget)
 			{
 				Projectile.rotation = Projectile.velocity.X * 0.03f;
 			}
