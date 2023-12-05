@@ -235,7 +235,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     switch (ID)
                     {
                         case 0: //summon minions
-                            if (NPC.CountNPCS(ModContent.NPCType<RedMushling>()) < 4) // If there's less than 4 Boomshrooms alive atm, spawn more
+                            if (NPC.CountNPCS(ModContent.NPCType<RedMushling>()) < 4)
                             {
                                 NPC.defense = 20;
                                 NPC.velocity.X = 0;
@@ -261,7 +261,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                                     NPC.netUpdate = true;
                                 }
                             }
-                            else // If there's 4 or more Boomshrooms alive atm, do a different attack
+                            else
                             {
                                 AIState = ActionState.Walk;
                                 NPC.netUpdate = true;

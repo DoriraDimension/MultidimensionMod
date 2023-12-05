@@ -2990,6 +2990,22 @@ Mods: {
 				// DisplayName: The Dapper Cap
 				// Tooltip: A stylish mushroom cap only worn by the coolest fun guys
 			}
+
+			TheStem: {
+				// DisplayName: The Stem
+				/* Tooltip:
+					'''
+					Using a mana potion activates Indigo Injection
+					Indigo Injection disables mana consumption for 6 seconds
+					After the effect ends, there is a 2 minute cooldown
+					''' */
+				/* Lore:
+					'''
+					A mushroom parasite that formed from a brainstem, it clings to its host.
+					It formed inside the glowing monarch with its own power, but why would it create a parasite that just connects it to itself?
+					Or is there more going on inside its head?
+					''' */
+			}
 		}
 
 		SetBonuses: {
@@ -3177,6 +3193,7 @@ Mods: {
 			// ManaShockwave.DisplayName: Mana Shockwave
 			// SymbioHatchling.DisplayName: Symbio Hatchling
 			// FreezeAura.DisplayName: Freeze Aura
+			// Mushshot.DisplayName: Telekinetic Bullet
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability

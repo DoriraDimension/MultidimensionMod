@@ -3,7 +3,7 @@ using MultidimensionMod.Projectiles.Summon.Minions;
 using MultidimensionMod.Projectiles.Summon.Sentries;
 using MultidimensionMod.Projectiles.Typeless;
 using MultidimensionMod.Projectiles.Magic;
-using MultidimensionMod.Buffs.Ability;
+using MultidimensionMod.Buffs.Cooldowns;
 using MultidimensionMod.Items.Accessories;
 using System;
 using System.Collections.Generic;
@@ -334,7 +334,7 @@ namespace MultidimensionMod.Common.Players
                     }
                 }
             }
-            if (DesertNeck && Player.statMana == Player.statManaMax)
+            if (DesertNeck && Player.statMana == Player.statManaMax && !Player.HasBuff(ModContent.BuffType<ManaBurstCooldown>()))
             {
                 int damage = Player.statManaMax;
                 if (Main.hardMode)
@@ -343,6 +343,7 @@ namespace MultidimensionMod.Common.Players
                 }
                 if (Main.myPlayer == Player.whoAmI)
                 {
+                    Player.AddBuff(ModContent.BuffType<ManaBurstCooldown>(), 300);
                     SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/ManaBurst"));
                     Player.statMana -= Player.statMana;
                     Item item = DesertNecklace;
