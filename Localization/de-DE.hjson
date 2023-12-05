@@ -130,7 +130,7 @@ Mods: {
 
 			ManaBurstCooldown: {
 				// DisplayName: Mana Burst Cooldown
-				// Description: Mods.MultidimensionMod.Buffs.ManaBurstCooldown.Description
+				// Description: Cannot unleash mana shockwaves
 			}
 		}
 
