@@ -136,6 +136,15 @@ namespace MultidimensionMod
             }
         }
 
+		public override Color? GetAlpha(NPC npc, Color drawColor)
+		{
+			if (Nihil)
+			{
+                return Color.Black;
+            }
+			return null;
+		}
+
         public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)
         {
 			if (spawnInfo.Player.InModBiome<FrozenUnderworld>())

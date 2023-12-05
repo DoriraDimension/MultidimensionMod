@@ -127,6 +127,11 @@ Mods: {
 				// DisplayName: Nihil
 				// Description: Void energy has disabled defense
 			}
+
+			ManaBurstCooldown: {
+				// DisplayName: Mana Burst Cooldown
+				// Description: Mods.MultidimensionMod.Buffs.ManaBurstCooldown.Description
+			}
 		}
 
 		Items: {
@@ -176,6 +181,7 @@ Mods: {
 					The initial damage depends on your maximum mana
 					All mana is lost upon triggering this effect
 					Shockwave damage gets doubled upon entering hardmode
+					The shockwave has a 5 second cooldown
 					''' */
 			}
 
@@ -201,6 +207,7 @@ Mods: {
 					The initial damage depends on your maximum mana
 					All mana is lost upon triggering this effect
 					Shockwave damage gets doubled upon entering hardmode
+					The shockwave has a 5 second cooldown
 					''' */
 				/* Lore:
 					'''
@@ -2997,6 +3004,7 @@ Mods: {
 					'''
 					Using a mana potion activates Indigo Injection
 					Indigo Injection disables mana consumption for 6 seconds
+					Mana Sickness also has no effect during this time period
 					After the effect ends, there is a 2 minute cooldown
 					''' */
 				/* Lore:

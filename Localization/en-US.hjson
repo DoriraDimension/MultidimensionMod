@@ -127,6 +127,11 @@ Mods: {
 				DisplayName: Nihil
 				Description: Void energy has disabled defense
 			}
+
+			ManaBurstCooldown: {
+				DisplayName: Mana Burst Cooldown
+				Description: Cannot unleash mana shockwaves
+			}
 		}
 
 		Items: {
