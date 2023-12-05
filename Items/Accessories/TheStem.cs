@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using System;
+using MultidimensionMod.Common.Players;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -28,7 +29,7 @@ namespace MultidimensionMod.Items.Accessories
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-
+            player.GetModPlayer<MDPlayer>().Stem = true;
         }
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)

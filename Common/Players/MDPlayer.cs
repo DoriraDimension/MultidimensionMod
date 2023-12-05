@@ -5,6 +5,7 @@ using MultidimensionMod.Projectiles.Typeless;
 using MultidimensionMod.Projectiles.Magic;
 using MultidimensionMod.Buffs.Cooldowns;
 using MultidimensionMod.Items.Accessories;
+using MultidimensionMod.Buffs.Ability;
 using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
@@ -54,6 +55,9 @@ namespace MultidimensionMod.Common.Players
         public bool Symbio = false;
         public int Mario;
         public int GiveBirth;
+        public bool Stem = false;
+        public bool manaSick = false;
+        public int manaSickTimer;
 
         public override void ResetEffects()
         {
@@ -75,6 +79,7 @@ namespace MultidimensionMod.Common.Players
             DrakeShield = false;
             DesertNeck = false;
             Symbio = false;
+            Stem = false;
         }
 
         public override void UpdateDead()
@@ -92,6 +97,14 @@ namespace MultidimensionMod.Common.Players
             {
                 Mario = 0;
                 GiveBirth = 0;
+            }
+            if (Stem)
+            {
+                if (Player.manaSick && Player.whoAmI == Main.myPlayer && !Player.HasBuff(ModContent.BuffType<InjectionCooldown>()))
+                {
+                    Player.AddBuff(ModContent.BuffType<IndigoInjection>(), 360);
+                    Player.AddBuff(ModContent.BuffType<InjectionCooldown>(), 12360);
+                }
             }
         }
 

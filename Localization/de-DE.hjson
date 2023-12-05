@@ -132,6 +132,16 @@ Mods: {
 				// DisplayName: Mana Burst Cooldown
 				// Description: Cannot unleash mana shockwaves
 			}
+
+			IndigoInjection: {
+				// DisplayName: Indigo Injection
+				// Description: Mods.MultidimensionMod.Buffs.IndigoInjection.Description
+			}
+
+			InjectionCooldown: {
+				// DisplayName: Injection Cooldown
+				// Description: Mods.MultidimensionMod.Buffs.InjectionCooldown.Description
+			}
 		}
 
 		Items: {

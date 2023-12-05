@@ -132,6 +132,16 @@ Mods: {
 				DisplayName: Mana Burst Cooldown
 				Description: Cannot unleash mana shockwaves
 			}
+
+			IndigoInjection: {
+				DisplayName: Indigo Injection
+				Description: The symbiosis floods you with energy
+			}
+
+			InjectionCooldown: {
+				DisplayName: Injection Cooldown
+				Description: Cannot connect to the stem
+			}
 		}
 
 		Items: {
@@ -341,7 +351,7 @@ Mods: {
 				Tooltip:
 					'''
 					A healthy mushroom filled with healing potion liquid.
-					Increases the amount of HP healed by mushrooms to 60.
+					Increases the amount of HP healed by mushrooms to 40.
 					'''
 			}
 
