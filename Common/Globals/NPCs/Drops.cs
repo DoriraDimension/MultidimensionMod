@@ -257,11 +257,6 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 npcLoot.Add(ItemDropRule.Common(ItemID.Bone, 1, 3, 6));
             }
 
-            if ((NPC.type == NPCID.TinyMossHornet) || (NPC.type == NPCID.LittleMossHornet) || (NPC.type == NPCID.BigMossHornet) || (NPC.type == NPCID.GiantMossHornet) || (NPC.type == NPCID.MossHornet))
-            {
-                npcLoot.Add(ItemDropRule.Common(ItemID.Stinger, 2));
-            }
-
             if (NPC.type == NPCID.BigMimicHallow)
             {
                 npcLoot.Add(ItemDropRule.Common(ItemID.LightShard, 1, 1, 3));
