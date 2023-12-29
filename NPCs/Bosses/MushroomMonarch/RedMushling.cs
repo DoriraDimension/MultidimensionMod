@@ -128,5 +128,3 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
         }
     }
 }
-
-

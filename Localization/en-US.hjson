@@ -1847,7 +1847,7 @@ Mods: {
 					'''
 					This ceremonial sword was used to burn marks into the skin of cult members, 
 					a painful process.
-					The purple mark shows true dedication to their god and must be done to fully join their cult,
+					The deep red mark shows true dedication to their god and must be done to fully join their cult,
 					anyone who refused was exiled as a heretic.
 					Outside of those ceremonies, this weapon was used by the cult leader for various dark rituals.
 					'''
@@ -2471,7 +2471,7 @@ Mods: {
 				DisplayName: Music Box (Night of Madness)
 				Tooltip:
 					'''
-					Visage's Visit
+					Plays Visage's Visit
 					By DrVoodoo
 					'''
 			}
@@ -2857,7 +2857,7 @@ Mods: {
 				DisplayName: Coastal Tide Truffle
 				Tooltip:
 					'''
-					A unique blue mushroom that grows at the shores oceans, 
+					A unique blue mushroom that grows at ocean shores, 
 					its roots allow it to grow in sand.
 					'''
 			}
@@ -3212,6 +3212,9 @@ Mods: {
 			SymbioHatchling.DisplayName: Symbio Hatchling
 			FreezeAura.DisplayName: Freeze Aura
 			Mushshot.DisplayName: Telekinetic Bullet
+			EvokedMushroots.DisplayName: Evoked Mushroots
+			IlluminaRing.DisplayName: Illumina Ring
+			Mushshot2.DisplayName: Mushshot2
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -3318,6 +3321,7 @@ Mods: {
 			AldinGrabberEscape.DisplayName: ???
 			AldinGrabber.DisplayName: ???
 			FeudalFungus.DisplayName: Feudal Fungus
+			GlowSentry.DisplayName: Empowered Glowing Mushroom
 		}
 
 		Dialogue: {

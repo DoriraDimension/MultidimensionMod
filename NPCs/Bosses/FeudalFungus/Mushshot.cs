@@ -21,14 +21,19 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             Projectile.hostile = true;
             Projectile.ignoreWater = true;
             Projectile.penetrate = 1;
+            Projectile.tileCollide = false;
             Projectile.alpha = 60;
-            Projectile.timeLeft = 180;
+            Projectile.timeLeft = 240;
         }
 
         public override void AI()
         {
             Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
             Projectile.rotation = Projectile.velocity.ToRotation();
+            if (Projectile.spriteDirection == -1)
+            {
+                Projectile.rotation += MathHelper.Pi;
+            }
             for (int num189 = 0; num189 < 1; num189++)
             {
                 int num190 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.GlowingMushroom, 0f, 0f, 0);

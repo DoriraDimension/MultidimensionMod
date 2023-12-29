@@ -1,6 +1,7 @@
 using MultidimensionMod.NPCs.Bosses.FeudalFungus;
 using Terraria;
 using Terraria.ID;
+using Terraria.Audio;
 using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
 using Terraria.Localization;
@@ -31,11 +32,6 @@ namespace MultidimensionMod.Items.Summons
             Item.consumable = true;
         }
 
-        public override bool? UseItem(Player player)
-        {
-            return true;
-        }
-
         public override bool CanUseItem(Player player)
         {
             if (player.ZoneGlowshroom)
@@ -46,24 +42,23 @@ namespace MultidimensionMod.Items.Summons
             {
                 return false;
             }
-            if (NPC.AnyNPCs(ModContent.NPCType<FeudalFungus>()))
+            if (!NPC.AnyNPCs(ModContent.NPCType<FeudalFungus>()))
             {
                 return false;
             }
             return false;
         }
 
+        public override bool? UseItem(Player player)
+        {
+            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<FeudalFungus>());
+            SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), player.position);
+            return true;
+        }
+
         public void SpawnBoss(Player player, string name, string displayName)
         {
 
-        }
-
-        public override void AddRecipes()
-        {
-            CreateRecipe()
-            .AddIngredient(ItemID.GlowingMushroom, 10)
-            .AddTile(TileID.WorkBenches)
-            .Register();
         }
     }
 }

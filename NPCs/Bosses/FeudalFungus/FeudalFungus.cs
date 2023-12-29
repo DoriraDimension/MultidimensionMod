@@ -16,6 +16,8 @@ using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
 using System.Collections.Generic;
 using Terraria.GameContent;
 using MultidimensionMod.Common.Players;
+using MultidimensionMod.Projectiles.Melee.Swords;
+using Terraria.Audio;
 
 namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 {
@@ -24,6 +26,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
     {
         public bool TitleCard = false;
         public int damage = 0;
+        public bool mad = false;
         public override void SendExtraAI(BinaryWriter writer)
         {
             base.SendExtraAI(writer);
@@ -52,16 +55,34 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 
         public enum ActionState
         {
+            TPose,
             Hovering,
-            GlowRing,
-            Roots,
-            SporeRain
+            Attack
         }
 
         public ActionState AIState
         {
             get => (ActionState)NPC.ai[0];
             set => NPC.ai[0] = (int)value;
+        }
+
+        public List<int> AttackList = new() { 0, 1, 2 }; //Summon ring, summon grabby roots, summon mushroom sentries
+        public List<int> CopyList = null;
+        public int ID { get => (int)NPC.ai[3]; set => NPC.ai[3] = value; }
+
+        void Attacks()
+        {
+            int attempts = 0;
+            while (attempts == 0)
+            {
+                if (CopyList == null || CopyList.Count == 0)
+                    CopyList = new List<int>(AttackList);
+                ID = CopyList[Main.rand.Next(0, CopyList.Count)];
+                CopyList.Remove(ID);
+                NPC.netUpdate = true;
+
+                attempts++;
+            }
         }
 
         public override void SetStaticDefaults()
@@ -134,13 +155,36 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 
 		public float[] internalAI = new float[5];
 
+        public override void ModifyIncomingHit(ref NPC.HitModifiers modifiers)
+        {
+            if (mad)
+            {
+                modifiers.FinalDamage *= 0.25f;
+            }
+            return;
+        }
+
         public int despawnTimer = 0;
         public int AISwitch = 0;
+        public int MakeItRain = 0;
         public int FireShroom = 0;
+        public int RingTime = 0;
+        public int RootTime = 0;
+        public int SentryTimer = 0;
+        public int Waking = 0; //Using NPC.alpha in an if statement didn't work, so another named timer I guess.
 
         public override void AI()
         {
-            NPC.alpha--;
+            if (!Main.player[NPC.target].ZoneGlowshroom) //Becomes very angry outside of the Glowing Mushroom biome
+            {
+                mad = true;
+            }
+            else
+            {
+                mad = false;
+            }
+            NPC.alpha -= 10;
+            Waking++;
             if (!TitleCard)
             {
                 if (!Main.dedServ)
@@ -151,125 +195,136 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             }
             Player player = Main.player[NPC.target];
 
-            NPC.rotation = 0;
-            if (NPC.alpha <= 1)
+            NPC.TargetClosest();
+
+            if (player.dead || !player.active || Vector2.Distance(player.Center, NPC.Center) > 5000)
+            {
+                NPC.TargetClosest();
+
+            }
+            if (Waking == 180) //Initiate AI
             {
                 AIState = ActionState.Hovering;
+                NPC.dontTakeDamage = false;
             }
 
             switch (AIState)
             {
+                case ActionState.TPose:
+                    NPC.Center = player.Center + new Vector2(0, -200);
+                    break;
                 case ActionState.Hovering:
                     AISwitch++;
-                    FungusHoverAI();
+                    FungusHoverAI(new Vector2(player.Center.X, player.Center.Y - 200), 0.5f);
                     FireShroom++;
-                    if (FireShroom == 120)
+                    MakeItRain++;
+                    if (FireShroom == 90) //Shoot projectile at the player
                     {
                         Vector2 targetCenter = player.position;
-                        float ProjSpeed = 2f;
+                        float ProjSpeed = 12f;
                         Vector2 velocity = targetCenter - NPC.Center;
+                        velocity.Normalize();
                         velocity *= ProjSpeed;
-                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, velocity.X, velocity.Y, ModContent.ProjectileType<Mushshot>(), 0, 0);
+                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, velocity.X, velocity.Y, ModContent.ProjectileType<Mushshot>(), 10, 0);
                         FireShroom = 0;
                     }
-                    if (AISwitch == 180)
+                    if (MakeItRain == 60) //Shoot spread upwards
                     {
-                        int choice = Main.rand.Next(3);
-                        if (choice == 0)
+                        for (int i = 0; i < 7; i++)
                         {
-                            AIState = ActionState.GlowRing;
-                            //Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, 0, 0, ModContent.ProjectileType<IlluminaRing>(), 0, 0);
-                            AISwitch = 0;
+                            Vector2 targetCenter = player.position;
+                            float ProjSpeed = 12f;
+                            Vector2 velocity = targetCenter - NPC.Center;
+                            velocity.Normalize();
+                            velocity *= ProjSpeed;
+                            Vector2 perturbedSpeed = new Vector2(NPC.velocity.X / 2, -17).RotatedByRandom(MathHelper.ToRadians(40));
+                            Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<Mushshot2>(), 8, 0);
+                            SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Blurb"), NPC.position);
                         }
-                        if (choice == 1)
-                        {
-                            AIState = ActionState.Roots;
-                            AISwitch = 0;
-                        }
-                        if (choice == 2)
-                        {
-                            AIState = ActionState.SporeRain;
-                            AISwitch = 0;
-                        }
+                        MakeItRain = 0;
+                    }
+                    if (AISwitch == 180) //Switch to different attack & reset all timers
+                    {
+                        AISwitch = 0;
+                        FireShroom = 0;
+                        MakeItRain = 0;
+                        Attacks();
+                        AIState = ActionState.Attack;
+
                     }
                     break;
-                case ActionState.GlowRing:
-                    AISwitch++;
-                    FungusGlowRingAI(player.Center);
-                    if (AISwitch == 180)
+                case ActionState.Attack:
+                    switch (ID)
                     {
-                        int choice = Main.rand.Next(3);
-                        if (choice == 0)
-                        {
-                            AIState = ActionState.Hovering;
-                            //Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, 0, 0, ModContent.ProjectileType<IlluminaRing>(), 0, 0);
-                            AISwitch = 0;
-                        }
-                        if (choice == 1)
-                        {
-                            AIState = ActionState.Roots;
-                            AISwitch = 0;
-                        }
-                        if (choice == 2)
-                        {
-                            AIState = ActionState.SporeRain;
-                            AISwitch = 0;
-                        }
-                    }
-                    break;
-                case ActionState.Roots:
-                    AISwitch++;
-                    if (AISwitch == 180)
-                    {
-                        int choice = Main.rand.Next(3);
-                        if (choice == 0)
-                        {
-                            AIState = ActionState.Hovering;
-                            AISwitch = 0;
-                        }
-                        if (choice == 1)
-                        {
-                            AIState = ActionState.GlowRing;
-                            //Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, 0, 0, ModContent.ProjectileType<IlluminaRing>(), 0, 0);
-                            AISwitch = 0;
-                        }
-                        if (choice == 2)
-                        {
-                            AIState = ActionState.SporeRain;
-                            AISwitch = 0;
-                        }
-                    }
-                    break;
-                case ActionState.SporeRain:
-                    AISwitch++;
-                    if (AISwitch == 180)
-                    {
-                        int choice = Main.rand.Next(3);
-                        if (choice == 0)
-                        {
-                            AIState = ActionState.Hovering;
-                            AISwitch = 0;
-                        }
-                        if (choice == 1)
-                        {
-                            AIState = ActionState.Roots;
-                            AISwitch = 0;
-                        }
-                        if (choice == 2)
-                        {
-                            AIState = ActionState.GlowRing;
-                            //Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, 0, 0, ModContent.ProjectileType<IlluminaRing>(), 0, 0);
-                            AISwitch = 0;
-                        }
+                        case 0: //Illumina Ring (spawns a ring projectile on the NPC and makes it move towards the player
+                            FungusGlowRingAI(player.Center);
+                            RingTime++;
+                            if (RingTime == 1)
+                            {
+                                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, 0, 0, ModContent.ProjectileType<IlluminaRing>(), 32, 0);
+                                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), NPC.position);
+                            }
+                            if (RingTime == 180)
+                            {
+                                AIState = ActionState.Hovering;
+                                RingTime = 0;
+                                NPC.netUpdate = true;
+                            }
+                            break;
+                        case 1: //Roots (Summons roots under the player's feet)
+                            FungusHoverAI(new Vector2(player.Center.X, player.Center.Y - 200), 0.5f);
+                            RootTime++;
+                            if (RootTime == 40)
+                            {
+                                Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X, player.Center.Y, 0, 0, ModContent.ProjectileType<EvokedMushroots>(), 12, 0);
+                            }
+                            if (RootTime == 80)
+                            {
+                                Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X, player.Center.Y, 0, 0, ModContent.ProjectileType<EvokedMushroots>(), 12, 0);
+                            }
+                            if (RootTime == 120)
+                            {
+                                Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X, player.Center.Y, 0, 0, ModContent.ProjectileType<EvokedMushroots>(), 12, 0);
+                            }
+                            if (RootTime == 160)
+                            {
+                                Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X, player.Center.Y, 0, 0, ModContent.ProjectileType<EvokedMushroots>(), 12, 0);
+                            }
+                            if (RootTime == 180)
+                            {
+                                AIState = ActionState.Hovering;
+                                RootTime = 0;
+                                NPC.netUpdate = true;
+                            }
+                            break;
+                        case 2: //Sentries (Summons glowing sentries left and right of the player to block them.
+                            if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) < 2)
+                            {
+                                SentryTimer++;
+                                FungusHoverAI(new Vector2(player.Center.X, player.Center.Y - 200), 0.5f);
+                                if (SentryTimer == 60)
+                                {
+                                    int Sentry = NPC.NewNPC(NPC.GetSource_FromAI(), (int)player.Center.X + 360, (int)player.Center.Y, ModContent.NPCType<GlowSentry>(), 0);
+                                    int Sentry2 = NPC.NewNPC(NPC.GetSource_FromAI(), (int)player.Center.X - 360, (int)player.Center.Y, ModContent.NPCType<GlowSentry>(), 0);
+                                    Main.npc[Sentry].netUpdate = true;
+                                    Main.npc[Sentry2].netUpdate = true;
+                                }
+                                if (SentryTimer == 120)
+                                {
+                                    AIState = ActionState.Hovering;
+                                    SentryTimer = 0;
+                                    NPC.netUpdate = true;
+                                }
+                            }
+                            else
+                            {
+                                AIState = ActionState.Hovering;
+                                NPC.netUpdate = true;
+                            }
+                            break;
                     }
                     break;
             }
-        }
-
-        public void FireMagic(NPC NPC, Vector2 velocity)
-        {
-            Player player = Main.player[NPC.target];
-            //BaseAI.ShootPeriodic(NPC, player.position, player.width, player.height, mod.ProjType("Mushshot"), ref shootAI[0], 5, damage, 8f, false, new Vector2(20f, 15f));
         }
 
         public override void ApplyDifficultyAndPlayerScaling(int numPlayers, float balance, float bossAdjustment)
@@ -278,7 +333,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             NPC.damage = (int)(NPC.damage * 0.6f);
         }
 
-        public void FungusHoverAI()
+        public void FungusHoverAI(Vector2 targetPos, float speedModifier)
         {
             Player target = Main.player[NPC.target];
             float speedUp = 0.04f;
@@ -307,21 +362,17 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                     NPC.velocity.X = maxVel;
                 }
             }
-            Vector2 hoverPosition = target.Center;
-            hoverPosition.Y -= 20f;
-            float speed = 8f;
-            float inertia = 20f;
-            if (NPC.Center.Y > hoverPosition.Y)
+            if (NPC.Center.Y < targetPos.Y)
             {
-                Vector2 vectorToHoverPosition = hoverPosition - NPC.Center;
-                float distanceToHoverPosition = vectorToHoverPosition.Length();
-                if (distanceToHoverPosition > 20f)
-                {
-
-                    vectorToHoverPosition.Normalize();
-                    vectorToHoverPosition *= speed;
-                    NPC.velocity = (NPC.velocity * (inertia - 1) + vectorToHoverPosition) / inertia;
-                }
+                NPC.velocity.Y += speedModifier;
+                if (NPC.velocity.Y < 0)
+                    NPC.velocity.Y += speedModifier * 2;
+            }
+            else
+            {
+                NPC.velocity.Y -= speedModifier;
+                if (NPC.velocity.Y > 0)
+                NPC.velocity.Y -= speedModifier * 2;
             }
         }
 
@@ -338,15 +389,15 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             }
             if (length < 200f)
             {
-                moveSpeed *= 0.5f;
+                moveSpeed *= 0.4f;
             }
             if (length < 100f)
             {
-                moveSpeed *= 0.5f;
+                moveSpeed *= 0.2f;
             }
             if (length < 50f)
             {
-                moveSpeed *= 0.5f;
+                moveSpeed *= 0.2f;
             }
             NPC.velocity = length == 0f ? Vector2.Zero : Vector2.Normalize(dist);
             NPC.velocity *= moveSpeed;
