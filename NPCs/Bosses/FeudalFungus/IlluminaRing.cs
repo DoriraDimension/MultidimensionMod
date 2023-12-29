@@ -38,6 +38,10 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             }
             int Feudal = NPC.FindFirstNPC(ModContent.NPCType<FeudalFungus>());
             NPC npc = Main.npc[Feudal];
+            if (Feudal <= 1)
+            {
+                Projectile.Kill();
+            }
             Projectile.Center = npc.Center;
             Projectile.light = 0.5f;
         }

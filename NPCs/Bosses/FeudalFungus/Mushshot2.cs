@@ -43,6 +43,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             }
             if (Projectile.velocity.Y > 8f)
             {
+                Projectile.velocity.X = 0f;
                 Projectile.velocity.Y = 8f;
             }
             for (int num189 = 0; num189 < 1; num189++)

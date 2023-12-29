@@ -3024,6 +3024,11 @@ Mods: {
 					Or is there more going on inside its head?
 					''' */
 			}
+
+			FungusBag: {
+				// DisplayName: Fungus Bag
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {

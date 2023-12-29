@@ -2445,7 +2445,7 @@ Mods: {
 			}
 
 			SmileyBag: {
-				DisplayName: Treasure Bag
+				DisplayName: Treasure Bag (Smiley)
 				Tooltip: Right-click to open
 			}
 
@@ -2808,8 +2808,8 @@ Mods: {
 			}
 
 			MonarchBag: {
-				Tooltip: ""
-				DisplayName: Treasure Bag
+				Tooltip: Right-click to open
+				DisplayName: Treasure Bag (Mushroom Monarch)
 			}
 
 			Musharang: {
@@ -3023,6 +3023,11 @@ Mods: {
 					It formed inside the glowing monarch with its own power, but why would it create a parasite that just connects it to itself?
 					Or is there more going on inside its head?
 					'''
+			}
+
+			FungusBag: {
+				DisplayName: Treasure Bag (Feudal Fungus)
+				Tooltip: Right-click to open
 			}
 		}
 

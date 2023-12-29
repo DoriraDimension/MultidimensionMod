@@ -1,5 +1,6 @@
 using MultidimensionMod.Base;
 using MultidimensionMod.Common.Systems;
+using MultidimensionMod.Items.Bags;
 using MultidimensionMod.Items.Weapons.Magic.Tomes;
 using MultidimensionMod.Items.Weapons.Summon;
 using MultidimensionMod.Items.Souls;
@@ -138,18 +139,18 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<GlowingMushmatter>(), 1, 5, 10));
             NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<GlowshroomSoul>()));
-            //NPCloot.Add(ItemDropRule.BossBag(ModContent.ItemType<FungusBag>()));
+            NPCloot.Add(ItemDropRule.BossBag(ModContent.ItemType<FungusBag>()));
             //NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<FungusRelic>()));
             //NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<FungusTrophy>(), 10));
             //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusGlowsporeBag>(), 10));
             int choice = Main.rand.Next(2);
             if (choice == 0)
             {
-                //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<IlluminaRing>()));
+                //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<magic weapon>()));
             }
             if (choice == 1)
             {
-                //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SporeSpitter>()));
+                //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<summoner weapon>()));
             }
         }
 
@@ -237,7 +238,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             Vector2 velocity = targetCenter - NPC.Center;
                             velocity.Normalize();
                             velocity *= ProjSpeed;
-                            Vector2 perturbedSpeed = new Vector2(NPC.velocity.X / 2, -17).RotatedByRandom(MathHelper.ToRadians(40));
+                            Vector2 perturbedSpeed = new Vector2(NPC.velocity.X / 2, -17).RotatedByRandom(MathHelper.ToRadians(80));
                             Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<Mushshot2>(), 8, 0);
                             SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Blurb"), NPC.position);
                         }
