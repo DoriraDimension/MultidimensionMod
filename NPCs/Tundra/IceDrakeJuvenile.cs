@@ -27,7 +27,8 @@ namespace MultidimensionMod.NPCs.Tundra
 		{
 			Main.npcFrameCount[NPC.type] = 14;
 			NPCID.Sets.ActsLikeTownNPC[Type] = true;
-		}
+            NPCID.Sets.NoTownNPCHappiness[Type] = true;
+        }
 
 		public override void SetDefaults()
 		{
