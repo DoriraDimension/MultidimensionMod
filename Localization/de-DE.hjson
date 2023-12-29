@@ -2445,7 +2445,7 @@ Mods: {
 			}
 
 			SmileyBag: {
-				// DisplayName: Treasure Bag
+				// DisplayName: Treasure Bag (Smiley)
 				// Tooltip: Right-click to open
 			}
 
@@ -2808,8 +2808,8 @@ Mods: {
 			}
 
 			MonarchBag: {
-				// Tooltip: ""
-				// DisplayName: Treasure Bag
+				// Tooltip: Right-click to open
+				// DisplayName: Treasure Bag (Mushroom Monarch)
 			}
 
 			Musharang: {
@@ -3026,8 +3026,8 @@ Mods: {
 			}
 
 			FungusBag: {
-				// DisplayName: Fungus Bag
-				// Tooltip: ""
+				// DisplayName: Treasure Bag (Feudal Fungus)
+				// Tooltip: Right-click to open
 			}
 		}
 

@@ -39,7 +39,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             if (Projectile.ai[0] >= 15f)
             {
                 Projectile.ai[0] = 15f;
-                Projectile.velocity.Y = Projectile.velocity.Y + 4f;
+                Projectile.velocity.Y = Projectile.velocity.Y + 2f;
             }
             if (Projectile.velocity.Y > 8f)
             {

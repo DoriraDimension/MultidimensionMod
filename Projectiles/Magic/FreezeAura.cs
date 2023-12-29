@@ -19,9 +19,10 @@ namespace MultidimensionMod.Projectiles.Magic
             Projectile.height = 120;
             Projectile.friendly = true;
             Projectile.DamageType = DamageClass.Melee;
-            Projectile.tileCollide = true;
+            Projectile.tileCollide = false;
             Projectile.penetrate = -1;
             Projectile.timeLeft = 1800;
+            Projectile.ownerHitCheck = true;
         }
 
         public override void AI()

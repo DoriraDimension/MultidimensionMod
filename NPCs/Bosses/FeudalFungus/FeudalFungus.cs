@@ -162,6 +162,14 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             {
                 modifiers.FinalDamage *= 0.25f;
             }
+            if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) < 2) //Increases damage reduction by 20% if two Glowing Sentries are alive.
+            {
+                modifiers.FinalDamage *= 0.20f;
+            }
+            else if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) < 1) //Increases damage reduction by 10% if a Glowing Sentry is alive.
+            {
+                modifiers.FinalDamage *= 0.10f;
+            }
             return;
         }
 
@@ -184,7 +192,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             {
                 mad = false;
             }
-            NPC.alpha -= 10;
+            NPC.alpha -= 5;
             Waking++;
             if (!TitleCard)
             {
@@ -216,29 +224,34 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                     break;
                 case ActionState.Hovering:
                     AISwitch++;
-                    FungusHoverAI(new Vector2(player.Center.X, player.Center.Y - 200), 0.5f);
+                    FungusHoverAI(new Vector2(player.Center.X, player.Center.Y - 200), 0.3f);
                     FireShroom++;
                     MakeItRain++;
                     if (FireShroom == 90) //Shoot projectile at the player
                     {
                         Vector2 targetCenter = player.position;
-                        float ProjSpeed = 12f;
+                        float ProjSpeed = 8f;
                         Vector2 velocity = targetCenter - NPC.Center;
                         velocity.Normalize();
                         velocity *= ProjSpeed;
                         Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, velocity.X, velocity.Y, ModContent.ProjectileType<Mushshot>(), 10, 0);
                         FireShroom = 0;
                     }
-                    if (MakeItRain == 60) //Shoot spread upwards
+                    if (MakeItRain == 40) //Shoot spread upwards
                     {
-                        for (int i = 0; i < 7; i++)
+                        int amount = 10; //Amnount of projectiles
+                        if (Main.expertMode)
+                        {
+                            amount = 12; //Fires 2 additional ones in expert mode
+                        }
+                        for (int i = 0; i < amount; i++)
                         {
                             Vector2 targetCenter = player.position;
                             float ProjSpeed = 12f;
                             Vector2 velocity = targetCenter - NPC.Center;
                             velocity.Normalize();
                             velocity *= ProjSpeed;
-                            Vector2 perturbedSpeed = new Vector2(NPC.velocity.X / 2, -17).RotatedByRandom(MathHelper.ToRadians(80));
+                            Vector2 perturbedSpeed = new Vector2(NPC.velocity.X / 2, -20).RotatedByRandom(MathHelper.ToRadians(85));
                             Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<Mushshot2>(), 8, 0);
                             SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Blurb"), NPC.position);
                         }
@@ -273,7 +286,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             }
                             break;
                         case 1: //Roots (Summons roots under the player's feet)
-                            FungusHoverAI(new Vector2(player.Center.X, player.Center.Y - 200), 0.5f);
+                            FungusHoverAI(new Vector2(player.Center.X, player.Center.Y - 200), 0.3f);
                             RootTime++;
                             if (RootTime == 40)
                             {
@@ -298,17 +311,16 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 NPC.netUpdate = true;
                             }
                             break;
-                        case 2: //Sentries (Summons glowing sentries left and right of the player to block them.
+                        case 2: //Sentries (Summons a glowing sentry that empowers the boss, only two can be alive at once and the boost stacks.
                             if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) < 2)
                             {
                                 SentryTimer++;
-                                FungusHoverAI(new Vector2(player.Center.X, player.Center.Y - 200), 0.5f);
+                                FungusHoverAI(new Vector2(player.Center.X, player.Center.Y - 200), 0.3f);
                                 if (SentryTimer == 60)
                                 {
-                                    int Sentry = NPC.NewNPC(NPC.GetSource_FromAI(), (int)player.Center.X + 360, (int)player.Center.Y, ModContent.NPCType<GlowSentry>(), 0);
-                                    int Sentry2 = NPC.NewNPC(NPC.GetSource_FromAI(), (int)player.Center.X - 360, (int)player.Center.Y, ModContent.NPCType<GlowSentry>(), 0);
+                                    int theFloorIsMadeOutOfFloor = BaseWorldGen.GetFirstTileFloor((int)(NPC.Center.X / 16), (int)(NPC.Center.Y / 16), true, false, false);
+                                    int Sentry = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, BaseWorldGen.GetFirstTileFloor((int)NPC.Center.X / 16, (int)NPC.Center.Y / 16) * 16, ModContent.NPCType<GlowSentry>(), 0);
                                     Main.npc[Sentry].netUpdate = true;
-                                    Main.npc[Sentry2].netUpdate = true;
                                 }
                                 if (SentryTimer == 120)
                                 {
@@ -337,8 +349,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
         public void FungusHoverAI(Vector2 targetPos, float speedModifier)
         {
             Player target = Main.player[NPC.target];
-            float speedUp = 0.04f;
-            float maxVel = 4.0f;
+            float speedUp = 0.12f;
+            float maxVel = 10.0f;
             if (NPC.Center.X > target.Center.X)
             {
                 NPC.velocity.X -= speedUp;
@@ -394,11 +406,11 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             }
             if (length < 100f)
             {
-                moveSpeed *= 0.2f;
+                moveSpeed *= 0.3f;
             }
             if (length < 50f)
             {
-                moveSpeed *= 0.2f;
+                moveSpeed *= 0.3f;
             }
             NPC.velocity = length == 0f ? Vector2.Zero : Vector2.Normalize(dist);
             NPC.velocity *= moveSpeed;
