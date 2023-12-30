@@ -3220,6 +3220,8 @@ Mods: {
 			// EvokedMushroots.DisplayName: Evoked Mushroots
 			// IlluminaRing.DisplayName: Illumina Ring
 			// Mushshot2.DisplayName: Mushshot2
+			// RadianceShot.DisplayName: Radiance Shot
+			// PureRadianceShot.DisplayName: Pure Radiance Shot
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability

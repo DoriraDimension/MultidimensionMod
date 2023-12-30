@@ -58,7 +58,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
         {
             TPose,
             Hovering,
-            Attack
+            Attack,
+            Radiance
         }
 
         public ActionState AIState
@@ -181,6 +182,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
         public int RootTime = 0;
         public int SentryTimer = 0;
         public int Waking = 0; //Using NPC.alpha in an if statement didn't work, so another named timer I guess.
+        public int ScreamTimer = 0;
+        public int DesperateScreamTimer = 0;
 
         public override void AI()
         {
@@ -216,7 +219,25 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                 AIState = ActionState.Hovering;
                 NPC.dontTakeDamage = false;
             }
-
+            if (NPC.life >= NPC.lifeMax / 5)
+            {
+                Lighting.AddLight(NPC.Center, 0, 0, (255 - NPC.alpha) * 0.30f / 255f);
+            }
+            if (NPC.life <= NPC.lifeMax / 5)
+            {
+                AIState = ActionState.Radiance;
+                ScreamTimer++;
+                if (NPC.life >= NPC.lifeMax / 10)
+                    Lighting.AddLight(NPC.Center, 0, (255 - NPC.alpha) * 0.25f / 160, (255 - NPC.alpha) * 0.35f / 255f);
+                if (ScreamTimer == 1)
+                {
+                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RoyalRadianceScream"), NPC.position);
+                }
+                if (ScreamTimer >= 2)
+                {
+                    ScreamTimer = 2;
+                }
+            }
             switch (AIState)
             {
                 case ActionState.TPose:
@@ -318,7 +339,6 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 FungusHoverAI(new Vector2(player.Center.X, player.Center.Y - 200), 0.3f);
                                 if (SentryTimer == 60)
                                 {
-                                    int theFloorIsMadeOutOfFloor = BaseWorldGen.GetFirstTileFloor((int)(NPC.Center.X / 16), (int)(NPC.Center.Y / 16), true, false, false);
                                     int Sentry = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, BaseWorldGen.GetFirstTileFloor((int)NPC.Center.X / 16, (int)NPC.Center.Y / 16) * 16, ModContent.NPCType<GlowSentry>(), 0);
                                     Main.npc[Sentry].netUpdate = true;
                                 }
@@ -335,6 +355,54 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 NPC.netUpdate = true;
                             }
                             break;
+                    }
+                    break;
+                case ActionState.Radiance:
+                    NPC.Center = player.Center + new Vector2(0, -200);
+                    MakeItRain++;
+                    if (Main.expertMode)
+                    {
+                        if (NPC.life <= NPC.lifeMax / 10)
+                        {
+                            Lighting.AddLight(NPC.Center, 0, (255 - NPC.alpha) * 0.40f / 255, (255 - NPC.alpha) * 0.10f / 130f);
+                            DesperateScreamTimer++;
+                            if (DesperateScreamTimer == 1)
+                            {
+                                SoundEngine.PlaySound(Sounds.CustomSounds.RoyalRadianceScream with { Pitch = 1.3f }, NPC.position);
+                            }
+                            if (DesperateScreamTimer >= 2)
+                            {
+                                DesperateScreamTimer = 2;
+                            }
+                        }
+                    }
+                    if (MakeItRain == 40) //Shoot spread upwards
+                    {
+                        int amount = 12; //Amnount of projectiles
+                        if (Main.expertMode)
+                        {
+                            amount = 14; //Fires 2 additional ones in expert mode
+                        }
+                        for (int i = 0; i < amount; i++)
+                        {
+                            Vector2 targetCenter = player.position;
+                            float ProjSpeed = 12f;
+                            Vector2 velocity = targetCenter - NPC.Center;
+                            velocity.Normalize();
+                            velocity *= ProjSpeed;
+                            Vector2 perturbedSpeed = new Vector2(NPC.velocity.X / 2, -20).RotatedByRandom(MathHelper.ToRadians(85));
+                            if (NPC.life <= NPC.lifeMax / 10)
+                            {
+                                if (Main.expertMode)
+                                {
+                                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<PureRadianceShot>(), 30, 0);
+                                }
+                            }
+                            else
+                                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<RadianceShot>(), 20, 0);
+                            SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RadianceShot"), NPC.position);
+                        }
+                        MakeItRain = 0;
                     }
                     break;
             }
@@ -429,7 +497,23 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 
         public override bool PreDraw(SpriteBatch spriteBatch, Vector2 screenPos,  Color drawColor)
         {
-            return true;
+            Texture2D texture = ModContent.Request<Texture2D>(NPC.ModNPC.Texture + "_Glow").Value;
+            Texture2D texture2 = ModContent.Request<Texture2D>(NPC.ModNPC.Texture + "_Radiant").Value;
+            Texture2D texture3 = ModContent.Request<Texture2D>(NPC.ModNPC.Texture + "_PureRadiant").Value;
+            SpriteEffects effects = NPC.spriteDirection == -1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+            spriteBatch.Draw(TextureAssets.Npc[NPC.type].Value, NPC.Center + new Vector2(0f, -14f) - screenPos, NPC.frame, drawColor, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
+            if (NPC.life <= NPC.lifeMax / 10 && Main.expertMode)
+            {
+                spriteBatch.Draw(texture3, NPC.Center + new Vector2(0f, -14f) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
+            }
+            else if (NPC.life <= NPC.lifeMax / 5)
+            {
+                spriteBatch.Draw(texture2, NPC.Center + new Vector2(0f, -14f) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
+            }
+            else
+                spriteBatch.Draw(texture, NPC.Center + new Vector2(0f, -14f) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
+
+            return false;
         }
     }   
 }

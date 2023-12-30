@@ -36,6 +36,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 
         public override void AI()
         {
+            Lighting.AddLight(NPC.Center, 0, 0, (255 - NPC.alpha) * 0.15f / 255f);
             int Feudal = NPC.FindFirstNPC(ModContent.NPCType<FeudalFungus>());
             if (Feudal == 0)
             {
