@@ -7,7 +7,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 {
     internal class Mushshot : ModProjectile
     {
-        
+        //All 4 Mushshot variants reside in this file
         public override void SetStaticDefaults()
         {
             //DisplayName.SetDefault("Spore Blast");
@@ -29,11 +29,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
         public override void AI()
         {
             Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
-            Projectile.rotation = Projectile.velocity.ToRotation();
-            if (Projectile.spriteDirection == -1)
-            {
-                Projectile.rotation += MathHelper.Pi;
-            }
+            Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
             for (int num189 = 0; num189 < 1; num189++)
             {
                 int num190 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.GlowingMushroom, 0f, 0f, 0);
@@ -78,11 +74,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
         public override void AI()
         {
             Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
-            Projectile.rotation = Projectile.velocity.ToRotation();
-            if (Projectile.spriteDirection == -1)
-            {
-                Projectile.rotation += MathHelper.Pi;
-            }
+            Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
             Projectile.ai[0] += 1f;
             if (Projectile.ai[0] >= 15f)
             {
@@ -135,11 +127,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
         public override void AI()
         {
             Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
-            Projectile.rotation = Projectile.velocity.ToRotation();
-            if (Projectile.spriteDirection == -1)
-            {
-                Projectile.rotation += MathHelper.Pi;
-            }
+            Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
             Projectile.ai[0] += 1f;
             if (Projectile.ai[0] >= 15f)
             {
@@ -194,11 +182,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
         public override void AI()
         {
             Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
-            Projectile.rotation = Projectile.velocity.ToRotation();
-            if (Projectile.spriteDirection == -1)
-            {
-                Projectile.rotation += MathHelper.Pi;
-            }
+            Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
             Projectile.ai[0] += 1f;
             if (Projectile.ai[0] >= 15f)
             {

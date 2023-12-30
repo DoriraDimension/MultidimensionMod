@@ -68,7 +68,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             set => NPC.ai[0] = (int)value;
         }
 
-        public List<int> AttackList = new() { 0, 1, 2 }; //Summon ring, summon grabby roots, summon mushroom sentries
+        public List<int> AttackList = new() { 0, 1, 2, 3 }; //Summon ring, summon tracking spores, summon mushroom sentries, summon root walls
         public List<int> CopyList = null;
         public int ID { get => (int)NPC.ai[3]; set => NPC.ai[3] = value; }
 
@@ -99,7 +99,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
         {
             NPC.lifeMax = 3000;   //boss life
             NPC.damage = 24;  //boss damage
-            NPC.defense = 15;    //boss defense
+            NPC.defense = 10;    //boss defense
             NPC.knockBackResist = 0f;
             NPC.value = Item.sellPrice(0, 1, 50, 0);
             NPC.aiStyle = -1;
@@ -161,32 +161,46 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
         {
             if (mad)
             {
-                modifiers.FinalDamage *= 0.25f;
+                modifiers.FinalDamage *= 1.25f;
             }
             if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) < 2) //Increases damage reduction by 20% if two Glowing Sentries are alive.
             {
-                modifiers.FinalDamage *= 0.20f;
+                modifiers.FinalDamage *= 1.20f;
             }
             else if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) < 1) //Increases damage reduction by 10% if a Glowing Sentry is alive.
             {
-                modifiers.FinalDamage *= 0.10f;
+                modifiers.FinalDamage *= 1.10f;
             }
             return;
         }
 
+        //Did you know that I really love using named timers? No? Well now you do!
         public int despawnTimer = 0;
         public int AISwitch = 0;
         public int MakeItRain = 0;
         public int FireShroom = 0;
         public int RingTime = 0;
-        public int RootTime = 0;
+        public int DoubleTimer = 0;
+        public int DoubleFire = 0;
         public int SentryTimer = 0;
+        public int ImFalling = 0;
+        public int IHaveLanded = 0;
         public int Waking = 0; //Using NPC.alpha in an if statement didn't work, so another named timer I guess.
         public int ScreamTimer = 0;
         public int DesperateScreamTimer = 0;
 
         public override void AI()
         {
+            if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) < 2) //Increases damage reduction by 20% if two Glowing Sentries are alive.
+            {
+                NPC.defense = 20;
+            }
+            else if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) < 1) //Increases damage reduction by 10% if a Glowing Sentry is alive.
+            {
+                NPC.defense = 15;
+            }
+            else
+                NPC.defense = 10;
             if (!Main.player[NPC.target].ZoneGlowshroom) //Becomes very angry outside of the Glowing Mushroom biome
             {
                 mad = true;
@@ -267,11 +281,6 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         }
                         for (int i = 0; i < amount; i++)
                         {
-                            Vector2 targetCenter = player.position;
-                            float ProjSpeed = 12f;
-                            Vector2 velocity = targetCenter - NPC.Center;
-                            velocity.Normalize();
-                            velocity *= ProjSpeed;
                             Vector2 perturbedSpeed = new Vector2(NPC.velocity.X / 2, -20).RotatedByRandom(MathHelper.ToRadians(85));
                             Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<Mushshot2>(), 8, 0);
                             SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Blurb"), NPC.position);
@@ -306,29 +315,23 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 NPC.netUpdate = true;
                             }
                             break;
-                        case 1: //Roots (Summons roots under the player's feet)
-                            FungusHoverAI(new Vector2(player.Center.X, player.Center.Y - 200), 0.3f);
-                            RootTime++;
-                            if (RootTime == 40)
+                        case 1: //Double fire (Starts firing projectiles from both of its arms)
+                            FungusHoverAI(new Vector2(Main.rand.NextBool(4) ? player.Center.X - 150 : player.Center.X + 150, player.Center.Y - 200), 0.2f);
+                            DoubleTimer++;
+                            DoubleFire++;
+                            if (DoubleFire == 90)
                             {
-                                Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X, player.Center.Y, 0, 0, ModContent.ProjectileType<EvokedMushroots>(), 12, 0);
+                                Vector2 sped = new Vector2(0, -8);
+                                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X + 100, NPC.Center.Y - 10, sped.X, sped.Y, ModContent.ProjectileType<StalkingShot>(), 15, 0);
+                                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X - 100, NPC.Center.Y - 10, sped.X, sped.Y, ModContent.ProjectileType<StalkingShot>(), 15, 0);
+                                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Blurb"), NPC.position);
+                                DoubleFire = 60;
                             }
-                            if (RootTime == 80)
-                            {
-                                Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X, player.Center.Y, 0, 0, ModContent.ProjectileType<EvokedMushroots>(), 12, 0);
-                            }
-                            if (RootTime == 120)
-                            {
-                                Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X, player.Center.Y, 0, 0, ModContent.ProjectileType<EvokedMushroots>(), 12, 0);
-                            }
-                            if (RootTime == 160)
-                            {
-                                Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X, player.Center.Y, 0, 0, ModContent.ProjectileType<EvokedMushroots>(), 12, 0);
-                            }
-                            if (RootTime == 180)
+                            if (DoubleTimer == 240)
                             {
                                 AIState = ActionState.Hovering;
-                                RootTime = 0;
+                                DoubleTimer = 0;
+                                DoubleFire = 0;
                                 NPC.netUpdate = true;
                             }
                             break;
@@ -355,6 +358,37 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 NPC.netUpdate = true;
                             }
                             break;
+                        case 3:
+                            ImFalling++;
+                            NPC.velocity.X = 0;
+                            if (ImFalling == 120)
+                            {
+                                NPC.velocity.Y = 20;
+                            }
+                            if ((player.Center.Y - NPC.Center.Y) <= 30)
+                            {
+                                NPC.noTileCollide = false;
+                            }
+                            if (BaseAI.HitTileOnSide(NPC, 3))
+                            {
+                                IHaveLanded++;
+                                if (IHaveLanded == 1)
+                                {
+                                    int wall = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X + 400, BaseWorldGen.GetFirstTileFloor((int)NPC.Center.X / 16, (int)NPC.Center.Y / 16) * 16, ModContent.NPCType<EvokedMushroot>(), 0);
+                                    Main.npc[wall].netUpdate = true;
+                                    int wall2 = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X - 400, BaseWorldGen.GetFirstTileFloor((int)NPC.Center.X / 16, (int)NPC.Center.Y / 16) * 16, ModContent.NPCType<EvokedMushroot>(), 0);
+                                    Main.npc[wall2].netUpdate = true;
+                                    SoundEngine.PlaySound(SoundID.Item14, NPC.position);
+                                }
+                            }
+                            if (IHaveLanded == 120)
+                            {
+                                NPC.noTileCollide = true;
+                                AIState = ActionState.Hovering;
+                                ImFalling = 0;
+                                IHaveLanded = 0;
+                            }
+                            break;
                     }
                     break;
                 case ActionState.Radiance:
@@ -368,7 +402,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             DesperateScreamTimer++;
                             if (DesperateScreamTimer == 1)
                             {
-                                SoundEngine.PlaySound(Sounds.CustomSounds.RoyalRadianceScream with { Pitch = 1.3f }, NPC.position);
+                                SoundEngine.PlaySound(Sounds.CustomSounds.RoyalRadianceScream with { Pitch = 1.15f }, NPC.position);
                             }
                             if (DesperateScreamTimer >= 2)
                             {

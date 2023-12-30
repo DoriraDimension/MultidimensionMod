@@ -3219,9 +3219,10 @@ Mods: {
 			// Mushshot.DisplayName: Telekinetic Bullet
 			// EvokedMushroots.DisplayName: Evoked Mushroots
 			// IlluminaRing.DisplayName: Illumina Ring
-			// Mushshot2.DisplayName: Mushshot2
-			// RadianceShot.DisplayName: Radiance Shot
-			// PureRadianceShot.DisplayName: Pure Radiance Shot
+			// Mushshot2.DisplayName: Telekinetic Rain
+			// RadianceShot.DisplayName: Radiance Rain
+			// PureRadianceShot.DisplayName: Pure Radiance Rain
+			// StalkingShot.DisplayName: Stalking Spore
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -3329,6 +3330,7 @@ Mods: {
 			// AldinGrabber.DisplayName: ???
 			// FeudalFungus.DisplayName: Feudal Fungus
 			// GlowSentry.DisplayName: Empowered Glowing Mushroom
+			// EvokedMushroot.DisplayName: Evoked Mushroot
 		}
 
 		Dialogue: {
