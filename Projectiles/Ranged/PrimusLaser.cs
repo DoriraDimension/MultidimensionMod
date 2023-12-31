@@ -31,14 +31,11 @@ namespace MultidimensionMod.Projectiles.Ranged
 		public override void AI()
 		{
 			Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
-			Projectile.rotation = Projectile.velocity.ToRotation();
+			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
 
-			if (Projectile.spriteDirection == -1)
-			{
-				Projectile.rotation += MathHelper.Pi;
-			}
+            Projectile.spriteDirection = Projectile.direction;
 
-			LaserCounter++;
+            LaserCounter++;
 			if (LaserCounter >= 50)
             {
 				SoundEngine.PlaySound(SoundID.Item33 with { Volume = 0.4f }, Projectile.position);

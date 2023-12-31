@@ -29,11 +29,8 @@ namespace MultidimensionMod.Projectiles.Magic
         public override void AI()
         {
             Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
-            Projectile.rotation = Projectile.velocity.ToRotation();
-            if (Projectile.spriteDirection == -1)
-            {
-                Projectile.rotation += MathHelper.Pi;
-            }
+            Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
+            Projectile.spriteDirection = Projectile.direction;
             int YttYtt = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<YttriumMetalDust>(), Projectile.velocity.X, Projectile.velocity.Y, 100, default(Color), 2f);
             Main.dust[YttYtt].scale *= 0.60f;
         }

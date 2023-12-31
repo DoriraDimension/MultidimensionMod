@@ -30,14 +30,11 @@ namespace MultidimensionMod.Projectiles.Ranged
 		public override void AI()
 		{
 			Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
-			Projectile.rotation = Projectile.velocity.ToRotation();
+			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
 
-			if (Projectile.spriteDirection == -1)
-			{
-				Projectile.rotation += MathHelper.Pi;
-			}
+            Projectile.spriteDirection = Projectile.direction;
 
-			if (++Projectile.frameCounter >= 5)
+            if (++Projectile.frameCounter >= 5)
 			{
 				Projectile.frameCounter = 0;
 				if (++Projectile.frame >= 4)

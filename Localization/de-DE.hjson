@@ -3039,8 +3039,8 @@ Mods: {
 				// DisplayName: Radiance Talisman
 				/* Tooltip:
 					'''
-					Summons a Praying Mushroom sentry at the cursor position
-					The Praying Mushroom creates an aura around it that 
+					Summons a Praying Mushroom sentry at the cursor position which creates an aura around it
+					The aura increases summon damage by 5% and enemies have a 10% chance to drop a mana star upon being hit by a minion
 					''' */
 				/* Lore:
 					'''

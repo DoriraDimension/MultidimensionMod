@@ -32,8 +32,9 @@ namespace MultidimensionMod.Projectiles.Ranged
 		public override void AI()
 		{
 			Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
-			Projectile.rotation = Projectile.velocity.ToRotation();
-		}
+			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
+            Projectile.spriteDirection = Projectile.direction;
+        }
 
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
