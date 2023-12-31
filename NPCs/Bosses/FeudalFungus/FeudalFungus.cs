@@ -1,5 +1,6 @@
 using MultidimensionMod.Base;
-using MultidimensionMod.Common.Systems;
+using MultidimensionMod.Items.Pets;
+using MultidimensionMod.Items.Vanity;
 using MultidimensionMod.Items.Bags;
 using MultidimensionMod.Items.Weapons.Magic.Tomes;
 using MultidimensionMod.Items.Weapons.Summon;
@@ -131,7 +132,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             //DownedSystem.downedFungus = true;
             if (!Main.expertMode && Main.rand.NextBool(7))
             {
-                //Item.NewItem(NPC.GetSource_Loot(), NPC.getRect(), ModContent.ItemType<FungusMask>());
+                Item.NewItem(NPC.GetSource_Loot(), NPC.getRect(), ModContent.ItemType<FungusMask>());
             }
         }
 
@@ -143,7 +144,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             NPCloot.Add(ItemDropRule.BossBag(ModContent.ItemType<FungusBag>()));
             //NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<FungusRelic>()));
             //NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<FungusTrophy>(), 10));
-            //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusGlowsporeBag>(), 10));
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusGlowsporeBag>(), 10));
             int choice = Main.rand.Next(2);
             if (choice == 0)
             {

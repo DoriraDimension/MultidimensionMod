@@ -147,6 +147,11 @@ Mods: {
 				DisplayName: Light Prayer
 				Description: The prayer of the mushroom empowers you
 			}
+
+			FeudalBabBuff: {
+				DisplayName: Feudal Bab Buff
+				Description: Mods.MultidimensionMod.Buffs.FeudalBabBuff.Description
+			}
 		}
 
 		Items: {
@@ -3075,6 +3080,16 @@ Mods: {
 					'Living in the radiant light, under its warm veil you will find salvation.'
 					'''
 			}
+
+			SusGlowsporeBag: {
+				DisplayName: Sus Glowspore Bag
+				Tooltip: ""
+			}
+
+			FungusMask: {
+				DisplayName: Fungus Mask
+				Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -3274,6 +3289,7 @@ Mods: {
 			UmosBook.DisplayName: Umos Book
 			Mushshot2Friendly.DisplayName: Mushshot2 Friendly
 			PureRadianceShotFriendly.DisplayName: Pure Radiance Shot Friendly
+			FeudalBab.DisplayName: Feudal Bab
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
