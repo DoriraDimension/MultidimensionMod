@@ -147,7 +147,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             int choice = Main.rand.Next(2);
             if (choice == 0)
             {
-                //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<magic weapon>()));
+                notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<UmosShower>()));
             }
             if (choice == 1)
             {

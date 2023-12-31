@@ -1,4 +1,4 @@
-﻿using MultidimensionMod.Items.Weapons.Melee.Boomerangs;
+﻿using MultidimensionMod.Items.Weapons.Magic.Tomes;
 using MultidimensionMod.Items.Weapons.Summon;
 using MultidimensionMod.Items.Vanity;
 using MultidimensionMod.Items.Accessories;
@@ -40,7 +40,7 @@ namespace MultidimensionMod.Items.Bags
         public override void ModifyItemLoot(ItemLoot Itemloot)
         {
             //Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<FungusMask>(), 7));
-            //Itemloot.Add(ItemDropRule.OneFromOptions(1, ModContent.ItemType<magic weapon>(), ModContent.ItemType<RadianceTalisman>()));
+            Itemloot.Add(ItemDropRule.OneFromOptions(1, ModContent.ItemType<UmosShower>(), ModContent.ItemType<RadianceTalisman>()));
             Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<TheStem>()));
             Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<GlowingMushmatter>(), 1, 5, 10));
             //Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<SusGlowsporeBag>(), 1));

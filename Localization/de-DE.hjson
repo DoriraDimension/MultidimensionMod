@@ -3054,12 +3054,26 @@ Mods: {
 
 			GlowingMushiumBar: {
 				// DisplayName: Glowing Mushium Bar
-				// Tooltip: ""
+				// Tooltip: May cause hallucinations
 			}
 
 			MushiumBar: {
 				// DisplayName: Mushium Bar
-				// Tooltip: ""
+				// Tooltip: Made with love and mushrooms
+			}
+
+			UmosShower: {
+				// DisplayName: Umos Light Shower
+				/* Tooltip:
+					'''
+					Hold a book above your head to release continuous waves of glowing shots upwards
+					Falling below 20% health empowers the shots greatly
+					''' */
+				/* Lore:
+					'''
+					A prayer book that is covered in glowing fungi and mycelium, due to its bad condition, barely anything is readable.
+					'Living in the radiant light, under its warm veil you will find salvation.'
+					''' */
 			}
 		}
 
@@ -3257,6 +3271,9 @@ Mods: {
 			// StalkingShot.DisplayName: Stalking Spore
 			// Aura.DisplayName: Aura
 			// Prayer.DisplayName: Praying Fungus
+			// UmosBook.DisplayName: Umos Book
+			// Mushshot2Friendly.DisplayName: Mushshot2 Friendly
+			// PureRadianceShotFriendly.DisplayName: Pure Radiance Shot Friendly
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
