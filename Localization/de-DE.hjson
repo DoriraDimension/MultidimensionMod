@@ -142,6 +142,11 @@ Mods: {
 				// DisplayName: Injection Cooldown
 				// Description: Cannot connect to the stem
 			}
+
+			PrayerBuff: {
+				// DisplayName: Light Prayer
+				// Description: The prayer of the mushroom empowers you
+			}
 		}
 
 		Items: {
@@ -3029,6 +3034,23 @@ Mods: {
 				// DisplayName: Treasure Bag (Feudal Fungus)
 				// Tooltip: Right-click to open
 			}
+
+			RadianceTalisman: {
+				// DisplayName: Radiance Talisman
+				/* Tooltip:
+					'''
+					Summons a Praying Mushroom sentry at the cursor position
+					The Praying Mushroom creates an aura around it that 
+					''' */
+				/* Lore:
+					'''
+					When in doubt or despair, the glowing fungi can turn towards the light and pray,
+					pray for safety, pray for continued freedom.
+					Their very own light is what shines in the dark caverns, the light from within,
+					the light from beyond, the light of care.
+					The Scarlet fungi do not share this light, only one and its kin have ever enjoyed its warm radiance.
+					''' */
+			}
 		}
 
 		SetBonuses: {
@@ -3223,6 +3245,8 @@ Mods: {
 			// RadianceShot.DisplayName: Radiance Rain
 			// PureRadianceShot.DisplayName: Pure Radiance Rain
 			// StalkingShot.DisplayName: Stalking Spore
+			// Aura.DisplayName: Aura
+			// Prayer.DisplayName: Praying Fungus
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability

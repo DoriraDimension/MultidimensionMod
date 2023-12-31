@@ -151,7 +151,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             }
             if (choice == 1)
             {
-                //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<summoner weapon>()));
+                notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<RadianceTalisman>()));
             }
         }
 

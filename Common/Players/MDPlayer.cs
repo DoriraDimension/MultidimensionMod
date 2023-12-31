@@ -58,6 +58,7 @@ namespace MultidimensionMod.Common.Players
         public bool Stem = false;
         public bool manaSick = false;
         public int manaSickTimer;
+        public bool FungusPrayer = false;
 
         public override void ResetEffects()
         {
@@ -80,7 +81,8 @@ namespace MultidimensionMod.Common.Players
             DesertNeck = false;
             Symbio = false;
             Stem = false;
-        }
+            FungusPrayer = false;
+    }
 
         public override void UpdateDead()
         {
