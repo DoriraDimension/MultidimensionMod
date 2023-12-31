@@ -19,8 +19,8 @@ namespace MultidimensionMod.Projectiles.Summon.Sentries
 
 		public override void SetDefaults()
 		{
-			Projectile.width = 64;
-			Projectile.height = 64;
+			Projectile.width = 78;
+			Projectile.height = 76;
 			Projectile.friendly = true;
 			Projectile.aiStyle = -1;
 			Projectile.DamageType = DamageClass.Summon;

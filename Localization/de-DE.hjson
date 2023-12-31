@@ -3051,6 +3051,16 @@ Mods: {
 					The Scarlet fungi do not share this light, only one and its kin have ever enjoyed its warm radiance.
 					''' */
 			}
+
+			GlowingMushiumBar: {
+				// DisplayName: Glowing Mushium Bar
+				// Tooltip: ""
+			}
+
+			MushiumBar: {
+				// DisplayName: Mushium Bar
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
