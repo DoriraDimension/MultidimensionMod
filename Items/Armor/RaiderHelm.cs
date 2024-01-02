@@ -27,6 +27,11 @@ namespace MultidimensionMod.Items.Armor
 			ArmorIDs.Head.Sets.DrawHead[Item.headSlot] = false;
 		}
 
+        public override void UpdateEquip(Player player)
+        {
+            player.moveSpeed -= 0.05f;
+        }
+
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
             if (Main.keyState.PressingShift())

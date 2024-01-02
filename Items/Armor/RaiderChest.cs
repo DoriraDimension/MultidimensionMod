@@ -26,6 +26,11 @@ namespace MultidimensionMod.Items.Armor
 			Item.defense = 10;
 		}
 
+        public override void UpdateEquip(Player player)
+        {
+            player.moveSpeed -= 0.05f;
+        }
+
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
             if (Main.keyState.PressingShift())

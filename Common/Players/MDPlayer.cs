@@ -18,6 +18,9 @@ using Terraria.Audio;
 using Terraria.Localization;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Dusts;
+using Microsoft.CodeAnalysis;
+using MultidimensionMod.Buffs.Minions;
+using Terraria.WorldBuilding;
 
 namespace MultidimensionMod.Common.Players
 {
@@ -59,6 +62,8 @@ namespace MultidimensionMod.Common.Players
         public bool manaSick = false;
         public int manaSickTimer;
         public bool FungusPrayer = false;
+        public bool MushiumSet = false;
+        public bool IndigoMode = false;
 
         public override void ResetEffects()
         {
@@ -82,7 +87,8 @@ namespace MultidimensionMod.Common.Players
             Symbio = false;
             Stem = false;
             FungusPrayer = false;
-    }
+            MushiumSet = false;
+        }
 
         public override void UpdateDead()
         {
@@ -272,6 +278,13 @@ namespace MultidimensionMod.Common.Players
                     //This is calculated by dividing the dealt damage by 15 and the halved useTime of the used weapon
                     player.statLife += (int)Math.Floor((double)damageDone / 15 + useTimeSub); 
             }
+            if (MushiumSet && !IndigoMode && player.HasBuff(ModContent.BuffType<LightStarved>()))
+            {
+                if (Main.rand.NextBool(10))
+                {
+                    Item.NewItem(target.GetSource_Loot(), target.getRect(), ItemID.Heart, noGrabDelay: true);
+                }
+            }
         }
 
         public override void OnHitNPCWithProj(Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
@@ -299,6 +312,13 @@ namespace MultidimensionMod.Common.Players
                 }
                 else
                     player.statLife += (int)Math.Floor((double)damageDone / 15 + useTimeSub);
+            }
+            if (MushiumSet && !IndigoMode && player.HasBuff(ModContent.BuffType<LightStarved>()) && !proj.npcProj && !proj.trap)
+            {
+                if (Main.rand.NextBool(10))
+                {
+                    Item.NewItem(target.GetSource_Loot(), target.getRect(), ItemID.Heart, noGrabDelay: true);
+                }
             }
         }
 
@@ -416,6 +436,22 @@ namespace MultidimensionMod.Common.Players
                 IEntitySource source = player.GetSource_Misc("Nero Set");
                 Projectile.NewProjectile(source, Main.MouseWorld, velocity, sentry, 75, 0f, player.whoAmI);
                 SoundEngine.PlaySound(SoundID.DD2_DefenseTowerSpawn, player.Center);
+            }
+            if (MDKeybinds.ArmorAbility.JustPressed && MushiumSet && !IndigoMode && !player.HasBuff(ModContent.BuffType<SwapExhaustion>()))
+            {
+                IndigoMode = true;
+                player.AddBuff(ModContent.BuffType<SwapExhaustion>(), 1800);
+                player.AddBuff(ModContent.BuffType<LightOverload>(), 300);
+                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), player.position);
+            }
+            else if (MDKeybinds.ArmorAbility.JustPressed && MushiumSet && IndigoMode && !player.HasBuff(ModContent.BuffType<SwapExhaustion>()))
+            {
+                IndigoMode = false;
+                Player.statLife += 10;
+                Player.HealEffect(10);
+                player.AddBuff(ModContent.BuffType<SwapExhaustion>(), 1800);
+                player.AddBuff(ModContent.BuffType<LightStarved>(), 300);
+                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), player.position);
             }
         }
     }

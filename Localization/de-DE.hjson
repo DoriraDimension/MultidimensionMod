@@ -149,8 +149,23 @@ Mods: {
 			}
 
 			FeudalBabBuff: {
-				// DisplayName: Feudal Bab Buff
-				// Description: Mods.MultidimensionMod.Buffs.FeudalBabBuff.Description
+				// DisplayName: Feudal Bab
+				// Description: Proud representative of the glowing fungi
+			}
+
+			LightOverload: {
+				// DisplayName: Light Overload
+				// Description: You are flooded with energy
+			}
+
+			LightStarved: {
+				// DisplayName: Light Starved
+				// Description: You yearn for energy
+			}
+
+			SwapExhaustion: {
+				// DisplayName: Swap Exhaustion
+				// Description: Can't swap modes
 			}
 		}
 
@@ -613,7 +628,11 @@ Mods: {
 
 			RaiderChest: {
 				// DisplayName: Raider Chestplate
-				// Tooltip: The breastplate of a Viking Raider, sturdy and very resistant.
+				/* Tooltip:
+					'''
+					The breastplate of a Viking Raider, sturdy and very resistant.
+					Decreases movement speed by 5%
+					''' */
 				/* Lore:
 					'''
 					During their battles against the drakes, they needed all protection they could get,
@@ -625,7 +644,11 @@ Mods: {
 
 			RaiderHelm: {
 				// DisplayName: Raider Helmet
-				// Tooltip: The helmet of a Viking Raider, sturdy and very resistant.
+				/* Tooltip:
+					'''
+					The helmet of a Viking Raider, sturdy and very resistant.
+					Decreases movement speed by 5%
+					''' */
 				/* Lore:
 					'''
 					During their battles against the drakes, they needed all protection they could get,
@@ -637,7 +660,11 @@ Mods: {
 
 			RaiderLegs: {
 				// DisplayName: Raider Greaves
-				// Tooltip: The greaves of a Viking Raider, sturdy and very resistant.
+				/* Tooltip:
+					'''
+					The greaves of a Viking Raider, sturdy and very resistant.
+					Decreases movement speed by 5%
+					''' */
 				/* Lore:
 					'''
 					During their battles against the drakes, they needed all protection they could get,
@@ -3082,13 +3109,43 @@ Mods: {
 			}
 
 			SusGlowsporeBag: {
-				// DisplayName: Sus Glowspore Bag
-				// Tooltip: ""
+				// DisplayName: Suspicious Glowing Spore Bag
+				// Tooltip: Summons the Feudal Bab
 			}
 
 			FungusMask: {
-				// DisplayName: Fungus Mask
-				// Tooltip: ""
+				// DisplayName: Feudal Fungus Mask
+				// Tooltip: Be the coolest fungus around
+			}
+
+			MushiumHat: {
+				// DisplayName: Twinned Ruler Cap
+				/* Tooltip:
+					'''
+					Increases max life by 5
+					Increases max mana by 10
+					Increases damage by 2%
+					''' */
+			}
+
+			MushiumPants: {
+				// DisplayName: Twinned Ruler Legs
+				/* Tooltip:
+					'''
+					Increases max life by 5
+					Increases max mana by 10
+					Increases damage by 3%
+					''' */
+			}
+
+			MushiumShirt: {
+				// DisplayName: Twinned Ruler Body
+				/* Tooltip:
+					'''
+					Increases max life by 5
+					Increases max mana by 10
+					Increases damage by 3%
+					''' */
 			}
 		}
 
@@ -3106,6 +3163,20 @@ Mods: {
 				All magic attacks inflict Frostburn
 				Increases mana regeneration
 				Reduces mana cost by 20%
+				''' */
+			/* MushiumSet:
+				'''
+				Press the Armor Ability hotkey to swap modes
+				After switching, you have to wait 30 seconds before being able to switch again
+				[c/c63434:Scarlet mode]:
+				Increases life regeneration by 3
+				Increases defense by 4
+				Swapping to Scarlet mode will heal 10 health and grant the ability to spawn hearts on enemy hits for 5 seconds
+				[c/0080ff:Indigo mode]:
+				Increases mana regeneration by 3
+				Increases max number of sentries by 1
+				Decreases defense by 4
+				Swapping to Indigo mode will increase magic damage by 10% and casting speed by 30% for 5 seconds.
 				''' */
 		}
 
@@ -3287,8 +3358,8 @@ Mods: {
 			// Aura.DisplayName: Aura
 			// Prayer.DisplayName: Praying Fungus
 			// UmosBook.DisplayName: Umos Book
-			// Mushshot2Friendly.DisplayName: Mushshot2 Friendly
-			// PureRadianceShotFriendly.DisplayName: Pure Radiance Shot Friendly
+			// Mushshot2Friendly.DisplayName: Mushshot
+			// PureRadianceShotFriendly.DisplayName: Pure Radiance Shot
 			// FeudalBab.DisplayName: Feudal Bab
 		}
 

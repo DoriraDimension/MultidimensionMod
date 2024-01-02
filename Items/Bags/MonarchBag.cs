@@ -43,7 +43,7 @@ namespace MultidimensionMod.Items.Bags
             Itemloot.Add(ItemDropRule.OneFromOptions(1, ModContent.ItemType<Musharang>(), ModContent.ItemType<Mushbow>()));
             Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<HeartyTruffle>()));
             Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<Mushmatter>(), 1, 5, 10));
-            //Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<SusSporeBag>(), 1));
+            //Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<SusSporeBag>(), 10));
         }
     }
 }

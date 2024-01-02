@@ -11,6 +11,7 @@ using Terraria.Localization;
 using System;
 using MultidimensionMod.NPCs.Bosses.FeudalFungus;
 using Terraria.Audio;
+using MultidimensionMod.Items.Materials;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 {
@@ -93,6 +94,15 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
         public override void UseItemFrame(Player player)
         {
             player.bodyFrame.Y = 5 * player.bodyFrame.Height;
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddIngredient(ItemID.Book)
+            .AddIngredient(ModContent.ItemType<GlowingMushmatter>(), 4)
+            .AddTile(TileID.Bookcases)
+            .Register();
         }
     }
 }

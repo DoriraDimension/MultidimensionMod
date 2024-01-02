@@ -10,6 +10,7 @@ using Terraria.ModLoader;
 using Terraria.Audio;
 using System.Collections.Generic;
 using Terraria.Localization;
+using MultidimensionMod.Items.Materials;
 
 namespace MultidimensionMod.Items.Weapons.Summon
 {
@@ -78,6 +79,14 @@ namespace MultidimensionMod.Items.Weapons.Summon
             projectile.originalDamage = Item.damage;
             player.UpdateMaxTurrets();
             return false;
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddIngredient(ModContent.ItemType<GlowingMushmatter>(), 5)
+            .AddTile(TileID.Anvils)
+            .Register();
         }
     }
 }

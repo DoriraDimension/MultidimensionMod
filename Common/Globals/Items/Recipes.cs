@@ -367,6 +367,7 @@ namespace MultidimensionMod.Common.Globals.Items
 			mushrang.AddIngredient(ItemID.WoodenBoomerang);
 			mushrang.AddIngredient(ModContent.ItemType<GlowingMushmatter>(), 5);
 			mushrang.AddTile(TileID.WorkBenches);
+            mushrang.Register();
 			#endregion
 
 			#region Tools

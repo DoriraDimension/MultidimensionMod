@@ -43,7 +43,7 @@ namespace MultidimensionMod.Items.Bags
             Itemloot.Add(ItemDropRule.OneFromOptions(1, ModContent.ItemType<UmosShower>(), ModContent.ItemType<RadianceTalisman>()));
             Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<TheStem>()));
             Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<GlowingMushmatter>(), 1, 5, 10));
-            Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<SusGlowsporeBag>(), 1));
+            Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<SusGlowsporeBag>(), 10));
         }
     }
 }
