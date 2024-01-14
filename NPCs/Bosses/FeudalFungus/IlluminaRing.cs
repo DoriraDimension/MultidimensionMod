@@ -12,6 +12,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 {
     internal class IlluminaRing : ModProjectile
     {
+        public override string Texture => "MultidimensionMod/ExtraTextures/Aura";
         public override void SetStaticDefaults()
         {
         }

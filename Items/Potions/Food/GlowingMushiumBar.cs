@@ -22,10 +22,12 @@ namespace MultidimensionMod.Items.Potions.Food
 
         public override void SetDefaults()
         {
-            Item.DefaultToFood(32, 32, BuffID.WellFed, 12000);
+            Item.DefaultToFood(28, 38, BuffID.WellFed, 12000);
             Item.value = Item.buyPrice(silver: 4);
             Item.maxStack = 9999;
             Item.rare = ItemRarityID.Blue;
+            Item.height = 38;
+            Item.width = 28;
         }
     }
 }

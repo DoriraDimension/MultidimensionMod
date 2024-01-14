@@ -20,6 +20,7 @@ using Terraria.GameContent;
 using MultidimensionMod.Common.Players;
 using MultidimensionMod.Projectiles.Melee.Swords;
 using Terraria.Audio;
+using MultidimensionMod.Projectiles;
 
 namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 {
@@ -306,7 +307,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             RingTime++;
                             if (RingTime == 1)
                             {
-                                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, 0, 0, ModContent.ProjectileType<IlluminaRing>(), 32, 0);
+                                int color = Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, 0, 0, ModContent.ProjectileType<IlluminaRing>(), 32, 0);
+                                (Main.projectile[color].ModProjectile as Aura).color = Color.Blue;
                                 SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), NPC.position);
                             }
                             if (RingTime == 180)
@@ -403,7 +405,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             DesperateScreamTimer++;
                             if (DesperateScreamTimer == 1)
                             {
-                                SoundEngine.PlaySound(Sounds.CustomSounds.RoyalRadianceScream with { Pitch = 1.15f }, NPC.position);
+                                SoundEngine.PlaySound(Sounds.CustomSounds.RoyalRadianceScream with { Pitch = 1.05f }, NPC.position);
                             }
                             if (DesperateScreamTimer >= 2)
                             {

@@ -3701,8 +3701,9 @@ Mods: {
 		}
 
 		DropConditions: {
-			HardmodeCondition: Drops in Hardmode.
+			DownedSkeletronCondition: Only available after defeating Skeletron.
 			RealityCondition: Drops by doing unessecery complicated stuff.
+			DimensiumCondition: Mods.MultidimensionMod.DropConditions.DimensiumCondition
 		}
 
 		SpecialTooltips: {
