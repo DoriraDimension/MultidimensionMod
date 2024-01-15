@@ -12,6 +12,7 @@ namespace MultidimensionMod.Projectiles
 {
     internal class Aura : ModProjectile
     {
+        //Code was adapted from Mod of Redemption
         public override string Texture => "MultidimensionMod/ExtraTextures/Aura";
         public override void SetDefaults()
         {
@@ -42,7 +43,7 @@ namespace MultidimensionMod.Projectiles
                     Projectile.alpha -= 5;
                 else
                     Projectile.alpha += 5;
-                Projectile.scale += 0.003f;
+                Projectile.scale += 0.002f;
             }
             else
             {

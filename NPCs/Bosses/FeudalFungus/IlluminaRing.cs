@@ -7,6 +7,7 @@ using Terraria.ID;
 using Terraria.Audio;
 using Terraria.ModLoader;
 using MultidimensionMod.Base;
+using Terraria.GameContent;
 
 namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 {
@@ -45,6 +46,18 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             }
             Projectile.Center = npc.Center;
             Projectile.light = 0.5f;
+        }
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+            Vector2 position = Projectile.Center - Main.screenPosition;
+            Rectangle rect = new(0, 0, texture.Width, texture.Height);
+            Vector2 origin = new(texture.Width / 2f, texture.Height / 2f);
+
+            Main.EntitySpriteDraw(texture, position, new Rectangle?(rect), Color.Blue, Projectile.rotation, origin, 0.4f, SpriteEffects.None, 0);
+
+            return false;
         }
     }
 }

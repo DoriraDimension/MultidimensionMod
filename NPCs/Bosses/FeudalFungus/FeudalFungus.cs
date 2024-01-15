@@ -308,7 +308,6 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             if (RingTime == 1)
                             {
                                 int color = Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, 0, 0, ModContent.ProjectileType<IlluminaRing>(), 32, 0);
-                                (Main.projectile[color].ModProjectile as Aura).color = Color.Blue;
                                 SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), NPC.position);
                             }
                             if (RingTime == 180)

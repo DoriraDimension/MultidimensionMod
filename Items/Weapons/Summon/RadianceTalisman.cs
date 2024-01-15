@@ -71,7 +71,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
             int floor = BaseWorldGen.GetFirstTileFloor((int)Main.MouseWorld.X / 16, (int)Main.MouseWorld.Y / 16);
-            position = new Vector2(Main.MouseWorld.X, floor * 16 - 30);
+            position = new Vector2(Main.MouseWorld.X, floor * 16 - 24);
         }
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {

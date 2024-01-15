@@ -10,6 +10,7 @@ namespace MultidimensionMod.Common
 {
     public static class MDDrawing
     {
+        //Code was adapted from Mod of Redemption
         public static void DrawAura(Vector2 center, Color color, float scale = 1, Entity target = null)
         {
             if (Main.netMode != NetmodeID.MultiplayerClient)
