@@ -15,10 +15,10 @@ namespace MultidimensionMod.Common
         {
             if (Main.netMode != NetmodeID.MultiplayerClient)
             {
-                int p = Projectile.NewProjectile(null, center, Vector2.Zero, ModContent.ProjectileType<Aura>(), 0, 0,
+                int aura = Projectile.NewProjectile(null, center, Vector2.Zero, ModContent.ProjectileType<Aura>(), 0, 0,
                     Main.myPlayer, scale);
-                (Main.projectile[p].ModProjectile as Aura).color = color;
-                (Main.projectile[p].ModProjectile as Aura).entityTarget = target;
+                (Main.projectile[aura].ModProjectile as Aura).color = color;
+                (Main.projectile[aura].ModProjectile as Aura).entityTarget = target;
             }
         }
     }

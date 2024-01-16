@@ -88,7 +88,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
         public override void SetStaticDefaults()
         {
             // DisplayName.SetDefault("Mushroom Monarch");
-            Main.npcFrameCount[NPC.type] = 12;
+            Main.npcFrameCount[NPC.type] = 13;
             NPCID.Sets.CantTakeLunchMoney[Type] = true;
         }
 

@@ -3080,7 +3080,7 @@ Mods: {
 					pray for safety, pray for continued freedom.
 					Their very own light is what shines in the dark caverns, the light from within,
 					the light from beyond, the light of care.
-					The Scarlet fungi do not share this light, only one and its kin have ever enjoyed its warm radiance.
+					The scarlet fungi do not share this light, only one and its kin have ever enjoyed its warm radiance.
 					''' */
 			}
 
@@ -3361,6 +3361,7 @@ Mods: {
 			// Mushshot2Friendly.DisplayName: Mushshot
 			// PureRadianceShotFriendly.DisplayName: Pure Radiance Shot
 			// FeudalBab.DisplayName: Feudal Bab
+			// FungusBubble.DisplayName: Fungus Bubble
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -3469,6 +3470,7 @@ Mods: {
 			// FeudalFungus.DisplayName: Feudal Fungus
 			// GlowSentry.DisplayName: Empowered Glowing Mushroom
 			// EvokedMushroot.DisplayName: Evoked Mushroot
+			// TruffleToad.DisplayName: Truffle Toad
 		}
 
 		Dialogue: {
@@ -3653,6 +3655,8 @@ Mods: {
 			// Grudge: The incarnation of despair and hope that piled up in the Frozen Underworld, born from the deep wishes of its residents and the abyssal magic that lurks inside. You have slain their biggest hope, so be assured, the winds are not happy about your slaughter.
 			// MushroomMonarch: A royal mushroom who rests in the Scarlet Mycelium Forest. He was way more powerful a long time ago, but he laid down his will to fight in exchange for a peaceful life. Nowadays he is just a grumpy old king in his tiny kingdom.
 			// RedMushling: The monarchs loyal servants which are formed from his own flesh. They have no mind, only following their task to kill whatever is in their way.
+			// FeudalFungus: A large humanoid glowing mushroom who is known as the glowing royalty. It possesses powerful telekinetic abilities with which it can bend the surrounding fungi at will. Only the mushrooms know what hides under its light.
+			// Toad: Frogs that have grown large and somehow found their way into the glowing caverns. Their ability to jump is greatly crippled due to mycelium restraining the movement of their back legs. They are peaceful until provoked.
 		}
 
 		SoulConversation: {
@@ -3703,7 +3707,7 @@ Mods: {
 		DropConditions: {
 			// DownedSkeletronCondition: Only available after defeating Skeletron.
 			// RealityCondition: Drops by doing unessecery complicated stuff.
-			// DimensiumCondition: Mods.MultidimensionMod.DropConditions.DimensiumCondition
+			// DimensiumCondition: This item won't appear in the bestiary.
 		}
 
 		SpecialTooltips: {

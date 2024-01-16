@@ -21,6 +21,7 @@ using MultidimensionMod.Common.Players;
 using MultidimensionMod.Projectiles.Melee.Swords;
 using Terraria.Audio;
 using MultidimensionMod.Projectiles;
+using Terraria.GameContent.Bestiary;
 
 namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 {
@@ -121,6 +122,15 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             NPC.dontTakeDamage = true;
         }
 
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundMushroom,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.FeudalFungus")
+            });
+        }
+
         public override bool? DrawHealthBar(byte hbPosition, ref float scale, ref Vector2 position)
         {
             scale = 1.5f;
@@ -165,14 +175,6 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             {
                 modifiers.FinalDamage *= 1.25f;
             }
-            if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) < 2) //Increases damage reduction by 20% if two Glowing Sentries are alive.
-            {
-                modifiers.FinalDamage *= 1.20f;
-            }
-            else if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) < 1) //Increases damage reduction by 10% if a Glowing Sentry is alive.
-            {
-                modifiers.FinalDamage *= 1.10f;
-            }
             return;
         }
 
@@ -193,11 +195,11 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 
         public override void AI()
         {
-            if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) < 2) //Increases damage reduction by 20% if two Glowing Sentries are alive.
+            if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) < 2) //Increases defense by 20 if two Glowing Sentries are alive.
             {
                 NPC.defense = 20;
             }
-            else if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) < 1) //Increases damage reduction by 10% if a Glowing Sentry is alive.
+            else if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) < 1) //Increases defense by 15 if a Glowing Sentry is alive.
             {
                 NPC.defense = 15;
             }
