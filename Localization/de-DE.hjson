@@ -167,6 +167,11 @@ Mods: {
 				// DisplayName: Swap Exhaustion
 				// Description: Can't swap modes
 			}
+
+			Exhaustion: {
+				// DisplayName: Leg Pain
+				// Description: You can't high jump
+			}
 		}
 
 		Items: {
@@ -3145,6 +3150,17 @@ Mods: {
 					Increases max life by 5
 					Increases max mana by 10
 					Increases damage by 3%
+					''' */
+			}
+
+			ToadLeg: {
+				// DisplayName: Truffle Leg
+				/* Tooltip:
+					'''
+					The severed leg of a Truffle Toad, now freed from its restraints,
+					it grants a powerful leap
+					Double tap up to leap
+					You cannot do another leap for 1 minute
 					''' */
 			}
 		}

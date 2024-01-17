@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -35,6 +36,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
 
         public override void OnKill(int timeLeft)
         {
+            SoundEngine.PlaySound(in SoundID.Item54, Projectile.position);
             for (int dust = 0; dust <= 5; dust++)
             {
                 Dust.NewDust(Projectile.position + Projectile.velocity, Projectile.width, Projectile.height, DustID.GlowingMushroom, Projectile.oldVelocity.X * 0.5f, Projectile.oldVelocity.Y * 0.5f);

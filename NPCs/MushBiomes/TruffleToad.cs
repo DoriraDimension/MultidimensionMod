@@ -198,6 +198,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                                 velocity.Normalize();
                                 velocity *= ProjSpeed * ba;
                                 Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, velocity.X, velocity.Y, ModContent.ProjectileType<FungusBubble>(), 25, 0);
+                                SoundEngine.PlaySound(SoundID.Item85, NPC.position);
                             }
                         }
                         FrameSpeed = 6;
