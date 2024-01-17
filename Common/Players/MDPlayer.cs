@@ -64,6 +64,7 @@ namespace MultidimensionMod.Common.Players
         public bool FungusPrayer = false;
         public bool MushiumSet = false;
         public bool IndigoMode = false;
+        public bool CrippledHealing = false;
 
         public override void ResetEffects()
         {
@@ -88,6 +89,7 @@ namespace MultidimensionMod.Common.Players
             Stem = false;
             FungusPrayer = false;
             MushiumSet = false;
+            CrippledHealing = false;
         }
 
         public override void UpdateDead()
@@ -332,6 +334,10 @@ namespace MultidimensionMod.Common.Players
             else if (item.type == ItemID.Mushroom && !player.GetModPlayer<MDPlayer>().Healthy)
             {
                 item.healLife = 15;
+            }
+            if (CrippledHealing)
+            {
+                healValue = (int)(healValue * 0.50f);
             }
         }
 

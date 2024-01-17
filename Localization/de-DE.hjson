@@ -168,9 +168,14 @@ Mods: {
 				// Description: Can't swap modes
 			}
 
-			Exhaustion: {
+			LegPain: {
 				// DisplayName: Leg Pain
 				// Description: You can't high jump
+			}
+
+			PotionInfection: {
+				// DisplayName: Potion Infection
+				// Description: Mods.MultidimensionMod.Buffs.PotionInfection.Description
 			}
 		}
 
@@ -3160,7 +3165,7 @@ Mods: {
 					The severed leg of a Truffle Toad, now freed from its restraints,
 					it grants a powerful leap
 					Double tap up to leap
-					You cannot do another leap for 1 minute
+					You cannot do another leap for 30 seconds
 					''' */
 			}
 		}
@@ -3650,7 +3655,7 @@ Mods: {
 			// SearedAshton: A subspecies of Ashton that adapted to live in the seething heat of the underworld, they spit hot burning ash clouds.
 			// IceDrakeJuvenile: Juvenile Ice Drakes usually reside underground where they hunt down prey via ambush. They can be approached savely when they are asleep. They really love gilded dishes.
 			// Glowmarin: A fish from another dimension, they have glowing organs all over their body, suggesting that they originally lived in deeper waters.
-			// Lobster: Odd lobster species that lives near the shores, the have a beak which gives them their name. Their meat is very tasty and can make a nice dish.
+			// Lobster: Odd lobster species that lives near the shores, they have a parrot like beak which gives them their name. Their meat is very tasty and can make a nice dish.
 			// StormEel: The great storm eels, only active during storms, when the sea is harsh and unforgiving. Many people believe they are scouts, scouts of something deep under the ocean, that is why these creatures are seen as an omen of even worse to come
 			// Dusty: Piles of cooled ash given life by the potent magic of the Frozen Underworld. They have no mind or soul, they only fly around on the icy winds, exploding into ash on impact.
 			// Victim: A poor soul that has lost everything to the Abyssal Sin. When the great devil of the Subzero Ridge took over their world, they left and went to the Underworld together with the icy winds. They have long forgotten who they even are.

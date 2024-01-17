@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using MultidimensionMod.Buffs.Debuffs;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
@@ -126,6 +127,8 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     {
                         Main.player[i].HealEffect(-10, false);
                         Main.player[i].statLife -= 10;
+                        if (!Main.player[i].HasBuff(ModContent.BuffType<PotionInfection>()))
+                            Main.player[i].AddBuff(ModContent.BuffType<PotionInfection>(), 900);
                     }
                     else
                     {
