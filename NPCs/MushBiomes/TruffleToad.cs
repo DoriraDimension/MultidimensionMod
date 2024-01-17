@@ -65,7 +65,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
 
         public override void ModifyNPCLoot(NPCLoot NPCloot)
         {
-            //NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<ToadLeg>(), 5));
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<ToadLeg>(), 5));
         }
 
         public int IThinkImStupid = 0;
@@ -187,7 +187,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     }
                     else
                     {
-                        if (Charge == 140) 
+                        if (Charge == 125) 
                         {
                             for (int i = 0; i < 6; i++)
                             {
@@ -237,7 +237,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     if (target.Center.X < NPC.Center.X)
                         x *= -1;
                     NPC.velocity.X += x;
-                    NPC.velocity.Y = -Main.rand.NextFloat(3f, 3f);
+                    NPC.velocity.Y = -3f;
                 }
             }
         }

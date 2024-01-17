@@ -22,6 +22,9 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.Bestiary;
 using MultidimensionMod.Items.Mushrooms;
 using Terraria.GameContent;
+using static Humanizer.In;
+using Terraria.DataStructures;
+using Terraria.Localization;
 
 namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
 {
@@ -58,6 +61,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             Walk,
             Attack,
             Fly,
+            FuckYou
         }
 
         public ActionState AIState
@@ -145,6 +149,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
         public int FlyTimer = 0;
         public int ShittingMyself = 0;
         public int AISwitch = 0;
+        public int AreYouSerious = 0;
 
         public override bool? CanFallThroughPlatforms()
         {
@@ -167,7 +172,10 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPC.TargetClosest();
 
             Player player = Main.player[NPC.target];
-
+            if (!Collision.CanHit(NPC.position, NPC.width, NPC.height, Main.player[NPC.target].position, Main.player[NPC.target].width, Main.player[NPC.target].height) && internalAI[3] < 180)
+            {
+                AIState = ActionState.FuckYou;
+            }
             if (player == null)
             {
                 NPC.TargetClosest();
@@ -337,6 +345,32 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                         AIState = ActionState.Walk;
                         NPC.noTileCollide = false;
                         NPC.noGravity = false;
+                    }
+                    break;
+                case ActionState.FuckYou:
+                    AreYouSerious++;
+                    NPC.frame.Y = 0;
+                    NPC.velocity.X = 0;
+                    NPC.netUpdate = true;
+                    if (AreYouSerious >= 140) 
+                    {
+                        NPC.frame.Y = 540;
+                    }
+                    if (AreYouSerious == 240)
+                    {
+                        AreYouSerious = 0;
+                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<MonarchRUNAWAYPlayerKill>(), 0, 0);
+                        NPC.active = false;
+                    }
+                    else if (AreYouSerious == 240 && Main.getGoodWorld)
+                    {
+                        AreYouSerious = 0;
+                        player.KillMe(PlayerDeathReason.ByCustomReason(player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.AntiCheese")), 1000.0, 0);
+                    }
+                    else if (Collision.CanHit(NPC.position, NPC.width, NPC.height, Main.player[NPC.target].position, Main.player[NPC.target].width, Main.player[NPC.target].height) && internalAI[3] < 180)
+                    {
+                        AIState = ActionState.Attack;
+                        AreYouSerious = 0;
                     }
                     break;
             }

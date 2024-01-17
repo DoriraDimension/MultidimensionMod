@@ -3629,8 +3629,9 @@ Mods: {
 		}
 
 		DeathMessages: {
-			Socks: died from the pain of wearing wet socks.
-			MonarchHeart: has turned into mush.
+			Socks: " died from the pain of wearing wet socks."
+			MonarchHeart: " has turned into mush."
+			AntiCheese: " has been punished for their skill issue."
 		}
 
 		Configs: {

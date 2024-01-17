@@ -125,8 +125,8 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     SoundEngine.PlaySound(SoundID.Item2, Projectile.position);
                     if (Main.expertMode)
                     {
-                        Main.player[i].HealEffect(-10, false);
-                        Main.player[i].statLife -= 10;
+                        Main.player[i].HealEffect(-8, false);
+                        Main.player[i].statLife -= 8;
                         if (!Main.player[i].HasBuff(ModContent.BuffType<PotionInfection>()))
                             Main.player[i].AddBuff(ModContent.BuffType<PotionInfection>(), 900);
                     }

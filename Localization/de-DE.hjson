@@ -174,8 +174,8 @@ Mods: {
 			}
 
 			PotionInfection: {
-				// DisplayName: Potion Infection
-				// Description: Mods.MultidimensionMod.Buffs.PotionInfection.Description
+				// DisplayName: Unhealthy Infection
+				// Description: Healing items only heal half their normal amount
 			}
 		}
 
@@ -3629,8 +3629,9 @@ Mods: {
 		}
 
 		DeathMessages: {
-			// Socks: died from the pain of wearing wet socks.
-			// MonarchHeart: has turned into mush.
+			// Socks: " died from the pain of wearing wet socks."
+			// MonarchHeart: " has turned into mush."
+			// AntiCheese: " has been punished for their skill issue."
 		}
 
 		Configs: {
