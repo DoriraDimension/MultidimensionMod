@@ -406,7 +406,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             DesperateScreamTimer++;
                             if (DesperateScreamTimer == 1)
                             {
-                                SoundEngine.PlaySound(Sounds.CustomSounds.RoyalRadianceScream with { Pitch = 1.05f }, NPC.position);
+                                SoundEngine.PlaySound(Sounds.CustomSounds.RoyalRadianceScream with { Pitch = 0.50f }, NPC.position);
                             }
                             if (DesperateScreamTimer >= 2)
                             {

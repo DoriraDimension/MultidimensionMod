@@ -3,11 +3,16 @@ using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using MultidimensionMod.Projectiles.Magic;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
 {
     public class Musharang : ModItem
 	{
+        public int Imbue = 0;
+
 		public override void SetDefaults()
 		{
 
@@ -46,6 +51,29 @@ namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
             }
             return true;
         }
+
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+        {
+            if (Imbue == 3)
+            {
+                damage *= 2;
+                velocity *= 1.3f;
+                player.statLife -= 10;
+            }
+            Projectile.NewProjectile(source, position.X, position.Y, velocity.X, velocity.Y, type, damage, knockback, player.whoAmI);
+            return false;
+        }
+
+        public override bool? UseItem(Player player)
+        {
+            Imbue += 1;
+            if (Imbue >= 4)
+            {
+                Imbue = 0;
+            }
+            return true;
+        }
+
         public override void AddRecipes()
         {
             CreateRecipe()

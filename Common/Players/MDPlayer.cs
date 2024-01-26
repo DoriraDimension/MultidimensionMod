@@ -65,6 +65,7 @@ namespace MultidimensionMod.Common.Players
         public bool MushiumSet = false;
         public bool IndigoMode = false;
         public bool CrippledHealing = false;
+        public bool TwinPrayer = false;
 
         public override void ResetEffects()
         {
@@ -90,6 +91,7 @@ namespace MultidimensionMod.Common.Players
             FungusPrayer = false;
             MushiumSet = false;
             CrippledHealing = false;
+            TwinPrayer = false;
         }
 
         public override void UpdateDead()

@@ -177,6 +177,11 @@ Mods: {
 				// DisplayName: Unhealthy Infection
 				// Description: Healing items only heal half their normal amount
 			}
+
+			TwinPrayerBuff: {
+				// DisplayName: Twin Prayer Buff
+				// Description: Mods.MultidimensionMod.Buffs.TwinPrayerBuff.Description
+			}
 		}
 
 		Items: {
@@ -2861,7 +2866,11 @@ Mods: {
 
 			Musharang: {
 				// DisplayName: Monarcharang
-				// Tooltip: ""
+				/* Tooltip:
+					'''
+					Every 3rd throw imbues the weapon with your life
+					Imbued projectiles deal more damage and are faster
+					''' */
 			}
 
 			Mushbow: {
@@ -3109,7 +3118,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Hold a book above your head to release continuous waves of glowing shots upwards
-					Falling below 20% health empowers the shots greatly
+					Falling below 50% health empowers the shots greatly
 					''' */
 				/* Lore:
 					'''
@@ -3166,6 +3175,63 @@ Mods: {
 					it grants a powerful leap
 					Double tap up to leap
 					You cannot do another leap for 30 seconds
+					''' */
+			}
+
+			RoyalFungarang: {
+				// DisplayName: Royal Fungarang
+				/* Tooltip:
+					'''
+					Every 3rd throw imbues the weapon with your life
+					Imbued projectiles deal more damage and are faster
+					If you had 100 mana during the throw, 
+					the weapon will be boosted further and you lose that amount of mana
+					''' */
+			}
+
+			UnitedString: {
+				// DisplayName: United String
+				/* Tooltip:
+					'''
+					Shoots Bloodshroom Arrows at the cost of 10 HP
+					When a Bloodshroom Arrow hits an enemy, you get healed by 5 HP
+					Right clicking will fire a Lightshroom Arrow that costs 40 mana
+					Lightshroom Arrows are shot much quicker than Bloodshroom Arrows
+					''' */
+			}
+
+			UmosForce: {
+				// DisplayName: Umos Light Force
+				/* Tooltip:
+					'''
+					Fires a green sphere of light upwards that then flies towards the cursor
+					While the sphere is at the cursor position it will fire several Radiance Shots upwards
+					If you hold the sphere close to you, you will gain increased life regeneration
+					The sphere will not fire anything as long as it is close to you
+					''' */
+				/* Lore:
+					'''
+					A previous unreadable page has been revealed due to the now glowing texts
+					'The sleeping light, we defend with all our might,
+					one day it may awake, undo all that's in its wake,
+					we follow and move on, may we find oblivion.
+					''' */
+			}
+
+			EntwinedTalisman: {
+				// DisplayName: Entwined Talisman
+				/* Tooltip:
+					'''
+					Summons two entwined Praying Mushrooms as a sentry at the cursor position which create an aura around it
+					The aura increases summon damage by 8% and enemies have a 10% chance to drop a mana star,
+					and a 5% chance to drop a heart upon being hit by a minion
+					''' */
+				/* Lore:
+					'''
+					Due to not being blessed by the light, the scarlet fungi neither glow nor do they have much consciousness
+					Though sometimes, glowing mushrooms will try to become one with them,
+					all in hopes of sharing their light with them.
+					It is unknown if it actually works this way, only those who can understand their thoughts may know.
 					''' */
 			}
 		}
@@ -3383,6 +3449,12 @@ Mods: {
 			// PureRadianceShotFriendly.DisplayName: Pure Radiance Shot
 			// FeudalBab.DisplayName: Feudal Bab
 			// FungusBubble.DisplayName: Fungus Bubble
+			// Fungarang.DisplayName: Fungarang
+			// LightshroomArrow.DisplayName: Lightshroom Arrow
+			// ConsumedBook.DisplayName: Consumed Book
+			// UmosLightSphere.DisplayName: Umos Light Sphere
+			// LightSphereMouse.DisplayName: Umos Light Sphere
+			// PrayingTwins.DisplayName: Praying Twins
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability

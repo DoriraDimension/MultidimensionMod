@@ -21,7 +21,7 @@ namespace MultidimensionMod.Buffs.Minions
             player.GetModPlayer<MDPlayer>().FungusPrayer = true;
         }
     }
-    public class SunAuraBuffNPC : GlobalNPC
+    public class PrayerNPC : GlobalNPC
     {
         public override bool InstancePerEntity => true;
         public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref NPC.HitModifiers modifiers)
@@ -36,5 +36,4 @@ namespace MultidimensionMod.Buffs.Minions
             }
         }
     }
-
 }
