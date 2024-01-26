@@ -27,7 +27,7 @@ namespace MultidimensionMod.NPCs.Madness
 		{
 			NPC.width = 48;
 			NPC.height = 58;
-			NPC.damage = 30;
+			NPC.damage = 19;
 			NPC.defense = 10;
 			NPC.lifeMax = 160;
             NPC.HitSound = SoundID.NPCHit1;

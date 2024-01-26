@@ -45,7 +45,8 @@ namespace MultidimensionMod.Projectiles.Ranged
 				Projectile.ai[1] = 1f;
 				for (int num64 = 0; num64 < 30; num64++)
 				{
-					Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.PurificationPowder, Projectile.velocity.X * 1.5f, Projectile.velocity.Y * 1.5f, 50);
+					int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.PurificationPowder, Projectile.velocity.X * 1.5f, Projectile.velocity.Y * 1.5f, 50);
+					Main.dust[dust].noLight = true;
 				}
 			}
 		}

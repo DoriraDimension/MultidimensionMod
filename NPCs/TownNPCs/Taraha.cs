@@ -2,7 +2,8 @@
 using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Summons;
 using MultidimensionMod.Items.Potions;
-using MultidimensionMod.Items.Weapons.Summon;
+using MultidimensionMod.Items;
+using MultidimensionMod.Common.Systems;
 using MultidimensionMod.UI;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -202,7 +203,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue2"));
 			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue3"));
 			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue4"));
-			if (dor >= 0)
+            if (dor >= 0)
             {
 				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.DoriraDialogue"));
 			}
@@ -213,6 +214,16 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			if (Main.slimeRain)
             {
 				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.SlimeRainDialogue"));
+            }
+			if (DownedSystem.downedSmiley)
+			{
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.SmileyDialogue"));
+            }
+            Player player = Main.LocalPlayer;
+            int shadeEye = player.FindItem(ModContent.ItemType<ShadeEye>());
+            if (player.inventory[shadeEye].stack >= 0)
+			{
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.ShadeItemDialogue"));
             }
 
 			string dialogueLine = chat; // chat is implicitly cast to a string.

@@ -245,12 +245,18 @@ namespace MultidimensionMod.Common.Players
                         player.lifeRegen -= 30;
                     }
                 }
-                if (player.statLife == 0)
-                {
-                    player.KillMe(PlayerDeathReason.ByCustomReason(player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.MonarchHeart")), 1000.0, 0);
-                }
             }
         }
+
+        public override bool PreKill(double damage, int hitDirection, bool pvp, ref bool playSound, ref bool genGore, ref PlayerDeathReason damageSource)
+        {
+            if (Madness && damage == 10.0 && hitDirection == 0 && damageSource.SourceOtherIndex == 8)
+                damageSource = PlayerDeathReason.ByCustomReason(Player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.Madness"));
+            if (MonarchHeart && damage == 10.0 && hitDirection == 0 && damageSource.SourceOtherIndex == 8)
+                damageSource = PlayerDeathReason.ByCustomReason(Player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.MonarchHeart"));
+            return true;
+        }
+
 
         public override void DrawEffects(PlayerDrawSet drawInfo, ref float r, ref float g, ref float b, ref float a, ref bool fullBright)
         {

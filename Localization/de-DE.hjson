@@ -180,7 +180,7 @@ Mods: {
 
 			TwinPrayerBuff: {
 				// DisplayName: Twin Prayer Buff
-				// Description: Mods.MultidimensionMod.Buffs.TwinPrayerBuff.Description
+				// Description: The prayer of the mushrooms empowers you
 			}
 		}
 
@@ -3604,6 +3604,8 @@ Mods: {
 				// DoriraDialogue: Dorira, he traded powerful objects for… chocolate...
 				// BloodMoonDialogue: ...
 				// SlimeRainDialogue: Yum yum, gelatine heaven!
+				// ShadeItemDialogue: Shadow, I can smell it, say hello to him for Taraha.
+				// SmileyDialogue: The king, empty, alone, withering...
 			}
 
 			Dappercap: {
@@ -3704,6 +3706,7 @@ Mods: {
 			// Socks: " died from the pain of wearing wet socks."
 			// MonarchHeart: " has turned into mush."
 			// AntiCheese: " has been punished for their skill issue."
+			// Madness: " 's mind was consumed."
 		}
 
 		Configs: {
