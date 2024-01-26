@@ -4,6 +4,7 @@ using MultidimensionMod.Items.Vanity;
 using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Pets;
 using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Items.Potions.Food;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -43,6 +44,7 @@ namespace MultidimensionMod.Items.Bags
             Itemloot.Add(ItemDropRule.OneFromOptions(1, ModContent.ItemType<Musharang>(), ModContent.ItemType<Mushbow>()));
             Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<HeartyTruffle>()));
             Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<Mushmatter>(), 1, 5, 10));
+            Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<MushiumBar>(), 3, 1, 2));
             //Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<SusSporeBag>(), 10));
         }
     }

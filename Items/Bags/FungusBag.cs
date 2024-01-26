@@ -4,6 +4,7 @@ using MultidimensionMod.Items.Vanity;
 using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Pets;
 using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Items.Potions.Food;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -43,6 +44,7 @@ namespace MultidimensionMod.Items.Bags
             Itemloot.Add(ItemDropRule.OneFromOptions(1, ModContent.ItemType<UmosShower>(), ModContent.ItemType<RadianceTalisman>()));
             Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<TheStem>()));
             Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<GlowingMushmatter>(), 1, 5, 10));
+            Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<GlowingMushiumBar>(), 3, 1, 2));
             Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<SusGlowsporeBag>(), 10));
         }
     }

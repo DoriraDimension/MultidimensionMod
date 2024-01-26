@@ -92,7 +92,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     IThinkImStupid = 2;
                 }
             }
-            if (Main.rand.NextBool(500))
+            if (Main.rand.NextBool(700))
             {
                 SoundEngine.PlaySound(SoundID.Zombie13 with { Pitch = -0.40f }, NPC.position);
             }
@@ -246,7 +246,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
         {
             if (spawnInfo.Player.ZoneGlowshroom)
             {
-                return 0.05f;
+                return 0.03f;
             }
             return 0f;
         }

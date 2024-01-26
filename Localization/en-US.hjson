@@ -3219,7 +3219,7 @@ Mods: {
 			}
 
 			EntwinedTalisman: {
-				DisplayName: Entwined Talisman
+				DisplayName: Talisman of the Entwined
 				Tooltip:
 					'''
 					Summons two entwined Praying Mushrooms as a sentry at the cursor position which create an aura around it
