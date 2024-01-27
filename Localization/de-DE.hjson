@@ -3219,7 +3219,7 @@ Mods: {
 			}
 
 			EntwinedTalisman: {
-				// DisplayName: Entwined Talisman
+				// DisplayName: Talisman of the Entwined
 				/* Tooltip:
 					'''
 					Summons two entwined Praying Mushrooms as a sentry at the cursor position which create an aura around it
@@ -3706,7 +3706,7 @@ Mods: {
 			// Socks: " died from the pain of wearing wet socks."
 			// MonarchHeart: " has turned into mush."
 			// AntiCheese: " has been punished for their skill issue."
-			// Madness: " 's mind was consumed."
+			// Madness: "'s mind was consumed."
 		}
 
 		Configs: {
@@ -3753,7 +3753,7 @@ Mods: {
 			// MushroomMonarch: A royal mushroom who rests in the Scarlet Mycelium Forest. He was way more powerful a long time ago, but he laid down his will to fight in exchange for a peaceful life. Nowadays he is just a grumpy old king in his tiny kingdom.
 			// RedMushling: The monarchs loyal servants which are formed from his own flesh. They have no mind, only following their task to kill whatever is in their way.
 			// FeudalFungus: A large humanoid glowing mushroom who is known as the glowing royalty. It possesses powerful telekinetic abilities with which it can bend the surrounding fungi at will. Only the mushrooms know what hides under its light.
-			// Toad: Frogs that have grown large and somehow found their way into the glowing caverns. Their ability to jump is greatly crippled due to mycelium restraining the movement of their back legs. They are peaceful until provoked.
+			// Toad: Rare toads that have grown large and somehow found their way into the glowing caverns. Their ability to jump is greatly crippled due to mycelium restraining the movement of their back legs. They are peaceful until provoked.
 		}
 
 		SoulConversation: {
