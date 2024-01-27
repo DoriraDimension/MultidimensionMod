@@ -1,15 +1,15 @@
 ﻿using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Dusts;
-using MultidimensionMod.Tiles.Biomes.ShroomForest;
+using MultidimensionMod.Items.Summons;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
 
-namespace MultidimensionMod.Tiles
+namespace MultidimensionMod.Tiles.Biomes.ShroomForest
 {
-    public class MadnessShroomPlaced : ModTile
+    public class KingsCapPlaced : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -18,27 +18,20 @@ namespace MultidimensionMod.Tiles
             Main.tileSolid[Type] = false;
             Main.tileLighted[Type] = false;
             Main.tileNoAttach[Type] = true;
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+            TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.DrawYOffset = 0;
             TileID.Sets.SwaysInWindBasic[Type] = true;
             TileID.Sets.IgnoredByGrowingSaplings[Type] = true;
             TileObjectData.newTile.AnchorValidTiles = new int[]
             {
-                TileID.Grass,
-                TileID.JungleGrass,
-                TileID.CorruptGrass,
-                TileID.CorruptJungleGrass,
-                TileID.CrimsonGrass,
-                TileID.CrimsonJungleGrass,
-                TileID.MushroomGrass,
-                TileID.HallowedGrass,
-                ModContent.TileType<Mycelium>()
+               ModContent.TileType<Mycelium>()
             };
             TileObjectData.addTile(Type);
             HitSound = SoundID.Grass;
-            DustType = ModContent.DustType<MadnessB>();
-            RegisterItemDrop(ModContent.ItemType<MadnessShroom>());
+            DustType = ModContent.DustType<MushroomDust>();
+            RegisterItemDrop(ModContent.ItemType<IntimidatingMushroom>());
         }
         public override void NumDust(int i, int j, bool fail, ref int num)
         {

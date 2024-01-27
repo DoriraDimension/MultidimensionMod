@@ -7,6 +7,7 @@ using MultidimensionMod.NPCs.Critters;
 using MultidimensionMod.NPCs.Underworld;
 using MultidimensionMod.NPCs.FU;
 using MultidimensionMod.NPCs.Madness;
+using MultidimensionMod.NPCs.MushBiomes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -102,6 +103,9 @@ namespace MultidimensionMod.Tiles
                     case 17:
                         type = ModContent.NPCType<Madman>();
                         break;
+					case 18:
+						type = ModContent.NPCType<TruffleToad>();
+						break;
                     default:
 						return;
 				}

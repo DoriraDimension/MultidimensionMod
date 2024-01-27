@@ -12,6 +12,7 @@ using MultidimensionMod.Base;
 using MultidimensionMod.NPCs.Bosses.FeudalFungus;
 using Terraria.GameContent.Bestiary;
 using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
+using MultidimensionMod.Items.Placeables.Banners;
 
 namespace MultidimensionMod.NPCs.MushBiomes
 {
@@ -52,6 +53,8 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.rarity = 2;
+            Banner = NPC.type;
+            BannerItem = ModContent.ItemType<ToadBanner>();
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

@@ -307,12 +307,14 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         case 0: //Illumina Ring (spawns a ring projectile on the NPC and makes it move towards the player
                             FungusGlowRingAI(player.Center);
                             RingTime++;
-                            if (RingTime == 1)
+                            if (RingTime <= 60)
+                                NPC.velocity = new Vector2(0, 0);
+                            if (RingTime == 60)
                             {
                                 int color = Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, 0, 0, ModContent.ProjectileType<IlluminaRing>(), 32, 0);
                                 SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), NPC.position);
                             }
-                            if (RingTime == 180)
+                            if (RingTime == 240)
                             {
                                 AIState = ActionState.Hovering;
                                 RingTime = 0;

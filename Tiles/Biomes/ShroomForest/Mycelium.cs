@@ -31,10 +31,15 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<Mushroom>(), mute: true, style: Main.rand.Next(5));
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<Mushroom>(), Main.rand.Next(5), 0, -1, -1);
             }
-            if (Main.rand.NextBool(1440))
+            if (Main.rand.NextBool(5000))
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<YoungMushroom>(), mute: true, style: Main.rand.Next(3));
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<YoungMushroom>(), Main.rand.Next(5), 0, -1, -1);
+            }
+            if (Main.rand.NextBool(2500))
+            {
+                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<KingsCapPlaced>(), mute: true);
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<KingsCapPlaced>(), Main.rand.Next(5), 0, -1, -1);
             }
         }
 
