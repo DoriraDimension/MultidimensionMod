@@ -524,44 +524,6 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPC.velocity *= moveSpeed;
             NPC.velocity *= velMultiplier;
         }
-
-        public override void ModifyHitByProjectile(Projectile projectile, ref NPC.HitModifiers modifiers)
-        {
-            if(Main.rand.NextBool(5))
-            {
-                if(Main.rand.NextBool(10))
-                {
-                    int i = Item.NewItem(NPC.GetSource_FromAI(), (int)NPC.Center.X, (int)NPC.Center.Y, 16, 16, 5, 1, false, 0, false, false);
-                    if (Main.netMode == 1 && i > 0)
-                    {
-                        NetMessage.SendData(21, -1, -1, null, i, 1f, 0f, 0f, 0, 0, 0);
-                    }
-                }
-                else
-                {
-                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), Mod.Find<ModProjectile>("FakeMonarchMushroom").Type, 0, 0);
-                }
-            }
-        }
-
-        public override void ModifyHitByItem(Player player, Item item, ref NPC.HitModifiers modifiers)
-        {
-            if (Main.rand.NextBool(5))
-            {
-                if (Main.rand.NextBool(10))
-                {
-                    int i = Item.NewItem(NPC.GetSource_FromAI(), (int)NPC.Center.X, (int)NPC.Center.Y, 16, 16, 5, 1, false, 0, false, false);
-                    if (Main.netMode == 1 && i > 0)
-                    {
-                        NetMessage.SendData(21, -1, -1, null, i, 1f, 0f, 0f, 0, 0, 0);
-                    }
-                }
-                else
-                {
-                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), Mod.Find<ModProjectile>("FakeMonarchMushroom").Type, 0, 0);
-                }
-            }
-        }
         
         public void MoveToPoint(Vector2 point)
         {

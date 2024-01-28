@@ -253,9 +253,9 @@ Mods: {
 				Tooltip:
 					'''
 					Increases all damage and crit chance by 4% when in the Desert.
-					Getting hit while mana is completely full will trigger a shockwave that scales with magic damage and ignores 20 defense
-					The initial damage depends on your maximum mana
-					All mana is lost upon triggering this effect
+					Getting hit will trigger a shockwave that scales with magic damage and ignores 20 defense
+					The initial damage depends on how much mana you had on activation
+					All remaining mana is lost upon triggering this effect
 					Shockwave damage gets doubled upon entering hardmode
 					The shockwave has a 5 second cooldown
 					'''
@@ -2790,7 +2790,7 @@ Mods: {
 			}
 
 			IntimidatingMushroom: {
-				DisplayName: King's Cap
+				DisplayName: Kings Cap
 				Tooltip:
 					'''
 					A very pricey mushroom only found in the Scarlet Mycelium Forest
@@ -3019,8 +3019,17 @@ Mods: {
 			}
 
 			ConfusingMushroom: {
-				DisplayName: Feudal Fungus caller
-				Tooltip: Callers the Fungus Feud
+				DisplayName: Overgrown Ring
+				Tooltip:
+					'''
+					Draws the attention of the glowing royalty
+					Non-consumable
+					'''
+				Lore:
+					'''
+					A ring made of pure gold that is covered in glowing mushmatter.
+					It has inscriptions on it that talk about the life of the Light Prophet.
+					'''
 			}
 
 			FungusBox: {
@@ -3233,6 +3242,11 @@ Mods: {
 					all in hopes of sharing their light with them.
 					It is unknown if it actually works this way, only those who can understand their thoughts may know.
 					'''
+			}
+
+			ToadBanner: {
+				DisplayName: Toad Banner
+				Tooltip: ""
 			}
 		}
 
@@ -3620,6 +3634,7 @@ Mods: {
 				GenericDialogue5: So I talked to this guy once who really seemed to like mushrooms, it was a nice conversation until he mentioned he preferred my dad over my uncle. I was like “DUDE HOW?” and he kept going with how awesome he is. I told him to shroom himself and left him alone with a moldy one, hope the smell unrots his brain.
 				GenericDialogue6: Sometimes my dad was so annoying that I told him to finally go get some milk.
 				GenericDialogue7: I heard there is a kingdom full of mushroom people, but it’s not ruled by a mushroom, do you think it’s real?
+				GenericDialogue8: Yo, would be awesome if you were to meet my uncle. If you bring me like, 30 glowing mushrooms, I'm going to give you something that will definetily draw his attention.
 				#Below is Alch Mushroom dialogue
 				TradeSuccess1: Yo awesome, take these for your work.
 				TradeSuccess2: Thanks, my other contact will really appreciate these!
@@ -3627,9 +3642,10 @@ Mods: {
 				TradeFail2: Hello? You understand me? You need to give thingie so I give thingie. So GET your ass out unless you need something important.
 				MadnessTrade: HOLY COW! I have no idea where you found this but these mushrooms are EXTREMELY rare. There is only one species in my possession that I could give you for such a beauty.
 				DyeItemTrade: Oh thanks, how did you know I was hungry?
+				GlowTrade: Alright, here ya go bro. I stole this from my dad to sell it but apperantly it belongs to my uncle. Try to give it back so you two can get to know eachother!
 				#Below is first time talk dialogue
 				FirstTalk1: I saw you gave my dad a good thrashing, so I guess you’re cool.
-				FirstTalk2: Yes bro, you don’t know how much I hate that guy, hope he went to cry in a corner. I’m Deadly Dappercap btw, the deadliest fungus in town, I love to get around and gather some really funky shrooms. Let’s say you bring me some valuable things and I will give you some of them. But if anyone asks, they aren’t from me, understood?
+				FirstTalk2: Yes bro, you don’t know how much I hate that guy, hope he went to cry in a corner. I’m Deadly Dappercap btw, the deadliest fungus in town, I love to get around and gather some really funky shrooms. Let’s say you bring me some valuable things and I'll give you some of them. But if anyone asks, they aren’t from me, understood?
 				#Below is box dialogue
 				Box: Ey, go away, you are going to reveal my location if you keep talking to me. I will not come out until I know its safe again.
 				#Below is reality shroom event dialogue

@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria.ModLoader;
 using Terraria.Localization;
 
@@ -21,15 +22,35 @@ namespace MultidimensionMod.Items.Summons
 
         public override void SetDefaults()
         {
-            Item.width = 24;
-            Item.height = 22;
+            Item.width = 28;
+            Item.height = 44;
             Item.maxStack = 20;
             Item.value = 1000;
             Item.rare = ItemRarityID.Blue;
             Item.useAnimation = 30;
             Item.useTime = 30;
-            Item.useStyle = ItemUseStyleID.EatFood;
+            Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
+        }
+
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+            if (Main.keyState.PressingShift())
+            {
+                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.ConfusingMushroom.Lore"))
+                {
+                    OverrideColor = Color.LightGray
+                };
+                tooltips.Add(line);
+            }
+            else
+            {
+                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Viewer"))
+                {
+                    OverrideColor = Color.Gray,
+                };
+                tooltips.Add(line);
+            }
         }
 
         public override bool CanUseItem(Player player)

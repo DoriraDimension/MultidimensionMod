@@ -144,6 +144,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue5"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue6"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue7"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue8"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.AldinDialogue"));
             return chat;
         }
@@ -152,6 +153,13 @@ namespace MultidimensionMod.NPCs.TownNPCs
         {
             WeightedRandom<string> chat = new WeightedRandom<string>();
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.MadnessTrade"));
+            return chat;
+        }
+
+        public static string UmosChat()
+        {
+            WeightedRandom<string> chat = new WeightedRandom<string>();
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GlowTrade"));
             return chat;
         }
 
@@ -190,6 +198,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
         public override void SetChatButtons(ref string button, ref string button2)
         {
             Player player = Main.LocalPlayer;
+            int glow = player.FindItem(ItemID.GlowingMushroom);
             int madness = player.FindItem(ModContent.ItemType<MadnessShroom>());
             int reality = player.FindItem(ModContent.ItemType<RealityBendingShroom>());
             string talk1 = "I am?";
@@ -202,6 +211,10 @@ namespace MultidimensionMod.NPCs.TownNPCs
             else if (madness >= 0)
             {
                 button2 = "Give Madness Mushroom";
+            }
+            else if (glow >= 30)
+            {
+                button2 = "Give Glowing Mushrooms";
             }
             else
                 button2 = "Give Rare Plant";
@@ -220,6 +233,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
                 var source = player.GetSource_OpenItem(Type);
 
                 int reality = player.FindItem(ModContent.ItemType<RealityBendingShroom>());
+                int glow = player.FindItem(ItemID.GlowingMushroom);
                 int Special = player.FindItem(ModContent.ItemType<MadnessShroom>());
                 int Item = player.FindItem(3385);
                 int Item2 = player.FindItem(3386);
@@ -250,6 +264,20 @@ namespace MultidimensionMod.NPCs.TownNPCs
                     Main.npcChatText = AldinChat();
                     SoundEngine.PlaySound(SoundID.Thunder);
                     NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X + 10, (int)NPC.Center.Y, ModContent.NPCType<AldinGrabber>());
+                }
+                else if (glow >= 30)
+                {
+                    player.inventory[glow].stack -= 30;
+                    if (player.inventory[glow].stack <= 0)
+                    {
+                        player.inventory[glow] = new Item();
+                    }
+
+                    Main.npcChatText = UmosChat();
+                    player.QuickSpawnItem(source, ModContent.ItemType<ConfusingMushroom>());
+
+                    SoundEngine.PlaySound(SoundID.Chat);
+                    return;
                 }
                 else if (Special >= 0)
                 {

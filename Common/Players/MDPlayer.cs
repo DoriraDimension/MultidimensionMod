@@ -383,12 +383,12 @@ namespace MultidimensionMod.Common.Players
                     }
                 }
             }
-            if (DesertNeck && Player.statMana == Player.statManaMax && !Player.HasBuff(ModContent.BuffType<ManaBurstCooldown>()))
+            if (DesertNeck && !Player.HasBuff(ModContent.BuffType<ManaBurstCooldown>()))
             {
-                int damage = Player.statManaMax;
+                int damage = Player.statMana;
                 if (Main.hardMode)
                 {
-                    damage = Player.statManaMax * 2;
+                    damage = Player.statMana * 2;
                 }
                 if (Main.myPlayer == Player.whoAmI)
                 {
@@ -456,7 +456,7 @@ namespace MultidimensionMod.Common.Players
                 IndigoMode = true;
                 player.AddBuff(ModContent.BuffType<SwapExhaustion>(), 1800);
                 player.AddBuff(ModContent.BuffType<LightOverload>(), 300);
-                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), player.position);
+                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RoyalRadianceScream"), player.position);
             }
             else if (MDKeybinds.ArmorAbility.JustPressed && MushiumSet && IndigoMode && !player.HasBuff(ModContent.BuffType<SwapExhaustion>()))
             {
@@ -465,7 +465,7 @@ namespace MultidimensionMod.Common.Players
                 Player.HealEffect(10);
                 player.AddBuff(ModContent.BuffType<SwapExhaustion>(), 1800);
                 player.AddBuff(ModContent.BuffType<LightStarved>(), 300);
-                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), player.position);
+                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RoyalRadianceScream"), player.position);
             }
         }
     }

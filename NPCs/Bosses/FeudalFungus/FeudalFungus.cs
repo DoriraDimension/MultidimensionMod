@@ -62,7 +62,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             TPose,
             Hovering,
             Attack,
-            Radiance
+            Radiance,
+            Goodbye
         }
 
         public ActionState AIState
@@ -230,7 +231,10 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             if (player.dead || !player.active || Vector2.Distance(player.Center, NPC.Center) > 5000)
             {
                 NPC.TargetClosest();
-
+                if (player.dead || !player.active)
+                {
+                    AIState = ActionState.Goodbye;
+                }
             }
             if (Waking == 180) //Initiate AI
             {
@@ -443,6 +447,14 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RadianceShot"), NPC.position);
                         }
                         MakeItRain = 0;
+                    }
+                    break;
+                case ActionState.Goodbye:
+                    NPC.velocity = new Vector2(0, 0);
+                    NPC.alpha += 50;
+                    if (NPC.alpha >= 255)
+                    {
+                        NPC.active = false;
                     }
                     break;
             }
