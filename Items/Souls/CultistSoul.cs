@@ -7,6 +7,7 @@ using Terraria.GameContent.Creative;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria.Localization;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace MultidimensionMod.Items.Souls
 {
@@ -46,5 +47,14 @@ namespace MultidimensionMod.Items.Souls
                 tooltips.Add(line);
             }
         }
+        public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
+        {
+            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Souls/CultistSoul").Value;
+            Rectangle frame;
+            frame = Main.itemAnimations[Item.type].GetFrame(texture, Main.itemFrameCounter[whoAmI]);
+            Vector2 origin = frame.Size() / 2f;
+            spriteBatch.Draw(texture, Item.Center - Main.screenPosition, frame, Color.White, rotation, origin, scale, SpriteEffects.None, 0f);
+        }
+
     }
 }

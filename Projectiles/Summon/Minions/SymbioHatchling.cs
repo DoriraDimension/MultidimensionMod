@@ -123,12 +123,15 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
         {
             Player player = Main.player[Projectile.owner];
             Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+            Texture2D glow = ModContent.Request<Texture2D>(Projectile.ModProjectile.Texture + "_Glow").Value;
             if (player.GetModPlayer<MDPlayer>().Healthy)
             {
                 texture = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Summon/Minions/SymbioHatchlingRed").Value;
+                glow = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Summon/Minions/SymbioHatchlingRed_Glow").Value;
             }
             int frameHeight = texture.Height / 5;
-            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, new Rectangle(0, frameHeight * Projectile.frame, texture.Width, frameHeight), Color.White, Projectile.rotation, new Vector2(texture.Width, frameHeight) * .5f, Vector2.One, SpriteEffects.None, 0);
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, new Rectangle(0, frameHeight * Projectile.frame, texture.Width, frameHeight), lightColor, Projectile.rotation, new Vector2(texture.Width, frameHeight) * .5f, Vector2.One, SpriteEffects.None, 0);
+            Main.EntitySpriteDraw(glow, Projectile.Center - Main.screenPosition, new Rectangle(0, frameHeight * Projectile.frame, texture.Width, frameHeight), Color.White, Projectile.rotation, new Vector2(texture.Width, frameHeight) * .5f, Vector2.One, SpriteEffects.None, 0);
             return false;
         }
     }

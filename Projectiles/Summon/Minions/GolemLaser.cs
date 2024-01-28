@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using Terraria.GameContent;
 
 namespace MultidimensionMod.Projectiles.Summon.Minions
 {
@@ -41,5 +42,5 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 			Collision.HitTiles(Projectile.position + Projectile.velocity, Projectile.velocity, Projectile.width, Projectile.height);
 			SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
 		}
-	}
+    }
 }

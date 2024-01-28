@@ -4,6 +4,8 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 
 namespace MultidimensionMod.Items.Souls
 {
@@ -24,5 +26,14 @@ namespace MultidimensionMod.Items.Souls
 			Item.height = 40;
 			Item.rare = ModContent.RarityType<GolemSoulRarity>();
 		}
-	}
+
+        public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
+        {
+            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Souls/GolemSoul").Value;
+            Rectangle frame;
+            frame = Main.itemAnimations[Item.type].GetFrame(texture, Main.itemFrameCounter[whoAmI]);
+            Vector2 origin = frame.Size() / 2f;
+            spriteBatch.Draw(texture, Item.Center - Main.screenPosition, frame, Color.White, rotation, origin, scale, SpriteEffects.None, 0f);
+        }
+    }
 }
