@@ -201,29 +201,32 @@ namespace MultidimensionMod.NPCs.Tundra
 		private int frame;
 		public override void FindFrame(int frameHeight)
 		{
-			if (++NPC.frameCounter > 8)
+			if (NPC.life == NPC.lifeMax)
 			{
-				frame++;
-				NPC.frameCounter = 0;
-				if (frame > 13)
-				{
-					frame = 8;
-				}
-                if (NPC.frame.Y < 8 * frameHeight)
+                if (++NPC.frameCounter > 8)
                 {
-                    NPC.frame.Y = 8 * frameHeight;
+                    frame++;
+                    NPC.frameCounter = 0;
+                    if (frame > 5)
+                    {
+                        frame = 0;
+                    }
                 }
             }
-			if (!hasBeenFed && NPC.life < NPC.lifeMax)
+			else if (!hasBeenFed && NPC.life < NPC.lifeMax)
 			{
 				if (++NPC.frameCounter > 4)
 				{
 					frame++;
 					NPC.frameCounter = 0;
-					if (frame > 7)
-					{
-						frame = 0;
-					}
+                    if (frame > 13)
+                    {
+                        frame = 6;
+                    }
+                    if (frame < 6)
+                    {
+                        frame = 6;
+                    }
                 }
 			}
 			NPC.frame.Y = frame * frameHeight;
