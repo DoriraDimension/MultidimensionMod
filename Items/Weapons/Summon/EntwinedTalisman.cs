@@ -88,8 +88,8 @@ namespace MultidimensionMod.Items.Weapons.Summon
             CreateRecipe()
             .AddIngredient(ModContent.ItemType<RadianceTalisman>())
             .AddIngredient(ModContent.ItemType<Mushmatter>(), 6)
-            .AddIngredient(ModContent.ItemType<Mushmatter>(), 11)
-            .AddIngredient(ModContent.ItemType<Mushmatter>(), 7)
+            .AddIngredient(ItemID.SoulofLight, 11)
+            .AddIngredient(ModContent.ItemType<Dimensium>(), 7)
             .AddTile(ModContent.TileType<DimensionalForge>())
             .Register();
         }

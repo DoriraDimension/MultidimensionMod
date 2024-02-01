@@ -6,6 +6,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent;
 
 namespace MultidimensionMod.Projectiles.Pets
 {
@@ -23,12 +24,6 @@ namespace MultidimensionMod.Projectiles.Pets
             Projectile.height = 44;
             Projectile.tileCollide = false;
             Projectile.friendly = true;
-        }
-
-        public override bool PreDraw(ref Color lightColor)
-        {
-            Texture2D glowMask = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Pets/FeudalBab_Glow").Value;
-            return true;
         }
 
         public override void AI()
@@ -83,6 +78,17 @@ namespace MultidimensionMod.Projectiles.Pets
                 vectorToIdlePosition *= speed;
                 Projectile.velocity = (Projectile.velocity * (inertia - 1) + vectorToIdlePosition) / inertia;
             }
+        }
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Player player = Main.player[Projectile.owner];
+            Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+            Texture2D glow = ModContent.Request<Texture2D>(Projectile.ModProjectile.Texture + "_Glow").Value;
+            int frameHeight = texture.Height / 8;
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, new Rectangle(0, frameHeight * Projectile.frame, texture.Width, frameHeight), lightColor, Projectile.rotation, new Vector2(texture.Width, frameHeight) * .5f, Vector2.One, SpriteEffects.None, 0);
+            Main.EntitySpriteDraw(glow, Projectile.Center - Main.screenPosition, new Rectangle(0, frameHeight * Projectile.frame, texture.Width, frameHeight), Color.White, Projectile.rotation, new Vector2(texture.Width, frameHeight) * .5f, Vector2.One, SpriteEffects.None, 0);
+            return false;
         }
     }
 }

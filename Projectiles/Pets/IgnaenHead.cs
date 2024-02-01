@@ -6,6 +6,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent;
 
 namespace MultidimensionMod.Projectiles.Pets
 {
@@ -24,13 +25,18 @@ namespace MultidimensionMod.Projectiles.Pets
 			Projectile.friendly = true;
 		}
 
-		public override bool PreDraw(ref Color lightColor)
+        public override bool PreDraw(ref Color lightColor)
         {
-			Texture2D glowMask = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Pets/IgnaenHead_Glow").Value;
-			return true;
-		}
+            Player player = Main.player[Projectile.owner];
+            Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+            Texture2D glow = ModContent.Request<Texture2D>(Projectile.ModProjectile.Texture + "_Glow").Value;
+            int frameHeight = texture.Height / 6;
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, new Rectangle(0, frameHeight * Projectile.frame, texture.Width, frameHeight), lightColor, Projectile.rotation, new Vector2(texture.Width, frameHeight) * .5f, Vector2.One, SpriteEffects.None, 0);
+            Main.EntitySpriteDraw(glow, Projectile.Center - Main.screenPosition, new Rectangle(0, frameHeight * Projectile.frame, texture.Width, frameHeight), Color.White, Projectile.rotation, new Vector2(texture.Width, frameHeight) * .5f, Vector2.One, SpriteEffects.None, 0);
+            return false;
+        }
 
-		public override void AI()
+        public override void AI()
 		{
 			Player player = Main.player[Projectile.owner];
 			MDPlayer modPlayer = player.GetModPlayer<MDPlayer>();
