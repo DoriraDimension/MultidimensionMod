@@ -55,7 +55,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Ranged/PrimusVice").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Ranged/PrimusSaw").Value;
             Texture2D glow = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Ranged/PrimusSaw_Glow").Value;
             var effects = Projectile.spriteDirection == -1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
             int height = texture.Height / 4;

@@ -7,6 +7,8 @@ using Terraria.ID;
 using Terraria.GameContent.Creative;
 using System;
 using MultidimensionMod.Items.Materials;
+using System.Collections.Generic;
+using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 {
@@ -40,6 +42,26 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
         {
             Projectile.NewProjectile(source, Main.MouseWorld, velocity, type, damage, knockback, player.whoAmI);
             return false;
+        }
+
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+            if (Main.keyState.PressingShift())
+            {
+                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.TundraFall.Lore"))
+                {
+                    OverrideColor = Color.LightGray
+                };
+                tooltips.Add(line);
+            }
+            else
+            {
+                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Viewer"))
+                {
+                    OverrideColor = Color.Gray,
+                };
+                tooltips.Add(line);
+            }
         }
 
         public override void AddRecipes()

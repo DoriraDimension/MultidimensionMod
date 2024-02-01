@@ -264,9 +264,9 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 npcLoot.Add(ItemDropRule.Common(ItemID.DarkShard, 1, 1, 3));
             }
 
-            if (NPC.downedMoonlord && (NPC.type == NPCID.Harpy) || (NPC.type == NPCID.WyvernHead))
+            if (NPC.type == NPCID.Harpy || NPC.type == NPCID.WyvernHead)
             {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MoonGeode>(), 8));
+                npcLoot.Add(ItemDropRule.ByCondition(new DownedMoonLordCondition(), ModContent.ItemType<MoonGeode>(), 8));
             }
 
             if (NPC.type == NPCID.SpikedJungleSlime)

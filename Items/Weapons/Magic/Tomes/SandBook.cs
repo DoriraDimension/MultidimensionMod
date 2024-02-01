@@ -1,9 +1,12 @@
 using MultidimensionMod.Projectiles.Magic;
 using MultidimensionMod.Items.Materials;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using System.Collections.Generic;
+using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 {
@@ -35,7 +38,27 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
 			Item.crit = 8;
 		}
 
-		public override void AddRecipes()
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+            if (Main.keyState.PressingShift())
+            {
+                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.SandBook.Lore"))
+                {
+                    OverrideColor = Color.LightGray
+                };
+                tooltips.Add(line);
+            }
+            else
+            {
+                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Viewer"))
+                {
+                    OverrideColor = Color.Gray,
+                };
+                tooltips.Add(line);
+            }
+        }
+
+        public override void AddRecipes()
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<ManaInfusedSandstone>(), 5)

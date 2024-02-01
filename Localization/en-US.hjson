@@ -240,7 +240,8 @@ Mods: {
 				Tooltip: Does nothing right now
 				Lore:
 					'''
-					The divine medaillon that is only given to high ranked Scelestians, like the eye jewel,
+					The divine medaillon that is only given to high ranked Scelestians.
+					Like the eye jewel,
 					this is a token of respect towards their titan.
 					The three triangles and eye represent the aspects of Origin, those aspects being mind, soul and body,
 					as well as the deity itself in the center.
@@ -550,7 +551,7 @@ Mods: {
 					but never approach one, as it will most likely be the last thing you see.
 					Even worse, sometimes they can be seen carrying their living prey off into the distance,
 					towards a faraway sea where you will be lost forever.
-					The storm is an untamed force of nature and so are the Eels that follow it
+					The storm is an untamed force of nature and so are the eels that follow it
 					'''
 			}
 
@@ -1644,8 +1645,12 @@ Mods: {
 				DisplayName: False Moonlight
 				Tooltip:
 					'''
-					The blue crystal blade is composed only of light.
-					The lunatic Cultist is an insane fanatic of the moon and so stole this legendary blade to use it himself,
+					The blue crystal blade is composed only of light
+					Fires a tile piercing moonlight wave
+					'''
+				Lore:
+				    '''
+					The lunatic Cultist was an insane fanatic of the moon and so stole this legendary blade to use it himself,
 					but the blade instead obeys an otherworldly moon.
 					'''
 			}
@@ -1672,8 +1677,11 @@ Mods: {
 				Lore:
 					'''
 					This forbidden technique transforms the user's thoughts into energy waves that burst out in all directions.
-					Being a forbidden technique, it was mostly used by the worst people there is.
 					As told in old secret records, the spell gets stronger the more malicious the user's thoughts are, resulting in a devastating shockwave.
+
+					Thoughts and emotions are an invaluable power in this world,
+					they can transform even the very fabric of reality.
+					Emotions will find their way, even through the clearest mind.
 					'''
 			}
 
@@ -1751,7 +1759,14 @@ Mods: {
 
 			SandBook: {
 				DisplayName: Dune Chaser
-				Tooltip: Old desert magic used by ancient magicians, it shoots a bouncing ball of sand.
+				Tooltip: Summons a bouncing ball of sand.
+				Lore:
+				    '''
+				    This tome was once used by the first desert sorcerers,
+					one of their first ever spells concepted.
+					They could not use desert mana to its fullest potential yet,
+					so they bent the sand itself.
+					'''
 			}
 
 			SpooderLexicon: {
@@ -1780,7 +1795,7 @@ Mods: {
 					'''
 					This drill was used by the dimensional god to tear rifts into dimensions.
 					Dorira always wanted his own world and leave his old one behind
-					When this opportunity striked, he did not hesitate
+					When this opportunity arose, he did not hesitate
 					Over the course of a long long time, he finally managed to create his very own world after many failed prototypes.
 					Today it is known as Caelis, a energy flooded dimension that attracts all kinds of entities.
 					'''
@@ -1893,7 +1908,7 @@ Mods: {
 			}
 
 			AwakenedArchbird: {
-				DisplayName: Phoenix God Flamescar
+				DisplayName: Rahlem's Flamescar
 				Tooltip: Shoots shadowflame tentacles when swung and slows enemies when hit for 5 seconds
 				Lore:
 					'''
@@ -2046,11 +2061,17 @@ Mods: {
 
 			Shinorian: {
 				DisplayName: Hex Rapier
-				Tooltip:
+				Tooltip: Inflicts Accused
+				Lore:
 					'''
 					A cursed thrusting sword empowered by malicious runes.
 					The curses that were laid onto this weapon are ancient and have no counterspell,
-					the hex isn't at its peak though and as such won't be able to cause any major harm
+					the hex isn't at its peak though and as such won't be able to cause any major harm.
+
+					Some say that this weapon was crafted out of spite against all life,
+					far far away in a dimension known as Arinetos.
+					Its ancient people had the darkest thoughts and desires, thoughts that had ultimately killed them,
+					even before their brethren from the glorious capital.
 					'''
 			}
 
@@ -2484,7 +2505,7 @@ Mods: {
 
 			MadnessCaller: {
 				DisplayName: Eye of the Witness
-				Tooltip: Eat this eye to awaken the madness that lurks in the shadows
+				Tooltip: Eat this eye at night to awaken the madness that lurks in the shadows
 			}
 
 			ColdEnragedHellBox: {
@@ -2679,6 +2700,13 @@ Mods: {
 			TundraFall: {
 				DisplayName: Tundra's Fall
 				Tooltip: Rains icicles from the cursor
+				Lore:
+				    '''
+					The art of ice magic was first taught by the northern king Odin,
+					the chosen drakerider who learned those arts from the royal drakes themself.
+					Just like how he learned it, he would only teach it to the ones he sees as worthy.
+					All to avoid the powers being put into the wrong hands.
+					'''
 			}
 
 			PaleMatter: {
@@ -3011,6 +3039,15 @@ Mods: {
 					Consume to increase maximum mana by 50
 					Only one may be used
 					'''
+				Lore:
+				    '''
+					Mushrooms are said to be cosmic anchors by truth seekers only,
+					despite their somewhat bland and meaningless look, 
+					they tell stories from beyond and further.
+					The Ethereal Eye that is radiating from this rune is the sign of the Cosmic Keeper,
+					the one who sees the blood, 
+					the one who speaks in foreign words even higher beings can't comprehend.
+					'''
 			}
 
 			MushroomBlockWall: {
@@ -3085,8 +3122,8 @@ Mods: {
 				Lore:
 					'''
 					A mushroom parasite that formed from a brainstem, it clings to its host.
-					It formed inside the glowing monarch with its own power, but why would it create a parasite that just connects it to itself?
-					Or is there more going on inside its head?
+					It formed inside the glowing monarch,
+					as a means to deepen its connection to its light.
 					'''
 			}
 
@@ -3819,8 +3856,10 @@ Mods: {
 
 		DropConditions: {
 			DownedSkeletronCondition: Only available after defeating Skeletron.
+			DownedMoonLordCOndition: Only available after defeating the Moon Lord.
 			RealityCondition: Drops by doing unessecery complicated stuff.
 			DimensiumCondition: This item won't appear in the bestiary.
+			DownedMoonLordCondition: Mods.MultidimensionMod.DropConditions.DownedMoonLordCondition
 		}
 
 		SpecialTooltips: {

@@ -7,6 +7,8 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using Terraria.DataStructures;
+using System.Collections.Generic;
+using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Others
 {
@@ -36,7 +38,27 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 			Item.shootSpeed = 15f;
 		}
 
-		public override void MeleeEffects(Player player, Rectangle hitbox)
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+            if (Main.keyState.PressingShift())
+            {
+                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.GreatMoonlight.Lore"))
+                {
+                    OverrideColor = Color.LightGray
+                };
+                tooltips.Add(line);
+            }
+            else
+            {
+                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Viewer"))
+                {
+                    OverrideColor = Color.Gray,
+                };
+                tooltips.Add(line);
+            }
+        }
+
+        public override void MeleeEffects(Player player, Rectangle hitbox)
 		{
 			for (int i = 0; i < 2; i++)
 			{

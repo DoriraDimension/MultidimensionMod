@@ -240,7 +240,8 @@ Mods: {
 				// Tooltip: Does nothing right now
 				/* Lore:
 					'''
-					The divine medaillon that is only given to high ranked Scelestians, like the eye jewel,
+					The divine medaillon that is only given to high ranked Scelestians.
+					Like the eye jewel,
 					this is a token of respect towards their titan.
 					The three triangles and eye represent the aspects of Origin, those aspects being mind, soul and body,
 					as well as the deity itself in the center.
@@ -550,7 +551,7 @@ Mods: {
 					but never approach one, as it will most likely be the last thing you see.
 					Even worse, sometimes they can be seen carrying their living prey off into the distance,
 					towards a faraway sea where you will be lost forever.
-					The storm is an untamed force of nature and so are the Eels that follow it
+					The storm is an untamed force of nature and so are the eels that follow it
 					''' */
 			}
 
@@ -1672,8 +1673,11 @@ Mods: {
 				/* Lore:
 					'''
 					This forbidden technique transforms the user's thoughts into energy waves that burst out in all directions.
-					Being a forbidden technique, it was mostly used by the worst people there is.
 					As told in old secret records, the spell gets stronger the more malicious the user's thoughts are, resulting in a devastating shockwave.
+
+					Thoughts and emotions are an invaluable power in this world,
+					they can transform even the very fabric of reality.
+					Emotions will find their way, even through the clearest mind.
 					''' */
 			}
 
@@ -1893,7 +1897,7 @@ Mods: {
 			}
 
 			AwakenedArchbird: {
-				// DisplayName: Phoenix God Flamescar
+				// DisplayName: Rahlem's Flamescar
 				// Tooltip: Shoots shadowflame tentacles when swung and slows enemies when hit for 5 seconds
 				/* Lore:
 					'''
@@ -2046,11 +2050,17 @@ Mods: {
 
 			Shinorian: {
 				// DisplayName: Hex Rapier
-				/* Tooltip:
+				// Tooltip: Inflicts Accused
+				/* Lore:
 					'''
 					A cursed thrusting sword empowered by malicious runes.
 					The curses that were laid onto this weapon are ancient and have no counterspell,
-					the hex isn't at its peak though and as such won't be able to cause any major harm
+					the hex isn't at its peak though and as such won't be able to cause any major harm.
+
+					Some say that this weapon was crafted out of spite against all life,
+					far far away in a dimension known as Arinetos.
+					Its ancient people had the darkest thoughts and desires, thoughts that had ultimately killed them,
+					even before their brethren from the glorious capital.
 					''' */
 			}
 
@@ -3011,6 +3021,7 @@ Mods: {
 					Consume to increase maximum mana by 50
 					Only one may be used
 					''' */
+				// Lore: ""
 			}
 
 			MushroomBlockWall: {
@@ -3085,8 +3096,8 @@ Mods: {
 				/* Lore:
 					'''
 					A mushroom parasite that formed from a brainstem, it clings to its host.
-					It formed inside the glowing monarch with its own power, but why would it create a parasite that just connects it to itself?
-					Or is there more going on inside its head?
+					It formed inside the glowing monarch,
+					as a means to deepen its connection to its light.
 					''' */
 			}
 
@@ -3819,8 +3830,10 @@ Mods: {
 
 		DropConditions: {
 			// DownedSkeletronCondition: Only available after defeating Skeletron.
+			// DownedMoonLordCOndition: Only available after defeating the Moon Lord.
 			// RealityCondition: Drops by doing unessecery complicated stuff.
 			// DimensiumCondition: This item won't appear in the bestiary.
+			// DownedMoonLordCondition: Mods.MultidimensionMod.DropConditions.DownedMoonLordCondition
 		}
 
 		SpecialTooltips: {
