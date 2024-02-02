@@ -1649,7 +1649,7 @@ Mods: {
 					Fires a tile piercing moonlight wave
 					'''
 				Lore:
-				    '''
+					'''
 					The lunatic Cultist was an insane fanatic of the moon and so stole this legendary blade to use it himself,
 					but the blade instead obeys an otherworldly moon.
 					'''
@@ -1761,8 +1761,8 @@ Mods: {
 				DisplayName: Dune Chaser
 				Tooltip: Summons a bouncing ball of sand.
 				Lore:
-				    '''
-				    This tome was once used by the first desert sorcerers,
+					'''
+					This tome was once used by the first desert sorcerers,
 					one of their first ever spells concepted.
 					They could not use desert mana to its fullest potential yet,
 					so they bent the sand itself.
@@ -2701,7 +2701,7 @@ Mods: {
 				DisplayName: Tundra's Fall
 				Tooltip: Rains icicles from the cursor
 				Lore:
-				    '''
+					'''
 					The art of ice magic was first taught by the northern king Odin,
 					the chosen drakerider who learned those arts from the royal drakes themself.
 					Just like how he learned it, he would only teach it to the ones he sees as worthy.
@@ -3040,7 +3040,7 @@ Mods: {
 					Only one may be used
 					'''
 				Lore:
-				    '''
+					'''
 					Mushrooms are said to be cosmic anchors by truth seekers only,
 					despite their somewhat bland and meaningless look, 
 					they tell stories from beyond and further.

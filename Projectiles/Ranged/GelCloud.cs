@@ -31,7 +31,12 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.ownerHitCheck = true;
 		}
 
-		public override void AI()
+        public override bool? CanCutTiles()
+        {
+            return false;
+        }
+
+        public override void AI()
 		{
 			Player player = Main.LocalPlayer;
 			Projectile.velocity *= 0.95f;

@@ -33,7 +33,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 			Item.UseSound = SoundID.Item75;
 			Item.autoReuse = true;
 			Item.shoot = ProjectileID.PurificationPowder;
-			Item.shootSpeed = 34f;
+			Item.shootSpeed = 17f;
 			Item.useAmmo = AmmoID.Arrow;
 		}
 

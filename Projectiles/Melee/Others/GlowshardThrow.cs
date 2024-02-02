@@ -32,7 +32,12 @@ namespace MultidimensionMod.Projectiles.Melee.Others
 			Projectile.ownerHitCheck = true;
 		}
 
-		public override void AI()
+        public override bool? CanCutTiles()
+        {
+            return false;
+        }
+
+        public override void AI()
 		{
 			if (Owner.channel)
 			{

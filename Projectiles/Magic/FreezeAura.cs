@@ -25,6 +25,11 @@ namespace MultidimensionMod.Projectiles.Magic
             Projectile.ownerHitCheck = true;
         }
 
+        public override bool? CanCutTiles()
+        {
+            return false;
+        }
+
         public override void AI()
         {
             if (Main.rand.NextBool(2))

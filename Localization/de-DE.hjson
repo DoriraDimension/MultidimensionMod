@@ -1645,8 +1645,12 @@ Mods: {
 				// DisplayName: False Moonlight
 				/* Tooltip:
 					'''
-					The blue crystal blade is composed only of light.
-					The lunatic Cultist is an insane fanatic of the moon and so stole this legendary blade to use it himself,
+					The blue crystal blade is composed only of light
+					Fires a tile piercing moonlight wave
+					''' */
+				/* Lore:
+					'''
+					The lunatic Cultist was an insane fanatic of the moon and so stole this legendary blade to use it himself,
 					but the blade instead obeys an otherworldly moon.
 					''' */
 			}
@@ -1755,7 +1759,14 @@ Mods: {
 
 			SandBook: {
 				// DisplayName: Dune Chaser
-				// Tooltip: Old desert magic used by ancient magicians, it shoots a bouncing ball of sand.
+				// Tooltip: Summons a bouncing ball of sand.
+				/* Lore:
+					'''
+					This tome was once used by the first desert sorcerers,
+					one of their first ever spells concepted.
+					They could not use desert mana to its fullest potential yet,
+					so they bent the sand itself.
+					''' */
 			}
 
 			SpooderLexicon: {
@@ -1784,7 +1795,7 @@ Mods: {
 					'''
 					This drill was used by the dimensional god to tear rifts into dimensions.
 					Dorira always wanted his own world and leave his old one behind
-					When this opportunity striked, he did not hesitate
+					When this opportunity arose, he did not hesitate
 					Over the course of a long long time, he finally managed to create his very own world after many failed prototypes.
 					Today it is known as Caelis, a energy flooded dimension that attracts all kinds of entities.
 					''' */
@@ -2494,7 +2505,7 @@ Mods: {
 
 			MadnessCaller: {
 				// DisplayName: Eye of the Witness
-				// Tooltip: Eat this eye to awaken the madness that lurks in the shadows
+				// Tooltip: Eat this eye at night to awaken the madness that lurks in the shadows
 			}
 
 			ColdEnragedHellBox: {
@@ -2689,6 +2700,13 @@ Mods: {
 			TundraFall: {
 				// DisplayName: Tundra's Fall
 				// Tooltip: Rains icicles from the cursor
+				/* Lore:
+					'''
+					The art of ice magic was first taught by the northern king Odin,
+					the chosen drakerider who learned those arts from the royal drakes themself.
+					Just like how he learned it, he would only teach it to the ones he sees as worthy.
+					All to avoid the powers being put into the wrong hands.
+					''' */
 			}
 
 			PaleMatter: {
@@ -3021,7 +3039,15 @@ Mods: {
 					Consume to increase maximum mana by 50
 					Only one may be used
 					''' */
-				// Lore: ""
+				/* Lore:
+					'''
+					Mushrooms are said to be cosmic anchors by truth seekers only,
+					despite their somewhat bland and meaningless look, 
+					they tell stories from beyond and further.
+					The Ethereal Eye that is radiating from this rune is the sign of the Cosmic Keeper,
+					the one who sees the blood, 
+					the one who speaks in foreign words even higher beings can't comprehend.
+					''' */
 			}
 
 			MushroomBlockWall: {
