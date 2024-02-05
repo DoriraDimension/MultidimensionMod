@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Bestiary;
+using MultidimensionMod.Biomes;
 
 namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
 {
@@ -33,6 +34,8 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPC.netAlways = true;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
+            SpawnModBiomes = new int[1] { ModContent.GetInstance<ShroomForest>().Type };
+            NPC.AL().CantHurtDapper = true;
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

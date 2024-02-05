@@ -29,6 +29,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             Projectile.penetrate = -1;
             Projectile.alpha = 255;
             Projectile.timeLeft = 180;
+            Projectile.AL().CantHurtDapper = true;
         }
 
         public override void AI()

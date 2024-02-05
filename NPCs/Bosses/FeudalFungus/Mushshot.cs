@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using MultidimensionMod.Base;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -24,6 +25,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             Projectile.tileCollide = false;
             Projectile.alpha = 60;
             Projectile.timeLeft = 240;
+            Projectile.AL().CantHurtDapper = true;
         }
 
         public override void AI()
@@ -69,6 +71,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             Projectile.penetrate = 1;
             Projectile.alpha = 60;
             Projectile.timeLeft = 360;
+            Projectile.AL().CantHurtDapper = true;
         }
 
         public override void AI()
@@ -122,6 +125,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             Projectile.penetrate = 1;
             Projectile.alpha = 60;
             Projectile.timeLeft = 360;
+            Projectile.AL().CantHurtDapper = true;
         }
 
         public override void AI()
@@ -177,6 +181,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             Projectile.penetrate = 1;
             Projectile.alpha = 60;
             Projectile.timeLeft = 360;
+            Projectile.AL().CantHurtDapper = true;
         }
 
         public override void AI()

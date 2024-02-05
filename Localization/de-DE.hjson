@@ -3065,7 +3065,7 @@ Mods: {
 				/* Lore:
 					'''
 					A ring made of pure gold that is covered in glowing mushmatter.
-					It has inscriptions on it that talk about the life of the Light Prophet.
+					It has inscriptions on it which spell the name 'Umos'.
 					''' */
 			}
 
@@ -3661,14 +3661,14 @@ Mods: {
 
 			Dappercap: {
 				// FatherDialogue: DAD, GET THE HELL AWAY FROM HERE!
-				// UncleDialogue: OMG uncle Umos, hi!
+				// UncleDialogue: OMG uncle, hi!
 				// ClothTruffleDialogue: So, sometimes I see {0} sneak into {0}’s house at night. You think there is something going on between them?
 				// AldinDialogue: I once met this awesome mushroom enthusiast, he was pretty chill and cool. He told me he wanted to find 7 mushrooms to do whatever, probably bend space-time or something. Anyways, he disappeared without a trace and I have not seen him since then.
+				// RocketDialogue: So I talked to this guy once who really seemed to like mushrooms, it was a nice conversation until he mentioned he preferred my dad over my uncle. I was like “DUDE HOW?” and he kept going with how awesome he is. I told him to shroom himself and left him alone with a moldy one, hope the smell unrots his brain.
 				// GenericDialogue1: My uncle is so cool, unlike my boring as hell dad. He EVEN GLOWS, can you believe that??
 				// GenericDialogue2: Hey between you and me, I'm pretty sure my uncle is a hallucinogenic!!
 				// GenericDialogue3: I had this friend of mine named Malcolm, I got several awesome mushrooms from him, but then he suddenly stopped, saying something like "I have to be a better person". Bleh… weirdo.
 				// GenericDialogue4: Dem mushromz hit hart todai
-				// GenericDialogue5: So I talked to this guy once who really seemed to like mushrooms, it was a nice conversation until he mentioned he preferred my dad over my uncle. I was like “DUDE HOW?” and he kept going with how awesome he is. I told him to shroom himself and left him alone with a moldy one, hope the smell unrots his brain.
 				// GenericDialogue6: Sometimes my dad was so annoying that I told him to finally go get some milk.
 				// GenericDialogue7: I heard there is a kingdom full of mushroom people, but it’s not ruled by a mushroom, do you think it’s real?
 				// GenericDialogue8: Yo, would be awesome if you were to meet my uncle. If you bring me like, 30 glowing mushrooms, I'm going to give you something that will definetily draw his attention.

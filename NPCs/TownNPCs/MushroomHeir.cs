@@ -8,9 +8,10 @@ using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
 using MultidimensionMod.Items.Mushrooms;
 using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Common.Globals;
-using MultidimensionMod.Projectiles.Ranged;
+using MultidimensionMod.NPCs.Bosses.FeudalFungus;
 using MultidimensionMod.Items.Quest;
 using MultidimensionMod.Biomes;
+using MultidimensionMod.Base;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
@@ -24,6 +25,7 @@ using Terraria.DataStructures;
 using Terraria.GameContent.ItemDropRules;
 using Microsoft.Xna.Framework;
 using MultidimensionMod.NPCs.Friendly;
+using Microsoft.CodeAnalysis;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -31,6 +33,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
     public class MushroomHeir : ModNPC
     {
         public const string ShopName = "Shop";
+
+        public bool WhoTheHellWasThat = false;
 
         public override void SetStaticDefaults()
         {
@@ -122,30 +126,34 @@ namespace MultidimensionMod.NPCs.TownNPCs
             };
         }
 
+        public override bool? CanBeHitByProjectile(Projectile projectile) => projectile.AL().CantHurtDapper ? false : null;
+
+        public override bool CanBeHitByNPC(NPC attacker) => attacker.AL().CantHurtDapper ? false : true;
+
         public override string GetChat()
         {
             WeightedRandom<string> chat = new WeightedRandom<string>();
             int SkeletronSlave = NPC.FindFirstNPC(NPCID.Clothier);
             int FungusBungus = NPC.FindFirstNPC(NPCID.Truffle);
             int dad = NPC.FindFirstNPC(ModContent.NPCType<MushroomMonarch>());
-            //int uncle = NPC.FindFirstNPC(ModContent.NPCType<FeudalFungus>());
+            int uncle = NPC.FindFirstNPC(ModContent.NPCType<FeudalFungus>());
             if (dad >= 0)
             {
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.FatherDialogue"));
             }
-            /*if (uncle >= 0)
+            if (uncle >= 0)
             {
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.UncleDialogue"));
-            }*/
+            }
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue1"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue2"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue3"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue4"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue5"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue6"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue7"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue8"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.AldinDialogue"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.RocketDialogue"));
             return chat;
         }
 
@@ -264,6 +272,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
                     Main.npcChatText = AldinChat();
                     SoundEngine.PlaySound(SoundID.Thunder);
                     NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X + 10, (int)NPC.Center.Y, ModContent.NPCType<AldinGrabber>());
+                    WhoTheHellWasThat = true;
                 }
                 else if (glow >= 30)
                 {
@@ -685,28 +694,35 @@ namespace MultidimensionMod.NPCs.TownNPCs
             }
         }
 
-        public int America = 0;
+        public int FunnyHand = 0;
 
         public override void AI()
         {
-            /*if (NPC.ai[0] == 12f && NPC.ai[1] == NPCID.Sets.AttackTime[NPC.type])
+            if (WhoTheHellWasThat)
             {
-                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Gunshot"), NPC.position);
-            }*/
+                FunnyHand++;
+            }
+            if (FunnyHand == 390)
+            {
+                int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.AldinGrab2"), false, false);
+                Main.combatText[i].lifeTime = 180;
+                WhoTheHellWasThat = false;
+                FunnyHand = 0;
+            }
         }
 
         public override void AddShops()
         {
             var npcShop = new NPCShop(Type, ShopName)
-            .Add(new Item(ModContent.ItemType<Blue>()) { shopCustomPrice = Item.buyPrice(gold: 10) })
-            .Add(new Item(ModContent.ItemType<Brown>()) { shopCustomPrice = Item.buyPrice(gold: 10) })
-            .Add(new Item(ModContent.ItemType<Gray>()) { shopCustomPrice = Item.buyPrice(gold: 10) })
-            .Add(new Item(ModContent.ItemType<Green>()) { shopCustomPrice = Item.buyPrice(gold: 10) })
-            .Add(new Item(ModContent.ItemType<Orange>()) { shopCustomPrice = Item.buyPrice(gold: 10) })
-            .Add(new Item(ModContent.ItemType<Pink>()) { shopCustomPrice = Item.buyPrice(gold: 10) })
-            .Add(new Item(ModContent.ItemType<Purple>()) { shopCustomPrice = Item.buyPrice(gold: 10) })
-            .Add(new Item(ModContent.ItemType<Red>()) { shopCustomPrice = Item.buyPrice(gold: 10) })
-            .Add(new Item(ModContent.ItemType<Yellow>()) { shopCustomPrice = Item.buyPrice(gold: 10) });
+            .Add(new Item(ModContent.ItemType<Blue>()) { shopCustomPrice = Item.buyPrice(gold: 18) })
+            .Add(new Item(ModContent.ItemType<Brown>()) { shopCustomPrice = Item.buyPrice(gold: 18) })
+            .Add(new Item(ModContent.ItemType<Gray>()) { shopCustomPrice = Item.buyPrice(gold: 18) })
+            .Add(new Item(ModContent.ItemType<Green>()) { shopCustomPrice = Item.buyPrice(gold: 18) })
+            .Add(new Item(ModContent.ItemType<Orange>()) { shopCustomPrice = Item.buyPrice(gold: 18) })
+            .Add(new Item(ModContent.ItemType<Pink>()) { shopCustomPrice = Item.buyPrice(gold: 18) })
+            .Add(new Item(ModContent.ItemType<Purple>()) { shopCustomPrice = Item.buyPrice(gold: 18) })
+            .Add(new Item(ModContent.ItemType<Red>()) { shopCustomPrice = Item.buyPrice(gold: 18) })
+            .Add(new Item(ModContent.ItemType<Yellow>()) { shopCustomPrice = Item.buyPrice(gold: 18) });
             npcShop.Register();
         }
 

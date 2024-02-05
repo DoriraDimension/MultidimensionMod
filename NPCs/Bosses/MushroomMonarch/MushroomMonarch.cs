@@ -116,6 +116,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             if (!Main.dedServ)
                 Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Monarch");
             SpawnModBiomes = new int[1] { ModContent.GetInstance<ShroomForest>().Type };
+            NPC.AL().CantHurtDapper = true;
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

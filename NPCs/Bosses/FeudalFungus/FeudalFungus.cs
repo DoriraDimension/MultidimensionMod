@@ -121,6 +121,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                 Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Fungus");
             NPC.alpha = 255;
             NPC.dontTakeDamage = true;
+            NPC.AL().CantHurtDapper = true;
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

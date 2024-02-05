@@ -34,6 +34,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             NPC.netAlways = true;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
+            NPC.AL().CantHurtDapper = true;
         }
 
         public override void AI()

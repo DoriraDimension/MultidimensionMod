@@ -24,18 +24,13 @@ namespace MultidimensionMod
 		public override bool InstancePerEntity => true;
 
 		public bool Blaze;
-
 		public bool Madness;
-
 		public int MadnessTimer;
-
 		public int MadnessCringe;
-
 		public bool DrakePoison;
-
 		public bool MarysWrath;
-
 		public bool Nihil;
+		public bool CantHurtDapper;
 
 		public override void ResetEffects(NPC npc)
 		{

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using MultidimensionMod.Base;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -23,6 +24,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             Projectile.penetrate = 1;
             Projectile.tileCollide = false;
             Projectile.timeLeft = 360;
+            Projectile.AL().CantHurtDapper = true;
         }
 
         public int Freeze = 0;
