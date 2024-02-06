@@ -12,6 +12,8 @@ using Terraria.Chat;
 using Terraria.Localization;
 using Terraria.ModLoader.IO;
 using Mono.Cecil;
+using Terraria.Audio;
+using ReLogic.Utilities;
 
 namespace MultidimensionMod.Common.Globals
 {
@@ -20,8 +22,33 @@ namespace MultidimensionMod.Common.Globals
         public static bool MadnessMoon;
         public static int TposeTimer;
         public static int BoxTimer;
+        private ActiveSound Sound;
+        private SlotId loop;
         public override void PostUpdateWorld()
         {
+            #region Frozen Underworld ashstorm loop
+            Player player = Main.LocalPlayer;
+            if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()))
+            {
+                if (Sound == null)
+                {
+                    loop = SoundEngine.PlaySound(SoundID.BlizzardStrongLoop with { Volume = 0.50f }, player.Center);
+
+                }
+                if (SoundEngine.TryGetActiveSound(loop, out Sound))
+                {
+                    Sound.Position = player.Center;
+                }
+            }
+            if (!Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()))
+            {
+                if (Sound != null)
+                {
+                    Sound.Stop();
+                    loop = SlotId.Invalid;
+                }
+            }
+            #endregion
             if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()) & !DownedSystem.seenFU)
             {
                 MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Frozen Underworld", 90, 120, 1.6f, 0, Color.LightGray, "Sinner's Wasteland");

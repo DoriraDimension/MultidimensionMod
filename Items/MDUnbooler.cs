@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Common.Systems;
+using MultidimensionMod.Items.Souls;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
@@ -35,6 +36,7 @@ namespace MultidimensionMod.Items
             DownedSystem.metDapper = false;
             DownedSystem.listenedToNonsense = false;
             DownedSystem.seenMushroom = false;
+            MemorySystem.seenMemory = false;
 
             if (Main.netMode == NetmodeID.Server)
                 NetMessage.SendData(MessageID.WorldData);

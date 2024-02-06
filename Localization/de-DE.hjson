@@ -2875,6 +2875,11 @@ Mods: {
 				// DisplayName: Indigo Soul Spore
 				/* Tooltip:
 					'''
+					Use to view a memory
+					Can only be witnessed once
+					''' */
+				/* Lore:
+					'''
 					The Feudal Fungus, just like his brother, rules over a type of mushroom.
 					He rules over the blue glowing mushrooms underground, due to his strength,
 					he has way more influence, his glow stretching all over the continent's caverns.
@@ -3051,7 +3056,7 @@ Mods: {
 			}
 
 			MushroomBlockWall: {
-				// DisplayName: Mushroom Block Wall
+				// DisplayName: Red Mushroom Wall
 				// Tooltip: ""
 			}
 
@@ -3285,6 +3290,15 @@ Mods: {
 				// DisplayName: Toad Banner
 				// Tooltip: ""
 			}
+
+			SporeSolution: {
+				// DisplayName: Spore Solution
+				/* Tooltip:
+					'''
+					Used by the Clentaminator
+					Spreads the Scarlet Mycelium Forest
+					''' */
+			}
 		}
 
 		SetBonuses: {
@@ -3506,6 +3520,9 @@ Mods: {
 			// UmosLightSphere.DisplayName: Umos Light Sphere
 			// LightSphereMouse.DisplayName: Umos Light Sphere
 			// PrayingTwins.DisplayName: Praying Twins
+			// SporeSpray.DisplayName: Spore Spray
+			// FungusDie.DisplayName: Fungus Die
+			// FungusMemory.DisplayName: Fungus Memory
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability

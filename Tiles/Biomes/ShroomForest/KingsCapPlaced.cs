@@ -22,8 +22,6 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.DrawYOffset = 0;
-            TileID.Sets.SwaysInWindBasic[Type] = true;
-            TileID.Sets.IgnoredByGrowingSaplings[Type] = true;
             TileObjectData.newTile.AnchorValidTiles = new int[]
             {
                ModContent.TileType<Mycelium>()

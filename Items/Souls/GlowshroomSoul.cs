@@ -6,11 +6,19 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using System;
+using System.Collections.Generic;
+using System.IO;
+using Terraria.ModLoader.IO;
+using MultidimensionMod.Common.Systems;
+using MultidimensionMod.NPCs.Friendly;
+using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
+using Terraria.Audio;
 
 namespace MultidimensionMod.Items.Souls
 {
     public class GlowshroomSoul : ModItem
     {
+        public static readonly SoundStyle UseSound = new SoundStyle("MultidimensionMod/Sounds/Custom/HallowedCry");
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -23,6 +31,26 @@ namespace MultidimensionMod.Items.Souls
             Item.width = 28;
             Item.height = 24;
             Item.rare = ModContent.RarityType<GlowshroomSoulRarity>();
+            Item.useStyle = ItemUseStyleID.HoldUp;
+            Item.useTime = 20;
+            Item.useAnimation = 20;
+            Item.UseSound = UseSound;
+        }
+
+        public override bool CanUseItem(Player player)
+        {
+            if (MemorySystem.seenMemory)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public override bool? UseItem(Player player)
+        {
+            if (player.ownedProjectileCounts[ModContent.ProjectileType<FungusMemory>()] < 1)
+                Projectile.NewProjectile(player.GetSource_FromThis(), player.Center.X, player.Center.Y - 200, 0f, 0f, ModContent.ProjectileType<FungusMemory>(), 0, 0f);
+            return true;
         }
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
@@ -44,6 +72,59 @@ namespace MultidimensionMod.Items.Souls
                 SpriteEffects.None,
                 0f
             );
+        }
+    }
+
+    public class MemorySystem : ModSystem
+    {
+        public static bool seenMemory;
+        public static bool seenSecondMemory;
+
+        public override void OnWorldLoad()
+        {
+            seenMemory = false;
+            seenSecondMemory = false;
+        }
+
+        public override void OnWorldUnload()
+        {
+            seenMemory = false;
+            seenSecondMemory = false;
+        }
+
+        public override void SaveWorldData(TagCompound tag)
+        {
+            var downed = new List<string>();
+
+            if (seenMemory)
+                downed.Add("seenMemory");
+            if (seenSecondMemory)
+                downed.Add("seenSecondMemory");
+
+            tag["memory"] = downed;
+        }
+
+        public override void LoadWorldData(TagCompound tag)
+        {
+            var downed = tag.GetList<string>("memory");
+
+            seenMemory = downed.Contains("seenMemory");
+            seenSecondMemory = downed.Contains("seenSecondMemory");
+        }
+
+        public override void NetSend(BinaryWriter writer)
+        {
+            var flags = new BitsByte();
+            flags[0] = seenMemory;
+            flags[0] = seenSecondMemory;
+            writer.Write(flags);
+        }
+
+        public override void NetReceive(BinaryReader reader)
+        {
+            BitsByte flags = reader.ReadByte();
+            seenMemory = flags[0];
+            seenSecondMemory = flags[0];
         }
     }
 }

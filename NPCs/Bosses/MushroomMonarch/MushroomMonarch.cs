@@ -151,6 +151,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
         public int ShittingMyself = 0;
         public int AISwitch = 0;
         public int AreYouSerious = 0;
+        public int FuckYouPatience = 0;
 
         public override bool? CanFallThroughPlatforms()
         {
@@ -159,7 +160,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                 return true;
             return false;
         }
-		
+
         public override void AI()
         {
             if (!TitleCard)
@@ -175,8 +176,15 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             Player player = Main.player[NPC.target];
             if (!Collision.CanHit(NPC.position, NPC.width, NPC.height, Main.player[NPC.target].position, Main.player[NPC.target].width, Main.player[NPC.target].height) && internalAI[3] < 180)
             {
-                AIState = ActionState.FuckYou;
+                FuckYouPatience++;
+                if (FuckYouPatience >= 180)
+                {
+                    AIState = ActionState.FuckYou;
+                    FuckYouPatience = 0;
+                }
             }
+            else
+                FuckYouPatience = 0;
             if (player == null)
             {
                 NPC.TargetClosest();

@@ -2875,6 +2875,12 @@ Mods: {
 				DisplayName: Indigo Soul Spore
 				Tooltip:
 					'''
+					This soul reflecting spore contains a memory left there by its owner
+					Use to view the memory
+					The memory can only be witnessed once
+					'''
+				Lore:
+					'''
 					The Feudal Fungus, just like his brother, rules over a type of mushroom.
 					He rules over the blue glowing mushrooms underground, due to his strength,
 					he has way more influence, his glow stretching all over the continent's caverns.
@@ -3051,7 +3057,7 @@ Mods: {
 			}
 
 			MushroomBlockWall: {
-				DisplayName: Mushroom Block Wall
+				DisplayName: Red Mushroom Wall
 				Tooltip: ""
 			}
 
@@ -3285,6 +3291,15 @@ Mods: {
 				DisplayName: Toad Banner
 				Tooltip: ""
 			}
+
+			SporeSolution: {
+				DisplayName: Spore Solution
+				Tooltip:
+					'''
+					Used by the Clentaminator
+					Spreads the Scarlet Mycelium Forest
+					'''
+			}
 		}
 
 		SetBonuses: {
@@ -3474,9 +3489,9 @@ Mods: {
 			MonarchRUNAWAYPlayerKill.DisplayName: Monarch R U N A W A Y
 			Mary.DisplayName: Mary
 			EtheralBeam.DisplayName: Etheral Beam
-			EtheralProj.DisplayName: Etheral Proj
-			EtheralEXProj.DisplayName: Etheral E X Proj
-			EtheralLaserEX.DisplayName: Etheral Laser E X
+			EtheralProj.DisplayName: Etheral
+			EtheralEXProj.DisplayName: Etheral Light
+			EtheralLaserEX.DisplayName: True Light Beam
 			MusharangProj.DisplayName: Musharang Proj
 			BloodshroomArrow.DisplayName: Bloodshroom Arrow
 			YtriumShard.DisplayName: Yttrium Shard
@@ -3506,6 +3521,9 @@ Mods: {
 			UmosLightSphere.DisplayName: Umos Light Sphere
 			LightSphereMouse.DisplayName: Umos Light Sphere
 			PrayingTwins.DisplayName: Praying Twins
+			SporeSpray.DisplayName: Spore Spray
+			FungusDie.DisplayName: Feudal Fungus reflection
+			FungusMemory.DisplayName: Feudal Fungus reflection
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
