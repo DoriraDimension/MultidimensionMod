@@ -33,14 +33,14 @@ namespace MultidimensionMod.Items.Souls
         {
             if (Main.keyState.PressingShift())
             {
-                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.CultistSoul.Talk"))
+                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.CultistSoul.Lore"))
                 {
                 };
                 tooltips.Add(line);
             }
             else
             {
-                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Listen"))
+                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Viewer"))
                 {
                     OverrideColor = Color.Gray,
                 };

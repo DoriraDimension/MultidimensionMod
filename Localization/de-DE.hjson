@@ -1256,7 +1256,8 @@ Mods: {
 
 			BeeSoul: {
 				// DisplayName: Soul of a Queen Bee
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					The grand jungle bees build their hives inside the underground cave systems of the jungle.
 					Only one queen larva is born in a Queen's life cycle, so they are even more precious.
@@ -1265,7 +1266,8 @@ Mods: {
 
 			BrainSoul: {
 				// DisplayName: Soul of the Brain
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A soul? This is the cheap excuse of a soul, made to imitate a real one.
 					With that, the brain hoped to be saved from its ongoing misery.
@@ -1276,7 +1278,8 @@ Mods: {
 
 			CultistSoul: {
 				// DisplayName: Soul of the Lunatic Cultist
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A young boy once dreamed of the day where he could meet a god in flesh,
 					a goal that he kept throughout his entire life.
@@ -1287,9 +1290,6 @@ Mods: {
 					an artifact that speaks about a deity named Cthulhu.
 					Over time, the man dedicated himself to revive this forgotten god,
 					creating a cult and going more mad day by day.
-					''' */
-				/* Talk:
-					'''
 					[c/F4cf0cc:What was I thinking, I should have known this deity was not real,]
 					[c/F4cf0cc:this pathetic husk was not even worth my effort, my dream was always a fraud.]
 					''' */
@@ -1297,7 +1297,8 @@ Mods: {
 
 			DeerSoul: {
 				// DisplayName: Soul of the Deerclops
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A weird creature that resembles a one eyed deer on two legs, it originates from another world.
 					The creature only appears in snowy regions and is extremely hostile towards anything that comes near it.
@@ -1307,7 +1308,8 @@ Mods: {
 
 			DukeSoul: {
 				// DisplayName: Soul of Duke Fishron
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A oceanic apex predator that normally lives in more open waters,
 					sometimes they come near the shores which puts civilians in great danger, even on land.
@@ -1317,7 +1319,8 @@ Mods: {
 
 			EmpressSoul: {
 				// DisplayName: Soul of the Light Empress
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					She was once the guardian angel of the kingdom of Gunresat, protecting it with all her might.
 					She is bound to it by a spell, created by their ancestors when they were in need of this protection.
@@ -1330,7 +1333,8 @@ Mods: {
 
 			EyeSoul: {
 				// DisplayName: Soul of the Eye
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A massive flying eye, said to belong to a slain deity,
 					in reality, this is just one of many abominations spawned from the crimson flesh.
@@ -1339,7 +1343,8 @@ Mods: {
 
 			GolemSoul: {
 				// DisplayName: Core of a Golem
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					When the lands were scorched to ashes long ago, the lihzahrds locked themself in their temple to be safe. 
 					To be really sure that nothing enters and kills them all, they created a golem made of the same material as their temple. 
@@ -1350,7 +1355,8 @@ Mods: {
 
 			KingSlimeSoul: {
 				// DisplayName: Soul of the King Slime
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A large group of Blue Slimes got hit by a massive energy strike,
 					that hit fused them together into a massive ruler of all slimey.
@@ -1360,7 +1366,8 @@ Mods: {
 
 			MetalWormSoul: {
 				// DisplayName: Core of the Destroyer
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A long forgotten mech in shape of a worm that was lying dormant for years deep underground,
 					it was now reactivated when the forces of light and darkness were unleashed.
@@ -1370,7 +1377,8 @@ Mods: {
 
 			MoonSoul: {
 				// DisplayName: Soul of the Moon Lord
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					The great deity that the cultist wished to revive, only known under the name Cthulhu, 
 					a greater one of mindless destruction. 
@@ -1382,7 +1390,8 @@ Mods: {
 
 			PlantSoul: {
 				// DisplayName: Soul of Plantera
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A plant that was brought to life by an experiment about granting life to inanimate objects.
 					She was granted a soul and the will to live and a simple task: "Protect the Jungle".
@@ -1393,7 +1402,8 @@ Mods: {
 
 			PrimeSoul: {
 				// DisplayName: Core of Skeletron Prime
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A long forgotten mech in shape of a curse that was lying dormant for years, 
 					it was now reactivated when the forces of light and darkness were unleashed.
@@ -1403,11 +1413,12 @@ Mods: {
 
 			SkeletonSoul: {
 				// DisplayName: Soul of Skeletron
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A curse, Skeletron was nothing more than the offshoot of an old curse,
-					this form of the curse binds the one poor soul that has to carry it, to guard the dark dungeon for all eternity.
-					A old clothier fell victim to this curse due to his own curiosity when he entered a place he wasnt supposed to enter.
+					this form of the curse has used its host's own desire for the dungeons secrets to bind him to guard the dark dungeon for all eternity.
+					This old clothier fell victim to this curse due to his own curiosity when he entered a place he wasnt supposed to enter.
 					The curses influence didn't just possess the old man but also created copies of its physical form to guard the dungeon on lower levels.
 					The origins of the curse lie deep below the dungeon itself, but only a fool would dare to find it.
 					''' */
@@ -1415,11 +1426,11 @@ Mods: {
 
 			SmileySoulshard: {
 				// DisplayName: Smiley Soulshard
-				/* Tooltip:
+				// Tooltip: The echo of a powerful soul flows through this shard.
+				/* Lore:
 					'''
-					The echo of a powerful soul flows through this shard.
-					Smiley was born from void, forged by an empty emperor so that the pointless mass could grow stronger.
-					But something was different, he had a mind of his own, a soul to feel emotions...
+					Smiley was born from void, forged by an empty emperor so that the pointless mass could spread itself across the universe.
+					But something was different, he grew a mind of his own, a soul to feel emotions...
 					He had own wishes, did not want to obey his master, and this obviously angered said master.
 					In a conflict they battled, Smiley stood no chance, but his brethren react differently now.
 					Their expression changed, they opened their eyes and rushed to aid him.
@@ -1430,7 +1441,8 @@ Mods: {
 
 			TwinSoul: {
 				// DisplayName: Core of the Twins
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A long forgotten pair of mechs in shape of two eyes that were lying dormant for years, 
 					it was now reactivated when the forces of light and darkness were unleashed.
@@ -1442,17 +1454,21 @@ Mods: {
 				// DisplayName: Soul of the Underworld
 				/* Tooltip:
 					'''
-					It is a flesh prison supposed to hold thousands of souls from both light and dark forces.
-					It was brought into existence by the old underworld civilization 
-					by fusing their bodies into one large magic imbued mass.
 					[c/786d74:You could swear you can hear a conversation happening]
 					Use to listen closer
+					''' */
+				/* Lore:
+					'''
+					It is a flesh prison supposed to hold thousands of souls from both hallowed and demonic forces.
+					It was brought into existence by the old underworld civilization
+					by fusing their bodies into one large magic imbued mass.
 					''' */
 			}
 
 			WomanSlimeSoul: {
 				// DisplayName: Soul of the Queen Slime
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					Where a king is, there is a queen, and this queen is an angel.
 					Once an ordinary pinky, this grand gelatine queen uses the pure holy crystal inside her to gain more power.
@@ -1461,7 +1477,8 @@ Mods: {
 
 			WormSoul: {
 				// DisplayName: Soul of the World Eater
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A species of giant worm, responsible for the chasms in the corruption, almost went extinct
 					if they didn't find a new home in the infectious Corruption.
@@ -2862,7 +2879,8 @@ Mods: {
 
 			MushroomSoul: {
 				// DisplayName: Scarlet Soul Spore
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					The Mushroom Monarch, a true ruler of mushrooms,
 					he rules over the Scarlet Mycelium Forest, a small forest of red mushrooms.
@@ -2875,8 +2893,9 @@ Mods: {
 				// DisplayName: Indigo Soul Spore
 				/* Tooltip:
 					'''
-					Use to view a memory
-					Can only be witnessed once
+					This soul reflecting spore contains a memory left there by its owner
+					Use to view the memory
+					The memory can only be witnessed once
 					''' */
 				/* Lore:
 					'''
@@ -3488,9 +3507,9 @@ Mods: {
 			// MonarchRUNAWAYPlayerKill.DisplayName: Monarch R U N A W A Y
 			// Mary.DisplayName: Mary
 			// EtheralBeam.DisplayName: Etheral Beam
-			// EtheralProj.DisplayName: Etheral Proj
-			// EtheralEXProj.DisplayName: Etheral E X Proj
-			// EtheralLaserEX.DisplayName: Etheral Laser E X
+			// EtheralProj.DisplayName: Etheral
+			// EtheralEXProj.DisplayName: Etheral Light
+			// EtheralLaserEX.DisplayName: True Light Beam
 			// MusharangProj.DisplayName: Musharang Proj
 			// BloodshroomArrow.DisplayName: Bloodshroom Arrow
 			// YtriumShard.DisplayName: Yttrium Shard
@@ -3521,8 +3540,8 @@ Mods: {
 			// LightSphereMouse.DisplayName: Umos Light Sphere
 			// PrayingTwins.DisplayName: Praying Twins
 			// SporeSpray.DisplayName: Spore Spray
-			// FungusDie.DisplayName: Fungus Die
-			// FungusMemory.DisplayName: Fungus Memory
+			// FungusDie.DisplayName: Feudal Fungus reflection
+			// FungusMemory.DisplayName: Feudal Fungus reflection
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
