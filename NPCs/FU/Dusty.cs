@@ -25,7 +25,7 @@ namespace MultidimensionMod.NPCs.FU
         {
             NPC.width = 32;
             NPC.height = 32;
-            NPC.damage = 50;
+            NPC.damage = 1;
             NPC.defense = 5;
             NPC.lifeMax = 1;
             NPC.aiStyle = -1;

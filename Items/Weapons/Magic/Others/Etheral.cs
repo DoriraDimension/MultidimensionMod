@@ -18,16 +18,16 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 
         public override void SetDefaults()
 		{
+            Item.damage = 180;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.useAnimation = 7;
             Item.useTime = 7;
+            Item.width = 46;
+            Item.height = 26;
             Item.mana = 10;
             Item.shootSpeed = 16f;
             Item.knockBack = 0f;
-            Item.width = 122;
             Item.reuseDelay = 5;
-            Item.height = 32;
-            Item.damage = 180;
             Item.UseSound = SoundID.Item13;
             Item.channel = true;
             Item.shoot = ModContent.ProjectileType<EtheralProj>();

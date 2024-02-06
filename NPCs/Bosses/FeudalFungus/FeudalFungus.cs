@@ -436,12 +436,10 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             velocity.Normalize();
                             velocity *= ProjSpeed;
                             Vector2 perturbedSpeed = new Vector2(NPC.velocity.X / 2, -20).RotatedByRandom(MathHelper.ToRadians(85));
-                            if (NPC.life <= NPC.lifeMax / 10)
+                            if (NPC.life <= NPC.lifeMax / 10 && Main.expertMode)
                             {
-                                if (Main.expertMode)
-                                {
-                                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<PureRadianceShot>(), 30, 0);
-                                }
+
+                                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<PureRadianceShot>(), 30, 0);
                             }
                             else
                                 Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<RadianceShot>(), 20, 0);

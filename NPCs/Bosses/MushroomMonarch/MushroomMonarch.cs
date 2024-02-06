@@ -384,7 +384,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     break;
             }
 
-            if ((player.Center.Y - NPC.Center.Y) < -150f)
+            if ((player.Center.Y - NPC.Center.Y) < -200f)
             {
                 AIState = ActionState.Fly;
             }
@@ -519,15 +519,15 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             }
             if (length < 200f)
             {
-                moveSpeed *= 1f;
+                moveSpeed *= 0.5f;
             }
             if (length < 100f)
             {
-                moveSpeed *= 1f;
+                moveSpeed *= 0.5f;
             }
             if (length < 50f)
             {
-                moveSpeed *= 1f;
+                moveSpeed *= 0.5f;
             }
             NPC.velocity = length == 0f ? Vector2.Zero : Vector2.Normalize(dist);
             NPC.velocity *= moveSpeed;

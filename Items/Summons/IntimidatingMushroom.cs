@@ -38,11 +38,11 @@ namespace MultidimensionMod.Items.Summons
 
         public override bool CanUseItem(Player player)
         {
-            if (NPC.AnyNPCs(ModContent.NPCType<MushroomMonarch>()))
+            /*if (NPC.AnyNPCs(ModContent.NPCType<MushroomMonarchSlep>()))
             {
-                return false;
-            }
-            return true;
+                return true;
+            }*/
+            return false;
         }
 
         public override void AddRecipes()

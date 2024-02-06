@@ -22,8 +22,8 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
 	        Item.damage = 300;
             Item.DamageType = DamageClass.Magic;
 	        Item.mana = 15;
-	        Item.width = 60;
-	        Item.height = 26;
+	        Item.width = 130;
+	        Item.height = 46;
 	        Item.useTime = 10;
 	        Item.useAnimation = 10;
 	        Item.reuseDelay = 5;

@@ -50,8 +50,8 @@ namespace MultidimensionMod.Projectiles.Summon.Sentries
             }
             if (Projectile.localAI[0]++ % 60 == 0)
             {
-                MDDrawing.DrawAura(Projectile.Center, Color.Blue, 1f, Projectile);
-                MDDrawing.DrawAura(Projectile.Center, Color.Red, 1f, Projectile);
+                MDDrawing.DrawAura(Projectile.Center, Color.Blue, 1.17f, Projectile);
+                MDDrawing.DrawAura(Projectile.Center, Color.Red, 1.17f, Projectile);
             }
         }
 

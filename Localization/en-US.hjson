@@ -883,10 +883,10 @@ Mods: {
 			}
 
 			MDUnbooler: {
-				DisplayName: MD Unbooler
+				DisplayName: AL Unbooler
 				Tooltip:
 					'''
-					Sets all MD bools to false
+					Sets all Awakened Light bools to false
 					Non-Consumable
 					'''
 			}
@@ -2540,10 +2540,10 @@ Mods: {
 			}
 
 			MDUndowner: {
-				DisplayName: MD Undowner
+				DisplayName: AL Undowner
 				Tooltip:
 					'''
-					Undowns all MD bosses
+					Undowns all Awakened Light bosses
 					Non-Consumable
 					'''
 			}
@@ -3815,20 +3815,20 @@ Mods: {
 			BabyGlowmarin: These small adorable fish are from another dimension, they reproduce really fast. Its small glow organs are already developed and work fine.
 			Gilania: Big reptiles that live in the desert, their bite is venomous. They will rest underground at day to escape the blazing desert sun and come out at night.
 			SandEle: They are actually crystalized mana surrounded by sand, created artificially by a cult. They will react hostile against anything that enters their desert. During sandstorms they become even more active and travel to the surface, sometimes following Sand Elementals.
-			Darkling: A entity that was created from Void Matter, they curiously approach people who pass by in the dungeon and only attack when threatened.
+			Darkling: An entity that was created from Void Matter, they curiously approach people who pass by in the dungeon and only attack when threatened.
 			Ashton: A weird creature that roams the frozen section of the underworld, hovering as if hanging on strings. They spit burning cold ash at everything that doesn't belong.
 			SearedAshton: A subspecies of Ashton that adapted to live in the seething heat of the underworld, they spit hot burning ash clouds.
-			IceDrakeJuvenile: Juvenile Ice Drakes usually reside underground where they hunt down prey via ambush. They can be approached savely when they are asleep. They really love gilded dishes.
+			IceDrakeJuvenile: Juvenile Ice Drakes usually reside underground where they hunt prey via ambush. They can be approached savely when they are asleep. They really love gilded dishes.
 			Glowmarin: A fish from another dimension, they have glowing organs all over their body, suggesting that they originally lived in deeper waters.
 			Lobster: Odd lobster species that lives near the shores, they have a parrot like beak which gives them their name. Their meat is very tasty and can make a nice dish.
 			StormEel: The great storm eels, only active during storms, when the sea is harsh and unforgiving. Many people believe they are scouts, scouts of something deep under the ocean, that is why these creatures are seen as an omen of even worse to come
 			Dusty: Piles of cooled ash given life by the potent magic of the Frozen Underworld. They have no mind or soul, they only fly around on the icy winds, exploding into ash on impact.
-			Victim: A poor soul that has lost everything to the Abyssal Sin. When the great devil of the Subzero Ridge took over their world, they left and went to the Underworld together with the icy winds. They have long forgotten who they even are.
+			Victim: A poor soul that has lost everything to the burning winds of ice. They fled through a space-time rift into the Underworld after their home had begun to slowly be consumed by the Abyssal Sin. They have long forgotten who they even are.
 			VictimEye: The eye of a Victim, it became sentient after its host body started to show signs of weakness.
 			IceDemon: A demon that has managed to adapt to the icy winds of the Frozen Underworld. They utelize powerful magic spears but... there must be something slumbering deep within.
 			Madman: A simple man who witnessed the true horror, no longer able to think like a normal person.
 			MadnessFlier: A flying entity that mutated into a grotesque something, just touching its skin hurts mentally.
-			MadnessGazer: A giant eyeball creature that flies by flapping its grotesque tentacles around. They might have been the eye of a unfortunate soul that witnessed the horrors.
+			MadnessGazer: A giant eyeball creature that flies by flapping its grotesque tentacles around. They might have been the eye of an unfortunate soul that witnessed the horrors.
 			MadnessStarving: A gruesome creature that gazed into the lurking terror, its madness scarred mind cannot properly comprehend the process of consumption anymore, leaving it in a terrible state, craving for food but not being able to die either.
 			MadTitan: A bulky creature that follows the horrors, its soul has been empowered by the madness energy inside it. It possesses an arm cannon with which it can fire massive amounts of madness, maybe suggesting that it might have been a normal gun at some point that fused with its holder.
 			PetDrake: Ice Drakes were normally very docile creatures, often enough even interacting with humans by themself. Though the war against the Vikings has left them scarred, now barely trusting anyone. Who knows, maybe some day, we can live in harmony again.
@@ -3836,7 +3836,7 @@ Mods: {
 			Taraha: A dimensional traveler who loves to trade items. "Find something here, trade somewhere else", that is her slogan.
 			Dappercap: The Mushroom Monarch's son, really nobody knows how in the world this works but here he is. He is up to mischief, hates everything he doesn't see as "cool" and even deals with illegal mushrooms. Maybe if you act cool enough, he will share them with you too.
 			Adel: Originating from a neighboring kingdom, this hallowed warrior wishes to avenge his beloved lord. He wields the Lightstream Mythos with which he has slain many foes. He was the first to declare war against Baaruun, against his new lord's will.
-			Vertrarius: A grumpy demon who wields the Evil Ember, Vulkanus. He is lazy and does not care about anyone but his lord, making him the most unreliable person in existence. When Gunresat declared war against Baaruun, he fought as their leader out of boredom.
+			Vertrarius: A grumpy demon who wields the Evil Ember, Vulkanus. He is lazy and does not care about anyone but his lord, making him the most unreliable person in existence. When Gunresat declared war against Baaruun, he fought as Baaruun's leader out of boredom.
 			Smiley: The leader of the Darklings that hide inside the dungeon. His powers are unrivaled and respected amongst his followers and he is equally loved as well. In response to the incredible anger against his origins, his body turned pale to rebel against his darkness.
 			Grudge: The incarnation of despair and hope that piled up in the Frozen Underworld, born from the deep wishes of its residents and the abyssal magic that lurks inside. You have slain their biggest hope, so be assured, the winds are not happy about your slaughter.
 			MushroomMonarch: A royal mushroom who rests in the Scarlet Mycelium Forest. He was way more powerful a long time ago, but he laid down his will to fight in exchange for a peaceful life. Nowadays he is just a grumpy old king in his tiny kingdom.
