@@ -184,13 +184,13 @@ Mods: {
 			}
 
 			BrothersBuff: {
-				// DisplayName: Brothers Buff
-				// Description: Mods.MultidimensionMod.Buffs.BrothersBuff.Description
+				// DisplayName: The fungal brothers
+				// Description: Happy to have eachother... and you too I guess
 			}
 
 			MonarchBabBuff: {
-				// DisplayName: Monarch Bab Buff
-				// Description: Mods.MultidimensionMod.Buffs.MonarchBabBuff.Description
+				// DisplayName: Bab Monarch
+				// Description: Does not want to be here right now
 			}
 		}
 
@@ -3330,12 +3330,22 @@ Mods: {
 			}
 
 			MixSporeBag: {
-				// DisplayName: Mix Spore Bag
-				// Tooltip: ""
+				// DisplayName: Mixed Spore Bag
+				// Tooltip: Summons the fungal brothers
 			}
 
 			SusSporeBag: {
-				// DisplayName: Sus Spore Bag
+				// DisplayName: Suspicious Spore Bag
+				// Tooltip: Summons the Bab Monarch
+			}
+
+			MonarchMask: {
+				// DisplayName: Monarch Mask
+				// Tooltip: ""
+			}
+
+			FungusRelic: {
+				// DisplayName: Fungus Relic
 				// Tooltip: ""
 			}
 		}
@@ -3566,7 +3576,7 @@ Mods: {
 			// RadiantIlluminaRing.DisplayName: Radiant Illumina Ring
 			// Glowxplosion.DisplayName: Glowxplosion
 			// DimensionalLightning.DisplayName: Dimensional Lightning
-			// MonarchBab.DisplayName: Monarch Bab
+			// MonarchBab.DisplayName: Bab Monarch
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability

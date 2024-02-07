@@ -18,14 +18,12 @@ namespace MultidimensionMod.Buffs.Pets
         public override void Update(Player player, ref int buffIndex)
         {
             player.buffTime[buffIndex] = 18000;
-
-            int projType = ModContent.ProjectileType<FeudalBab>();
-            if (player.whoAmI == Main.myPlayer && player.ownedProjectileCounts[projType] <= 0)
+            if (player.whoAmI == Main.myPlayer)
             {
                 List<int> pets = new List<int> { ModContent.ProjectileType<FeudalBab>(), ModContent.ProjectileType<MonarchBab>() };
-                foreach (int petProjID in pets)
-                    if (player.ownedProjectileCounts[petProjID] <= 0)
-                        Projectile.NewProjectile(player.GetSource_Buff(buffIndex), player.Center, Vector2.Zero, projType, 0, 0f, player.whoAmI);
+                foreach (int they in pets)
+                    if (player.ownedProjectileCounts[they] <= 0)
+                        Projectile.NewProjectile(player.GetSource_Buff(buffIndex), player.Center, Vector2.Zero, they, 0, 0f, player.whoAmI);
             }
         }
     }

@@ -3338,6 +3338,16 @@ Mods: {
 				DisplayName: Suspicious Spore Bag
 				Tooltip: Summons the Bab Monarch
 			}
+
+			MonarchMask: {
+				DisplayName: Monarch Mask
+				Tooltip: ""
+			}
+
+			FungusRelic: {
+				DisplayName: Fungus Relic
+				Tooltip: ""
+			}
 		}
 
 		SetBonuses: {

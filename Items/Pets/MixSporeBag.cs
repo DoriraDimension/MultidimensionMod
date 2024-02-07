@@ -1,5 +1,6 @@
 ﻿using MultidimensionMod.Buffs.Pets;
 using MultidimensionMod.Projectiles.Pets;
+using MultidimensionMod.Items.Mushrooms;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -21,11 +22,15 @@ namespace MultidimensionMod.Items.Pets
 
         public override void SetDefaults()
         {
-            Item.CloneDefaults(ItemID.ZephyrFish);
-            Item.shoot = ProjectileID.None;
-            Item.buffType = ModContent.BuffType<BrothersBuff>();
+            Item.damage = 0;
+            Item.useStyle = ItemUseStyleID.Swing;
+            Item.useAnimation = 20;
+            Item.useTime = 20;
             Item.width = 28;
             Item.height = 32;
+            Item.noMelee = true;
+            Item.shoot = ProjectileID.None;
+            Item.buffType = ModContent.BuffType<BrothersBuff>();
             Item.value = Item.sellPrice(silver: 50);
             Item.rare = ItemRarityID.Green;
         }
@@ -44,6 +49,16 @@ namespace MultidimensionMod.Items.Pets
             foreach (int they in pets)
                 Projectile.NewProjectile(source, position, velocity, they, damage, knockback, player.whoAmI);
             return false;
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<SusSporeBag>())
+                .AddIngredient(ModContent.ItemType<SusGlowsporeBag>())
+                .AddIngredient(ModContent.ItemType<Rainbow>())
+                .AddTile(TileID.TinkerersWorkbench)
+                .Register();
         }
     }
 }

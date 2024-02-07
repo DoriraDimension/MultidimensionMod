@@ -5,6 +5,7 @@ using MultidimensionMod.Items.Bags;
 using MultidimensionMod.Items.Placeables.Relics;
 using MultidimensionMod.Items.Placeables.Trophies;
 using MultidimensionMod.Items.Pets;
+using MultidimensionMod.Items.Vanity;
 using MultidimensionMod.Common.Players;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Common.Systems;
@@ -571,7 +572,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<MonarchRUNAWAY>(), 0, 0);
             if (!Main.expertMode && Main.rand.NextBool(7))
             {
-                //Item.NewItem(NPC.GetSource_Loot(), NPC.getRect(), ModContent.ItemType<MonarchMask>());
+                Item.NewItem(NPC.GetSource_Loot(), NPC.getRect(), ModContent.ItemType<MonarchMask>());
             }
         }
 
