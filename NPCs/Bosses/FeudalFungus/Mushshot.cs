@@ -16,8 +16,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 
         public override void SetDefaults()
         {
-            Projectile.width = 10;
-            Projectile.height = 10;
+            Projectile.width = 14;
+            Projectile.height = 14;
             Projectile.friendly = false;
             Projectile.hostile = true;
             Projectile.ignoreWater = true;
@@ -62,8 +62,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 
         public override void SetDefaults()
         {
-            Projectile.width = 10;
-            Projectile.height = 10;
+            Projectile.width = 14;
+            Projectile.height = 14;
             Projectile.friendly = false;
             Projectile.hostile = true;
             Projectile.ignoreWater = true;
@@ -116,8 +116,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 
         public override void SetDefaults()
         {
-            Projectile.width = 10;
-            Projectile.height = 10;
+            Projectile.width = 14;
+            Projectile.height = 14;
             Projectile.friendly = false;
             Projectile.hostile = true;
             Projectile.ignoreWater = true;
@@ -172,8 +172,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 
         public override void SetDefaults()
         {
-            Projectile.width = 10;
-            Projectile.height = 10;
+            Projectile.width = 14;
+            Projectile.height = 14;
             Projectile.friendly = false;
             Projectile.hostile = true;
             Projectile.ignoreWater = true;

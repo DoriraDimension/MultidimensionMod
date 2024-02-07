@@ -3542,6 +3542,10 @@ Mods: {
 			SporeSpray.DisplayName: Spore Spray
 			FungusDie.DisplayName: Feudal Fungus reflection
 			FungusMemory.DisplayName: Feudal Fungus reflection
+			MushWave.DisplayName: Telekinetic Wave
+			RadiantIlluminaRing.DisplayName: Radiant Illumina Ring
+			Glowxplosion.DisplayName: Glowxplosion
+			DimensionalLightning.DisplayName: Dimensional Lightning
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -3651,6 +3655,7 @@ Mods: {
 			GlowSentry.DisplayName: Empowered Glowing Mushroom
 			EvokedMushroot.DisplayName: Evoked Mushroot
 			TruffleToad.DisplayName: Truffle Toad
+			GlowBomb.DisplayName: Overloaded Glowing Mushroom
 		}
 
 		Dialogue: {

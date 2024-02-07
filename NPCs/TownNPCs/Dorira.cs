@@ -319,14 +319,13 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
 		public override void TownNPCAttackProj(ref int projType, ref int attackDelay)
 		{
-			projType = ModContent.ProjectileType<BubbleBolt>();
+			projType = ModContent.ProjectileType<DimensionalLightning>();
 			attackDelay = 1;
 		}
 
 		public override void TownNPCAttackProjSpeed(ref float multiplier, ref float gravityCorrection, ref float randomOffset)
 		{
-			multiplier = 12f;
-			randomOffset = 2f;
+			multiplier = 7f;
 		}
 	}
 }
