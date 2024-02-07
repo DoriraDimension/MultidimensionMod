@@ -182,6 +182,16 @@ Mods: {
 				// DisplayName: Twin Prayer Buff
 				// Description: The prayer of the mushrooms empowers you
 			}
+
+			BrothersBuff: {
+				// DisplayName: Brothers Buff
+				// Description: Mods.MultidimensionMod.Buffs.BrothersBuff.Description
+			}
+
+			MonarchBabBuff: {
+				// DisplayName: Monarch Bab Buff
+				// Description: Mods.MultidimensionMod.Buffs.MonarchBabBuff.Description
+			}
 		}
 
 		Items: {
@@ -3318,6 +3328,16 @@ Mods: {
 					Spreads the Scarlet Mycelium Forest
 					''' */
 			}
+
+			MixSporeBag: {
+				// DisplayName: Mix Spore Bag
+				// Tooltip: ""
+			}
+
+			SusSporeBag: {
+				// DisplayName: Sus Spore Bag
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -3546,6 +3566,7 @@ Mods: {
 			// RadiantIlluminaRing.DisplayName: Radiant Illumina Ring
 			// Glowxplosion.DisplayName: Glowxplosion
 			// DimensionalLightning.DisplayName: Dimensional Lightning
+			// MonarchBab.DisplayName: Monarch Bab
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability

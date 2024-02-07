@@ -583,7 +583,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPCloot.Add(ItemDropRule.BossBag(ModContent.ItemType<MonarchBag>()));
             NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<MonarchRelic>()));
             NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MonarchTrophy>(), 10));
-            //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusSporeBag>(), 10));
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusSporeBag>(), 10));
             int choice = Main.rand.Next(2);
             if (choice == 0)
             {

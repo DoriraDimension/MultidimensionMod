@@ -30,7 +30,7 @@ namespace MultidimensionMod.Projectiles.Pets
         {
             Player player = Main.player[Projectile.owner];
             MDPlayer modPlayer = player.GetModPlayer<MDPlayer>();
-            if (!player.dead && player.HasBuff(ModContent.BuffType<FeudalBabBuff>()))
+            if (!player.dead && player.HasBuff(ModContent.BuffType<FeudalBabBuff>()) || !player.dead && player.HasBuff(ModContent.BuffType<BrothersBuff>()))
             {
                 Projectile.timeLeft = 2;
             }
