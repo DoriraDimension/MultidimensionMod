@@ -192,6 +192,16 @@ Mods: {
 				// DisplayName: Bab Monarch
 				// Description: Does not want to be here right now
 			}
+
+			Accursed: {
+				// DisplayName: Accursed
+				// Description: Crazy ghosts haunt you
+			}
+
+			DimensionalShock: {
+				// DisplayName: Dimensional Shock
+				// Description: Dimensional Energy disrupts your spirit
+			}
 		}
 
 		Items: {
@@ -246,11 +256,11 @@ Mods: {
 			}
 
 			CreationMedaillon: {
-				// DisplayName: Creation Medaillon
+				// DisplayName: Creation Medallion
 				// Tooltip: Does nothing right now
 				/* Lore:
 					'''
-					The divine medaillon that is only given to high ranked Scelestians.
+					The divine medallion that is only given to high ranked Scelestians.
 					Like the eye jewel,
 					this is a token of respect towards their titan.
 					The three triangles and eye represent the aspects of Origin, those aspects being mind, soul and body,
@@ -3577,6 +3587,7 @@ Mods: {
 			// Glowxplosion.DisplayName: Glowxplosion
 			// DimensionalLightning.DisplayName: Dimensional Lightning
 			// MonarchBab.DisplayName: Bab Monarch
+			// AccursedStalker.DisplayName: Accursed Stalker
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -3937,6 +3948,17 @@ Mods: {
 		SpecialTooltips: {
 			// Viewer: Hold [Shift] to view lore
 			// Listen: Hold [Shift] to listen closer
+		}
+
+		GameTips: {
+			// MadnessShroomTip: Giving Madness Mushrooms to a true mushroom enthusiast will grant you nice rewards.
+			// GeodeTip: Breaking all kinds of stone will reveal hidden Geodes inside, they may even contain ancient relics!
+			// RealityShroomTip: A blessing from the Cosmic Keeper is what you wish for? Try to ask your trusty neighbors.
+			// IceDrakeTip: Giving juvenile Ice Drakes the Feast of Mides may result in them staying with you.
+			// MadnessNightTip: After the defeat of a great evil, madness may awaken at night.
+			// MushForestTip: In the scarlet forests not far beyond the journey's beginning, you can find pricey mushrooms. But beward of the consequences.
+			// DimensiumTip: Don't know what to do with all those shiny blue crystals? Don't worry, a dimensional traveller will arrive when the gazer is slain!
+			// VikingTip: Remnants of once proud warriors can be found all across the icy caverns.
 		}
 	}
 }

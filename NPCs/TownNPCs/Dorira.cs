@@ -140,7 +140,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			{
 				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.MechanicDialogue", Main.npc[WrenchWoman].GivenName));
 			}
-            if (Main.rand.NextBool(14))
+            if (Main.rand.NextBool(8))
             {
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.MushroomDialogue"));
             }

@@ -1,4 +1,4 @@
-﻿using MultidimensionMod.Dusts;
+﻿using MultidimensionMod.Buffs.Debuffs;
 using System;
 using System.IO;
 using Microsoft.Xna.Framework;
@@ -58,7 +58,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            target.AddBuff(BuffID.Electrified, 300);
+            target.AddBuff(ModContent.BuffType<DimensionalShock>(), 300);
         }
 
         public override bool PreDraw(ref Color lightColor)
