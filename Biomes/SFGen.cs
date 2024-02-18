@@ -57,8 +57,8 @@ namespace MultidimensionMod.Biomes
             }
             float PlaceBiomeY = e;
 
-            ushort mycelium = (ushort)ModContent.TileType<Mycelium>(), stonePurification = (ushort)TileID.Stone/*, sand = (ushort)ModContent.TileType<MyclelialSand>(),
-                sandstone = (ushort)ModContent.TileType<MycelialSandstone>(), hardenedSand = (ushort)ModContent.TileType<MyclelialHardsand>()*/;
+            ushort mycelium = (ushort)ModContent.TileType<Mycelium>(), stonePurification = (ushort)TileID.Stone, sand = (ushort)ModContent.TileType<MyceliumSandPlaced>(),
+                sandstone = (ushort)ModContent.TileType<MyceliumSandstonePlaced>(), hardenedSand = (ushort)ModContent.TileType<MyceliumHardsandPlaced>();
 
             int biomeRadius = 300;
 
@@ -78,12 +78,19 @@ namespace MultidimensionMod.Biomes
                 new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
                 new SetModTile(stonePurification, true, true)
             }));
-            /*WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
+            WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
             {
                 new InWorld(),
-                new Modifiers.OnlyTiles(new ushort[]{ TileID.Sand, TileID.HardenedSand}),
+                new Modifiers.OnlyTiles(new ushort[]{ TileID.Sand }),
                 new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
                 new SetModTile(sand, true, true)
+            }));
+            WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
+            {
+                new InWorld(),
+                new Modifiers.OnlyTiles(new ushort[]{ TileID.HardenedSand }),
+                new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
+                new SetModTile(hardenedSand, true, true)
             }));
             WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
             {
@@ -91,7 +98,7 @@ namespace MultidimensionMod.Biomes
                 new Modifiers.OnlyTiles(new ushort[]{ TileID.Sandstone}),
                 new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
                 new SetModTile(sandstone, true, true)
-            }));*/
+            }));
         }
     }
 }

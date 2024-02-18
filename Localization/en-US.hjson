@@ -3359,6 +3359,21 @@ Mods: {
 				DisplayName: Feudal Fungus Relic
 				Tooltip: ""
 			}
+
+			MyceliumHardsand: {
+				DisplayName: Hardsened Mycelium Sand
+				Tooltip: ""
+			}
+
+			MyceliumSand: {
+				DisplayName: Mycelium Sand
+				Tooltip: ""
+			}
+
+			MyceliumSandstone: {
+				DisplayName: Mycelium Sandstone
+				Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -3589,6 +3604,7 @@ Mods: {
 			DimensionalLightning.DisplayName: Dimensional Lightning
 			MonarchBab.DisplayName: Bab Monarch
 			AccursedStalker.DisplayName: Accursed Stalker
+			MyceliumSandBall.DisplayName: Mycelium Sand Ball
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability

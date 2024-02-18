@@ -39,7 +39,7 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             TileID.Sets.Falling[Type] = true;
             TileID.Sets.CanBeClearedDuringOreRunner[Type] = true;
             Main.tileBlockLight[Type] = true;
-            AddMapEntry(new Color(132, 127, 111));
+            AddMapEntry(new Color(195, 125, 56));
             DustType = DustID.Sand;
         }
         public override void FloorVisuals(Player player)
@@ -118,6 +118,21 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
                 return false;
             }
             return true;
+        }
+
+        public override void RandomUpdate(int i, int j)
+        {
+            WorldGen.SpreadGrass(i + Main.rand.Next(-1, 1), j + Main.rand.Next(-1, 1), TileID.Dirt, Type, false);
+            if (Main.rand.NextBool(60))
+            {
+                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<AridMushroom>(), mute: true, style: Main.rand.Next(5));
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<Mushroom>(), Main.rand.Next(5), 0, -1, -1);
+            }
+            if (Main.rand.NextBool(2500))
+            {
+                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<KingsCapPlaced>(), mute: true);
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<KingsCapPlaced>(), Main.rand.Next(5), 0, -1, -1);
+            }
         }
     }
     public class MyceliumSandBall : ModProjectile

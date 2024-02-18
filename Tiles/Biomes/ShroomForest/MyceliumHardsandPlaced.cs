@@ -32,7 +32,7 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             TileID.Sets.ChecksForMerge[Type] = true;
             Main.tileBlockLight[Type] = true;
             Main.tileLighted[Type] = true;
-            AddMapEntry(new Color(149, 133, 121));
+            AddMapEntry(new Color(195, 125, 56));
             MineResist = 1.5f;
             DustType = DustID.Sand;
         }

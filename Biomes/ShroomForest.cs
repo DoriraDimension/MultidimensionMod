@@ -42,7 +42,10 @@ namespace MultidimensionMod.Biomes
 
         public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
         {
-            SFCount = tileCounts[ModContent.TileType<Mycelium>()];
+            SFCount = tileCounts[ModContent.TileType<Mycelium>()]
+                + tileCounts[ModContent.TileType<MyceliumSandPlaced>()]
+                + tileCounts[ModContent.TileType<MyceliumSandstonePlaced>()]
+                + tileCounts[ModContent.TileType<MyceliumHardsandPlaced>()];
         }
     }
 }
