@@ -56,6 +56,7 @@ namespace MultidimensionMod
 				if (AccursedTimer == 120)
 				{
                     Projectile.NewProjectile(npc.GetSource_FromAI(), new Vector2(npc.Center.X + (float)Main.rand.Next(-300, 300), npc.Center.Y + (float)Main.rand.Next(-300, 300)), new Vector2(0, 0), ModContent.ProjectileType<AccursedStalker>(), 50, 0, Main.myPlayer);
+					AccursedTimer = 0;
                 }
 			}
 			if (!Accursed)
@@ -175,7 +176,7 @@ namespace MultidimensionMod
 			{
                 if (Main.rand.NextBool(6))
                 {
-                    int dust = Dust.NewDust(npc.position - new Vector2(2f, 2f), npc.width, npc.height, ModContent.DustType<AccursedGhost>(), 0, -3, 50, default(Color), 1.0f);
+                    int dust = Dust.NewDust(npc.position - new Vector2(2f, 2f), npc.width, npc.height, ModContent.DustType<AccursedGhost>(), 0, -2, 30, default(Color), 1.0f);
                 }
             }
         }

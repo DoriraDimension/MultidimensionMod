@@ -168,7 +168,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             {
                 if (!Main.dedServ)
                 {
-                    MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Mushroom Monarch", 60, 90, 1.0f, 0, Color.Orange, "Royal Fungus");
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Mushroom Monarch", 60, 90, 1.0f, 0, Color.Orange, "Grumpy Ruler");
                     TitleCard = true;
                 }
             }

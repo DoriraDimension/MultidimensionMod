@@ -1594,7 +1594,7 @@ Mods: {
 					It exists in all dimensions, managing the concept of time everywhere at once,
 					being way more efficient than any other time deity.
 					Time is an important aspect of our universe, without it,
-					nothing can change and evolve, a aspect that is worth protecting.
+					nothing can change and evolve, an aspect that is worth protecting.
 					'''
 			}
 
@@ -2860,7 +2860,7 @@ Mods: {
 					'''
 					A very pricey mushroom only found in the Scarlet Mycelium Forest
 					Eating it is said to awaken secret powers... 
-					or stir up unwanted fury of a sleeping king.
+					or stir up unwanted fury of a sleeping monarch.
 					'''
 			}
 
@@ -2919,10 +2919,11 @@ Mods: {
 					'''
 				Lore:
 					'''
-					The Feudal Fungus, just like his brother, rules over a type of mushroom.
-					He rules over the blue glowing mushrooms underground, due to his strength,
-					he has way more influence, his glow stretching all over the continent's caverns.
-					This being was mindless long ago, obeying distant orders, that was until it was blessed by light.
+					The Feudal Fungus, also known as Lumos, the Radiant Apostle or glowing royalty is just like his brother and rules over a type of mushroom.
+					He rules over the blue glowing mushrooms underground, but he has way more influence, 
+					so his glow stretches all over the continent's caverns.
+					This is unlike his brother, who only rules a small forest.
+					This being was mindless long ago, obeying distant orders, that was until it was blessed by light, claiming its new self.
 					'''
 			}
 
@@ -2961,7 +2962,7 @@ Mods: {
 			}
 
 			MonarchTrophy: {
-				DisplayName: Monarch Trophy
+				DisplayName: Mushroom Monarch Trophy
 				Tooltip: ""
 			}
 
@@ -3166,7 +3167,7 @@ Mods: {
 				Lore:
 					'''
 					A mushroom parasite that formed from a brainstem, it clings to its host.
-					It formed inside the glowing monarch,
+					It formed inside the glowing royalty,
 					as a means to deepen its connection to its light.
 					'''
 			}
@@ -3320,7 +3321,7 @@ Mods: {
 					'''
 					Due to not being blessed by the light, the scarlet fungi neither glow nor do they have much consciousness
 					Though sometimes, glowing mushrooms will try to become one with them,
-					all in hopes of sharing their light with them.
+					all in hopes of sharing their light.
 					It is unknown if it actually works this way, only those who can understand their thoughts may know.
 					'''
 			}
@@ -3350,12 +3351,12 @@ Mods: {
 			}
 
 			MonarchMask: {
-				DisplayName: Monarch Mask
+				DisplayName: Mushroom Monarch Mask
 				Tooltip: ""
 			}
 
 			FungusRelic: {
-				DisplayName: Fungus Relic
+				DisplayName: Feudal Fungus Relic
 				Tooltip: ""
 			}
 		}
@@ -3693,7 +3694,12 @@ Mods: {
 
 			AldinGrabberEscape.DisplayName: ???
 			AldinGrabber.DisplayName: ???
-			FeudalFungus.DisplayName: Feudal Fungus
+
+			FeudalFungus: {
+				DisplayName: Feudal Fungus
+				SecondPhaseName: Lumos
+			}
+
 			GlowSentry.DisplayName: Empowered Glowing Mushroom
 			EvokedMushroot.DisplayName: Evoked Mushroot
 			TruffleToad.DisplayName: Truffle Toad
@@ -3722,6 +3728,7 @@ Mods: {
 				#Below is help dialogue
 				ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
 				DimensiumHelp: You can find Dimensium by doing many different things. Killing, mining, fishing, and so much more.
+				KingsCapHelp: You know that mushroom forest nearby? If you wait long enough, you may find a mushroom that is larger than the others. But you need another special mushroom that grows there to interact with it.
 				TouchGrassHelp: Go outside
 				#Below is quest dialogue
 				CassieQuestStart: I wanted to ask if you could do me a favor, during my travel here something important got seperated from me. Could you maybe try and get it back? It might have fallen like a star from the sky, if only there was a matter that could transform it back into its original form.
@@ -3879,7 +3886,7 @@ Mods: {
 			MadnessStarving: A gruesome creature that gazed into the lurking terror, its madness scarred mind cannot properly comprehend the process of consumption anymore, leaving it in a terrible state, craving for food but not being able to die either.
 			MadTitan: A bulky creature that follows the horrors, its soul has been empowered by the madness energy inside it. It possesses an arm cannon with which it can fire massive amounts of madness, maybe suggesting that it might have been a normal gun at some point that fused with its holder.
 			PetDrake: Ice Drakes were normally very docile creatures, often enough even interacting with humans by themself. Though the war against the Vikings has left them scarred, now barely trusting anyone. Who knows, maybe some day, we can live in harmony again.
-			Dorira: The creator and administrator of the world's frame we live in, he has come to this world in order to fix what has been broken. Dorira might be a creator god but in reality he isn't powerful at all and relies more on his main system to control things.
+			Dorira: The creator and administrator of the world's frame we live in, he has come to this world in an attempt to fix what has been broken. Dorira might be a creator god but in reality he isn't powerful at all and relies more on his main system to control things.
 			Taraha: A dimensional traveler who loves to trade items. "Find something here, trade somewhere else", that is her slogan.
 			Dappercap: The Mushroom Monarch's son, really nobody knows how in the world this works but here he is. He is up to mischief, hates everything he doesn't see as "cool" and even deals with illegal mushrooms. Maybe if you act cool enough, he will share them with you too.
 			Adel: Originating from a neighboring kingdom, this hallowed warrior wishes to avenge his beloved lord. He wields the Lightstream Mythos with which he has slain many foes. He was the first to declare war against Baaruun, against his new lord's will.
@@ -3888,7 +3895,7 @@ Mods: {
 			Grudge: The incarnation of despair and hope that piled up in the Frozen Underworld, born from the deep wishes of its residents and the abyssal magic that lurks inside. You have slain their biggest hope, so be assured, the winds are not happy about your slaughter.
 			MushroomMonarch: A royal mushroom who rests in the Scarlet Mycelium Forest. He was way more powerful a long time ago, but he laid down his will to fight in exchange for a peaceful life. Nowadays he is just a grumpy old king in his tiny kingdom.
 			RedMushling: The monarchs loyal servants which are formed from his own flesh. They have no mind, only following their task to kill whatever is in their way.
-			FeudalFungus: A large humanoid glowing mushroom who is known as the glowing royalty. It possesses powerful telekinetic abilities with which it can bend the surrounding fungi at will. Only the mushrooms know what hides under its light.
+			FeudalFungus: A large humanoid glowing mushroom who is known as the glowing royalty. As its name suggests, it possesses an elegant blue hued glow that only becomes stronger the more it taps into its inner light. A long time ago it took upon the name "Lumos", referencing the memory it now shares. Only the mushrooms know what hides under its light.
 			Toad: Rare toads that have grown large and somehow found their way into the glowing caverns. Their ability to jump is greatly crippled due to mycelium restraining the movement of their back legs. They are peaceful until provoked.
 		}
 
@@ -3954,9 +3961,9 @@ Mods: {
 			MadnessShroomTip: Giving Madness Mushrooms to a true mushroom enthusiast will grant you nice rewards.
 			GeodeTip: Breaking all kinds of stone will reveal hidden Geodes inside, they may even contain ancient relics!
 			RealityShroomTip: A blessing from the Cosmic Keeper is what you wish for? Try to ask your trusty neighbors.
-			IceDrakeTip: Giving juvenile Ice Drakes the Feast of Mides may result in them staying with you.
+			IceDrakeTip: Giving juvenile Ice Drakes the Feast of Midas may result in them staying with you.
 			MadnessNightTip: After the defeat of a great evil, madness may awaken at night.
-			MushForestTip: In the scarlet forests not far beyond the journey's beginning, you can find pricey mushrooms. But beward of the consequences.
+			MushForestTip: In the scarlet forests not far beyond the journey's beginning, you can find pricey mushrooms. But beware of the consequences.
 			DimensiumTip: Don't know what to do with all those shiny blue crystals? Don't worry, a dimensional traveller will arrive when the gazer is slain!
 			VikingTip: Remnants of once proud warriors can be found all across the icy caverns.
 		}

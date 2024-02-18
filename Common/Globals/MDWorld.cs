@@ -84,7 +84,7 @@ namespace MultidimensionMod.Common.Globals
             {
                 if (!Main.dayTime && Main.time == 0)
                 {
-                    if (Main.rand.NextBool(10))
+                    if (Main.rand.NextBool(20))
                     {
                         if (Main.netMode != NetmodeID.MultiplayerClient)
                         {

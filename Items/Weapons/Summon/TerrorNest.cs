@@ -43,7 +43,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
         {
             if (Main.keyState.PressingShift())
             {
-                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.TerrorBee.Lore"))
+                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.TerrorNest.Lore"))
                 {
                     OverrideColor = Color.LightGray
                 };

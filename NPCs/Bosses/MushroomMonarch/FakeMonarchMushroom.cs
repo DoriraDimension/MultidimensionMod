@@ -71,7 +71,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
 
             for(int i = 0; i < 200; i++)
             {
-                if(Main.player[i].active && (Main.player[i].Center - Projectile.Center).Length() < 88)
+                if(Main.player[i].active && (Main.player[i].Center - Projectile.Center).Length() < 50)
                 {
                     if (Main.player[i].position.X + Main.player[i].width * 0.5 > Projectile.position.X + Projectile.width * 0.5)
                     {

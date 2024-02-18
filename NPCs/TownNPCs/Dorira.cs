@@ -262,6 +262,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			WeightedRandom<string> chat = new(Main.rand);
 			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.ColdHellHelp"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.DimensiumHelp"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.KingsCapHelp"));
             if (Main.rand.NextBool(100))
             {
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.TouchGrassHelp"));

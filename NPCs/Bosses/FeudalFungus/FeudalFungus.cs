@@ -6,6 +6,7 @@ using MultidimensionMod.Items.Weapons.Magic.Tomes;
 using MultidimensionMod.Items.Weapons.Summon;
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Items.Placeables.Relics;
 using System;
 using System.IO;
 using Microsoft.Xna.Framework;
@@ -22,6 +23,7 @@ using MultidimensionMod.Projectiles.Melee.Swords;
 using Terraria.Audio;
 using MultidimensionMod.Projectiles;
 using Terraria.GameContent.Bestiary;
+using Terraria.Localization;
 
 namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 {
@@ -29,6 +31,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
     public class FeudalFungus : ModNPC
     {
         public bool TitleCard = false;
+        public bool TitleCardPhase2 = false;
         public int damage = 0;
         public bool mad = false;
         public bool UmosMode = false;
@@ -45,7 +48,15 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             }
 		}
 
-		public override void ReceiveExtraAI(BinaryReader reader)
+        public override void ModifyTypeName(ref string typeName)
+        {
+            if (UmosMode)
+            {
+                typeName = Language.GetTextValue("Mods.MultidimensionMod.NPCs.FeudalFungus.SecondPhaseName");
+            }
+        }
+
+        public override void ReceiveExtraAI(BinaryReader reader)
 		{
 			base.ReceiveExtraAI(reader);
 			if(Main.netMode == NetmodeID.MultiplayerClient)
@@ -156,7 +167,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<GlowingMushmatter>(), 1, 5, 10));
             NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<GlowshroomSoul>()));
             NPCloot.Add(ItemDropRule.BossBag(ModContent.ItemType<FungusBag>()));
-            //NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<FungusRelic>()));
+            NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<FungusRelic>()));
             //NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<FungusTrophy>(), 10));
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusGlowsporeBag>(), 10));
             int choice = Main.rand.Next(2);
@@ -222,8 +233,16 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             {
                 if (!Main.dedServ)
                 {
-                    MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Feudal Fungus", 60, 90, 1.0f, 0, Color.Blue, "Glowing Monarch");
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Feudal Fungus", 60, 90, 1.0f, 0, Color.Blue, "Glowing Royalty");
                     TitleCard = true;
+                }
+            }
+            if (UmosMode && !TitleCardPhase2)
+            {
+                if (!Main.dedServ)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle("Lumos", 30, 60, 1.0f, 0, Color.Cyan, "Radiant Apostle");
+                    TitleCardPhase2 = true;
                 }
             }
             Player player = Main.player[NPC.target];

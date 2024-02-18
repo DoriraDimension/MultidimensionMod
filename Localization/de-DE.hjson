@@ -1594,7 +1594,7 @@ Mods: {
 					It exists in all dimensions, managing the concept of time everywhere at once,
 					being way more efficient than any other time deity.
 					Time is an important aspect of our universe, without it,
-					nothing can change and evolve, a aspect that is worth protecting.
+					nothing can change and evolve, an aspect that is worth protecting.
 					''' */
 			}
 
@@ -2860,7 +2860,7 @@ Mods: {
 					'''
 					A very pricey mushroom only found in the Scarlet Mycelium Forest
 					Eating it is said to awaken secret powers... 
-					or stir up unwanted fury of a sleeping king.
+					or stir up unwanted fury of a sleeping monarch.
 					''' */
 			}
 
@@ -3693,7 +3693,12 @@ Mods: {
 
 			// AldinGrabberEscape.DisplayName: ???
 			// AldinGrabber.DisplayName: ???
-			// FeudalFungus.DisplayName: Feudal Fungus
+
+			FeudalFungus: {
+				// DisplayName: Feudal Fungus
+				// SecondPhaseName: Lumos
+			}
+
 			// GlowSentry.DisplayName: Empowered Glowing Mushroom
 			// EvokedMushroot.DisplayName: Evoked Mushroot
 			// TruffleToad.DisplayName: Truffle Toad
@@ -3722,6 +3727,7 @@ Mods: {
 				#Below is help dialogue
 				// ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
 				// DimensiumHelp: You can find Dimensium by doing many different things. Killing, mining, fishing, and so much more.
+				// KingsCapHelp: You know that mushroom forest nearby? If you wait long enough, you may find a mushroom that is larger than the others. But you need another special mushroom that grows there to interact with it.
 				// TouchGrassHelp: Go outside
 				#Below is quest dialogue
 				// CassieQuestStart: I wanted to ask if you could do me a favor, during my travel here something important got seperated from me. Could you maybe try and get it back? It might have fallen like a star from the sky, if only there was a matter that could transform it back into its original form.
@@ -3954,9 +3960,9 @@ Mods: {
 			// MadnessShroomTip: Giving Madness Mushrooms to a true mushroom enthusiast will grant you nice rewards.
 			// GeodeTip: Breaking all kinds of stone will reveal hidden Geodes inside, they may even contain ancient relics!
 			// RealityShroomTip: A blessing from the Cosmic Keeper is what you wish for? Try to ask your trusty neighbors.
-			// IceDrakeTip: Giving juvenile Ice Drakes the Feast of Mides may result in them staying with you.
+			// IceDrakeTip: Giving juvenile Ice Drakes the Feast of Midas may result in them staying with you.
 			// MadnessNightTip: After the defeat of a great evil, madness may awaken at night.
-			// MushForestTip: In the scarlet forests not far beyond the journey's beginning, you can find pricey mushrooms. But beward of the consequences.
+			// MushForestTip: In the scarlet forests not far beyond the journey's beginning, you can find pricey mushrooms. But beware of the consequences.
 			// DimensiumTip: Don't know what to do with all those shiny blue crystals? Don't worry, a dimensional traveller will arrive when the gazer is slain!
 			// VikingTip: Remnants of once proud warriors can be found all across the icy caverns.
 		}
