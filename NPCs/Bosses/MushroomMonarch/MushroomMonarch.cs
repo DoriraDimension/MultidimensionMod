@@ -164,12 +164,15 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
 
         public override void AI()
         {
-            if (!TitleCard)
+            if (ModContent.GetInstance<MDConfig>().ALTitleCards)
             {
-                if (!Main.dedServ)
+                if (!TitleCard)
                 {
-                    MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Mushroom Monarch", 60, 90, 1.0f, 0, Color.Orange, "Grumpy Ruler");
-                    TitleCard = true;
+                    if (!Main.dedServ)
+                    {
+                        MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Bosses.Monarch.Name"), 60, 90, 1.0f, 0, Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Bosses.Monarch.Title"));
+                        TitleCard = true;
+                    }
                 }
             }
             NPC.TargetClosest();

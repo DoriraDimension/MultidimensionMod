@@ -3361,7 +3361,7 @@ Mods: {
 			}
 
 			MyceliumHardsand: {
-				// DisplayName: Mycelium Hardsand
+				// DisplayName: Hardened Mycelium Sand
 				// Tooltip: ""
 			}
 
@@ -3870,11 +3870,16 @@ Mods: {
 
 		Configs: {
 			MDConfig: {
-				// DisplayName: Config
+				// DisplayName: General config
 
-				DisableNPCItemSelling: {
-					// Label: Town NPCs shop additions
-					// Tooltip: Adds new items to Town NPCs shops.
+				NPCItemSelling: {
+					// Label: Town NPC Item selling
+					// Tooltip: NPCs sell new items
+				}
+
+				ALTitleCards: {
+					// Label: AL Title Cards
+					// Tooltip: Vanilla and Awakened Light bosses and some biomes will display a title card upon being spawned/entered.
 				}
 			}
 		}
@@ -3983,5 +3988,215 @@ Mods: {
 			// DimensiumTip: Don't know what to do with all those shiny blue crystals? Don't worry, a dimensional traveller will arrive when the gazer is slain!
 			// VikingTip: Remnants of once proud warriors can be found all across the icy caverns.
 		}
+
+		TitleCards: {
+			Biomes: {
+				Underworld: {
+					// Title: Ashen Remnants
+					// Name: The Underworld
+				}
+
+				Dungeon: {
+					// Title: Accursed Halls
+					// Name: The Dungeon
+				}
+
+				JungleTemple: {
+					// Title: Isolated Chambers
+					// Name: The Jungle Temple
+				}
+
+				Aether: {
+					// Title: Hidden Starry Sky
+					// Name: The Aether
+				}
+
+				FU: {
+					// Title: Sinner's Wasteland
+					// Name: The Frozen Underworld
+				}
+
+				ShroomForest: {
+					// Title: Spore Fields
+					// Name: Scarlet Mycelium Forest
+				}
+
+				Inferno: {
+					// Title: Inferno Crags
+					// Name: The Dragon's Hoard
+				}
+
+				Mire: {
+					// Title: Devouring Swamp
+					// Name: The Shrouded Mire
+				}
+
+				Purity: {
+					// Title: Nature's Sanctuary
+					// Name: Harmony Caverns
+				}
+
+				Void: {
+					// Title: The Anomaly
+					// Name: Void's Edge
+				}
+
+				Pit: {
+					// Title: Devil's Arena
+					// Name: The Pit
+				}
+			}
+
+			Bosses: {
+				KingSlime: {
+					// Title: Geletic Ruler
+					// Name: King Slime
+				}
+
+				Eye: {
+					// Title: Godspawned Gazer
+					// Name: The Eye of Cthulhu
+				}
+
+				Eater: {
+					// Title: Corruption Crawler
+					// Name: The Eater of Worlds
+				}
+
+				Brain: {
+					// Title: Soulless Mind
+					// Name: The Brain of Cthulhu
+				}
+
+				Bee: {
+					// Title: Giant Insect
+					// Name: Queen Bee
+				}
+
+				Skeletron: {
+					// Title: Curse Incarnation
+					// Name: Skeletron
+				}
+
+				Deer: {
+					// Title: Winter Strider
+					// Name: Deerclops
+				}
+
+				Wall: {
+					// Title: Soul Prison
+					// Name: The Wall of Flesh
+				}
+
+				QueenSlime: {
+					// Title: The Hallowed Angel
+					// Name: Queen Slime
+				}
+
+				Twins: {
+					// Title: Terror Scouts
+					// Name: The Twins
+				}
+
+				Destroyer: {
+					// Title: Tectonic Tunneler
+					// Name: The Destroyer
+				}
+
+				Prime: {
+					// Title: Cursemarked Machine
+					// Name: Skeletron Prime
+				}
+
+				Plant: {
+					// Title: Jungle Guardian
+					// Name: Plantera
+				}
+
+				Golem: {
+					// Title: Sun Idol
+					// Name: Golem
+				}
+
+				Empress: {
+					// Title: Twilight Dame
+					// Title2: Radiant Mistress
+					// Name: The Empress of Light
+				}
+
+				Duke: {
+					// Title: Shorelurker
+					// Name: Duke Fishron
+				}
+
+				Cultist: {
+					// Title: Godseeker
+					// Name: The Lunatic Cultist
+				}
+
+				Moon: {
+					// Title: Reincarnated Cthulhu
+					// Title2: False Husk
+					// Name: The Moon Lord
+				}
+
+				Torch: {
+					// Title: Pimordial Torch Overlord
+					// Name: The Torch God
+				}
+
+				Monarch: {
+					// Title: Grumpy Ruler
+					// Name: The Mushroom Monarch
+				}
+
+				Feudal: {
+					// Title: Glowing Royalty
+					// Title2: Radiant Apostle
+					// Name: The Feudal Fungus
+					// Name2: Lumos
+				}
+
+				Brood: {
+					// Title: Inferno Queen
+					// Title2: Draconic Allmother
+					// Name: The Broodmother
+					// Name2: Chiliang
+				}
+
+				Hydra: {
+					// Title: Mire Dweller
+					// Title2: Abyssal Empress
+					// Name: The Hydra
+					// Name2: Shinuma
+				}
+
+				Serpent: {
+					Title: {
+						// Name: Subzero Serpent
+						// Title: Not a fish, obviously
+					}
+				}
+
+				Smiley: {
+					// Title: Rebel of the Void
+					// Name: Smiley
+				}
+
+				Sag: {
+					// Title: Fallen Hunter
+					// Name: Sagittarius
+				}
+
+				UmbraSangu: {
+					// TitleU: Shadow Weaver
+					// TitleS: Flesh Totem
+					// NameU: Umbra
+					// NameS: Sanguine
+				}
+			}
+		}
+
+		// MiscText.MadnessStart: You feel your mind pierced...
 	}
 }

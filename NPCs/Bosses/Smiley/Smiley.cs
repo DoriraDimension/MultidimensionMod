@@ -23,6 +23,7 @@ using MultidimensionMod.Dusts;
 using Terraria.Audio;
 using MonoMod.Core.Platforms;
 using MultidimensionMod.UI;
+using Terraria.Localization;
 
 //if you see base.velocity.Y += -7f that means theres a jump
 
@@ -202,14 +203,17 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 
 		public override void AI()
 		{
-            if (!TitleCard)
-            {
-                if (!Main.dedServ)
-                {
-                    MDSystem.Instance.TitleCardUIElement.DisplayTitle("Smiley", 60, 90, 1.0f, 0, Color.Yellow, "Rebel of the Void");
-                    TitleCard = true;
-                }
-            }
+			if (ModContent.GetInstance<MDConfig>().ALTitleCards)
+			{
+				if (!TitleCard)
+				{
+					if (!Main.dedServ)
+					{
+						MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Bosses.Smiley.Name"), 60, 90, 1.0f, 0, Color.Yellow, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Bosses.Smiley.Title"));
+						TitleCard = true;
+					}
+				}
+			}
             if (Main.rand.NextBool(60))
             {
                 blink = true;

@@ -229,20 +229,23 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             }
             NPC.alpha -= 5;
             Waking++;
-            if (!TitleCard)
+            if (ModContent.GetInstance<MDConfig>().ALTitleCards)
             {
-                if (!Main.dedServ)
+                if (!TitleCard)
                 {
-                    MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Feudal Fungus", 60, 90, 1.0f, 0, Color.Blue, "Glowing Royalty");
-                    TitleCard = true;
+                    if (!Main.dedServ)
+                    {
+                        MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Bosses.Feudal.Name"), 60, 90, 1.0f, 0, Color.Blue, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Bosses.Feudal.Title"));
+                        TitleCard = true;
+                    }
                 }
-            }
-            if (UmosMode && !TitleCardPhase2)
-            {
-                if (!Main.dedServ)
+                if (UmosMode && !TitleCardPhase2)
                 {
-                    MDSystem.Instance.TitleCardUIElement.DisplayTitle("Lumos", 30, 60, 1.0f, 0, Color.Cyan, "Radiant Apostle");
-                    TitleCardPhase2 = true;
+                    if (!Main.dedServ)
+                    {
+                        MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Bosses.Feudal.Name2"), 30, 60, 1.0f, 0, Color.Cyan, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Bosses.Feudal.Title2"));
+                        TitleCardPhase2 = true;
+                    }
                 }
             }
             Player player = Main.player[NPC.target];

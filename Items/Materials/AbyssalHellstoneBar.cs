@@ -34,7 +34,8 @@ namespace MultidimensionMod.Items.Materials
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<AbyssalHellstone>(), 3)
-			.Register();
+            .AddTile(TileID.Furnaces)
+            .Register();
 		}
 	}
 }

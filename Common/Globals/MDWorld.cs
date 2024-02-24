@@ -49,35 +49,38 @@ namespace MultidimensionMod.Common.Globals
                 }
             }
             #endregion
-            if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()) & !DownedSystem.seenFU)
+            if (ModContent.GetInstance<MDConfig>().ALTitleCards)
             {
-                MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Frozen Underworld", 90, 120, 1.6f, 0, Color.LightGray, "Sinner's Wasteland");
-                NPC.SetEventFlagCleared(ref DownedSystem.seenFU, -1);
-            }
-            if (Main.LocalPlayer.ZoneDungeon & !DownedSystem.seenDungeon)
-            {
-                MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Dungeon", 90, 120, 1.6f, 0, Color.DarkGray, "Accursed Halls");
-                NPC.SetEventFlagCleared(ref DownedSystem.seenDungeon, -1);
-            }
-            if (Main.LocalPlayer.ZoneLihzhardTemple & !DownedSystem.seenTemple)
-            {
-                MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Jungle Temple", 90, 120, 1.6f, 0, Color.Brown, "Isolated Chambers");
-                NPC.SetEventFlagCleared(ref DownedSystem.seenTemple, -1);
-            }
-            if (Main.LocalPlayer.ZoneUnderworldHeight & !Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()) & !DownedSystem.seenHell)
-            {
-                MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Underworld", 90, 120, 1.6f, 0, Color.OrangeRed, "Ashen Remnants");
-                NPC.SetEventFlagCleared(ref DownedSystem.seenHell, -1);
-            }
-            if (Main.LocalPlayer.ZoneShimmer & !DownedSystem.seenAether)
-            {
-                MDSystem.Instance.TitleCardUIElement.DisplayTitle("The Aether", 90, 120, 1.6f, 0, Color.Pink, "Hidden Starry Sky");
-                NPC.SetEventFlagCleared(ref DownedSystem.seenAether, -1);
-            }
-            if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<ShroomForest>()) & !DownedSystem.seenMushroom)
-            {
-                MDSystem.Instance.TitleCardUIElement.DisplayTitle("Scarlet Mycelium Forest", 90, 120, 1.6f, 0, Color.Red, "Royal Woods");
-                NPC.SetEventFlagCleared(ref DownedSystem.seenMushroom, -1);
+                if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()) & !DownedSystem.seenFU)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.FU.Name"), 90, 120, 1.6f, 0, Color.LightGray, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.FU.Title"));
+                    NPC.SetEventFlagCleared(ref DownedSystem.seenFU, -1);
+                }
+                if (Main.LocalPlayer.ZoneDungeon & !DownedSystem.seenDungeon)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Dungeon.Name"), 90, 120, 1.6f, 0, Color.DarkGray, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Dungeon.Title"));
+                    NPC.SetEventFlagCleared(ref DownedSystem.seenDungeon, -1);
+                }
+                if (Main.LocalPlayer.ZoneLihzhardTemple & !DownedSystem.seenTemple)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.JungleTemple.Name"), 90, 120, 1.6f, 0, Color.Brown, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.JungleTemple.Title"));
+                    NPC.SetEventFlagCleared(ref DownedSystem.seenTemple, -1);
+                }
+                if (Main.LocalPlayer.ZoneUnderworldHeight & !Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()) & !DownedSystem.seenHell)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Underworld.Name"), 90, 120, 1.6f, 0, Color.OrangeRed, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Underworld.Title"));
+                    NPC.SetEventFlagCleared(ref DownedSystem.seenHell, -1);
+                }
+                if (Main.LocalPlayer.ZoneShimmer & !DownedSystem.seenAether)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Aether.Name"), 90, 120, 1.6f, 0, Color.Pink, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Aether.Title"));
+                    NPC.SetEventFlagCleared(ref DownedSystem.seenAether, -1);
+                }
+                if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<ShroomForest>()) & !DownedSystem.seenMushroom)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.ShroomForest.Name"), 90, 120, 1.6f, 0, Color.Red, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.ShroomForest.Title"));
+                    NPC.SetEventFlagCleared(ref DownedSystem.seenMushroom, -1);
+                }
             }
             #region Night of Madness
             if (!Main.fastForwardTimeToDawn && !Main.fastForwardTimeToDusk)
@@ -93,7 +96,7 @@ namespace MultidimensionMod.Common.Globals
                                 MadnessMoon = true;
                                 if (!Main.dayTime)
                                 {
-                                    string status = "You feel your mind pirced...";
+                                    string status = Language.GetTextValue("Mods.MultidimensionMod.MiscText.MadnessStart");
                                     if (Main.netMode == NetmodeID.Server)
                                         ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(status), Color.Gold);
                                     else if (Main.netMode == NetmodeID.SinglePlayer)
