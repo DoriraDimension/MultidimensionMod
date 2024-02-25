@@ -50,6 +50,8 @@ namespace MultidimensionMod.Common.Players
         public bool NeroSet = false;
         public bool SinnerSet = false;
         public bool MonarchHeart = false;
+        public int delayedHealValue = 0;
+        public int firstTickHeal = 0;
         public bool DrakeShield = false;
         public Item DrakescaleShield;
         public Item ColdDesertShield;
@@ -120,6 +122,22 @@ namespace MultidimensionMod.Common.Players
             }
         }
 
+        public override void PreUpdate()
+        {
+            if (MonarchHeart && !Player.HasBuff(BuffID.PotionSickness) && !Player.dead)
+            {
+                firstTickHeal++;
+                if (firstTickHeal == 1) //So it only happens once
+                {
+                    Player.Heal(delayedHealValue / 4); //Heal for one quarter of the collected damage
+                }
+                if (firstTickHeal >= 2)
+                {
+                    firstTickHeal = 2; //Keep value on 2 until it is reset
+                }
+            }
+        }
+
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
         {
             return new[]
@@ -135,10 +153,6 @@ namespace MultidimensionMod.Common.Players
                 itemDrop = ModContent.ItemType<EnergyFish>();
                 return;
             }
-        }
-
-        public override void PreUpdate()
-        {
         }
 
         public override void PostUpdateMiscEffects()
@@ -211,7 +225,7 @@ namespace MultidimensionMod.Common.Players
                 MadnessTimer = 0;
                 MadnessCringe = 0; //Resets the damage level of the debuff if it runs out
             }
-            if (DrakePoison)
+            if (DrakePoison) //Drakeblood Poison debuff
             {
                 if (player.lifeRegen > 0)
                 {
@@ -219,31 +233,11 @@ namespace MultidimensionMod.Common.Players
                 }
                 player.lifeRegen -= 16;
             }
-            if (MonarchHeart)
+            if (MonarchHeart && Player.HasBuff(BuffID.PotionSickness))
             {
                 if (player.lifeRegen > 0)
                 {
                     player.lifeRegen = 0;
-                }
-                player.lifeRegen -= 12;
-                if (Main.hardMode)
-                {
-                    if (player.lifeRegen > 0)
-                    {
-                        player.lifeRegen = 0;
-                    }
-                    player.lifeRegen -= 20;
-                }
-                if (NPC.downedMoonlord)
-                {
-                    if (Main.hardMode)
-                    {
-                        if (player.lifeRegen > 0)
-                        {
-                            player.lifeRegen = 0;
-                        }
-                        player.lifeRegen -= 30;
-                    }
                 }
             }
         }
@@ -278,16 +272,6 @@ namespace MultidimensionMod.Common.Players
             {
                 target.AddBuff(BuffID.Frostburn, 120);
             }
-            if (MonarchHeart)
-            {
-                if (damageDone >= 20)
-                {
-                    player.statLife += 20;
-                }
-                else
-                    //This is calculated by dividing the dealt damage by 15 and the halved useTime of the used weapon
-                    player.statLife += (int)Math.Floor((double)damageDone / 15 + useTimeSub); 
-            }
             if (MushiumSet && !IndigoMode && player.HasBuff(ModContent.BuffType<LightStarved>()))
             {
                 if (Main.rand.NextBool(10))
@@ -314,15 +298,6 @@ namespace MultidimensionMod.Common.Players
             {
                 target.AddBuff(BuffID.Frostburn, 120);
             }
-            if (MonarchHeart)
-            {
-                if (damageDone >= 200)
-                {
-                    player.statLife += 13;
-                }
-                else
-                    player.statLife += (int)Math.Floor((double)damageDone / 15 + useTimeSub);
-            }
             if (MushiumSet && !IndigoMode && player.HasBuff(ModContent.BuffType<LightStarved>()) && !proj.npcProj && !proj.trap)
             {
                 if (Main.rand.NextBool(10))
@@ -337,13 +312,13 @@ namespace MultidimensionMod.Common.Players
             Player player = Main.LocalPlayer;
             if (item.type == ItemID.Mushroom && player.GetModPlayer<MDPlayer>().Healthy)
             {
-                item.healLife = 40; //Makes Mushrooms heal more HP when the Healthy Cap accessory is equipped
+                healValue = 40; //Makes Mushrooms heal more HP when the Healthy Cap accessory is equipped
             }
             else if (item.type == ItemID.Mushroom && !player.GetModPlayer<MDPlayer>().Healthy)
             {
-                item.healLife = 15;
+                healValue = 15;
             }
-            if (CrippledHealing)
+            if (CrippledHealing || MonarchHeart)
             {
                 healValue = (int)(healValue * 0.50f);
             }
@@ -397,6 +372,14 @@ namespace MultidimensionMod.Common.Players
                     Player.statMana -= Player.statMana;
                     Item item = DesertNecklace;
                     Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(0, 0), ModContent.ProjectileType<ManaShockwave>(), (int)info.Damage + damage, 0f, Player.whoAmI);
+                }
+            }
+            if (MonarchHeart)
+            {
+                if (Player.HasBuff(BuffID.PotionSickness))
+                {
+                    delayedHealValue += info.SourceDamage; //Collects damage done to the player
+                    firstTickHeal = 0;
                 }
             }
             #region Eye accessory debuffs

@@ -3060,9 +3060,11 @@ Mods: {
 				// DisplayName: Heart of the Monarch
 				/* Tooltip:
 					'''
-					Increases all damage by 10% but your health starts to continously drain
-					Hitting enemies will recover 1/15 of the damage you dealt, this caps at 13 health per hit
-					The health drain becomes stronger in hardmode and again after defeating Moon Lord
+					Healing Potions are 50% less effective
+					While inflicted with Potion Sickness, life regeneration is nullified
+					During that time perdiod, damage done to you will be collected
+					When Potion Sickness ends, 
+					you will be healed by a quarter of the collected damage instantly
 					''' */
 			}
 
@@ -3863,7 +3865,7 @@ Mods: {
 
 		DeathMessages: {
 			// Socks: " died from the pain of wearing wet socks."
-			// MonarchHeart: " has turned into mush."
+			// MonarchHeart: " was turned to mush."
 			// AntiCheese: " has been punished for their skill issue."
 			// Madness: "'s mind was consumed."
 		}

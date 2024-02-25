@@ -29,7 +29,6 @@ namespace MultidimensionMod.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.GetModPlayer<MDPlayer>().MonarchHeart = true;
-            player.GetDamage(DamageClass.Generic) += 0.10f;
         }
     }
 }
