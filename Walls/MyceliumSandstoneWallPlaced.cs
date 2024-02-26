@@ -12,7 +12,7 @@ namespace MultidimensionMod.Walls
         {
             Main.wallHouse[Type] = true;
             DustType = ModContent.DustType<MushroomDust>();
-            AddMapEntry(new Color(195, 125, 56));
+            AddMapEntry(new Color(73, 37, 23));
         }
         public override bool CanExplode(int i, int j)
         {

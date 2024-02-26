@@ -3396,7 +3396,7 @@ Mods: {
 			}
 
 			MyceliumHardsandWall: {
-				DisplayName: Mycelium Hardsand Wall
+				DisplayName: Hardened Mycelium Sand Wall
 				Tooltip: ""
 			}
 
