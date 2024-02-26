@@ -3389,6 +3389,26 @@ Mods: {
 				DisplayName: Mycelium Sandstone
 				Tooltip: ""
 			}
+
+			AbyssalHellstoneBrickWall: {
+				DisplayName: Abyssal Hellstone Brick Wall
+				Tooltip: ""
+			}
+
+			MyceliumHardsandWall: {
+				DisplayName: Mycelium Hardsand Wall
+				Tooltip: ""
+			}
+
+			MyceliumSandstoneWall: {
+				DisplayName: Mycelium Sandstone Wall
+				Tooltip: ""
+			}
+
+			VoidMatterMassWall: {
+				DisplayName: Void Matter Mass Wall
+				Tooltip: ""
+			}
 		}
 
 		SetBonuses: {

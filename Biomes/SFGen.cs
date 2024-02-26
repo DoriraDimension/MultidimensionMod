@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Tiles.Biomes.ShroomForest;
+using MultidimensionMod.Walls;
 using System;
 using System.Threading;
 using System.Collections.Generic;
@@ -58,7 +59,8 @@ namespace MultidimensionMod.Biomes
             float PlaceBiomeY = e;
 
             ushort mycelium = (ushort)ModContent.TileType<Mycelium>(), stonePurification = (ushort)TileID.Stone, sand = (ushort)ModContent.TileType<MyceliumSandPlaced>(),
-                sandstone = (ushort)ModContent.TileType<MyceliumSandstonePlaced>(), hardenedSand = (ushort)ModContent.TileType<MyceliumHardsandPlaced>();
+                sandstone = (ushort)ModContent.TileType<MyceliumSandstonePlaced>(), hardenedSand = (ushort)ModContent.TileType<MyceliumHardsandPlaced>(), 
+                sandstoneWall = (ushort)ModContent.WallType<MyceliumSandstoneWallPlaced>(), hardenedSandWall = (ushort)ModContent.WallType<MyceliumHardsandWallPlaced>();
 
             int biomeRadius = 300;
 
@@ -98,6 +100,21 @@ namespace MultidimensionMod.Biomes
                 new Modifiers.OnlyTiles(new ushort[]{ TileID.Sandstone}),
                 new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
                 new SetModTile(sandstone, true, true)
+            }));
+            //Walls
+            WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
+            {
+                new InWorld(),
+                new Modifiers.OnlyWalls(new ushort[]{ WallID.HardenedSand}),
+                new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
+                new PlaceModWall(hardenedSandWall, true)
+            }));
+            WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
+            {
+                new InWorld(),
+                new Modifiers.OnlyWalls(new ushort[]{ WallID.Sandstone}),
+                new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
+                new PlaceModWall(sandstoneWall, true)
             }));
         }
     }
