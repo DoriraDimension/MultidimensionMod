@@ -68,6 +68,8 @@ namespace MultidimensionMod.Common.Players
         public bool IndigoMode = false;
         public bool CrippledHealing = false;
         public bool TwinPrayer = false;
+        public bool awakenedFlamescar = false;
+        public int flamescarReset = 0;
 
         public override void ResetEffects()
         {
@@ -134,6 +136,16 @@ namespace MultidimensionMod.Common.Players
                 if (firstTickHeal >= 2)
                 {
                     firstTickHeal = 2; //Keep value on 2 until it is reset
+                }
+            }
+            if (awakenedFlamescar)
+            {
+                flamescarReset++;
+                if (flamescarReset == 1200)
+                {
+                    awakenedFlamescar = false;
+                    flamescarReset = 0;
+                    Player.AddBuff(ModContent.BuffType<InnerEmber>(), 600);
                 }
             }
         }
@@ -321,6 +333,10 @@ namespace MultidimensionMod.Common.Players
             if (CrippledHealing || MonarchHeart)
             {
                 healValue = (int)(healValue * 0.50f);
+            }
+            if (MonarchHeart)
+            {
+                healValue = (int)(healValue * 0.75f);
             }
         }
 

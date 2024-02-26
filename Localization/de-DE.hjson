@@ -202,6 +202,11 @@ Mods: {
 				// DisplayName: Dimensional Shock
 				// Description: Dimensional Energy disrupts your spirit
 			}
+
+			InnerEmber: {
+				// DisplayName: Inner Ember
+				// Description: A small ember in your soul, be sure not to turn it into an inferno
+			}
 		}
 
 		Items: {
@@ -1589,8 +1594,7 @@ Mods: {
 					''' */
 				/* Lore:
 					'''
-					The Deity of Balance came into existence when its predecessors
-					were not able to fulfill their duty anymore.
+					The Deity of Balance came into existence when its predecessor vanished forever.
 					It exists in all dimensions, managing the concept of time everywhere at once,
 					being way more efficient than any other time deity.
 					Time is an important aspect of our universe, without it,
@@ -1946,7 +1950,16 @@ Mods: {
 
 			AwakenedArchbird: {
 				// DisplayName: Rahlem's Flamescar
-				// Tooltip: Shoots shadowflame tentacles when swung and slows enemies when hit for 5 seconds
+				/* Tooltip:
+					'''
+					Right click to cut yourself for 20 damage with the tip of the blade to awaken it
+					When the effect runs out, you will be inflicted with Inner Ember
+					Repeated cutting while having this debuff will result in 40 health being taken,
+					as well as being inflicted with Blazing Suffering yourself
+					This damage resets when the debuff runs out
+					While awakened, the blade inflicts Blazing Suffering and creates green and red embers
+					Green embers pierce enemies and Red embers inflict Blazing Suffering
+					''' */
 				/* Lore:
 					'''
 					This ceremonial sword was used to burn marks into the skin of cult members, 
@@ -3060,9 +3073,9 @@ Mods: {
 				// DisplayName: Heart of the Monarch
 				/* Tooltip:
 					'''
-					Healing Potions are 50% less effective
+					Healing Potions are 25% less effective
 					While inflicted with Potion Sickness, life regeneration is nullified
-					During that time perdiod, damage done to you will be collected
+					During that time period, damage done to you will be collected
 					When Potion Sickness ends, 
 					you will be healed by a quarter of the collected damage instantly
 					''' */
@@ -3607,6 +3620,8 @@ Mods: {
 			// MonarchBab.DisplayName: Bab Monarch
 			// AccursedStalker.DisplayName: Accursed Stalker
 			// MyceliumSandBall.DisplayName: Mycelium Sand Ball
+			// SeethingEmber.DisplayName: Seething Ember
+			// SpiritEmber.DisplayName: Spirit Ember
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -3868,6 +3883,7 @@ Mods: {
 			// MonarchHeart: " was turned to mush."
 			// AntiCheese: " has been punished for their skill issue."
 			// Madness: "'s mind was consumed."
+			// Flamescar: " burned their very soul."
 		}
 
 		Configs: {
