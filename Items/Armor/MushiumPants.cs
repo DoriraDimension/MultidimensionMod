@@ -26,7 +26,17 @@ namespace MultidimensionMod.Items.Armor
             Item.value = Item.sellPrice(0, 0, 25, 0);
         }
 
-		public override void UpdateEquip(Player player)
+        public override void Load()
+        {
+            // The code below runs only if we're not loading on a server
+            if (Main.netMode == NetmodeID.Server)
+                return;
+
+            // Add equip textures
+            EquipLoader.AddEquipTexture(Mod, $"MultidimensionMod/Items/Armor/MushiumHatIndigo_{EquipType.Head}", EquipType.Head, this);
+        }
+
+        public override void UpdateEquip(Player player)
         {
             player.statLifeMax2 += 5;
             player.statManaMax2 += 10;

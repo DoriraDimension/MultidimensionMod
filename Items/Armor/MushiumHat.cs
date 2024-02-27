@@ -27,8 +27,20 @@ namespace MultidimensionMod.Items.Armor
             Item.value = Item.sellPrice(0, 0, 25, 0);
             Item.defense = 3;
 		}
-		
-		public override void UpdateEquip(Player player)
+
+        public override void Load()
+        {
+            // The code below runs only if we're not loading on a server
+            if (Main.netMode == NetmodeID.Server)
+                return;
+
+            // Add equip textures
+            EquipLoader.AddEquipTexture(Mod, $"MultidimensionMod/Items/Armor/MushiumShirtIndigo_{EquipType.Body}", EquipType.Body, this);
+            EquipLoader.AddEquipTexture(Mod, $"MultidimensionMod/Items/Armor/MushiumPantsIndigo_{EquipType.Legs}", EquipType.Legs, this);
+        }
+
+
+        public override void UpdateEquip(Player player)
         {
             player.statLifeMax2 += 5;
             player.statManaMax2 += 10;
@@ -65,6 +77,25 @@ namespace MultidimensionMod.Items.Armor
             .AddIngredient(ModContent.ItemType<GlowingMushmatter>(), 2)
             .AddTile(TileID.Anvils)
             .Register();
+        }
+    }
+
+    public class IndigoModePlayer : ModPlayer
+    {
+        public override void FrameEffects()
+        {
+            // TODO: Need new hook, FrameEffects doesn't run while paused.
+            if (Player.GetModPlayer<MDPlayer>().MushiumSet && Player.GetModPlayer<MDPlayer>().IndigoMode)
+            {
+                var indigoTexture = ModContent.GetInstance<MushiumHat>();
+                Player.body = EquipLoader.GetEquipSlot(Mod, indigoTexture.Name, EquipType.Body);
+                Player.legs = EquipLoader.GetEquipSlot(Mod, indigoTexture.Name, EquipType.Legs);
+            }
+            if (Player.GetModPlayer<MDPlayer>().MushiumSet && Player.GetModPlayer<MDPlayer>().IndigoMode)
+            {
+                var indigoTexture = ModContent.GetInstance<MushiumPants>();
+                Player.head = EquipLoader.GetEquipSlot(Mod, indigoTexture.Name, EquipType.Head);
+            }
         }
     }
 }
