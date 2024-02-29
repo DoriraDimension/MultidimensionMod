@@ -45,5 +45,36 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 		{
 			num = 1;
 		}
-	}
+
+        public override bool RightClick(int i, int j)
+        {
+            Player player = Main.LocalPlayer;
+
+            if (player.IsWithinSnappngRangeToTile(i, j, PlayerSittingHelper.ChairSittingMaxDistance))
+            {
+                player.GamepadEnableGrappleCooldown();
+                player.sitting.SitDown(player, i, j);
+            }
+
+            return true;
+        }
+
+        public override void MouseOver(int i, int j)
+        {
+            Player player = Main.LocalPlayer;
+            if (!player.IsWithinSnappngRangeToTile(i, j, PlayerSittingHelper.ChairSittingMaxDistance))
+            {
+                return;
+            }
+
+            player.noThrow = 2;
+            player.cursorItemIconEnabled = true;
+            player.cursorItemIconID = ModContent.ItemType<VoidMatterChair>();
+
+            if (Main.tile[i, j].TileFrameX / 18 < 1)
+            {
+                player.cursorItemIconReversed = true;
+            }
+        }
+    }
 }

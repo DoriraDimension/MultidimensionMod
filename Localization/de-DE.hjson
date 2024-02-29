@@ -2991,7 +2991,7 @@ Mods: {
 			}
 
 			TheVulcano: {
-				// DisplayName: The Vulcano
+				// DisplayName: The Vulcan
 				// Tooltip: Turns gel into an explosive lob of magma
 			}
 
@@ -3407,6 +3407,101 @@ Mods: {
 
 			VoidMatterMassWall: {
 				// DisplayName: Void Matter Mass Wall
+				// Tooltip: ""
+			}
+
+			RedMushBathtub: {
+				// DisplayName: Red Mush Bathtub
+				// Tooltip: ""
+			}
+
+			RedMushBed: {
+				// DisplayName: Red Mush Bed
+				// Tooltip: ""
+			}
+
+			RedMushBookcase: {
+				// DisplayName: Red Mush Bookcase
+				// Tooltip: ""
+			}
+
+			RedMushCandelabra: {
+				// DisplayName: Red Mush Candelabra
+				// Tooltip: ""
+			}
+
+			RedMushCandle: {
+				// DisplayName: Red Mush Candle
+				// Tooltip: ""
+			}
+
+			RedMushChair: {
+				// DisplayName: Red Mush Chair
+				// Tooltip: ""
+			}
+
+			RedMushChandelier: {
+				// DisplayName: Red Mush Chandelier
+				// Tooltip: ""
+			}
+
+			RedMushChest: {
+				// DisplayName: Red Mush Chest
+				// Tooltip: ""
+			}
+
+			RedMushClock: {
+				// DisplayName: Red Mush Clock
+				// Tooltip: ""
+			}
+
+			RedMushDoor: {
+				// DisplayName: Red Mush Door
+				// Tooltip: ""
+			}
+
+			RedMushDresser: {
+				// DisplayName: Red Mush Dresser
+				// Tooltip: ""
+			}
+
+			RedMushLamp: {
+				// DisplayName: Red Mush Lamp
+				// Tooltip: ""
+			}
+
+			RedMushLantern: {
+				// DisplayName: Red Mush Lantern
+				// Tooltip: ""
+			}
+
+			RedMushPiano: {
+				// DisplayName: Red Mush Piano
+				// Tooltip: ""
+			}
+
+			RedMushPlatform: {
+				// DisplayName: Red Mush Platform
+				// Tooltip: ""
+			}
+
+			RedMushSink: {
+				// DisplayName: Red Mush Sink
+				// Tooltip: ""
+			}
+
+			RedMushSofa: {
+				// DisplayName: Red Mush Sofa
+				// Tooltip: ""
+			}
+
+			RedMushTable: {
+				// DisplayName: Red Mush Table
+				// Tooltip: ""
+			}
+
+			RedMushWorkBench: {
+				// DisplayName: Red Mush Work Bench
 				// Tooltip: ""
 			}
 		}
@@ -3896,6 +3991,14 @@ Mods: {
 			// MonarchBoxPlaced.MapEntry: Music Box
 			// ShroomForestBoxPlaced.MapEntry: Music Box
 			// RottenMemoryPlaced.MapEntry: Rotten Memory
+			// RedMushBathtubPlaced.MapEntry: Red Mush Bathtub Placed
+			// RedMushBookcasePlaced.MapEntry: Red Mush Bookcase Placed
+			// RedMushCandelabraPlaced.MapEntry: Red Mush Candelabra Placed
+			// RedMushCandlePlaced.MapEntry: Red Mush Candle Placed
+			// RedMushChestPlaced.MapEntry: Red Mush Chest Placed
+			// RedMushDresserPlaced.MapEntry: Red Mush Dresser Placed
+			// RedMushPianoPlaced.MapEntry: Red Mush Piano Placed
+			// RedMushSofaPlaced.MapEntry: Red Mush Sofa Placed
 		}
 
 		DeathMessages: {

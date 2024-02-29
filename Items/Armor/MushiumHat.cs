@@ -1,5 +1,6 @@
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Common.Players;
+using MultidimensionMod.Base;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -30,11 +31,9 @@ namespace MultidimensionMod.Items.Armor
 
         public override void Load()
         {
-            // The code below runs only if we're not loading on a server
             if (Main.netMode == NetmodeID.Server)
                 return;
 
-            // Add equip textures
             EquipLoader.AddEquipTexture(Mod, $"MultidimensionMod/Items/Armor/MushiumShirtIndigo_{EquipType.Body}", EquipType.Body, this);
             EquipLoader.AddEquipTexture(Mod, $"MultidimensionMod/Items/Armor/MushiumPantsIndigo_{EquipType.Legs}", EquipType.Legs, this);
         }
@@ -84,7 +83,7 @@ namespace MultidimensionMod.Items.Armor
     {
         public override void FrameEffects()
         {
-            // TODO: Need new hook, FrameEffects doesn't run while paused.
+            Player player = Main.LocalPlayer;
             if (Player.GetModPlayer<MDPlayer>().MushiumSet && Player.GetModPlayer<MDPlayer>().IndigoMode)
             {
                 var indigoTexture = ModContent.GetInstance<MushiumHat>();

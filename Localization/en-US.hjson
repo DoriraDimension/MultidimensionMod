@@ -2991,7 +2991,7 @@ Mods: {
 			}
 
 			TheVulcano: {
-				DisplayName: The Vulcano
+				DisplayName: The Vulcan
 				Tooltip: Turns gel into an explosive lob of magma
 			}
 
@@ -3407,6 +3407,101 @@ Mods: {
 
 			VoidMatterMassWall: {
 				DisplayName: Void Matter Mass Wall
+				Tooltip: ""
+			}
+
+			RedMushBathtub: {
+				DisplayName: Red Mushroom Bathtub
+				Tooltip: ""
+			}
+
+			RedMushBed: {
+				DisplayName: Red Mushroom Bed
+				Tooltip: ""
+			}
+
+			RedMushBookcase: {
+				DisplayName: Red Mushroom Bookcase
+				Tooltip: ""
+			}
+
+			RedMushCandelabra: {
+				DisplayName: Red Mushroom Candelabra
+				Tooltip: ""
+			}
+
+			RedMushCandle: {
+				DisplayName: Red Mushroom Candle
+				Tooltip: ""
+			}
+
+			RedMushChair: {
+				DisplayName: Red Mushroom Chair
+				Tooltip: ""
+			}
+
+			RedMushChandelier: {
+				DisplayName: Red Mushroom Chandelier
+				Tooltip: ""
+			}
+
+			RedMushChest: {
+				DisplayName: Red Mushroom Chest
+				Tooltip: ""
+			}
+
+			RedMushClock: {
+				DisplayName: Red Mushroom Clock
+				Tooltip: ""
+			}
+
+			RedMushDoor: {
+				DisplayName: Red Mushroom Door
+				Tooltip: ""
+			}
+
+			RedMushDresser: {
+				DisplayName: Red Mushroom Dresser
+				Tooltip: ""
+			}
+
+			RedMushLamp: {
+				DisplayName: Red Mushroom Lamp
+				Tooltip: ""
+			}
+
+			RedMushLantern: {
+				DisplayName: Red Mushroom Lantern
+				Tooltip: ""
+			}
+
+			RedMushPiano: {
+				DisplayName: Red Mushroom Piano
+				Tooltip: ""
+			}
+
+			RedMushPlatform: {
+				DisplayName: Red Mushroom Platform
+				Tooltip: ""
+			}
+
+			RedMushSink: {
+				DisplayName: Red Mushroom Sink
+				Tooltip: ""
+			}
+
+			RedMushSofa: {
+				DisplayName: Red Mushroom Sofa
+				Tooltip: ""
+			}
+
+			RedMushTable: {
+				DisplayName: Red Mushroom Table
+				Tooltip: ""
+			}
+
+			RedMushWorkBench: {
+				DisplayName: Red Mushroom Work Bench
 				Tooltip: ""
 			}
 		}
@@ -3896,6 +3991,14 @@ Mods: {
 			MonarchBoxPlaced.MapEntry: Music Box
 			ShroomForestBoxPlaced.MapEntry: Music Box
 			RottenMemoryPlaced.MapEntry: Rotten Memory
+			RedMushBathtubPlaced.MapEntry: Red Mushroom Bathtub
+			RedMushBookcasePlaced.MapEntry: Red Mushroom Bookcase
+			RedMushCandelabraPlaced.MapEntry: Red Mushroom Candelabra
+			RedMushCandlePlaced.MapEntry: Red Mushroom Candle
+			RedMushChestPlaced.MapEntry: Red Mushroom Chest
+			RedMushDresserPlaced.MapEntry: Red Mushroom Dresser
+			RedMushPianoPlaced.MapEntry: Red Mushroom Piano
+			RedMushSofaPlaced.MapEntry: Red Mushroom Sofa
 		}
 
 		DeathMessages: {

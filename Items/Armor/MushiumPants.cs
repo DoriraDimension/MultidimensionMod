@@ -11,8 +11,9 @@ namespace MultidimensionMod.Items.Armor
 	{
 		public override void SetStaticDefaults()
 		{
-			//DisplayName.SetDefault("Mushium Pants");
+            //DisplayName.SetDefault("Mushium Pants");
             //Tooltip.SetDefault("1% Increased life regeneration");
+            ArmorIDs.Head.Sets.DrawHead[EquipLoader.GetEquipSlot(Mod, Name, EquipType.Legs)] = false;
 
         }
 

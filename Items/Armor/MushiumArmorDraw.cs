@@ -12,7 +12,7 @@ using static Terraria.ModLoader.ModContent;
 
 namespace MultidimensionMod.Items.Armor
 {
-    /*class MushiumCapDraw : PlayerDrawLayer
+    class MushiumCapDraw : PlayerDrawLayer
     {
         public override bool GetDefaultVisibility(PlayerDrawSet drawInfo) => drawInfo.drawPlayer.head == EquipLoader.GetEquipSlot(Mod, nameof(MushiumHat), EquipType.Head) && drawInfo.drawPlayer.GetModPlayer<MDPlayer>().IndigoMode;
 
@@ -141,5 +141,5 @@ namespace MultidimensionMod.Items.Armor
                 drawInfo.DrawDataCache.Add(drawData);
             }
         }
-    }*/
+    }
 }
