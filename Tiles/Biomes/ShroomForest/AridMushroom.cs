@@ -1,9 +1,11 @@
 ﻿using MultidimensionMod.Dusts;
+using MultidimensionMod.NPCs.MushBiomes;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.ID;
 using System;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Tiles.Biomes.ShroomForest
 {
@@ -28,6 +30,12 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
         public override void NumDust(int i, int j, bool fail, ref int num)
         {
             num = 10;
+        }
+
+        public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)
+        {
+            if (Main.rand.NextBool(50) && !fail && Main.netMode != NetmodeID.MultiplayerClient)
+                NPC.NewNPC(new EntitySource_TileBreak(i, j), i * 16 + 8, j * 16 + 8, ModContent.NPCType<ShroomJelly>());
         }
     }
 }

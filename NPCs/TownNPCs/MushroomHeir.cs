@@ -9,7 +9,7 @@ using MultidimensionMod.Items.Mushrooms;
 using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Common.Globals;
 using MultidimensionMod.NPCs.Bosses.FeudalFungus;
-using MultidimensionMod.Items.Quest;
+using MultidimensionMod.Items.Vanity;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Base;
 using System.Collections.Generic;
@@ -714,6 +714,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
         public override void AddShops()
         {
             var npcShop = new NPCShop(Type, ShopName)
+            .Add(new Item(ModContent.ItemType<TheDapperCap>()) { shopCustomPrice = Item.buyPrice(gold: 2) })
             .Add(new Item(ModContent.ItemType<Blue>()) { shopCustomPrice = Item.buyPrice(gold: 18) })
             .Add(new Item(ModContent.ItemType<Brown>()) { shopCustomPrice = Item.buyPrice(gold: 18) })
             .Add(new Item(ModContent.ItemType<Gray>()) { shopCustomPrice = Item.buyPrice(gold: 18) })

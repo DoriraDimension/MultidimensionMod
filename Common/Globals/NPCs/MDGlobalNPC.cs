@@ -1,6 +1,9 @@
-﻿using MultidimensionMod.NPCs.Tundra;
+﻿using MultidimensionMod.Buffs.Debuffs;
+using MultidimensionMod.Projectiles.Melee.Swords;
+using MultidimensionMod.NPCs.Tundra;
 using MultidimensionMod.NPCs.FU;
 using MultidimensionMod.NPCs.Madness;
+using MultidimensionMod.NPCs.MushBiomes;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Dusts;
 using System;
@@ -14,9 +17,6 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
 using Terraria.ModLoader.IO;
-using MultidimensionMod.Buffs.Debuffs;
-using MultidimensionMod.Projectiles.Melee.Swords;
-using Mono.Cecil;
 
 namespace MultidimensionMod
 {
@@ -220,6 +220,15 @@ namespace MultidimensionMod
 					//pool.Add(ModContent.NPCType<MadTitan>(), 0.2f);
 				}
 			}
-		}
+            if (spawnInfo.Player.InModBiome<ShroomForest>())
+            {
+                pool.Clear();
+                pool.Add(ModContent.NPCType<CapBunny>(), 0.5f);
+                pool.Add(ModContent.NPCType<Mushbug>(), 0.35f);
+                pool.Add(ModContent.NPCType<MushbugBaby>(), 0.30f);
+                pool.Add(ModContent.NPCType<Puffer>(), 0.25f);
+                pool.Add(ModContent.NPCType<Hovercap>(), 0.35f);
+            }
+        }
 	}
 }

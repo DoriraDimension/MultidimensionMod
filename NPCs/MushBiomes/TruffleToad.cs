@@ -247,11 +247,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.ZoneGlowshroom)
-            {
-                return 0.03f;
-            }
-            return 0f;
+            return Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == TileID.MushroomGrass && spawnInfo.Player.ZoneGlowshroom ? 0.03f : 0f;
         }
 
         public override void HitEffect(NPC.HitInfo hit)
