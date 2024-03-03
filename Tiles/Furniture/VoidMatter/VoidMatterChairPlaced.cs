@@ -15,7 +15,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 {
 	public class VoidMatterChairPlaced : ModTile
 	{
-		public override void SetStaticDefaults()
+        public const int NextStyleHeight = 40;
+        public override void SetStaticDefaults()
 		{
 			Main.tileFrameImportant[Type] = true;
 			Main.tileNoAttach[Type] = true;
@@ -45,6 +46,24 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 		{
 			num = 1;
 		}
+
+        public override void ModifySittingTargetInfo(int i, int j, ref TileRestingInfo info)
+        {
+            Tile tile = Framing.GetTileSafely(i, j);
+
+            info.TargetDirection = -1;
+            if (tile.TileFrameX != 0)
+            {
+                info.TargetDirection = 1;
+            }
+
+            info.AnchorTilePosition.X = i;
+            info.AnchorTilePosition.Y = j;
+            if (tile.TileFrameY % NextStyleHeight == 0)
+            {
+                info.AnchorTilePosition.Y++;
+            }
+        }
 
         public override bool RightClick(int i, int j)
         {
