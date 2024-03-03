@@ -1,14 +1,15 @@
 Awakened Light is a growing lore-based content mod that aims to go with a multidimensional and outer gods thematic.
-This mod also readds and reworks the old Ancients Awakened mod and integrates it into its lore.
+This mod also readds and reworks the old Ancients Awakened mod and integrates it into its lore. [Note that the mod is added and reworked over the course of many updates]
+You may see many familiar faces known from Ancients Awakened as well as new characters alongside them.
 
 The mod currently adds:
 
 - 100+ Weapons
-- 32 Accessories
-- 3 Armor Sets
-- 3 Pets
+- 35 Accessories
+- 4 Armor Sets
+- 6 Pets
 - Several Vanity Items
-- 18 Enemies
+- 25 Enemies & Critters
 - 3 Bosses
 - 3 Town NPCs
 - 1 Town Pet
@@ -17,7 +18,6 @@ The mod currently adds:
 - Several pieces of placeable furniture
 - Boss Souls acting as lore items with more uses added later.
 - Some changes to vanilla enemy lootpools and recipes for normally not craftable items.
-- A reworked version of the old Ancients Awakened mod. [Note that the mod is added and reworked over the course of several updates]
 
 I'm not really the best coder currently and have some bigger planned content, so help, even if it's just helping me improve, is greatly appreciated.
 If you are a coder, spriter or musician and you are interested in this mod and want to help, join the mods discord server
@@ -29,7 +29,7 @@ Developer:
 -DrVoodoo  musician
 -Enigmatic  spriting
 -TailsTheFox92  coding
--Karve  coding
+-red.laser  coding
 
 
 Contributor:
