@@ -21,6 +21,7 @@ namespace MultidimensionMod.Common.Systems
         public static bool seenMushroom;
         public static bool downedMonarch;
         public static bool metDapper;
+        public static bool downedFungus;
 
         public override void OnWorldLoad()
         {
@@ -37,6 +38,7 @@ namespace MultidimensionMod.Common.Systems
             seenMushroom = false;
             downedMonarch = false;
             metDapper = false;
+            downedFungus = false;
         }
 
         public override void OnWorldUnload()
@@ -54,6 +56,7 @@ namespace MultidimensionMod.Common.Systems
             seenMushroom = false;
             downedMonarch = false;
             metDapper = false;
+            downedFungus = false;
         }
 
         public override void SaveWorldData(TagCompound tag)
@@ -86,6 +89,8 @@ namespace MultidimensionMod.Common.Systems
                 downed.Add("downedMonarch");
             if (metDapper)
                 downed.Add("metDapper");
+            if (downedFungus)
+                downed.Add("downedFungus");
 
             tag["downed"] = downed;
         }
@@ -107,6 +112,7 @@ namespace MultidimensionMod.Common.Systems
             seenMushroom = downed.Contains("seenMushroom");
             downedMonarch = downed.Contains("downedMonarch");
             metDapper = downed.Contains("metDapper");
+            downedFungus = downed.Contains("downedFungus");
         }
 
         public override void NetSend(BinaryWriter writer)
@@ -128,6 +134,7 @@ namespace MultidimensionMod.Common.Systems
             flags2[2] = seenMushroom;
             flags2[3] = downedMonarch;
             flags2[4] = metDapper;
+            flags2[5] = downedFungus;
             writer.Write(flags2);
         }
 
@@ -149,6 +156,7 @@ namespace MultidimensionMod.Common.Systems
             seenMushroom = flags2[2];
             downedMonarch = flags2[3];
             metDapper = flags2[4];
+            downedFungus = flags2[5];
         }
     }
 }

@@ -26,6 +26,8 @@ using Terraria.GameContent.ItemDropRules;
 using Microsoft.Xna.Framework;
 using MultidimensionMod.NPCs.Friendly;
 using Microsoft.CodeAnalysis;
+using System.IO;
+using Terraria.ModLoader.IO;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -133,27 +135,34 @@ namespace MultidimensionMod.NPCs.TownNPCs
         public override string GetChat()
         {
             WeightedRandom<string> chat = new WeightedRandom<string>();
-            int SkeletronSlave = NPC.FindFirstNPC(NPCID.Clothier);
-            int FungusBungus = NPC.FindFirstNPC(NPCID.Truffle);
-            int dad = NPC.FindFirstNPC(ModContent.NPCType<MushroomMonarch>());
-            int uncle = NPC.FindFirstNPC(ModContent.NPCType<FeudalFungus>());
-            if (dad >= 0)
+            if (!DownedSystem.metDapper)
             {
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.FatherDialogue"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.FirstTalk1"));
             }
-            if (uncle >= 0)
+            else
             {
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.UncleDialogue"));
+                int SkeletronSlave = NPC.FindFirstNPC(NPCID.Clothier);
+                int FungusBungus = NPC.FindFirstNPC(NPCID.Truffle);
+                int dad = NPC.FindFirstNPC(ModContent.NPCType<MushroomMonarch>());
+                int uncle = NPC.FindFirstNPC(ModContent.NPCType<FeudalFungus>());
+                if (dad >= 0)
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.FatherDialogue"));
+                }
+                if (uncle >= 0)
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.UncleDialogue"));
+                }
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue1"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue2"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue3"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue4"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue6"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue7"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue8"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.AldinDialogue"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.RocketDialogue"));
             }
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue1"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue2"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue3"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue4"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue6"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue7"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue8"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.AldinDialogue"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.RocketDialogue"));
             return chat;
         }
 
@@ -201,38 +210,62 @@ namespace MultidimensionMod.NPCs.TownNPCs
             return chat;
         }
 
-        private static int ChatNumber = 0;
-
         public override void SetChatButtons(ref string button, ref string button2)
         {
             Player player = Main.LocalPlayer;
             int frisbee = player.FindItem(ModContent.ItemType<HovercapItem>());
             int madness = player.FindItem(ModContent.ItemType<MadnessShroom>());
             int reality = player.FindItem(ModContent.ItemType<RealityBendingShroom>());
-            string talk1 = "I am?";
-            string talk2 = "Understood";
+            string talk1 = Language.GetTextValue("Mods.MultidimensionMod.MiscText.Dappercap.FirstTalk1");
+            string talk2 = Language.GetTextValue("Mods.MultidimensionMod.MiscText.Dappercap.FirstTalk2");
             button = Language.GetTextValue("LegacyInterface.28");
-            if (reality >= 0)
+            if (chatNumber == 0 && !DownedSystem.metDapper)
             {
-                button2 = "Give the weird mushroom";
+                button = talk1;
             }
-            else if (madness >= 0)
+            if (chatNumber == 1 && !DownedSystem.metDapper)
             {
-                button2 = "Give Madness Mushroom";
+                button = talk2;
             }
-            else if (frisbee >= 30)
+            if (reality >= 0 && DownedSystem.metDapper)
             {
-                button2 = "Give Glowing Mushrooms";
+                button2 = Language.GetTextValue("Mods.MultidimensionMod.MiscText.Dappercap.GiveReality");
             }
-            else
-                button2 = "Give Rare Plant";
+            else if (madness >= 0 && DownedSystem.metDapper)
+            {
+                button2 = Language.GetTextValue("Mods.MultidimensionMod.MiscText.Dappercap.GiveMadness");
+            }
+            else if (frisbee >= 30 && DownedSystem.metDapper)
+            {
+                button2 = Language.GetTextValue("Mods.MultidimensionMod.MiscText.Dappercap.GiveHover");
+            }
+            else if (DownedSystem.metDapper)
+                button2 = Language.GetTextValue("Mods.MultidimensionMod.MiscText.Dappercap.GiveRare");
         }
+
+        public int chatNumber = 0;
 
         public override void OnChatButtonClicked(bool firstButton, ref string shopName)
         {
             if (firstButton)
             {
-                shopName = "Shop";
+                if (DownedSystem.metDapper)
+                {
+                    shopName = "Shop";
+                }
+                if (chatNumber == 0)
+                {
+                    Main.npcChatText = Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.FirstTalk2");
+                }
+                if (chatNumber == 1)
+                {
+                    Main.npcChatText = Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.FirstTalk3");
+                    DownedSystem.metDapper = true;
+                }
+                if (chatNumber != 2)
+                {
+                    chatNumber++;
+                }
             }
             if (!firstButton)
             {

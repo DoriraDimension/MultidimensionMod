@@ -27,6 +27,7 @@ namespace MultidimensionMod.Items
         {
             DownedSystem.downedSmiley = false;
             DownedSystem.downedMonarch = false;
+            DownedSystem.downedFungus = false;
 
             if (Main.netMode == NetmodeID.Server)
                 NetMessage.SendData(MessageID.WorldData);

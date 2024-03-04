@@ -211,7 +211,6 @@ namespace MultidimensionMod.NPCs.TownNPCs
 							&& player.HasItem(ModContent.ItemType<Rainbow>())
 							&& player.ZoneGlowshroom
 						    && NPC.downedGolemBoss
-							&& player.GetModPlayer<MDPlayer>().MonarchHeart
 							&& !obtainedRealityShroom)
 						{
                             Item.NewItem(NPC.GetSource_Loot(), NPC.position, NPC.Size, ModContent.ItemType<RealityBendingShroom>(), 1);

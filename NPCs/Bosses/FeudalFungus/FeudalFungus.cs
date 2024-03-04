@@ -8,6 +8,7 @@ using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Placeables.Relics;
 using MultidimensionMod.Items.Placeables.Trophies;
+using MultidimensionMod.Common.Systems;
 using System;
 using System.IO;
 using Microsoft.Xna.Framework;
@@ -151,7 +152,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
         public override void BossLoot(ref string name, ref int potionType)
         {
             potionType = ItemID.LesserHealingPotion;
-            //DownedSystem.downedFungus = true;
+            DownedSystem.downedFungus = true;
             if (!Main.expertMode && Main.rand.NextBool(7))
             {
                 Item.NewItem(NPC.GetSource_Loot(), NPC.getRect(), ModContent.ItemType<FungusMask>());

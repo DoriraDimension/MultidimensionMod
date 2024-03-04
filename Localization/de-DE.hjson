@@ -3088,6 +3088,7 @@ Mods: {
 					An otherworldly mushroom that seems to distort space-time around it.
 					Just holding this in your hand makes you uncomfortable,
 					maybe you aren't worthy enough to bathe in its presence.
+					Deadly Dappercap might be interested in this.
 					''' */
 			}
 
@@ -3506,37 +3507,37 @@ Mods: {
 			}
 
 			CapBunnyItem: {
-				// DisplayName: Cap Bunny Item
+				// DisplayName: Capped Bunny
 				// Tooltip: ""
 			}
 
 			HovercapItem: {
-				// DisplayName: Hovercap Item
+				// DisplayName: Hovercap
 				// Tooltip: ""
 			}
 
 			MushbugBabyItem: {
-				// DisplayName: Mushbug Baby Item
+				// DisplayName: Myceli Larva
 				// Tooltip: ""
 			}
 
 			MushbugBanner: {
-				// DisplayName: Mushbug Banner
+				// DisplayName: Myceli Bug Banner
 				// Tooltip: ""
 			}
 
 			PufferBanner: {
-				// DisplayName: Puffer Banner
+				// DisplayName: Spore Puffer Banner
 				// Tooltip: ""
 			}
 
 			ShroomJellyBanner: {
-				// DisplayName: Shroom Jelly Banner
+				// DisplayName: Mushroom Jelly Banner
 				// Tooltip: ""
 			}
 
 			FungusTrophy: {
-				// DisplayName: Fungus Trophy
+				// DisplayName: Feudal Fungus Trophy
 				// Tooltip: ""
 			}
 		}
@@ -3914,7 +3915,7 @@ Mods: {
 				// GenericDialogue11: The best game design choice ever made was giving the desert furry a secret one-shot attack.
 				// GenericDialogue12: I hope I can fix everything somehow...
 				// GenericHardmodeDialogue1: Hey just between us two, if you happen to possess a sword made of fish, throw it into some weird liquid. ;)
-				// MushroomDialogue: I had a dream where you showed me all of these alchemy mushrooms in a glowing mushroom biome while shopping with me. I think you did that after defeating a weird stone construct powered by solar energy, OH and you were wearing some kind of mushy heart.
+				// MushroomDialogue: I had a dream where you showed me all of these alchemy mushrooms in a glowing mushroom biome while shopping with me. I think you did that after defeating a weird stone construct powered by solar energy.
 				#Below is help dialogue
 				// ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
 				// DimensiumHelp: You can find Dimensium by doing many different things. Killing, mining, fishing, and so much more.
@@ -3951,7 +3952,7 @@ Mods: {
 				// GenericDialogue4: Dem mushromz hit hart todai
 				// GenericDialogue6: Sometimes my dad was so annoying that I told him to finally go get some milk.
 				// GenericDialogue7: I heard there is a kingdom full of mushroom people, but it’s not ruled by a mushroom, do you think it’s real?
-				// GenericDialogue8: Yo, would be awesome if you were to meet my uncle. If you bring me like, 30 glowing mushrooms, I'm going to give you something that will definetily draw his attention.
+				// GenericDialogue8: Yo, would be awesome if you were to meet my uncle. If you bring me like, 5 of these Hovercaps, I'm going to give you something that will definetily draw his attention. Why I need those caps? Well I find it really funny to use them as a frisbee.
 				#Below is Alch Mushroom dialogue
 				// TradeSuccess1: Yo awesome, take these for your work.
 				// TradeSuccess2: Thanks, my other contact will really appreciate these!
@@ -4041,7 +4042,7 @@ Mods: {
 			// RedMushDresserPlaced.MapEntry: Red Mushroom Dresser
 			// RedMushPianoPlaced.MapEntry: Red Mushroom Piano
 			// RedMushSofaPlaced.MapEntry: Red Mushroom Sofa
-			// FungusTrophyPlaced.MapEntry: Fungus Trophy Placed
+			// FungusTrophyPlaced.MapEntry: Feudal Fungus Trophy
 		}
 
 		DeathMessages: {
@@ -4400,6 +4401,17 @@ Mods: {
 			}
 		}
 
-		// MiscText.MadnessStart: You feel your mind pierced...
+		MiscText: {
+			// MadnessStart: You feel your mind pierced...
+
+			Dappercap: {
+				// FirstTalk1: I am?
+				// FirstTalk2: Understood
+				// GiveReality: Give the weird mushroom
+				// GiveMadness: Give Madness Mushroom
+				// GiveHover: Give Hovercaps
+				// GiveRare: Give Rare Plant
+			}
+		}
 	}
 }

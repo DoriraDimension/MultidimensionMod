@@ -3915,7 +3915,7 @@ Mods: {
 				GenericDialogue11: The best game design choice ever made was giving the desert furry a secret one-shot attack.
 				GenericDialogue12: I hope I can fix everything somehow...
 				GenericHardmodeDialogue1: Hey just between us two, if you happen to possess a sword made of fish, throw it into some weird liquid. ;)
-				MushroomDialogue: I had a dream where you showed me all of these alchemy mushrooms in a glowing mushroom biome while shopping with me. I think you did that after defeating a weird stone construct powered by solar energy, OH and you were wearing some kind of mushy heart.
+				MushroomDialogue: I had a dream where you showed me all of these alchemy mushrooms in a glowing mushroom biome while shopping with me. I think you did that after defeating a weird stone construct powered by solar energy.
 				#Below is help dialogue
 				ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
 				DimensiumHelp: You can find Dimensium by doing many different things. Killing, mining, fishing, and so much more.
@@ -3964,6 +3964,7 @@ Mods: {
 				#Below is first time talk dialogue
 				FirstTalk1: I saw you gave my dad a good thrashing, so I guess you’re cool.
 				FirstTalk2: Yes bro, you don’t know how much I hate that guy, hope he went to cry in a corner. I’m Deadly Dappercap btw, the deadliest fungus in town, I love to get around and gather some really funky shrooms. Let’s say you bring me some valuable things and I'll give you some of them. But if anyone asks, they aren’t from me, understood?
+				FirstTalk3: Good to know. So you bring me rare fauna and I give you some pricey fungi, that or you buy them for a Dapper deluxe price.
 				#Below is box dialogue
 				Box: Ey, go away, you are going to reveal my location if you keep talking to me. I will not come out until I know its safe again.
 				#Below is reality shroom event dialogue
@@ -4401,6 +4402,17 @@ Mods: {
 			}
 		}
 
-		MiscText.MadnessStart: You feel your mind pierced...
+		MiscText: {
+			MadnessStart: You feel your mind pierced...
+
+			Dappercap: {
+				FirstTalk1: I am?
+				FirstTalk2: Understood
+				GiveReality: Give the weird mushroom
+				GiveMadness: Give Madness Mushroom
+				GiveHover: Give Hovercaps
+				GiveRare: Give Rare Plant
+			}
+		}
 	}
 }
