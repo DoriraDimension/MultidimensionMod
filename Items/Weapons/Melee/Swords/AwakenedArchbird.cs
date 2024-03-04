@@ -45,6 +45,14 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
+            if (Main.hardMode)
+            {
+                TooltipLine line = new(Mod, "Locked", Language.GetTextValue("Mods.MultidimensionMod.Items.AwakenedArchbird.Locked"))
+                {
+                    OverrideColor = Color.Red
+                };
+                tooltips.Add(line);
+            }
             if (Main.keyState.PressingShift())
             {
                 TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.AwakenedArchbird.Lore"))
@@ -70,6 +78,10 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
         public override bool CanUseItem(Player player)
         {
+            if (!Main.hardMode)
+            {
+                return false;
+            }
             if (player.altFunctionUse == 2)
             {
                 Item.shoot = ProjectileID.None;

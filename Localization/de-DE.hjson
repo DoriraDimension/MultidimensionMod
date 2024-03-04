@@ -1968,6 +1968,7 @@ Mods: {
 					anyone who refused was exiled as a heretic.
 					Outside of those ceremonies, this weapon was used by the cult leader for various dark rituals.
 					''' */
+				// Locked: The weapon seems to be hiding its power from the unworthy. Defeating a flesh prison might prove your worth
 			}
 
 			BurningSaber: {
@@ -3964,6 +3965,7 @@ Mods: {
 				#Below is first time talk dialogue
 				// FirstTalk1: I saw you gave my dad a good thrashing, so I guess you’re cool.
 				// FirstTalk2: Yes bro, you don’t know how much I hate that guy, hope he went to cry in a corner. I’m Deadly Dappercap btw, the deadliest fungus in town, I love to get around and gather some really funky shrooms. Let’s say you bring me some valuable things and I'll give you some of them. But if anyone asks, they aren’t from me, understood?
+				// FirstTalk3: Good to know. So you bring me rare fauna and I give you some pricey fungi, that or you buy them for a Dapper deluxe price.
 				#Below is box dialogue
 				// Box: Ey, go away, you are going to reveal my location if you keep talking to me. I will not come out until I know its safe again.
 				#Below is reality shroom event dialogue
