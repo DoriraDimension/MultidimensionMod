@@ -49,6 +49,19 @@ namespace MultidimensionMod.NPCs.MushBiomes
         public int RocketTimer = 0;
         public bool goRight = true;
 
+        public override void OnSpawn(IEntitySource source)
+        {
+            int choice = Main.rand.Next(2);
+            if (choice == 0)
+            {
+                goRight = true;
+            }
+            else if (choice == 1)
+            {
+                goRight = false;
+            }
+        }
+
         public override void AI()
         {
             if (RocketTimer < 30)

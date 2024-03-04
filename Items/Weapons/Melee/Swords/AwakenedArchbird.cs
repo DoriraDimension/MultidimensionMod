@@ -45,7 +45,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            if (Main.hardMode)
+            if (!Main.hardMode)
             {
                 TooltipLine line = new(Mod, "Locked", Language.GetTextValue("Mods.MultidimensionMod.Items.AwakenedArchbird.Locked"))
                 {

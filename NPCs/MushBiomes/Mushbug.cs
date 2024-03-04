@@ -49,7 +49,6 @@ namespace MultidimensionMod.NPCs.MushBiomes
         public override void AI()
         {
             NPC.TargetClosest(true);
-            NPC.velocity.X = NPC.ai[1] * NPC.spriteDirection;
             Player target = Main.player[NPC.target];
             float distanceToPlayer = Vector2.Distance(target.Center, NPC.Center);
             if (distanceToPlayer > 100) //Only move if this distance away from the player
@@ -108,11 +107,19 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     NPC.netUpdate = true;
                 }
             }
-            else if (NPC.life > NPC.lifeMax) //Don't move if close enough
+            else if (distanceToPlayer < 100 && NPC.life >= NPC.lifeMax) //Don't move if close enough and at full health
             {
                 NPC.velocity.X = 0;
+                if (target.Center.X > NPC.Center.X)
+                {
+                    NPC.spriteDirection = -1;
+                }
+                else
+                {
+                    NPC.spriteDirection = 1;
+                }
             }
-            if (Main.rand.NextBool(400))
+            if (Main.rand.NextBool(600))
             {
                 SoundEngine.PlaySound(SoundID.Zombie77, NPC.position);
             }

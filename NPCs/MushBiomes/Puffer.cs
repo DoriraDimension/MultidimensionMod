@@ -28,7 +28,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.height = 52;
             NPC.aiStyle = -1;
             NPC.damage = 0;
-            NPC.defense = 300;
+            NPC.defense = 1000;
             NPC.lifeMax = 250;
             NPC.HitSound = SoundID.NPCHit10;
             NPC.DeathSound = SoundID.NPCDeath5;
@@ -187,7 +187,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     if (NPC.spriteDirection == 1)
                     {
                         NPC.velocity.X = 4f;
-                        if (BaseAI.HitTileOnSide(NPC, 1))
+                        if (BaseAI.HitTileOnSide(NPC, 1, true))
                         {
                             NPC.spriteDirection = -1;
                         }
@@ -195,7 +195,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     else if (NPC.spriteDirection == -1)
                     {
                         NPC.velocity.X = -4f;
-                        if (BaseAI.HitTileOnSide(NPC, 0))
+                        if (BaseAI.HitTileOnSide(NPC, 0, true))
                         {
                             NPC.spriteDirection = 1;
                         }
@@ -226,6 +226,13 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     }
                     break;
             }
+            if (NPC.life <= 1)
+            {
+                NPC.life = 1;
+                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<PufferFart>(), 0, 0);
+                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/NPC/BigFart"), NPC.position);
+                NPC.active = false;
+            }
         }
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
@@ -242,8 +249,6 @@ namespace MultidimensionMod.NPCs.MushBiomes
                 Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, dust1, 0f, 0f, 0);
                 Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, dust1, 0f, 0f, 0);
                 Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, dust1, 0f, 0f, 0);
-                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MyceliBugGore1").Type, 1);
-                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MyceliBugGore2").Type, 1);
             }
         }
     }
