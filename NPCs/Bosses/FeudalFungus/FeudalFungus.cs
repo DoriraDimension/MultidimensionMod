@@ -7,6 +7,7 @@ using MultidimensionMod.Items.Weapons.Summon;
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Placeables.Relics;
+using MultidimensionMod.Items.Placeables.Trophies;
 using System;
 using System.IO;
 using Microsoft.Xna.Framework;
@@ -15,13 +16,9 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.ItemDropRules;
-using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
 using System.Collections.Generic;
 using Terraria.GameContent;
-using MultidimensionMod.Common.Players;
-using MultidimensionMod.Projectiles.Melee.Swords;
 using Terraria.Audio;
-using MultidimensionMod.Projectiles;
 using Terraria.GameContent.Bestiary;
 using Terraria.Localization;
 
@@ -168,7 +165,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<GlowshroomSoul>()));
             NPCloot.Add(ItemDropRule.BossBag(ModContent.ItemType<FungusBag>()));
             NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<FungusRelic>()));
-            //NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<FungusTrophy>(), 10));
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<FungusTrophy>(), 10));
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusGlowsporeBag>(), 10));
             int choice = Main.rand.Next(2);
             if (choice == 0)
