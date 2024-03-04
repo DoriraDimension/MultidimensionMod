@@ -1,5 +1,6 @@
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Base;
+using MultidimensionMod.Items.Placeables.Banners;
 using System;
 using Terraria;
 using Terraria.ID;
@@ -32,7 +33,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.value = 1000f;
             NPC.buffImmune[31] = false;
             Banner = NPC.type;
-            //BannerItem = ModContent.ItemType<MushBugBanner>();
+            BannerItem = ModContent.ItemType<MushbugBanner>();
             SpawnModBiomes = new int[1] { ModContent.GetInstance<ShroomForest>().Type };
         }
 

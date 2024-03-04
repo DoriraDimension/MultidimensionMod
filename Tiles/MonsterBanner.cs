@@ -106,6 +106,15 @@ namespace MultidimensionMod.Tiles
 					case 18:
 						type = ModContent.NPCType<TruffleToad>();
 						break;
+                    case 19:
+                        type = ModContent.NPCType<Mushbug>();
+                        break;
+                    case 20:
+                        type = ModContent.NPCType<ShroomJelly>();
+                        break;
+                    case 21:
+                        type = ModContent.NPCType<Puffer>();
+                        break;
                     default:
 						return;
 				}

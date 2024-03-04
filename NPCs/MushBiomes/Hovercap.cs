@@ -33,8 +33,6 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.knockBackResist = 0.8f;
             NPC.value = 1000f;
-            //Banner = NPC.type;
-            //BannerItem = ModContent.ItemType<ShroomJellyBanner>();
             SpawnModBiomes = new int[1] { ModContent.GetInstance<ShroomForest>().Type };
         }
 
