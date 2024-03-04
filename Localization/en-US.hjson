@@ -3088,6 +3088,7 @@ Mods: {
 					An otherworldly mushroom that seems to distort space-time around it.
 					Just holding this in your hand makes you uncomfortable,
 					maybe you aren't worthy enough to bathe in its presence.
+					Deadly Dappercap might be interested in this.
 					'''
 			}
 
@@ -3504,6 +3505,41 @@ Mods: {
 				DisplayName: Red Mushroom Work Bench
 				Tooltip: ""
 			}
+
+			CapBunnyItem: {
+				DisplayName: Capped Bunny
+				Tooltip: ""
+			}
+
+			HovercapItem: {
+				DisplayName: Hovercap
+				Tooltip: ""
+			}
+
+			MushbugBabyItem: {
+				DisplayName: Myceli Larva
+				Tooltip: ""
+			}
+
+			MushbugBanner: {
+				DisplayName: Myceli Bug Banner
+				Tooltip: ""
+			}
+
+			PufferBanner: {
+				DisplayName: Spore Puffer Banner
+				Tooltip: ""
+			}
+
+			ShroomJellyBanner: {
+				DisplayName: Mushroom Jelly Banner
+				Tooltip: ""
+			}
+
+			FungusTrophy: {
+				DisplayName: Feudal Fungus Trophy
+				Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -3916,7 +3952,7 @@ Mods: {
 				GenericDialogue4: Dem mushromz hit hart todai
 				GenericDialogue6: Sometimes my dad was so annoying that I told him to finally go get some milk.
 				GenericDialogue7: I heard there is a kingdom full of mushroom people, but it’s not ruled by a mushroom, do you think it’s real?
-				GenericDialogue8: Yo, would be awesome if you were to meet my uncle. If you bring me like, 30 glowing mushrooms, I'm going to give you something that will definetily draw his attention.
+				GenericDialogue8: Yo, would be awesome if you were to meet my uncle. If you bring me like, 5 of these Hovercaps, I'm going to give you something that will definetily draw his attention. Why I need those caps? Well I find it really funny to use them as a frisbee.
 				#Below is Alch Mushroom dialogue
 				TradeSuccess1: Yo awesome, take these for your work.
 				TradeSuccess2: Thanks, my other contact will really appreciate these!
@@ -4006,6 +4042,7 @@ Mods: {
 			RedMushDresserPlaced.MapEntry: Red Mushroom Dresser
 			RedMushPianoPlaced.MapEntry: Red Mushroom Piano
 			RedMushSofaPlaced.MapEntry: Red Mushroom Sofa
+			FungusTrophyPlaced.MapEntry: Feudal Fungus Trophy
 		}
 
 		DeathMessages: {

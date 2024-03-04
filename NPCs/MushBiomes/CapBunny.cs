@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
 using Terraria.GameContent.Bestiary;
+using MultidimensionMod.Items.Critters;
 
 namespace MultidimensionMod.NPCs.MushBiomes
 {
@@ -33,6 +34,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.dontTakeDamageFromHostiles = false;
             Banner = NPC.type;
             BannerItem = ItemID.BunnyBanner;
+            NPC.catchItem = (short)ModContent.ItemType<CapBunnyItem>();
             SpawnModBiomes = new int[1] { ModContent.GetInstance<ShroomForest>().Type };
         }
 

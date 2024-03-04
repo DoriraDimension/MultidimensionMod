@@ -32,7 +32,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.knockBackResist = 0.5f;
             NPC.aiStyle = NPCAIStyleID.Snail;
             AIType = NPCID.Snail;
-            //NPC.catchItem = (short)ModContent.ItemType<MyceliLarvaItem>();
+            NPC.catchItem = (short)ModContent.ItemType<MushbugBabyItem>();
             SpawnModBiomes = new int[1] { ModContent.GetInstance<ShroomForest>().Type };
         }
 

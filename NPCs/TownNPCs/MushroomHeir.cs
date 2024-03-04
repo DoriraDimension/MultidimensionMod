@@ -2,7 +2,7 @@
 using MultidimensionMod.Items.Placeables;
 using MultidimensionMod.Items.Pets;
 using MultidimensionMod.Items.Summons;
-using MultidimensionMod.Items.Accessories;
+using MultidimensionMod.Items.Critters;
 using MultidimensionMod.Items.Weapons.Melee.Others;
 using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
 using MultidimensionMod.Items.Mushrooms;
@@ -206,7 +206,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
         public override void SetChatButtons(ref string button, ref string button2)
         {
             Player player = Main.LocalPlayer;
-            int glow = player.FindItem(ItemID.GlowingMushroom);
+            int frisbee = player.FindItem(ModContent.ItemType<HovercapItem>());
             int madness = player.FindItem(ModContent.ItemType<MadnessShroom>());
             int reality = player.FindItem(ModContent.ItemType<RealityBendingShroom>());
             string talk1 = "I am?";
@@ -220,7 +220,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
             {
                 button2 = "Give Madness Mushroom";
             }
-            else if (glow >= 30)
+            else if (frisbee >= 30)
             {
                 button2 = "Give Glowing Mushrooms";
             }

@@ -3,6 +3,7 @@ using Terraria;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Base;
 using MultidimensionMod.Items.Placeables.Banners;
+using MultidimensionMod.Tiles.Biomes.ShroomForest;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
@@ -229,11 +230,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome(ModContent.GetInstance<ShroomForest>()))
-            {
-                return 0.05f;
-            }
-            return base.SpawnChance(spawnInfo);
+            return Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<Mycelium>() && spawnInfo.Player.InModBiome(ModContent.GetInstance<ShroomForest>()) ? 0.05f : 0f;
         }
 
         public override void HitEffect(NPC.HitInfo hit)

@@ -9,6 +9,7 @@ using Terraria.ModLoader;
 using Terraria.GameContent.Bestiary;
 using Terraria.Audio;
 using MultidimensionMod.Base;
+using MultidimensionMod.Items.Critters;
 
 namespace MultidimensionMod.NPCs.MushBiomes
 {
@@ -33,6 +34,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.knockBackResist = 0.8f;
             NPC.value = 1000f;
+            NPC.catchItem = (short)ModContent.ItemType<HovercapItem>();
             SpawnModBiomes = new int[1] { ModContent.GetInstance<ShroomForest>().Type };
         }
 

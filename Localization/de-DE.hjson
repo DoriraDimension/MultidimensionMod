@@ -3504,6 +3504,41 @@ Mods: {
 				// DisplayName: Red Mushroom Work Bench
 				// Tooltip: ""
 			}
+
+			CapBunnyItem: {
+				// DisplayName: Cap Bunny Item
+				// Tooltip: ""
+			}
+
+			HovercapItem: {
+				// DisplayName: Hovercap Item
+				// Tooltip: ""
+			}
+
+			MushbugBabyItem: {
+				// DisplayName: Mushbug Baby Item
+				// Tooltip: ""
+			}
+
+			MushbugBanner: {
+				// DisplayName: Mushbug Banner
+				// Tooltip: ""
+			}
+
+			PufferBanner: {
+				// DisplayName: Puffer Banner
+				// Tooltip: ""
+			}
+
+			ShroomJellyBanner: {
+				// DisplayName: Shroom Jelly Banner
+				// Tooltip: ""
+			}
+
+			FungusTrophy: {
+				// DisplayName: Fungus Trophy
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -4006,6 +4041,7 @@ Mods: {
 			// RedMushDresserPlaced.MapEntry: Red Mushroom Dresser
 			// RedMushPianoPlaced.MapEntry: Red Mushroom Piano
 			// RedMushSofaPlaced.MapEntry: Red Mushroom Sofa
+			// FungusTrophyPlaced.MapEntry: Fungus Trophy Placed
 		}
 
 		DeathMessages: {
