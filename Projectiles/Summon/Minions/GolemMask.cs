@@ -113,7 +113,11 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 				if (ballTimer == 150)
 				{
 					SoundEngine.PlaySound(SoundID.Item34, player.position);
-					Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, direction * 6, ModContent.ProjectileType<GolemFireball>(), Projectile.damage, 3, player.whoAmI);
+					if (Projectile.owner == Main.myPlayer)
+					{
+						Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, direction * 6, ModContent.ProjectileType<GolemFireball>(), Projectile.damage, 3, player.whoAmI);
+					}
+					Projectile.netUpdate = true;
 
 				}
 				if (ballTimer == 250)
@@ -124,8 +128,11 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 				{
 					laserTimer = 0;
 					SoundEngine.PlaySound(SoundID.Item33 with { Volume = 0.4f }, player.position);
-					Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, direction * 10, ModContent.ProjectileType<GolemLaser>(), Projectile.damage, 3, player.whoAmI);
-
+					if (Projectile.owner == Main.myPlayer)
+					{
+						Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, direction * 10, ModContent.ProjectileType<GolemLaser>(), Projectile.damage, 3, player.whoAmI);
+					}
+					Projectile.netUpdate = true;
 				}
 			}
 		}

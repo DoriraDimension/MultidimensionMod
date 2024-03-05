@@ -37,6 +37,7 @@ namespace MultidimensionMod.Projectiles.Melee.Boomerangs
                 Collision.HitTiles(Projectile.position, Projectile.velocity, Projectile.width, Projectile.height);
                 SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
             }
+            Projectile.netUpdate = true;
             BaseAI.TileCollideBoomerang(Projectile, ref value2, true);
             return false;
         }

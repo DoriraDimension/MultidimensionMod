@@ -233,8 +233,11 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 					Vector2 vector2 = vector - Projectile.Center;
 					vector2.Normalize();
 					vector2 *= num17;
-					int laser = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y, type, Projectile.damage + 40, 0f, Main.myPlayer);
-					Main.projectile[laser].timeLeft = 300;
+					if (Projectile.owner == Main.myPlayer)
+					{
+						int laser = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y, type, Projectile.damage + 40, 0f, Main.myPlayer);
+						Main.projectile[laser].timeLeft = 300;
+					}
 					Projectile.netUpdate = true;
 				}
 			}

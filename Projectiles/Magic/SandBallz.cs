@@ -60,6 +60,7 @@ namespace MultidimensionMod.Projectiles.Magic
 					Projectile.velocity.Y = -oldVelocity.Y;
 				}
 			}
+			Projectile.netUpdate = true;
 			return false;
 		}
 	}

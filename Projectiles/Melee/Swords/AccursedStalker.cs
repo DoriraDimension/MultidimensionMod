@@ -58,6 +58,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
                         distanceFromTarget = between;
                         targetCenter = npc.Center;
                         foundTarget = true;
+                        Projectile.netUpdate = true;
                     }
                 }
                 if (!foundTarget)
@@ -77,6 +78,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
                                 distanceFromTarget = between;
                                 targetCenter = npc.Center;
                                 foundTarget = true;
+                                Projectile.netUpdate = true;
                             }
                         }
                     }

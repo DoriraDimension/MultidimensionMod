@@ -42,6 +42,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Player player = Main.player[Projectile.owner];
 			Projectile.position = player.Center;
 			Projectile.damage *= (int)1.5;
+			Projectile.netUpdate = true;
 		}
 
 		public override void OnKill(int timeLeft)

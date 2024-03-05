@@ -54,8 +54,12 @@ namespace MultdimensionMod.Projectiles.Magic
                 {
                     if (blastReady)
                     {
-                        SoundEngine.PlaySound(SoundID.Item20, Projectile.position);
-                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), focktor.X, focktor.Y, 16, 16, ModContent.ProjectileType<Lophiiformes>(), Projectile.damage, 1f, player.whoAmI);
+                        if (Projectile.owner == Main.myPlayer)
+                        {
+                            SoundEngine.PlaySound(SoundID.Item20, Projectile.position);
+                            Projectile.NewProjectile(Projectile.GetSource_FromThis(), focktor.X, focktor.Y, 16, 16, ModContent.ProjectileType<Lophiiformes>(), Projectile.damage, 1f, player.whoAmI);
+                            Projectile.netUpdate = true;
+                        }
                     }
                 }
             }

@@ -65,7 +65,10 @@ namespace MultidimensionMod.Projectiles.Ranged
         public override void OnKill(int timeleft)
         {
             SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
-            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X, Projectile.velocity.Y, ModContent.ProjectileType<VulcanExplosion>(), Projectile.damage, Projectile.knockBack, Projectile.owner, 0f, 0f);
+            if (Projectile.owner == Main.myPlayer)
+            {
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X, Projectile.velocity.Y, ModContent.ProjectileType<VulcanExplosion>(), Projectile.damage, Projectile.knockBack, Projectile.owner, 0f, 0f);
+            }
             int DustType = DustID.Torch;
             for (int num583 = 0; num583 < 20; num583++)
             {

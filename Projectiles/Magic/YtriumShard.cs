@@ -45,7 +45,10 @@ namespace MultidimensionMod.Projectiles.Magic
             for (int i = 0; i < 2; i++)
             {
                 Vector2 perturbedSpeed = new Vector2(Projectile.velocity.X, Projectile.velocity.Y).RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (2 - 1))) * 1.2f;
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, perturbedSpeed.X, perturbedSpeed.Y, ProjectileID.TopazBolt, (int)((double)(float)Projectile.damage * 0.3f), 5, player.whoAmI);
+                if (Projectile.owner == Main.myPlayer)
+                {
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, perturbedSpeed.X, perturbedSpeed.Y, ProjectileID.TopazBolt, (int)((double)(float)Projectile.damage * 0.3f), 5, player.whoAmI);
+                }
             }
         }
     }

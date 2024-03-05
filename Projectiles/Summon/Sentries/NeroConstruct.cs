@@ -94,8 +94,11 @@ namespace MultidimensionMod.Projectiles.Summon.Sentries
 				{
 					shootTimer = 0;
 					SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/LauncherShot"), Projectile.position);
-					Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, direction * 12, ModContent.ProjectileType<NeroMissile>(), 75, 3, player.whoAmI);
-
+					if (Projectile.owner == Main.myPlayer)
+					{
+						Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, direction * 12, ModContent.ProjectileType<NeroMissile>(), 75, 3, player.whoAmI);
+					}
+					Projectile.netUpdate = true;
 				}
 			}
 		}

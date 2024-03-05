@@ -42,7 +42,10 @@ namespace MultidimensionMod.Projectiles.Ranged
 			}
 			else
 				SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/FireExplosion"), Projectile.position);
-			Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<CompletelyOutOfPlaceExplosionGif>(), (int)((double)((float)Projectile.damage) * 0.5), 0f, Main.myPlayer);
+			if (Projectile.owner == Main.myPlayer)
+			{
+				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<CompletelyOutOfPlaceExplosionGif>(), (int)((double)((float)Projectile.damage) * 0.5), 0f, Main.myPlayer);
+			}
 		}
 
         public override bool PreDraw(ref Color lightColor)

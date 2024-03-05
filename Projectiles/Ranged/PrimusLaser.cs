@@ -40,7 +40,11 @@ namespace MultidimensionMod.Projectiles.Ranged
 			if (LaserCounter >= 50)
             {
 				SoundEngine.PlaySound(SoundID.Item33 with { Volume = 0.4f }, Projectile.position);
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y + 0f, Projectile.velocity.X, Projectile.velocity.Y, ModContent.ProjectileType<DestroyerDualLaser>(), (int)((double)((float)Projectile.damage) * 0.5), 0f, Main.myPlayer);
+				if (Projectile.owner == Main.myPlayer)
+				{
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y + 0f, Projectile.velocity.X, Projectile.velocity.Y, ModContent.ProjectileType<DestroyerDualLaser>(), (int)((double)((float)Projectile.damage) * 0.5), 0f, Main.myPlayer);
+					Projectile.netUpdate = true;
+				}
 				LaserCounter = 0;
 			}
 

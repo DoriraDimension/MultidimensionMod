@@ -47,7 +47,11 @@ namespace MultidimensionMod.Projectiles.Ranged
 				Projectile.friendly = false;
 				if (Child == 20)
 				{
-					Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, eruptionVelocityX, eruptionVelocityY, ModContent.ProjectileType<CursedBlastJr>(), (int)((double)((float)Projectile.damage) * 0.4), 0, Projectile.owner);
+					if (Projectile.owner == Main.myPlayer)
+					{
+						Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, eruptionVelocityX, eruptionVelocityY, ModContent.ProjectileType<CursedBlastJr>(), (int)((double)((float)Projectile.damage) * 0.4), 0, Projectile.owner);
+						Projectile.netUpdate = true;
+					}
 					Child = 0;
 				}
 				if (Projectile.localAI[0] == 240f)
@@ -60,6 +64,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
 			Eruption = true;
+			Projectile.netUpdate = true;
 		}
 
         public override bool PreDraw(ref Color lightColor)

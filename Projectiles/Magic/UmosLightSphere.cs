@@ -53,9 +53,12 @@ namespace MultidimensionMod.Projectiles.Magic
             }
             else if (Freeze >= 140)
             {
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Main.MouseWorld.X, Main.MouseWorld.Y, 0f, 0f, ModContent.ProjectileType<LightSphereMouse>(), Projectile.damage, 0, player.whoAmI);
-                Freeze = 140;
-                Projectile.Kill();
+                if (Projectile.owner == Main.myPlayer)
+                {
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Main.MouseWorld.X, Main.MouseWorld.Y, 0f, 0f, ModContent.ProjectileType<LightSphereMouse>(), Projectile.damage, 0, player.whoAmI);
+                    Freeze = 140;
+                    Projectile.Kill();
+                }
             }
             if (!player.channel || player.statMana <= 0)
             {
@@ -117,10 +120,14 @@ namespace MultidimensionMod.Projectiles.Magic
             if (Projectile.localAI[0] > 55 && distanceToPlayer >= 50)
             {
                 player.statMana -= 25;
+                Projectile.netUpdate = true;
                 for (int i = 0; i < 8; i++)
                 {
                     Vector2 perturbedSpeed = new Vector2(player.velocity.X / 2, -20).RotatedByRandom(MathHelper.ToRadians(60));
-                    Projectile.NewProjectile(player.GetSource_FromThis(), Main.MouseWorld, perturbedSpeed, ModContent.ProjectileType<PureRadianceShotFriendly>(), Projectile.damage, 0);
+                    if (Projectile.owner == Main.myPlayer)
+                    {
+                        Projectile.NewProjectile(player.GetSource_FromThis(), Main.MouseWorld, perturbedSpeed, ModContent.ProjectileType<PureRadianceShotFriendly>(), Projectile.damage, 0);
+                    }
                     SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RadianceShot"), player.position);
                 }
                 Projectile.localAI[0] = 0;

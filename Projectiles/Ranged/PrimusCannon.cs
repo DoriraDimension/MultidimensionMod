@@ -51,7 +51,10 @@ namespace MultidimensionMod.Projectiles.Ranged
 			SoundEngine.PlaySound(SoundID.NPCDeath14, Projectile.position);
 			int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Torch, 0f, 0f, 6, default(Color), 2f);
 			Main.dust[dustIndex].velocity *= 1.4f;
-			Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<PrimusCannonball>(), (int)((double)((float)Projectile.damage) * 1.3), 0f, Main.myPlayer);
+			if (Projectile.owner == Main.myPlayer)
+			{
+				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<PrimusCannonball>(), (int)((double)((float)Projectile.damage) * 1.3), 0f, Main.myPlayer);
+			}
 		}
 
         public override bool PreDraw(ref Color lightColor)

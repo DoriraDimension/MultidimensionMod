@@ -98,7 +98,10 @@ namespace MultidimensionMod.Projectiles.Magic
                             vector12 = -Vector2.UnitY;
 
                         int num29 = Projectile.damage;
-                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), center3.X, center3.Y, vector12.X, vector12.Y, ModContent.ProjectileType<EtheralBeam>(), num29, Projectile.knockBack, Projectile.owner, 0, Projectile.whoAmI);
+                        if (Projectile.owner == Main.myPlayer)
+                        {
+                            Projectile.NewProjectile(Projectile.GetSource_FromThis(), center3.X, center3.Y, vector12.X, vector12.Y, ModContent.ProjectileType<EtheralBeam>(), num29, Projectile.knockBack, Projectile.owner, 0, Projectile.whoAmI);
+                        }
                         Projectile.netUpdate = true;
                     }
                 }

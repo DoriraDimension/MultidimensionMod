@@ -60,11 +60,12 @@ namespace MultidimensionMod.Projectiles.Pets
 			if (Projectile.velocity.X > -0.1)
 			{
 				Projectile.spriteDirection = -1;
-
+				Projectile.netUpdate = true;
 			}
 			else if (Projectile.velocity.X < 0.1)
 			{
 				Projectile.spriteDirection = 1;
+				Projectile.netUpdate = true;
 			}
 
 			Vector2 idlePosition = player.Center;

@@ -69,7 +69,8 @@ namespace MultidimensionMod.Projectiles.Magic
 					Projectile.velocity.Y = -oldVelocity.Y;
 				}
 			}
-			return false;
+            Projectile.netUpdate = true;
+            return false;
 		}
 
 		public override void OnKill(int timeLeft)

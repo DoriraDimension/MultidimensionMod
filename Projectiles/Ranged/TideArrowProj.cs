@@ -49,7 +49,10 @@ namespace MultidimensionMod.Projectiles.Ranged
 				Vector2 value = new Vector2(Main.rand.Next(-100, 101), Main.rand.Next(-100, 101));
 				value.Normalize();
 				value *= (float)Main.rand.Next(10, 201) * 0.01f;
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, value.X, value.Y, ModContent.ProjectileType<TidalBubble>(), (int)((double)Projectile.damage * 0.2), 1f, Projectile.owner, 0f, 1f);
+				if (Projectile.owner == Main.myPlayer)
+				{
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, value.X, value.Y, ModContent.ProjectileType<TidalBubble>(), (int)((double)Projectile.damage * 0.2), 1f, Projectile.owner, 0f, 1f);
+				}
 			}
 		}
 	}
