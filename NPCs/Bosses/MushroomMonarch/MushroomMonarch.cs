@@ -185,6 +185,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                 {
                     AIState = ActionState.FuckYou;
                     FuckYouPatience = 0;
+                    NPC.netUpdate = true;
                 }
             }
             else
@@ -208,7 +209,8 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
 
                 if (player.dead || !player.active || Vector2.Distance(player.Center, NPC.Center) > 5000)
                 {
-                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<MonarchRUNAWAYPlayerKill>(), 0, 0);
+                    if (Main.netMode != NetmodeID.MultiplayerClient)
+                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<MonarchRUNAWAYPlayerKill>(), 0, 0);
                     NPC.active = false;
                     return;
                 }
@@ -217,7 +219,9 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             if (ShittingMyself == 300)
             {
                 ShittingMyself = 0;
-                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<FakeMonarchMushroom>(), 0, 0);
+                if (Main.netMode != NetmodeID.MultiplayerClient)
+                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<FakeMonarchMushroom>(), 0, 0);
+                NPC.netUpdate = true;
             }
 
             int FrameSpeed = 10;
@@ -234,6 +238,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     if (!BaseAI.HitTileOnSide(NPC, 3))
                     {
                         NPC.frame.Y = 648;
+                        NPC.netUpdate = true;
                     }
                     else if (NPC.frameCounter >= FrameSpeed)
                     {
@@ -250,6 +255,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                         AISwitch = 0;
                         Attacks();
                         AIState = ActionState.Attack;
+                        NPC.netUpdate = true;
                     }
                     break;
                 case ActionState.Attack:
@@ -265,10 +271,14 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                                 SummonTimer++;
                                 if (SummonTimer == 50)
                                 {
-                                    int Minion = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X + 25, (int)NPC.Center.Y + 20, ModContent.NPCType<RedMushling>(), 0);
-                                    int Minion2 = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X - 25, (int)NPC.Center.Y + 20, ModContent.NPCType<RedMushling>(), 0);
-                                    Main.npc[Minion].netUpdate = true;
-                                    Main.npc[Minion2].netUpdate = true;
+                                    if (Main.netMode != NetmodeID.MultiplayerClient)
+                                    {
+                                        int Minion = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X + 25, (int)NPC.Center.Y + 20, ModContent.NPCType<RedMushling>(), 0);
+                                        int Minion2 = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X - 25, (int)NPC.Center.Y + 20, ModContent.NPCType<RedMushling>(), 0);
+                                        Main.npc[Minion].netUpdate = true;
+                                        Main.npc[Minion2].netUpdate = true;
+                                    }
+                                    NPC.netUpdate = true;
                                 }
                                 if (SummonTimer >= 50)
                                 {
@@ -296,6 +306,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                             if (!BaseAI.HitTileOnSide(NPC, 3))
                             {
                                 NPC.frame.Y = 648;
+                                NPC.netUpdate = true;
                             }
                             else if (NPC.frameCounter >= FrameSpeed)
                             {
@@ -358,6 +369,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                         AIState = ActionState.Walk;
                         NPC.noTileCollide = false;
                         NPC.noGravity = false;
+                        NPC.netUpdate = true;
                     }
                     break;
                 case ActionState.FuckYou:
@@ -372,18 +384,22 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     if (AreYouSerious == 240)
                     {
                         AreYouSerious = 0;
-                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<MonarchRUNAWAYPlayerKill>(), 0, 0);
+                        if (Main.netMode != NetmodeID.MultiplayerClient)
+                            Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<MonarchRUNAWAYPlayerKill>(), 0, 0);
                         NPC.active = false;
+                        NPC.netUpdate = true;
                     }
                     else if (AreYouSerious == 240 && Main.getGoodWorld)
                     {
                         AreYouSerious = 0;
                         player.KillMe(PlayerDeathReason.ByCustomReason(player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.AntiCheese")), 1000.0, 0);
+                        NPC.netUpdate = true;
                     }
                     else if (Collision.CanHit(NPC.position, NPC.width, NPC.height, Main.player[NPC.target].position, Main.player[NPC.target].width, Main.player[NPC.target].height) && internalAI[3] < 180)
                     {
                         AIState = ActionState.Attack;
                         AreYouSerious = 0;
+                        NPC.netUpdate = true;
                     }
                     break;
             }
@@ -391,6 +407,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             if ((player.Center.Y - NPC.Center.Y) < -200f)
             {
                 AIState = ActionState.Fly;
+                NPC.netUpdate = true;
             }
         }
 
@@ -410,6 +427,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                 {
                     NPC.velocity.X = 0f - maxVel;
                 }
+                NPC.netUpdate = true;
             }
             if (NPC.Center.X < target.Center.X)
             {
@@ -422,6 +440,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                 {
                     NPC.velocity.X = maxVel;
                 }
+                NPC.netUpdate = true;
             }
             BaseAI.WalkupHalfBricks(NPC);
             if (Math.Abs(NPC.velocity.X) == NPC.ai[1])
@@ -433,6 +452,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     Vector2 newVec = BaseAI.AttemptJump(NPC.position, NPC.velocity, NPC.width, NPC.height, NPC  .direction, NPC.directionY, 6, 10, 4, true);
                     if (NPC.velocity != newVec) { NPC.velocity = newVec; NPC.netUpdate = true; }
                 }
+                NPC.netUpdate = true;
             }
         }
 
@@ -452,6 +472,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                 {
                     NPC.velocity.X = 0f - maxVel;
                 }
+                NPC.netUpdate = true;
             }
             if (NPC.Center.X < target.Center.X)
             {
@@ -464,6 +485,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                 {
                     NPC.velocity.X = maxVel;
                 }
+                NPC.netUpdate = true;
             }
             BaseAI.WalkupHalfBricks(NPC);
             if (Math.Abs(NPC.velocity.X) == NPC.ai[1])
@@ -475,6 +497,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     Vector2 newVec = BaseAI.AttemptJump(NPC.position, NPC.velocity, NPC.width, NPC.height, NPC.direction, NPC.directionY, 12, 14, 6, true);
                     if (NPC.velocity != newVec) { NPC.velocity = newVec; NPC.netUpdate = true; }
                 }
+                NPC.netUpdate = true;
             }
         }
 
@@ -487,6 +510,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             {
                 BuildUp++;
                 NPC.velocity.X = x;
+                NPC.netUpdate = true;
             }
             Player target = Main.player[NPC.target];
             if (BuildUp == 10)
@@ -499,10 +523,13 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                         x *= -1;
                     NPC.velocity.X += x;
                     NPC.velocity.Y = -Main.rand.NextFloat(10f, 13f);
+                    NPC.netUpdate = true;
                 }
                 if (NPC.velocity.Y == 0 && !BaseAI.HitTileOnSide(NPC, 3))
                 {
-                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<FakeMonarchMushroom>(), 0, 0);
+                    if (Main.netMode != NetmodeID.MultiplayerClient)
+                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<FakeMonarchMushroom>(), 0, 0);
+                    NPC.netUpdate = true;
                 }
             }
         }

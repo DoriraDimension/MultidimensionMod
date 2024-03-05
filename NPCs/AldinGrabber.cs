@@ -48,7 +48,8 @@ namespace MultidimensionMod.NPCs
             AldinTimer++;
             if (AldinTimer >= 300)
             {
-                NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, (int)NPC.Center.Y + 40, ModContent.NPCType<AldinGrabberEscape>());
+                if (Main.netMode != NetmodeID.MultiplayerClient)
+                    NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, (int)NPC.Center.Y + 40, ModContent.NPCType<AldinGrabberEscape>());
                 NPC.active = false;
             }
         }

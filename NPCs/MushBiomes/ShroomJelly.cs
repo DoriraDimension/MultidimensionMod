@@ -70,6 +70,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             {
                 JellyTimer++;
                 NPC.velocity.Y = -1.5f;
+                NPC.netUpdate = true;
             }
             else if (JellyTimer >= 30)
             {

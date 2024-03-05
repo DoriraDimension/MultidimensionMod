@@ -84,6 +84,7 @@ namespace MultidimensionMod.NPCs.Madness
                             Main.dust[dustID].noGravity = true;
                         }
                     }
+                    NPC.netUpdate = true;
                 }
                 if (AmbushTimer == 160)
                 {
@@ -101,6 +102,7 @@ namespace MultidimensionMod.NPCs.Madness
                             Main.dust[dustID].noGravity = true;
                         }
                     }
+                    NPC.netUpdate = true;
                 }
                 if (AmbushTimer == 200)
                 {
@@ -118,6 +120,7 @@ namespace MultidimensionMod.NPCs.Madness
                             Main.dust[dustID].noGravity = true;
                         }
                     }
+                    NPC.netUpdate = true;
                     AmbushTimer = 0;
                 }
                 AmbushTimer++;

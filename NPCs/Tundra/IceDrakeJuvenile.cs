@@ -70,6 +70,7 @@ namespace MultidimensionMod.NPCs.Tundra
 				NPC.height = 56;
 				NPC.friendly = false;
 				NPC.knockBackResist = 0.6f;
+				NPC.netUpdate = true;
 				Vector2 victor = new(NPC.position.X + (NPC.width * 0.5f), NPC.position.Y + (NPC.height * 0.5f));
 				{
 					float rotation = (float)Math.Atan2(victor.Y - (Main.player[NPC.target].position.Y + (Main.player[NPC.target].height * 0.5f)), victor.X - (Main.player[NPC.target].position.X + (Main.player[NPC.target].width * 0.5f)));

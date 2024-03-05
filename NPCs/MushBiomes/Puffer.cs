@@ -83,10 +83,12 @@ namespace MultidimensionMod.NPCs.MushBiomes
                         if (choice == 0)
                         {
                             goRight = true;
+                            NPC.netUpdate = true;
                         }
                         else if (choice == 1)
                         {
                             goRight = false;
+                            NPC.netUpdate = true;
                         }
                         AITimer = 0;
                         TimerRand = Main.rand.Next(180, 360);
@@ -108,6 +110,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                         if (BaseAI.HitTileOnSide(NPC, 0, true))
                         {
                             goRight = true;
+                            NPC.netUpdate = true;
                         }
                     }
                     if (goRight)
@@ -117,6 +120,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                         if (BaseAI.HitTileOnSide(NPC, 0, true))
                         {
                             goRight = false;
+                            NPC.netUpdate = true;
                         }
                     }
                     BaseAI.WalkupHalfBricks(NPC);
@@ -140,6 +144,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     if (distanceToPlayer < 100) //Go into alert mode when close enough
                     {
                         AIState = ActionState.Alerted;
+                        NPC.netUpdate = true;
                     }
                     NPC.frameCounter += 1.0;
                     if (NPC.frameCounter >= 5.0)
@@ -165,14 +170,17 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     if (Gwah >= 180)
                     {
                         SoundEngine.PlaySound(new("MultidimensionMod/Sounds/NPC/BigFart"), NPC.position);
-                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<PufferFart>(), 0, 0);
+                        if (Main.netMode != NetmodeID.MultiplayerClient)
+                            Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<PufferFart>(), 0, 0);
                         Gwah = 0;
                         AIState = ActionState.Runaway;
+                        NPC.netUpdate = true;
                     }
                     else if (distanceToPlayer > 300)
                     {
                         AIState = ActionState.Patrol;
                         Gwah = 0;
+                        NPC.netUpdate = true;
                     }
                     if (target.Center.X > NPC.Center.X)
                     {
@@ -190,6 +198,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                         if (BaseAI.HitTileOnSide(NPC, 1, true))
                         {
                             NPC.spriteDirection = -1;
+                            NPC.netUpdate = true;
                         }
                     }
                     else if (NPC.spriteDirection == -1)
@@ -198,6 +207,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                         if (BaseAI.HitTileOnSide(NPC, 0, true))
                         {
                             NPC.spriteDirection = 1;
+                            NPC.netUpdate = true;
                         }
                     }
                     BaseAI.WalkupHalfBricks(NPC);
@@ -223,13 +233,15 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     if (distanceToPlayer > 500)
                     {
                         AIState = ActionState.Patrol;
+                        NPC.netUpdate = true;
                     }
                     break;
             }
             if (NPC.life <= 1)
             {
                 NPC.life = 1;
-                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<PufferFart>(), 0, 0);
+                if (Main.netMode != NetmodeID.MultiplayerClient)
+                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<PufferFart>(), 0, 0);
                 SoundEngine.PlaySound(new("MultidimensionMod/Sounds/NPC/BigFart"), NPC.position);
                 NPC.active = false;
             }

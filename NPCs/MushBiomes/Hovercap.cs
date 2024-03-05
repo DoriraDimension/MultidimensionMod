@@ -76,10 +76,12 @@ namespace MultidimensionMod.NPCs.MushBiomes
                 if (BaseAI.HitTileOnSide(NPC, 1))
                 {
                     goRight = false;
+                    NPC.netUpdate = true;
                 }
                 if (BaseAI.HitTileOnSide(NPC, 0))
                 {
                     goRight = true;
+                    NPC.netUpdate = true;
                 }
                 if (!goRight)
                 {

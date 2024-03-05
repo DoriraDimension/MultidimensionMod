@@ -89,6 +89,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                 if (IThinkImStupid == 1)
                 {
                     AIState = ActionState.Idle;
+                    NPC.netUpdate = true;
                 }
                 if (IThinkImStupid >= 2)
                 {
@@ -116,6 +117,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             if (!BaseAI.HitTileOnSide(NPC, 3))
             {
                 NPC.spriteDirection = NPC.direction;
+                NPC.netUpdate = true;
             }
 
             switch (AIState)
@@ -153,6 +155,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     {
                         AIState = ActionState.Hopping;
                         MotivationToMove = 0;
+                        NPC.netUpdate = true;
                     }
                     break;
                 case ActionState.Hopping:
@@ -160,6 +163,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     if (!BaseAI.HitTileOnSide(NPC, 3))
                     {
                         NPC.frame.Y = 602;
+                        NPC.netUpdate = true;
                     }
                     else NPC.frame.Y = 0;
                     Stamina++;
@@ -167,6 +171,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     {
                         AIState = ActionState.OhDamnYesterdaysDinnerWasNotWellReceivedByMyTummy;
                         Stamina = 0;
+                        NPC.netUpdate = true;
                     }
                     break;
                 case ActionState.OhDamnYesterdaysDinnerWasNotWellReceivedByMyTummy:
@@ -200,8 +205,10 @@ namespace MultidimensionMod.NPCs.MushBiomes
                                 Vector2 velocity = targetCenter - NPC.Center;
                                 velocity.Normalize();
                                 velocity *= ProjSpeed * ba;
-                                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, velocity.X, velocity.Y, ModContent.ProjectileType<FungusBubble>(), 25, 0);
+                                if (Main.netMode != NetmodeID.MultiplayerClient)
+                                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, velocity.X, velocity.Y, ModContent.ProjectileType<FungusBubble>(), 25, 0);
                                 SoundEngine.PlaySound(SoundID.Item85, NPC.position);
+                                NPC.netUpdate = true;
                             }
                         }
                         FrameSpeed = 6;
@@ -214,6 +221,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                                 NPC.frame.Y = 0;
                                 AIState = ActionState.Idle;
                                 Charge = 0;
+                                NPC.netUpdate = true;
                             }
                         }
                     }
@@ -234,6 +242,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             if (ASmallRest == 30)
             {
                 x = 6;
+                NPC.netUpdate = true;
                 ASmallRest = 0;
                 if (BaseAI.HitTileOnSide(NPC, 3))
                 {

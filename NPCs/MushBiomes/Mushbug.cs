@@ -118,6 +118,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                 {
                     NPC.spriteDirection = 1;
                 }
+                NPC.netUpdate = true;
             }
             if (Main.rand.NextBool(600))
             {

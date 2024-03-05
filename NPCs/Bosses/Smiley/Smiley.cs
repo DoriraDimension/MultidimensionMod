@@ -258,6 +258,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 										NPC.Center = player.Center + new Vector2(180, 0);
 									}
 									charges = 1;
+									NPC.netUpdate = true;
 								}
 								if (charges == 1)
 								{
@@ -278,6 +279,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 									bossMode = 0;
 									animatedStart = true;
 									NPC.dontTakeDamage = false;
+									NPC.netUpdate = true;
 								}
 
 							}
@@ -293,7 +295,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 									bossMode = 2;
 									shotType = Main.rand.Next(3);
 									charges = 0;
-
+									NPC.netUpdate = true;
 								}
 								if (bossTime % 22 == 0)
 								{
@@ -331,7 +333,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
                                     NPC.velocity = dashPos;
 									nextTimeStamp = bossTime + 45 + Main.rand.Next(10) - 10;
 									charges++;
-
+									NPC.netUpdate = true;
 									bossMode = 1;
 								}
 							}
@@ -353,17 +355,21 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
                                     switch (shotType)
 									{
 										case 0:
-											shootTrackedProjAtPlayer(ModContent.ProjectileType<Happy>(), 0, 15f, NPC.damage + 5, NPC.Center, player.Center, player);
+											if (Main.netMode != NetmodeID.MultiplayerClient)
+                                                shootTrackedProjAtPlayer(ModContent.ProjectileType<Happy>(), 0, 15f, NPC.damage + 5, NPC.Center, player.Center, player);
 											break;
 										case 1:
-											shootTrackedProjAtPlayer(ModContent.ProjectileType<Joy>(), 0, 10f, NPC.damage - 5, NPC.Center, player.Center, player);
+											if (Main.netMode != NetmodeID.MultiplayerClient)
+                                                shootTrackedProjAtPlayer(ModContent.ProjectileType<Joy>(), 0, 10f, NPC.damage - 5, NPC.Center, player.Center, player);
 											break;
 										case 2:
-											shootTrackedProjAtPlayer(ModContent.ProjectileType<Neutral>(), 0, 0f, NPC.damage, NPC.Center, player.Center, player);
+											if (Main.netMode != NetmodeID.MultiplayerClient)
+                                                shootTrackedProjAtPlayer(ModContent.ProjectileType<Neutral>(), 0, 0f, NPC.damage, NPC.Center, player.Center, player);
 											break;
 
 										default:
-											shootTrackedProjAtPlayer(ModContent.ProjectileType<Happy>(), 0, 15f, NPC.damage + 5, NPC.Center, player.Center, player);
+											if (Main.netMode != NetmodeID.MultiplayerClient)
+                                                shootTrackedProjAtPlayer(ModContent.ProjectileType<Happy>(), 0, 15f, NPC.damage + 5, NPC.Center, player.Center, player);
 											break;
 									}
 									ProjectileTimeStamp = bossTime + 30;
@@ -402,6 +408,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 									move *= speed / magnitude;
 								}
 								NPC.velocity = move;
+								NPC.netUpdate = true;
 							}
 						}
 						if (!phase1 && !phase2)
@@ -450,6 +457,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
                                     NPC.dontTakeDamage = false;
 									bossMode = 0;
 									backupTimer = 0;
+									NPC.netUpdate = true;
 								}
 							}
 						}
@@ -495,10 +503,12 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 								if (bossTime % 22 == 0)
 								{
 									moveTo = player.Center + new Vector2(-30f, -150);
+									NPC.netUpdate = true;
 								}
 								if (bossTime % 66 == 0)
 								{
 									moveTo = player.Center + new Vector2(30f, -150);
+									NPC.netUpdate = true;
 								}
 
 
@@ -526,6 +536,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
                                     for (int i = 0; i < 12; i++) Dust.NewDust(NPC.Center, NPC.width, NPC.height, ModContent.DustType<VoidDustM>(), Main.rand.Next(6) - 5, Main.rand.Next(6) - 5);
                                     NPC.velocity = dashPos;
 									nextTimeStamp = bossTime + 35 + Main.rand.Next(10) - 10;
+									NPC.netUpdate = true;
 									charges++;
 
 									bossMode = 1;

@@ -84,6 +84,7 @@ namespace MultidimensionMod.NPCs.Madness
                             Main.dust[dustID].noGravity = true;
                         }
                     }
+                    NPC.netUpdate = true;
                     AmbushTimer = 0;
                 }
                 AmbushTimer++;
