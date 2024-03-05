@@ -58,6 +58,8 @@ namespace MultidimensionMod.Items.Armor
             if (player.GetModPlayer<MDPlayer>().IndigoMode)
 			{
 				player.manaRegenBonus += 3;
+                player.ammoCost80 = true;
+                player.GetCritChance(DamageClass.Melee) += 10;
                 player.maxTurrets += 1;
 				player.statDefense -= 4;
             }

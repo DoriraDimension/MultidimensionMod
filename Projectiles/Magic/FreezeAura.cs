@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using MultidimensionMod.Buffs.Debuffs;
 
 namespace MultidimensionMod.Projectiles.Magic
 {
@@ -18,7 +19,6 @@ namespace MultidimensionMod.Projectiles.Magic
             Projectile.width = 120;
             Projectile.height = 120;
             Projectile.friendly = true;
-            Projectile.DamageType = DamageClass.Melee;
             Projectile.tileCollide = false;
             Projectile.penetrate = -1;
             Projectile.timeLeft = 1800;
@@ -39,11 +39,15 @@ namespace MultidimensionMod.Projectiles.Magic
                 Main.dust[num104].velocity.X *= 0.15f;
                 Main.dust[num104].velocity.Y *= 0.15f;
             }
-        }
-
-        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
-        {
-            target.AddBuff(BuffID.Frostburn, 360);
+            Rectangle rectangle = new Rectangle((int)Projectile.position.X, (int)Projectile.position.Y, Projectile.width, Projectile.height);
+            for (int e = 0; e < Main.maxNPCs; e++)
+            {
+                NPC npc = Main.npc[e];
+                if (rectangle.Intersects(npc.Hitbox))
+                {
+                    npc.AddBuff(BuffID.Frostburn, 360);
+                }
+            }
         }
     }
 }

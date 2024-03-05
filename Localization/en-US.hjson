@@ -3569,8 +3569,10 @@ Mods: {
 				[c/0080ff:Indigo mode]:
 				Increases mana regeneration by 3
 				Increases max number of sentries by 1
+				Increases melee critical strike chance by 10%
+				Grants 20% chance not to consume ammo
 				Decreases defense by 4
-				Swapping to Indigo mode will increase magic damage by 10% and casting speed by 30% for 5 seconds.
+				Swapping to Indigo mode will increase damage by 10% and use speed by 30% for 5 seconds.
 				'''
 		}
 
@@ -4192,7 +4194,6 @@ Mods: {
 			Drama: Mushroom family drama
 			Watching: HE is always watching
 			Smiley: A smile at night
-			Vikings: They were not forgotten, they were never known in the first place
 		}
 
 		TitleCards: {

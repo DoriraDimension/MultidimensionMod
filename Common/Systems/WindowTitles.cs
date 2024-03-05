@@ -31,8 +31,7 @@ namespace MultidimensionMod.Common.Systems
                  Language.GetTextValue("Mods.MultidimensionMod.WindowTitles.BadFlirt"),
                  Language.GetTextValue("Mods.MultidimensionMod.WindowTitles.Drama"),
                  Language.GetTextValue("Mods.MultidimensionMod.WindowTitles.Watching"),
-                 Language.GetTextValue("Mods.MultidimensionMod.WindowTitles.Smiley"),
-                 Language.GetTextValue("Mods.MultidimensionMod.WindowTitles.Vikings")*/
+                 Language.GetTextValue("Mods.MultidimensionMod.WindowTitles.Smiley")*/
                  "Press space to live",
                  "Bible III, the coming of shroom",
                  "Now with a 80 % chance to go mad",
@@ -40,8 +39,7 @@ namespace MultidimensionMod.Common.Systems
                  "You are the harmony to my discord",
                  "Mushroom family drama",
                  "HE is always watching",
-                 "A smile at night",
-                 "They were not forgotten, they were never known in the first place"
+                 "A smile at night"
             };
 
             Main.instance.Window.Title = $"Awakened Light: {titles[Main.rand.Next(titles.Length)]}";

@@ -19,7 +19,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 
 		public override void SetDefaults()
 		{
-			Item.damage = 8;
+			Item.damage = 0;
 			Item.DamageType = DamageClass.Magic;
 			Item.mana = 40;
 			Item.width = 40;
@@ -47,7 +47,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
         {
             if (player.ownedProjectileCounts[Item.shoot] <= 0)
             {
-                Projectile.NewProjectile(source, Main.MouseWorld, velocity, type, damage, knockback, player.whoAmI);
+                Projectile.NewProjectile(source, Main.MouseWorld, velocity, type, 0, knockback, player.whoAmI);
             }
             return false;
         }

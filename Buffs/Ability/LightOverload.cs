@@ -14,8 +14,8 @@ namespace MultidimensionMod.Buffs.Ability
 
         public override void Update(Player player, ref int buffIndex)
         {
-            player.GetDamage(DamageClass.Magic) += 0.10f;
-            player.GetAttackSpeed(DamageClass.Magic) += 0.30f;
+            player.GetDamage(DamageClass.Generic) += 0.10f;
+            player.GetAttackSpeed(DamageClass.Generic) += 0.30f;
         }
     }
 }
