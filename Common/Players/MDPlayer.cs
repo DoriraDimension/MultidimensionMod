@@ -105,6 +105,7 @@ namespace MultidimensionMod.Common.Players
                 Mario = 0;
                 GiveBirth = 0;
             }
+            delayedHealValue = 0;
         }
 
         public override void UpdateEquips()
@@ -113,6 +114,10 @@ namespace MultidimensionMod.Common.Players
             {
                 Mario = 0;
                 GiveBirth = 0;
+            }
+            if (!MonarchHeart)
+            {
+                delayedHealValue = 0;
             }
             if (Stem)
             {
@@ -128,10 +133,12 @@ namespace MultidimensionMod.Common.Players
         {
             if (MonarchHeart && !Player.HasBuff(BuffID.PotionSickness) && !Player.dead)
             {
+                int healDividing = 4;
                 firstTickHeal++;
                 if (firstTickHeal == 1) //So it only happens once
                 {
-                    Player.Heal(delayedHealValue / 4); //Heal for one quarter of the collected damage
+                    Player.Heal(delayedHealValue / healDividing); //Heal for one quarter of the collected damage
+                    delayedHealValue = 0;
                 }
                 if (firstTickHeal >= 2)
                 {
@@ -394,7 +401,7 @@ namespace MultidimensionMod.Common.Players
             {
                 if (Player.HasBuff(BuffID.PotionSickness))
                 {
-                    delayedHealValue += info.SourceDamage; //Collects damage done to the player
+                    delayedHealValue += info.Damage; //Collects damage done to the player
                     firstTickHeal = 0;
                 }
             }

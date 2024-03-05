@@ -22,6 +22,7 @@ using Terraria.GameContent;
 using Terraria.Audio;
 using Terraria.GameContent.Bestiary;
 using Terraria.Localization;
+using Microsoft.CodeAnalysis;
 
 namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 {
@@ -33,6 +34,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
         public int damage = 0;
         public bool mad = false;
         public bool UmosMode = false;
+        public bool Desperate = false;
         public override void SendExtraAI(BinaryWriter writer)
         {
             base.SendExtraAI(writer);
@@ -73,7 +75,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             Hovering,
             Attack,
             Radiance,
-            Goodbye
+            Goodbye,
+            UmosTransition
         }
 
         public ActionState AIState
@@ -177,6 +180,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             {
                 notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<RadianceTalisman>()));
             }
+            NPCloot.Add(notExpertRule);
         }
 
 		public float[] internalAI = new float[5];
@@ -204,6 +208,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
         public int Waking = 0; //Using NPC.alpha in an if statement didn't work, so another named timer I guess.
         public int ScreamTimer = 0;
         public int DesperateScreamTimer = 0;
+        public int DragonballPowerUpSequence = 0;
 
         public override void AI()
         {
@@ -272,22 +277,15 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             {
                 Lighting.AddLight(NPC.Center, 0, 0, (255 - NPC.alpha) * 0.30f / 255f);
             }
-            if (NPC.life >= NPC.lifeMax / 10 && NPC.life <= NPC.lifeMax / 4)
-                Lighting.AddLight(NPC.Center, 0, (255 - NPC.alpha) * 0.25f / 160, (255 - NPC.alpha) * 0.35f / 255f);
-            if (NPC.life <= NPC.lifeMax / 4)
+            if (!Desperate && UmosMode)
             {
-                UmosMode = true;
-                ScreamTimer++;
-                if (ScreamTimer == 1)
-                {
-                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RoyalRadianceScream"), NPC.position);
-                }
-                if (ScreamTimer >= 2)
-                {
-                    ScreamTimer = 2;
-                }
+                Lighting.AddLight(NPC.Center, 0, (255 - NPC.alpha) * 0.15f / 160, (255 - NPC.alpha) * 0.32f / 255f);
             }
-            if (NPC.life <= NPC.lifeMax / 10)
+            if (NPC.life <= NPC.lifeMax / 4 && !UmosMode)
+            {
+                AIState = ActionState.UmosTransition;
+            }
+            if (NPC.life <= NPC.lifeMax / 10 && Main.expertMode)
             {
                 AIState = ActionState.Radiance;
                 NPC.netUpdate = true;
@@ -303,7 +301,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         AISwitch++;
                         FungusHoverAI(new Vector2(player.Center.X, player.Center.Y - 200), 0.3f);
                         MakeItRain++;
-                        if (MakeItRain == 40) //Shoot spread upwards
+                        if (MakeItRain == 50) //Shoot spread upwards
                         {
                             int amount = 10; //Amnount of projectiles
                             if (Main.expertMode)
@@ -314,14 +312,14 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             {
                                 Vector2 perturbedSpeed = new Vector2(NPC.velocity.X / 2, -20).RotatedByRandom(MathHelper.ToRadians(85));
                                 if (Main.netMode != NetmodeID.MultiplayerClient)
-                                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<RadianceShot>(), 8, 0);
-                                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RadianceShot"), NPC.position);
-                                
+                                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<RadianceShot>(), 50 / 3, 0);
+                                SoundEngine.PlaySound(Sounds.CustomSounds.RadianceShot with { Volume = 0.70f }, NPC.position);
+
                             }
                             NPC.netUpdate = true;
                             MakeItRain = 0;
                         }
-                        if (AISwitch == 240) //Switch to different attack & reset all timers
+                        if (AISwitch == 300) //Switch to different attack & reset all timers
                         {
                             AISwitch = 0;
                             FireShroom = 0;
@@ -348,7 +346,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             {
                                 Vector2 perturbedSpeed = new Vector2(NPC.velocity.X / 2, -20).RotatedByRandom(MathHelper.ToRadians(85));
                                 if (Main.netMode != NetmodeID.MultiplayerClient)
-                                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<Mushshot2>(), 8, 0);
+                                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<Mushshot2>(), 40 / 3, 0);
                                 SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Blurb"), NPC.position);
                             }
                             NPC.netUpdate = true;
@@ -378,7 +376,10 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 if (RingTime == 120)
                                 {
                                     if (Main.netMode != NetmodeID.MultiplayerClient)
-                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, 0, 0, ModContent.ProjectileType<RadiantIlluminaRing>(), 42, 0);
+                                    {
+                                        int ring = Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, 0f, 0f, ModContent.ProjectileType<RadiantIlluminaRing>(), 72 / 3, 0, Main.myPlayer, NPC.whoAmI);
+                                        Main.projectile[ring].netUpdate = true;
+                                    }
                                     SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), NPC.position);
                                     NPC.netUpdate = true;
                                 }
@@ -398,7 +399,10 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 if (RingTime == 120)
                                 {
                                     if (Main.netMode != NetmodeID.MultiplayerClient)
-                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, 0, 0, ModContent.ProjectileType<IlluminaRing>(), 32, 0);
+                                    {
+                                        int ring = Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, 0f, 0f, ModContent.ProjectileType<IlluminaRing>(), 52 / 3, 0, Main.myPlayer, NPC.whoAmI);
+                                        Main.projectile[ring].netUpdate = true;
+                                    }
                                     SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), NPC.position);
                                     NPC.netUpdate = true;
                                 }
@@ -419,8 +423,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 Vector2 sped = new Vector2(0, -8);
                                 if (Main.netMode != NetmodeID.MultiplayerClient)
                                 {
-                                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X + 100, NPC.Center.Y - 10, sped.X, sped.Y, ModContent.ProjectileType<StalkingShot>(), 15, 0);
-                                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X - 100, NPC.Center.Y - 10, sped.X, sped.Y, ModContent.ProjectileType<StalkingShot>(), 15, 0);
+                                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X + 100, NPC.Center.Y - 10, sped.X, sped.Y, ModContent.ProjectileType<StalkingShot>(), 55 / 3, 0);
+                                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X - 100, NPC.Center.Y - 10, sped.X, sped.Y, ModContent.ProjectileType<StalkingShot>(), 55 / 3, 0);
                                 }
                                 SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Blurb"), NPC.position);
                                 DoubleFire = 60;
@@ -434,7 +438,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 NPC.netUpdate = true;
                             }
                             break;
-                        case 2: //Sentries (Summons a glowing sentry that empowers the boss, only two can be alive at once and the boost stacks.
+                        case 2: //Sentries (Summons a glowing sentry that empowers the boss, only two can be alive at once and the boost stacks. During phase 2, summons a mushroom bomb instead that explodes on death.
                             if (UmosMode)
                             {
                                 SentryTimer++;
@@ -494,16 +498,16 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 {
                                     if (Main.netMode != NetmodeID.MultiplayerClient)
                                     {
-                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X - 500, player.Center.Y - 100, 0, 0, ModContent.ProjectileType<MushWave>(), 15, 0);
-                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X + 500, player.Center.Y - 100, 0, 0, ModContent.ProjectileType<MushWave>(), 15, 0);
+                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X - 500, player.Center.Y - 100, 0, 0, ModContent.ProjectileType<MushWave>(), 40 / 3, 0);
+                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X + 500, player.Center.Y - 100, 0, 0, ModContent.ProjectileType<MushWave>(), 40 / 3, 0);
                                     }
                                 }
                                 if (DoubleFire == 180)
                                 {
                                     if (Main.netMode != NetmodeID.MultiplayerClient)
                                     {
-                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X - 500, player.Center.Y + 100, 0, 0, ModContent.ProjectileType<MushWave>(), 15, 0);
-                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X + 500, player.Center.Y + 100, 0, 0, ModContent.ProjectileType<MushWave>(), 15, 0);
+                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X - 500, player.Center.Y + 100, 0, 0, ModContent.ProjectileType<MushWave>(), 40 / 3, 0);
+                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X + 500, player.Center.Y + 100, 0, 0, ModContent.ProjectileType<MushWave>(), 40 / 3, 0);
                                     }
                                     NPC.netUpdate = true;
                                     DoubleFire = 0;
@@ -563,9 +567,10 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                     }
                     break;
                 case ActionState.Radiance:
+                    Desperate = true;
                     NPC.Center = player.Center + new Vector2(0, -200);
                     MakeItRain++;
-                    Lighting.AddLight(NPC.Center, 0, (255 - NPC.alpha) * 0.40f / 255, (255 - NPC.alpha) * 0.10f / 130f);
+                    Lighting.AddLight(NPC.Center, 0, (255 - NPC.alpha) * 0.32f / 255, (255 - NPC.alpha) * 0.10f / 130f);
                     DesperateScreamTimer++;
                     if (DesperateScreamTimer == 1)
                     {
@@ -575,7 +580,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                     {
                         DesperateScreamTimer = 2;
                     }
-                    if (MakeItRain == 40) //Shoot spread upwards
+                    if (MakeItRain == 50) //Shoot spread upwards
                     {
                         int amount = 14;
                         for (int i = 0; i < amount; i++)
@@ -587,8 +592,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             velocity *= ProjSpeed;
                             Vector2 perturbedSpeed = new Vector2(NPC.velocity.X / 2, -20).RotatedByRandom(MathHelper.ToRadians(85));
                             if (Main.netMode != NetmodeID.MultiplayerClient)
-                                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<PureRadianceShot>(), 30, 0);
-                            SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RadianceShot"), NPC.position);
+                                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y - 10, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<PureRadianceShot>(), 60 / 3, 0);
+                            SoundEngine.PlaySound(Sounds.CustomSounds.RadianceShot with { Volume = 0.70f }, NPC.position);
                         }
                         NPC.netUpdate = true;
                         MakeItRain = 0;
@@ -600,6 +605,21 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                     if (NPC.alpha >= 255)
                     {
                         NPC.active = false;
+                    }
+                    break;
+                case ActionState.UmosTransition:
+                    NPC.velocity.X = 0;
+                    NPC.velocity.Y = 0;
+                    NPC.dontTakeDamage = true;
+                    DragonballPowerUpSequence++;
+                    if (DragonballPowerUpSequence == 120) 
+                    {
+                        AISwitch = 0;
+                        DragonballPowerUpSequence = 0;
+                        UmosMode = true;
+                        AIState = ActionState.Attack;
+                        SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RoyalRadianceScream"), NPC.position);
+                        NPC.dontTakeDamage = false;
                     }
                     break;
             }
@@ -702,11 +722,11 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             Texture2D texture3 = ModContent.Request<Texture2D>(NPC.ModNPC.Texture + "_PureRadiant").Value;
             SpriteEffects effects = NPC.spriteDirection == -1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
             spriteBatch.Draw(TextureAssets.Npc[NPC.type].Value, NPC.Center + new Vector2(0f, -14f) - screenPos, NPC.frame, drawColor, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
-            if (NPC.life <= NPC.lifeMax / 10 && Main.expertMode)
+            if (Desperate)
             {
                 spriteBatch.Draw(texture3, NPC.Center + new Vector2(0f, -14f) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
             }
-            else if (NPC.life <= NPC.lifeMax / 4)
+            else if (UmosMode && !Desperate)
             {
                 spriteBatch.Draw(texture2, NPC.Center + new Vector2(0f, -14f) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
             }

@@ -48,6 +48,7 @@ namespace MultidimensionMod.Items.Accessories
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<DrakescaleShield>())
 			.AddIngredient(ModContent.ItemType<DesertNecklace>())
+			.AddIngredient(ModContent.ItemType<PaleMatter>(), 4)
 			.AddTile(TileID.TinkerersWorkbench)
 			.Register();
 		}

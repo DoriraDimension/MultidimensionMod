@@ -24,7 +24,7 @@ namespace MultidimensionMod.Common.Globals.Projectiles
         {
             if (source is EntitySource_Parent parent && parent.Entity is NPC npc && npc.type == ModContent.NPCType<MushroomHeir>())
             {
-                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Gunshot"), projectile.position);
+                SoundEngine.PlaySound(Sounds.CustomSounds.Gunshot with { Volume = 0.70f }, projectile.position);
             }
             base.OnSpawn(projectile, source);
         }

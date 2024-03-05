@@ -624,6 +624,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             {
                 notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<Mushbow>()));
             }
+            NPCloot.Add(notExpertRule);
         }
 
         public override void ApplyDifficultyAndPlayerScaling(int numPlayers, float balance, float bossAdjustment)

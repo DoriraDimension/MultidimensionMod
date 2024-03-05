@@ -119,7 +119,8 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 			{
 				notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<DarkRebels>()));
 			}
-		}
+            NPCloot.Add(notExpertRule);
+        }
 		private void shootTrackedProjAtPlayer(int type, int projAngle, float projSpeed, int damage, Vector2 position, Vector2 targetPosition, Player player)
 		{
 

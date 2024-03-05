@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Microsoft.CodeAnalysis;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Mono.Cecil;
 using MultidimensionMod.NPCs.Bosses.FeudalFungus;
@@ -128,7 +129,7 @@ namespace MultidimensionMod.Projectiles.Magic
                     {
                         Projectile.NewProjectile(player.GetSource_FromThis(), Main.MouseWorld, perturbedSpeed, ModContent.ProjectileType<PureRadianceShotFriendly>(), Projectile.damage, 0);
                     }
-                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RadianceShot"), player.position);
+                    SoundEngine.PlaySound(Sounds.CustomSounds.RadianceShot with { Volume = 0.70f }, player.position);
                 }
                 Projectile.localAI[0] = 0;
             }

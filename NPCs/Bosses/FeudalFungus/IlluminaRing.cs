@@ -8,6 +8,10 @@ using Terraria.Audio;
 using Terraria.ModLoader;
 using MultidimensionMod.Base;
 using Terraria.GameContent;
+using Microsoft.CodeAnalysis;
+using Mono.Cecil;
+using MultidimensionMod.NPCs.TownNPCs;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 {
@@ -32,6 +36,14 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             Projectile.AL().CantHurtDapper = true;
         }
 
+        public override void OnSpawn(IEntitySource source)
+        {
+            if (source is EntitySource_Parent parent && parent.Entity is NPC npc && npc.type == ModContent.NPCType<FeudalFungus>())
+            {
+
+            }
+        }
+
         public override void AI()
         {
             Projectile.alpha -= 5;
@@ -39,13 +51,13 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             {
                 Projectile.alpha = 100;
             }
-            int Feudal = NPC.FindFirstNPC(ModContent.NPCType<FeudalFungus>());
-            NPC npc = Main.npc[Feudal];
-            if (Feudal <= 1)
+            NPC Feudal = Main.npc[(int)Projectile.ai[0]];
+            if (!Feudal.active)
             {
                 Projectile.Kill();
             }
-            Projectile.Center = npc.Center;
+            if (Feudal.active && Feudal.type == ModContent.NPCType<FeudalFungus>())
+                Projectile.Center = Feudal.Center;
             Projectile.light = 0.5f;
         }
 
@@ -90,13 +102,13 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             {
                 Projectile.alpha = 100;
             }
-            int Feudal = NPC.FindFirstNPC(ModContent.NPCType<FeudalFungus>());
-            NPC npc = Main.npc[Feudal];
-            if (Feudal <= 1)
+            NPC Feudal = Main.npc[(int)Projectile.ai[0]];
+            if (!Feudal.active)
             {
                 Projectile.Kill();
             }
-            Projectile.Center = npc.Center;
+            if (Feudal.active && Feudal.type == ModContent.NPCType<FeudalFungus>())
+                Projectile.Center = Feudal.Center;
             Projectile.light = 0.5f;
         }
 

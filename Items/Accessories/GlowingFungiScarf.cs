@@ -63,7 +63,8 @@ namespace MultidimensionMod.Items.Accessories
 		{
 			CreateRecipe()
 			.AddIngredient(ModContent.ItemType<GlowingMushmatter>(), 12)
-			.AddIngredient(ItemID.SoulofMight, 7)
+            .AddIngredient(ItemID.SoulofLight, 10)
+            .AddIngredient(ItemID.SoulofMight, 7)
 			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}
