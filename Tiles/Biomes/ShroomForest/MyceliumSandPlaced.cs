@@ -126,7 +126,7 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             if (Main.rand.NextBool(60))
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<AridMushroom>(), mute: true, style: Main.rand.Next(5));
-                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<Mushroom>(), Main.rand.Next(5), 0, -1, -1);
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<AridMushroom>(), Main.rand.Next(5), 0, -1, -1);
             }
             if (Main.rand.NextBool(2500))
             {

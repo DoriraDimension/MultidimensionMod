@@ -29,13 +29,33 @@ namespace MultidimensionMod.Projectiles.Solutions
                     {
                         ConvertTile(k, l, (ushort)ModContent.TileType<Mycelium>());
                     }
+                    else if (tileType == TileID.Sand || tileType == TileID.Ebonsand || tileType == TileID.Crimsand || tileType == TileID.Pearlsand)
+                    {
+                        ConvertTile(k, l, (ushort)ModContent.TileType<MyceliumSandPlaced>());
+                    }
+                    else if (tileType == TileID.HardenedSand || tileType == TileID.CorruptHardenedSand || tileType == TileID.CrimsonHardenedSand || tileType == TileID.HallowHardenedSand)
+                    {
+                        ConvertTile(k, l, (ushort)ModContent.TileType<MyceliumHardsandPlaced>());
+                    }
+                    else if (tileType == TileID.Sandstone || tileType == TileID.CorruptSandstone || tileType == TileID.CrimsonSandstone || tileType == TileID.HallowSandstone)
+                    {
+                        ConvertTile(k, l, (ushort)ModContent.TileType<MyceliumSandstonePlaced>());
+                    }
                     else if (tileType == TileID.MushroomBlock)
                     {
                         ConvertTile(k, l, (ushort)ModContent.TileType<MushroomBlockPlaced>());
                     }
 
                     int wallType = Main.tile[k, l].WallType;
-                    if (wallType == WallID.Mushroom)
+                    if (wallType == WallID.HardenedSand || tileType == WallID.CorruptHardenedSand || tileType == WallID.CrimsonHardenedSand || tileType == WallID.HallowHardenedSand)
+                    {
+                        ConvertWall(k, l, (ushort)ModContent.WallType<MyceliumHardsandWallPlaced>());
+                    }
+                    if (wallType == WallID.Sandstone || tileType == WallID.CorruptSandstone || tileType == WallID.CrimsonSandstone || tileType == WallID.HallowSandstone)
+                    {
+                        ConvertWall(k, l, (ushort)ModContent.WallType<MyceliumSandstoneWallPlaced>());
+                    }
+                    else if (wallType == WallID.Mushroom)
                     {
                         ConvertWall(k, l, (ushort)ModContent.WallType<MushroomBlockWallPlaced>());
                     }
