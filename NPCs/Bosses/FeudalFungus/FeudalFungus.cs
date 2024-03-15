@@ -23,6 +23,7 @@ using Terraria.Audio;
 using Terraria.GameContent.Bestiary;
 using Terraria.Localization;
 using Microsoft.CodeAnalysis;
+using MultidimensionMod.NPCs.Bosses.Smiley;
 
 namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 {
@@ -135,6 +136,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             NPC.alpha = 255;
             NPC.dontTakeDamage = true;
             NPC.AL().CantHurtDapper = true;
+            NPC.BossBar = ModContent.GetInstance<FungusBossBar>();
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
@@ -498,16 +500,16 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 {
                                     if (Main.netMode != NetmodeID.MultiplayerClient)
                                     {
-                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X - 500, player.Center.Y - 100, 0, 0, ModContent.ProjectileType<MushWave>(), 40 / 3, 0);
-                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X + 500, player.Center.Y - 100, 0, 0, ModContent.ProjectileType<MushWave>(), 40 / 3, 0);
+                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X - 500, player.Center.Y - 10, 0, 0, ModContent.ProjectileType<MushWave>(), 40 / 3, 0);
+                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X + 500, player.Center.Y -10, 0, 0, ModContent.ProjectileType<MushWave>(), 40 / 3, 0);
                                     }
                                 }
                                 if (DoubleFire == 180)
                                 {
                                     if (Main.netMode != NetmodeID.MultiplayerClient)
                                     {
-                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X - 500, player.Center.Y + 100, 0, 0, ModContent.ProjectileType<MushWave>(), 40 / 3, 0);
-                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X + 500, player.Center.Y + 100, 0, 0, ModContent.ProjectileType<MushWave>(), 40 / 3, 0);
+                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X, player.Center.Y - 500, 0, 0, ModContent.ProjectileType<MushWave>(), 40 / 3, 0);
+                                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center.X, player.Center.Y + 500, 0, 0, ModContent.ProjectileType<MushWave>(), 40 / 3, 0);
                                     }
                                     NPC.netUpdate = true;
                                     DoubleFire = 0;

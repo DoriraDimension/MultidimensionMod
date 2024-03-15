@@ -12,6 +12,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
     {
         public override void SetStaticDefaults()
         {
+            Main.projFrames[Projectile.type] = 5;
         }
 
         public override void SetDefaults()
@@ -37,12 +38,21 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
         public override void AI()
         {
             Projectile.velocity *= 0.98f;
+            if (++Projectile.frameCounter >= 5)
+            {
+                Projectile.frameCounter = 0;
+                if (++Projectile.frame >= 5)
+                {
+                    Projectile.frame = 0;
+                }
+            }
         }
     }
     internal class SeethingEmber : ModProjectile
     {
         public override void SetStaticDefaults()
         {
+            Main.projFrames[Projectile.type] = 5;
         }
 
         public override void SetDefaults()
@@ -72,6 +82,14 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
         public override void AI()
         {
             Projectile.velocity *= 0.98f;
+            if (++Projectile.frameCounter >= 5)
+            {
+                Projectile.frameCounter = 0;
+                if (++Projectile.frame >= 5)
+                {
+                    Projectile.frame = 0;
+                }
+            }
         }
     }
 }

@@ -306,7 +306,7 @@ namespace MultidimensionMod.Common.Globals.NPCs
 
             if (NPC.type == NPCID.BloodZombie)
             {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BloodyMary>(), 1));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BloodyMary>(), 100));
             }
 
             if (NPC.type == NPCID.Crab)

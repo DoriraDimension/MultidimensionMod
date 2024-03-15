@@ -26,6 +26,7 @@ using Terraria.GameContent;
 using static Humanizer.In;
 using Terraria.DataStructures;
 using Terraria.Localization;
+using MultidimensionMod.NPCs.Bosses.Smiley;
 
 namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
 {
@@ -118,6 +119,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                 Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Monarch");
             SpawnModBiomes = new int[1] { ModContent.GetInstance<ShroomForest>().Type };
             NPC.AL().CantHurtDapper = true;
+            NPC.BossBar = ModContent.GetInstance<MonarchBossBar>();
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
