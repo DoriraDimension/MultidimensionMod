@@ -2869,12 +2869,11 @@ Mods: {
 			}
 
 			IntimidatingMushroom: {
-				DisplayName: Kings Cap
+				DisplayName: Alarmshroom
 				Tooltip:
 					'''
 					A very pricey mushroom only found in the Scarlet Mycelium Forest
-					Eating it is said to awaken secret powers... 
-					or stir up unwanted fury of a sleeping monarch.
+					It makes a lot of noise that only mushrooms can hear
 					'''
 			}
 
@@ -3898,6 +3897,7 @@ Mods: {
 			ShroomJelly.DisplayName: Mushroom Jelly
 			Hovercap.DisplayName: Hovercap
 			MushbugBaby.DisplayName: Myceli Larva
+			MonarchSlep.DisplayName: Sleeping Mushroom
 		}
 
 		Dialogue: {

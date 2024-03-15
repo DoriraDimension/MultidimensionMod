@@ -1,7 +1,8 @@
+using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
+using MultidimensionMod.Common.Globals;
 using Terraria;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
-using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
 using Terraria.ModLoader;
 using Terraria.Localization;
 
@@ -20,37 +21,30 @@ namespace MultidimensionMod.Items.Summons
 
         public override void SetDefaults()
         {
-            Item.width = 28;
-            Item.height = 38;
+            Item.width = 32;
+            Item.height = 44;
             Item.maxStack = 20;
             Item.value = 1000;
             Item.rare = ItemRarityID.Blue;
-            Item.useAnimation = 30;
-            Item.useTime = 30;
-            Item.useStyle = ItemUseStyleID.EatFood;
+            Item.useAnimation = 90;
+            Item.useTime = 90;
+            Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
         }
 
         public override bool? UseItem(Player player)
         {
+            MDWorld.Monday = true;
             return true;
         }
 
         public override bool CanUseItem(Player player)
         {
-            /*if (NPC.AnyNPCs(ModContent.NPCType<MushroomMonarchSlep>()))
+            if (NPC.AnyNPCs(ModContent.NPCType<MonarchSlep>()) && !MDWorld.Monday)
             {
                 return true;
-            }*/
+            }
             return false;
-        }
-
-        public override void AddRecipes()
-        {
-            CreateRecipe()
-            .AddIngredient(ItemID.Mushroom, 10)
-            .AddTile(TileID.WorkBenches)
-            .Register();
         }
     }
 }

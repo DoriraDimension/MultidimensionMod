@@ -24,6 +24,7 @@ namespace MultidimensionMod.Common.Globals
         public static int BoxTimer;
         private ActiveSound Sound;
         private SlotId loop;
+        public static bool Monday = false;
         public override void PostUpdateWorld()
         {
             #region Frozen Underworld ashstorm loop
