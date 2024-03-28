@@ -1,8 +1,10 @@
 ﻿using MultidimensionMod.Tiles.MusicBoxes;
+using MultidimensionMod.Items.Materials;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 using System;
+using MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld;
 
 namespace MultidimensionMod.Items.Placeables.MusicBoxes
 {
@@ -27,6 +29,16 @@ namespace MultidimensionMod.Items.Placeables.MusicBoxes
             Item.height = 30;
             Item.rare = ItemRarityID.LightRed;
             Item.accessory = true;
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddIngredient(ItemID.MusicBox)
+            .AddIngredient(ModContent.ItemType<GlowingMushmatter>(), 4)
+            .AddIngredient(ItemID.GlowingMushroom, 40)
+            .AddTile(TileID.HeavyWorkBench)
+            .Register();
         }
     }
 }

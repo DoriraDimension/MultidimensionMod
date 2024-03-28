@@ -13,7 +13,7 @@ namespace MultidimensionMod.Items.Armor
 		{
             //DisplayName.SetDefault("Mushium Shirt");
             //Tooltip.SetDefault("2% Increased life regeneration");
-            ArmorIDs.Head.Sets.DrawHead[EquipLoader.GetEquipSlot(Mod, Name, EquipType.Body)] = false;
+            //ArmorIDs.Head.Sets.DrawHead[EquipLoader.GetEquipSlot(Mod, Name, EquipType.Body)] = false;
         }
 
 		public override void SetDefaults()

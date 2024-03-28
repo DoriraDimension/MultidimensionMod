@@ -34,8 +34,8 @@ namespace MultidimensionMod.Items.Armor
             if (Main.netMode == NetmodeID.Server)
                 return;
 
-            EquipLoader.AddEquipTexture(Mod, $"MultidimensionMod/Items/Armor/MushiumShirtIndigo_{EquipType.Body}", EquipType.Body, this);
-            EquipLoader.AddEquipTexture(Mod, $"MultidimensionMod/Items/Armor/MushiumPantsIndigo_{EquipType.Legs}", EquipType.Legs, this);
+            //EquipLoader.AddEquipTexture(Mod, $"MultidimensionMod/Items/Armor/MushiumShirtIndigo_{EquipType.Body}", EquipType.Body, this);
+            //EquipLoader.AddEquipTexture(Mod, $"MultidimensionMod/Items/Armor/MushiumPantsIndigo_{EquipType.Legs}", EquipType.Legs, this);
         }
 
 
@@ -83,7 +83,7 @@ namespace MultidimensionMod.Items.Armor
 
     public class IndigoModePlayer : ModPlayer
     {
-        public override void FrameEffects()
+        /*public override void FrameEffects()
         {
             Player player = Main.LocalPlayer;
             if (Player.GetModPlayer<MDPlayer>().MushiumSet && Player.GetModPlayer<MDPlayer>().IndigoMode)
@@ -97,6 +97,6 @@ namespace MultidimensionMod.Items.Armor
                 var indigoTexture = ModContent.GetInstance<MushiumPants>();
                 Player.head = EquipLoader.GetEquipSlot(Mod, indigoTexture.Name, EquipType.Head);
             }
-        }
+        }*/
     }
 }

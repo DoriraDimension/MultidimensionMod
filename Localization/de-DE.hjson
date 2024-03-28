@@ -2649,8 +2649,9 @@ Mods: {
 				/* Tooltip:
 					'''
 					Weird mushrooms that only grow while madness visits.
-					Their cap contains madness infected juices that can be used for medicine.
+					Their cap contains madness inducing juices that can be used for medicine.
 					Handle with extreme caution!
+					The Mushroom Heir might be interested in this
 					''' */
 			}
 
@@ -3922,7 +3923,7 @@ Mods: {
 				#Below is help dialogue
 				// ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
 				// DimensiumHelp: You can find Dimensium by doing many different things. Killing, mining, fishing, and so much more.
-				// KingsCapHelp: You know that mushroom forest nearby? If you wait long enough, you may find a mushroom that is larger than the others. But you need another special mushroom that grows there to interact with it.
+				// KingsCapHelp: You know that mushroom forest nearby? If you wait long enough, you may find a mushroom that is larger than the others. You may wake it up using a unique fungus only found in that forest.
 				// TouchGrassHelp: Go outside
 				#Below is quest dialogue
 				// CassieQuestStart: I wanted to ask if you could do me a favor, during my travel here something important got seperated from me. Could you maybe try and get it back? It might have fallen like a star from the sky, if only there was a matter that could transform it back into its original form.

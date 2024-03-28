@@ -13,7 +13,7 @@ namespace MultidimensionMod.Items.Armor
 		{
             //DisplayName.SetDefault("Mushium Pants");
             //Tooltip.SetDefault("1% Increased life regeneration");
-            ArmorIDs.Head.Sets.DrawHead[EquipLoader.GetEquipSlot(Mod, Name, EquipType.Legs)] = false;
+            //ArmorIDs.Head.Sets.DrawHead[EquipLoader.GetEquipSlot(Mod, Name, EquipType.Legs)] = false;
 
         }
 
@@ -34,7 +34,7 @@ namespace MultidimensionMod.Items.Armor
                 return;
 
             // Add equip textures
-            EquipLoader.AddEquipTexture(Mod, $"MultidimensionMod/Items/Armor/MushiumHatIndigo_{EquipType.Head}", EquipType.Head, this);
+            //EquipLoader.AddEquipTexture(Mod, $"MultidimensionMod/Items/Armor/MushiumHatIndigo_{EquipType.Head}", EquipType.Head, this);
         }
 
         public override void UpdateEquip(Player player)

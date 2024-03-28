@@ -3,6 +3,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 using System;
+using MultidimensionMod.Items.Materials;
 
 namespace MultidimensionMod.Items.Placeables.MusicBoxes
 {
@@ -27,6 +28,16 @@ namespace MultidimensionMod.Items.Placeables.MusicBoxes
             Item.height = 30;
             Item.rare = ItemRarityID.LightRed;
             Item.accessory = true;
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddIngredient(ItemID.MusicBox)
+            .AddIngredient(ModContent.ItemType<Mushmatter>(), 4)
+            .AddIngredient(ItemID.Mushroom, 40)
+            .AddTile(TileID.HeavyWorkBench)
+            .Register();
         }
     }
 }

@@ -2,6 +2,7 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
+using MultidimensionMod.Items.Materials;
 
 namespace MultidimensionMod.Items.Placeables.MusicBoxes
 {
@@ -27,5 +28,14 @@ namespace MultidimensionMod.Items.Placeables.MusicBoxes
 			Item.rare = ItemRarityID.LightRed;
 			Item.accessory = true;
 		}
-	}
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddIngredient(ItemID.MusicBox)
+            .AddIngredient(ModContent.ItemType<MadnessFragment>(), 8)
+            .AddTile(TileID.HeavyWorkBench)
+            .Register();
+        }
+    }
 }

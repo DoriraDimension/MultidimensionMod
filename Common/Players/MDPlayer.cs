@@ -6,6 +6,8 @@ using MultidimensionMod.Projectiles.Magic;
 using MultidimensionMod.Buffs.Cooldowns;
 using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Buffs.Ability;
+using MultidimensionMod.Base;
+using MultidimensionMod.Dusts;
 using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
@@ -16,11 +18,6 @@ using Terraria.DataStructures;
 using Terraria.GameInput;
 using Terraria.Audio;
 using Terraria.Localization;
-using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Dusts;
-using Microsoft.CodeAnalysis;
-using MultidimensionMod.Buffs.Minions;
-using Terraria.WorldBuilding;
 
 namespace MultidimensionMod.Common.Players
 {
@@ -463,6 +460,13 @@ namespace MultidimensionMod.Common.Players
                 player.AddBuff(ModContent.BuffType<SwapExhaustion>(), 1800);
                 player.AddBuff(ModContent.BuffType<LightOverload>(), 300);
                 SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RoyalRadianceScream"), player.position);
+                for (int m = 0; m < 20; m++)
+                {
+                    int dustID = Dust.NewDust(new Vector2(Player.Center.X - 1, Player.Center.Y - 1), 2, 2, DustID.GlowingMushroom, 0f, 0f, 100, Color.White, 1.6f);
+                    Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(6f, 0f), m / (float)20 * 6.28f);
+                    Main.dust[dustID].noLight = false;
+                    Main.dust[dustID].noGravity = true;
+                }
             }
             else if (MDKeybinds.ArmorAbility.JustPressed && MushiumSet && IndigoMode && !player.HasBuff(ModContent.BuffType<SwapExhaustion>()))
             {
@@ -472,6 +476,13 @@ namespace MultidimensionMod.Common.Players
                 player.AddBuff(ModContent.BuffType<SwapExhaustion>(), 1800);
                 player.AddBuff(ModContent.BuffType<LightStarved>(), 300);
                 SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RoyalRadianceScream"), player.position);
+                for (int m = 0; m < 20; m++)
+                {
+                    int dustID = Dust.NewDust(new Vector2(Player.Center.X - 1, Player.Center.Y - 1), 2, 2, ModContent.DustType<MushroomDust>(), 0f, 0f, 100, Color.White, 1.6f);
+                    Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(6f, 0f), m / (float)20 * 6.28f);
+                    Main.dust[dustID].noLight = false;
+                    Main.dust[dustID].noGravity = true;
+                }
             }
         }
     }

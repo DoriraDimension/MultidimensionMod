@@ -61,7 +61,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
                 .SetNPCAffection(NPCID.Truffle, AffectionLevel.Like)
                 .SetNPCAffection(NPCID.Clothier, AffectionLevel.Dislike)
                 .SetNPCAffection(ModContent.NPCType<MushroomMonarch>(), AffectionLevel.Hate)
-                //.SetNPCAffection(ModContent.NPCType<MonarchSlep>(), AffectionLevel.Hate)
+                .SetNPCAffection(ModContent.NPCType<MonarchSlep>(), AffectionLevel.Hate)
                 .SetNPCAffection(NPCID.PartyGirl, AffectionLevel.Love)
             ;
         }
