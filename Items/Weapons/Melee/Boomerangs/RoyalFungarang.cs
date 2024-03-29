@@ -17,7 +17,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
         public override void SetDefaults()
         {
 
-            Item.damage = 57;
+            Item.damage = 48;
             Item.DamageType = DamageClass.Melee;
             Item.width = 26;
             Item.height = 44;

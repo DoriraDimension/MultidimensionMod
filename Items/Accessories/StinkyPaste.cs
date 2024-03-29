@@ -32,26 +32,6 @@ namespace MultidimensionMod.Items.Accessories
 			Item.buffTime = 14400;
 		}
 
-        public override void ModifyTooltips(List<TooltipLine> tooltips)
-        {
-            if (Main.keyState.PressingShift())
-            {
-                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.StinkyPaste.Lore"))
-                {
-                    OverrideColor = Color.LightGray
-                };
-                tooltips.Add(line);
-            }
-            else
-            {
-                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Viewer"))
-                {
-                    OverrideColor = Color.Gray,
-                };
-                tooltips.Add(line);
-            }
-        }
-
         public override void UpdateAccessory(Player player, bool hideVisual)
 		{
 			player.GetDamage(DamageClass.Summon) += 0.06f;

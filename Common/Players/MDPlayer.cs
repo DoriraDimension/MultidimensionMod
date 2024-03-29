@@ -463,7 +463,7 @@ namespace MultidimensionMod.Common.Players
                 for (int m = 0; m < 20; m++)
                 {
                     int dustID = Dust.NewDust(new Vector2(Player.Center.X - 1, Player.Center.Y - 1), 2, 2, DustID.GlowingMushroom, 0f, 0f, 100, Color.White, 1.6f);
-                    Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(6f, 0f), m / (float)20 * 6.28f);
+                    Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(12f, 0f), m / (float)20 * 6.28f);
                     Main.dust[dustID].noLight = false;
                     Main.dust[dustID].noGravity = true;
                 }

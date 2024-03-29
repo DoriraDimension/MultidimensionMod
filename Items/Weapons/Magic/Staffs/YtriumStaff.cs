@@ -24,9 +24,9 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
             Item.DamageType = DamageClass.Magic;
             Item.value = Item.sellPrice(0, 1, 40, 0);
             Item.rare = ItemRarityID.LightRed;
-            Item.damage = 30;
-            Item.useTime = 85;
-            Item.useAnimation = 85;
+            Item.damage = 47;
+            Item.useTime = 72;
+            Item.useAnimation = 72;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.noMelee = true;
             Item.knockBack = 4;

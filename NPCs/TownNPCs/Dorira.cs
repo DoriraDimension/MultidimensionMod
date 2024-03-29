@@ -127,7 +127,6 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			WeightedRandom<string> chat = new WeightedRandom<string>();
 			int Gobfuck = NPC.FindFirstNPC(NPCID.GoblinTinkerer);
 			int BoomBoomMan = NPC.FindFirstNPC(NPCID.Demolitionist);
-			int WrenchWoman = NPC.FindFirstNPC(NPCID.Mechanic);
 			if (Gobfuck >= 0 && Main.rand.NextBool(4))
 			{
 				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GoblinDialogue", Main.npc[Gobfuck].GivenName));
@@ -136,10 +135,6 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			{
 				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.DemolitionistDialogue", Main.npc[BoomBoomMan].GivenName));
 			}
-			if (WrenchWoman >= 0 && Main.rand.NextBool(4))
-			{
-				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.MechanicDialogue", Main.npc[WrenchWoman].GivenName));
-			}
             if (Main.rand.NextBool(8))
             {
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.MushroomDialogue"));
@@ -147,7 +142,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
             if (Main.hardMode)
             {
 				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericHardmodeDialogue1"));
-			}
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.YttriumDialogue"));
+            }
 			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue1"));
 			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue2"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue4"));
