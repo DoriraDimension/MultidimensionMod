@@ -24,6 +24,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.Localization;
 using Microsoft.CodeAnalysis;
 using MultidimensionMod.NPCs.Bosses.Smiley;
+using MultidimensionMod.Dusts;
 
 namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 {
@@ -214,14 +215,25 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 
         public override void AI()
         {
-            if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) == 2) //Increases defense by 20 if two Glowing Sentries are alive.
-            {
-                NPC.defense = 20;
-                NPC.netUpdate = true;
-            }
-            else if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) == 1) //Increases defense by 15 if a Glowing Sentry is alive.
+            if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) == 2) //Increases defense by 15 if two Glowing Sentries are alive.
             {
                 NPC.defense = 15;
+                NPC.netUpdate = true;
+            }
+            else if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) == 1) //Increases defense by 10 if a Glowing Sentry is alive.
+            {
+                NPC.defense = 10;
+                NPC.netUpdate = true;
+            }
+            else if (NPC.CountNPCS(ModContent.NPCType<GlowBomb>()) == 2) //Increases defense by 15 if two Glowing Bomb are alive.
+            {
+                NPC.defense = 15;
+                NPC.netUpdate = true;
+            }
+            else if (NPC.CountNPCS(ModContent.NPCType<GlowBomb>()) == 1) //Increases defense by 10 if a Glowing Bomb is alive.
+            {
+                NPC.defense = 10;
+                NPC.netUpdate = true;
             }
             else
                 NPC.defense = 10;
@@ -447,6 +459,14 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 FungusHoverAI(new Vector2(player.Center.X, player.Center.Y - 200), 0.3f);
                                 if (SentryTimer == 60)
                                 {
+                                    for (int m = 0; m < 20; m++)
+                                    {
+                                        int dustID = Dust.NewDust(new Vector2(NPC.Center.X - 1, NPC.Center.Y - 1), 2, 2, DustID.ManaRegeneration, 0f, 0f, 100, Color.White, 1.6f);
+                                        Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(6f, 0f), m / (float)20 * 6.28f);
+                                        Main.dust[dustID].noLight = false;
+                                        Main.dust[dustID].noGravity = true;
+                                    }
+                                    SoundEngine.PlaySound(SoundID.Item15 with { Volume = 1.30f }, NPC.position);
                                     if (Main.netMode != NetmodeID.MultiplayerClient)
                                     {
                                         int bomb = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, BaseWorldGen.GetFirstTileFloor((int)NPC.Center.X / 16, (int)NPC.Center.Y / 16) * 16, ModContent.NPCType<GlowBomb>(), 0);
@@ -469,6 +489,14 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                     FungusHoverAI(new Vector2(player.Center.X, player.Center.Y - 200), 0.3f);
                                     if (SentryTimer == 60)
                                     {
+                                        for (int m = 0; m < 20; m++)
+                                        {
+                                            int dustID = Dust.NewDust(new Vector2(NPC.Center.X - 1, NPC.Center.Y - 1), 2, 2, DustID.ManaRegeneration, 0f, 0f, 100, Color.White, 1.6f);
+                                            Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(6f, 0f), m / (float)20 * 6.28f);
+                                            Main.dust[dustID].noLight = false;
+                                            Main.dust[dustID].noGravity = true;
+                                        }
+                                        SoundEngine.PlaySound(SoundID.Item15 with { Volume = 1.30f }, NPC.position);
                                         if (Main.netMode != NetmodeID.MultiplayerClient)
                                         {
                                             int Sentry = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, BaseWorldGen.GetFirstTileFloor((int)NPC.Center.X / 16, (int)NPC.Center.Y / 16) * 16, ModContent.NPCType<GlowSentry>(), 0);

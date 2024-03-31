@@ -303,7 +303,12 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
 		public override void TownNPCAttackStrength(ref int damage, ref float knockback)
 		{
-			damage = 70;
+			if (Main.hardMode)
+				damage = 70;
+			else if (NPC.downedMoonlord)
+				damage = 140;
+			else
+				damage = 20;
 			knockback = 6f;
 		}
 

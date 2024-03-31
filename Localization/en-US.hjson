@@ -114,8 +114,8 @@ Mods: {
 			}
 
 			VoidDashCooldown: {
-				DisplayName: Void Dash Cooldown
-				Description: Void invincibility is disabled
+				DisplayName: Dark Dash Cooldown
+				Description: Dark invincibility is disabled
 			}
 
 			Nihil: {
@@ -479,7 +479,7 @@ Mods: {
 				DisplayName: Darklight Visage
 				Tooltip:
 					'''
-					Grants a void dash that has invincibility frames and also allows dashing downwards
+					Grants a dark dash that has invincibility frames and also allows dashing downwards
 					Dashing into an enemy or projectile removes the i-frame granting dark energy
 					dark energy is replenished after 10 seconds
 					Dashing into an enemy inflicts them with the Nihil debuff for 2 seconds
@@ -879,7 +879,7 @@ Mods: {
 				DisplayName: Tidal Quartz
 				Tooltip: ""
 				Lore:
-				    '''
+					'''
 					A unique mineral carried by Storm Eels and Fishron,
 					Said to be the stolen treasure of a lost deep sea city.
 					Distant and faded visions of a great calamity dance across your mind when holding this.
@@ -2060,7 +2060,7 @@ Mods: {
 			Shinorian: {
 				DisplayName: Hex Rapier
 				Tooltip:
-				    '''
+					'''
 					Inflicts Accused
 					Cursed enemies are haunted by ghosts
 					'''
@@ -3850,7 +3850,7 @@ Mods: {
 
 		Dialogue: {
 			Dorira: {
-				GoblinDialogue: I came here because I heard the anomalies in this dimension are very bad, {0}'s money sucking service is DEFINETILY one.
+				GoblinDialogue: I came here because I heard the anomalies in this dimension are very bad, {0}'s money sucking service is DEFINITELY one.
 				DemolitionistDialogue: When I go monster hunting, I will always buy {0}'s explosives from now on. Why I need bombs for hunting? You think a raw wall will do the trick? PAH!
 				GenericDialogue1: When you are going to the Underworld, don't run into a wall.
 				GenericDialogue2: serglhw3o85zhp35ognpügd1312mfghödfdlhgftzjmdzinhwüß046ihn
@@ -3903,7 +3903,7 @@ Mods: {
 				GenericDialogue4: Dem mushromz hit hart todai
 				GenericDialogue6: Sometimes my dad was so annoying that I told him to finally go get some milk.
 				GenericDialogue7: I heard there is a kingdom full of mushroom people, but it’s not ruled by a mushroom, do you think it’s real?
-				GenericDialogue8: Yo, would be awesome if you were to meet my uncle. If you bring me like, 5 of these Hovercaps, I'm going to give you something that will definetily draw his attention. Why I need those caps? Well I find it really funny to use them as a frisbee.
+				GenericDialogue8: Yo, would be awesome if you were to meet my uncle. If you bring me like, 5 of these Hovercaps, I'm going to give you something that will definitely draw his attention. Why I need those caps? Well I find it really funny to use them as a frisbee.
 				#Below is Alch Mushroom dialogue
 				TradeSuccess1: Yo awesome, take these for your work.
 				TradeSuccess2: Thanks, my other contact will really appreciate these!

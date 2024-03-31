@@ -103,11 +103,6 @@ Mods: {
 				// Description: Your heart lusts for battle, meele damage is increased.
 			}
 
-			RoseVenom: {
-				// DisplayName: Rose Venom
-				// Description: There is poison under your skin, take it off, get it out
-			}
-
 			CosimaBuff: {
 				// DisplayName: Cassiopeia
 				// Description: Just hacked herself into your life
@@ -454,7 +449,7 @@ Mods: {
 					''' */
 				/* Lore:
 					'''
-					The eye that sees all, a gaze upon us, definetily a sight to behold,
+					The eye that sees all, a gaze upon us, definitely a sight to behold,
 					if only this artifact wasn't just as dangerous as it is helpful.
 					Using it grants the wearer the ability to see unseen things,
 					but the dark shady hex that lies within can also blind them forever.
@@ -485,16 +480,16 @@ Mods: {
 				/* Tooltip:
 					'''
 					Grants a void dash that has invincibility frames and also allows dashing downwards
-					Dashing into an enemy or projectile removes the i-frame granting void energy
-					Void energy is replenished after 10 seconds
+					Dashing into an enemy or projectile removes the i-frame granting dark energy
+					dark energy is replenished after 10 seconds
 					Dashing into an enemy inflicts them with the Nihil debuff for 2 seconds
 					Enemies inflicted with Nihil lose all their defense
 					''' */
 				/* Lore:
 					'''
-					Void energy does not belong here, and it was never supposed to mix with dimensional energy.
-					But here we are, void matter that was tainted by light and turned bright, 
-					with the darkness still trying to reclaim its property.
+					A curious substance that attempts to mimic primordial light, or perhaps...?
+					Whatever this darkness is, it springs from a nightmare dwelling beyond our scope,
+					and despite being purely dark in nature, it still radiates an aura of tainted light.
 					''' */
 			}
 
@@ -555,11 +550,6 @@ Mods: {
 					'''
 					Increases minion damage by 6%
 					You can rub it onto your skin to smell like crap
-					''' */
-				/* Lore:
-					'''
-					The inside of jungle slimes has a weird rotten smell,
-					it was often used by lihzahrds to protect themself from predators
 					''' */
 			}
 
@@ -719,8 +709,8 @@ Mods: {
 				// DisplayName: Energy Fish
 				/* Tooltip:
 					'''
-					Right click to extract Dimensium.
 					Certain fish can consume Dimensium and become charged themself
+					Right click to extract Dimensium.
 					''' */
 			}
 
@@ -762,9 +752,8 @@ Mods: {
 				// Tooltip: ""
 				/* Lore:
 					'''
-					The physical incarnation of the nothingness outside our plain of existence.
-					A strange fog is emitting from it,
-					must be a reaction to the energy signature of our existence.
+					Said to be the physical incarnation of the nothingness outside our plain of existence.
+					Nightmarish fumes emanate from the mass, giving off a strange comforting yet haunting aura.
 					''' */
 			}
 
@@ -777,9 +766,8 @@ Mods: {
 					''' */
 				/* Lore:
 					'''
-					The most common dimensional energy in form of a crystal
-					It is a valuable source of energy amongst the people who know of its existence
-					A certain dimensional traveler might want this
+					The most common dimensional energy in form of a crystal.
+					It is a valuable source of energy amongst the people who know of its existence.
 					''' */
 			}
 
@@ -793,7 +781,7 @@ Mods: {
 				// Tooltip: ""
 				/* Lore:
 					'''
-					The scale of a juvenile ice drake, its cold and soft.
+					The scale of a juvenile ice drake, it's cold and soft.
 					Ice Drakes reside underground until they become too big for the small ice caves.
 					You can notice where a nest has been in the past by the amount of scales found in one spot.
 					''' */
@@ -821,7 +809,7 @@ Mods: {
 
 			ManaInfusedSandstone: {
 				// DisplayName: Mana Sandstone
-				// Tooltip: Sandstone remains of a Lesser Sand Elemental, it still pulsates with pure mana.
+				// Tooltip: Sandstone remains of a Lesser Sand Elemental, it still pulsates with mana.
 			}
 
 			Mushmatter: {
@@ -889,10 +877,12 @@ Mods: {
 
 			TidalQuartz: {
 				// DisplayName: Tidal Quartz
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
-					A unique mineral rarely found inside ocean creatures
-					Fishron and Storm Front Eels often gather and carry a large amount of them
+					A unique mineral carried by Storm Eels and Fishron,
+					Said to be the stolen treasure of a lost deep sea city.
+					Distant and faded visions of a great calamity dance across your mind when holding this.
 					''' */
 			}
 
@@ -938,7 +928,7 @@ Mods: {
 
 			AncientDepictionItem: {
 				// DisplayName: Ancient Depiction
-				// Tooltip: A big and heavy sandstone tablet, it depicts a one eyed bird
+				// Tooltip: A big and heavy sandstone tablet, it depicts a one eyed bird.
 			}
 
 			AncientDragonSkull: {
@@ -1061,7 +1051,7 @@ Mods: {
 				// DisplayName: Broken Ancient Depiction
 				/* Tooltip:
 					'''
-					A big and heavy sandstone tablet, it seems to be broken and it's difficult to guess what it is showing.
+					A big and heavy sandstone tablet, it seems to be broken and it's difficult to guess what is engraved on it.
 					Dont drop it on the ground, its fragile
 					''' */
 			}
@@ -1091,7 +1081,7 @@ Mods: {
 					'''
 					The forge of the Dimensional God, it is able to craft Items with Dimensium.
 					Needs Dimensium as fuel
-					Seems like a great invention but anyone who really knows what dimensional energy is would point out every flaw.
+					Seems like a great invention but anyone who really knows what dimensional energy is would point out the cheap design.
 					''' */
 			}
 
@@ -1105,7 +1095,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Is used to craft Void Matter items.
-					All Darklings were once forged in such a fabricator by the Empty Emperor, a entity unseen to this day.
+					All Darklings were once forged in such a fabricator by the Empty Emperor, an entity unseen to this day.
 					''' */
 			}
 
@@ -1339,6 +1329,7 @@ Mods: {
 					A oceanic apex predator that normally lives in more open waters,
 					sometimes they come near the shores which puts civilians in great danger, even on land.
 					Interestingly enough, despite being a creature from the seas, Fishrons can fly.
+					They seem to have distant connections to the storm.
 					''' */
 			}
 
@@ -1350,7 +1341,7 @@ Mods: {
 					She was once the guardian angel of the kingdom of Gunresat, protecting it with all her might.
 					She is bound to it by a spell, created by their ancestors when they were in need of this protection.
 					That is the sole reason why she fought in the war between Gunresat and Baaruun,
-					she was dragged there by force using the ancient spell.
+					she was dragged into it using the ancient spell.
 					But when the armies got captured, she was able to roam free, free from her shackles,
 					and there she now found a new purpose in protecting something with her own will, small Prismatic Lacewings.
 					''' */
@@ -1371,7 +1362,7 @@ Mods: {
 				// Tooltip: ""
 				/* Lore:
 					'''
-					When the lands were scorched to ashes long ago, the lihzahrds locked themself in their temple to be safe. 
+					When the lands started to experience one disaster after another, the lihzahrds locked themself in their temple to be safe. 
 					To be really sure that nothing enters and kills them all, they created a golem made of the same material as their temple. 
 					It was modeled after the sun deity they see in their dreams, powered by pure solar energy. 
 					The Golem isn’t much, a solid protector against unwanted guests, but not a fighter either.
@@ -1454,13 +1445,14 @@ Mods: {
 				// Tooltip: The echo of a powerful soul flows through this shard.
 				/* Lore:
 					'''
-					Smiley was born from void, forged by an empty emperor so that the pointless mass could spread itself across the universe.
-					But something was different, he grew a mind of his own, a soul to feel emotions...
-					He had own wishes, did not want to obey his master, and this obviously angered said master.
-					In a conflict they battled, Smiley stood no chance, but his brethren react differently now.
+					Smiley was born from void, forged by an empty emperor who used his own emptieness in his heart as fuel.
+					The intentions of his creator never became known to him, all he knew was that the void shall spread,
+					to be able to find more void and grow stronger.
+					Unlike his other siblings, his mind was hit with a revelation, he suddenly began to feel emotions...
+					He had own wishes, did not want to obey his master anymore, and this obviously angered said master.
+					In a conflict they battled and Smiley stood no chance, but his brethren reacted now.
 					Their expression changed, they opened their eyes and rushed to aid him.
-					During this incident, a lot of Darklings gave their life and a big chunk of the void entities fled,
-					now lurking in the dungeon, awaiting the day where they can live free in peace.
+					During this incident, a lot of Darklings gave their life, with the rest fleeing to be free at last.
 					''' */
 			}
 
@@ -1556,7 +1548,7 @@ Mods: {
 					'''
 					A weird smiling pile of dark matter pulsing with energy.
 					Summons Smiley at night
-					Warning, boss is currently extremely unstable in multiplayer and will despawn in all cases.
+					Warning, boss is currently unstable in multiplayer.
 					''' */
 			}
 
@@ -1779,7 +1771,7 @@ Mods: {
 				// DisplayName: Star Rod
 				/* Tooltip:
 					'''
-					A small magic staff that uses atmospheric energy to prduce small stars that fall from the sky
+					A small magic staff that uses atmospheric energy to produce small stars that fall from the sky
 					Does extra damage to void entities
 					''' */
 			}
@@ -1883,16 +1875,6 @@ Mods: {
 					''' */
 			}
 
-			PokingFool: {
-				// DisplayName: Poking Fool
-				// Tooltip: Poke your enemies until they go away
-			}
-
-			PokingLoser: {
-				// DisplayName: Poking Loser
-				// Tooltip: Poke your enemies until they go away
-			}
-
 			RadiantAcceptance: {
 				// DisplayName: Radiant Acceptance
 				/* Tooltip:
@@ -1911,11 +1893,6 @@ Mods: {
 					''' */
 			}
 
-			ShiningRejection: {
-				// DisplayName: Shining Rejection
-				// Tooltip: Reject your enemies until they go away
-			}
-
 			Soulpiercer: {
 				// DisplayName: Soulpiercer
 				// Tooltip: Doesnt affect soulless beings
@@ -1928,11 +1905,6 @@ Mods: {
 					Inflicts Drakeblood Poison
 					A famous weapon amongst the vikings that is covered in toxificated drake blood.
 					''' */
-			}
-
-			WingedAnnoyance: {
-				// DisplayName: Winged Annoyance
-				// Tooltip: Annoy your enemies until they go away
 			}
 
 			WingedNuisance: {
@@ -1963,7 +1935,7 @@ Mods: {
 				/* Lore:
 					'''
 					This ceremonial sword was used to burn marks into the skin of cult members, 
-					a painful process.
+					which was a painful process.
 					The deep red mark shows true dedication to their god and must be done to fully join their cult,
 					anyone who refused was exiled as a heretic.
 					Outside of those ceremonies, this weapon was used by the cult leader for various dark rituals.
@@ -2005,16 +1977,6 @@ Mods: {
 				// Tooltip: Stab with the power of dirt.
 			}
 
-			DormantKing: {
-				// DisplayName: Dormant King
-				/* Tooltip:
-					'''
-					Slows down enemies on hit for 5 seconds
-					The hidden cult in the desert worships a deity of destruction,
-					a monstrous bird that will some day end us all.
-					''' */
-			}
-
 			EclipseReaper: {
 				// DisplayName: Hidden Sun Soulreaper
 				/* Tooltip:
@@ -2039,21 +2001,6 @@ Mods: {
 			FishronCleaver: {
 				// DisplayName: Fishron Cleaver
 				// Tooltip: Spews bubbles with every swing
-			}
-
-			FrostbornBlade: {
-				// DisplayName: Frostborn Blade
-				// Tooltip: Shoots several frost spikes that inflict Frostbite
-			}
-
-			GreatToothsword: {
-				// DisplayName: Skeletal Greatsword
-				/* Tooltip:
-					'''
-					The sword throws out bones of the former victims with every swing
-					How cruel the world is, humans killing humans for nothing.
-					Some are especially cruel and process their victims into weapons, just to show off how many they have killed.
-					''' */
 			}
 
 			Lifelight: {
@@ -2112,11 +2059,15 @@ Mods: {
 
 			Shinorian: {
 				// DisplayName: Hex Rapier
-				// Tooltip: Inflicts Accused
+				/* Tooltip:
+					'''
+					Inflicts Accused
+					Cursed enemies are haunted by ghosts
+					''' */
 				/* Lore:
 					'''
 					A cursed thrusting sword empowered by malicious runes.
-					The curses that were laid onto this weapon are ancient and have no counterspell,
+					The curses laid onto this weapon are ancient and have no counterspell,
 					the hex isn't at its peak though and as such won't be able to cause any major harm.
 
 					Some say that this weapon was crafted out of spite against all life,
@@ -2262,7 +2213,7 @@ Mods: {
 
 			DesertEagle: {
 				// DisplayName: Desert Eagle
-				// Tooltip: The lamest joke all across dimensions.
+				// Tooltip: The lamest joke all across the universe.
 			}
 
 			MetalWormGun: {
@@ -2339,7 +2290,7 @@ Mods: {
 				// DisplayName: Dark Rebels
 				/* Tooltip:
 					'''
-					Calls a brave Darkling to your side, ready to defeat the void.
+					Calls a brave Darkling to your side, ready to defeat the darkness.
 					Only the bravest Darklings who hide in the dungeon will go outside on their own.
 					''' */
 			}
@@ -2531,7 +2482,7 @@ Mods: {
 				// Tooltip: ""
 				/* Lore:
 					'''
-					Soft silk cloth worn by Victims, it somehow stays warm, even in this frozen environment.
+					Soft silk cloth worn by Victims that somehow stays warm, even in this frozen environment.
 					It is said that this warmth comes from the sins of a great devil, integrated into this cloth.
 					''' */
 			}
@@ -2615,17 +2566,12 @@ Mods: {
 				// Tooltip: A special metal from a faraway civilization, its special properties can protect one's mind.
 			}
 
-			SoulRemnant: {
-				// DisplayName: Soul Remnant
-				// Tooltip: Weak and pathetic remains of a once powerful soul, its energy signature is now blank
-			}
-
 			ShadeEye: {
 				// DisplayName: Light Deprived Eye
 				/* Tooltip:
 					'''
 					The eyeball of a creature that was going to mutate into a madness monstrosity, it seems to have been interrupted halfway through
-					It is covered in a weird pitch black substance, you can hear strange whispers eminating from it...
+					It is covered in a weird pitch black substance and you can hear strange whispers emanating from it...
 					''' */
 				/* Talk:
 					'''
@@ -2651,7 +2597,7 @@ Mods: {
 					Weird mushrooms that only grow while madness visits.
 					Their cap contains madness inducing juices that can be used for medicine.
 					Handle with extreme caution!
-					The Mushroom Heir might be interested in this
+					Dappercap might be interested in this
 					''' */
 			}
 
@@ -2767,9 +2713,8 @@ Mods: {
 				/* Lore:
 					'''
 					Unique Void Matter that went through a change
-					Smiley despises his origins, so in order to escape his own darkness
-					he wished to not be dark anymore.
-					His body turned pale in response to his undying will.
+					Smiley's will is strong, so strong that he can even defy his own being.
+					This substance is proof enough and might one day lead to a brighter future.
 					''' */
 			}
 
@@ -2875,6 +2820,7 @@ Mods: {
 					'''
 					A very pricey mushroom only found in the Scarlet Mycelium Forest
 					It makes a lot of noise that only mushrooms can hear
+					Use near a Sleeping Mushroom to wake it up
 					''' */
 			}
 
@@ -2937,7 +2883,7 @@ Mods: {
 					He rules over the blue glowing mushrooms underground, but he has way more influence, 
 					so his glow stretches all over the continent's caverns.
 					This is unlike his brother, who only rules a small forest.
-					This being was mindless long ago, obeying distant orders, that was until it was blessed by light, claiming its new self.
+					He was mindless long ago, obeying distant orders, that was until it was blessed by light, claiming its new self.
 					''' */
 			}
 
@@ -3107,8 +3053,9 @@ Mods: {
 					despite their somewhat bland and meaningless look, 
 					they tell stories from beyond and further.
 					The Ethereal Eye that is radiating from this rune is the sign of the Cosmic Keeper,
-					the one who sees the blood, 
-					the one who speaks in foreign words even higher beings can't comprehend.
+					a unique individual who can hear the fungi.
+					He who sees the blood, 
+					who speaks in foreign words even higher beings cannot comprehend.
 					''' */
 			}
 
@@ -3204,9 +3151,9 @@ Mods: {
 				/* Lore:
 					'''
 					When in doubt or despair, the glowing fungi can turn towards the light and pray,
-					pray for safety, pray for continued freedom.
+					pray for safety, pray for continued fortune.
 					Their very own light is what shines in the dark caverns, the light from within,
-					the light from beyond, the light of care.
+					the light from beyond, the light of freedom.
 					The scarlet fungi do not share this light, only one and its kin have ever enjoyed its warm radiance.
 					''' */
 			}
@@ -3903,9 +3850,8 @@ Mods: {
 
 		Dialogue: {
 			Dorira: {
-				// GoblinDialogue: I came here because I heard the anomalies in this dimension are very bad, {0}'s money sucking service is DEFINETILY one.
+				// GoblinDialogue: I came here because I heard the anomalies in this dimension are very bad, {0}'s money sucking service is DEFINITELY one.
 				// DemolitionistDialogue: When I go monster hunting, I will always buy {0}'s explosives from now on. Why I need bombs for hunting? You think a raw wall will do the trick? PAH!
-				// MechanicDialogue: "{0}'s father was a real celebrity I heard, a super engineer who built the craziest things. A shame he died in a fire some time ago."
 				// GenericDialogue1: When you are going to the Underworld, don't run into a wall.
 				// GenericDialogue2: serglhw3o85zhp35ognpügd1312mfghödfdlhgftzjmdzinhwüß046ihn
 				// GenericDialogue3: I've had a weird feeling since a while, its as if everything could go mad any second...
@@ -3919,6 +3865,7 @@ Mods: {
 				// GenericDialogue11: The best game design choice ever made was giving the desert furry a secret one-shot attack.
 				// GenericDialogue12: I hope I can fix everything somehow...
 				// GenericHardmodeDialogue1: Hey just between us two, if you happen to possess a sword made of fish, throw it into some weird liquid. ;)
+				// YttriumDialogue: Crabs have grown in power, soon they will oberthrow us and become the dominant species. No but seriously, you should check out those crabs at the ocean.
 				// MushroomDialogue: I had a dream where you showed me all of these alchemy mushrooms in a glowing mushroom biome while shopping with me. I think you did that after defeating a weird stone construct powered by solar energy.
 				#Below is help dialogue
 				// ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
@@ -3956,7 +3903,7 @@ Mods: {
 				// GenericDialogue4: Dem mushromz hit hart todai
 				// GenericDialogue6: Sometimes my dad was so annoying that I told him to finally go get some milk.
 				// GenericDialogue7: I heard there is a kingdom full of mushroom people, but it’s not ruled by a mushroom, do you think it’s real?
-				// GenericDialogue8: Yo, would be awesome if you were to meet my uncle. If you bring me like, 5 of these Hovercaps, I'm going to give you something that will definetily draw his attention. Why I need those caps? Well I find it really funny to use them as a frisbee.
+				// GenericDialogue8: Yo, would be awesome if you were to meet my uncle. If you bring me like, 5 of these Hovercaps, I'm going to give you something that will definitely draw his attention. Why I need those caps? Well I find it really funny to use them as a frisbee.
 				#Below is Alch Mushroom dialogue
 				// TradeSuccess1: Yo awesome, take these for your work.
 				// TradeSuccess2: Thanks, my other contact will really appreciate these!
@@ -4086,7 +4033,7 @@ Mods: {
 			// IceDrakeJuvenile: Juvenile Ice Drakes usually reside underground where they hunt prey via ambush. They can be approached savely when they are asleep. They really love gilded dishes.
 			// Glowmarin: A fish from another dimension, they have glowing organs all over their body, suggesting that they originally lived in deeper waters.
 			// Lobster: Odd lobster species that lives near the shores, they have a parrot like beak which gives them their name. Their meat is very tasty and can make a nice dish.
-			// StormEel: The great storm eels, only active during storms, when the sea is harsh and unforgiving. Many people believe they are scouts, scouts of something deep under the ocean, that is why these creatures are seen as an omen of even worse to come
+			// StormEel: The great storm eels, only active during storms, when the sea is harsh and unforgiving. Many people believe they are scouts of something deep under the ocean. That is why these creatures are seen as an omen of even worse to come.
 			// Dusty: Piles of cooled ash given life by the potent magic of the Frozen Underworld. They have no mind or soul, they only fly around on the icy winds, exploding into ash on impact.
 			// Victim: A poor soul that has lost everything to the burning winds of ice. They fled through a space-time rift into the Underworld after their home had begun to slowly be consumed by the Abyssal Sin. They have long forgotten who they even are.
 			// VictimEye: The eye of a Victim, it became sentient after its host body started to show signs of weakness.
@@ -4163,10 +4110,9 @@ Mods: {
 
 		DropConditions: {
 			// DownedSkeletronCondition: Only available after defeating Skeletron.
-			// DownedMoonLordCOndition: Only available after defeating the Moon Lord.
 			// RealityCondition: Drops by doing unessecery complicated stuff.
 			// DimensiumCondition: This item won't appear in the bestiary.
-			// DownedMoonLordCondition: Mods.MultidimensionMod.DropConditions.DownedMoonLordCondition
+			// DownedMoonLordCondition: Only available after defeating Moon Lord
 		}
 
 		SpecialTooltips: {
