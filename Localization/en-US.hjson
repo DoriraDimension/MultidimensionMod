@@ -3693,7 +3693,7 @@ Mods: {
 			FreezeAura.DisplayName: Freeze Aura
 			Mushshot.DisplayName: Telekinetic Bullet
 			EvokedMushroots.DisplayName: Evoked Mushroots
-			IlluminaRing.DisplayName: Illumina Ring
+			IlluminaRing.DisplayName: Illumina Aura
 			Mushshot2.DisplayName: Telekinetic Rain
 			RadianceShot.DisplayName: Radiance Rain
 			PureRadianceShot.DisplayName: Pure Radiance Rain
@@ -3715,7 +3715,7 @@ Mods: {
 			FungusDie.DisplayName: Feudal Fungus reflection
 			FungusMemory.DisplayName: Feudal Fungus reflection
 			MushWave.DisplayName: Telekinetic Wave
-			RadiantIlluminaRing.DisplayName: Radiant Illumina Ring
+			RadiantIlluminaRing.DisplayName: Radiant Illumina Aura
 			Glowxplosion.DisplayName: Glowxplosion
 			DimensionalLightning.DisplayName: Dimensional Lightning
 			MonarchBab.DisplayName: Bab Monarch
@@ -3724,6 +3724,7 @@ Mods: {
 			SeethingEmber.DisplayName: Seething Ember
 			SpiritEmber.DisplayName: Spirit Ember
 			PufferFart.DisplayName: Puffer Fart
+			FadedLightRing.DisplayName: Faded Light Aura
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -3801,7 +3802,12 @@ Mods: {
 
 			AdelSpirit.DisplayName: Adel von Gunresat
 			VertrariusSpirit.DisplayName: Vertrarius von Baaruun
-			MushroomMonarch.DisplayName: Mushroom Monarch
+
+			MushroomMonarch: {
+				DisplayName: Mushroom Monarch
+				PowerUp: The scarlet monarch's faded light stirs...
+			}
+
 			RedMushling.DisplayName: Red Mushling
 
 			MushroomHeir: {
