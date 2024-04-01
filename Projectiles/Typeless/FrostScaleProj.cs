@@ -25,10 +25,10 @@ namespace MultidimensionMod.Projectiles.Typeless
             Projectile.DamageType = DamageClass.Generic;
             Projectile.ignoreWater = false;
             Projectile.tileCollide = false;
-            Projectile.timeLeft = 150;
+            Projectile.timeLeft = 180;
             Projectile.penetrate = -1;
             Projectile.usesLocalNPCImmunity = true;
-            Projectile.localNPCHitCooldown = 30;
+            Projectile.localNPCHitCooldown = 60;
         }
 
         public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough, ref Vector2 hitboxCenterFrac)

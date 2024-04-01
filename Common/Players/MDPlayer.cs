@@ -356,42 +356,42 @@ namespace MultidimensionMod.Common.Players
                     Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<FriendlyProbe>(), (int)info.Damage + 40, 0f, Player.whoAmI);
                 }
             }
-            if (DrakeShield && !Player.lavaWet)
+            if (DrakeShield && !Player.lavaWet && Player.ownedProjectileCounts[ModContent.ProjectileType<FrostScaleProj>()] < 4)
             {
                 if (Main.myPlayer == Player.whoAmI)
                 {
                     for (int i = 0; i < 2; i++)
                     {
                         Item item = DrakescaleShield;
-                        Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.Next(-11, 11) * .25f, -7 * .75f), ModContent.ProjectileType<FrostScaleProj>(), (int)info.Damage + 18, 0f, Player.whoAmI);
+                        Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.Next(-11, 11) * .25f, -7 * .75f), ModContent.ProjectileType<FrostScaleProj>(), (int)info.Damage / 2, 0f, Player.whoAmI);
                     }
                 }
             }
-            if (DrakeShield && !Player.lavaWet)
+            if (DrakeShield && !Player.lavaWet && Player.ownedProjectileCounts[ModContent.ProjectileType<FrostScaleProj>()] < 4)
             {
                 if (Main.myPlayer == Player.whoAmI)
                 {
                     for (int i = 0; i < 2; i++)
                     {
                         Item item = ColdDesertShield;
-                        Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.Next(-11, 11) * .25f, -7 * .75f), ModContent.ProjectileType<FrostScaleProj>(), (int)info.Damage + 18, 0f, Player.whoAmI);
+                        Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.Next(-11, 11) * .25f, -7 * .75f), ModContent.ProjectileType<FrostScaleProj>(), (int)info.Damage/ 2, 0f, Player.whoAmI);
                     }
                 }
             }
             if (DesertNeck && !Player.HasBuff(ModContent.BuffType<ManaBurstCooldown>()))
             {
-                int damage = Player.statMana;
+                int damage = Player.statMana / 2;
                 if (Main.hardMode)
                 {
-                    damage = Player.statMana * 2;
+                    damage = Player.statMana;
                 }
                 if (Main.myPlayer == Player.whoAmI)
                 {
-                    Player.AddBuff(ModContent.BuffType<ManaBurstCooldown>(), 300);
+                    Player.AddBuff(ModContent.BuffType<ManaBurstCooldown>(), 420);
                     SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/ManaBurst"));
                     Player.statMana -= Player.statMana;
                     Item item = DesertNecklace;
-                    Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(0, 0), ModContent.ProjectileType<ManaShockwave>(), (int)info.Damage + damage, 0f, Player.whoAmI);
+                    Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(0, 0), ModContent.ProjectileType<ManaShockwave>(), damage, 0f, Player.whoAmI);
                 }
             }
             if (MonarchHeart)

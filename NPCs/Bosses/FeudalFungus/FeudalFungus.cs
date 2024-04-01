@@ -138,6 +138,10 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             NPC.dontTakeDamage = true;
             NPC.AL().CantHurtDapper = true;
             NPC.BossBar = ModContent.GetInstance<FungusBossBar>();
+            if (Main.getGoodWorld)
+            {
+                NPC.scale = 0.5f;
+            }
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
