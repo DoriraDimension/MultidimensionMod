@@ -29,7 +29,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.width = 26;
             NPC.height = 26;
             NPC.defense = 0;
-            NPC.lifeMax = 50;
+            NPC.lifeMax = 5;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.knockBackResist = 0.8f;

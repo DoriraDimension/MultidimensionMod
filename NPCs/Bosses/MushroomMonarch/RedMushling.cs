@@ -22,9 +22,9 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
 
         public override void SetDefaults()
         {
-            NPC.lifeMax = 50;
+            NPC.lifeMax = 25;
             NPC.damage = 6;
-            NPC.defense = 5;
+            NPC.defense = 4;
             NPC.knockBackResist = 1f;
             NPC.value = Item.sellPrice(0, 0, 0, 0);
             NPC.aiStyle = -1;
