@@ -3117,6 +3117,11 @@ Mods: {
 			TheDapperCap: {
 				// DisplayName: The Dapper Cap
 				// Tooltip: A stylish mushroom cap only worn by the coolest fun guys
+				/* Lore:
+					'''
+					It was said that on a sunny day when the glowing royalty visited the scarlet monarch,
+					a mushling was struck with will and so became its own being.
+					''' */
 			}
 
 			TheStem: {
@@ -4057,7 +4062,7 @@ Mods: {
 			// Vertrarius: A grumpy demon who wields the Evil Ember, Vulkanus. He is lazy and does not care about anyone but his lord, making him the most unreliable person in existence. When Gunresat declared war against Baaruun, he fought as Baaruun's leader out of boredom.
 			// Smiley: The leader of the Darklings that hide inside the dungeon. His powers are unrivaled and respected amongst his followers and he is equally loved as well. In response to the incredible anger against his origins, his body turned pale to rebel against his darkness.
 			// Grudge: The incarnation of despair and hope that piled up in the Frozen Underworld, born from the deep wishes of its residents and the abyssal magic that lurks inside. You have slain their biggest hope, so be assured, the winds are not happy about your slaughter.
-			// MushroomMonarch: A royal mushroom who rests in the Scarlet Mycelium Forest. He was way more powerful a long time ago, but he laid down his will to fight in exchange for a peaceful life. Nowadays he is just a grumpy old king in his tiny kingdom.
+			// MushroomMonarch: A royal mushroom who rests in the Scarlet Mycelium Forest. He had more light to fight with a long time ago, but it has since faded. Nowadays he is just a grumpy old king in his tiny kingdom of peace.
 			// RedMushling: The monarchs loyal servants which are formed from his own flesh. They have no mind, only following their task to kill whatever is in their way.
 			// FeudalFungus: A large humanoid glowing mushroom who is known as the glowing royalty. As its name suggests, it possesses an elegant blue hued glow that only becomes stronger the more it taps into its inner light. A long time ago it took upon the name "Lumos", referencing the memory it now shares. Only the mushrooms know what hides under its light.
 			// Toad: Rare toads that have grown large and somehow found their way into the glowing caverns. Their ability to jump is greatly crippled due to mycelium restraining the movement of their back legs. They are peaceful until provoked.

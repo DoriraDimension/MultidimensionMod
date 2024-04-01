@@ -3118,10 +3118,10 @@ Mods: {
 				DisplayName: The Dapper Cap
 				Tooltip: A stylish mushroom cap only worn by the coolest fun guys
 				Lore:
-				   '''
-				   It was said that on a sunny day when the glowing royalty visited the scarlet monarch,
-				   a mushling was struck with will and so became its own being.
-				   '''
+					'''
+					It was said that on a sunny day when the glowing royalty visited the scarlet monarch,
+					a mushling was struck with will and so became its own being.
+					'''
 			}
 
 			TheStem: {
