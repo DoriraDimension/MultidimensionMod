@@ -259,7 +259,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                 {
                     if (!Main.dedServ)
                     {
-                        MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Bosses.Feudal.Name"), 60, 90, 1.0f, 0, Color.Blue, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Bosses.Feudal.Title"));
+                        MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Bosses.Feudal.Name"), 60, 90, 1.0f, 0, MDColors.FeudalBlue, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Bosses.Feudal.Title"));
                         TitleCard = true;
                     }
                 }

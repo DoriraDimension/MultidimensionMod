@@ -13,7 +13,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[NPC.type] = 6;
+            Main.npcFrameCount[NPC.type] = 5;
             NPCID.Sets.DontDoHardmodeScaling[Type] = true;
             NPCID.Sets.CantTakeLunchMoney[Type] = true;
             NPCID.Sets.NPCBestiaryDrawModifiers value = new(0) { Hide = true };
@@ -28,8 +28,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             NPC.knockBackResist = 0f;
             NPC.value = Item.sellPrice(0, 0, 0, 0);
             NPC.aiStyle = -1;
-            NPC.width = 16;
-            NPC.height = 18;
+            NPC.width = 40;
+            NPC.height = 110;
             NPC.npcSlots = 0f;
             NPC.netAlways = true;
             NPC.HitSound = SoundID.NPCHit1;
@@ -48,12 +48,12 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             int FrameSpeed = 6;
             if (NPC.frameCounter >= FrameSpeed)
             {
-                NPC.frame.Y += 28;
+                NPC.frame.Y += 112;
                 NPC.frameCounter = 0;
-                if (NPC.frame.Y > (28 * 5))
+                if (NPC.frame.Y > (112 * 4))
                 {
                     NPC.frameCounter = 0;
-                    NPC.frame.Y = 100 * 5;
+                    NPC.frame.Y = 112 * 4;
                 }
             }
         }

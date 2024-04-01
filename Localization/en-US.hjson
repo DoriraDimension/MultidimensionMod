@@ -2879,7 +2879,7 @@ Mods: {
 					'''
 				Lore:
 					'''
-					The Feudal Fungus, also known as Lumos, the Radiant Apostle or glowing royalty is just like his brother and rules over a type of mushroom.
+					The Feudal Fungus, also known as Umos, the Radiant Apostle or glowing royalty is just like his brother and rules over a type of mushroom.
 					He rules over the blue glowing mushrooms underground, but he has way more influence, 
 					so his glow stretches all over the continent's caverns.
 					This is unlike his brother, who only rules a small forest.
@@ -3069,6 +3069,7 @@ Mods: {
 				Tooltip:
 					'''
 					Draws the attention of the glowing royalty
+					Can only be used in a Glowing Mushroom Biome
 					Non-consumable
 					'''
 				Lore:
@@ -3274,7 +3275,7 @@ Mods: {
 					A previous unreadable page has been revealed due to the now glowing texts
 					'The sleeping light, we defend with all our might,
 					one day it may awake, undo all that's in its wake,
-					we follow and move on, may we find oblivion.
+					we follow and move on, the marsh into oblivion.
 					'''
 			}
 
@@ -3843,7 +3844,7 @@ Mods: {
 
 			FeudalFungus: {
 				DisplayName: Feudal Fungus
-				SecondPhaseName: Lumos
+				SecondPhaseName: Umos
 			}
 
 			GlowSentry.DisplayName: Empowered Glowing Mushroom
@@ -4064,7 +4065,7 @@ Mods: {
 			Grudge: The incarnation of despair and hope that piled up in the Frozen Underworld, born from the deep wishes of its residents and the abyssal magic that lurks inside. You have slain their biggest hope, so be assured, the winds are not happy about your slaughter.
 			MushroomMonarch: A royal mushroom who rests in the Scarlet Mycelium Forest. He had more light to fight with a long time ago, but it has since faded. Nowadays he is just a grumpy old king in his tiny kingdom of peace.
 			RedMushling: The monarchs loyal servants which are formed from his own flesh. They have no mind, only following their task to kill whatever is in their way.
-			FeudalFungus: A large humanoid glowing mushroom who is known as the glowing royalty. As its name suggests, it possesses an elegant blue hued glow that only becomes stronger the more it taps into its inner light. A long time ago it took upon the name "Lumos", referencing the memory it now shares. Only the mushrooms know what hides under its light.
+			FeudalFungus: A large humanoid glowing mushroom who is known as the glowing royalty. As its name suggests, it possesses an elegant blue hued glow that only becomes stronger the more it taps into its inner light. A long time ago it took upon the name "Umos", referencing the memory it now shares. Only the mushrooms know what hides under its light.
 			Toad: Rare toads that have grown large and somehow found their way into the glowing caverns. Their ability to jump is greatly crippled due to mycelium restraining the movement of their back legs. They are peaceful until provoked.
 			ShroomJelly: A jellyfish like creature who likes to hide buried in the ground disguised as a mushroom.
 			MyceliBug: Large insect that lives in the Scarlet Mycelium Forest, they feast on nutrients inside the mushrooms.
@@ -4319,7 +4320,7 @@ Mods: {
 					Title: Glowing Royalty
 					Title2: Radiant Apostle
 					Name: The Feudal Fungus
-					Name2: Lumos
+					Name2: Umos
 				}
 
 				Brood: {

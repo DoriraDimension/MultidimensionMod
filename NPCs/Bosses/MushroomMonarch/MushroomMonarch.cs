@@ -202,6 +202,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             if (NPC.life < NPC.lifeMax / 2)
             {
                 NPC.damage = 33;
+                Lighting.AddLight(NPC.Center, (100 - NPC.alpha) * 0.02f, 0, 0);
             }
             NPC.TargetClosest();
 
@@ -578,7 +579,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             Player target = Main.player[NPC.target];
             float speedUp = 0.06f;
             float maxVel = 8.0f;
-            if (NPC.life < NPC.lifeMax / 2)
+            if (NPC.life < NPC.lifeMax / 2 || Main.getGoodWorld)
             {
                 speedUp = 0.15f;
             }
