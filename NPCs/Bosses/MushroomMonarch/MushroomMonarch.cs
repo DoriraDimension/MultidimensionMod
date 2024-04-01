@@ -544,7 +544,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                 moveSpeed = 16f;
             }
             float velMultiplier = 1f;
-            Vector2 dist = point - NPC.Center;
+            Vector2 dist = (point + new Vector2(0f, -45f)) - NPC.Center;
             float length = dist == Vector2.Zero ? 0f : dist.Length();
             if (length < moveSpeed)
             {
@@ -566,37 +566,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPC.velocity *= moveSpeed;
             NPC.velocity *= velMultiplier;
         }
-        
-        public void MoveToPoint(Vector2 point)
-        {
-            float moveSpeed = 8f;
-            if (Vector2.Distance(NPC.Center, point) > 500)
-            {
-                moveSpeed = 12f;
-            }
-            float velMultiplier = 1f;
-            Vector2 dist = point - NPC.Center;
-            float length = dist == Vector2.Zero ? 0f : dist.Length();
-            if (length < moveSpeed)
-            {
-                velMultiplier = MathHelper.Lerp(0f, 1f, length / moveSpeed);
-            }
-            if (length < 200f)
-            {
-                moveSpeed *= 0.5f;
-            }
-            if (length < 100f)
-            {
-                moveSpeed *= 0.5f;
-            }
-            if (length < 50f)
-            {
-                moveSpeed *= 0.5f;
-            }
-            NPC.velocity = length == 0f ? Vector2.Zero : Vector2.Normalize(dist);
-            NPC.velocity *= moveSpeed;
-            NPC.velocity *= velMultiplier;
-        }
+
         public override void BossLoot(ref string name, ref int potionType)
         {
             potionType = ItemID.LesserHealingPotion;

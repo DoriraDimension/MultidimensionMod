@@ -114,8 +114,8 @@ Mods: {
 			}
 
 			VoidDashCooldown: {
-				// DisplayName: Void Dash Cooldown
-				// Description: Void invincibility is disabled
+				// DisplayName: Dark Dash Cooldown
+				// Description: Dark invincibility is disabled
 			}
 
 			Nihil: {
@@ -479,7 +479,7 @@ Mods: {
 				// DisplayName: Darklight Visage
 				/* Tooltip:
 					'''
-					Grants a void dash that has invincibility frames and also allows dashing downwards
+					Grants a dark dash that has invincibility frames and also allows dashing downwards
 					Dashing into an enemy or projectile removes the i-frame granting dark energy
 					dark energy is replenished after 10 seconds
 					Dashing into an enemy inflicts them with the Nihil debuff for 2 seconds
