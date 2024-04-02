@@ -107,21 +107,11 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     {
                         NPC.spriteDirection = 1;
                         NPC.velocity.X = 1.5f;
-                        if (BaseAI.HitTileOnSide(NPC, 0, true))
-                        {
-                            goRight = true;
-                            NPC.netUpdate = true;
-                        }
                     }
                     if (goRight)
                     {
                         NPC.spriteDirection = -1;
                         NPC.velocity.X = -1.5f;
-                        if (BaseAI.HitTileOnSide(NPC, 0, true))
-                        {
-                            goRight = false;
-                            NPC.netUpdate = true;
-                        }
                     }
                     BaseAI.WalkupHalfBricks(NPC);
                     if (BaseAI.HitTileOnSide(NPC, 3))
@@ -197,8 +187,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                         NPC.velocity.X = 4f;
                         if (BaseAI.HitTileOnSide(NPC, 1, true))
                         {
-                            NPC.spriteDirection = -1;
-                            NPC.netUpdate = true;
+                            AIState = ActionState.Idle;
                         }
                     }
                     else if (NPC.spriteDirection == -1)
@@ -206,8 +195,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                         NPC.velocity.X = -4f;
                         if (BaseAI.HitTileOnSide(NPC, 0, true))
                         {
-                            NPC.spriteDirection = 1;
-                            NPC.netUpdate = true;
+                            AIState = ActionState.Idle;
                         }
                     }
                     BaseAI.WalkupHalfBricks(NPC);

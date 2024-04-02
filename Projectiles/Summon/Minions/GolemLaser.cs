@@ -34,8 +34,8 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 		public override void AI()
 		{
 			Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
-			Projectile.rotation = Projectile.velocity.ToRotation();
-		}
+			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
+        }
 
 		public override void OnKill(int timeLeft)
 		{
