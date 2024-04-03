@@ -67,7 +67,8 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             Walk,
             Attack,
             Fly,
-            FuckYou
+            FuckYou,
+            Pursuit
         }
 
         public ActionState AIState
@@ -207,6 +208,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPC.TargetClosest();
 
             Player player = Main.player[NPC.target];
+            float distanceToPlayer = Vector2.Distance(player.Center, NPC.Center);
             if (!Collision.CanHit(NPC.position, NPC.width, NPC.height, Main.player[NPC.target].position, Main.player[NPC.target].width, Main.player[NPC.target].height) && internalAI[3] < 180)
             {
                 FuckYouPatience++;
@@ -254,6 +256,10 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             }
 
             int FrameSpeed = 10;
+            if (distanceToPlayer >= 700 && AIState != ActionState.Fly)
+            {
+                AIState = ActionState.Pursuit;
+            }
             switch (AIState)
             {
                 case ActionState.Walk:
@@ -520,6 +526,29 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                         NPC.netUpdate = true;
                     }
                     break;
+                case ActionState.Pursuit:
+                    MushMonChargeAI();
+                    NPC.frameCounter++;
+                    if (!BaseAI.HitTileOnSide(NPC, 3))
+                    {
+                        NPC.frame.Y = 648;
+                        NPC.netUpdate = true;
+                    }
+                    else if (NPC.frameCounter >= FrameSpeed)
+                    {
+                        NPC.frameCounter = 0;
+                        NPC.frame.Y += 108;
+                        if (NPC.frame.Y > (108 * 4))
+                        {
+                            NPC.frameCounter = 0;
+                            NPC.frame.Y = 0;
+                        }
+                    }
+                    if (distanceToPlayer < 100)
+                    {
+                        AIState = ActionState.Walk;
+                    }
+                    break;
             }
 
             if ((player.Center.Y - NPC.Center.Y) < -200f)
@@ -582,6 +611,11 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             if (NPC.life < NPC.lifeMax / 2 || Main.getGoodWorld)
             {
                 speedUp = 0.15f;
+            }
+            if (AIState == ActionState.Pursuit)
+            {
+                maxVel = 30.0f;
+                speedUp = 0.30f;
             }
             if (NPC.Center.X > target.Center.X)
             {
