@@ -159,7 +159,12 @@ namespace MultidimensionMod.NPCs.TownNPCs
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue4"));
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue6"));
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue7"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue8"));
+                if (!DownedSystem.downedFungus || !Main.hardMode)
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue8"), 3.0);
+                }
+                else
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.GenericDialogue8B"));
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.AldinDialogue"));
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dappercap.RocketDialogue"));
             }

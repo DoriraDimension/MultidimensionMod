@@ -34,7 +34,6 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.knockBackResist = 0.8f;
             NPC.value = 1000f;
-            NPC.friendly = true;
             NPC.catchItem = (short)ModContent.ItemType<HovercapItem>();
             SpawnModBiomes = new int[1] { ModContent.GetInstance<ShroomForest>().Type };
         }
