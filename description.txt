@@ -1,5 +1,5 @@
 Awakened Light is a growing lore-based content mod that aims to go with a multidimensional and outer gods thematic.
-This mod also readds and reworks the old Ancients Awakened mod and integrates it into its lore. [Note that the mod is added and reworked over the course of many updates]
+This mod also readds and reworks the old Ancients Awakened mod and integrates it into its lore. [Note that most of the AA content will come next update]
 You may see many familiar faces known from Ancients Awakened as well as new characters alongside them.
 
 Multiplayer support was attempted but ultimately not pursued any further, this means its not advised to play together. Support will likely be added in the future.
@@ -25,6 +25,8 @@ I'm not really the best coder currently and have some bigger planned content, so
 If you are a coder, spriter or musician and you are interested in this mod and want to help, join the mods discord server
 Or just do it for news I guess, lol.
 
+We especially need a musician for the content port due to AA's pulled music. So if you think you are up to the task, show us your work.
+
 Developer:
 
 -Dorira  owner/spriter/coder/lore writer
@@ -46,5 +48,5 @@ Special Thanks:
 
 -ZSolar1  For making the old wiki logo
 -Lion8cake  For the help with the Frozen Underworld ILs.
--TheDoctorDallin  For allowing me to use the old Ancients Awakened mod.
+-TheDoctorDallin  For allowing me to use the old Ancients Awakened mod content.
 -SpectralAves  For allowing me to keep his music tracks in the mod.
