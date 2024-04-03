@@ -3069,7 +3069,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Draws the attention of the glowing royalty
-					Can only be used in a Glowing Mushroom Biome
+					Can only be used in an underground Glowing Mushroom Biome
 					Non-consumable
 					''' */
 				/* Lore:
@@ -3845,6 +3845,17 @@ Mods: {
 			FeudalFungus: {
 				// DisplayName: Feudal Fungus
 				// SecondPhaseName: Umos
+				// DefeatSpawn: So we meet again wretch.
+				// Transition1: Amn utak eretus!
+				// Transition2: Focus now!
+				// Transition3: Harje imuna servet inate?
+				// Transition4: Do not be afraid, thy vengeance will come soon.
+				// Transition5: Listen careful, murderous wretch, thy actions shall be punished.
+				// Transition6: By the light of Umos!
+				// Transition7: Bew ta aeios mi Umos!
+				// Defeat1: Away!
+				// Defeat2: Away with thee!
+				// Defeat3: Why art thou not giving up?
 			}
 
 			// GlowSentry.DisplayName: Empowered Glowing Mushroom

@@ -3,6 +3,9 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.CodeAnalysis;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.GameContent;
 
 namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 {
@@ -12,6 +15,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
         public override void SetStaticDefaults()
         {
             //DisplayName.SetDefault("Spore Blast");
+            ProjectileID.Sets.TrailCacheLength[Projectile.type] = 5;
+            ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
         }
 
         public override void SetDefaults()
@@ -55,6 +60,18 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             {
                 Dust.NewDust(Projectile.position + Projectile.velocity, Projectile.width, Projectile.height, DustID.GlowingMushroom, Projectile.oldVelocity.X * 0.5f, Projectile.oldVelocity.Y * 0.5f);
             }
+        }
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Vector2 drawOrigin = new Vector2(TextureAssets.Projectile[Projectile.type].Value.Width * 0.5f, Projectile.height * 0.5f);
+            for (int k = 0; k < Projectile.oldPos.Length; k++)
+            {
+                Vector2 drawPos = Projectile.oldPos[k] - Main.screenPosition + drawOrigin + new Vector2(0f, Projectile.gfxOffY);
+                Color color = Projectile.GetAlpha(lightColor) * ((Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
+                Main.EntitySpriteDraw(TextureAssets.Projectile[Projectile.type].Value, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale, SpriteEffects.None, 0f);
+            }
+            return true;
         }
     }
 }
