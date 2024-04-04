@@ -256,7 +256,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             }
 
             int FrameSpeed = 10;
-            if (distanceToPlayer >= 700 && AIState != ActionState.Fly)
+            if (distanceToPlayer >= 700 && BaseAI.HitTileOnSide(NPC, 3))
             {
                 AIState = ActionState.Pursuit;
             }
