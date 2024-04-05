@@ -1,5 +1,5 @@
 buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
 displayName = Awakened Light
 author = Dorira
-version = 0.8
+version = 0.8.0.1
 homepage = https://discord.gg/jWXCuJAMJM

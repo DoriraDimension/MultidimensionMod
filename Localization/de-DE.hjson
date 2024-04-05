@@ -174,7 +174,7 @@ Mods: {
 			}
 
 			TwinPrayerBuff: {
-				// DisplayName: Twin Prayer Buff
+				// DisplayName: Twin Prayer
 				// Description: The prayer of the mushrooms empowers you
 			}
 
@@ -2918,7 +2918,7 @@ Mods: {
 
 			YtriumStaff: {
 				// DisplayName: Yttrium Staff
-				// Tooltip: Shoots 3 Yttrium Shards that shatter into 2 Topaz Bolts each.
+				// Tooltip: Shoots 3 Yttrium Shards that shatter into 2 Topaz Bolts each
 			}
 
 			MonarchTrophy: {

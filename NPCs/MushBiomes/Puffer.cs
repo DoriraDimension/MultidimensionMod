@@ -4,6 +4,7 @@ using MultidimensionMod.Biomes;
 using MultidimensionMod.Base;
 using MultidimensionMod.Items.Placeables.Banners;
 using MultidimensionMod.Tiles.Biomes.ShroomForest;
+using MultidimensionMod.Items.Summons;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
@@ -11,6 +12,10 @@ using Terraria.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.GameContent;
 using Terraria.GameContent.Bestiary;
+using MultidimensionMod.Items.Materials;
+using Terraria.GameContent.ItemDropRules;
+using MultidimensionMod.Items.Weapons.Typeless;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.NPCs.MushBiomes
 {
@@ -162,6 +167,8 @@ namespace MultidimensionMod.NPCs.MushBiomes
                         if (Main.netMode != NetmodeID.MultiplayerClient)
                             Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<PufferFart>(), 0, 0);
                         Gwah = 0;
+                        if (Main.rand.NextBool(10))
+                        Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ModContent.ItemType<IntimidatingMushroom>(), 1);
                         AIState = ActionState.Runaway;
                         NPC.netUpdate = true;
                     }

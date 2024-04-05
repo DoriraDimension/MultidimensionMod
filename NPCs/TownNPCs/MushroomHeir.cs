@@ -279,7 +279,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
                 var source = player.GetSource_OpenItem(Type);
 
                 int reality = player.FindItem(ModContent.ItemType<RealityBendingShroom>());
-                int glow = player.FindItem(ItemID.GlowingMushroom);
+                int glow = player.FindItem(ModContent.ItemType<HovercapItem>());
                 int Special = player.FindItem(ModContent.ItemType<MadnessShroom>());
                 int Item = player.FindItem(3385);
                 int Item2 = player.FindItem(3386);
@@ -312,9 +312,9 @@ namespace MultidimensionMod.NPCs.TownNPCs
                     NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X + 10, (int)NPC.Center.Y, ModContent.NPCType<AldinGrabber>());
                     WhoTheHellWasThat = true;
                 }
-                else if (glow >= 30)
+                else if (glow >= 5)
                 {
-                    player.inventory[glow].stack -= 30;
+                    player.inventory[glow].stack -= 5;
                     if (player.inventory[glow].stack <= 0)
                     {
                         player.inventory[glow] = new Item();

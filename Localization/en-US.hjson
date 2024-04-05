@@ -174,7 +174,7 @@ Mods: {
 			}
 
 			TwinPrayerBuff: {
-				DisplayName: Twin Prayer Buff
+				DisplayName: Twin Prayer
 				Description: The prayer of the mushrooms empowers you
 			}
 
@@ -2901,7 +2901,7 @@ Mods: {
 				DisplayName: Monarcharang
 				Tooltip:
 					'''
-					Every 3rd throw imbues the weapon with your life
+					Every 4th throw imbues the weapon with your life
 					Imbued projectiles deal more damage and are faster
 					'''
 			}
@@ -2918,7 +2918,7 @@ Mods: {
 
 			YtriumStaff: {
 				DisplayName: Yttrium Staff
-				Tooltip: Shoots 3 Yttrium Shards that shatter into 2 Topaz Bolts each.
+				Tooltip: Shoots 3 Yttrium Shards that shatter into 2 Topaz Bolts each
 			}
 
 			MonarchTrophy: {
@@ -3243,7 +3243,7 @@ Mods: {
 				DisplayName: Royal Fungarang
 				Tooltip:
 					'''
-					Every 3rd throw imbues the weapon with your life
+					Every 4th throw imbues the weapon with your life
 					Imbued projectiles deal more damage and are faster
 					If you had 100 mana during the throw, 
 					the weapon will be boosted further and you lose that amount of mana
