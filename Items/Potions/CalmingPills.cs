@@ -25,7 +25,7 @@ namespace MultidimensionMod.Items.Potions
             Item.UseSound = SoundID.Item2;
             Item.maxStack = 9999;
             Item.consumable = true;
-            Item.rare = ItemRarityID.Yellow;
+            Item.rare = ItemRarityID.Green;
             Item.value = Item.sellPrice(0, 0, 7, 0);
             Item.buffType = ModContent.BuffType<CalmMind>();
             Item.buffTime = 18000;

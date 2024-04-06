@@ -24,6 +24,7 @@ using Terraria.Audio;
 using MonoMod.Core.Platforms;
 using MultidimensionMod.UI;
 using Terraria.Localization;
+using MultidimensionMod.Items.Weapons.Magic.Tomes;
 
 //if you see base.velocity.Y += -7f that means theres a jump
 
@@ -102,23 +103,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 			notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<LonelyWarriorsVisor>(), 10));
 			notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<DarkCloak>()));
 			notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<CuteEmoji>(), 10));
-			int choice = Main.rand.Next(4);
-			if (choice == 0)
-            {
-				notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<LonelySword>()));
-			}
-			if (choice == 1)
-			{
-				notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<DarkMatterLauncher>()));
-			}
-			if (choice == 2)
-			{
-				notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SmileySmile>()));
-			}
-			if (choice == 3)
-			{
-				notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<DarkRebels>()));
-			}
+            notExpertRule.OnSuccess(ItemDropRule.OneFromOptions(1, ModContent.ItemType<LonelySword>(), ModContent.ItemType<DarkMatterLauncher>(), ModContent.ItemType<SmileySmile>(), ModContent.ItemType<DarkRebels>()));
             NPCloot.Add(notExpertRule);
         }
 		private void shootTrackedProjAtPlayer(int type, int projAngle, float projSpeed, int damage, Vector2 position, Vector2 targetPosition, Player player)

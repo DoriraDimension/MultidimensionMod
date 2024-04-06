@@ -11,7 +11,7 @@ using MultidimensionMod.Biomes;
 using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Items.Weapons.Melee.Boomerangs;
 using MultidimensionMod.Items.Weapons.Ranged.Bows;
-using MultidimensionMod.Common.ItemDropRules.DropConditions;
+using MultidimensionMod.Items.Potions.Food;
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -748,15 +748,8 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<MonarchRelic>()));
             NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MonarchTrophy>(), 10));
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusSporeBag>(), 10));
-            int choice = Main.rand.Next(2);
-            if (choice == 0)
-            {
-                notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<Musharang>()));
-            }
-            if (choice == 1)
-            {
-                notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<Mushbow>()));
-            }
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<MushiumBar>(), 10, 1, 2));
+            notExpertRule.OnSuccess(ItemDropRule.OneFromOptions(1, ModContent.ItemType<Musharang>(), ModContent.ItemType<Mushbow>()));
             NPCloot.Add(notExpertRule);
         }
 

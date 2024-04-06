@@ -34,7 +34,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
             Item.knockBack = 2f;
             Item.autoReuse = true;
             Item.value = Item.sellPrice(0, 1, 20, 0);
-            Item.rare = ItemRarityID.Green;
+            Item.rare = ItemRarityID.Blue;
             Item.shoot = ModContent.ProjectileType<Fallcicle>();
         }
 

@@ -36,7 +36,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.knockBack = 5;
 			Item.autoReuse = true;
 			Item.value = Item.sellPrice(0, 3, 0, 0);
-			Item.rare = ItemRarityID.Lime;
+			Item.rare = ItemRarityID.LightRed;
 			Item.UseSound = SoundID.Item1;
             Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 5f;

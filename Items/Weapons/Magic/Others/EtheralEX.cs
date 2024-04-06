@@ -37,7 +37,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Others
             Item.channel = true;
             Item.shoot = ModContent.ProjectileType<EtheralEXProj>();
             Item.shootSpeed = 30f;
-            Item.rare = ItemRarityID.Cyan;
+            Item.rare = ItemRarityID.Red;
         }
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)

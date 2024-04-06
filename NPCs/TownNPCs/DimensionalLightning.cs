@@ -58,7 +58,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            target.AddBuff(ModContent.BuffType<DimensionalShock>(), 300);
+            if (Main.hardMode)
+                target.AddBuff(ModContent.BuffType<DimensionalShock>(), 300);
         }
 
         public override bool PreDraw(ref Color lightColor)

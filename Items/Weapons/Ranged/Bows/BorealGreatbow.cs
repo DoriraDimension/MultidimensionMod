@@ -31,7 +31,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
             Item.noMelee = true;
             Item.knockBack = 14;
             Item.value = Item.sellPrice(0, 0, 70, 0);
-            Item.rare = ItemRarityID.Orange;
+            Item.rare = ItemRarityID.Blue;
             Item.UseSound = SoundID.Item5;
             Item.autoReuse = true;
             Item.shoot = ProjectileID.PurificationPowder;

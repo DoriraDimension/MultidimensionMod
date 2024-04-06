@@ -9,6 +9,7 @@ using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Placeables.Relics;
 using MultidimensionMod.Items.Placeables.Trophies;
 using MultidimensionMod.Common.Systems;
+using MultidimensionMod.Items.Potions.Food;
 using System;
 using System.IO;
 using Microsoft.Xna.Framework;
@@ -27,6 +28,8 @@ using MultidimensionMod.NPCs.Bosses.Smiley;
 using MultidimensionMod.Dusts;
 using Terraria.GameContent.Events;
 using Terraria.GameContent.UI;
+using MultidimensionMod.Items.Weapons.Melee.Boomerangs;
+using MultidimensionMod.Items.Weapons.Ranged.Bows;
 
 namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 {
@@ -120,7 +123,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 
         public override void SetDefaults()
         {
-            NPC.lifeMax = 3000;   //boss life
+            NPC.lifeMax = 3500;   //boss life
             NPC.damage = 24;  //boss damage
             NPC.defense = 10;    //boss defense
             NPC.knockBackResist = 0f;
@@ -182,15 +185,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<FungusRelic>()));
             NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<FungusTrophy>(), 10));
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusGlowsporeBag>(), 10));
-            int choice = Main.rand.Next(2);
-            if (choice == 0)
-            {
-                notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<UmosShower>()));
-            }
-            if (choice == 1)
-            {
-                notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<RadianceTalisman>()));
-            }
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<GlowingMushiumBar>(), 10, 1, 2));
+            notExpertRule.OnSuccess(ItemDropRule.OneFromOptions(1, ModContent.ItemType<UmosShower>(), ModContent.ItemType<RadianceTalisman>()));
             NPCloot.Add(notExpertRule);
         }
 
@@ -295,6 +291,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             }
             if (Waking == 120 && DownedSystem.sawUmosTransition)
             {
+                EmoteBubble.NewBubble(1, new WorldUIAnchor(NPC), 120);
                 int i = CombatText.NewText(NPC.getRect(), Color.LimeGreen, Language.GetTextValue("Mods.MultidimensionMod.NPCs.FeudalFungus.DefeatSpawn"), false, false);
                 Main.combatText[i].lifeTime = 120;
             }
@@ -304,7 +301,6 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             }
             if (Waking >= 120 && Waking < 240)
             {
-                EmoteBubble.NewBubble(1, new WorldUIAnchor(NPC), 120);
                 NPC.frameCounter++;
                 if (NPC.frameCounter >= 10)
                 {
@@ -874,14 +870,17 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         }
                         if (DragonballPowerUpSequence == 1200)
                         {
-                            AISwitch = 0;
-                            DragonballPowerUpSequence = 0;
                             UmosMode = true;
-                            AIState = ActionState.Hovering;
                             SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RoyalRadianceScream"), NPC.position);
+                        }
+                        if (DragonballPowerUpSequence == 1201)
+                        {
                             NPC.dontTakeDamage = false;
                             if (!Main.dedServ)
                                 Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Fungus");
+                            AISwitch = 0;
+                            DragonballPowerUpSequence = 0;
+                            AIState = ActionState.Hovering;
                             if (!DownedSystem.sawUmosTransition)
                             {
                                 DownedSystem.sawUmosTransition = true;

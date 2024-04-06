@@ -37,7 +37,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
             Item.knockBack = 0.5f;
             Item.noUseGraphic = true;
             Item.value = Item.sellPrice(0, 0, 55, 0);
-            Item.rare = ItemRarityID.Green;
+            Item.rare = ItemRarityID.LightRed;
             Item.autoReuse = false;
             Item.shoot = ModContent.ProjectileType<ConsumedBook>();
             Item.shootSpeed = 1f;

@@ -566,7 +566,7 @@ Mods: {
 					but never approach one, as it will most likely be the last thing you see.
 					Even worse, sometimes they can be seen carrying their living prey off into the distance,
 					towards a faraway sea where you will be lost forever.
-					The storm is an untamed force of nature and so are the eels that follow it
+					The storm is an untamed force of nature and so are the eels that follow it.
 					''' */
 			}
 
@@ -2901,7 +2901,7 @@ Mods: {
 				// DisplayName: Monarcharang
 				/* Tooltip:
 					'''
-					Every 3rd throw imbues the weapon with your life
+					Every 4th throw imbues the weapon with your life
 					Imbued projectiles deal more damage and are faster
 					''' */
 			}
@@ -3243,7 +3243,7 @@ Mods: {
 				// DisplayName: Royal Fungarang
 				/* Tooltip:
 					'''
-					Every 3rd throw imbues the weapon with your life
+					Every 4th throw imbues the weapon with your life
 					Imbued projectiles deal more damage and are faster
 					If you had 100 mana during the throw, 
 					the weapon will be boosted further and you lose that amount of mana
@@ -3756,7 +3756,16 @@ Mods: {
 			// MadnessBat.DisplayName: Madness Flier
 			// MadnessBat2.DisplayName: Madness Gazer
 			// MadnessDog.DisplayName: Starving Madness
-			// Smiley.DisplayName: Smiley
+
+			Smiley: {
+				// DisplayName: Smiley
+
+				BossChecklistIntegration: {
+					// SpawnInfo: Use a [i:MultidimensionMod/UnknownEmoji] at night.
+					// DespawnMessage: Smiley continues his search for vengeance.
+				}
+			}
+
 			// DoriraTpose.DisplayName: Tposing Dorira
 			// Dapperbox.DisplayName: Just a regular box
 
@@ -3812,6 +3821,11 @@ Mods: {
 			MushroomMonarch: {
 				// DisplayName: Mushroom Monarch
 				// PowerUp: The scarlet monarch's faded light stirs...
+
+				BossChecklistIntegration: {
+					// SpawnInfo: Use a [i:MultidimensionMod/IntimidatingMushroom] near a Sleeping Mushroom in the Scarlet Mycelium Forest.
+					// DespawnMessage: The scarlet monarch returns to peace.
+				}
 			}
 
 			// RedMushling.DisplayName: Red Mushling
@@ -3856,6 +3870,11 @@ Mods: {
 				// Defeat1: Away!
 				// Defeat2: Away with thee!
 				// Defeat3: Why art thou not giving up?
+
+				BossChecklistIntegration: {
+					// SpawnInfo: Use a [i:MultidimensionMod/ConfusingMushroom] in a Glowing Mushroom cave.
+					// DespawnMessage: Feudal Fungus disappears into the glowing caverns.
+				}
 			}
 
 			// GlowSentry.DisplayName: Empowered Glowing Mushroom

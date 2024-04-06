@@ -32,7 +32,7 @@ namespace MultidimensionMod.Items.Pets
             Item.shoot = ProjectileID.None;
             Item.buffType = ModContent.BuffType<BrothersBuff>();
             Item.value = Item.sellPrice(silver: 50);
-            Item.rare = ItemRarityID.Green;
+            Item.rare = ItemRarityID.Orange;
         }
 
         public override void UseStyle(Player player, Rectangle heldItemFrame)
