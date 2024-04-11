@@ -23,7 +23,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 			Item.knockBack = 7f;
 			Item.width = 54;
 			Item.height = 56;
-			Item.rare = ItemRarityID.Blue;
+			Item.rare = ItemRarityID.Orange;
 			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.noMelee = true;
 			Item.noUseGraphic = true;

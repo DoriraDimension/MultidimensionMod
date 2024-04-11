@@ -70,6 +70,7 @@ namespace MultidimensionMod.NPCs.Dungeon
             {
 				NPC.velocity.X = 0;
 				NPC.velocity.Y = 0;
+				NPC.netUpdate = true;
             }
 			if (NPC.life < NPC.lifeMax) //Executes this code only if the enemy lost HP
             {
@@ -78,8 +79,10 @@ namespace MultidimensionMod.NPCs.Dungeon
 				{
 					SoundEngine.PlaySound(SoundID.DD2_SonicBoomBladeSlash with { Volume = 0.4f }, NPC.position);
 					Vector2 velocity = Vector2.Normalize(player.Center - NPC.Center) * 10f;
-					Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, velocity, ModContent.ProjectileType<DarklingShot>(), (int)((double)((float)NPC.damage) / 3), 0f, Main.myPlayer);
+					if (Main.netMode != NetmodeID.MultiplayerClient)
+                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, velocity, ModContent.ProjectileType<DarklingShot>(), (int)((double)((float)NPC.damage) / 3), 0f, Main.myPlayer);
 					Shootsies = 0;
+					NPC.netUpdate = true;
 				}
 			}
 

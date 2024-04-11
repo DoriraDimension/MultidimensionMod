@@ -40,17 +40,14 @@ namespace MultidimensionMod.Projectiles.Ranged
 			}
 
 			Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
-			Projectile.rotation = Projectile.velocity.ToRotation();
+			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
 			if (Projectile.velocity.Y > 16f)
 			{
 				Projectile.velocity.Y = 16f;
 			}
 
-			if (Projectile.spriteDirection == -1)
-			{
-				Projectile.rotation += MathHelper.Pi;
-			}
-		}
+            Projectile.spriteDirection = Projectile.direction;
+        }
 
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{

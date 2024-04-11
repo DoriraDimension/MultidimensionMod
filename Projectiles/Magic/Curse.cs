@@ -39,5 +39,10 @@ namespace MultidimensionMod.Projectiles.Magic
 				Main.dust[dustIndex].velocity *= 1.4f;
 			}
 		}
-	}
+        public override bool? CanCutTiles()
+        {
+            return false;
+        }
+
+    }
 }

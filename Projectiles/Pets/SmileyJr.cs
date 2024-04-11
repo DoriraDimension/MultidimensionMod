@@ -62,7 +62,11 @@ namespace MultidimensionMod.Projectiles.Pets
 					Projectile.frame++;
 					Projectile.frameCounter = 0;
 				}
-				if (Projectile.frame > 13)
+                if (Projectile.frame < 8)
+                {
+                    Projectile.frame = 8;
+                }
+                if (Projectile.frame > 13)
 				{
 					Projectile.frame = 8;
 				}

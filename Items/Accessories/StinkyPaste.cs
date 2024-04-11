@@ -3,6 +3,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using Terraria.Audio;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework;
+using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -29,7 +32,7 @@ namespace MultidimensionMod.Items.Accessories
 			Item.buffTime = 14400;
 		}
 
-		public override void UpdateAccessory(Player player, bool hideVisual)
+        public override void UpdateAccessory(Player player, bool hideVisual)
 		{
 			player.GetDamage(DamageClass.Summon) += 0.06f;
 		}

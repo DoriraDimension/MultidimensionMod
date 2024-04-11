@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent;
 
 namespace MultidimensionMod.Projectiles.Summon.Minions
 {
@@ -232,11 +233,26 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 					Vector2 vector2 = vector - Projectile.Center;
 					vector2.Normalize();
 					vector2 *= num17;
-					int laser = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y, type, Projectile.damage + 40, 0f, Main.myPlayer);
-					Main.projectile[laser].timeLeft = 300;
+					if (Projectile.owner == Main.myPlayer)
+					{
+						int laser = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y, type, Projectile.damage + 40, 0f, Main.myPlayer);
+						Main.projectile[laser].timeLeft = 300;
+					}
 					Projectile.netUpdate = true;
 				}
 			}
 		}
-	}
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+            Texture2D glow = ModContent.Request<Texture2D>(Projectile.ModProjectile.Texture + "_Glow").Value;
+            Vector2 drawOrigin = new(texture.Width / 2, texture.Height / 2);
+            var effects = Projectile.spriteDirection == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(lightColor), Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            Main.EntitySpriteDraw(glow, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(Color.White), Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            return false;
+        }
+    }
 }

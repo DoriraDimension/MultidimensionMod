@@ -18,7 +18,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Boomerangs
 		{
 			Item.damage = 26;
 			Item.DamageType = DamageClass.Melee;
-			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.useStyle = ItemUseStyleID.Swing;
 			Item.width = 30;
 			Item.height = 42;
 			Item.autoReuse = true;

@@ -26,7 +26,7 @@ namespace MultidimensionMod.NPCs.Madness
 		{
 			NPC.width = 114;
 			NPC.height = 58;
-			NPC.damage = 40;
+			NPC.damage = 20;
 			NPC.defense = 0;
 			NPC.lifeMax = 100;
 			NPC.HitSound = SoundID.NPCHit1;
@@ -63,7 +63,15 @@ namespace MultidimensionMod.NPCs.Madness
 				NPC.direction = -1;
 			}
 			BaseAI.AICharger(NPC, ref NPC.ai, 0.14f, 6, false, 300);
-		}
+			if (BaseAI.HitTileOnSide(NPC, 3))
+			{
+				if (NPC.velocity.X < 0f && NPC.direction == -1 || NPC.velocity.X > 0f && NPC.direction == 1)
+				{
+					Vector2 newVec = BaseAI.AttemptJump(NPC.position, NPC.velocity, NPC.width, NPC.height, NPC.direction, NPC.directionY, 10, 4, 7, true);
+					if (NPC.velocity != newVec) { NPC.velocity = newVec; NPC.netUpdate = true; }
+				}
+			}
+        }
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{

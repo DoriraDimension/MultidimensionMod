@@ -10,6 +10,11 @@ Mods: {
 				// DisplayName: Night of Madness
 				// TownNPCDialogueName: The Madness Moon
 			}
+
+			ShroomForest: {
+				// DisplayName: Scarlet Mycelium Forest
+				// TownNPCDialogueName: the Scyrlet Mycelium Forest
+			}
 		}
 
 		Buffs: {
@@ -98,23 +103,114 @@ Mods: {
 				// Description: Your heart lusts for battle, meele damage is increased.
 			}
 
-			RoseVenom: {
-				// DisplayName: Rose Venom
-				// Description: There is poison under your skin, take it off, get it out
-			}
-
 			CosimaBuff: {
 				// DisplayName: Cassiopeia
 				// Description: Just hacked herself into your life
+			}
+
+			MarysWrath: {
+				// Description: A ghostly presence is watching you
+				// DisplayName: Mary's Wrath
+			}
+
+			VoidDashCooldown: {
+				// DisplayName: Dark Dash Cooldown
+				// Description: Dark invincibility is disabled
+			}
+
+			Nihil: {
+				// DisplayName: Nihil
+				// Description: Void energy has disabled defense
+			}
+
+			ManaBurstCooldown: {
+				// DisplayName: Mana Burst Cooldown
+				// Description: Cannot unleash mana shockwaves
+			}
+
+			IndigoInjection: {
+				// DisplayName: Indigo Injection
+				// Description: The symbiosis floods you with energy
+			}
+
+			InjectionCooldown: {
+				// DisplayName: Injection Cooldown
+				// Description: Cannot connect to the stem
+			}
+
+			PrayerBuff: {
+				// DisplayName: Light Prayer
+				// Description: The prayer of the mushroom empowers you
+			}
+
+			FeudalBabBuff: {
+				// DisplayName: Feudal Bab
+				// Description: Proud representative of the glowing fungi
+			}
+
+			LightOverload: {
+				// DisplayName: Light Overload
+				// Description: You are flooded with energy
+			}
+
+			LightStarved: {
+				// DisplayName: Light Starved
+				// Description: You yearn for energy
+			}
+
+			SwapExhaustion: {
+				// DisplayName: Swap Exhaustion
+				// Description: Can't swap modes
+			}
+
+			LegPain: {
+				// DisplayName: Leg Pain
+				// Description: You can't high jump
+			}
+
+			PotionInfection: {
+				// DisplayName: Unhealthy Infection
+				// Description: Healing items only heal half their normal amount
+			}
+
+			TwinPrayerBuff: {
+				// DisplayName: Twin Prayer
+				// Description: The prayer of the mushrooms empowers you
+			}
+
+			BrothersBuff: {
+				// DisplayName: The fungal brothers
+				// Description: Happy to have eachother... and you too I guess
+			}
+
+			MonarchBabBuff: {
+				// DisplayName: Bab Monarch
+				// Description: Does not want to be here right now
+			}
+
+			Accursed: {
+				// DisplayName: Accursed
+				// Description: Crazy ghosts haunt you
+			}
+
+			DimensionalShock: {
+				// DisplayName: Dimensional Shock
+				// Description: Dimensional Energy disrupts your spirit
+			}
+
+			InnerEmber: {
+				// DisplayName: Inner Ember
+				// Description: A small ember in your soul, be sure not to turn it into an inferno
 			}
 		}
 
 		Items: {
 			AstralTitansEyeJewel: {
 				// DisplayName: Creation Titan's Eye Jewel
-				/* Tooltip:
+				// Tooltip: Does nothing at the moment
+				/* Lore:
 					'''
-					One of the creation titan's many crystal eyes that fell off from natural causes.
+					One of the creation titan's many crystal eyes that fell off.
 					Scelestians like to keep them as special tokens of good fortune,
 					showing their deep friendship with the titan.
 					''' */
@@ -135,7 +231,10 @@ Mods: {
 					'''
 					Roses are as beautiful as they are dangerous.
 					Reflects 45% of damage back to the enemy if they touch you
-					Some Jungle people went overboard with their protection, wearing toxic scarfs from a now extinct flora
+					''' */
+				/* Lore:
+					'''
+					Some Jungle people went overboard with their protection, wearing toxic scarfs for self defense.
 					These are extremely dangerous for the wearer as just a single missstep could inject its deadly toxins,
 					killing them over the course of a couple minutes.
 					''' */
@@ -147,15 +246,25 @@ Mods: {
 					'''
 					Increases all damage and crit chance by 4%, increases defense by 6 and damage reduction by 4% when in the Desert or Snow biome.
 					Increases defense by 4 when under 50% life
+					Getting hit will release frost scales that linger on the ground for a short time
+					Getting hit while mana is completely full will trigger a shockwave that scales with magic damage and ignores 20 defense
+					The initial damage depends on your maximum mana
+					All mana is lost upon triggering this effect
+					Shockwave damage gets doubled upon entering hardmode
+					The shockwave has a 5 second cooldown
 					''' */
 			}
 
 			CreationMedaillon: {
-				// DisplayName: Creation Medaillon
-				/* Tooltip:
+				// DisplayName: Creation Medallion
+				// Tooltip: Does nothing right now
+				/* Lore:
 					'''
-					The divine medaillon that is only given to high ranked Scelestians, like the eye jewel,
+					The divine medallion that is only given to high ranked Scelestians.
+					Like the eye jewel,
 					this is a token of respect towards their titan.
+					The three triangles and eye represent the aspects of Origin, those aspects being mind, soul and body,
+					as well as the deity itself in the center.
 					Losing or breaking it is seen as a sign of great misfortune.
 					''' */
 			}
@@ -165,6 +274,14 @@ Mods: {
 				/* Tooltip:
 					'''
 					Increases all damage and crit chance by 4% when in the Desert.
+					Getting hit will trigger a shockwave that scales with magic damage and ignores 20 defense
+					The initial damage depends on how much mana you had on activation
+					All remaining mana is lost upon triggering this effect
+					Shockwave damage gets doubled upon entering hardmode
+					The shockwave has a 5 second cooldown
+					''' */
+				/* Lore:
+					'''
 					A necklace crafted with mana infused sandstone, its gem only reacts to the dry aura of the desert
 					The barren lands have an aura unlike any other, it makes you wonder what actually caused them to exist
 					''' */
@@ -172,9 +289,9 @@ Mods: {
 
 			DiggerEngine: {
 				// DisplayName: Digger Engine
-				/* Tooltip:
+				// Tooltip: Increases mining speed by 35% and spawns friendly Probes when you get hit.
+				/* Lore:
 					'''
-					Increases mining speed by 35% and spawns friendly Probes when you get hit.
 					The engine located in the Destroyer's head, it was designed to be as efficient as possible,
 					completely ignoring the amount of fuel it would consume.
 					It basically served as the worm's brain, sending out the various probes embedded in its segments.
@@ -185,8 +302,11 @@ Mods: {
 				// DisplayName: Drakescale Shield
 				/* Tooltip:
 					'''
-					Increases defense by 4 and damage reduction by 4% when in the Snow biome.
-					A metal base, reinforced with drake scales.
+					Increases defense by 4 and damage reduction by 4% when in the Snow biome
+					Getting hit will release frost scales that linger on the ground for a short time
+					''' */
+				/* Lore:
+					'''
 					Drake scales react to temperature and harden when the environment becomes colder,
 					travellers would often pick up shed scales from juveniles and use them for various tools,
 					unlike the Vikings who took them by force.
@@ -200,6 +320,9 @@ Mods: {
 					[c/e8b722:A true greed can find every treasure.]
 					Your greedy eyes can now see treasures.
 					Has a chance to inflict the Cursed debuff when you get it
+					''' */
+				/* Lore:
+					'''
 					Greed is a terrible sin, affecting everyone the same,
 					theft, murder and other even worse things, all because the mind craves more.
 					This way even a honest man can be affected by it and not even the purest soul will be able to escape.
@@ -213,6 +336,9 @@ Mods: {
 					[c/93a4d8:A true adventurer can sense traps and danger.]
 					You can see danger sources.
 					Has a chance to inflict the Slow debuff when you get it
+					''' */
+				/* Lore:
+					'''
 					It is said that an adventurer developes a sixth sense for danger,
 					seeing traps before they even went around the corner.
 					Maybe it isn't as stupid to think this way, this world is full of magic,
@@ -227,6 +353,9 @@ Mods: {
 					[c/7c091d:A true hunter can sense its prey.]
 					You can now sense your enemies everywhere.
 					Has a chance to inflict the Weak debuff when you get it
+					''' */
+				/* Lore:
+					'''
 					Hunters come in many different shapes, some prefer to lurk and ambush,
 					some rather chase down their prey and others just bruteforce their way through.
 					Whatever path you chose, a hunter is a hunter, no matter the style of killing.
@@ -240,6 +369,9 @@ Mods: {
 					[c/007437:A true resident of the night can see through the darkness.]
 					You now have improved vision at night.
 					Has a chance to inflict the Blackout debuff when you get it
+					''' */
+				/* Lore:
+					'''
 					They lurk through the night, when everything sleeps, 
 					terrors nobody wishes to ever witness.
 					The night is dangerous, so people wanted to see,
@@ -253,19 +385,25 @@ Mods: {
 					'''
 					Increases armor penetration by 12.
 					Grants the ability to breathe underwater
+					''' */
+				/* Lore:
+					'''
 					They are often found in shallow waters buried in the sand
 					Probably a great trophy for hunting down such a beast
 					''' */
 			}
 
 			GlowingFungiScarf: {
-				// DisplayName: Glowing Fungi Scarf
+				// DisplayName: Mark of Symbiosis
 				/* Tooltip:
 					'''
-					A scarf made out of several mushrooms, it glows.
-					Increases ranged damage by 5%.
-					Increases max life by 10 when in a glowing mushroom biome
-					Increases max life by 25 and damage reduction by 5% when in a glowing mushroom biome in hardmode.
+					You emit blue light
+					You deepen your symbiosis with the mushrooms over time, symbiosis has 3 stages
+					Stage 1: Damage reduction is increased by 5%
+					Stage 2: Damage reduction is decreased by 10%
+					Stage 3: The brightness of your glow is greatly increased and you periodically release mushroom hatchlings
+					Additionally, max life is increased by 20
+					Equipping the Healthy Cap grants the hatchlings weak lifesteal
 					''' */
 			}
 
@@ -274,7 +412,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					A healthy mushroom filled with healing potion liquid.
-					Increases the amount of HP healed by mushrooms to 60.
+					Increases the amount of HP healed by mushrooms to 40.
 					''' */
 			}
 
@@ -293,6 +431,13 @@ Mods: {
 					New effects are added when entering hardmode
 					Increases the chance of obtaining Geodes drastically
 					''' */
+				/* Lore:
+					'''
+					Geodes like this are often referred to as "Earthen Treasures", 
+					since they contain a good amount of energy and rare minerals.
+					It is said that they are the shedded remnant of a serpent's rocky skin,
+					a reputation that lured many great adventurers deep underground, only to never return.
+					''' */
 			}
 
 			OmniEye: {
@@ -301,7 +446,10 @@ Mods: {
 					'''
 					[c/650670:You... can... see. Beware not to get blinded by its forbidden magic.]
 					Highlights danger sources, enemies and treasures, also gives nightvision
-					The eye that sees all, a gaze upon us, definetily a sight to behold,
+					''' */
+				/* Lore:
+					'''
+					The eye that sees all, a gaze upon us, definitely a sight to behold,
 					if only this artifact wasn't just as dangerous as it is helpful.
 					Using it grants the wearer the ability to see unseen things,
 					but the dark shady hex that lies within can also blind them forever.
@@ -328,12 +476,20 @@ Mods: {
 			}
 
 			ShadowEmoji: {
-				// DisplayName: Shadow Emoji
+				// DisplayName: Darklight Visage
 				/* Tooltip:
 					'''
-					Smiley's ability to smile, even in the darkest days is truly inspiring.
-					Grants +2 minion slots and increases minion damage by 5%.
-					Increases movement speed by 15% when below 30% health.
+					Grants a dark dash that has invincibility frames and also allows dashing downwards
+					Dashing into an enemy or projectile removes the i-frame granting dark energy
+					dark energy is replenished after 10 seconds
+					Dashing into an enemy inflicts them with the Nihil debuff for 2 seconds
+					Enemies inflicted with Nihil lose all their defense
+					''' */
+				/* Lore:
+					'''
+					A curious substance that attempts to mimic primordial light, or perhaps...?
+					Whatever this darkness is, it springs from a nightmare dwelling beyond our scope,
+					and despite being purely dark in nature, it still radiates an aura of tainted light.
 					''' */
 			}
 
@@ -343,6 +499,9 @@ Mods: {
 					'''
 					Increases arrow damage by 10%, ranged damage by 10% and greatly increases arrow speed 
 					20% chance to not consume arrows.
+					''' */
+				/* Lore:
+					'''
 					Sidane was never serious about his work, always carelessly playing around and yet,
 					he is a high ranked member of the Scelestian Council.
 					Despite his careless nature, he is still dedicated to protect his people,
@@ -376,9 +535,9 @@ Mods: {
 
 			StarvingLarva: {
 				// DisplayName: Starving Larva
-				/* Tooltip:
+				// Tooltip: You recover 5HP on enemy kills.
+				/* Lore:
 					'''
-					You recover 5HP on enemy kills.
 					The world devouring worms always hunger for more prey,
 					a integrated instinct that keeps them going.
 					Maybe its a curse or a joke from mother nature.
@@ -391,8 +550,6 @@ Mods: {
 					'''
 					Increases minion damage by 6%
 					You can rub it onto your skin to smell like crap
-					The inside of jungle slimes has a weird rotten smell,
-					it was often used by lihzahrds to protect themself from predators
 					''' */
 			}
 
@@ -402,7 +559,14 @@ Mods: {
 					'''
 					Gives immunity to electrified.
 					Increases movement speed by 8%, damage by 5% and defense by 5 when it is raining
-					The storm is a untamed force of nature and so are the Eels that follow it
+					''' */
+				/* Lore:
+					'''
+					It is not rare that one can observe these creatures during storms at beaches,
+					but never approach one, as it will most likely be the last thing you see.
+					Even worse, sometimes they can be seen carrying their living prey off into the distance,
+					towards a faraway sea where you will be lost forever.
+					The storm is an untamed force of nature and so are the eels that follow it.
 					''' */
 			}
 
@@ -417,11 +581,11 @@ Mods: {
 
 			ThornScarf: {
 				// DisplayName: Thorn Scarf
-				/* Tooltip:
+				// Tooltip: Reflects 15% of damage back to the enemy if they touch you
+				/* Lore:
 					'''
-					Reflects 15% of damage back to the enemy if they touch you
 					Old natives of the jungle would wear this to hurt animals that attack them but would also hurt themself,
-					a small price to pay to be able to escape an attacking predator
+					a small price to pay to be able to escape an attacking predator.
 					''' */
 			}
 
@@ -498,9 +662,13 @@ Mods: {
 				/* Tooltip:
 					'''
 					The breastplate of a Viking Raider, sturdy and very resistant.
+					Decreases movement speed by 5%
+					''' */
+				/* Lore:
+					'''
 					During their battles against the drakes, they needed all protection they could get,
 					a small mistake meant death.
-					It was forged by combining their own alloys with the scales of their sworn enemies
+					It was forged by combining their own alloys with the scales of their sworn enemies,
 					this made them extremely resistant against any of their attacks.
 					''' */
 			}
@@ -510,9 +678,13 @@ Mods: {
 				/* Tooltip:
 					'''
 					The helmet of a Viking Raider, sturdy and very resistant.
+					Decreases movement speed by 5%
+					''' */
+				/* Lore:
+					'''
 					During their battles against the drakes, they needed all protection they could get,
 					a small mistake meant death.
-					It was forged by combining their own alloys with the scales of their sworn enemies
+					It was forged by combining their own alloys with the scales of their sworn enemies,
 					this made them extremely resistant against any of their attacks.
 					''' */
 			}
@@ -522,9 +694,13 @@ Mods: {
 				/* Tooltip:
 					'''
 					The greaves of a Viking Raider, sturdy and very resistant.
+					Decreases movement speed by 5%
+					''' */
+				/* Lore:
+					'''
 					During their battles against the drakes, they needed all protection they could get,
 					a small mistake meant death.
-					They were forged by combining their own alloys with the scales of their sworn enemies
+					They were forged by combining their own alloys with the scales of their sworn enemies,
 					this made them extremely resistant against any of their attacks.
 					''' */
 			}
@@ -533,8 +709,8 @@ Mods: {
 				// DisplayName: Energy Fish
 				/* Tooltip:
 					'''
-					Right click to extract Dimensium.
 					Certain fish can consume Dimensium and become charged themself
+					Right click to extract Dimensium.
 					''' */
 			}
 
@@ -573,11 +749,11 @@ Mods: {
 
 			DarkMatterClump: {
 				// DisplayName: Void Matter
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
-					The physical incarnation of the nothingness outside our plain of existence.
-					A strange fog is emitting from it,
-					must be a reaction to the energy signature of our existence.
+					Said to be the physical incarnation of the nothingness outside our plain of existence.
+					Nightmarish fumes emanate from the mass, giving off a strange comforting yet haunting aura.
 					''' */
 			}
 
@@ -585,9 +761,13 @@ Mods: {
 				// DisplayName: Dimensium
 				/* Tooltip:
 					'''
-					The most common dimensional energy in form of a crystal
-					It is a valuable source of energy amongst the people who know of its existence
-					A certain dimensional traveler might want this
+					Used as fuel for most Dimensional Forge item recipes
+					Can be used as currency for certain shops
+					''' */
+				/* Lore:
+					'''
+					The most common dimensional energy in form of a crystal.
+					It is a valuable source of energy amongst the people who know of its existence.
 					''' */
 			}
 
@@ -598,9 +778,10 @@ Mods: {
 
 			FrostScale: {
 				// DisplayName: Frost Scale
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
-					The scale of a juvenile ice drake, its cold and soft.
+					The scale of a juvenile ice drake, it's cold and soft.
 					Ice Drakes reside underground until they become too big for the small ice caves.
 					You can notice where a nest has been in the past by the amount of scales found in one spot.
 					''' */
@@ -617,7 +798,8 @@ Mods: {
 
 			MadnessFragment: {
 				// DisplayName: Fragment of Madness
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					Madness-soaked piece of flesh, it still hasn't lost its mind burning capabilities.
 					Only a gaze touched being may carry this through the night,
@@ -627,12 +809,16 @@ Mods: {
 
 			ManaInfusedSandstone: {
 				// DisplayName: Mana Sandstone
-				// Tooltip: Sandstone remains of a Lesser Sand Elemental, it still pulsates with pure mana.
+				// Tooltip: Sandstone remains of a Lesser Sand Elemental, it still pulsates with mana.
 			}
 
 			Mushmatter: {
 				// DisplayName: Mushmatter
-				// Tooltip: Fungus Flesh from a glowing mushroom infested creature, it is unlike any other normal mushroom found here.
+				/* Tooltip:
+					'''
+					A piece of fungal flesh from a royal mushroom creature
+					It is of high quality
+					''' */
 			}
 
 			OldDustyBow: {
@@ -691,18 +877,20 @@ Mods: {
 
 			TidalQuartz: {
 				// DisplayName: Tidal Quartz
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
-					A unique mineral rarely found inside ocean creatures
-					Fishron and Storm Front Eels often gather and carry a large amount of them
+					A unique mineral carried by Storm Eels and Fishron,
+					Said to be the stolen treasure of a lost deep sea city.
+					Distant and faded visions of a great calamity dance across your mind when holding this.
 					''' */
 			}
 
 			VikingRelic: {
 				// DisplayName: Viking Relic
-				/* Tooltip:
+				// Tooltip: A piece of icy history
+				/* Lore:
 					'''
-					A piece of icy history
 					This special plating was only forged in the tundra by the Vikings during their neverending war against the drakes.
 					It was way more durable than drake scales and useful even outside the tundra.
 					The plating once had a name but was lost in time.
@@ -710,10 +898,10 @@ Mods: {
 			}
 
 			MDUnbooler: {
-				// DisplayName: MD Unbooler
+				// DisplayName: AL Unbooler
 				/* Tooltip:
 					'''
-					Sets all MD bools to false
+					Sets all Awakened Light bools to false
 					Non-Consumable
 					''' */
 			}
@@ -725,9 +913,9 @@ Mods: {
 
 			CuteEmoji: {
 				// DisplayName: Cute Emoji
-				/* Tooltip:
+				// Tooltip: Summons Smiley's adorable follower.
+				/* Lore:
 					'''
-					Summons Smiley's adorable follower.
 					At some point a young darkling decided to follow and imitate Smiley, a cute behavior that he couldn't just ignore.
 					He simply called him Smiley Jr and allowed him to follow him around wherever he goes.
 					''' */
@@ -740,7 +928,7 @@ Mods: {
 
 			AncientDepictionItem: {
 				// DisplayName: Ancient Depiction
-				// Tooltip: A big and heavy sandstone tablet, it depicts a one eyed bird
+				// Tooltip: A big and heavy sandstone tablet, it depicts a one eyed bird.
 			}
 
 			AncientDragonSkull: {
@@ -863,7 +1051,7 @@ Mods: {
 				// DisplayName: Broken Ancient Depiction
 				/* Tooltip:
 					'''
-					A big and heavy sandstone tablet, it seems to be broken and it's difficult to guess what it is showing.
+					A big and heavy sandstone tablet, it seems to be broken and it's difficult to guess what is engraved on it.
 					Dont drop it on the ground, its fragile
 					''' */
 			}
@@ -872,7 +1060,7 @@ Mods: {
 				// DisplayName: Chelia Plushie
 				/* Tooltip:
 					'''
-					A cuddly plushie designed after a starborn.
+					A cuddly plushie designed after the second oldest starborn.
 					Why is Dorira selling these?
 					''' */
 			}
@@ -893,7 +1081,7 @@ Mods: {
 					'''
 					The forge of the Dimensional God, it is able to craft Items with Dimensium.
 					Needs Dimensium as fuel
-					Seems like a great invention but anyone who really knows what dimensional energy is would point out every flaw.
+					Seems like a great invention but anyone who really knows what dimensional energy is would point out the cheap design.
 					''' */
 			}
 
@@ -907,7 +1095,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Is used to craft Void Matter items.
-					All Darklings were once forged in such a fabricator by the Empty Emperor, a entity unseen to this day.
+					All Darklings were once forged in such a fabricator by the Empty Emperor, an entity unseen to this day.
 					''' */
 			}
 
@@ -1002,7 +1190,7 @@ Mods: {
 			}
 
 			VoidMatterWorkBench: {
-				// DisplayName: Void Matter Work Bench
+				// DisplayName: Void Matter Workbench
 				// Tooltip: Tools of darkness are crafted on this.
 			}
 
@@ -1021,7 +1209,7 @@ Mods: {
 			}
 
 			SmileyTrophy: {
-				// DisplayName: SmileyTrophy
+				// DisplayName: Smiley Trophy
 				// Tooltip: ""
 			}
 
@@ -1050,7 +1238,7 @@ Mods: {
 
 			KFC: {
 				// DisplayName: KFC
-				// Tooltip: Kevin's Fried Chicken.
+				// Tooltip: Kevin's Fried Chicken
 			}
 
 			MerfolkPotion: {
@@ -1083,7 +1271,8 @@ Mods: {
 
 			BeeSoul: {
 				// DisplayName: Soul of a Queen Bee
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					The grand jungle bees build their hives inside the underground cave systems of the jungle.
 					Only one queen larva is born in a Queen's life cycle, so they are even more precious.
@@ -1092,7 +1281,8 @@ Mods: {
 
 			BrainSoul: {
 				// DisplayName: Soul of the Brain
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A soul? This is the cheap excuse of a soul, made to imitate a real one.
 					With that, the brain hoped to be saved from its ongoing misery.
@@ -1103,7 +1293,8 @@ Mods: {
 
 			CultistSoul: {
 				// DisplayName: Soul of the Lunatic Cultist
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A young boy once dreamed of the day where he could meet a god in flesh,
 					a goal that he kept throughout his entire life.
@@ -1121,7 +1312,8 @@ Mods: {
 
 			DeerSoul: {
 				// DisplayName: Soul of the Deerclops
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A weird creature that resembles a one eyed deer on two legs, it originates from another world.
 					The creature only appears in snowy regions and is extremely hostile towards anything that comes near it.
@@ -1131,22 +1323,25 @@ Mods: {
 
 			DukeSoul: {
 				// DisplayName: Soul of Duke Fishron
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A oceanic apex predator that normally lives in more open waters,
 					sometimes they come near the shores which puts civilians in great danger, even on land.
 					Interestingly enough, despite being a creature from the seas, Fishrons can fly.
+					They seem to have distant connections to the storm.
 					''' */
 			}
 
 			EmpressSoul: {
 				// DisplayName: Soul of the Light Empress
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					She was once the guardian angel of the kingdom of Gunresat, protecting it with all her might.
 					She is bound to it by a spell, created by their ancestors when they were in need of this protection.
 					That is the sole reason why she fought in the war between Gunresat and Baaruun,
-					she was dragged there by force using the ancient spell.
+					she was dragged into it using the ancient spell.
 					But when the armies got captured, she was able to roam free, free from her shackles,
 					and there she now found a new purpose in protecting something with her own will, small Prismatic Lacewings.
 					''' */
@@ -1154,7 +1349,8 @@ Mods: {
 
 			EyeSoul: {
 				// DisplayName: Soul of the Eye
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A massive flying eye, said to belong to a slain deity,
 					in reality, this is just one of many abominations spawned from the crimson flesh.
@@ -1163,9 +1359,10 @@ Mods: {
 
 			GolemSoul: {
 				// DisplayName: Core of a Golem
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
-					When the lands were scorched to ashes long ago, the lihzahrds locked themself in their temple to be safe. 
+					When the lands started to experience one disaster after another, the lihzahrds locked themself in their temple to be safe. 
 					To be really sure that nothing enters and kills them all, they created a golem made of the same material as their temple. 
 					It was modeled after the sun deity they see in their dreams, powered by pure solar energy. 
 					The Golem isn’t much, a solid protector against unwanted guests, but not a fighter either.
@@ -1174,7 +1371,8 @@ Mods: {
 
 			KingSlimeSoul: {
 				// DisplayName: Soul of the King Slime
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A large group of Blue Slimes got hit by a massive energy strike,
 					that hit fused them together into a massive ruler of all slimey.
@@ -1184,7 +1382,8 @@ Mods: {
 
 			MetalWormSoul: {
 				// DisplayName: Core of the Destroyer
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A long forgotten mech in shape of a worm that was lying dormant for years deep underground,
 					it was now reactivated when the forces of light and darkness were unleashed.
@@ -1194,7 +1393,8 @@ Mods: {
 
 			MoonSoul: {
 				// DisplayName: Soul of the Moon Lord
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					The great deity that the cultist wished to revive, only known under the name Cthulhu, 
 					a greater one of mindless destruction. 
@@ -1206,7 +1406,8 @@ Mods: {
 
 			PlantSoul: {
 				// DisplayName: Soul of Plantera
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A plant that was brought to life by an experiment about granting life to inanimate objects.
 					She was granted a soul and the will to live and a simple task: "Protect the Jungle".
@@ -1217,7 +1418,8 @@ Mods: {
 
 			PrimeSoul: {
 				// DisplayName: Core of Skeletron Prime
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A long forgotten mech in shape of a curse that was lying dormant for years, 
 					it was now reactivated when the forces of light and darkness were unleashed.
@@ -1227,11 +1429,12 @@ Mods: {
 
 			SkeletonSoul: {
 				// DisplayName: Soul of Skeletron
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A curse, Skeletron was nothing more than the offshoot of an old curse,
-					this form of the curse binds the one poor soul that has to carry it, to guard the dark dungeon for all eternity.
-					A old clothier fell victim to this curse due to his own curiosity when he entered a place he wasnt supposed to enter.
+					this form of the curse has used its host's own desire for the dungeons secrets to bind him to guard the dark dungeon for all eternity.
+					This old clothier fell victim to this curse due to his own curiosity when he entered a place he wasnt supposed to enter.
 					The curses influence didn't just possess the old man but also created copies of its physical form to guard the dungeon on lower levels.
 					The origins of the curse lie deep below the dungeon itself, but only a fool would dare to find it.
 					''' */
@@ -1239,22 +1442,24 @@ Mods: {
 
 			SmileySoulshard: {
 				// DisplayName: Smiley Soulshard
-				/* Tooltip:
+				// Tooltip: The echo of a powerful soul flows through this shard.
+				/* Lore:
 					'''
-					The echo of a powerful soul flows through this shard.
-					Smiley was born from void, forged by an empty emperor so that the pointless mass could grow stronger.
-					But something was different, he had a mind of his own, a soul to feel emotions...
-					He had own wishes, did not want to obey his master, and this obviously angered said master.
-					In a conflict they battled, Smiley stood no chance, but his brethren react differently now.
+					Smiley was born from void, forged by an empty emperor who used his own emptieness in his heart as fuel.
+					The intentions of his creator never became known to him, all he knew was that the void shall spread,
+					to be able to find more void and grow stronger.
+					Unlike his other siblings, his mind was hit with a revelation, he suddenly began to feel emotions...
+					He had own wishes, did not want to obey his master anymore, and this obviously angered said master.
+					In a conflict they battled and Smiley stood no chance, but his brethren reacted now.
 					Their expression changed, they opened their eyes and rushed to aid him.
-					During this incident, a lot of Darklings gave their life and a big chunk of the void entities fled,
-					now lurking in the dungeon, awaiting the day where they can live free in peace.
+					During this incident, a lot of Darklings gave their life, with the rest fleeing to be free at last.
 					''' */
 			}
 
 			TwinSoul: {
 				// DisplayName: Core of the Twins
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A long forgotten pair of mechs in shape of two eyes that were lying dormant for years, 
 					it was now reactivated when the forces of light and darkness were unleashed.
@@ -1266,17 +1471,21 @@ Mods: {
 				// DisplayName: Soul of the Underworld
 				/* Tooltip:
 					'''
-					It is a flesh prison supposed to hold thousands of souls from both light and dark forces.
-					It was brought into existence by the old underworld civilization 
-					by fusing their bodies into one large magic imbued mass.
 					[c/786d74:You could swear you can hear a conversation happening]
 					Use to listen closer
+					''' */
+				/* Lore:
+					'''
+					It is a flesh prison supposed to hold thousands of souls from both hallowed and demonic forces.
+					It was brought into existence by the old underworld civilization
+					by fusing their bodies into one large magic imbued mass.
 					''' */
 			}
 
 			WomanSlimeSoul: {
 				// DisplayName: Soul of the Queen Slime
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					Where a king is, there is a queen, and this queen is an angel.
 					Once an ordinary pinky, this grand gelatine queen uses the pure holy crystal inside her to gain more power.
@@ -1285,7 +1494,8 @@ Mods: {
 
 			WormSoul: {
 				// DisplayName: Soul of the World Eater
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					A species of giant worm, responsible for the chasms in the corruption, almost went extinct
 					if they didn't find a new home in the infectious Corruption.
@@ -1304,12 +1514,12 @@ Mods: {
 
 			MoonRuneStone: {
 				// DisplayName: Moon Rune Stone
-				/* Tooltip:
+				// Tooltip: Summons the Lunatic Cultist
+				/* Lore:
 					'''
 					A rune only known inside the moon cult, it calls forth their insane leader.
 					Tries were made to speed up the revival ritual, these runes are part of that,
 					but all tries never worked and only made the leader's mood worse.
-					Summons the Lunatic Cultist
 					''' */
 			}
 
@@ -1317,8 +1527,8 @@ Mods: {
 				// DisplayName: Moth Attractor
 				/* Tooltip:
 					'''
-					It's interesting how easy it is to lure in moths with just light, so if we make a bigger lamp we attract bigger moths, right?.
 					Summons a Mothron during an eclipse. 
+					It's interesting how easy it is to lure in moths with just light, so if we make a bigger lamp we attract bigger moths, right?.
 					''' */
 			}
 
@@ -1326,9 +1536,9 @@ Mods: {
 				// DisplayName: Plant Murder Starter Set
 				/* Tooltip:
 					'''
+					Summons Plantera. 
 					Chop this little bulb to make the big plant very angry, now in a small starter pack for kids. No refund warranty.
 					Product is made and advertised by Dor Inc.
-					Summons Plantera. 
 					''' */
 			}
 
@@ -1338,7 +1548,7 @@ Mods: {
 					'''
 					A weird smiling pile of dark matter pulsing with energy.
 					Summons Smiley at night
-					Warning, boss is currently extremely unstable in multiplayer and will despawn in all cases.
+					Warning, boss is currently unstable in multiplayer.
 					''' */
 			}
 
@@ -1373,21 +1583,23 @@ Mods: {
 					'''
 					An artifact shaped after the celestial deity of balance.
 					Can be used to change day to night and vice versa.
-					The Deity of Balance did not always have this power over time, 
-					previously there was a great species of serpents with that duty.
-					Unfortunately a chaotic force wiped most of them out.
-					To make up for this massive loss, 
-					a new entity was created to take their place,
-					this entity was much more reliable too.
+					''' */
+				/* Lore:
+					'''
+					The Deity of Balance came into existence when its predecessor vanished forever.
+					It exists in all dimensions, managing the concept of time everywhere at once,
+					being way more efficient than any other time deity.
+					Time is an important aspect of our universe, without it,
+					nothing can change and evolve, an aspect that is worth protecting.
 					''' */
 			}
 
 			MoonlightMoth: {
 				// DisplayName: Moonlight Moth
-				/* Tooltip:
+				// Tooltip: "Scares the sun away "
+				/* Lore:
 					'''
-					Scares away the Sun
-					A artifact of time, modeled after the Moonlight Moth,
+					This artifact of time was modeled after the Moonlight Moth,
 					the avatar of the night.
 					At night, the goddes of balance is always playful and happy,
 					trusting everyone instantly.
@@ -1396,10 +1608,10 @@ Mods: {
 
 			SunlightButterfly: {
 				// DisplayName: Sunlight Butterfly
-				/* Tooltip:
+				// Tooltip: "Scares the moon away "
+				/* Lore:
 					'''
-					Scares away the moon 
-					A artifact of time, modeled after the Sunlight Butterfly,
+					This artifact of time was modeled after the Sunlight Butterfly,
 					the avatar of day.
 					At day, the goddess of balance is always strict and serious,
 					pulling no jokes.
@@ -1453,11 +1665,12 @@ Mods: {
 
 			Cursemark: {
 				// DisplayName: Cursemark
-				/* Tooltip:
+				// Tooltip: While you press the attack button, your mouse gains a damaging aura
+				/* Lore:
 					'''
-					While you press the attack button, your mouse gains a damaging aura.
 					A cursemark signifies the presence of a powerful curse,
 					coming in all sorts of sizes, even be able to cover entire structures.
+					To destroy such an influence, one must destroy the curse's origin itself.
 					''' */
 			}
 
@@ -1465,8 +1678,12 @@ Mods: {
 				// DisplayName: False Moonlight
 				/* Tooltip:
 					'''
-					The blue crystal blade is composed only of light.
-					The lunatic Cultist is a insane fanatic of the moon and so stole this legendary blade to use it himself,
+					The blue crystal blade is composed only of light
+					Fires a tile piercing moonlight wave
+					''' */
+				/* Lore:
+					'''
+					The lunatic Cultist was an insane fanatic of the moon and so stole this legendary blade to use it himself,
 					but the blade instead obeys an otherworldly moon.
 					''' */
 			}
@@ -1477,6 +1694,9 @@ Mods: {
 					'''
 					Spin a crystal halberd around you that generates up to 2 light rings that spin around you as well.
 					If both rings of light are present and you stop attacking, the holy magic within them will heal you for 10 HP
+					''' */
+				/* Talk:
+					'''
 					[c/ff007f:Thank you for taking me with you.]
 					[c/ff007f:You know, Lord Sacres was always such a nice and pure soul.]
 					[c/ff007f:He cared about his people more than anything else. He even fought the neighboring lord to protect us.]
@@ -1486,11 +1706,15 @@ Mods: {
 
 			NeuralWaves: {
 				// DisplayName: Neural Waves
-				/* Tooltip:
+				// Tooltip: Sends out mind shockwaves around the player
+				/* Lore:
 					'''
-					A forbidden technique that transforms the user's thoughts into energy waves that burst out in all directions.
-					Being a forbidden technique, it was mostly used by the worst people there is.
+					This forbidden technique transforms the user's thoughts into energy waves that burst out in all directions.
 					As told in old secret records, the spell gets stronger the more malicious the user's thoughts are, resulting in a devastating shockwave.
+
+					Thoughts and emotions are an invaluable power in this world,
+					they can transform even the very fabric of reality.
+					Emotions will find their way, even through the clearest mind.
 					''' */
 			}
 
@@ -1511,7 +1735,11 @@ Mods: {
 
 			CoolingStaff: {
 				// DisplayName: Cooling Staff
-				// Tooltip: A staff that was restored from an old relic, it shoots a icicle that bursts into 4 smaller icicles.
+				/* Tooltip:
+					'''
+					A staff that was restored from an old relic.
+					Summons a freezing aura at the cursor position that inflicts Frostburn
+					''' */
 			}
 
 			LophiiformesBaculum: {
@@ -1543,7 +1771,7 @@ Mods: {
 				// DisplayName: Star Rod
 				/* Tooltip:
 					'''
-					A small magic staff that uses atmospheric energy to prduce small stars that fall from the sky
+					A small magic staff that uses atmospheric energy to produce small stars that fall from the sky
 					Does extra damage to void entities
 					''' */
 			}
@@ -1564,15 +1792,22 @@ Mods: {
 
 			SandBook: {
 				// DisplayName: Dune Chaser
-				// Tooltip: Old desert magic used by ancient magicians, it shoots a bouncing ball of sand.
+				// Tooltip: Summons a bouncing ball of sand.
+				/* Lore:
+					'''
+					This tome was once used by the first desert sorcerers,
+					one of their first ever spells concepted.
+					They could not use desert mana to its fullest potential yet,
+					so they bent the sand itself.
+					''' */
 			}
 
 			SpooderLexicon: {
 				// DisplayName: Arachnophobia
 				/* Tooltip:
 					'''
-					An entire book on how to defeat the fear of spiders, wait... WHY ARE THERE SPIDERS IN THIS BOOK?!
 					Shoots homing spiders and rarely a high velocity Albino Spider that deals double damage.
+					An entire book on how to defeat the fear of spiders, wait... WHY ARE THERE SPIDERS IN THIS BOOK?!
 					''' */
 			}
 
@@ -1588,12 +1823,12 @@ Mods: {
 
 			DataMiner: {
 				// DisplayName: Data Miner
-				/* Tooltip:
+				// Tooltip: Holds out a charged drill that inflicts Electrified.
+				/* Lore:
 					'''
-					The dimensional gods allmighty drill, used by him to tear rifts into dimensions.
-					Inflicts Electrified.
+					This drill was used by the dimensional god to tear rifts into dimensions.
 					Dorira always wanted his own world and leave his old one behind
-					When this opportunity striked, he did not hesitate
+					When this opportunity arose, he did not hesitate
 					Over the course of a long long time, he finally managed to create his very own world after many failed prototypes.
 					Today it is known as Caelis, a energy flooded dimension that attracts all kinds of entities.
 					''' */
@@ -1640,16 +1875,6 @@ Mods: {
 					''' */
 			}
 
-			PokingFool: {
-				// DisplayName: Poking Fool
-				// Tooltip: Poke your enemies until they go away
-			}
-
-			PokingLoser: {
-				// DisplayName: Poking Loser
-				// Tooltip: Poke your enemies until they go away
-			}
-
 			RadiantAcceptance: {
 				// DisplayName: Radiant Acceptance
 				/* Tooltip:
@@ -1668,11 +1893,6 @@ Mods: {
 					''' */
 			}
 
-			ShiningRejection: {
-				// DisplayName: Shining Rejection
-				// Tooltip: Reject your enemies until they go away
-			}
-
 			Soulpiercer: {
 				// DisplayName: Soulpiercer
 				// Tooltip: Doesnt affect soulless beings
@@ -1687,24 +1907,40 @@ Mods: {
 					''' */
 			}
 
-			WingedAnnoyance: {
-				// DisplayName: Winged Annoyance
-				// Tooltip: Annoy your enemies until they go away
-			}
-
 			WingedNuisance: {
 				// DisplayName: Winged Nuisance
 				// Tooltip: Annoy your enemies until they go away
+				/* Lore:
+					'''
+					The winged spear of a hated entity nobody wishes to be near of.
+					Even if you approach it with a neutral intention, your mind becomes twisted,
+					your hatred stirs up and you cannot resist the urge to attack.
+					Only a powerful protection spell can save one from this hatred,
+					but even if you aren't affected, nobody would believe you.
+					''' */
 			}
 
 			AwakenedArchbird: {
-				// DisplayName: Awakened Archbird
+				// DisplayName: Rahlem's Flamescar
 				/* Tooltip:
 					'''
-					Shoots shadowflame tentacles when swung and slows enemies when hit for 5 seconds.
-					The sword is shaped like a legendary bird found in ancient depictions in the desert, it is full of dark flames.
-					Inscriptions say that one day the archbird will swoop down and bathe the earth in it's dark flames.
+					Right click to cut yourself for 20 damage with the tip of the blade to awaken it
+					When the effect runs out, you will be inflicted with Inner Ember
+					Repeated cutting while having this debuff will result in 40 health being taken,
+					as well as being inflicted with Blazing Suffering yourself
+					This damage resets when the debuff runs out
+					While awakened, the blade inflicts Blazing Suffering and creates green and red embers
+					Green embers pierce enemies and Red embers inflict Blazing Suffering
 					''' */
+				/* Lore:
+					'''
+					This ceremonial sword was used to burn marks into the skin of cult members, 
+					which was a painful process.
+					The deep red mark shows true dedication to their god and must be done to fully join their cult,
+					anyone who refused was exiled as a heretic.
+					Outside of those ceremonies, this weapon was used by the cult leader for various dark rituals.
+					''' */
+				// Locked: The weapon seems to be hiding its power from the unworthy. Defeating a flesh prison might prove your worth
 			}
 
 			BurningSaber: {
@@ -1741,23 +1977,16 @@ Mods: {
 				// Tooltip: Stab with the power of dirt.
 			}
 
-			DormantKing: {
-				// DisplayName: Dormant King
-				/* Tooltip:
-					'''
-					Slows down enemies on hit for 5 seconds
-					The hidden cult in the desert worships a deity of destruction,
-					a monstrous bird that will some day end us all.
-					''' */
-			}
-
 			EclipseReaper: {
 				// DisplayName: Hidden Sun Soulreaper
 				/* Tooltip:
 					'''
 					Fires a rotating scythe that slowly deccelerates
 					Hitting an enemy with the scythe directly will inflict max charged Madness for 4 seconds
-					A scythe forged inside the core of a dark star, hidden away underground
+					''' */
+				/* Lore:
+					'''
+					This scythe was forged inside the core of a dark star, hidden away underground.
 					It is unknown what its true purpose was but at some point it must have been used to fight madness.
 					The entire weapon is practically soaked in it, 
 					just a small wound will be enough to fully destroy someones mind in an instant.
@@ -1772,21 +2001,6 @@ Mods: {
 			FishronCleaver: {
 				// DisplayName: Fishron Cleaver
 				// Tooltip: Spews bubbles with every swing
-			}
-
-			FrostbornBlade: {
-				// DisplayName: Frostborn Blade
-				// Tooltip: Shoots several frost spikes that inflict Frostbite
-			}
-
-			GreatToothsword: {
-				// DisplayName: Skeletal Greatsword
-				/* Tooltip:
-					'''
-					The sword throws out bones of the former victims with every swing
-					How cruel the world is, humans killing humans for nothing.
-					Some are especially cruel and process their victims into weapons, just to show off how many they have killed.
-					''' */
 			}
 
 			Lifelight: {
@@ -1847,9 +2061,19 @@ Mods: {
 				// DisplayName: Hex Rapier
 				/* Tooltip:
 					'''
+					Inflicts Accused
+					Cursed enemies are haunted by ghosts
+					''' */
+				/* Lore:
+					'''
 					A cursed thrusting sword empowered by malicious runes.
-					The curses that were laid onto this weapon are ancient and have no counterspell,
-					the hex isnt at its peak though and as such wont be able to cause any major harm
+					The curses laid onto this weapon are ancient and have no counterspell,
+					the hex isn't at its peak though and as such won't be able to cause any major harm.
+
+					Some say that this weapon was crafted out of spite against all life,
+					far far away in a dimension known as Arinetos.
+					Its ancient people had the darkest thoughts and desires, thoughts that had ultimately killed them,
+					even before their brethren from the glorious capital.
 					''' */
 			}
 
@@ -1860,11 +2084,12 @@ Mods: {
 
 			TundranaScythe: {
 				// DisplayName: Tundrana Scythe
-				/* Tooltip:
+				// Tooltip: Shoots rotating ice sickles
+				/* Lore:
 					'''
-					Shoots rotating sickles
-					A scythe from a world beyhond the freezing fog of the Frozen Underworld, 
-					it was once used by some sort of royal guard.
+					This weaponry was used by Royal Reaper Guards of the Subzero Ridge,
+					a world from beyond the freezing fog of the Frozen Underworld.
+					It has lost most of its power over time.
 					''' */
 			}
 
@@ -1874,6 +2099,9 @@ Mods: {
 					'''
 					Throw a blade of molten rock, the blade explodes into volcanic rocks on impact
 					The blade inflicts Blazing Suffering
+					''' */
+				/* Talk:
+					'''
 					[c/ff8000:Thanks for picking me up by the way.]
 					[c/ff8000:This punk thinks we killed his lord even though we didn't do anything like that.]
 					[c/ff8000:And even then, it was HIS lord who started these pointless fights against us.]
@@ -1985,7 +2213,7 @@ Mods: {
 
 			DesertEagle: {
 				// DisplayName: Desert Eagle
-				// Tooltip: Did someone squish this bird into a gun shape, wth?
+				// Tooltip: The lamest joke all across the universe.
 			}
 
 			MetalWormGun: {
@@ -2002,7 +2230,7 @@ Mods: {
 				// DisplayName: Cursed Maw
 				/* Tooltip:
 					'''
-					A grotesque weapon, almost seems to be alive...
+					This grotesque weapon almost seems to be alive...
 					Shoots a cursed fireball that erupts into smaller flames upon hitting an enemy
 					''' */
 			}
@@ -2020,8 +2248,8 @@ Mods: {
 				// DisplayName: Gel Vac
 				/* Tooltip:
 					'''
-					Normally not used for combat, more of a rancher tool.
 					Shoots different kinds of adorable slimes
+					Normally not used for combat, more of a rancher tool.
 					''' */
 			}
 
@@ -2062,7 +2290,7 @@ Mods: {
 				// DisplayName: Dark Rebels
 				/* Tooltip:
 					'''
-					Summons a brave Darkling who is ready to defeat the void.
+					Calls a brave Darkling to your side, ready to defeat the darkness.
 					Only the bravest Darklings who hide in the dungeon will go outside on their own.
 					''' */
 			}
@@ -2093,9 +2321,9 @@ Mods: {
 
 			marcO: {
 				// DisplayName: Servants of Blight
-				/* Tooltip:
+				// Tooltip: Summons the forgotten servant of the blighted crawler.
+				/* Lore:
 					'''
-					Summons the forgotten servant of the blighted crawler.
 					A long time ago a flying creepy creature roamed the night, with it's servants by it's side.
 					But one day it disappeared and only left behind this gift.
 					''' */
@@ -2127,6 +2355,9 @@ Mods: {
 					Summons a killer bee that grows sawblades when enemies are spotted.
 					You must have at least 2 empty minion slots to summon.
 					Only one bee can be alive at a time.
+					''' */
+				/* Lore:
+					'''
 					A rare bee species, adapted to hunt and kill prey.
 					Their honey contains blood that stuck to them during their hunts, giving it a bloodred color.
 					''' */
@@ -2248,10 +2479,11 @@ Mods: {
 
 			DevilSilk: {
 				// DisplayName: Devilish Silk
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
-					Soft silk cloth worn by Victims, it somehow stays warm, even in this frozen environment
-					It is said that this warmth comes from the sins of a great devil, integrated into this cloth
+					Soft silk cloth worn by Victims that somehow stays warm, even in this frozen environment.
+					It is said that this warmth comes from the sins of a great devil, integrated into this cloth.
 					''' */
 			}
 
@@ -2275,7 +2507,7 @@ Mods: {
 
 			MadnessCaller: {
 				// DisplayName: Eye of the Witness
-				// Tooltip: Eat this eye to awaken the madness that lurks in the shadows
+				// Tooltip: Eat this eye at night to awaken the madness that lurks in the shadows
 			}
 
 			ColdEnragedHellBox: {
@@ -2288,15 +2520,15 @@ Mods: {
 			}
 
 			SmileyBag: {
-				// DisplayName: Treasure Bag
+				// DisplayName: Treasure Bag (Smiley)
 				// Tooltip: Right-click to open
 			}
 
 			MDUndowner: {
-				// DisplayName: MD Undowner
+				// DisplayName: AL Undowner
 				/* Tooltip:
 					'''
-					Undowns all MD bosses
+					Undowns all Awakened Light bosses
 					Non-Consumable
 					''' */
 			}
@@ -2305,7 +2537,7 @@ Mods: {
 				// DisplayName: Vanilla Undowner
 				/* Tooltip:
 					'''
-					Left click to undown all Pre-Hardmode vanilla bosses except Wall of Flesh
+					Left click to undown all Pre-Hardmode vanilla bosses except the Wall of Flesh
 					Right click to undown all Hardmode vanilla bosses
 					''' */
 			}
@@ -2314,19 +2546,18 @@ Mods: {
 				// DisplayName: Music Box (Night of Madness)
 				/* Tooltip:
 					'''
-					Visage's Visit
+					Plays Visage's Visit
 					By DrVoodoo
 					''' */
 			}
 
 			NumbMindMask: {
 				// DisplayName: Mask of the Numbed Mind
-				/* Tooltip:
+				// Tooltip: Grants immunity to Madness
+				/* Lore:
 					'''
-					Grants immunity to Madness
-					This mask was forged from a special alloy, it is supposed to fend off any mind invading effects
-					The people who made it only finished it shortly before madness rampaged across their city,
-					in that case, only a few selected members were actually protected against it.
+					Its production started too late and only a few were finished, 
+					madness creeped and only those chosen could resist with their help.
 					''' */
 			}
 
@@ -2335,17 +2566,15 @@ Mods: {
 				// Tooltip: A special metal from a faraway civilization, its special properties can protect one's mind.
 			}
 
-			SoulRemnant: {
-				// DisplayName: Soul Remnant
-				// Tooltip: Weak and pathetic remains of a once powerful soul, its energy signature is now blank
-			}
-
 			ShadeEye: {
 				// DisplayName: Light Deprived Eye
 				/* Tooltip:
 					'''
 					The eyeball of a creature that was going to mutate into a madness monstrosity, it seems to have been interrupted halfway through
-					It is covered in a weird pitch black substance, you can hear strange whispers eminating from it...
+					It is covered in a weird pitch black substance and you can hear strange whispers emanating from it...
+					''' */
+				/* Talk:
+					'''
 					[c/FF2CD0C:I have watched you from afar for quite a while now, you have overcome pure madness and even its titans.]
 					[c/FF2CD0C:I wish to converse with you, but the time has not come yet.]
 					[c/FF2CD0C:This eye will guide you to me whenever fate wills it so.]
@@ -2366,8 +2595,9 @@ Mods: {
 				/* Tooltip:
 					'''
 					Weird mushrooms that only grow while madness visits.
-					Their cap contains madness infected juices that can be used for medicine.
+					Their cap contains madness inducing juices that can be used for medicine.
 					Handle with extreme caution!
+					Dappercap might be interested in this
 					''' */
 			}
 
@@ -2403,8 +2633,11 @@ Mods: {
 				// DisplayName: Divine Star's Blessing
 				/* Tooltip:
 					'''
-					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen.
+					Decreases the duration of the Potion Sickness debuff to 45 seconds and increases life regen
 					Increases invincibility time and rains down stars after getting hit
+					''' */
+				/* Lore:
+					'''
 					The Divine Star was once the protector of the Scelestians, a last gift by the Astral Mother.
 					It is long dead by now, its dust covering the once glorius sunny plains of its home,
 					forcing its residents to ascend to the sky.
@@ -2441,7 +2674,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Right-click to open
-					A old bag carried by an Imp
+					An old bag carried by an Imp
 					It seems to contain several pieces of clothing
 					There is a note attached to it
 					[c/fabd16:"Set them all ablaze with your many minions"]
@@ -2465,16 +2698,23 @@ Mods: {
 			TundraFall: {
 				// DisplayName: Tundra's Fall
 				// Tooltip: Rains icicles from the cursor
+				/* Lore:
+					'''
+					The art of ice magic was first taught by the northern king Odin,
+					the chosen drakerider who learned those arts from the royal drakes themself.
+					Just like how he learned it, he would only teach it to the ones he sees as worthy.
+					All to avoid the powers being put into the wrong hands.
+					''' */
 			}
 
 			PaleMatter: {
 				// DisplayName: Pale Matter
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
 					Unique Void Matter that went through a change
-					Smiley despises his origins, so in order to escape his own darkness
-					he wished to not be dark anymore.
-					His body turned pale in response to his undying will.
+					Smiley's will is strong, so strong that he can even defy his own being.
+					This substance is proof enough and might one day lead to a brighter future.
 					''' */
 			}
 
@@ -2549,6 +2789,711 @@ Mods: {
 					Increases magic damage by 4%
 					''' */
 			}
+
+			MyceliumSeeds: {
+				// DisplayName: Mycelium Seeds
+				// Tooltip: Places Scarlet Mycelium on dirt
+			}
+
+			MushroomBlock: {
+				// DisplayName: Red Mushroom Block
+				// Tooltip: ""
+			}
+
+			Mushroots: {
+				// DisplayName: Mushroots
+				// Tooltip: ""
+			}
+
+			GlowingMushmatter: {
+				// DisplayName: Glowing Mushmatter
+				/* Tooltip:
+					'''
+					A piece of glowing fungal flesh
+					It radiates a weird otherwordly aura
+					''' */
+			}
+
+			IntimidatingMushroom: {
+				// DisplayName: Alarmshroom
+				/* Tooltip:
+					'''
+					A very pricey mushroom only found in the Scarlet Mycelium Forest
+					It makes a lot of noise that only mushrooms can hear
+					Use near a Sleeping Mushroom to wake it up
+					''' */
+			}
+
+			BloodyMary: {
+				// DisplayName: Bloody Mary
+				/* Tooltip:
+					'''
+					Hitting enemies with the blade inflicts them with the Mary's Wrath debuff
+					Right clicking will summon Mary who will scream after a few seconds
+					Any enemy that had the Mary's Wrath debuff on them takes 150 damage and gets their debuff removed
+					It was never just folklore
+					''' */
+			}
+
+			Etheral: {
+				// DisplayName: Etheral
+				// Tooltip: Fires a continuous light beam
+				/* Lore:
+					'''
+					Tiny crystal jaws that yearn for their true purpose,
+					taken from their home and stripped from their true light,
+					waiting for it to finally appear.
+					''' */
+			}
+
+			EtheralEX: {
+				// DisplayName: Etheral Moonlight
+				// Tooltip: Fires several continuous light beams
+				/* Lore:
+					'''
+					The true Moonlight reveals itself,
+					illuminating what was once guided by impure light,
+					ending its eternal search at last.
+					''' */
+			}
+
+			MushroomSoul: {
+				// DisplayName: Scarlet Soul Spore
+				// Tooltip: ""
+				/* Lore:
+					'''
+					The Mushroom Monarch, a true ruler of mushrooms,
+					he rules over the Scarlet Mycelium Forest, a small forest of red mushrooms.
+					The monarch was once mindless, but he was granted a will when the glowing royalty
+					shared his light.
+					''' */
+			}
+
+			GlowshroomSoul: {
+				// DisplayName: Indigo Soul Spore
+				/* Tooltip:
+					'''
+					This soul reflecting spore contains a memory left there by its owner
+					Use to view the memory
+					The memory can only be witnessed once
+					''' */
+				/* Lore:
+					'''
+					The Feudal Fungus, also known as Umos, the Radiant Apostle or glowing royalty is just like his brother and rules over a type of mushroom.
+					He rules over the blue glowing mushrooms underground, but he has way more influence, 
+					so his glow stretches all over the continent's caverns.
+					This is unlike his brother, who only rules a small forest.
+					He was mindless long ago, obeying distant orders, that was until it was blessed by light, claiming its new self.
+					''' */
+			}
+
+			MonarchRelic: {
+				// Tooltip: ""
+				// DisplayName: Mushroom Monarch Relic
+			}
+
+			MonarchBag: {
+				// Tooltip: Right-click to open
+				// DisplayName: Treasure Bag (Mushroom Monarch)
+			}
+
+			Musharang: {
+				// DisplayName: Monarcharang
+				/* Tooltip:
+					'''
+					Every 4th throw imbues the weapon with your life
+					Imbued projectiles deal more damage and are faster
+					''' */
+			}
+
+			Mushbow: {
+				// DisplayName: Scarlet String
+				/* Tooltip:
+					'''
+					Right click to imbue the bow with your life and shoot a Bloodshroom Arrow
+					These arrows need 10 HP to be shot and deal thrice as much damage
+					When a Bloodshroom Arrow hits an enemy, you get healed by 5 HP
+					''' */
+			}
+
+			YtriumStaff: {
+				// DisplayName: Yttrium Staff
+				// Tooltip: Shoots 3 Yttrium Shards that shatter into 2 Topaz Bolts each
+			}
+
+			MonarchTrophy: {
+				// DisplayName: Mushroom Monarch Trophy
+				// Tooltip: ""
+			}
+
+			TheAncientChaos: {
+				// DisplayName: The Ancient Chaos
+				/* Tooltip:
+					'''
+					The path has split,
+					one leads to a new beginning,
+					one leads to a bright but dark future.
+					Both will go their way until the end of time.
+					''' */
+			}
+
+			TheVulcano: {
+				// DisplayName: The Vulcan
+				// Tooltip: Turns gel into an explosive lob of magma
+			}
+
+			Blue: {
+				// DisplayName: Coastal Tide Truffle
+				/* Tooltip:
+					'''
+					A unique blue mushroom that grows at ocean shores, 
+					its roots allow it to grow in sand.
+					''' */
+			}
+
+			Brown: {
+				// DisplayName: Lampshade
+				// Tooltip: A brown mushroom that got its name from its lamp-like shape.
+			}
+
+			Gray: {
+				// DisplayName: Jellytail
+				/* Tooltip:
+					'''
+					A small gray mushroom that is shaped like a jellyfish with a single tendril, 
+					almost giving it the illusion of being a tail.
+					''' */
+			}
+
+			Green: {
+				// DisplayName: Dryadicar
+				// Tooltip: A lime green mushroom, its minty taste has made it very famous amongst many.
+			}
+
+			Orange: {
+				// DisplayName: Little Ember
+				// Tooltip: A slightly spicy mushroom that is often used as seasoning in many recipes for a little extra pep.
+			}
+
+			Pink: {
+				// DisplayName: Wild Lollipop
+				// Tooltip: A pink mushroom that got its name from the almost perfect circular cap.
+			}
+
+			Purple: {
+				// DisplayName: Mystikus
+				/* Tooltip:
+					'''
+					A purple mushroom species that emits a weirdly sweet smell, 
+					breathing in too much of it can result in hallucinations.
+					''' */
+			}
+
+			Rainbow: {
+				// DisplayName: Prismatic Lightcap
+				/* Tooltip:
+					'''
+					Extremely rare mushroom species that only the most dedicated mushroom hunters can find. 
+					It has great adaptability and can be used for almost anything.
+					''' */
+			}
+
+			Red: {
+				// DisplayName: Devilscap
+				/* Tooltip:
+					'''
+					A red hot spicy mushroom with horn-like protrusions on its cap,
+					the stem looks like a devil’s tail if uprooted.
+					''' */
+			}
+
+			Yellow: {
+				// DisplayName: Moldy Giantslayer
+				/* Tooltip:
+					'''
+					A sickly yellow mushroom who’s smell can knock out the largest predator. 
+					Besides that, it tastes very good.
+					''' */
+			}
+
+			HeartyTruffle: {
+				// DisplayName: Heart of the Monarch
+				/* Tooltip:
+					'''
+					Healing Potions are 25% less effective
+					While inflicted with Potion Sickness, life regeneration is nullified
+					During that time period, damage done to you will be collected
+					When Potion Sickness ends, 
+					you will be healed by a quarter of the collected damage instantly
+					''' */
+			}
+
+			RealityBendingShroom: {
+				// DisplayName: Reality-Bending Mushroom
+				/* Tooltip:
+					'''
+					An otherworldly mushroom that seems to distort space-time around it.
+					Just holding this in your hand makes you uncomfortable,
+					maybe you aren't worthy enough to bathe in its presence.
+					Deadly Dappercap might be interested in this.
+					''' */
+			}
+
+			Mushrune: {
+				// DisplayName: Ethereal Mushrune
+				/* Tooltip:
+					'''
+					A mushroom shaped object, consisting of dark energy, it has a cosmic rune embedded into it.
+					Consume to increase maximum mana by 50
+					Only one may be used
+					''' */
+				/* Lore:
+					'''
+					Mushrooms are said to be cosmic anchors by truth seekers only,
+					despite their somewhat bland and meaningless look, 
+					they tell stories from beyond and further.
+					The Ethereal Eye that is radiating from this rune is the sign of the Cosmic Keeper,
+					a unique individual who can hear the fungi.
+					He who sees the blood, 
+					who speaks in foreign words even higher beings cannot comprehend.
+					''' */
+			}
+
+			MushroomBlockWall: {
+				// DisplayName: Red Mushroom Wall
+				// Tooltip: ""
+			}
+
+			ConfusingMushroom: {
+				// DisplayName: Overgrown Ring
+				/* Tooltip:
+					'''
+					Draws the attention of the glowing royalty
+					Can only be used in an underground Glowing Mushroom Biome
+					Non-consumable
+					''' */
+				/* Lore:
+					'''
+					A ring made of pure gold that is covered in glowing mushmatter.
+					It has inscriptions on it which spell the name 'Umos'.
+					''' */
+			}
+
+			FungusBox: {
+				// DisplayName: Music Box (Feudal Fungus)
+				/* Tooltip:
+					'''
+					Plays Bioluminescent Beatdown
+					By SpectralAves
+					''' */
+			}
+
+			MonarchBox: {
+				// DisplayName: Music Box (Mushroom Monarch)
+				/* Tooltip:
+					'''
+					Plays Fungal Face-off
+					By SpectralAves
+					''' */
+			}
+
+			ShroomForestBox: {
+				// DisplayName: Music Box (Scarlet Mycelium Forest)
+				/* Tooltip:
+					'''
+					Plays Regrowth
+					By SpectralAves
+					''' */
+			}
+
+			RottenMemory: {
+				// DisplayName: Rotten Memory
+				/* Tooltip:
+					'''
+					The memory of a past life, the rotting corpse of what once was.
+					A life before its independence existed
+					''' */
+			}
+
+			TheDapperCap: {
+				// DisplayName: The Dapper Cap
+				// Tooltip: A stylish mushroom cap only worn by the coolest fun guys
+				/* Lore:
+					'''
+					It was said that on a sunny day when the glowing royalty visited the scarlet monarch,
+					a mushling was struck with will and so became its own being.
+					''' */
+			}
+
+			TheStem: {
+				// DisplayName: The Stem
+				/* Tooltip:
+					'''
+					Using a mana potion activates Indigo Injection
+					Indigo Injection disables mana consumption for 6 seconds
+					Mana Sickness also has no effect during this time period
+					After the effect ends, there is a 2 minute cooldown
+					''' */
+				/* Lore:
+					'''
+					A mushroom parasite that formed from a brainstem, it clings to its host.
+					It formed inside the glowing royalty,
+					as a means to deepen its connection to its light.
+					''' */
+			}
+
+			FungusBag: {
+				// DisplayName: Treasure Bag (Feudal Fungus)
+				// Tooltip: Right-click to open
+			}
+
+			RadianceTalisman: {
+				// DisplayName: Radiance Talisman
+				/* Tooltip:
+					'''
+					Summons a Praying Mushroom sentry at the cursor position which creates an aura around it
+					The aura increases summon damage by 5% and enemies have a 10% chance to drop a mana star upon being hit by a minion
+					''' */
+				/* Lore:
+					'''
+					When in doubt or despair, the glowing fungi can turn towards the light and pray,
+					pray for safety, pray for continued fortune.
+					Their very own light is what shines in the dark caverns, the light from within,
+					the light from beyond, the light of freedom.
+					The scarlet fungi do not share this light, only one and its kin have ever enjoyed its warm radiance.
+					''' */
+			}
+
+			GlowingMushiumBar: {
+				// DisplayName: Glowing Mushium Bar
+				// Tooltip: May cause hallucinations
+			}
+
+			MushiumBar: {
+				// DisplayName: Mushium Bar
+				// Tooltip: Made with love and mushrooms
+			}
+
+			UmosShower: {
+				// DisplayName: Umos Light Shower
+				/* Tooltip:
+					'''
+					Hold a book above your head to release continuous waves of glowing shots upwards
+					Falling below 50% health empowers the shots greatly
+					''' */
+				/* Lore:
+					'''
+					A prayer book that is covered in glowing fungi and mycelium, due to its bad condition, barely anything is readable.
+					'Living in the radiant light, under its warm veil you will find salvation.'
+					''' */
+			}
+
+			SusGlowsporeBag: {
+				// DisplayName: Suspicious Glowing Spore Bag
+				// Tooltip: Summons the Feudal Bab
+			}
+
+			FungusMask: {
+				// DisplayName: Feudal Fungus Mask
+				// Tooltip: Be the coolest fungus around
+			}
+
+			MushiumHat: {
+				// DisplayName: Twinned Ruler Cap
+				/* Tooltip:
+					'''
+					Increases max life by 5
+					Increases max mana by 10
+					Increases damage by 2%
+					''' */
+			}
+
+			MushiumPants: {
+				// DisplayName: Twinned Ruler Legs
+				/* Tooltip:
+					'''
+					Increases max life by 5
+					Increases max mana by 10
+					Increases damage by 3%
+					''' */
+			}
+
+			MushiumShirt: {
+				// DisplayName: Twinned Ruler Body
+				/* Tooltip:
+					'''
+					Increases max life by 5
+					Increases max mana by 10
+					Increases damage by 3%
+					''' */
+			}
+
+			ToadLeg: {
+				// DisplayName: Truffle Leg
+				/* Tooltip:
+					'''
+					The severed leg of a Truffle Toad, now freed from its restraints,
+					it grants a powerful leap
+					Double tap up to leap
+					You cannot do another leap for 30 seconds
+					''' */
+			}
+
+			RoyalFungarang: {
+				// DisplayName: Royal Fungarang
+				/* Tooltip:
+					'''
+					Every 4th throw imbues the weapon with your life
+					Imbued projectiles deal more damage and are faster
+					If you had 100 mana during the throw, 
+					the weapon will be boosted further and you lose that amount of mana
+					''' */
+			}
+
+			UnitedString: {
+				// DisplayName: United String
+				/* Tooltip:
+					'''
+					Shoots Bloodshroom Arrows at the cost of 10 HP
+					When a Bloodshroom Arrow hits an enemy, you get healed by 5 HP
+					Right clicking will fire a Lightshroom Arrow that costs 40 mana
+					Lightshroom Arrows are shot much quicker than Bloodshroom Arrows
+					''' */
+			}
+
+			UmosForce: {
+				// DisplayName: Umos Light Force
+				/* Tooltip:
+					'''
+					Fires a green sphere of light upwards that then flies towards the cursor
+					While the sphere is at the cursor position it will fire several Radiance Shots upwards
+					If you hold the sphere close to you, you will gain increased life regeneration
+					The sphere will not fire anything as long as it is close to you
+					''' */
+				/* Lore:
+					'''
+					A previous unreadable page has been revealed due to the now glowing texts
+					'The sleeping light, we defend with all our might,
+					one day it may awake, undo all that's in its wake,
+					we follow and move on, the marsh into oblivion.
+					''' */
+			}
+
+			EntwinedTalisman: {
+				// DisplayName: Talisman of the Entwined
+				/* Tooltip:
+					'''
+					Summons two entwined Praying Mushrooms as a sentry at the cursor position which create an aura around it
+					The aura increases summon damage by 8% and enemies have a 10% chance to drop a mana star,
+					and a 5% chance to drop a heart upon being hit by a minion
+					''' */
+				/* Lore:
+					'''
+					Due to not being blessed by the light, the scarlet fungi neither glow nor do they have much consciousness
+					Though sometimes, glowing mushrooms will try to become one with them,
+					all in hopes of sharing their light.
+					It is unknown if it actually works this way, only those who can understand their thoughts may know.
+					''' */
+			}
+
+			ToadBanner: {
+				// DisplayName: Toad Banner
+				// Tooltip: ""
+			}
+
+			SporeSolution: {
+				// DisplayName: Spore Solution
+				/* Tooltip:
+					'''
+					Used by the Clentaminator
+					Spreads the Scarlet Mycelium Forest
+					''' */
+			}
+
+			MixSporeBag: {
+				// DisplayName: Mixed Spore Bag
+				// Tooltip: Summons the fungal brothers
+			}
+
+			SusSporeBag: {
+				// DisplayName: Suspicious Spore Bag
+				// Tooltip: Summons the Bab Monarch
+			}
+
+			MonarchMask: {
+				// DisplayName: Mushroom Monarch Mask
+				// Tooltip: ""
+			}
+
+			FungusRelic: {
+				// DisplayName: Feudal Fungus Relic
+				// Tooltip: ""
+			}
+
+			MyceliumHardsand: {
+				// DisplayName: Hardened Mycelium Sand
+				// Tooltip: ""
+			}
+
+			MyceliumSand: {
+				// DisplayName: Mycelium Sand
+				// Tooltip: ""
+			}
+
+			MyceliumSandstone: {
+				// DisplayName: Mycelium Sandstone
+				// Tooltip: ""
+			}
+
+			AbyssalHellstoneBrickWall: {
+				// DisplayName: Abyssal Hellstone Brick Wall
+				// Tooltip: ""
+			}
+
+			MyceliumHardsandWall: {
+				// DisplayName: Hardened Mycelium Sand Wall
+				// Tooltip: ""
+			}
+
+			MyceliumSandstoneWall: {
+				// DisplayName: Mycelium Sandstone Wall
+				// Tooltip: ""
+			}
+
+			VoidMatterMassWall: {
+				// DisplayName: Void Matter Mass Wall
+				// Tooltip: ""
+			}
+
+			RedMushBathtub: {
+				// DisplayName: Red Mushroom Bathtub
+				// Tooltip: ""
+			}
+
+			RedMushBed: {
+				// DisplayName: Red Mushroom Bed
+				// Tooltip: ""
+			}
+
+			RedMushBookcase: {
+				// DisplayName: Red Mushroom Bookcase
+				// Tooltip: ""
+			}
+
+			RedMushCandelabra: {
+				// DisplayName: Red Mushroom Candelabra
+				// Tooltip: ""
+			}
+
+			RedMushCandle: {
+				// DisplayName: Red Mushroom Candle
+				// Tooltip: ""
+			}
+
+			RedMushChair: {
+				// DisplayName: Red Mushroom Chair
+				// Tooltip: ""
+			}
+
+			RedMushChandelier: {
+				// DisplayName: Red Mushroom Chandelier
+				// Tooltip: ""
+			}
+
+			RedMushChest: {
+				// DisplayName: Red Mushroom Chest
+				// Tooltip: ""
+			}
+
+			RedMushClock: {
+				// DisplayName: Red Mushroom Clock
+				// Tooltip: ""
+			}
+
+			RedMushDoor: {
+				// DisplayName: Red Mushroom Door
+				// Tooltip: ""
+			}
+
+			RedMushDresser: {
+				// DisplayName: Red Mushroom Dresser
+				// Tooltip: ""
+			}
+
+			RedMushLamp: {
+				// DisplayName: Red Mushroom Lamp
+				// Tooltip: ""
+			}
+
+			RedMushLantern: {
+				// DisplayName: Red Mushroom Lantern
+				// Tooltip: ""
+			}
+
+			RedMushPiano: {
+				// DisplayName: Red Mushroom Piano
+				// Tooltip: ""
+			}
+
+			RedMushPlatform: {
+				// DisplayName: Red Mushroom Platform
+				// Tooltip: ""
+			}
+
+			RedMushSink: {
+				// DisplayName: Red Mushroom Sink
+				// Tooltip: ""
+			}
+
+			RedMushSofa: {
+				// DisplayName: Red Mushroom Sofa
+				// Tooltip: ""
+			}
+
+			RedMushTable: {
+				// DisplayName: Red Mushroom Table
+				// Tooltip: ""
+			}
+
+			RedMushWorkBench: {
+				// DisplayName: Red Mushroom Work Bench
+				// Tooltip: ""
+			}
+
+			CapBunnyItem: {
+				// DisplayName: Capped Bunny
+				// Tooltip: ""
+			}
+
+			HovercapItem: {
+				// DisplayName: Hovercap
+				// Tooltip: ""
+			}
+
+			MushbugBabyItem: {
+				// DisplayName: Myceli Larva
+				// Tooltip: ""
+			}
+
+			MushbugBanner: {
+				// DisplayName: Myceli Bug Banner
+				// Tooltip: ""
+			}
+
+			PufferBanner: {
+				// DisplayName: Spore Puffer Banner
+				// Tooltip: ""
+			}
+
+			ShroomJellyBanner: {
+				// DisplayName: Mushroom Jelly Banner
+				// Tooltip: ""
+			}
+
+			FungusTrophy: {
+				// DisplayName: Feudal Fungus Trophy
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -2565,6 +3510,22 @@ Mods: {
 				All magic attacks inflict Frostburn
 				Increases mana regeneration
 				Reduces mana cost by 20%
+				''' */
+			/* MushiumSet:
+				'''
+				Press the Armor Ability hotkey to swap modes
+				After switching, you have to wait 30 seconds before being able to switch again
+				[c/c63434:Scarlet mode]:
+				Increases life regeneration by 3
+				Increases defense by 4
+				Swapping to Scarlet mode will heal 10 health and grant the ability to spawn hearts on enemy hits for 5 seconds
+				[c/0080ff:Indigo mode]:
+				Increases mana regeneration by 3
+				Increases max number of sentries by 1
+				Increases melee critical strike chance by 10%
+				Grants 20% chance not to consume ammo
+				Decreases defense by 4
+				Swapping to Indigo mode will increase damage by 10% and use speed by 30% for 5 seconds.
 				''' */
 		}
 
@@ -2718,7 +3679,58 @@ Mods: {
 			// SaltwaterBolt.DisplayName: Saltwater Trident
 			// Cosima.DisplayName: Cosima
 			// AtlanteanTridentStaff.DisplayName: Atlantean Trident Staff
-			// HellFlakeProj.DisplayName: Hell Flake Proj
+			// HellFlakeProj.DisplayName: Hell Flake
+			// MonarchRUNAWAY.DisplayName: Monarch R U N A W A Y
+			// FakeMonarchMushroom.DisplayName: Monarch Mushroom
+			// MonarchRUNAWAYPlayerKill.DisplayName: Monarch R U N A W A Y
+			// Mary.DisplayName: Mary
+			// EtheralBeam.DisplayName: Etheral Beam
+			// EtheralProj.DisplayName: Etheral
+			// EtheralEXProj.DisplayName: Etheral Light
+			// EtheralLaserEX.DisplayName: True Light Beam
+			// MusharangProj.DisplayName: Musharang Proj
+			// BloodshroomArrow.DisplayName: Bloodshroom Arrow
+			// YtriumShard.DisplayName: Yttrium Shard
+			// Vulcan.DisplayName: Vulcan Magma
+			// VulcanExplosion.DisplayName: Vulcan Explosion
+			// FrostScaleProj.DisplayName: Frost Scale Proj
+			// ManaShockwave.DisplayName: Mana Shockwave
+			// SymbioHatchling.DisplayName: Symbio Hatchling
+			// FreezeAura.DisplayName: Freeze Aura
+			// Mushshot.DisplayName: Telekinetic Bullet
+			// EvokedMushroots.DisplayName: Evoked Mushroots
+			// IlluminaRing.DisplayName: Illumina Aura
+			// Mushshot2.DisplayName: Telekinetic Rain
+			// RadianceShot.DisplayName: Radiance Rain
+			// PureRadianceShot.DisplayName: Pure Radiance Rain
+			// StalkingShot.DisplayName: Stalking Spore
+			// Aura.DisplayName: Aura
+			// Prayer.DisplayName: Praying Fungus
+			// UmosBook.DisplayName: Umos Book
+			// Mushshot2Friendly.DisplayName: Mushshot
+			// PureRadianceShotFriendly.DisplayName: Pure Radiance Shot
+			// FeudalBab.DisplayName: Feudal Bab
+			// FungusBubble.DisplayName: Fungus Bubble
+			// Fungarang.DisplayName: Fungarang
+			// LightshroomArrow.DisplayName: Lightshroom Arrow
+			// ConsumedBook.DisplayName: Consumed Book
+			// UmosLightSphere.DisplayName: Umos Light Sphere
+			// LightSphereMouse.DisplayName: Umos Light Sphere
+			// PrayingTwins.DisplayName: Praying Twins
+			// SporeSpray.DisplayName: Spore Spray
+			// FungusDie.DisplayName: Feudal Fungus reflection
+			// FungusMemory.DisplayName: Feudal Fungus reflection
+			// MushWave.DisplayName: Telekinetic Wave
+			// RadiantIlluminaRing.DisplayName: Radiant Illumina Aura
+			// Glowxplosion.DisplayName: Glowxplosion
+			// DimensionalLightning.DisplayName: Dimensional Lightning
+			// MonarchBab.DisplayName: Bab Monarch
+			// AccursedStalker.DisplayName: Accursed Stalker
+			// MyceliumSandBall.DisplayName: Mycelium Sand Ball
+			// SeethingEmber.DisplayName: Seething Ember
+			// SpiritEmber.DisplayName: Spirit Ember
+			// PufferFart.DisplayName: Puffer Fart
+			// FadedLightRing.DisplayName: Faded Light Aura
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -2744,7 +3756,18 @@ Mods: {
 			// MadnessBat.DisplayName: Madness Flier
 			// MadnessBat2.DisplayName: Madness Gazer
 			// MadnessDog.DisplayName: Starving Madness
-			// Smiley.DisplayName: Smiley
+
+			Smiley: {
+				// DisplayName: Smiley
+
+				BossChecklistIntegration: {
+					// SpawnInfo: Use a [i:MultidimensionMod/UnknownEmoji] at night.
+					// DespawnMessage: Smiley continues his search for vengeance.
+				}
+			}
+
+			// DoriraTpose.DisplayName: Tposing Dorira
+			// Dapperbox.DisplayName: Just a regular box
 
 			Dorira: {
 				// DisplayName: Dimensional God
@@ -2753,7 +3776,7 @@ Mods: {
 					// Content: ok
 					// NoHome: Uh... you don't happen to possess a room for me where I could stay?
 					// FarFromHome: How did I get here?
-					// LoveSpace: Its amazing to have so much room, makes it easier to practice with my sword!
+					// LoveSpace: It's amazing to have so much room, makes it easier to practice with my sword!
 					// DislikeCrowded: You know, I really like people around, but not this many.
 					// HateCrowded: I hate big groups I hate big groups I hate big groups I hate big groups
 					// LoveBiome: The nice warm sun, the soothing waves, it really is lovely here.
@@ -2794,24 +3817,108 @@ Mods: {
 
 			// AdelSpirit.DisplayName: Adel von Gunresat
 			// VertrariusSpirit.DisplayName: Vertrarius von Baaruun
+
+			MushroomMonarch: {
+				// DisplayName: Mushroom Monarch
+				// PowerUp: The scarlet monarch's faded light stirs...
+
+				BossChecklistIntegration: {
+					// SpawnInfo: Use a [i:MultidimensionMod/IntimidatingMushroom] near a Sleeping Mushroom in the Scarlet Mycelium Forest.
+					// DespawnMessage: The scarlet monarch returns to peace.
+				}
+			}
+
+			// RedMushling.DisplayName: Red Mushling
+
+			MushroomHeir: {
+				// DisplayName: Mushroom Heir
+
+				TownNPCMood: {
+					// Content: I feel pretty funky right now.
+					// NoHome: Bro, do you have a couch I can chill on?
+					// FarFromHome: Uh, the trip got me pretty far away.
+					// LoveSpace: Less people around means less people asking about weird substances.
+					// DislikeCrowded: I have noticed people staring at me, it's bothering me. I'd like less people around
+					// HateCrowded: So many people keep asking me about my "stuff", I want to go elsewhere.
+					// LoveBiome: Maybe if I stay here, I can see my uncle again!
+					// LikeBiome: This magical place is pretty cool, maybe I find some mystical mushrooms here.
+					// DislikeBiome: This place is boring as heck.
+					// HateBiome: I don't want to be here, get me out of here. This just reminds me too much of my old man.
+					// LoveNPC: Oh {NPCName} is so awesome, she throws the most coolio parties ever. I mean the secret VIP ones, not this boring Happy Birthday crap.
+					// LikeNPC: It's cool to have another mushroom around, {NPCName} is really chill too.
+					// DislikeNPC: I sometimes hear {NPCName} breathing behind my door at night... he is creepy...
+					// HateNPC: DUDE! Why is dad here?! This place SUCKS!
+					// LikeNPC_Princess: For some weird reason my brain wants to like {NPCName}, but I don't want to.
+					// Princess_LovesNPC: "{NPCName} is such a funny little goober, I want to just squeeze him!"
+				}
+			}
+
+			// AldinGrabberEscape.DisplayName: ???
+			// AldinGrabber.DisplayName: ???
+
+			FeudalFungus: {
+				// DisplayName: Feudal Fungus
+				// SecondPhaseName: Umos
+				// DefeatSpawn: So we meet again wretch.
+				// Transition1: Amn utak eretus!
+				// Transition2: Focus now!
+				// Transition3: Harje imuna servet inate?
+				// Transition4: Do not be afraid, thy vengeance will come soon.
+				// Transition5: Listen careful, murderous wretch, thy actions shall be punished.
+				// Transition6: By the light of Umos!
+				// Transition7: Bew ta aeios mi Umos!
+				// Defeat1: Away!
+				// Defeat2: Away with thee!
+				// Defeat3: Why art thou not giving up?
+
+				BossChecklistIntegration: {
+					// SpawnInfo: Use a [i:MultidimensionMod/ConfusingMushroom] in a Glowing Mushroom cave.
+					// DespawnMessage: Feudal Fungus disappears into the glowing caverns.
+				}
+			}
+
+			// GlowSentry.DisplayName: Empowered Glowing Mushroom
+			// EvokedMushroot.DisplayName: Evoked Mushroot
+			// TruffleToad.DisplayName: Truffle Toad
+			// GlowBomb.DisplayName: Overloaded Glowing Mushroom
+			// CapBunny.DisplayName: Capped Bunny
+			// Mushbug.DisplayName: Myceli Bug
+			// Puffer.DisplayName: Spore Puffer
+			// ShroomJelly.DisplayName: Mushroom Jelly
+			// Hovercap.DisplayName: Hovercap
+			// MushbugBaby.DisplayName: Myceli Larva
+			// MonarchSlep.DisplayName: Sleeping Mushroom
 		}
 
 		Dialogue: {
 			Dorira: {
-				// GoblinDialogue: I came here because I heard the anomalies in this dimension are very bad, {0}'s money sucking service is DEFINETILY one.
+				// GoblinDialogue: I came here because I heard the anomalies in this dimension are very bad, {0}'s money sucking service is DEFINITELY one.
 				// DemolitionistDialogue: When I go monster hunting, I will always buy {0}'s explosives from now on. Why I need bombs for hunting? You think a raw wall will do the trick? PAH!
-				// MechanicDialogue: "{0}'s father was a real celebrity I heard, a super engineer who built the craziest things. A shame he died in a fire some time ago."
 				// GenericDialogue1: When you are going to the Underworld, don't run into a wall.
 				// GenericDialogue2: serglhw3o85zhp35ognpügd1312mfghödfdlhgftzjmdzinhwüß046ihn
 				// GenericDialogue3: I've had a weird feeling since a while, its as if everything could go mad any second...
+				// GenericDialogue4: Do you know this mod named Awakened Light? Yeah, me neither.
+				// GenericDialogue5: Oh yeah, so there was once this guy who was incredible racist against Goblins. Well I killed him, no hesitation. Okay actually I just simply didn't like that guy.
+				// GenericDialogue6: Insert something very interesting here
+				// GenericDialogue7: There is fungus among us.
+				// GenericDialogue8: I suddenly have the urge to write an entire essay about why people should stop making flying pigs.
+				// GenericDialogue9: Keep your safe safe.
+				// GenericDialogue10: Do you ever want to start a conversation but everything that comes out is just "the"?
+				// GenericDialogue11: The best game design choice ever made was giving the desert furry a secret one-shot attack.
+				// GenericDialogue12: I hope I can fix everything somehow...
 				// GenericHardmodeDialogue1: Hey just between us two, if you happen to possess a sword made of fish, throw it into some weird liquid. ;)
+				// YttriumDialogue: Crabs have grown in power, soon they will oberthrow us and become the dominant species. No but seriously, you should check out those crabs at the ocean.
+				// MushroomDialogue: I had a dream where you showed me all of these alchemy mushrooms in a glowing mushroom biome while shopping with me. I think you did that after defeating a weird stone construct powered by solar energy.
 				#Below is help dialogue
 				// ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
 				// DimensiumHelp: You can find Dimensium by doing many different things. Killing, mining, fishing, and so much more.
+				// KingsCapHelp: You know that mushroom forest nearby? If you wait long enough, you may find a mushroom that is larger than the others. You may wake it up using a unique fungus only found in that forest.
 				// TouchGrassHelp: Go outside
 				#Below is quest dialogue
 				// CassieQuestStart: I wanted to ask if you could do me a favor, during my travel here something important got seperated from me. Could you maybe try and get it back? It might have fallen like a star from the sky, if only there was a matter that could transform it back into its original form.
 				// CassieQuestClear: Thank you so much, here, this is what they were before. Since I trust you, you can keep it safe for me.
+				#Below is tpose dialogue
+				// Tpose: He seems to be experiencing something real funky.
 			}
 
 			Taraha: {
@@ -2822,6 +3929,41 @@ Mods: {
 				// DoriraDialogue: Dorira, he traded powerful objects for… chocolate...
 				// BloodMoonDialogue: ...
 				// SlimeRainDialogue: Yum yum, gelatine heaven!
+				// ShadeItemDialogue: Shadow, I can smell it, say hello to him for Taraha.
+				// SmileyDialogue: The king, empty, alone, withering...
+			}
+
+			Dappercap: {
+				// FatherDialogue: DAD, GET THE HELL AWAY FROM HERE!
+				// UncleDialogue: OMG uncle, hi!
+				// ClothTruffleDialogue: So, sometimes I see {0} sneak into {0}’s house at night. You think there is something going on between them?
+				// AldinDialogue: I once met this awesome mushroom enthusiast, he was pretty chill and cool. He told me he wanted to find 7 mushrooms to do whatever, probably bend space-time or something. Anyways, he disappeared without a trace and I have not seen him since then.
+				// RocketDialogue: So I talked to this guy once who really seemed to like mushrooms, it was a nice conversation until he mentioned he preferred my dad over my uncle. I was like “DUDE HOW?” and he kept going with how awesome he is. I told him to shroom himself and left him alone with a moldy one, hope the smell unrots his brain.
+				// GenericDialogue1: My uncle is so cool, unlike my boring as hell dad. He EVEN GLOWS, can you believe that??
+				// GenericDialogue2: Hey between you and me, I'm pretty sure my uncle is a hallucinogenic!!
+				// GenericDialogue3: I had this friend of mine named Malcolm, I got several awesome mushrooms from him, but then he suddenly stopped, saying something like "I have to be a better person". Bleh… weirdo.
+				// GenericDialogue4: Dem mushromz hit hart todai
+				// GenericDialogue6: Sometimes my dad was so annoying that I told him to finally go get some milk.
+				// GenericDialogue7: I heard there is a kingdom full of mushroom people, but it’s not ruled by a mushroom, do you think it’s real?
+				// GenericDialogue8: Yo, would be awesome if you were to meet my uncle. If you bring me like, 5 of these Hovercaps, I'm going to give you something that will definitely draw his attention. Why I need those caps? Well I find it really funny to use them as a frisbee.
+				// GenericDialogue8B: So, my uncle thought you killed my dad and stole the ring. That is very unfortunate, but tell ME. Did you two have an epic fight? Did you? Did you?
+				#Below is Alch Mushroom dialogue
+				// TradeSuccess1: Yo awesome, take these for your work.
+				// TradeSuccess2: Thanks, my other contact will really appreciate these!
+				// TradeFail1: Idk if you understand the concept of trading but you do indeed need to give me something of interest, this isn’t god damn donation central.
+				// TradeFail2: Hello? You understand me? You need to give thingie so I give thingie. So GET your ass out unless you need something important.
+				// MadnessTrade: HOLY COW! I have no idea where you found this but these mushrooms are EXTREMELY rare. There is only one species in my possession that I could give you for such a beauty.
+				// DyeItemTrade: Oh thanks, how did you know I was hungry?
+				// GlowTrade: Alright, here ya go bro. I stole this from my dad to sell it but apperantly it belongs to my uncle. Try to give it back so you two can get to know eachother!
+				#Below is first time talk dialogue
+				// FirstTalk1: I saw you gave my dad a good thrashing, so I guess you’re cool.
+				// FirstTalk2: Yes bro, you don’t know how much I hate that guy, hope he went to cry in a corner. I’m Deadly Dappercap btw, the deadliest fungus in town, I love to get around and gather some really funky shrooms. Let’s say you bring me some valuable things and I'll give you some of them. But if anyone asks, they aren’t from me, understood?
+				// FirstTalk3: Good to know. So you bring me rare fauna and I give you some pricey fungi, that or you buy them for a Dapper deluxe price.
+				#Below is box dialogue
+				// Box: Ey, go away, you are going to reveal my location if you keep talking to me. I will not come out until I know its safe again.
+				#Below is reality shroom event dialogue
+				// AldinGrab1: I don't even know this mushroom, thats how rare it must be. It makes me feel weird though, so I'm not sure if I want this. WHAT THE HECK!?
+				// AldinGrab2: Well... that was something I guess.
 			}
 		}
 
@@ -2880,17 +4022,44 @@ Mods: {
 			// DimensiumPlaced.MapEntry: Dimensium
 			// FrostburnSlimeBannerPlaced.MapEntry: Frostburn Slime Banner
 			// TridentBannerPlaced.MapEntry: Magic Trident Banner
+			// MonarchTrophyPlaced.MapEntry: Monarch Trophy Placed
+			// SmileyTrophyPlaced.MapEntry: Smiley Trophy Placed
+			// TheAncientChaosPlaced.MapEntry: The Ancient Chaos
+			// FungusBoxPlaced.MapEntry: Music Box
+			// MonarchBoxPlaced.MapEntry: Music Box
+			// ShroomForestBoxPlaced.MapEntry: Music Box
+			// RottenMemoryPlaced.MapEntry: Rotten Memory
+			// RedMushBathtubPlaced.MapEntry: Red Mushroom Bathtub
+			// RedMushBookcasePlaced.MapEntry: Red Mushroom Bookcase
+			// RedMushCandelabraPlaced.MapEntry: Red Mushroom Candelabra
+			// RedMushCandlePlaced.MapEntry: Red Mushroom Candle
+			// RedMushChestPlaced.MapEntry: Red Mushroom Chest
+			// RedMushDresserPlaced.MapEntry: Red Mushroom Dresser
+			// RedMushPianoPlaced.MapEntry: Red Mushroom Piano
+			// RedMushSofaPlaced.MapEntry: Red Mushroom Sofa
+			// FungusTrophyPlaced.MapEntry: Feudal Fungus Trophy
 		}
 
-		// DeathMessages.Socks: died from the pain of wearing wet socks.
+		DeathMessages: {
+			// Socks: " died from the pain of wearing wet socks."
+			// MonarchHeart: " was turned to mush."
+			// AntiCheese: " has been punished for their skill issue."
+			// Madness: "'s mind was consumed."
+			// Flamescar: " burned their very soul."
+		}
 
 		Configs: {
 			MDConfig: {
-				// DisplayName: Config
+				// DisplayName: General config
 
-				DisableNPCItemSelling: {
-					// Label: Town NPCs shop additions
-					// Tooltip: Adds new items to Town NPCs shops.
+				NPCItemSelling: {
+					// Label: Town NPC Item selling
+					// Tooltip: NPCs sell new items
+				}
+
+				ALTitleCards: {
+					// Label: AL Title Cards
+					// Tooltip: Vanilla and Awakened Light bosses and some biomes will display a title card upon being spawned/entered.
 				}
 			}
 		}
@@ -2901,29 +4070,40 @@ Mods: {
 			// BabyGlowmarin: These small adorable fish are from another dimension, they reproduce really fast. Its small glow organs are already developed and work fine.
 			// Gilania: Big reptiles that live in the desert, their bite is venomous. They will rest underground at day to escape the blazing desert sun and come out at night.
 			// SandEle: They are actually crystalized mana surrounded by sand, created artificially by a cult. They will react hostile against anything that enters their desert. During sandstorms they become even more active and travel to the surface, sometimes following Sand Elementals.
-			// Darkling: A entity that was created from Void Matter, they curiously approach people who pass by in the dungeon and only attack when threatened.
+			// Darkling: An entity that was created from Void Matter, they curiously approach people who pass by in the dungeon and only attack when threatened.
 			// Ashton: A weird creature that roams the frozen section of the underworld, hovering as if hanging on strings. They spit burning cold ash at everything that doesn't belong.
 			// SearedAshton: A subspecies of Ashton that adapted to live in the seething heat of the underworld, they spit hot burning ash clouds.
-			// IceDrakeJuvenile: Juvenile Ice Drakes usually reside underground where they hunt down prey via ambush. They can be approached savely when they are asleep. They really love gilded dishes.
+			// IceDrakeJuvenile: Juvenile Ice Drakes usually reside underground where they hunt prey via ambush. They can be approached savely when they are asleep. They really love gilded dishes.
 			// Glowmarin: A fish from another dimension, they have glowing organs all over their body, suggesting that they originally lived in deeper waters.
-			// Lobster: Odd lobster species that lives near the shores, the have a beak which gives them their name. Their meat is very tasty and can make a nice dish.
-			// StormEel: The great storm eels, only active during storms, when the sea is harsh and unforgiving. Many people believe they are scouts, scouts of something deep under the ocean, that is why these creatures are seen as an omen of even worse to come
+			// Lobster: Odd lobster species that lives near the shores, they have a parrot like beak which gives them their name. Their meat is very tasty and can make a nice dish.
+			// StormEel: The great storm eels, only active during storms, when the sea is harsh and unforgiving. Many people believe they are scouts of something deep under the ocean. That is why these creatures are seen as an omen of even worse to come.
 			// Dusty: Piles of cooled ash given life by the potent magic of the Frozen Underworld. They have no mind or soul, they only fly around on the icy winds, exploding into ash on impact.
-			// Victim: A poor soul that has lost everything to the Abyssal Sin. When the great devil of the Subzero Ridge took over their world, they left and went to the Underworld together with the icy winds. They have long forgotten who they even are.
+			// Victim: A poor soul that has lost everything to the burning winds of ice. They fled through a space-time rift into the Underworld after their home had begun to slowly be consumed by the Abyssal Sin. They have long forgotten who they even are.
 			// VictimEye: The eye of a Victim, it became sentient after its host body started to show signs of weakness.
 			// IceDemon: A demon that has managed to adapt to the icy winds of the Frozen Underworld. They utelize powerful magic spears but... there must be something slumbering deep within.
 			// Madman: A simple man who witnessed the true horror, no longer able to think like a normal person.
 			// MadnessFlier: A flying entity that mutated into a grotesque something, just touching its skin hurts mentally.
-			// MadnessGazer: A giant eyeball creature that flies by flapping its grotesque tentacles around. They might have been the eye of a unfortunate soul that witnessed the horrors.
+			// MadnessGazer: A giant eyeball creature that flies by flapping its grotesque tentacles around. They might have been the eye of an unfortunate soul that witnessed the horrors.
 			// MadnessStarving: A gruesome creature that gazed into the lurking terror, its madness scarred mind cannot properly comprehend the process of consumption anymore, leaving it in a terrible state, craving for food but not being able to die either.
 			// MadTitan: A bulky creature that follows the horrors, its soul has been empowered by the madness energy inside it. It possesses an arm cannon with which it can fire massive amounts of madness, maybe suggesting that it might have been a normal gun at some point that fused with its holder.
 			// PetDrake: Ice Drakes were normally very docile creatures, often enough even interacting with humans by themself. Though the war against the Vikings has left them scarred, now barely trusting anyone. Who knows, maybe some day, we can live in harmony again.
-			// Dorira: The creator and administrator of the world's frame we live in, he has come to this world in order to fix what has been broken. Dorira might be a creator god but in reality he isn't powerful at all and relies more on his main system to control things.
+			// Dorira: The creator and administrator of the world's frame we live in, he has come to this world in an attempt to fix what has been broken. Dorira might be a creator god but in reality he isn't powerful at all and relies more on his main system to control things.
 			// Taraha: A dimensional traveler who loves to trade items. "Find something here, trade somewhere else", that is her slogan.
+			// Dappercap: The Mushroom Monarch's son, really nobody knows how in the world this works but here he is. He is up to mischief, hates everything he doesn't see as "cool" and even deals with illegal mushrooms. Maybe if you act cool enough, he will share them with you too.
 			// Adel: Originating from a neighboring kingdom, this hallowed warrior wishes to avenge his beloved lord. He wields the Lightstream Mythos with which he has slain many foes. He was the first to declare war against Baaruun, against his new lord's will.
-			// Vertrarius: A grumpy demon who wields the Evil Ember, Vulkanus. He is lazy and does not care about anyone but his lord, making him the most unreliable person in existence. When Gunresat declared war against Baaruun, he fought as their leader out of boredom.
+			// Vertrarius: A grumpy demon who wields the Evil Ember, Vulkanus. He is lazy and does not care about anyone but his lord, making him the most unreliable person in existence. When Gunresat declared war against Baaruun, he fought as Baaruun's leader out of boredom.
 			// Smiley: The leader of the Darklings that hide inside the dungeon. His powers are unrivaled and respected amongst his followers and he is equally loved as well. In response to the incredible anger against his origins, his body turned pale to rebel against his darkness.
 			// Grudge: The incarnation of despair and hope that piled up in the Frozen Underworld, born from the deep wishes of its residents and the abyssal magic that lurks inside. You have slain their biggest hope, so be assured, the winds are not happy about your slaughter.
+			// MushroomMonarch: A royal mushroom who rests in the Scarlet Mycelium Forest. He had more light to fight with a long time ago, but it has since faded. Nowadays he is just a grumpy old king in his tiny kingdom of peace.
+			// RedMushling: The monarchs loyal servants which are formed from his own flesh. They have no mind, only following their task to kill whatever is in their way.
+			// FeudalFungus: A large humanoid glowing mushroom who is known as the glowing royalty. As its name suggests, it possesses an elegant blue hued glow that only becomes stronger the more it taps into its inner light. A long time ago it took upon the name "Umos", referencing the memory it now shares. Only the mushrooms know what hides under its light.
+			// Toad: Rare toads that have grown large and somehow found their way into the glowing caverns. Their ability to jump is greatly crippled due to mycelium restraining the movement of their back legs. They are peaceful until provoked.
+			// ShroomJelly: A jellyfish like creature who likes to hide buried in the ground disguised as a mushroom.
+			// MyceliBug: Large insect that lives in the Scarlet Mycelium Forest, they feast on nutrients inside the mushrooms.
+			// MyceliLarva: Small larva who will eventually grow into a Myceli Bug. Just like their adult counterparts, they consume mushroom nutrients.
+			// CapBunny: Unique bunny species who have evolved to live in harmony in the Scarlet Mycelium Forest.
+			// Puffer: These large reptiles waddle through the Scarlet Mycelium Forest in search of only the best fungi to consume. If anything threatening looking draws too close, they will enter an alerted stance and release large spore clouds from their tail end. Their thick hide makes them extremely resistant against any attack.
+			// Hovercap: Red mushrooms that are extremely lightweight with the ability to ride on even the smallest breeze. Just a slight disruption to their swift movement makes them crash down back to earth.
 		}
 
 		SoulConversation: {
@@ -2969,6 +4149,262 @@ Mods: {
 			}
 
 			// Cultist.Hi: Hi
+		}
+
+		DropConditions: {
+			// DownedSkeletronCondition: Only available after defeating Skeletron.
+			// RealityCondition: Drops by doing unessecery complicated stuff.
+			// DimensiumCondition: This item won't appear in the bestiary.
+			// DownedMoonLordCondition: Only available after defeating Moon Lord
+		}
+
+		SpecialTooltips: {
+			// Viewer: Hold [Shift] to view lore
+			// Listen: Hold [Shift] to listen closer
+		}
+
+		GameTips: {
+			// MadnessShroomTip: Giving Madness Mushrooms to a true mushroom enthusiast will grant you nice rewards.
+			// GeodeTip: Breaking all kinds of stone will reveal hidden Geodes inside, they may even contain ancient relics!
+			// RealityShroomTip: A blessing from the Cosmic Keeper is what you wish for? Try to ask your trusty dimensional god.
+			// IceDrakeTip: Giving juvenile Ice Drakes the Feast of Midas may result in them staying with you.
+			// MadnessNightTip: After the defeat of a great evil, madness may awaken at night.
+			// MushForestTip: In the scarlet forests not far beyond the journey's beginning, you can find pricey mushrooms. But beware of the consequences.
+			// DimensiumTip: Don't know what to do with all those shiny blue crystals? Don't worry, a dimensional traveller will arrive soon enough!
+			// VikingTip: Remnants of once proud warriors can be found all across the icy caverns.
+			// RahlemTip: The antlion infested desert caves contain remnants of a once proud cult.
+		}
+
+		WindowTitles: {
+			// Space: Press space to live
+			// Religion: Bible III, the coming of shroom
+			// Madness: Now with a 80% chance to go mad
+			// Dump: The nostalgian dumpster
+			// BadFlirt: You are the harmony to my discord
+			// Drama: Mushroom family drama
+			// Watching: HE is always watching
+			// Smiley: A smile at night
+		}
+
+		TitleCards: {
+			Biomes: {
+				Underworld: {
+					// Title: Ashen Remnants
+					// Name: The Underworld
+				}
+
+				Dungeon: {
+					// Title: Accursed Halls
+					// Name: The Dungeon
+				}
+
+				JungleTemple: {
+					// Title: Isolated Chambers
+					// Name: The Jungle Temple
+				}
+
+				Aether: {
+					// Title: Hidden Starry Sky
+					// Name: The Aether
+				}
+
+				FU: {
+					// Title: Sinner's Wasteland
+					// Name: The Frozen Underworld
+				}
+
+				ShroomForest: {
+					// Title: Spore Fields
+					// Name: Scarlet Mycelium Forest
+				}
+
+				Inferno: {
+					// Title: Inferno Crags
+					// Name: The Dragon's Hoard
+				}
+
+				Mire: {
+					// Title: Devouring Swamp
+					// Name: The Shrouded Mire
+				}
+
+				Purity: {
+					// Title: Nature's Sanctuary
+					// Name: Harmony Caverns
+				}
+
+				Void: {
+					// Title: The Anomaly
+					// Name: Void's Edge
+				}
+
+				Pit: {
+					// Title: Devil's Arena
+					// Name: The Pit
+				}
+			}
+
+			Bosses: {
+				KingSlime: {
+					// Title: Geletic Ruler
+					// Name: King Slime
+				}
+
+				Eye: {
+					// Title: Godspawned Gazer
+					// Name: The Eye of Cthulhu
+				}
+
+				Eater: {
+					// Title: Corruption Crawler
+					// Name: The Eater of Worlds
+				}
+
+				Brain: {
+					// Title: Soulless Mind
+					// Name: The Brain of Cthulhu
+				}
+
+				Bee: {
+					// Title: Giant Insect
+					// Name: Queen Bee
+				}
+
+				Skeletron: {
+					// Title: Curse Incarnation
+					// Name: Skeletron
+				}
+
+				Deer: {
+					// Title: Winter Strider
+					// Name: Deerclops
+				}
+
+				Wall: {
+					// Title: Soul Prison
+					// Name: The Wall of Flesh
+				}
+
+				QueenSlime: {
+					// Title: The Hallowed Angel
+					// Name: Queen Slime
+				}
+
+				Twins: {
+					// Title: Terror Scouts
+					// Name: The Twins
+				}
+
+				Destroyer: {
+					// Title: Tectonic Tunneler
+					// Name: The Destroyer
+				}
+
+				Prime: {
+					// Title: Cursemarked Machine
+					// Name: Skeletron Prime
+				}
+
+				Plant: {
+					// Title: Jungle Guardian
+					// Name: Plantera
+				}
+
+				Golem: {
+					// Title: Sun Idol
+					// Name: Golem
+				}
+
+				Empress: {
+					// Title: Twilight Dame
+					// Title2: Radiant Mistress
+					// Name: The Empress of Light
+				}
+
+				Duke: {
+					// Title: Shorelurker
+					// Name: Duke Fishron
+				}
+
+				Cultist: {
+					// Title: Godseeker
+					// Name: The Lunatic Cultist
+				}
+
+				Moon: {
+					// Title: Reincarnated Cthulhu
+					// Title2: False Husk
+					// Name: The Moon Lord
+				}
+
+				Torch: {
+					// Title: Pimordial Torch Overlord
+					// Name: The Torch God
+				}
+
+				Monarch: {
+					// Title: Grumpy Ruler
+					// Name: The Mushroom Monarch
+				}
+
+				Feudal: {
+					// Title: Glowing Royalty
+					// Title2: Radiant Apostle
+					// Name: The Feudal Fungus
+					// Name2: Umos
+				}
+
+				Brood: {
+					// Title: Inferno Queen
+					// Title2: Draconic Allmother
+					// Name: The Broodmother
+					// Name2: Chiliang
+				}
+
+				Hydra: {
+					// Title: Mire Dweller
+					// Title2: Abyssal Empress
+					// Name: The Hydra
+					// Name2: Shinuma
+				}
+
+				Serpent: {
+					Title: {
+						// Name: Subzero Serpent
+						// Title: Not a fish, obviously
+					}
+				}
+
+				Smiley: {
+					// Title: Rebel of the Void
+					// Name: Smiley
+				}
+
+				Sag: {
+					// Title: Fallen Hunter
+					// Name: Sagittarius
+				}
+
+				UmbraSangu: {
+					// TitleU: Shadow Weaver
+					// TitleS: Flesh Totem
+					// NameU: Umbra
+					// NameS: Sanguine
+				}
+			}
+		}
+
+		MiscText: {
+			// MadnessStart: You feel your mind pierced...
+
+			Dappercap: {
+				// FirstTalk1: I am?
+				// FirstTalk2: Understood
+				// GiveReality: Give the weird mushroom
+				// GiveMadness: Give Madness Mushroom
+				// GiveHover: Give Hovercaps
+				// GiveRare: Give Rare Plant
+			}
 		}
 	}
 }

@@ -80,7 +80,11 @@ namespace MultidimensionMod.Projectiles.Magic
 				num71 *= num72;
 				float speedX4 = num70 + (float)Main.rand.Next(-40, 41) * 0.02f;
 				float speedY5 = num71 + (float)Main.rand.Next(-40, 41) * 0.02f;
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Position.X, Position.Y, speedX4, speedY5, type, Damage, KnockBack, player.whoAmI, 0f, Main.rand.Next(5));
+				if (Projectile.owner == Main.myPlayer)
+				{
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), Position.X, Position.Y, speedX4, speedY5, type, Damage, KnockBack, player.whoAmI, 0f, Main.rand.Next(5));
+					Projectile.netUpdate = true;
+				}
 			}
         }
 	}

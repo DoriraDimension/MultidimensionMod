@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Tiles.Biomes.FrozenUnderworld;
+using MultidimensionMod.Walls;
 using System;
 using System.Threading;
 using System.Collections.Generic;
@@ -63,7 +64,7 @@ namespace MultidimensionMod.Biomes
 
 			ushort ash = (ushort)ModContent.TileType<ColdAsh>(), hellstone = (ushort)ModContent.TileType<AbyssalHellstonePlaced>(), hellstoneBrick = (ushort)ModContent.TileType<AbyssalHellstoneBrickPlaced>(),
             obsidianBrick = (ushort)ModContent.TileType<GlazedObsidianBrickPlaced>(), lava = (ushort)ModContent.TileType<SolidMagmaPlaced>(), grass = (ushort)ModContent.TileType<ColdAshGrass>(), 
-			vines = (ushort)ModContent.TileType<ColdAshVines>();
+			vines = (ushort)ModContent.TileType<ColdAshVines>(), hellstoneBrickWalls = (ushort)ModContent.WallType<AbyssalHellstoneBrickWallPlaced>();
 
 			int biomeRadius = 675;
 
@@ -127,6 +128,14 @@ namespace MultidimensionMod.Biomes
 				new Modifiers.OnlyTiles(new ushort[]{ 374 }), //Lava Dropper
 				new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
 				new Actions.ClearTile()
+            }));
+            //Walls
+            WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
+            {
+                new InWorld(),
+                new Modifiers.OnlyWalls(new ushort[]{ WallID.HellstoneBrick}),
+                new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
+                new PlaceModWall(hellstoneBrickWalls, true)
             }));
 
             /*int radiusLeft = (int)(Center.X / 16f - radius);

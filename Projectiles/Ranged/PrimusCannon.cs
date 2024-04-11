@@ -4,6 +4,8 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.GameContent;
 
 namespace MultidimensionMod.Projectiles.Ranged
 {
@@ -30,14 +32,11 @@ namespace MultidimensionMod.Projectiles.Ranged
 		public override void AI()
 		{
 			Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
-			Projectile.rotation = Projectile.velocity.ToRotation();
+			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
 
-			if (Projectile.spriteDirection == -1)
-			{
-				Projectile.rotation += MathHelper.Pi;
-			}
+            Projectile.spriteDirection = Projectile.direction;
 
-			if (++Projectile.frameCounter >= 5)
+            if (++Projectile.frameCounter >= 5)
 			{
 				Projectile.frameCounter = 0;
 				if (++Projectile.frame >= 4)
@@ -52,7 +51,25 @@ namespace MultidimensionMod.Projectiles.Ranged
 			SoundEngine.PlaySound(SoundID.NPCDeath14, Projectile.position);
 			int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Torch, 0f, 0f, 6, default(Color), 2f);
 			Main.dust[dustIndex].velocity *= 1.4f;
-			Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<PrimusCannonball>(), (int)((double)((float)Projectile.damage) * 1.3), 0f, Main.myPlayer);
+			if (Projectile.owner == Main.myPlayer)
+			{
+				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<PrimusCannonball>(), (int)((double)((float)Projectile.damage) * 1.3), 0f, Main.myPlayer);
+			}
 		}
-	}
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Ranged/PrimusCannon").Value;
+            Texture2D glow = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Ranged/PrimusCannon_Glow").Value;
+            var effects = Projectile.spriteDirection == -1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+            int height = texture.Height / 4;
+            int y = height * Projectile.frame;
+            Rectangle rect = new(0, y, texture.Width, height);
+            Vector2 drawOrigin = new(texture.Width / 2, Projectile.height / 2);
+
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, new Rectangle?(rect), lightColor, Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            Main.EntitySpriteDraw(glow, Projectile.Center - Main.screenPosition, new Rectangle?(rect), Color.White, Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            return false;
+        }
+    }
 }

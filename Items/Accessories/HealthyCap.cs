@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Common.Players;
+using MultidimensionMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -30,7 +31,7 @@ namespace MultidimensionMod.Items.Accessories
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ItemID.Mushroom, 15)
+			.AddIngredient(ModContent.ItemType<Mushmatter>(), 7)
 			.AddIngredient(ItemID.LesserHealingPotion, 1)
 			.Register();
 		}

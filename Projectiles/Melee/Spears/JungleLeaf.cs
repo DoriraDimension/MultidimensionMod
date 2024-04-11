@@ -35,11 +35,8 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 				Projectile.timeLeft = 60;
 
 			Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
-			Projectile.rotation = Projectile.velocity.ToRotation();
-			if (Projectile.spriteDirection == -1)
-			{
-				Projectile.rotation += MathHelper.Pi;
-			}
-		}
+			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
+            Projectile.spriteDirection = Projectile.direction;
+        }
 	}
 }

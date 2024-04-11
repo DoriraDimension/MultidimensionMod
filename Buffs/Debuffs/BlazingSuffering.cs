@@ -11,7 +11,7 @@ namespace MultidimensionMod.Buffs.Debuffs
         public override void SetStaticDefaults()
         {
            Main.buffNoTimeDisplay[Type] = false;
-            Main.debuff[Type] = true;
+           Main.debuff[Type] = true;
         }
 
         public override void Update(Player player, ref int buffIndex)

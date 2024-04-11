@@ -5,6 +5,8 @@ using Terraria.ID;
 using Terraria.ModLoader.Utilities;
 using Terraria.ModLoader;
 using Terraria.GameContent.Bestiary;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 
 namespace MultidimensionMod.NPCs.Critters
 {
@@ -81,5 +83,15 @@ namespace MultidimensionMod.NPCs.Critters
 				Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/BabyMarinGore2").Type, 1);
 			}
 		}
-	}
+        public override bool PreDraw(SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)
+        {
+            Texture2D fish = ModContent.Request<Texture2D>(NPC.ModNPC.Texture).Value;
+            Texture2D glow = ModContent.Request<Texture2D>(NPC.ModNPC.Texture + "_Glow").Value;
+            SpriteEffects effects = NPC.spriteDirection == -1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+            spriteBatch.Draw(fish, NPC.Center + new Vector2(0f, -5f) - screenPos, NPC.frame, drawColor, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
+            spriteBatch.Draw(glow, NPC.Center + new Vector2(0f, -5f) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
+            return false;
+        }
+
+    }
 }

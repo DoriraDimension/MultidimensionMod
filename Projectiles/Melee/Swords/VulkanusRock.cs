@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace MultidimensionMod.Projectiles.Melee.Swords
 {
@@ -75,5 +76,17 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 		{
 			return Projectile.timeLeft < 280 ? null : false;
 		}
-	}
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Melee/Swords/VulkanusRock").Value;
+            Texture2D textureGlow = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Melee/Swords/VulkanusRock_Glow").Value;
+            Vector2 drawOrigin = new(texture.Width / 2, texture.Height / 2);
+            var effects = Projectile.spriteDirection == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(lightColor), Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            Main.EntitySpriteDraw(textureGlow, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(Color.White), Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            return false;
+        }
+    }
 }

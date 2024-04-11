@@ -78,8 +78,10 @@ namespace MultidimensionMod.Projectiles.Ranged
 		{
 			for (int i = 0; i < 5; i++)
 			{
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y - 16f, Main.rand.Next(-11, 11) * .25f, -7 * .75f, ModContent.ProjectileType<BubbleBolt>(), (int)(Projectile.damage * .5f), 0, Projectile.owner);
-
+				if (Projectile.owner == Main.myPlayer)
+				{
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y - 16f, Main.rand.Next(-11, 11) * .25f, -7 * .75f, ModContent.ProjectileType<BubbleBolt>(), (int)(Projectile.damage * .5f), 0, Projectile.owner);
+				}
 			}
 		}
 	}

@@ -5,6 +5,9 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.GameContent;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Projectiles.Summon.Minions
 {
@@ -29,6 +32,16 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 			Projectile.penetrate = -1;
 			Projectile.hide = false;
 			Projectile.localNPCHitCooldown = 10;
+		}
+
+		public bool Ugly = false;
+
+		public override void OnSpawn(IEntitySource source)
+		{
+			if (Main.rand.NextBool(200))
+			{
+				Ugly = true;
+			}
 		}
 
 		public override void AI()
@@ -100,7 +113,11 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 				if (ballTimer == 150)
 				{
 					SoundEngine.PlaySound(SoundID.Item34, player.position);
-					Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, direction * 6, ModContent.ProjectileType<GolemFireball>(), Projectile.damage, 3, player.whoAmI);
+					if (Projectile.owner == Main.myPlayer)
+					{
+						Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, direction * 6, ModContent.ProjectileType<GolemFireball>(), Projectile.damage, 3, player.whoAmI);
+					}
+					Projectile.netUpdate = true;
 
 				}
 				if (ballTimer == 250)
@@ -111,8 +128,11 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 				{
 					laserTimer = 0;
 					SoundEngine.PlaySound(SoundID.Item33 with { Volume = 0.4f }, player.position);
-					Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, direction * 10, ModContent.ProjectileType<GolemLaser>(), Projectile.damage, 3, player.whoAmI);
-
+					if (Projectile.owner == Main.myPlayer)
+					{
+						Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, direction * 10, ModContent.ProjectileType<GolemLaser>(), Projectile.damage, 3, player.whoAmI);
+					}
+					Projectile.netUpdate = true;
 				}
 			}
 		}
@@ -126,5 +146,26 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 		{
 			return false;
 		}
-	}
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+            Texture2D glow = ModContent.Request<Texture2D>(Projectile.ModProjectile.Texture + "_Glow").Value;
+            Texture2D uglyTexture = ModContent.Request<Texture2D>(Projectile.ModProjectile.Texture + "2").Value;
+            Texture2D uglyGlow = ModContent.Request<Texture2D>(Projectile.ModProjectile.Texture + "2_Glow").Value;
+            Vector2 drawOrigin = new(texture.Width / 2, texture.Height / 2);
+            var effects = Projectile.spriteDirection == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+			if (Ugly)
+			{
+                Main.EntitySpriteDraw(uglyTexture, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(lightColor), Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+                Main.EntitySpriteDraw(uglyGlow, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(Color.White), Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            }
+			else
+			{
+                Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(lightColor), Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+                Main.EntitySpriteDraw(glow, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(Color.White), Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            }
+            return false;
+        }
+    }
 }

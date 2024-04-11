@@ -57,14 +57,15 @@ namespace MultidimensionMod.NPCs.FU
 			{
 				NPC.spriteDirection = 1;
 				NPC.direction = 1;
+				NPC.netUpdate = true;
 			}
 			else if (NPC.velocity.X < 0)
 			{
 				NPC.spriteDirection = -1;
 				NPC.direction = -1;
+				NPC.netUpdate = true;
 			}
 			NPC.TargetClosest(true);
-			NPC.netUpdate = true;
 			Player player = Main.player[NPC.target];
 
 			BaseAI.AISkull(NPC, ref NPC.ai, false, 4, 300, .011f, .020f);
@@ -80,9 +81,11 @@ namespace MultidimensionMod.NPCs.FU
 					{
 						Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(30));
                         perturbedSpeed *= 1f - Main.rand.NextFloat(0.3f);
-                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<AshCloud>(), NPC.damage / 4, 0f, Main.myPlayer);
+						if (Main.netMode != NetmodeID.MultiplayerClient)
+                            Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<AshCloud>(), NPC.damage / 4, 0f, Main.myPlayer);
 					}
 					Blargh = 0;
+					NPC.netUpdate = true;
 				}
 			}
 		}

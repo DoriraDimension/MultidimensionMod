@@ -80,8 +80,10 @@ namespace MultidimensionMod.NPCs.Underworld
 					{
 						Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(30));
                         perturbedSpeed *= 1f - Main.rand.NextFloat(0.3f);
-                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<BurningAshCloud>(), (int)((double)((float)NPC.damage) / 4), 0f, Main.myPlayer);
+						if (Main.netMode != NetmodeID.MultiplayerClient)
+                            Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, perturbedSpeed, ModContent.ProjectileType<BurningAshCloud>(), (int)((double)((float)NPC.damage) / 4), 0f, Main.myPlayer);
 					}
+					NPC.netUpdate = true;
 					Blargh = 0;
 				}
 			}

@@ -42,6 +42,7 @@ namespace MultidimensionMod.Projectiles.Melee.Boomerangs
                 num468 = Dust.NewDust(Projectile.Center, Projectile.width, Projectile.height, DustID.Ice, -Projectile.velocity.X * 0.2f,
                     -Projectile.velocity.Y * 0.2f, 100, default);
             }
+            Projectile.netUpdate = true;
             target.AddBuff(BuffID.Chilled, 200);
         }
 
@@ -54,6 +55,7 @@ namespace MultidimensionMod.Projectiles.Melee.Boomerangs
             }
             Collision.HitTiles(Projectile.position, Projectile.velocity, Projectile.width, Projectile.height);
             SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
+            Projectile.netUpdate = true;
             BaseAI.TileCollideBoomerang(Projectile, ref oldVelocity, true);
             return false;
         }

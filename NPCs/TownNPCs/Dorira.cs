@@ -9,14 +9,18 @@ using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Common.Globals;
 using MultidimensionMod.Projectiles.Ranged;
 using MultidimensionMod.Items.Quest;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.GameContent.Personalities;
-using System.Collections.Generic;
 using Terraria.Utilities;
 using Terraria.GameContent.Bestiary;
+using Terraria.Audio;
+using MultidimensionMod.Items.Mushrooms;
+using MultidimensionMod.Common.Players;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -61,7 +65,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			NPC.aiStyle = 7;
 			NPC.damage = 27;
 			NPC.defense = 17;
-			NPC.lifeMax = 10000;
+			NPC.lifeMax = 3007;
 			NPC.HitSound = SoundID.NPCHit1;
 			NPC.DeathSound = SoundID.NPCDeath1;
 			NPC.knockBackResist = 0f;
@@ -75,6 +79,20 @@ namespace MultidimensionMod.NPCs.TownNPCs
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
                 new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Dorira")
             });
+        }
+
+        public override bool CheckDead()
+        {
+            MDWorld.TposeTimer = 0;
+            Main.NewText("Dorira's mind got trapped in the cosmos.", Color.Red.R, Color.Red.G, Color.Red.B);
+            SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Glitch"));
+            NPC.SetDefaults(ModContent.NPCType<DoriraTpose>());
+            NPC.life = 1;
+
+            if (Main.netMode == NetmodeID.Server)
+                NetMessage.SendData(MessageID.WorldData);
+
+            return false;
         }
 
         public override bool CanTownNPCSpawn(int numTownNPCs)
@@ -109,7 +127,6 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			WeightedRandom<string> chat = new WeightedRandom<string>();
 			int Gobfuck = NPC.FindFirstNPC(NPCID.GoblinTinkerer);
 			int BoomBoomMan = NPC.FindFirstNPC(NPCID.Demolitionist);
-			int WrenchWoman = NPC.FindFirstNPC(NPCID.Mechanic);
 			if (Gobfuck >= 0 && Main.rand.NextBool(4))
 			{
 				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GoblinDialogue", Main.npc[Gobfuck].GivenName));
@@ -118,16 +135,26 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			{
 				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.DemolitionistDialogue", Main.npc[BoomBoomMan].GivenName));
 			}
-			if (WrenchWoman >= 0 && Main.rand.NextBool(4))
-			{
-				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.MechanicDialogue", Main.npc[WrenchWoman].GivenName));
-			}
+            if (Main.rand.NextBool(8))
+            {
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.MushroomDialogue"));
+            }
             if (Main.hardMode)
             {
 				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericHardmodeDialogue1"));
-			}
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.YttriumDialogue"));
+            }
 			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue1"));
 			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue2"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue4"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue5"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue6"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue7"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue8"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue9"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue10"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue11"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue12"));
             if (NPC.downedBoss2)
             {
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue3"));
@@ -155,6 +182,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			}
         }
 
+		public bool obtainedRealityShroom = false;
+
         public override void OnChatButtonClicked(bool firstButton, ref string shopName)
 		{
 			Player player = Main.LocalPlayer;
@@ -166,8 +195,25 @@ namespace MultidimensionMod.NPCs.TownNPCs
                 {
 					case 0:
 						shopName = "Shop";
-						break;
-					case 1:
+						if (player.HasItem(ModContent.ItemType<Red>())
+							&& player.HasItem(ModContent.ItemType<Yellow>())
+							&& player.HasItem(ModContent.ItemType<Orange>())
+							&& player.HasItem(ModContent.ItemType<Blue>())
+							&& player.HasItem(ModContent.ItemType<Brown>())
+							&& player.HasItem(ModContent.ItemType<Gray>())
+							&& player.HasItem(ModContent.ItemType<Green>())
+							&& player.HasItem(ModContent.ItemType<Pink>())
+							&& player.HasItem(ModContent.ItemType<Purple>())
+							&& player.HasItem(ModContent.ItemType<Rainbow>())
+							&& player.ZoneGlowshroom
+						    && NPC.downedGolemBoss
+							&& !obtainedRealityShroom)
+						{
+                            Item.NewItem(NPC.GetSource_Loot(), NPC.position, NPC.Size, ModContent.ItemType<RealityBendingShroom>(), 1);
+							obtainedRealityShroom = true;
+                        }
+                        break;
+                    case 1:
 						Main.npcChatText = HelpDialogue();
 						break;
 					case 2:
@@ -211,6 +257,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			WeightedRandom<string> chat = new(Main.rand);
 			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.ColdHellHelp"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.DimensiumHelp"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.KingsCapHelp"));
             if (Main.rand.NextBool(100))
             {
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.TouchGrassHelp"));
@@ -256,7 +303,12 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
 		public override void TownNPCAttackStrength(ref int damage, ref float knockback)
 		{
-			damage = 70;
+			if (Main.hardMode)
+				damage = 70;
+			else if (NPC.downedMoonlord)
+				damage = 140;
+			else
+				damage = 20;
 			knockback = 6f;
 		}
 
@@ -268,14 +320,13 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
 		public override void TownNPCAttackProj(ref int projType, ref int attackDelay)
 		{
-			projType = ModContent.ProjectileType<BubbleBolt>();
+			projType = ModContent.ProjectileType<DimensionalLightning>();
 			attackDelay = 1;
 		}
 
 		public override void TownNPCAttackProjSpeed(ref float multiplier, ref float gravityCorrection, ref float randomOffset)
 		{
-			multiplier = 12f;
-			randomOffset = 2f;
+			multiplier = 7f;
 		}
 	}
 }

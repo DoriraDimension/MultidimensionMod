@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -31,7 +32,12 @@ namespace MultidimensionMod.Projectiles.Melee.Others
 			Projectile.ownerHitCheck = true;
 		}
 
-		public override void AI()
+        public override bool? CanCutTiles()
+        {
+            return false;
+        }
+
+        public override void AI()
 		{
 			if (Owner.channel)
 			{
@@ -68,5 +74,17 @@ namespace MultidimensionMod.Projectiles.Melee.Others
 			Owner.itemTime = 2;
 			Owner.itemAnimation = 2;
 		}
-	}
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Weapons/Melee/Others/OceanicGlowshard").Value;
+            Texture2D glow = ModContent.Request<Texture2D>("MultidimensionMod/Items/Weapons/Melee/Others/OceanicGlowshard_Glow").Value;
+            Vector2 drawOrigin = new(texture.Width / 2, texture.Height / 2);
+            var effects = Projectile.spriteDirection == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(Color.White), Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            Main.EntitySpriteDraw(glow, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(Color.White), Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            return false;
+        }
+    }
 }

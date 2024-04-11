@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
 using Terraria.Localization;
+using MultidimensionMod.Base;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -23,13 +24,37 @@ namespace MultidimensionMod.Items.Accessories
 			Item.rare = ItemRarityID.White;
 		}
 
+		public int WetFeet = 0;
+
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
 			if (player.wet && !player.lavaWet && !player.honeyWet && !player.immune)
 			{
 				player.KillMe(PlayerDeathReason.ByCustomReason(player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.Socks")), 1000.0, 0);
 			}
-		}
+			if (Main.raining && player.ZoneOverworldHeight && Framing.GetTileSafely(player.Center.ToTileCoordinates()).WallType == WallID.None)
+			{
+                WetFeet++;
+            }
+            if (Main.raining && player.ZoneSkyHeight && Framing.GetTileSafely(player.Center.ToTileCoordinates()).WallType == WallID.None)
+            {
+				WetFeet++;
+            }
+			if (WetFeet >= 300)
+			{
+                player.KillMe(PlayerDeathReason.ByCustomReason(player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.Socks")), 1000.0, 0);
+            }
+			if (!player.active || player.dead)
+			{
+				WetFeet = 0;
+			}
+			else if (player.HasBuff(BuffID.Campfire))
+				WetFeet--;
+			if (WetFeet <= 0)
+			{
+				WetFeet = 0;
+			}
+        }
 
 		public override void AddRecipes()
 		{

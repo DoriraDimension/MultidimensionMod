@@ -1,7 +1,10 @@
-﻿using Terraria;
+﻿using Microsoft.Xna.Framework;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using System.Collections.Generic;
+using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -21,7 +24,27 @@ namespace MultidimensionMod.Items.Accessories
 			Item.rare = ItemRarityID.Red;
 		}
 
-		public override void UpdateAccessory(Player player, bool hideVisual)
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+            if (Main.keyState.PressingShift())
+            {
+                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.CreationMedaillon.Lore"))
+                {
+                    OverrideColor = Color.LightGray
+                };
+                tooltips.Add(line);
+            }
+            else
+            {
+                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Viewer"))
+                {
+                    OverrideColor = Color.Gray,
+                };
+                tooltips.Add(line);
+            }
+        }
+
+        public override void UpdateAccessory(Player player, bool hideVisual)
 		{
 
 		}

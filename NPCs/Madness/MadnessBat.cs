@@ -28,7 +28,7 @@ namespace MultidimensionMod.NPCs.Madness
         {
             NPC.width = 40;
             NPC.height = 35;
-            NPC.damage = 25;
+            NPC.damage = 16;
             NPC.defense = 6;
             NPC.lifeMax = 140;
             NPC.noGravity = true;
@@ -84,6 +84,7 @@ namespace MultidimensionMod.NPCs.Madness
                             Main.dust[dustID].noGravity = true;
                         }
                     }
+                    NPC.netUpdate = true;
                     AmbushTimer = 0;
                 }
                 AmbushTimer++;
@@ -129,6 +130,10 @@ namespace MultidimensionMod.NPCs.Madness
                 {
                     Dust.NewDust(NPC.position, NPC.width, NPC.height, Main.rand.NextBool(2) ? ModContent.DustType<MadnessP>() : ModContent.DustType<MadnessB>(), hit.HitDirection, -1f, 0);
                 }
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/FlierGore1").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/FlierGore2").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/FlierGore3").Type, 1);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/FlierGore4").Type, 1);
             }
         }
 

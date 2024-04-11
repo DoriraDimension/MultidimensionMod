@@ -38,7 +38,6 @@ namespace MultidimensionMod.NPCs.FU
 			NPC.noGravity = true;
 			NPC.noTileCollide = true;
 			NPC.aiStyle = -1;
-			Banner = NPC.type;
 			SpawnModBiomes = new int[1] { ModContent.GetInstance<FrozenUnderworld>().Type };
 		}
 
@@ -75,7 +74,8 @@ namespace MultidimensionMod.NPCs.FU
 				{
 					SoundEngine.PlaySound(SoundID.Item20 with { Volume = 0.5f }, NPC.position);
 					Vector2 velocity = Vector2.Normalize(player.Center - NPC.Center) * 10f;
-					Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, velocity, ModContent.ProjectileType<VictimPellet>(), NPC.damage / 3, 0f, Main.myPlayer);
+					if (Main.netMode != NetmodeID.MultiplayerClient)
+                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, velocity, ModContent.ProjectileType<VictimPellet>(), NPC.damage / 3, 0f, Main.myPlayer);
 					Shoot = 0;
 				}
 			}

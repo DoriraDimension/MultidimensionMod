@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using Terraria.GameContent;
 
 namespace MultidimensionMod.Projectiles.Summon.Minions
 {
@@ -33,13 +34,13 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 		public override void AI()
 		{
 			Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
-			Projectile.rotation = Projectile.velocity.ToRotation();
-		}
+			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
+        }
 
 		public override void OnKill(int timeLeft)
 		{
 			Collision.HitTiles(Projectile.position + Projectile.velocity, Projectile.velocity, Projectile.width, Projectile.height);
 			SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
 		}
-	}
+    }
 }

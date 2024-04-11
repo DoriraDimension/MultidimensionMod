@@ -11,11 +11,12 @@ namespace MultidimensionMod
 
         public override ConfigScope Mode => ConfigScope.ClientSide;
 
-        [Label("Town NPCs Sell New Items")]
         [DefaultValue(true)]
-        [Tooltip("Adds new items to Town NPCs shops.")]
 
-        public bool DisableNPCItemSelling { get; set; }
+        public bool NPCItemSelling { get; set; }
+
+        [DefaultValue(true)]
+        public bool ALTitleCards { get; set; }
 
 
     }

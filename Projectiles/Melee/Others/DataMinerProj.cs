@@ -1,4 +1,4 @@
-﻿using MultidimensionMod.Dusts;
+﻿using MultidimensionMod.Buffs.Debuffs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -30,7 +30,7 @@ namespace MultidimensionMod.Projectiles.Melee.Others
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			{
-				target.AddBuff(BuffID.Electrified, 60000);
+				target.AddBuff(ModContent.BuffType<DimensionalShock>(), 60000);
 			}
 		}
 	}

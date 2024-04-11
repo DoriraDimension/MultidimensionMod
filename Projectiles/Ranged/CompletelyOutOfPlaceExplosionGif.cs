@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -43,5 +44,18 @@ namespace MultidimensionMod.Projectiles.Ranged
 				}
 			}
 		}
-	}
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+            var effects = Projectile.spriteDirection == -1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+            int height = texture.Height / 14;
+            int y = height * Projectile.frame;
+            Rectangle rect = new(0, y, texture.Width, height);
+            Vector2 drawOrigin = new(texture.Width / 2, Projectile.height / 2);
+
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, new Rectangle?(rect), Color.White, Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            return false;
+        }
+    }
 }

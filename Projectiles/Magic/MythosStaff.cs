@@ -56,14 +56,22 @@ namespace MultidimensionMod.Projectiles.Magic
 				ringTimer++;
             }
 			if (ringTimer == 300)
-            {
-				SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), Projectile.position);
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), player.Center.X, player.Center.Y, 0f, 0f, ModContent.ProjectileType<MythosRing>(), (int)((double)((float)Projectile.damage) * 0.7), 0f, Main.myPlayer);
+			{
+				if (Projectile.owner == Main.myPlayer)
+				{
+					SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), Projectile.position);
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), player.Center.X, player.Center.Y, 0f, 0f, ModContent.ProjectileType<MythosRing>(), (int)((double)((float)Projectile.damage) * 0.7), 0f, Main.myPlayer);
+                    Projectile.netUpdate = true;
+                }
 			}
 			if (ringTimer == 600)
-            {
-				SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), Projectile.position);
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), player.Center.X, player.Center.Y, 0f, 0f, ModContent.ProjectileType<MythosRing2>(), (int)((double)((float)Projectile.damage) * 0.5), 0f, Main.myPlayer);
+			{
+				if (Projectile.owner == Main.myPlayer)
+				{
+					SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/HallowedCry"), Projectile.position);
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), player.Center.X, player.Center.Y, 0f, 0f, ModContent.ProjectileType<MythosRing2>(), (int)((double)((float)Projectile.damage) * 0.5), 0f, Main.myPlayer);
+                    Projectile.netUpdate = true;
+                }
 			}
 			if (ringTimer > 601)
             {

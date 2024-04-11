@@ -70,6 +70,7 @@ namespace MultidimensionMod.NPCs.Tundra
 				NPC.height = 56;
 				NPC.friendly = false;
 				NPC.knockBackResist = 0.6f;
+				NPC.netUpdate = true;
 				Vector2 victor = new(NPC.position.X + (NPC.width * 0.5f), NPC.position.Y + (NPC.height * 0.5f));
 				{
 					float rotation = (float)Math.Atan2(victor.Y - (Main.player[NPC.target].position.Y + (Main.player[NPC.target].height * 0.5f)), victor.X - (Main.player[NPC.target].position.X + (Main.player[NPC.target].width * 0.5f)));
@@ -201,29 +202,32 @@ namespace MultidimensionMod.NPCs.Tundra
 		private int frame;
 		public override void FindFrame(int frameHeight)
 		{
-			if (++NPC.frameCounter > 8)
+			if (NPC.life == NPC.lifeMax)
 			{
-				frame++;
-				NPC.frameCounter = 0;
-				if (frame > 13)
-				{
-					frame = 8;
-				}
-                if (NPC.frame.Y < 8 * frameHeight)
+                if (++NPC.frameCounter > 8)
                 {
-                    NPC.frame.Y = 8 * frameHeight;
+                    frame++;
+                    NPC.frameCounter = 0;
+                    if (frame > 5)
+                    {
+                        frame = 0;
+                    }
                 }
             }
-			if (!hasBeenFed && NPC.life < NPC.lifeMax)
+			else if (!hasBeenFed && NPC.life < NPC.lifeMax)
 			{
 				if (++NPC.frameCounter > 4)
 				{
 					frame++;
 					NPC.frameCounter = 0;
-					if (frame > 7)
-					{
-						frame = 0;
-					}
+                    if (frame > 13)
+                    {
+                        frame = 6;
+                    }
+                    if (frame < 6)
+                    {
+                        frame = 6;
+                    }
                 }
 			}
 			NPC.frame.Y = frame * frameHeight;

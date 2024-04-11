@@ -70,7 +70,11 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
             {
 				Vector2 velocity = Projectile.velocity;
 				Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(18));
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, perturbedSpeed * 2, ModContent.ProjectileType<JungleLeaf>(), (int)((double)((float)Projectile.damage) * 0.8f), 0f, Main.myPlayer);
+				if (Projectile.owner == Main.myPlayer)
+				{
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, perturbedSpeed * 2, ModContent.ProjectileType<JungleLeaf>(), (int)((double)((float)Projectile.damage) * 0.8f), 0f, Main.myPlayer);
+					Projectile.netUpdate = true;
+				}
 			}
 			if (Leaf > 2)
             {

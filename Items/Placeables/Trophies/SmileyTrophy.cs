@@ -1,4 +1,4 @@
-﻿using MultidimensionMod.Tiles;
+﻿using MultidimensionMod.Tiles.Trophies;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
@@ -26,8 +26,7 @@ namespace MultidimensionMod.Items.Placeables.Trophies
 			Item.consumable = true;
 			Item.rare = ItemRarityID.Blue;
 			Item.value = Item.sellPrice(0, 1, 0, 0);
-			Item.createTile = ModContent.TileType<BossTrophy>();
-			Item.placeStyle = 0;
+			Item.createTile = ModContent.TileType<SmileyTrophyPlaced>();
 		}
 	}
 }

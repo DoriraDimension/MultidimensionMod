@@ -53,7 +53,8 @@ namespace MultidimensionMod.Items.Bags
 			player.QuickSpawnItem(source, ItemID.BuilderPotion, 3);
 			player.QuickSpawnItem(source, ItemID.CopperCoin);
 			player.QuickSpawnItem(source, ModContent.ItemType<Socks>());
-			switch (player.name)
+            player.QuickSpawnItem(source, ModContent.ItemType<TheAncientChaos>());
+            switch (player.name)
 			{
 				case "Dorira":
 				case "Marco":

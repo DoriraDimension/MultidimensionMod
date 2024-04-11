@@ -5,6 +5,8 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.GameContent;
 
 namespace MultidimensionMod.Projectiles.Summon.Sentries
 {
@@ -19,8 +21,8 @@ namespace MultidimensionMod.Projectiles.Summon.Sentries
 
 		public override void SetDefaults()
 		{
-			Projectile.width = 64;
-			Projectile.height = 64;
+			Projectile.width = 78;
+			Projectile.height = 76;
 			Projectile.friendly = true;
 			Projectile.aiStyle = -1;
 			Projectile.DamageType = DamageClass.Summon;
@@ -91,9 +93,12 @@ namespace MultidimensionMod.Projectiles.Summon.Sentries
 				if (shootTimer == 50)
 				{
 					shootTimer = 0;
-					SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Item/LauncherShot"), Projectile.position);
-					Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, direction * 12, ModContent.ProjectileType<NeroMissile>(), 75, 3, player.whoAmI);
-
+					SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/LauncherShot"), Projectile.position);
+					if (Projectile.owner == Main.myPlayer)
+					{
+						Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, direction * 12, ModContent.ProjectileType<NeroMissile>(), 75, 3, player.whoAmI);
+					}
+					Projectile.netUpdate = true;
 				}
 			}
 		}
@@ -107,5 +112,17 @@ namespace MultidimensionMod.Projectiles.Summon.Sentries
 		{
 			return false;
 		}
-	}
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+            Texture2D glow = ModContent.Request<Texture2D>(Projectile.ModProjectile.Texture + "_Glow").Value;
+            Vector2 drawOrigin = new(texture.Width / 2, texture.Height / 2);
+            var effects = Projectile.spriteDirection == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(lightColor), Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            Main.EntitySpriteDraw(glow, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(Color.White), Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            return false;
+        }
+    }
 }

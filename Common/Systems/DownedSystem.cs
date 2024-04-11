@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Collections.Generic;
 using System.IO;
 using Terraria;
 using Terraria.ModLoader;
@@ -19,6 +18,11 @@ namespace MultidimensionMod.Common.Systems
         public static bool metAdel;
         public static bool metVertrarius;
         public static bool listenedToNonsense;
+        public static bool seenMushroom;
+        public static bool downedMonarch;
+        public static bool metDapper;
+        public static bool downedFungus;
+        public static bool sawUmosTransition;
 
         public override void OnWorldLoad()
         {
@@ -32,6 +36,11 @@ namespace MultidimensionMod.Common.Systems
             metAdel = false;
             metVertrarius = false;
             listenedToNonsense = false;
+            seenMushroom = false;
+            downedMonarch = false;
+            metDapper = false;
+            downedFungus = false;
+            sawUmosTransition = false;
         }
 
         public override void OnWorldUnload()
@@ -46,6 +55,11 @@ namespace MultidimensionMod.Common.Systems
             metAdel = false;
             metVertrarius = false;
             listenedToNonsense = false;
+            seenMushroom = false;
+            downedMonarch = false;
+            metDapper = false;
+            downedFungus = false;
+            sawUmosTransition = false;
         }
 
         public override void SaveWorldData(TagCompound tag)
@@ -72,6 +86,16 @@ namespace MultidimensionMod.Common.Systems
                 downed.Add("metVertrarius");
             if (listenedToNonsense)
                 downed.Add("listenedToNonsense");
+            if (seenMushroom)
+                downed.Add("seenMushroom");
+            if (downedMonarch)
+                downed.Add("downedMonarch");
+            if (metDapper)
+                downed.Add("metDapper");
+            if (downedFungus)
+                downed.Add("downedFungus");
+            if (sawUmosTransition)
+                downed.Add("sawUmosTransition");
 
             tag["downed"] = downed;
         }
@@ -90,6 +114,11 @@ namespace MultidimensionMod.Common.Systems
             metAdel = downed.Contains("metAdel");
             metVertrarius = downed.Contains("metVertrarius");
             listenedToNonsense = downed.Contains("listenedToNonsense");
+            seenMushroom = downed.Contains("seenMushroom");
+            downedMonarch = downed.Contains("downedMonarch");
+            metDapper = downed.Contains("metDapper");
+            downedFungus = downed.Contains("downedFungus");
+            sawUmosTransition = downed.Contains("sawUmosTransition");
         }
 
         public override void NetSend(BinaryWriter writer)
@@ -108,6 +137,11 @@ namespace MultidimensionMod.Common.Systems
             var flags2 = new BitsByte();
             flags2[0] = metVertrarius;
             flags2[1] = listenedToNonsense;
+            flags2[2] = seenMushroom;
+            flags2[3] = downedMonarch;
+            flags2[4] = metDapper;
+            flags2[5] = downedFungus;
+            flags2[6] = sawUmosTransition;
             writer.Write(flags2);
         }
 
@@ -126,6 +160,11 @@ namespace MultidimensionMod.Common.Systems
             BitsByte flags2 = reader.ReadByte();
             metVertrarius = flags2[0];
             listenedToNonsense = flags2[1];
+            seenMushroom = flags2[2];
+            downedMonarch = flags2[3];
+            metDapper = flags2[4];
+            downedFungus = flags2[5];
+            sawUmosTransition = flags2[6];
         }
     }
 }

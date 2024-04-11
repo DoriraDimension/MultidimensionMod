@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using MultidimensionMod.Buffs.Debuffs;
 
 namespace MultidimensionMod.Projectiles.Magic
 {
@@ -37,7 +38,12 @@ namespace MultidimensionMod.Projectiles.Magic
 			Projectile.rotation += 0.4f * (float)Projectile.direction;
 		}
 
-		public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            target.AddBuff(ModContent.BuffType<Madness>(), 180);
+        }
+
+        public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
 		{
 			Projectile.damage = (int)((double)Projectile.damage * 1.25);
 		}
@@ -63,7 +69,8 @@ namespace MultidimensionMod.Projectiles.Magic
 					Projectile.velocity.Y = -oldVelocity.Y;
 				}
 			}
-			return false;
+            Projectile.netUpdate = true;
+            return false;
 		}
 
 		public override void OnKill(int timeLeft)

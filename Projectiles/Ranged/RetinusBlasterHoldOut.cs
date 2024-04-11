@@ -153,7 +153,10 @@ namespace MultidimensionMod.Projectiles.Ranged
 				float speedX = num3 * num6;
 				float speedY = num4 * num6;
 				SoundEngine.PlaySound(SoundID.Item96, Projectile.position);
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), focktor.X, focktor.Y, speedX, speedY, ModContent.ProjectileType<RetinusBeam>(), (int)num, 1f, player.whoAmI);
+				if (Projectile.owner == Main.myPlayer)
+				{
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), focktor.X, focktor.Y, speedX, speedY, ModContent.ProjectileType<RetinusBeam>(), (int)num, 1f, player.whoAmI);
+				}
 			}
 		}
 

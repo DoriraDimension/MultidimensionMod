@@ -21,7 +21,7 @@ namespace MultidimensionMod.Items.Summons
 		{
 			Item.width = 24;
 			Item.height = 22;
-			Item.maxStack = 20;
+			Item.maxStack = 9999;
 			Item.rare = ItemRarityID.LightRed;
 			Item.useAnimation = 45;
 			Item.useTime = 45;

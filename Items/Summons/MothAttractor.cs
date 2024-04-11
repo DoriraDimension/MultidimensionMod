@@ -19,7 +19,7 @@ namespace MultidimensionMod.Items.Summons
 		{
 			Item.width = 40;
 			Item.height = 26;
-			Item.maxStack = 20;
+			Item.maxStack = 9999;
 			Item.value = Item.sellPrice(gold: 0);
 			Item.rare = ItemRarityID.Pink;
 			Item.useAnimation = 30;

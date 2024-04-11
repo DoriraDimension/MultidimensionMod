@@ -62,6 +62,7 @@ namespace MultidimensionMod.Projectiles.Magic
 			if (!player.channel)
 			{
                 unbound = true;
+                Projectile.netUpdate = true;
             }
 		}
 

@@ -65,11 +65,13 @@ namespace MultidimensionMod.NPCs.FU
 			{
 				NPC.spriteDirection = 1;
 				NPC.direction = 1;
+				NPC.netUpdate = true;
 			}
 			else if (NPC.velocity.X < 0)
 			{
 				NPC.spriteDirection = -1;
 				NPC.direction = -1;
+				NPC.netUpdate = true;
 			}
 			NPC.TargetClosest(true);
 			NPC.netUpdate = true;
@@ -89,8 +91,10 @@ namespace MultidimensionMod.NPCs.FU
                         int numProj = 3;
                         float rotation = MathHelper.ToRadians(14f);
                         Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedBy(MathHelper.Lerp(0f - rotation, rotation, (float)(i / (numProj - 1))));
-                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<VictimPellet>(), NPC.damage / 3, 0f, Main.myPlayer);
+						if (Main.netMode != NetmodeID.MultiplayerClient)
+                            Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<VictimPellet>(), NPC.damage / 3, 0f, Main.myPlayer);
                     }
+					NPC.netUpdate = true;
                     Quadshot = 0;
 				}
 			}
@@ -111,7 +115,8 @@ namespace MultidimensionMod.NPCs.FU
 				if (spawn <= 1)
 				{
 					Vector2 spawnAt = NPC.Center + new Vector2(0f, (float)NPC.width / 5f);
-					NPC.NewNPC(NPC.GetSource_FromAI(), (int)spawnAt.X, (int)spawnAt.Y, ModContent.NPCType<VictimsEye>());
+					if (Main.netMode != NetmodeID.MultiplayerClient)
+                        NPC.NewNPC(NPC.GetSource_FromAI(), (int)spawnAt.X, (int)spawnAt.Y, ModContent.NPCType<VictimsEye>());
 					Item.NewItem(NPC.GetSource_Loot(), NPC.position, NPC.Size, ModContent.ItemType<DevilSilk>(), 1);
 					spawn = 2;
 				}

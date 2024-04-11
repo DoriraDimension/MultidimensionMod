@@ -61,6 +61,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 					Projectile.velocity.Y = -oldVelocity.Y;
 				}
 			}
+			Projectile.netUpdate = true;
 			return false;
 		}
 	}

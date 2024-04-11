@@ -1,6 +1,7 @@
 using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.UI;
+using MultidimensionMod.Common.CrossMod;
 using System;
 using System.Collections.Generic;
 using Terraria;
@@ -53,8 +54,13 @@ namespace MultidimensionMod
             Terraria.Graphics.Light.On_TileLightScanner.ApplyHellLight -= TileLightScanner_ApplyHellLight;
         }
 
-		#region Madness looky looky
-		public static void PremultiplyTexture(Texture2D texture)
+        public override void PostSetupContent()
+        {
+            WeakReferences.PerformModSupport();
+        }
+
+        #region Madness looky looky
+        public static void PremultiplyTexture(Texture2D texture)
 		{
 			Color[] buffer = new Color[texture.Width * texture.Height];
 			texture.GetData(buffer);

@@ -4,6 +4,10 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
+using System.Collections.Generic;
+using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Souls
 {
@@ -24,5 +28,34 @@ namespace MultidimensionMod.Items.Souls
 			Item.height = 36;
 			Item.rare = ModContent.RarityType<KingSlimeSoulRarity>();
 		}
-	}
+
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+            if (Main.keyState.PressingShift())
+            {
+                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.KingSlimeSoul.Lore"))
+                {
+                    OverrideColor = Color.LightGray
+                };
+                tooltips.Add(line);
+            }
+            else
+            {
+                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Viewer"))
+                {
+                    OverrideColor = Color.Gray,
+                };
+                tooltips.Add(line);
+            }
+        }
+
+        public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
+        {
+            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Souls/KingSlimeSoul").Value;
+            Rectangle frame;
+            frame = Main.itemAnimations[Item.type].GetFrame(texture, Main.itemFrameCounter[whoAmI]);
+            Vector2 origin = frame.Size() / 2f;
+            spriteBatch.Draw(texture, Item.Center - Main.screenPosition, frame, Color.White, rotation, origin, scale, SpriteEffects.None, 0f);
+        }
+    }
 }

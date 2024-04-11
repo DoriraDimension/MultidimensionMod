@@ -15,8 +15,8 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetDefaults()
 		{
-			Projectile.width = 10;
-			Projectile.height = 18;
+			Projectile.width = 14;
+			Projectile.height = 14;
 			Projectile.friendly = true;
 			Projectile.DamageType = DamageClass.Magic;
 			Projectile.ignoreWater = true;
@@ -60,6 +60,7 @@ namespace MultidimensionMod.Projectiles.Magic
 					Projectile.velocity.Y = -oldVelocity.Y;
 				}
 			}
+			Projectile.netUpdate = true;
 			return false;
 		}
 	}

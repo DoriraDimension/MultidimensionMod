@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using MultidimensionMod.Buffs.Debuffs;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Enums;
 using Terraria.ModLoader;
@@ -92,6 +93,11 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 		public override bool ShouldUpdatePosition()
 		{
 			return false;
+		}
+
+		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+		{
+			target.AddBuff(ModContent.BuffType<Accursed>(), 600);
 		}
 
 		public override void CutTiles()

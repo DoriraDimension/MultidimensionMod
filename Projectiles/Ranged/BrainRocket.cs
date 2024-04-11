@@ -29,7 +29,10 @@ namespace MultidimensionMod.Projectiles.Ranged
 		public override void OnKill(int timeLeft)
 		{
 			SoundEngine.PlaySound(SoundID.NPCDeath14, Projectile.position);
-			Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<Braindamage>(), (int)((double)((float)Projectile.damage) * 0.8), 0f, Main.myPlayer);
+			if (Projectile.owner == Main.myPlayer)
+			{
+				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y + 0f, 0f, 0f, ModContent.ProjectileType<Braindamage>(), (int)((double)((float)Projectile.damage) * 0.8), 0f, Main.myPlayer);
+			}
 				Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, ModContent.Find<ModGore>("MultidimensionMod/BrainGore3").Type, 1);
                 Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, ModContent.Find<ModGore>("MultidimensionMod/BrainGore2").Type, 1);
 				Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, ModContent.Find<ModGore>("MultidimensionMod/BrainGore1").Type, 1);
@@ -38,17 +41,14 @@ namespace MultidimensionMod.Projectiles.Ranged
 		public override void AI()
 		{
 			Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
-			Projectile.rotation = Projectile.velocity.ToRotation();
+			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
 			if (Projectile.velocity.Y > 16f)
 			{
 				Projectile.velocity.Y = 16f;
 			}
 
-			if (Projectile.spriteDirection == -1)
-			{
-				Projectile.rotation += MathHelper.Pi;
-			}
-		}
+            Projectile.spriteDirection = Projectile.direction;
+        }
 	}
 
 	internal class Braindamage : ModProjectile
@@ -57,7 +57,6 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Spazzic Explosion");
 		}
 
 		public override void SetDefaults()

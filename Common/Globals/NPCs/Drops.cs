@@ -12,10 +12,14 @@ using MultidimensionMod.Items.Weapons.Summon;
 using MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers;
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Vanity;
+using MultidimensionMod.Items.Weapons.Melee.Swords;
+using MultidimensionMod.Items.Weapons.Magic.Staffs;
+using MultidimensionMod.Common.ItemDropRules.DropConditions;
 using Terraria;
 using Terraria.ID;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader;
+using Terraria.GameContent;
 
 namespace MultidimensionMod.Common.Globals.NPCs
 {
@@ -25,15 +29,11 @@ namespace MultidimensionMod.Common.Globals.NPCs
         {
             if (!(NPC.type == NPCID.BurningSphere) || !(NPC.type == NPCID.ChaosBall) || !(NPC.type == NPCID.WaterSphere) || !(NPC.type == NPCID.DetonatingBubble) || !(NPC.type == NPCID.ForceBubble) || !(NPC.type == NPCID.DeadlySphere) || !(NPC.type == NPCID.SolarFlare) || !(NPC.type == NPCID.SolarGoop) || !(NPC.type == NPCID.AncientLight) || !(NPC.type == NPCID.AncientDoom) || !(NPC.type == NPCID.WindyBalloon) || !(NPC.type == NPCID.ChaosBallTim) || !(NPC.type == NPCID.VileSpit) || !(NPC.type == NPCID.VileSpitEaterOfWorlds))
             {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Dimensium>(), 100));
+                npcLoot.Add(ItemDropRule.ByCondition(new DimensiumCondition(), ModContent.ItemType<Dimensium>(), 100));
             }
 
             if (NPC.type == NPCID.KingSlime)
             {
-                //SlimeCondition slemsoul = new SlimeCondition();
-                //IItemDropRule conditionalRule = new LeadingConditionRule(slemsoul);
-                //conditionalRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<KingSlimeSoul>()));
-                //npcLoot.Add(conditionalRule);
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RoyalBelt>(), 3));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<KingSlimeSoul>()));
             }
@@ -249,14 +249,9 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DesertEagle>(), 20));
             }
 
-            if ((NPC.type == NPCID.BoneSerpentHead && NPC.downedBoss3) || (NPC.type == NPCID.BigPantlessSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.SmallPantlessSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.PantlessSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.BigMisassembledSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.SmallMisassembledSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.MisassembledSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.BigSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.SmallSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.Skeleton && NPC.downedBoss3) || (NPC.type == NPCID.Skeleton && NPC.downedBoss3) || (NPC.type == NPCID.BigHeadacheSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.SmallHeadacheSkeleton && NPC.downedBoss3) || (NPC.type == NPCID.HeadacheSkeleton && NPC.downedBoss3))
+            if (NPC.type == NPCID.BoneSerpentHead || NPC.type == NPCID.BigPantlessSkeleton || NPC.type == NPCID.SmallPantlessSkeleton || NPC.type == NPCID.PantlessSkeleton || NPC.type == NPCID.BigMisassembledSkeleton || NPC.type == NPCID.SmallMisassembledSkeleton || NPC.type == NPCID.MisassembledSkeleton || NPC.type == NPCID.BigSkeleton || NPC.type == NPCID.SmallSkeleton || NPC.type == NPCID.Skeleton || NPC.type == NPCID.Skeleton || NPC.type == NPCID.BigHeadacheSkeleton || NPC.type == NPCID.SmallHeadacheSkeleton || NPC.type == NPCID.HeadacheSkeleton)
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.Bone, 1, 3, 6));
-            }
-
-            if ((NPC.type == NPCID.TinyMossHornet) || (NPC.type == NPCID.LittleMossHornet) || (NPC.type == NPCID.BigMossHornet) || (NPC.type == NPCID.GiantMossHornet) || (NPC.type == NPCID.MossHornet))
-            {
-                npcLoot.Add(ItemDropRule.Common(ItemID.Stinger, 2));
+                npcLoot.Add(ItemDropRule.ByCondition(new DownedSkeletronCondition(), ItemID.Bone, 1, 3, 6));
             }
 
             if (NPC.type == NPCID.BigMimicHallow)
@@ -269,9 +264,9 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 npcLoot.Add(ItemDropRule.Common(ItemID.DarkShard, 1, 1, 3));
             }
 
-            if (NPC.downedMoonlord && (NPC.type == NPCID.Harpy) || (NPC.type == NPCID.WyvernHead))
+            if (NPC.type == NPCID.Harpy || NPC.type == NPCID.WyvernHead)
             {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MoonGeode>(), 8));
+                npcLoot.Add(ItemDropRule.ByCondition(new DownedMoonLordCondition(), ModContent.ItemType<MoonGeode>(), 8));
             }
 
             if (NPC.type == NPCID.SpikedJungleSlime)
@@ -307,6 +302,18 @@ namespace MultidimensionMod.Common.Globals.NPCs
             if (NPC.type == NPCID.FireImp)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ImpBag>(), 100));
+            }
+
+            if (NPC.type == NPCID.BloodZombie)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BloodyMary>(), 100));
+            }
+
+            if (NPC.type == NPCID.Crab)
+            {
+                LeadingConditionRule leadingConditionRule = new LeadingConditionRule(new Conditions.IsHardmode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<YtriumStaff>(), 20));
+                npcLoot.Add(leadingConditionRule);
             }
         }
     }

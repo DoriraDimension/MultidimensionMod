@@ -63,7 +63,10 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			for (int i = 0; i < numberProjectiles; i++)
 			{
 				Vector2 perturbedSpeed = new Vector2(Projectile.velocity.X / 2, Projectile.velocity.Y / 2).RotatedByRandom(MathHelper.ToRadians(360));
-				Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<VulkanusRock>(), hit.Damage, hit.Knockback, Main.myPlayer);
+				if (Projectile.owner == Main.myPlayer)
+				{
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, perturbedSpeed.X, perturbedSpeed.Y, ModContent.ProjectileType<VulkanusRock>(), hit.Damage, hit.Knockback, Main.myPlayer);
+				}
 			}
 			for (int i = 0; i < 25; i++)
 			{
@@ -83,5 +86,17 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			Projectile.Kill();
 			return false;
         }
-	}
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Melee/Swords/VulkanusThrow").Value;
+            Texture2D textureGlow = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Melee/Swords/VulkanusThrow_Glow").Value;
+            Vector2 drawOrigin = new(texture.Width / 2, texture.Height / 2);
+            var effects = Projectile.spriteDirection == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(lightColor), Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            Main.EntitySpriteDraw(textureGlow, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(Color.White), Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            return false;
+        }
+    }
 }

@@ -38,7 +38,12 @@ namespace MultidimensionMod.Projectiles.Magic
 			}
 		}
 
-		public override void AI()
+        public override bool? CanCutTiles()
+        {
+            return false;
+        }
+
+        public override void AI()
 		{
 			if (Projectile.timeLeft > 300)
 				Projectile.timeLeft = 300;
