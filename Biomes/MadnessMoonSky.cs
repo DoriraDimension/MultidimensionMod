@@ -51,7 +51,7 @@ namespace MultidimensionMod.Biomes
 				{
 					skyTexture = "MadnessMoonSky";
 					eyeTexture = "MadnessMoonEye";
-					spriteBatch.Draw(ModContent.Request<Texture2D>("MultidimensionMod/Biomes/" + skyTexture).Value, new Rectangle(0, 0, Main.screenWidth, Main.screenHeight), new Color(opacity * opacity, opacity * opacity, opacity * opacity, opacity));
+					spriteBatch.Draw(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/" + skyTexture).Value, new Rectangle(0, 0, Main.screenWidth, Main.screenHeight), new Color(opacity * opacity, opacity * opacity, opacity * opacity, opacity));
 				}
 
 				if (Main.dayTime)
@@ -98,7 +98,7 @@ namespace MultidimensionMod.Biomes
 					white2.G = (byte)(white2.G * num65);
 					white2.B = (byte)(white2.B * num65);
 					white2.A = (byte)(white2.A * num65);
-					Texture2D moonTexture = ModContent.Request<Texture2D>("MultidimensionMod/Biomes/" + eyeTexture).Value;
+					Texture2D moonTexture = ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/" + eyeTexture).Value;
 					spriteBatch.Draw(moonTexture, new Vector2(num23, num24 + Main.moonModY), new Rectangle?(new Rectangle(0, 0, moonTexture.Width, moonTexture.Width)), white2 * opacity * moonAlpha, rotation2, new Vector2(moonTexture.Width / 2, moonTexture.Width / 2), num25, SpriteEffects.None, 0f);
 				}
 			}

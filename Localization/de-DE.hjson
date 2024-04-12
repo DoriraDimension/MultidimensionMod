@@ -15,6 +15,11 @@ Mods: {
 				// DisplayName: Scarlet Mycelium Forest
 				// TownNPCDialogueName: the Scyrlet Mycelium Forest
 			}
+
+			TheDragonHoard: {
+				// DisplayName: The Dragon Hoard
+				// TownNPCDialogueName: the The Dragon Hoard
+			}
 		}
 
 		Buffs: {
@@ -3494,6 +3499,171 @@ Mods: {
 				// DisplayName: Feudal Fungus Trophy
 				// Tooltip: ""
 			}
+
+			Hotshroom: {
+				// DisplayName: Solar Mushroom
+				// Tooltip: ""
+			}
+
+			Incinerite: {
+				// DisplayName: Cinerite Gold Clump
+				// Tooltip: ""
+			}
+
+			IncineriteBrick: {
+				// DisplayName: Gilded Cinerite Brick
+				// Tooltip: ""
+			}
+
+			IncineriteWall: {
+				// DisplayName: Gilded Cinerite Brick Wall
+				// Tooltip: ""
+			}
+
+			Razewood: {
+				// DisplayName: Razewood
+				// Tooltip: ""
+			}
+
+			TorchAsh: {
+				// DisplayName: Volcanic Ash
+				// Tooltip: ""
+			}
+
+			Torchsand: {
+				// DisplayName: Ashen Sand
+				// Tooltip: ""
+			}
+
+			TorchsandHardened: {
+				// DisplayName: Hardened Ashen Sand
+				// Tooltip: ""
+			}
+
+			Torchsandstone: {
+				// DisplayName: Ashen Sandstone
+				// Tooltip: ""
+			}
+
+			Torchstone: {
+				// DisplayName: Emberstone
+				// Tooltip: ""
+			}
+
+			RazewoodBed: {
+				// DisplayName: Razewood Bed
+				// Tooltip: ""
+			}
+
+			RazewoodBookshelf: {
+				// DisplayName: Razewood Bookshelf
+				// Tooltip: ""
+			}
+
+			RazewoodCandelabra: {
+				// DisplayName: Razewood Candelabra
+				// Tooltip: ""
+			}
+
+			RazewoodCandle: {
+				// DisplayName: Razewood Candle
+				// Tooltip: ""
+			}
+
+			RazewoodChair: {
+				// DisplayName: Razewood Chair
+				// Tooltip: ""
+			}
+
+			RazewoodChandelier: {
+				// DisplayName: Razewood Chandelier
+				// Tooltip: ""
+			}
+
+			RazewoodChest: {
+				// DisplayName: Razewood Chest
+				// Tooltip: ""
+			}
+
+			RazewoodClock: {
+				// DisplayName: Razewood Clock
+				// Tooltip: ""
+			}
+
+			RazewoodCouch: {
+				// DisplayName: Razewood Couch
+				// Tooltip: ""
+			}
+
+			RazewoodDoor: {
+				// DisplayName: Razewood Door
+				// Tooltip: ""
+			}
+
+			RazewoodDresser: {
+				// DisplayName: Razewood Dresser
+				// Tooltip: ""
+			}
+
+			RazewoodLamp: {
+				// DisplayName: Razewood Lamp
+				// Tooltip: ""
+			}
+
+			RazewoodLantern: {
+				// DisplayName: Razewood Lantern
+				// Tooltip: ""
+			}
+
+			RazewoodPiano: {
+				// DisplayName: Razewood Piano
+				// Tooltip: ""
+			}
+
+			RazewoodPlatform: {
+				// DisplayName: Razewood Platform
+				// Tooltip: ""
+			}
+
+			RazewoodSink: {
+				// DisplayName: Razewood Sink
+				// Tooltip: ""
+			}
+
+			RazewoodTable: {
+				// DisplayName: Razewood Table
+				// Tooltip: ""
+			}
+
+			RazewoodTub: {
+				// DisplayName: Razewood Bathtub
+				// Tooltip: ""
+			}
+
+			RazewoodWall: {
+				// DisplayName: Razewood Wall
+				// Tooltip: ""
+			}
+
+			RazewoodWorkbench: {
+				// DisplayName: Razewood Work Bench
+				// Tooltip: ""
+			}
+
+			InfernoBox: {
+				// DisplayName: Music Box (Dragon's Hoard Day)
+				// Tooltip: ""
+			}
+
+			InfernoNightBox: {
+				// DisplayName: Music Box (Dragon's Hoard Night)
+				// Tooltip: ""
+			}
+
+			InfernoUBox: {
+				// DisplayName: Music Box (Dragon's Burrow)
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -3731,6 +3901,7 @@ Mods: {
 			// SpiritEmber.DisplayName: Spirit Ember
 			// PufferFart.DisplayName: Puffer Fart
 			// FadedLightRing.DisplayName: Faded Light Aura
+			// TorchsandBall.DisplayName: Torchsand Ball
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -4038,6 +4209,30 @@ Mods: {
 			// RedMushPianoPlaced.MapEntry: Red Mushroom Piano
 			// RedMushSofaPlaced.MapEntry: Red Mushroom Sofa
 			// FungusTrophyPlaced.MapEntry: Feudal Fungus Trophy
+			// DragonEgg.MapEntry: Dragon Egg
+			// RazewoodBedPlaced.MapEntry: Razewood Bed
+			// RazewoodBookshelfPlaced.MapEntry: Razewood Bookshelf
+			// RazewoodCandelabraPlaced.MapEntry: Razewood Candelabr
+			// RazewoodCandlePlaced.MapEntry: Razewood Candle
+			// RazewoodChairPlaced.MapEntry: Razewood Chair
+			// RazewoodChandelierPlaced.MapEntry: Razewood Chandelier
+			// RazewoodChestPlaced.MapEntry: Razewood Chest
+			// RazewoodClockPlaced.MapEntry: Razewood Clock
+			// RazewoodCouchPlaced.MapEntry: Razewood Sofa
+			// RazewoodDoorClosed.MapEntry: Razewood Door
+			// RazewoodDoorOpen.MapEntry: Razewood Door
+			// RazewoodDresserPlaced.MapEntry: Razewood Dresser
+			// RazewoodLampPlaced.MapEntry: Razewood Lamp
+			// RazewoodLanternPlaced.MapEntry: Razewood Lantern
+			// RazewoodPianoPlaced.MapEntry: Razewood Piano
+			// RazewoodSinkPlaced.MapEntry: Razewood Sink
+			// RazewoodTablePlaced.MapEntry: Razewood Table
+			// RazewoodTubPlaced.MapEntry: Razewood Bathtub
+			// RazewoodWorkbenchPlaced.MapEntry: Razewood Work Bench
+			// InfernoBoxPlaced.MapEntry: Music Box
+			// InfernoNightBoxPlaced.MapEntry: Music Box
+			// InfernoUBoxPlaced.MapEntry: Music Box
+			// IncineriteOre.MapEntry: Cinerite Gold
 		}
 
 		DeathMessages: {

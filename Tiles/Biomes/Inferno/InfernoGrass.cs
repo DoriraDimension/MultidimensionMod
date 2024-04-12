@@ -1,0 +1,65 @@
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace MultidimensionMod.Tiles.Biomes.Inferno
+{
+    public class InfernoGrass : ModTile
+    {
+        public static int _type;
+
+        public override void SetStaticDefaults()
+        {
+            Main.tileSolid[Type] = true;
+            TileID.Sets.Conversion.Grass[Type] = true;
+            Main.tileBlendAll[Type] = true;
+            TileID.Sets.NeedsGrassFraming[Type] = true;
+            Main.tileMergeDirt[Type] = true;
+            Main.tileBlockLight[Type] = true;
+            Main.tileLighted[Type] = true;
+            DustType = ModContent.DustType<Dusts.RazeleafDust>();
+            AddMapEntry(new Color(255, 153, 51));
+        }
+
+        public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)
+        {
+            if (!fail)
+            {
+                fail = true;
+                Framing.GetTileSafely(i, j).TileType = (ushort)ItemID.DirtBlock;
+            }
+        }
+
+        public override void RandomUpdate(int i, int j)
+        {
+            WorldGen.SpreadGrass(i + Main.rand.Next(-1, 1), j + Main.rand.Next(-1, 1), TileID.Dirt, Type, false);
+            if (Main.rand.NextBool(40))
+            {
+                int style = Main.rand.Next(23);
+                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<InfernoFoliage>(), mute: true, style: Main.rand.Next(23));
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<InfernoFoliage>(), Main.rand.Next(23), 0, -1, -1);
+            }
+            if (Main.rand.NextBool(1500))
+            {
+                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<HotshroomPlaced>(), mute: true, style: Main.rand.Next(23));
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<HotshroomPlaced>(), 0, 0, -1, -1);
+
+            }
+        }
+
+        public static bool PlaceObject(int x, int y, int type, bool mute = false, int style = 0, int random = -1, int direction = -1)
+        {
+            if (!TileObject.CanPlace(x, y, type, style, direction, out TileObject toBePlaced, false))
+            {
+                return false;
+            }
+            toBePlaced.random = random;
+            if (TileObject.Place(toBePlaced) && !mute)
+            {
+                WorldGen.SquareTileFrame(x, y, true);
+            }
+            return false;
+        }
+    }
+}

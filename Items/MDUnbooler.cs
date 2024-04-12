@@ -36,6 +36,7 @@ namespace MultidimensionMod.Items
             DownedSystem.metDapper = false;
             DownedSystem.listenedToNonsense = false;
             DownedSystem.seenMushroom = false;
+            DownedSystem.seenInferno = false;
             MemorySystem.seenMemory = false;
 
             if (Main.netMode == NetmodeID.Server)

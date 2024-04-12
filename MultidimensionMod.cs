@@ -43,7 +43,8 @@ namespace MultidimensionMod
             Terraria.IL_Player.UpdateBiomes += NoHeat;
             Terraria.Graphics.Light.On_TileLightScanner.ApplyHellLight += TileLightScanner_ApplyHellLight;
             SkyManager.Instance["MadnessMoonSky"] = new MadnessMoonSky();
-			Filters.Scene["MultidimensionMod:Madness"] = new Filter(new ScreenShaderData("FilterMiniTower").UseColor(0.8f, 0.6f, 0.2f).UseOpacity(0.5f), EffectPriority.High);
+            SkyManager.Instance["DragonHoardSky"] = new DragonHoardSky();
+            Filters.Scene["MultidimensionMod:Madness"] = new Filter(new ScreenShaderData("FilterMiniTower").UseColor(0.8f, 0.6f, 0.2f).UseOpacity(0.5f), EffectPriority.High);
 			base.Load();
         }
 

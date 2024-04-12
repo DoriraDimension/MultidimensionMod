@@ -6,12 +6,14 @@ namespace MultidimensionMod
 {
     public class MDColors
     {
-        //Normal rarities
+        #region Post-Moon Lord rarities
         public static Color Rarity12 => new Color(239, 0, 243);
         public static Color Rarity13 => new Color(0, 125, 243);
         public static Color Rarity14 => new Color(255, 22, 0);
         public static Color Rarity15 => new Color(0, 178, 107);
+        #endregion
 
+        #region special
         //???
         public static Color BossSoulRed => new(130, 0, 0);
         public static Color BossSoulPink => new(172, 37, 139);
@@ -26,7 +28,9 @@ namespace MultidimensionMod
 
         //Dorira color
         public static Color DoriraColor => new(18, 279, 247);
+        #endregion
 
+        #region bosses
         //Queen Bee Soul colors
         public static Color QueenBeePurple => new(63, 39, 105);
         public static Color QueenBeeYellow => new(228, 215, 70);
@@ -111,14 +115,17 @@ namespace MultidimensionMod
         //Feudal Fungus Soul colors
         public static Color FeudalPaleYellow => new(171, 173, 130);
         public static Color FeudalBlue => new(0, 128, 255);
+        #endregion
 
-        //Adel color
+        #region Adel
 
         public static Color AdelText => new(255, 0, 127);
+        #endregion
 
-        //Other
+        #region Other
 
         public static Color Rainbow => BaseUtility.MultiLerpColor(Main.LocalPlayer.miscCounter % 100 / 100f, Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.LightBlue, Color.Blue, Color.Purple, Color.Red);
-
+        public static Color IncineriteColor = new Color((int)(242 * 0.7f), (int)(107 * 0.7f), 0);
+        #endregion
     }
 }

@@ -82,6 +82,11 @@ namespace MultidimensionMod.Common.Globals
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.ShroomForest.Name"), 90, 120, 1.6f, 0, Color.Red, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.ShroomForest.Title"));
                     NPC.SetEventFlagCleared(ref DownedSystem.seenMushroom, -1);
                 }
+                if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheDragonHoard>()) & !DownedSystem.seenInferno)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Inferno.Name"), 90, 120, 1.6f, 0, Color.OrangeRed, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Inferno.Title"));
+                    NPC.SetEventFlagCleared(ref DownedSystem.seenInferno, -1);
+                }
             }
             #region Night of Madness
             if (!Main.fastForwardTimeToDawn && !Main.fastForwardTimeToDusk)
