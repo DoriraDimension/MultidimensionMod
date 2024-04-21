@@ -28,7 +28,7 @@ namespace MultidimensionMod.Biomes
             }
             if (Main.UseHeatDistortion)
             {
-                player.ManageSpecialBiomeVisuals("HeatDistortion", true);
+                player.ManageSpecialBiomeVisuals("HeatDistortion", player.InModBiome(ModContent.GetInstance<TheDragonHoard>()));
             }
         }
 

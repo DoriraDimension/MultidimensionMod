@@ -16,20 +16,20 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
         public override void SetStaticDefaults()
         {
-            Main.projFrames[Projectile.type] = 2;
+            Main.projFrames[Projectile.type] = 10;
         }
 
         public override void SetDefaults()
         {
             Projectile.width = 38;
-            Projectile.height = 38;
+            Projectile.height = 58;
             Projectile.friendly = true;
             Projectile.DamageType = DamageClass.Melee;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = false;
             Projectile.penetrate = -1;
             Projectile.alpha = 255;
-            Projectile.timeLeft = 360;
+            Projectile.timeLeft = 240;
         }
 
         public override void OnKill(int timeLeft)
@@ -79,12 +79,32 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
                     }
                 }
             }
-            if (scream >= 120)
+            if (scream < 120)
             {
-                Projectile.frame = 1;
+                if (++Projectile.frameCounter >= 7)
+                {
+                    Projectile.frameCounter = 0;
+                    if (++Projectile.frame >= 5)
+                    {
+                        Projectile.frame = 0;
+                    }
+                }
             }
-            else
-                Projectile.frame = 0;
+            else if (scream >= 120)
+            {
+                if (++Projectile.frameCounter >= 5)
+                {
+                    Projectile.frameCounter = 0;
+                    if (++Projectile.frame >= 9)
+                    {
+                        Projectile.frame = 9;
+                    }
+                }
+                if (Projectile.frame < 6)
+                {
+                    Projectile.frame = 6;
+                }
+            }
             if (Main.rand.NextBool(4))
             {
                 Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Blood, Projectile.velocity.X * 0.2f, Projectile.velocity.Y * 0.2f, 100, default(Color), 2f);
