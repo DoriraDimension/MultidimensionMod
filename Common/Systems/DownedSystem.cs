@@ -24,6 +24,7 @@ namespace MultidimensionMod.Common.Systems
         public static bool downedFungus;
         public static bool sawUmosTransition;
         public static bool seenInferno;
+        public static bool seenVolcano;
 
         public override void OnWorldLoad()
         {
@@ -43,6 +44,7 @@ namespace MultidimensionMod.Common.Systems
             downedFungus = false;
             sawUmosTransition = false;
             seenInferno = false;
+            seenVolcano = false;
         }
 
         public override void OnWorldUnload()
@@ -63,6 +65,7 @@ namespace MultidimensionMod.Common.Systems
             downedFungus = false;
             sawUmosTransition = false;
             seenInferno = false;
+            seenVolcano = false;
         }
 
         public override void SaveWorldData(TagCompound tag)
@@ -101,6 +104,8 @@ namespace MultidimensionMod.Common.Systems
                 downed.Add("sawUmosTransition");
             if (seenInferno)
                 downed.Add("seenInferno");
+            if (seenVolcano)
+                downed.Add("seenVolcano");
 
             tag["downed"] = downed;
         }
@@ -125,6 +130,7 @@ namespace MultidimensionMod.Common.Systems
             downedFungus = downed.Contains("downedFungus");
             sawUmosTransition = downed.Contains("sawUmosTransition");
             seenInferno = downed.Contains("seenInferno");
+            seenVolcano = downed.Contains("seenVolcano");
         }
 
         public override void NetSend(BinaryWriter writer)
@@ -150,6 +156,9 @@ namespace MultidimensionMod.Common.Systems
             flags2[6] = sawUmosTransition;
             flags2[7] = seenInferno;
             writer.Write(flags2);
+
+            var flags3 = new BitsByte();
+            flags3[0] = seenVolcano;
         }
 
         public override void NetReceive(BinaryReader reader)
@@ -173,6 +182,9 @@ namespace MultidimensionMod.Common.Systems
             downedFungus = flags2[5];
             sawUmosTransition = flags2[6];
             seenInferno = flags2[7];
+
+            BitsByte flags3 = reader.ReadByte();
+            seenVolcano = flags3[7];
         }
     }
 }

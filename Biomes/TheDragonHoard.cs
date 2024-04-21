@@ -25,11 +25,16 @@ namespace MultidimensionMod.Biomes
             {
                 SkyManager.Instance.Activate("DragonHoardSky");
             }
+            if (Main.UseHeatDistortion)
+            {
+                player.ManageSpecialBiomeVisuals("HeatDistortion", true);
+            }
         }
 
         public override void OnLeave(Player player)
         {
             SkyManager.Instance.Deactivate("DragonHoardSky");
+            player.ManageSpecialBiomeVisuals("HeatDistortion", false);
         }
 
         public override string MapBackground => BackgroundPath;

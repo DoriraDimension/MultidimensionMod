@@ -164,7 +164,7 @@ namespace MultidimensionMod.Common.Players
 
         public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
         {
-            if (attempt.rare && !attempt.inLava && !attempt.inHoney)
+            if (attempt.uncommon && !attempt.inLava && !attempt.inHoney && Main.rand.NextBool(5))
             {
                 itemDrop = ModContent.ItemType<EnergyFish>();
                 return;

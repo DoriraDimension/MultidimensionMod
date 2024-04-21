@@ -1,6 +1,7 @@
 ﻿using MultidimensionMod.Biomes;
 using MultidimensionMod.Common.Systems;
 using MultidimensionMod.NPCs.TownNPCs;
+using MultidimensionMod.Walls;
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -86,6 +87,11 @@ namespace MultidimensionMod.Common.Globals
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Inferno.Name"), 90, 120, 1.6f, 0, Color.OrangeRed, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Inferno.Title"));
                     NPC.SetEventFlagCleared(ref DownedSystem.seenInferno, -1);
+                }
+                if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheDragonBurrow>()) & Framing.GetTileSafely(player.Center.ToTileCoordinates()).WallType == ModContent.WallType<VolcanicRockWallPlaced>() & !DownedSystem.seenVolcano)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.InfernoUG.Name"), 90, 120, 1.6f, 0, Color.OrangeRed, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.InfernoUG.Title"));
+                    NPC.SetEventFlagCleared(ref DownedSystem.seenVolcano, -1);
                 }
             }
             #region Night of Madness

@@ -20,6 +20,11 @@ Mods: {
 				DisplayName: The Dragon Hoard
 				TownNPCDialogueName: the The Dragon Hoard
 			}
+
+			TheDragonBurrow: {
+				DisplayName: The Dragon Burrow
+				TownNPCDialogueName: the The Dragon Burrow
+			}
 		}
 
 		Buffs: {
@@ -3506,17 +3511,17 @@ Mods: {
 			}
 
 			Incinerite: {
-				DisplayName: Cinerite Gold Clump
-				Tooltip: ""
+				DisplayName: Cinderite Gold Clump
+				Tooltip: A unique type of gold encased in black rock only found in the Dragon's Hoard, it is imbued with scalding flames.
 			}
 
 			IncineriteBrick: {
-				DisplayName: Gilded Cinerite Brick
+				DisplayName: Gilded Cinderite Brick
 				Tooltip: ""
 			}
 
 			IncineriteWall: {
-				DisplayName: Gilded Cinerite Brick Wall
+				DisplayName: Gilded Cinderite Brick Wall
 				Tooltip: ""
 			}
 
@@ -4418,9 +4423,14 @@ Mods: {
 					Name: The Dragon's Hoard
 				}
 
+				InfernoUG: {
+					Title: Volcanic Heart
+					Name: The Dragon's Burrow
+				}
+
 				Mire: {
-					Title: Devouring Swamp
-					Name: The Shrouded Mire
+					Title: Beast's Den
+					Name: The Lake Depths
 				}
 
 				Purity: {
@@ -4564,10 +4574,8 @@ Mods: {
 				}
 
 				Serpent: {
-					Title: {
-						Name: Subzero Serpent
-						Title: Not a fish, obviously
-					}
+					Name: Subzero Serpent
+					Title: Not a fish, obviously
 				}
 
 				Smiley: {

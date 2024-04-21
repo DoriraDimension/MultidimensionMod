@@ -1,5 +1,7 @@
+using MultidimensionMod.Tiles.MusicBoxes;
 using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Placeables.MusicBoxes
 {
@@ -7,7 +9,7 @@ namespace MultidimensionMod.Items.Placeables.MusicBoxes
 	{
 		public override void SetStaticDefaults()
 		{
-			//DisplayName.SetDefault("Inferno Underground Music Box");
+            //DisplayName.SetDefault("Inferno Underground Music Box");
             //Tooltip.SetDefault(@"Plays 'Superheated' by Quicksilvur");
         }
 
@@ -19,7 +21,7 @@ namespace MultidimensionMod.Items.Placeables.MusicBoxes
 			Item.useTime = 10;
 			Item.autoReuse = true;
 			Item.consumable = true;
-			Item.createTile = ModContent.TileType<Tiles.MusicBoxes.InfernoUBoxPlaced>();
+			Item.createTile = ModContent.TileType<InfernoUBoxPlaced>();
 			Item.width = 24;
 			Item.height = 24;
 			Item.rare = ItemRarityID.LightRed;
