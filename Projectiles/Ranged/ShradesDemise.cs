@@ -65,7 +65,12 @@ namespace MultidimensionMod.Projectiles.Ranged
 			target.AddBuff(ModContent.BuffType<BlazingSuffering>(), 180);
 		}
 
-		public override bool PreDraw(ref Color lightColor)
+        public override bool OnTileCollide(Vector2 oldVelocity)
+        {
+            return false;
+        }
+
+        public override bool PreDraw(ref Color lightColor)
 		{
 			Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
 			Vector2 position = Projectile.Center - Main.screenPosition;

@@ -64,9 +64,9 @@ namespace MultidimensionMod.Projectiles.Ranged
 			target.AddBuff(BuffID.CursedInferno, 240, false);
 		}
 
-		public override void OnKill(int timeLeft)
+		public override bool OnTileCollide(Vector2 oldVelocity)
         {
-
+			return false;
         }
 
 		public override bool PreDraw(ref Color lightColor)
