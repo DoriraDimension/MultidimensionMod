@@ -27,7 +27,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
 
         public override bool CanKillTile(int i, int j, ref bool blockDamaged)
         {
-            if (Main.hardMode/*DownedSystem.downedShen*/)
+            if (NPC.downedMoonlord/*DownedSystem.downedShen*/)
             {
                 return true;
             }

@@ -206,39 +206,37 @@ namespace MultidimensionMod.Worldgen
                 int genY = originCenter.Y - 80;
                 gen.Generate(genX, genY, true, true);
             });
-            //WorldGen.PlaceTile((int)newOrigin.X, (int)newOrigin.Y, ModContent.TileType<Tiles.Biomes.FrozenUnderworld.AbyssalHellstonePlaced>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X - 91, originCenter.Y + 18, ModContent.TileType<OrnateBand>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X + 44, originCenter.Y - 308, ModContent.TileType<PagodaBell>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X + 28, originCenter.Y - 403, ModContent.TileType<DragonEgg>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X + 28, originCenter.Y - 403, ModContent.TileType<SamuraiCorpse>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X + 51, originCenter.Y - 378, ModContent.TileType<RazewoodTablePlaced>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X + 51, originCenter.Y - 380, ModContent.TileType<DragonEgg>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X + 51, originCenter.Y - 380, ModContent.TileType<AkumaText>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X - 207, originCenter.Y - 34, ModContent.TileType<DragonEgg>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X - 207, originCenter.Y - 34, ModContent.TileType<PyrospherePlaced>(), mute: true);
-           // WorldGen.PlaceTile(originCenter.X + 284, originCenter.Y + 32, ModContent.TileType<DragonEgg>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X + 284, originCenter.Y + 32, ModContent.TileType<DragonsGuardPlaced>(), mute: true);
-           // WorldGen.PlaceTile(originCenter.X + 50, originCenter.Y + 185, ModContent.TileType<DragonEgg>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X + 46, originCenter.Y + 185, ModContent.TileType<DragonEgg>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X + 41, originCenter.Y + 185, ModContent.TileType<DragonEgg>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X + 33, originCenter.Y + 185, ModContent.TileType<DragonEgg>(), mute: true);
+            Vector2 losOriginos = new(originCenter.X - (654 / 2), originCenter.Y - 80);
+            Point volcanoPoint = losOriginos.ToPoint();
+            //WorldGen.PlaceObject(originCenter.X - 91, originCenter.Y + 18, ModContent.TileType<OrnateBand>(), mute: true);
+            //WorldGen.PlaceObject(originCenter.X + 44, originCenter.Y - 308, ModContent.TileType<PagodaBell>(), mute: true);
+            //WorldGen.PlaceObject(originCenter.X + 28, originCenter.Y - 403, ModContent.TileType<SamuraiCorpse>(), mute: true);
+            //WorldGen.PlaceObject(originCenter.X + 51, originCenter.Y - 378, ModContent.TileType<RazewoodTablePlaced>(), mute: true);
+            //WorldGen.PlaceObject(originCenter.X + 51, originCenter.Y - 380, ModContent.TileType<AkumaText>(), mute: true);
+            //WorldGen.PlaceObject(originCenter.X - 207, originCenter.Y - 34, ModContent.TileType<PyrospherePlaced>(), mute: true);
+            //WorldGen.PlaceObject(originCenter.X + 284, originCenter.Y + 32, ModContent.TileType<DragonsGuardPlaced>(), mute: true);
+            //WorldGen.PlaceObject(originCenter.X + 50, originCenter.Y + 185, ModContent.TileType<DragonEgg>(), mute: true);
+            //WorldGen.PlaceObject(originCenter.X + 46, originCenter.Y + 185, ModContent.TileType<DragonEgg>(), mute: true);
+            //WorldGen.PlaceObject(originCenter.X + 41, originCenter.Y + 185, ModContent.TileType<DragonEgg>(), mute: true);
+            //WorldGen.PlaceObject(originCenter.X + 33, originCenter.Y + 185, ModContent.TileType<DragonEgg>(), mute: true);
 
-            /*//WorldGen.PlaceTile(originCenter.X - 91, originCenter.Y + 18, ModContent.TileType<OrnateBand>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X + 44, originCenter.Y + 308, ModContent.TileType<PagodaBell>(), mute: true);
-            WorldGen.PlaceTile(originCenter.X + 28, originCenter.Y - 323, ModContent.TileType<DragonEgg>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X + 28, originCenter.Y - 323, ModContent.TileType<SamuraiCorpse>(), mute: true);
-            WorldGen.PlaceTile(originCenter.X + 51, originCenter.Y - 298, ModContent.TileType<RazewoodTablePlaced>(), mute: true);
-            WorldGen.PlaceTile(originCenter.X + 51, originCenter.Y - 300, ModContent.TileType<DragonEgg>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X + 51, originCenter.Y - 300, ModContent.TileType<AkumaText>(), mute: true);
-            WorldGen.PlaceTile(originCenter.X - 207, originCenter.Y + 46, ModContent.TileType<DragonEgg>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X - 207, originCenter.Y + 46, ModContent.TileType<PyrospherePlaced>(), mute: true);
-            WorldGen.PlaceTile(originCenter.X + 284, originCenter.Y + 112, ModContent.TileType<DragonEgg>(), mute: true);
-            //WorldGen.PlaceTile(originCenter.X + 284, originCenter.Y + 112, ModContent.TileType<DragonsGuardPlaced>(), mute: true);
-            WorldGen.PlaceTile(originCenter.X + 50, originCenter.Y + 265, ModContent.TileType<DragonEgg>(), mute: true);
-            WorldGen.PlaceTile(originCenter.X + 46, originCenter.Y + 265, ModContent.TileType<DragonEgg>(), mute: true);
-            WorldGen.PlaceTile(originCenter.X + 41, originCenter.Y + 265, ModContent.TileType<DragonEgg>(), mute: true);
-            WorldGen.PlaceTile(originCenter.X + 33, originCenter.Y + 265, ModContent.TileType<DragonEgg>(), mute: true);*/
+            //WorldGen.PlaceObject(originCenter.X - 91, originCenter.Y + 18, ModContent.TileType<OrnateBand>(), mute: true);
+            //WorldGen.PlaceObject(originCenter.X + 44, originCenter.Y + 308, ModContent.TileType<PagodaBell>(), mute: true);
+            WorldGen.PlaceTile(volcanoPoint.X + 28, volcanoPoint.Y - 323, ModContent.TileType<DragonEgg>(), mute: true);
+            //WorldGen.PlaceObject(originCenter.X + 28, originCenter.Y - 323, ModContent.TileType<SamuraiCorpse>(), mute: true);
+            WorldGen.PlaceObject(volcanoPoint.X + 51, volcanoPoint.Y - 298, ModContent.TileType<RazewoodTablePlaced>(), mute: true);
+            WorldGen.PlaceObject(volcanoPoint.X + 51, volcanoPoint.Y - 300, ModContent.TileType<DragonEgg>(), mute: true);
+            //WorldGen.PlaceObject(originCenter.X + 51, originCenter.Y - 300, ModContent.TileType<AkumaText>(), mute: true);
+            WorldGen.PlaceObject(volcanoPoint.X - 207, volcanoPoint.Y + 46, ModContent.TileType<DragonEgg>(), mute: true);
+            //WorldGen.PlaceObject(originCenter.X - 207, originCenter.Y + 46, ModContent.TileType<PyrospherePlaced>(), mute: true);
+            WorldGen.PlaceObject(volcanoPoint.X + 284, volcanoPoint.Y + 112, ModContent.TileType<DragonEgg>(), mute: true);
+            //WorldGen.PlaceObject(originCenter.X + 284, originCenter.Y + 112, ModContent.TileType<DragonsGuardPlaced>(), mute: true);
+            WorldGen.PlaceObject(volcanoPoint.X + 50, volcanoPoint.Y + 265, ModContent.TileType<DragonEgg>(), mute: true);
+            WorldGen.PlaceObject(volcanoPoint.X + 46, volcanoPoint.Y + 265, ModContent.TileType<DragonEgg>(), mute: true);
+            WorldGen.PlaceObject(volcanoPoint.X + 41, volcanoPoint.Y + 265, ModContent.TileType<DragonEgg>(), mute: true);
+            WorldGen.PlaceObject(volcanoPoint.X + 33, volcanoPoint.Y + 265, ModContent.TileType<DragonEgg>(), mute: true);
         }
+
         public static int GetWorldSize()
         {
             if (Main.maxTilesX == 4200) { return 1; }

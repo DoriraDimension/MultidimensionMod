@@ -23,6 +23,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             //DustType = ModContent.DustType<RazewoodDust>();
             AddMapEntry(new Color(91, 58, 96));
             MinPick = 200;
+            MineResist = 3;
         }
 
         public override bool CanExplode(int i, int j)

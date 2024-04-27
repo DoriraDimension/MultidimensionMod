@@ -34,7 +34,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
         public override void RandomUpdate(int i, int j)
         {
             WorldGen.SpreadGrass(i + Main.rand.Next(-1, 1), j + Main.rand.Next(-1, 1), TileID.Dirt, Type, false);
-            if (Main.rand.NextBool(40))
+            if (Main.rand.NextBool(80))
             {
                 int style = Main.rand.Next(23);
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<InfernoFoliage>(), mute: true, style: Main.rand.Next(23));
@@ -42,7 +42,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             }
             if (Main.rand.NextBool(1500))
             {
-                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<HotshroomPlaced>(), mute: true, style: Main.rand.Next(23));
+                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<HotshroomPlaced>(), mute: true);
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<HotshroomPlaced>(), 0, 0, -1, -1);
 
             }

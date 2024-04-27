@@ -1,11 +1,12 @@
 ﻿using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Dusts;
 using MultidimensionMod.Items.Summons;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using Terraria.DataStructures;
+using Terraria.Localization;
 
 namespace MultidimensionMod.Tiles.Biomes.ShroomForest
 {
@@ -30,6 +31,8 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             HitSound = SoundID.Grass;
             DustType = ModContent.DustType<MushroomDust>();
             RegisterItemDrop(ModContent.ItemType<IntimidatingMushroom>());
+            LocalizedText name = CreateMapEntryName();
+            AddMapEntry(new Color(237, 160, 69), name);
         }
         public override void NumDust(int i, int j, bool fail, ref int num)
         {

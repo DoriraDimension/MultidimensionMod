@@ -17,6 +17,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             Main.tileMerge[Type][ModContent.TileType<VolcanicRockDensePlaced>()] = true;
             Main.tileMerge[Type][ModContent.TileType<TorchstonePlaced>()] = true;
             Main.tileMerge[Type][ModContent.TileType<AwakenedRockPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<PagodaColumnPlaced>()] = true;
             Main.tileMergeDirt[Type] = true;
             Main.tileBlockLight[Type] = true;
             HitSound = SoundID.Tink;
@@ -27,7 +28,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
 
         public override bool CanKillTile(int i, int j, ref bool blockDamaged)
         {
-            if (Main.hardMode/*DownedSystem.downedShen*/)
+            if (NPC.downedMoonlord/*DownedSystem.downedShen*/)
             {
                 return true;
             }

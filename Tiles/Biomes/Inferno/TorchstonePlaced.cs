@@ -13,6 +13,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
         {
             Main.tileSolid[Type] = true;
             Main.tileMerge[Type][ModContent.TileType<IncineriteOre>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<VolcanicRockPlaced>()] = true;
             Terraria.ID.TileID.Sets.Conversion.Stone[Type] = true;
             Main.tileMergeDirt[Type] = true;
             Main.tileBlockLight[Type] = true;

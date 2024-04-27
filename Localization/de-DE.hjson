@@ -2838,8 +2838,9 @@ Mods: {
 				// DisplayName: Bloody Mary
 				/* Tooltip:
 					'''
+					Left click to stab, right click to swing
 					Hitting enemies with the blade inflicts them with the Mary's Wrath debuff
-					Right clicking will summon Mary who will scream after a few seconds
+					After 20 uses of the weapon, Mary will be summoned
 					Any enemy that had the Mary's Wrath debuff on them takes 150 damage and gets their debuff removed
 					It was never just folklore
 					''' */
@@ -3512,7 +3513,7 @@ Mods: {
 
 			Incinerite: {
 				// DisplayName: Cinderite Gold Clump
-				// Tooltip: A unique type of gold encased in black rock only found in the Dragon's Hoard, it is imbued with scalding flames.
+				// Tooltip: A unique type of gold encased in volcanic rock only found in the Dragon's Hoard, it is imbued with scalding flames.
 			}
 
 			IncineriteBrick: {
@@ -3527,7 +3528,7 @@ Mods: {
 
 			Razewood: {
 				// DisplayName: Razewood
-				// Tooltip: ""
+				// Tooltip: Flame razed wood that somehow adapted to its new environment
 			}
 
 			TorchAsh: {
@@ -3863,12 +3864,12 @@ Mods: {
 			// EtheralProj.DisplayName: Etheral
 			// EtheralEXProj.DisplayName: Etheral Light
 			// EtheralLaserEX.DisplayName: True Light Beam
-			// MusharangProj.DisplayName: Musharang Proj
+			// MusharangProj.DisplayName: Monarcharang
 			// BloodshroomArrow.DisplayName: Bloodshroom Arrow
 			// YtriumShard.DisplayName: Yttrium Shard
 			// Vulcan.DisplayName: Vulcan Magma
 			// VulcanExplosion.DisplayName: Vulcan Explosion
-			// FrostScaleProj.DisplayName: Frost Scale Proj
+			// FrostScaleProj.DisplayName: Frost Scale
 			// ManaShockwave.DisplayName: Mana Shockwave
 			// SymbioHatchling.DisplayName: Symbio Hatchling
 			// FreezeAura.DisplayName: Freeze Aura
@@ -3907,7 +3908,7 @@ Mods: {
 			// PufferFart.DisplayName: Puffer Fart
 			// FadedLightRing.DisplayName: Faded Light Aura
 			// TorchsandBall.DisplayName: Torchsand Ball
-			// MaryStab.DisplayName: Mary Stab
+			// MaryStab.DisplayName: Bloody Mary
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -4238,7 +4239,8 @@ Mods: {
 			// InfernoBoxPlaced.MapEntry: Music Box
 			// InfernoNightBoxPlaced.MapEntry: Music Box
 			// InfernoUBoxPlaced.MapEntry: Music Box
-			// IncineriteOre.MapEntry: Cinerite Gold
+			// IncineriteOre.MapEntry: Cinderite Gold
+			// KingsCapPlaced.MapEntry: Alarmshroom
 		}
 
 		DeathMessages: {

@@ -40,7 +40,7 @@ namespace MultidimensionMod.Backgrounds
             return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Backgrounds/ShroomForestBG1");
         }*/
 
-        public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b)
+        public override int ChooseFarTexture()
         {
             return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Backgrounds/InfernoBG");
         }

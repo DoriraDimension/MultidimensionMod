@@ -14,7 +14,7 @@ namespace MultidimensionMod.Walls
         }
         public override void KillWall(int i, int j, ref bool fail)
         {
-            if (Main.hardMode/*DownedSystem.downedShen*/)
+            if (NPC.downedMoonlord/*DownedSystem.downedShen*/)
             {
                 fail = true;
             }

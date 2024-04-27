@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using MultidimensionMod.Buffs.Debuffs;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Enums;
 using Terraria.ModLoader;
@@ -38,6 +39,11 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
             Projectile.hide = true;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 5;
+        }
+
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            target.AddBuff(ModContent.BuffType<MarysWrath>(), 600);
         }
 
         public override void AI()

@@ -9,12 +9,11 @@ namespace MultidimensionMod.Walls
     {
         public override void SetStaticDefaults()
         {
-            Main.wallLight[Type] = true;
             AddMapEntry(new Color(25, 12, 10));
         }
         public override void KillWall(int i, int j, ref bool fail)
         {
-            if (Main.hardMode/*DownedSystem.downedShen*/)
+            if (NPC.downedMoonlord/*DownedSystem.downedShen*/)
             {
                 fail = true;
             }

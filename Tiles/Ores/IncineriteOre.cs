@@ -22,6 +22,7 @@ namespace MultidimensionMod.Tiles.Ores
             Main.tileSpelunker[Type] = true;
             Main.tileOreFinderPriority[Type] = 340; 
             Main.tileMerge[Type][ModContent.TileType<TorchstonePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<VolcanicRockPlaced>()] = true;
             Main.tileBlockLight[Type] = true;  //true for block to emit light
             Main.tileLighted[Type] = true;
             HitSound = SoundID.Tink;  
