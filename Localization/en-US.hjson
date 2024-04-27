@@ -3670,6 +3670,22 @@ Mods: {
 				DisplayName: Music Box (Dragon's Burrow)
 				Tooltip: ""
 			}
+
+			Pyrosphere: {
+				DisplayName: Pyrosphere
+				Tooltip:
+					'''
+					When the flail reaches its maximum reach,
+					the chain will break and launch the sphere as an explosive
+					'''
+				Lore:
+					'''
+					This flail was once carved from the very volcano the dragons now call home,
+					the embers within will begin to heat up if it is swung fast enough.
+					It seems like it has seen better days, only remnants of its flames remain,
+					and claw marks from whoever brought it into the volcanic caverns have damaged it more.
+					'''
+			}
 		}
 
 		SetBonuses: {
@@ -3909,6 +3925,10 @@ Mods: {
 			FadedLightRing.DisplayName: Faded Light Aura
 			TorchsandBall.DisplayName: Torchsand Ball
 			MaryStab.DisplayName: Bloody Mary
+			PyrosphereBall.DisplayName: Pyrosphere Ball
+			PyroEmber.DisplayName: Pyro Ember
+			PyrosphereExplosion.DisplayName: Pyrosphere Explosion
+			PyrosphereUnchained.DisplayName: Pyrosphere Unchained
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
