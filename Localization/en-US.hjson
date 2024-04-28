@@ -3686,6 +3686,40 @@ Mods: {
 					and claw marks from whoever brought it into the volcanic caverns have damaged it more.
 					'''
 			}
+
+			DragonsGuard: {
+				DisplayName: Dragon's Guard
+				Tooltip:
+					'''
+					Being inflicted with On Fire! will fuel your very soul with power
+					            While being empowered, you gain 10 defense and 8% increased damage
+					            Any enemy touching you will be set ablaze
+					'''
+				Lore:
+					'''
+					This dragon head shaped shield was never intended for combat,
+					its purpose was to be used in ceremonial play.
+					It depicts the draconian demon that the people of this land feared.
+					'''
+			}
+
+			OrnateBand: {
+				DisplayName: Ornate Band
+				Tooltip:
+					'''
+					Casts a protective veil that absorbs a damage based debuff once
+					After absorbing a debuff, the veil disappears and inflicts the debuff onto all nearby enemies.
+					The veil reappears after 20 seconds
+					Life regeneration is increased by 4 for 10 seconds after the veil disappeared
+					'''
+				Lore:
+					'''
+					Wristbands like these were once bestowed upon shrine guardians who tend to the seal,
+					they were supposed to protect the wearer from demonic influence coming from deep down in the volcano.
+					However, the seal was undone, incinerated by the roar of the erupting volcano and with it, its people.
+					What was once a mere myth, became reality.
+					'''
+			}
 		}
 
 		SetBonuses: {
@@ -3929,6 +3963,7 @@ Mods: {
 			PyroEmber.DisplayName: Pyro Ember
 			PyrosphereExplosion.DisplayName: Pyrosphere Explosion
 			PyrosphereUnchained.DisplayName: Pyrosphere Unchained
+			OrnateBandAura.DisplayName: Ornate Band Aura
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability

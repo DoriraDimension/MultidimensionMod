@@ -8,6 +8,7 @@ using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Buffs.Ability;
 using MultidimensionMod.Base;
 using MultidimensionMod.Dusts;
+using MultidimensionMod.Buffs.Debuffs;
 using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
@@ -67,6 +68,10 @@ namespace MultidimensionMod.Common.Players
         public bool TwinPrayer = false;
         public bool awakenedFlamescar = false;
         public int flamescarReset = 0;
+        public bool DragonsGuard = false;
+        public bool OrnateVeil = false;
+        public Item OrnateBand;
+        public int veilReset = 0;
 
         public override void ResetEffects()
         {
@@ -93,6 +98,8 @@ namespace MultidimensionMod.Common.Players
             MushiumSet = false;
             CrippledHealing = false;
             TwinPrayer = false;
+            DragonsGuard = false;
+            OrnateVeil = false;
         }
 
         public override void UpdateDead()
@@ -152,6 +159,246 @@ namespace MultidimensionMod.Common.Players
                     Player.AddBuff(ModContent.BuffType<InnerEmber>(), 600);
                 }
             }
+            #region Ornate Band debuff deflection
+            if (OrnateVeil && veilReset == 0)
+            {
+                if (Player.HasBuff(BuffID.OnFire))
+                {
+                    Item item = OrnateBand;
+                    Player.ClearBuff(BuffID.OnFire);
+                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/ManaBurst"));
+                    for (int m = 0; m < Main.maxNPCs; m++)
+                    {
+                        NPC npc = Main.npc[m];
+                        if (!npc.active || npc.friendly || npc.dontTakeDamage)
+                            continue;
+
+                        float npcDist = (npc.Center - Player.Center).Length();
+                        float debuffDistance = 800;
+
+                        if (npcDist < debuffDistance)
+                        {
+                            npc.AddBuff(BuffID.OnFire, 600);
+                        }
+                    }
+                    veilReset = 1200;
+                }
+                else if (Player.HasBuff(BuffID.OnFire3))
+                {
+                    Item item = OrnateBand;
+                    Player.ClearBuff(BuffID.OnFire3);
+                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/ManaBurst"));
+                    for (int m = 0; m < Main.maxNPCs; m++)
+                    {
+                        NPC npc = Main.npc[m];
+                        if (!npc.active || npc.friendly || npc.dontTakeDamage)
+                            continue;
+
+                        float npcDist = (npc.Center - Player.Center).Length();
+                        float debuffDistance = 800;
+
+                        if (npcDist < debuffDistance)
+                        {
+                            npc.AddBuff(BuffID.OnFire3, 600);
+                        }
+                    }
+                    veilReset = 1200;
+                }
+                else if (Player.HasBuff(BuffID.ShadowFlame))
+                {
+                    Item item = OrnateBand;
+                    Player.ClearBuff(BuffID.ShadowFlame);
+                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/ManaBurst"));
+                    for (int m = 0; m < Main.maxNPCs; m++)
+                    {
+                        NPC npc = Main.npc[m];
+                        if (!npc.active || npc.friendly || npc.dontTakeDamage)
+                            continue;
+
+                        float npcDist = (npc.Center - Player.Center).Length();
+                        float debuffDistance = 800;
+
+                        if (npcDist < debuffDistance)
+                        {
+                            npc.AddBuff(BuffID.ShadowFlame, 600);
+                        }
+                    }
+                    veilReset = 1200;
+                }
+                else if (Player.HasBuff(BuffID.Frostburn))
+                {
+                    Item item = OrnateBand;
+                    Player.ClearBuff(BuffID.Frostburn);
+                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/ManaBurst"));
+                    for (int m = 0; m < Main.maxNPCs; m++)
+                    {
+                        NPC npc = Main.npc[m];
+                        if (!npc.active || npc.friendly || npc.dontTakeDamage)
+                            continue;
+
+                        float npcDist = (npc.Center - Player.Center).Length();
+                        float debuffDistance = 800;
+
+                        if (npcDist < debuffDistance)
+                        {
+                            npc.AddBuff(BuffID.Frostburn, 600);
+                        }
+                    }
+                    veilReset = 1200;
+                }
+                else if (Player.HasBuff(BuffID.Frostburn2))
+                {
+                    Item item = OrnateBand;
+                    Player.ClearBuff(BuffID.Frostburn2);
+                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/ManaBurst"));
+                    for (int m = 0; m < Main.maxNPCs; m++)
+                    {
+                        NPC npc = Main.npc[m];
+                        if (!npc.active || npc.friendly || npc.dontTakeDamage)
+                            continue;
+
+                        float npcDist = (npc.Center - Player.Center).Length();
+                        float debuffDistance = 800;
+
+                        if (npcDist < debuffDistance)
+                        {
+                            npc.AddBuff(BuffID.Frostburn2, 600);
+                        }
+                    }
+                    veilReset = 1200;
+                }
+                else if (Player.HasBuff(BuffID.Poisoned))
+                {
+                    Item item = OrnateBand;
+                    Player.ClearBuff(BuffID.Poisoned);
+                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/ManaBurst"));
+                    for (int m = 0; m < Main.maxNPCs; m++)
+                    {
+                        NPC npc = Main.npc[m];
+                        if (!npc.active || npc.friendly || npc.dontTakeDamage)
+                            continue;
+
+                        float npcDist = (npc.Center - Player.Center).Length();
+                        float debuffDistance = 800;
+
+                        if (npcDist < debuffDistance)
+                        {
+                            npc.AddBuff(BuffID.Poisoned, 600);
+                        }
+                    }
+                    veilReset = 1200;
+                }
+                else if (Player.HasBuff(BuffID.Venom))
+                {
+                    Item item = OrnateBand;
+                    Player.ClearBuff(BuffID.Venom);
+                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/ManaBurst"));
+                    for (int m = 0; m < Main.maxNPCs; m++)
+                    {
+                        NPC npc = Main.npc[m];
+                        if (!npc.active || npc.friendly || npc.dontTakeDamage)
+                            continue;
+
+                        float npcDist = (npc.Center - Player.Center).Length();
+                        float debuffDistance = 800;
+
+                        if (npcDist < debuffDistance)
+                        {
+                            npc.AddBuff(BuffID.Venom, 600);
+                        }
+                    }
+                    veilReset = 1200;
+                }
+                else if (Player.HasBuff(BuffID.CursedInferno))
+                {
+                    Item item = OrnateBand;
+                    Player.ClearBuff(BuffID.CursedInferno);
+                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/ManaBurst"));
+                    for (int m = 0; m < Main.maxNPCs; m++)
+                    {
+                        NPC npc = Main.npc[m];
+                        if (!npc.active || npc.friendly || npc.dontTakeDamage)
+                            continue;
+
+                        float npcDist = (npc.Center - Player.Center).Length();
+                        float debuffDistance = 800;
+
+                        if (npcDist < debuffDistance)
+                        {
+                            npc.AddBuff(BuffID.CursedInferno, 600);
+                        }
+                    }
+                    veilReset = 1200;
+                }
+                else if (Player.HasBuff(BuffID.Electrified))
+                {
+                    Item item = OrnateBand;
+                    Player.ClearBuff(BuffID.Electrified);
+                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/ManaBurst"));
+                    for (int m = 0; m < Main.maxNPCs; m++)
+                    {
+                        NPC npc = Main.npc[m];
+                        if (!npc.active || npc.friendly || npc.dontTakeDamage)
+                            continue;
+
+                        float npcDist = (npc.Center - Player.Center).Length();
+                        float debuffDistance = 800;
+
+                        if (npcDist < debuffDistance)
+                        {
+                            npc.AddBuff(BuffID.Electrified, 600);
+                        }
+                    }
+                    veilReset = 1200;
+                }
+                else if (Player.HasBuff(ModContent.BuffType<BlazingSuffering>()))
+                {
+                    Item item = OrnateBand;
+                    Player.ClearBuff(ModContent.BuffType<BlazingSuffering>());
+                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/ManaBurst"));
+                    for (int m = 0; m < Main.maxNPCs; m++)
+                    {
+                        NPC npc = Main.npc[m];
+                        if (!npc.active || npc.friendly || npc.dontTakeDamage)
+                            continue;
+
+                        float npcDist = (npc.Center - Player.Center).Length();
+                        float debuffDistance = 800;
+
+                        if (npcDist < debuffDistance)
+                        {
+                            npc.AddBuff(ModContent.BuffType<BlazingSuffering>(), 600);
+                        }
+                    }
+                    veilReset = 1200;
+                }
+                else if (Player.HasBuff(ModContent.BuffType<Madness>()))
+                {
+                    Item item = OrnateBand;
+                    Player.ClearBuff(ModContent.BuffType<Madness>());
+                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/ManaBurst"));
+                    for (int m = 0; m < Main.maxNPCs; m++)
+                    {
+                        NPC npc = Main.npc[m];
+                        if (!npc.active || npc.friendly || npc.dontTakeDamage)
+                            continue;
+
+                        float npcDist = (npc.Center - Player.Center).Length();
+                        float debuffDistance = 800;
+
+                        if (npcDist < debuffDistance)
+                        {
+                            npc.AddBuff(ModContent.BuffType<Madness>(), 600);
+                        }
+                    }
+                    veilReset = 1200;
+                }
+            }
+            if (veilReset > 0)
+            {
+                veilReset--;
+            }
+            #endregion
         }
 
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
@@ -341,6 +588,14 @@ namespace MultidimensionMod.Common.Players
             if (MonarchHeart)
             {
                 healValue = (int)(healValue * 0.75f);
+            }
+        }
+
+        public override void OnHitByNPC(NPC npc, Player.HurtInfo hurtInfo)
+        {
+            if (DragonsGuard)
+            {
+                npc.AddBuff(BuffID.OnFire, 180);
             }
         }
 
