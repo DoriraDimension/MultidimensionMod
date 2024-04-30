@@ -19,6 +19,7 @@ using Terraria.DataStructures;
 using Terraria.GameInput;
 using Terraria.Audio;
 using Terraria.Localization;
+using static Humanizer.In;
 
 namespace MultidimensionMod.Common.Players
 {
@@ -72,6 +73,7 @@ namespace MultidimensionMod.Common.Players
         public bool OrnateVeil = false;
         public Item OrnateBand;
         public int veilReset = 0;
+        public bool clawsOfChaos = false;
 
         public override void ResetEffects()
         {
@@ -100,6 +102,7 @@ namespace MultidimensionMod.Common.Players
             TwinPrayer = false;
             DragonsGuard = false;
             OrnateVeil = false;
+            clawsOfChaos = false;
         }
 
         public override void UpdateDead()
@@ -411,7 +414,7 @@ namespace MultidimensionMod.Common.Players
 
         public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
         {
-            if (attempt.uncommon && !attempt.inLava && !attempt.inHoney && Main.rand.NextBool(5))
+            if (attempt.uncommon && !attempt.inLava && !attempt.inHoney && Main.rand.NextBool(5)) //Replaces any uncommon fishing item with an Energy Fish with a 1/5 chance
             {
                 itemDrop = ModContent.ItemType<EnergyFish>();
                 return;
@@ -569,6 +572,16 @@ namespace MultidimensionMod.Common.Players
                 }
             }
         }
+        public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
+        {
+            /*Item heldItem = Main.player[owner].ActiveItem();
+            if (clawsOfChaos)
+            {
+                if (heldItem.useTime == 2)
+                Player.ApplyDamageToNPC(target, 5, 0, 0, false);
+            }*/
+        }
+
 
         public override void GetHealLife(Item item, bool quickHeal, ref int healValue)
         {

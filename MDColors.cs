@@ -115,6 +115,11 @@ namespace MultidimensionMod
         //Feudal Fungus Soul colors
         public static Color FeudalPaleYellow => new(171, 173, 130);
         public static Color FeudalBlue => new(0, 128, 255);
+
+        //Grips colors
+        public static Color GripFireOrange => new(214, 158, 53);
+        public static Color GripMuckGreen => new(59, 128, 68);
+        public static Color GripTitle => BaseUtility.MultiLerpColor(Main.LocalPlayer.miscCounter % 50 / 100f, GripFireOrange, GripMuckGreen);
         #endregion
 
         #region Adel

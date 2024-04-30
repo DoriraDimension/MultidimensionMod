@@ -3692,8 +3692,8 @@ Mods: {
 				Tooltip:
 					'''
 					Being inflicted with On Fire! will fuel your very soul with power
-					            While being empowered, you gain 10 defense and 8% increased damage
-					            Any enemy touching you will be set ablaze
+					While being empowered, you gain 10 defense and 8% increased damage
+					Any enemy touching you will be set ablaze
 					'''
 				Lore:
 					'''
@@ -3710,7 +3710,7 @@ Mods: {
 					Casts a protective veil that absorbs a damage based debuff once
 					After absorbing a debuff, the veil disappears and inflicts the debuff onto all nearby enemies.
 					The veil reappears after 20 seconds
-					Life regeneration is increased by 4 for 10 seconds after the veil disappeared
+					Life regeneration is increased by 4 for 5 seconds after the veil disappeared
 					'''
 				Lore:
 					'''
@@ -3718,6 +3718,21 @@ Mods: {
 					they were supposed to protect the wearer from demonic influence coming from deep down in the volcano.
 					However, the seal was undone, incinerated by the roar of the erupting volcano and with it, its people.
 					What was once a mere myth, became reality.
+					'''
+			}
+
+			CuriousClaw: {
+				DisplayName: Warped Claw
+				Tooltip: Summons the Grips of Chaos at night
+			}
+
+			ClawOfChaos: {
+				DisplayName: Gripclaw Effigy
+				Tooltip:
+					'''
+					Deals flat damage to enemies on every hit
+					The amount of damage depends on the held weapon's use speed
+					The faster the weapon, the lower the damage
 					'''
 			}
 		}
@@ -4121,6 +4136,10 @@ Mods: {
 			Hovercap.DisplayName: Hovercap
 			MushbugBaby.DisplayName: Myceli Larva
 			MonarchSlep.DisplayName: Sleeping Mushroom
+			DragonClawM.DisplayName: Dragon Claw
+			GripOfChaosBlue.DisplayName: Bogheart Grip
+			GripOfChaosRed.DisplayName: Magmacore Grip
+			HydraClawM.DisplayName: Hydra Claw
 		}
 
 		Dialogue: {
@@ -4413,7 +4432,8 @@ Mods: {
 			DownedSkeletronCondition: Only available after defeating Skeletron.
 			RealityCondition: Drops by doing unessecery complicated stuff.
 			DimensiumCondition: This item won't appear in the bestiary.
-			DownedMoonLordCondition: Only available after defeating Moon Lord
+			DownedMoonLordCondition: Only available after defeating Moon Lord.
+			MissingGripCondition: Only drops if one Grip of Chaos is alive.
 		}
 
 		SpecialTooltips: {
@@ -4617,6 +4637,11 @@ Mods: {
 					Name2: Umos
 				}
 
+				Grips: {
+					Title: Bogheart & Magmacore
+					Name: The Grips of Chaos
+				}
+
 				Brood: {
 					Title: Inferno Queen
 					Title2: Draconic Allmother
@@ -4629,6 +4654,11 @@ Mods: {
 					Title2: Abyssal Empress
 					Name: The Hydra
 					Name2: Shinuma
+				}
+
+				Djinn: {
+					Name: Dsert Djinn
+					Title: Forsaken Flexer
 				}
 
 				Serpent: {
