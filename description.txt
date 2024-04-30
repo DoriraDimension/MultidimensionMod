@@ -1,5 +1,5 @@
 Awakened Light is a growing lore-based content mod that aims to go with a multidimensional and outer gods thematic.
-This mod also readds and reworks the old Ancients Awakened mod and integrates it into its lore. [Note that most of the AA content will come next update]
+This mod also readds and reworks the old Ancients Awakened mod and integrates it into its lore. [Note that the AA content will be added in a 3 step port]
 You may see many familiar faces known from Ancients Awakened as well as new characters alongside them.
 
 Multiplayer support was attempted but ultimately not pursued any further, this means its not advised to play together. Support will likely be added in the future.

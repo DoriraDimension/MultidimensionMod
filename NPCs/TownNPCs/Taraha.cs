@@ -219,12 +219,12 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			{
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.SmileyDialogue"));
             }
-            Player player = Main.LocalPlayer;
+            /*Player player = Main.LocalPlayer;
             int shadeEye = player.FindItem(ModContent.ItemType<ShadeEye>());
             if (player.inventory[shadeEye].stack >= 0)
 			{
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.ShadeItemDialogue"));
-            }
+            }*/
 
 			string dialogueLine = chat; // chat is implicitly cast to a string.
 			return dialogueLine;
