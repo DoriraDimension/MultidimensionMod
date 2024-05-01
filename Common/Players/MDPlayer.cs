@@ -574,12 +574,42 @@ namespace MultidimensionMod.Common.Players
         }
         public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
-            /*Item heldItem = Main.player[owner].ActiveItem();
-            if (clawsOfChaos)
+            //Player player = Main.player[];
+            if (clawsOfChaos) //Jesus christ, fix this :sob:
             {
-                if (heldItem.useTime == 2)
-                Player.ApplyDamageToNPC(target, 5, 0, 0, false);
-            }*/
+                if (Player.HeldItem.useTime >= 56)
+                {
+                    Player.ApplyDamageToNPC(target, 10, 0, 0, false);
+                }
+                else if (Player.HeldItem.useTime <= 55 && Player.HeldItem.useTime >= 46)
+                {
+                    Player.ApplyDamageToNPC(target, 8, 0, 0, false);
+                }
+                else if (Player.HeldItem.useTime <= 45 && Player.HeldItem.useTime >= 36)
+                {
+                    Player.ApplyDamageToNPC(target, 7, 0, 0, false);
+                }
+                else if (Player.HeldItem.useTime <= 35 && Player.HeldItem.useTime >= 31)
+                {
+                    Player.ApplyDamageToNPC(target, 6, 0, 0, false);
+                }
+                else if (Player.HeldItem.useTime <= 30 && Player.HeldItem.useTime >= 26)
+                {
+                    Player.ApplyDamageToNPC(target, 5, 0, 0, false);
+                }
+                else if (Player.HeldItem.useTime <= 25 && Player.HeldItem.useTime >= 21)
+                {
+                    Player.ApplyDamageToNPC(target, 4, 0, 0, false);
+                }
+                else if (Player.HeldItem.useTime <= 20 && Player.HeldItem.useTime >= 9)
+                {
+                    Player.ApplyDamageToNPC(target, 3, 0, 0, false);
+                }
+                else if (Player.HeldItem.useTime <= 8)
+                {
+                    Player.ApplyDamageToNPC(target, 2, 0, 0, false);
+                }
+            }
         }
 
 
