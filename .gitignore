@@ -1,4 +1,7 @@
 .vscode/settings.json
+.vs/
+.idea/
+bin/
 obj/
 obj/Debug/net6.0/MultidimensionMod.assets.cache
 obj/Debug/net6.0/MultidimensionMod.csproj.AssemblyReference.cache

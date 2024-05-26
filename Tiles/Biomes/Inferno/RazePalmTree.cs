@@ -23,11 +23,10 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
 
         public override void SetStaticDefaults()
         {
-            // Makes Example Palm Tree grow on Gold Ore
             GrowsOnTileId = new int[1] { ModContent.TileType<TorchsandPlaced>() };
             texture = ModContent.Request<Texture2D>("MultidimensionMod/Tiles/Biomes/Inferno/RazePalmTree");
             topsTexture = ModContent.Request<Texture2D>("MultidimensionMod/Tiles/Biomes/Inferno/RazePalmTreetops");
-            oasisTopsTexture = ModContent.Request<Texture2D>("MultidimensionMod/Tiles/Biomes/Inferno/RazePalmTreetops");
+            oasisTopsTexture = ModContent.Request<Texture2D>("MultidimensionMod/Tiles/Biomes/Inferno/RazePalmTreeTopsOasis");
         }
 
         public override Asset<Texture2D> GetTexture() => texture;

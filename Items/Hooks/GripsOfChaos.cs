@@ -20,24 +20,24 @@ Blue pulls in/retracts quicker");*/
 
 		public override void SetDefaults() 
 		{
-			Item.CloneDefaults(ItemID.SkeletronHand);
-			Item.shoot = ModContent.ProjectileType<GripRed>();
+			Item.CloneDefaults(ItemID.DualHook);
+            Item.rare = ItemRarityID.Blue;
+            Item.shootSpeed = 12f;
+            Item.shoot = ModContent.ProjectileType<GripRed>();
 		}
+
+        public int hookSwitch = 0;
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
-			for (int l = 0; l < 1000; l++)
-			{
-				if (Main.projectile[l].active && Main.projectile[l].owner == Main.myPlayer && Main.projectile[l].type == ModContent.ProjectileType<GripRed>())
-				{
-					Item.shoot = ModContent.ProjectileType<GripNotRed>();
-				}
-				if (Main.projectile[l].active && Main.projectile[l].owner == Main.myPlayer && Main.projectile[l].type == ModContent.ProjectileType<GripNotRed>())
-				{
-					Item.shoot = ModContent.ProjectileType<GripRed>();
-				}
-			}
-			return true;
+            hookSwitch++;
+            if (hookSwitch == 0)
+                Item.shoot = ModContent.ProjectileType<GripNotRed>();
+            if (hookSwitch == 1)
+                Item.shoot = ModContent.ProjectileType<GripRed>();
+            if (hookSwitch >= 2)
+                hookSwitch = 0;
+            return true;
 		}
 	}
 
@@ -76,11 +76,32 @@ Blue pulls in/retracts quicker");*/
                     hooksOut++;
                 }
             }
+            return hooksOut <= 1;
+        }
+
+        public override void UseGrapple(Player player, ref int type)
+        {
+            int hooksOut = 0;
+            int oldestHookIndex = -1;
+            int oldestHookTimeLeft = 100000;
+            for (int i = 0; i < 1000; i++)
+            {
+                if (Main.projectile[i].active && Main.projectile[i].owner == Projectile.whoAmI && Main.projectile[i].type == Projectile.type)
+                {
+                    hooksOut++;
+                    if (player.ownedProjectileCounts[ModContent.ProjectileType<GripNotRed>()] == 0)
+                        type = ModContent.ProjectileType<GripNotRed>();
+                    if (Main.projectile[i].timeLeft < oldestHookTimeLeft)
+                    {
+                        oldestHookIndex = i;
+                        oldestHookTimeLeft = Main.projectile[i].timeLeft;
+                    }
+                }
+            }
             if (hooksOut > 1)
             {
-                return false;
+                Main.projectile[oldestHookIndex].Kill();
             }
-            return true;
         }
 
         public override float GrappleRange()
@@ -100,7 +121,7 @@ Blue pulls in/retracts quicker");*/
 
         public override void GrapplePullSpeed(Player player, ref float speed)
         {
-            speed = 5;
+            speed = 10;
         }
 
         public override void GrappleTargetPoint(Player player, ref float grappleX, ref float grappleY)
@@ -179,11 +200,32 @@ Blue pulls in/retracts quicker");*/
                     hooksOut++;
                 }
             }
+            return hooksOut <= 1;
+        }
+
+        public override void UseGrapple(Player player, ref int type)
+        {
+            int hooksOut = 0;
+            int oldestHookIndex = -1;
+            int oldestHookTimeLeft = 100000;
+            for (int i = 0; i < 1000; i++)
+            {
+                if (Main.projectile[i].active && Main.projectile[i].owner == Projectile.whoAmI && Main.projectile[i].type == Projectile.type)
+                {
+                    hooksOut++;
+                    if (player.ownedProjectileCounts[ModContent.ProjectileType<GripRed>()] == 0)
+                        type = ModContent.ProjectileType<GripRed>();
+                    if (Main.projectile[i].timeLeft < oldestHookTimeLeft)
+                    {
+                        oldestHookIndex = i;
+                        oldestHookTimeLeft = Main.projectile[i].timeLeft;
+                    }
+                }
+            }
             if (hooksOut > 1)
             {
-                return false;
+                Main.projectile[oldestHookIndex].Kill();
             }
-            return true;
         }
 
         public override float GrappleRange()
@@ -203,7 +245,7 @@ Blue pulls in/retracts quicker");*/
 
         public override void GrapplePullSpeed(Player player, ref float speed)
         {
-            speed = 5;
+            speed = 10;
         }
 
         public override void GrappleTargetPoint(Player player, ref float grappleX, ref float grappleY)

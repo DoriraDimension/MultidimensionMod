@@ -214,8 +214,8 @@ Mods: {
 			}
 
 			GripMinion: {
-				DisplayName: Grip Minion
-				Description: Mods.MultidimensionMod.Buffs.GripMinion.Description
+				DisplayName: Claw Companions
+				Description: Flaming and Damp claws fight for you
 			}
 		}
 
@@ -3748,7 +3748,7 @@ Mods: {
 			IncineriteBar: {
 				DisplayName: Gilded Cinderite Bar
 				Tooltip:
-				    '''
+					'''
 					An ingot forged from molten Cinerite Gold, 
 					it shines and flickers like a dragon's flame dancing across a scorched wasteland.
 					'''
@@ -3757,7 +3757,7 @@ Mods: {
 			BulwarkOfChaos: {
 				DisplayName: Clutched Bulwark
 				Tooltip:
-				    '''
+					'''
 					Allows the player to dash into the enemy
 					Double tap a direction
 					Grappling hooks pull 30% faster

@@ -13,7 +13,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             Main.tileMergeDirt[Type] = true;
             Main.tileLighted[Type] = true;
             Main.tileBlockLight[Type] = true; 
-            AddMapEntry(new Color(20f, 20f, 20f));
+            AddMapEntry(new Color(114, 81, 56));
             DustType = ModContent.DustType<RazewoodDust>();
         }
     }

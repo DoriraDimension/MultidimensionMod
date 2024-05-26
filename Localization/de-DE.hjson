@@ -214,8 +214,8 @@ Mods: {
 			}
 
 			GripMinion: {
-				// DisplayName: Grip Minion
-				// Description: Mods.MultidimensionMod.Buffs.GripMinion.Description
+				// DisplayName: Claw Companions
+				// Description: Flaming and Damp claws fight for you
 			}
 		}
 
@@ -3746,23 +3746,33 @@ Mods: {
 			}
 
 			IncineriteBar: {
-				// DisplayName: Incinerite Bar
-				// Tooltip: ""
+				// DisplayName: Gilded Cinderite Bar
+				/* Tooltip:
+					'''
+					An ingot forged from molten Cinerite Gold, 
+					it shines and flickers like a dragon's flame dancing across a scorched wasteland.
+					''' */
 			}
 
 			BulwarkOfChaos: {
-				// DisplayName: Bulwark Of Chaos
-				// Tooltip: ""
+				// DisplayName: Clutched Bulwark
+				/* Tooltip:
+					'''
+					Allows the player to dash into the enemy
+					Double tap a direction
+					Grappling hooks pull 30% faster
+					Hooks that touch enemies inflict Poisoned and On Fire!
+					''' */
 			}
 
 			GripsOfChaos: {
-				// DisplayName: Grips Of Chaos
-				// Tooltip: ""
+				// DisplayName: Grippling Hook
+				// Tooltip: Switches between shooting a Magmacore and Bogheart grabber hook
 			}
 
 			ClawBaton: {
 				// DisplayName: Claw Baton
-				// Tooltip: ""
+				// Tooltip: Summons chaos claws to fight for you
 			}
 		}
 
