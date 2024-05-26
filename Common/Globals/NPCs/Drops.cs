@@ -35,6 +35,7 @@ namespace MultidimensionMod.Common.Globals.NPCs
             if (NPC.type == NPCID.KingSlime)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RoyalBelt>(), 3));
+                npcLoot.Add(ItemDropRule.Common(ItemID.SlimeStaff, 3));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<KingSlimeSoul>()));
             }
 

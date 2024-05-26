@@ -17,7 +17,7 @@ namespace MultidimensionMod.Biomes
 
         public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => ModContent.GetInstance<DragonHoardBackground>();
 
-        //public override ModWaterStyle WaterStyle => ModContent.GetInstance<HoardStyle>();
+        public override ModWaterStyle WaterStyle => Main.dayTime ? ModContent.GetInstance<DragonWaterStyle>() : ModContent.GetInstance<DragonWaterStyleNight>();
 
         public override void SpecialVisuals(Player player, bool isActive)
         {

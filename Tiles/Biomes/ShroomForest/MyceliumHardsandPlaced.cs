@@ -17,6 +17,7 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             Main.tileBrick[Type] = true;
             Main.tileMerge[Type][ModContent.TileType<MyceliumSandstonePlaced>()] = true;
             Main.tileMerge[Type][ModContent.TileType<MyceliumSandPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<SporeStonePlaced>()] = true;
             Main.tileMerge[Type][TileID.HardenedSand] = true;
             Main.tileMerge[TileID.HardenedSand][Type] = true;
             Main.tileMerge[Type][TileID.CorruptHardenedSand] = true;

@@ -6,7 +6,7 @@ using Terraria.ObjectData;
 
 namespace MultidimensionMod.Tiles.Ores
 {
-    public class IncineriteBar : ModTile
+    public class IncineriteBarPlaced : ModTile
     {
         public override void SetStaticDefaults()
         {

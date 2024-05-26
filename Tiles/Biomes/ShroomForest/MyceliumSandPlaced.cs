@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Items.Placeables.Biomes.ShroomForest;
+using MultidimensionMod.Projectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -19,6 +20,7 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             Main.tileMerge[Type][ModContent.TileType<Mycelium>()] = true;
             Main.tileMerge[ModContent.TileType<Mycelium>()][Type] = true;
             Main.tileMerge[Type][ModContent.TileType<MyceliumSandstonePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<SporeStonePlaced>()] = true;
             Main.tileMerge[ModContent.TileType<MyceliumSandstonePlaced>()][Type] = true;
             Main.tileMerge[Type][ModContent.TileType<MyceliumHardsandPlaced>()] = true;
             Main.tileMerge[ModContent.TileType<MyceliumHardsandPlaced>()][Type] = true;
@@ -77,7 +79,9 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             }
         }
     }
-    public class MyceliumSandBall : ModProjectile
+
+    //Unused due to tmod changes, kept here in case I need it again
+    /*public class MyceliumSandBalls : ModProjectile
     {
         protected bool falling = true;
         protected int tileType;
@@ -200,5 +204,5 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
                 }
             }
         }
-    }
+    }*/
 }

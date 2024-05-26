@@ -1,4 +1,5 @@
 using MultidimensionMod.Items.Placeables.Biomes.Inferno;
+using MultidimensionMod.Projectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -46,7 +47,8 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
         }
     }
 
-    public class TorchsandBall : ModProjectile
+    //Unused due to tmod changes, kept here in case I need it again
+    /*public class TorchsandBalls : ModProjectile
     {
         protected bool falling = true;
         protected int tileType;
@@ -169,5 +171,5 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
                 }
             }
         }
-    }
+    }*/
 }

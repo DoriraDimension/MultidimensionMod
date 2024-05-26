@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Bestiary;
 using Terraria.Localization;
 
 namespace MultidimensionMod.NPCs.Bosses.Grips
@@ -20,6 +21,15 @@ namespace MultidimensionMod.NPCs.Bosses.Grips
             NPC.defense = 15;	
             NPC.buffImmune[BuffID.OnFire] = true;			
 			offsetBasePoint = new Vector2(-240f, 0f);			
+        }
+
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.NightTime,
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.GripHot")
+            });
         }
 
         public override void HitEffect(NPC.HitInfo hit)

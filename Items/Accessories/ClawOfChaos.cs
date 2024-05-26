@@ -24,11 +24,11 @@ namespace MultidimensionMod.Items.Accessories
         }
 		public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.GetModPlayer<MDPlayer>().clawsOfChaos = true;
+			player.GetModPlayer<MDPlayer>().chaosClaw = true;
         }
         public override bool CanEquipAccessory(Player player, int slot, bool modded)
         {
-            /*if (slot < 10)
+            if (slot < 10)
             {
                 int maxAccessoryIndex = 5 + player.extraAccessorySlots;
                 for (int i = 3; i < 3 + maxAccessoryIndex; i++)
@@ -38,7 +38,7 @@ namespace MultidimensionMod.Items.Accessories
                         return false;
                     }
                 }
-            }*/
+            }
             return true;
         }
     }

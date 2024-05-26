@@ -73,7 +73,8 @@ namespace MultidimensionMod.Common.Players
         public bool OrnateVeil = false;
         public Item OrnateBand;
         public int veilReset = 0;
-        public bool clawsOfChaos = false;
+        public bool chaosClaw = false;
+        public bool GripMinion = false;
 
         public override void ResetEffects()
         {
@@ -102,7 +103,8 @@ namespace MultidimensionMod.Common.Players
             TwinPrayer = false;
             DragonsGuard = false;
             OrnateVeil = false;
-            clawsOfChaos = false;
+            chaosClaw = false;
+            GripMinion = false;
         }
 
         public override void UpdateDead()
@@ -572,46 +574,6 @@ namespace MultidimensionMod.Common.Players
                 }
             }
         }
-        public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
-        {
-            //Player player = Main.player[];
-            if (clawsOfChaos) //Jesus christ, fix this :sob:
-            {
-                if (Player.HeldItem.useTime >= 56)
-                {
-                    Player.ApplyDamageToNPC(target, 10, 0, 0, false);
-                }
-                else if (Player.HeldItem.useTime <= 55 && Player.HeldItem.useTime >= 46)
-                {
-                    Player.ApplyDamageToNPC(target, 8, 0, 0, false);
-                }
-                else if (Player.HeldItem.useTime <= 45 && Player.HeldItem.useTime >= 36)
-                {
-                    Player.ApplyDamageToNPC(target, 7, 0, 0, false);
-                }
-                else if (Player.HeldItem.useTime <= 35 && Player.HeldItem.useTime >= 31)
-                {
-                    Player.ApplyDamageToNPC(target, 6, 0, 0, false);
-                }
-                else if (Player.HeldItem.useTime <= 30 && Player.HeldItem.useTime >= 26)
-                {
-                    Player.ApplyDamageToNPC(target, 5, 0, 0, false);
-                }
-                else if (Player.HeldItem.useTime <= 25 && Player.HeldItem.useTime >= 21)
-                {
-                    Player.ApplyDamageToNPC(target, 4, 0, 0, false);
-                }
-                else if (Player.HeldItem.useTime <= 20 && Player.HeldItem.useTime >= 9)
-                {
-                    Player.ApplyDamageToNPC(target, 3, 0, 0, false);
-                }
-                else if (Player.HeldItem.useTime <= 8)
-                {
-                    Player.ApplyDamageToNPC(target, 2, 0, 0, false);
-                }
-            }
-        }
-
 
         public override void GetHealLife(Item item, bool quickHeal, ref int healValue)
         {

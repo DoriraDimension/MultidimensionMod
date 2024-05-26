@@ -8,6 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent;
 using Terraria.Audio;
+using ReLogic.Content;
 
 namespace MultidimensionMod.Projectiles.Melee.Flails
 {
@@ -17,6 +18,8 @@ namespace MultidimensionMod.Projectiles.Melee.Flails
 
         public override void SetStaticDefaults()
         {
+            ProjectileID.Sets.TrailCacheLength[Projectile.type] = 6;
+            ProjectileID.Sets.TrailingMode[Projectile.type] = 2;
         }
 
         public override void SetDefaults()
@@ -27,7 +30,6 @@ namespace MultidimensionMod.Projectiles.Melee.Flails
             Projectile.DamageType = DamageClass.Melee;
             Projectile.tileCollide = true;
             Projectile.timeLeft = 360;
-            Projectile.penetrate = 2;
         }
 
         public override void AI()
@@ -64,11 +66,21 @@ namespace MultidimensionMod.Projectiles.Melee.Flails
 
         public override bool PreDraw(ref Color lightColor)
         {
+            Texture2D projectileTexture = TextureAssets.Projectile[Projectile.type].Value;
+            Vector2 drawOrigin = new Vector2(projectileTexture.Width * 0.5f, Projectile.height * 0.5f);
+            SpriteEffects spriteEffects = Projectile.spriteDirection == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+            for (int k = 0; k < Projectile.oldPos.Length; k++)
+            {
+                Vector2 drawPos = Projectile.oldPos[k] - Main.screenPosition + drawOrigin + new Vector2(0f, Projectile.gfxOffY);
+                Color color = Color.White * ((float)(Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
+                Main.spriteBatch.Draw(projectileTexture, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale - k / (float)Projectile.oldPos.Length / 3, spriteEffects, 0f);
+            }
+
             Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
-            Vector2 drawOrigin = new(texture.Width / 2, texture.Height / 2);
+            Vector2 drawOrigine = new(texture.Width / 2, texture.Height / 2);
             var effects = Projectile.spriteDirection == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
 
-            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(Color.White), Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(Color.White), Projectile.rotation, drawOrigine, Projectile.scale, effects, 0);
             return false;
         }
     }

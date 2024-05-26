@@ -58,9 +58,9 @@ namespace MultidimensionMod.Biomes
             }
             float PlaceBiomeY = e;
 
-            ushort mycelium = (ushort)ModContent.TileType<Mycelium>(), stonePurification = (ushort)TileID.Stone, sand = (ushort)ModContent.TileType<MyceliumSandPlaced>(),
+            ushort mycelium = (ushort)ModContent.TileType<Mycelium>(), sand = (ushort)ModContent.TileType<MyceliumSandPlaced>(),
                 sandstone = (ushort)ModContent.TileType<MyceliumSandstonePlaced>(), hardenedSand = (ushort)ModContent.TileType<MyceliumHardsandPlaced>(), 
-                sandstoneWall = (ushort)ModContent.WallType<MyceliumSandstoneWallPlaced>(), hardenedSandWall = (ushort)ModContent.WallType<MyceliumHardsandWallPlaced>();
+                sporeStone = (ushort)ModContent.TileType<SporeStonePlaced>(), sandstoneWall = (ushort)ModContent.WallType<MyceliumSandstoneWallPlaced>(), hardenedSandWall = (ushort)ModContent.WallType<MyceliumHardsandWallPlaced>();
 
             int biomeRadius = 300;
 
@@ -72,13 +72,6 @@ namespace MultidimensionMod.Biomes
                 new Modifiers.OnlyTiles(new ushort[]{ TileID.Grass, TileID.CrimsonGrass, TileID.CorruptGrass }),
                 new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
                 new SetModTile(mycelium, true, true)
-            }));
-            WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
-            {
-                new InWorld(),
-                new Modifiers.OnlyTiles(new ushort[]{ TileID.Crimstone, TileID.Ebonstone}),
-                new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
-                new SetModTile(stonePurification, true, true)
             }));
             WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
             {
@@ -100,6 +93,13 @@ namespace MultidimensionMod.Biomes
                 new Modifiers.OnlyTiles(new ushort[]{ TileID.Sandstone}),
                 new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
                 new SetModTile(sandstone, true, true)
+            }));
+            WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
+            {
+                new InWorld(),
+                new Modifiers.OnlyTiles(new ushort[]{ TileID.Stone, TileID.Crimstone, TileID.Ebonstone }),
+                new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
+                new SetModTile(sporeStone, true, true)
             }));
             //Walls
             WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]

@@ -7,6 +7,7 @@ using Terraria.ID;
 using Terraria.GameContent.Bestiary;
 using MultidimensionMod.Dusts;
 using Terraria.Audio;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 {
@@ -20,6 +21,17 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             NPCID.Sets.CantTakeLunchMoney[Type] = true;
             NPCID.Sets.NPCBestiaryDrawModifiers value = new(0) { Hide = true };
             NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
+        }
+
+        public override void OnSpawn(IEntitySource source)
+        {
+            for (int m = 0; m < 20; m++)
+            {
+                int dustID = Dust.NewDust(new Vector2(NPC.Center.X - 1, NPC.Center.Y - 1), 2, 2, DustID.ManaRegeneration, 0f, 0f, 100, Color.White, 1.6f);
+                Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(6f, 0f), m / (float)20 * 6.28f);
+                Main.dust[dustID].noLight = false;
+                Main.dust[dustID].noGravity = true;
+            }
         }
 
         public override void SetDefaults()
@@ -95,6 +107,17 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             NPC.netAlways = true;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
+        }
+
+        public override void OnSpawn(IEntitySource source)
+        {
+            for (int m = 0; m < 20; m++)
+            {
+                int dustID = Dust.NewDust(new Vector2(NPC.Center.X - 1, NPC.Center.Y - 1), 2, 2, DustID.ManaRegeneration, 0f, 0f, 100, Color.White, 1.6f);
+                Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(6f, 0f), m / (float)20 * 6.28f);
+                Main.dust[dustID].noLight = false;
+                Main.dust[dustID].noGravity = true;
+            }
         }
 
         public override void AI()

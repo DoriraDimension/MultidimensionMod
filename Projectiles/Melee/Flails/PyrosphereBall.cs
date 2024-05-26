@@ -548,6 +548,11 @@ namespace MultidimensionMod.Projectiles.Melee.Flails
                     Main.spriteBatch.Draw(projectileTexture, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale - k / (float)Projectile.oldPos.Length / 3, spriteEffects, 0f);
                 }
             }
+            Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+            Vector2 drawOrigine = new(texture.Width / 2, texture.Height / 2);
+            var effects = Projectile.spriteDirection == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(Color.White), Projectile.rotation, drawOrigine, Projectile.scale, effects, 0);
             return true;
         }
 

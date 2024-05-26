@@ -46,60 +46,12 @@ namespace MultidimensionMod.Biomes
             if (maxDepth >= 3E+38f && minDepth < 3E+38f)
             {
                 string skyTexture = "InfernoSky";
-                string eyeTexture = "Sun";
+                string sunTexture = "Sun";
                 if (Main.dayTime && player.InModBiome<TheDragonHoard>())
                 {
                     skyTexture = "InfernoSky";
-                    eyeTexture = "Sun";
+                    sunTexture = "Sun";
                     spriteBatch.Draw(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/" + skyTexture).Value, new Rectangle(0, 0, Main.screenWidth, Main.screenHeight), new Color(opacity * opacity, opacity * opacity, opacity * opacity, opacity));
-                }
-
-                if (!Main.dayTime)
-                {
-                    sunAlpha = 0;
-                }
-                else
-                {
-                    if (sunAlpha < 1f)
-                        sunAlpha += 0.05f;
-                    else if (sunAlpha > 1f)
-                        sunAlpha = 1f;
-                    double bgTop = (int)((-Main.screenPosition.Y) / (Main.worldSurface * 16.0 - 600.0) * 200.0);
-                    if (Main.gameMenu || Main.netMode == NetmodeID.Server)
-                    {
-                        bgTop = -200;
-                    }
-                    int num23 = (int)(Main.time / 32400.0 * (Main.screenWidth + TextureAssets.Sun.Value.Width * 2)) - TextureAssets.Sun.Value.Width;
-                    int num24 = 0;
-                    Color white2 = Color.White;
-                    float num25 = 1f;
-                    float rotation2 = (float)(Main.time / 32400.0) * 2f - 7.3f;
-                    if (Main.dayTime)
-                    {
-                        double num27;
-                        if (Main.time < 16200.0)
-                        {
-                            num27 = Math.Pow(1.0 - Main.time / 32400.0 * 2.0, 2.0);
-                            num24 = (int)(bgTop + num27 * 250.0 + 180.0);
-                        }
-                        else
-                        {
-                            num27 = Math.Pow((Main.time / 32400.0 - 0.5) * 2.0, 2.0);
-                            num24 = (int)(bgTop + num27 * 250.0 + 180.0);
-                        }
-                        num25 = (float)(1.2 - num27 * 0.4);
-                    }
-                    float num65 = 1f - Main.cloudAlpha * 1.5f;
-                    if (num65 < 0f)
-                    {
-                        num65 = 0f;
-                    }
-                    white2.R = (byte)(white2.R * num65);
-                    white2.G = (byte)(white2.G * num65);
-                    white2.B = (byte)(white2.B * num65);
-                    white2.A = (byte)(white2.A * num65);
-                    Texture2D sunTexture = ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/" + eyeTexture).Value;
-                    spriteBatch.Draw(sunTexture, new Vector2(num23, num24 + Main.sunModY), new Rectangle?(new Rectangle(0, 0, sunTexture.Width, sunTexture.Width)), white2 * opacity * sunAlpha, rotation2, new Vector2(sunTexture.Width / 2, sunTexture.Width / 2), num25, SpriteEffects.None, 0f);
                 }
             }
         }
