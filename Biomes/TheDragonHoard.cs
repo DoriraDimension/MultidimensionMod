@@ -13,7 +13,7 @@ namespace MultidimensionMod.Biomes
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
 
-        public override int Music => Main.dayTime ? MusicLoader.GetMusicSlot("Sounds/Music/DragonHoardDay") : MusicLoader.GetMusicSlot("DragonHoardNight");
+        public override int Music => Main.dayTime ? MusicLoader.GetMusicSlot(Mod, "Sounds/Music/DragonHoardDay") : MusicLoader.GetMusicSlot(Mod, "Sounds/Music/DragonHoardNight");
 
         public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => ModContent.GetInstance<DragonHoardBackground>();
 

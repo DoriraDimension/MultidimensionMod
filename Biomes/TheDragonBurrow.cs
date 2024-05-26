@@ -13,7 +13,7 @@ namespace MultidimensionMod.Biomes
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
 
-        public override int Music => MusicLoader.GetMusicSlot("Sounds/Music/DragonBurrow");
+        public override int Music => MusicLoader.GetMusicSlot(Mod, "Sounds/Music/DragonBurrow");
 
         public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => ModContent.GetInstance<DragonHoardBackground>();
         public override ModUndergroundBackgroundStyle UndergroundBackgroundStyle => ModContent.GetInstance<DragonBurrowBackground>();

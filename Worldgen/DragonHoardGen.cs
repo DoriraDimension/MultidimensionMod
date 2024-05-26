@@ -222,7 +222,7 @@ namespace MultidimensionMod.Worldgen
 
             //WorldGen.PlaceObject(originCenter.X - 91, originCenter.Y + 18, ModContent.TileType<OrnateBand>(), mute: true);
             //WorldGen.PlaceObject(originCenter.X + 44, originCenter.Y + 308, ModContent.TileType<PagodaBell>(), mute: true);
-            WorldGen.PlaceTile(volcanoPoint.X + 28, volcanoPoint.Y - 323, ModContent.TileType<DragonEgg>(), mute: true);
+            //WorldGen.PlaceTile(volcanoPoint.X + 28, volcanoPoint.Y - 323, ModContent.TileType<DragonEgg>(), mute: true);
             //WorldGen.PlaceObject(originCenter.X + 28, originCenter.Y - 323, ModContent.TileType<SamuraiCorpse>(), mute: true);
             WorldGen.PlaceObject(volcanoPoint.X + 51, volcanoPoint.Y - 298, ModContent.TileType<RazewoodTablePlaced>(), mute: true);
             WorldGen.PlaceObject(volcanoPoint.X + 51, volcanoPoint.Y - 300, ModContent.TileType<DragonEgg>(), mute: true);
