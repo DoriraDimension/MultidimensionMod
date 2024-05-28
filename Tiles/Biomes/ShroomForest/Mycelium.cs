@@ -18,6 +18,8 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             TileID.Sets.SpreadOverground[Type] = true;
             TileID.Sets.SpreadUnderground[Type] = true;
             TileID.Sets.NeedsGrassFraming[Type] = true;
+            TileID.Sets.DoesntPlaceWithTileReplacement[Type] = true;
+            TileID.Sets.Grass[Type] = true;
             TileID.Sets.Conversion.MergesWithDirtInASpecialWay[Type] = true;
             DustType = ModContent.DustType<MushroomDust>();
 			AddMapEntry(new Color(299, 35, 24));

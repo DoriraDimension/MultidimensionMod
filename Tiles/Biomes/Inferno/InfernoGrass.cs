@@ -17,9 +17,11 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             TileID.Sets.NeedsGrassFraming[Type] = true;
             Main.tileMergeDirt[Type] = true;
             Main.tileBlockLight[Type] = true;
+            TileID.Sets.Grass[Type] = true;
+            TileID.Sets.DoesntPlaceWithTileReplacement[Type] = true;
             Main.tileLighted[Type] = true;
             DustType = ModContent.DustType<Dusts.RazeleafDust>();
-            AddMapEntry(new Color(255, 153, 51));
+            AddMapEntry(new Color(105, 90, 58));
         }
 
         public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)

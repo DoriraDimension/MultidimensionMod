@@ -21,7 +21,7 @@ namespace MultidimensionMod.Items.Placeables.Biomes.Inferno
             Item.rare = ItemRarityID.White;
             Item.value = 0;
             Item.consumable = true;
-            Item.createTile = ModContent.TileType<TorchAshPlaced>(); //put your CustomBlock Tile name
+            Item.createTile = ModContent.TileType<TorchAshPlaced>();
         }
 
         public override void SetStaticDefaults()

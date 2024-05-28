@@ -26,6 +26,8 @@ namespace MultidimensionMod.Common.Systems
         public static bool seenInferno;
         public static bool seenVolcano;
         public static bool downedGrips;
+        public static bool seenMire;
+        public static bool seenLake;
 
         public override void OnWorldLoad()
         {
@@ -47,6 +49,8 @@ namespace MultidimensionMod.Common.Systems
             seenInferno = false;
             seenVolcano = false;
             downedGrips = false;
+            seenMire = false;
+            seenLake = false;
         }
 
         public override void OnWorldUnload()
@@ -69,6 +73,8 @@ namespace MultidimensionMod.Common.Systems
             seenInferno = false;
             seenVolcano = false;
             downedGrips = false;
+            seenMire = false;
+            seenLake = false;
         }
 
         public override void SaveWorldData(TagCompound tag)
@@ -111,6 +117,10 @@ namespace MultidimensionMod.Common.Systems
                 downed.Add("seenVolcano");
             if (downedGrips)
                 downed.Add("downedGrips");
+            if (seenMire)
+                downed.Add("seenMire");
+            if (seenLake)
+                downed.Add("seenLake");
 
             tag["downed"] = downed;
         }
@@ -137,6 +147,8 @@ namespace MultidimensionMod.Common.Systems
             seenInferno = downed.Contains("seenInferno");
             seenVolcano = downed.Contains("seenVolcano");
             downedGrips = downed.Contains("downedGrips");
+            seenMire = downed.Contains("seenMire");
+            seenLake = downed.Contains("seenLake");
         }
 
         public override void NetSend(BinaryWriter writer)
@@ -166,6 +178,8 @@ namespace MultidimensionMod.Common.Systems
             var flags3 = new BitsByte();
             flags3[0] = seenVolcano;
             flags3[1] = downedGrips;
+            flags3[2] = seenMire;
+            flags3[3] = seenLake;
         }
 
         public override void NetReceive(BinaryReader reader)
@@ -193,6 +207,8 @@ namespace MultidimensionMod.Common.Systems
             BitsByte flags3 = reader.ReadByte();
             seenVolcano = flags3[0];
             downedGrips = flags3[1];
+            seenMire = flags3[2];
+            seenLake = flags3[3];
         }
     }
 }

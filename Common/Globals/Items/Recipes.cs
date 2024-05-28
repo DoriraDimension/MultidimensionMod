@@ -150,10 +150,10 @@ namespace MultidimensionMod.Common.Globals.Items
 			cloak.AddIngredient(ItemID.SoulofLight, 3);
 			cloak.AddTile(TileID.Loom);
 			cloak.Register();
-			#endregion
+            #endregion
 
             #region Ankh Charm Mats
-			Recipe bandage = Recipe.Create(ItemID.AdhesiveBandage);
+            Recipe bandage = Recipe.Create(ItemID.AdhesiveBandage);
 			bandage.AddIngredient(ItemID.Silk,10);
 			bandage.AddIngredient(ItemID.AncientCloth, 3);
 			bandage.AddIngredient(ItemID.Gel, 5);
@@ -1105,6 +1105,16 @@ namespace MultidimensionMod.Common.Globals.Items
             red.AddIngredient(ModContent.ItemType<Red>(), 2);
             red.AddTile(TileID.Bottles);
             red.Register();
+            #endregion
+
+            #region Music Boxes
+            Recipe box = Recipe.Create(ItemID.MusicBox);
+            box.AddRecipeGroup(RecipeGroupID.Wood, 20);
+            box.AddRecipeGroup(RecipeGroupID.IronBar, 7);
+            box.AddTile(TileID.WorkBenches);
+            box.Register();
+
+
             #endregion
         }
 

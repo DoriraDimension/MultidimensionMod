@@ -1,6 +1,6 @@
 ﻿using Terraria.ModLoader;
 
-namespace MultidimensionMod.Biomes
+namespace MultidimensionMod.Backgrounds
 {
     public class DragonBurrowBackground : ModUndergroundBackgroundStyle
     {

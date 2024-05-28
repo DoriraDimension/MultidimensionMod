@@ -25,6 +25,16 @@ Mods: {
 				DisplayName: The Dragon Burrow
 				TownNPCDialogueName: the The Dragon Burrow
 			}
+
+			TheShroudedMire: {
+				DisplayName: The Shrouded Mire
+				TownNPCDialogueName: the The Shrouded Mire
+			}
+
+			TheLakeDepths: {
+				DisplayName: The Lake Depths
+				TownNPCDialogueName: the The Lake Depths
+			}
 		}
 
 		Buffs: {
@@ -3513,7 +3523,11 @@ Mods: {
 
 			Hotshroom: {
 				DisplayName: Solar Mushroom
-				Tooltip: ""
+				Tooltip:
+					'''
+					A orange mushroom with hardened protrusions on its cap
+					Filled with boiling juices
+					'''
 			}
 
 			Incinerite: {
@@ -3746,10 +3760,10 @@ Mods: {
 			}
 
 			IncineriteBar: {
-				DisplayName: Gilded Cinderite Bar
+				DisplayName: Gilded Cinderite Alloy
 				Tooltip:
 					'''
-					An ingot forged from molten Cinerite Gold, 
+					A bar forged from molten Cinderite Gold, 
 					it shines and flickers like a dragon's flame dancing across a scorched wasteland.
 					'''
 			}
@@ -3773,6 +3787,103 @@ Mods: {
 			ClawBaton: {
 				DisplayName: Claw Baton
 				Tooltip: Summons chaos claws to fight for you
+			}
+
+			AbyssiumBar: {
+				DisplayName: Deepmoon Alloy
+				Tooltip:
+					'''
+					A bar forged from Dreadsoil Ore, the heat of the forge has caused it to harden.
+					It pulses with an eerie energy, like the hidden presence lurking in the murky waters.
+					'''
+			}
+
+			Abyssium: {
+				DisplayName: Dreadsoil Ore
+				Tooltip:
+					'''
+					An especially soft metal covered in muck only found in the Shrouded Mire,
+					it seems to have been fused with biomatter over time.
+					It is in some parts known as "Cursed Earth".
+					'''
+			}
+
+			Darkshroom: {
+				DisplayName: Lunar Mushroom
+				Tooltip:
+					'''
+					A dark purple mushroom only found in the damp mist shrouded swamp
+					It contains unique toxins not found anywhere else
+					'''
+			}
+
+			Bogwood: {
+				DisplayName: Bogwood
+				Tooltip: Dark blue wood that absorbs mist from the air
+			}
+
+			Darkmud: {
+				DisplayName: Veiled Mud
+				Tooltip: Swamp mud that has gone through a drastic change, turning it pale gray
+			}
+
+			IndigoIce: {
+				DisplayName: Moonstruck Kyanite
+				Tooltip:
+					'''
+					Unique crystal that has formed within the freezing depths of a swampy tundra
+					It pulses with a subtle eerie power
+					'''
+			}
+
+			Depthstone: {
+				Tooltip: ""
+				DisplayName: Depthstone
+			}
+
+			Depthsandstone: {
+				Tooltip: ""
+				DisplayName: Mudsandstone
+			}
+
+			DepthsandHardened: {
+				Tooltip: ""
+				DisplayName: Hardened Mudsand
+			}
+
+			Depthsand: {
+				Tooltip: ""
+				DisplayName: Mudsand
+			}
+
+			MireBox: {
+				DisplayName: Music Box (Shrouded Mire Night)
+				Tooltip: ""
+			}
+
+			MireDayBox: {
+				DisplayName: Music Box (Shrouded Mire Day)
+				Tooltip: ""
+			}
+
+			MireUBox: {
+				DisplayName: Music Box (Lake Depths)
+				Tooltip: ""
+			}
+
+			Permafrost: {
+				DisplayName: Permafrost
+				Tooltip: Snow covered mud that has been frozen solid for years
+			}
+
+			InfernoSeeds: {
+				DisplayName: Scorched Seeds
+				Tooltip: Plants Ashen Grass on dirt
+			}
+
+			MireSeeds: {
+				DisplayName: Moonlit Seeds
+				Tooltip: Plants Lunarmoss Grass on dirt
 			}
 		}
 
@@ -4025,6 +4136,8 @@ Mods: {
 			ClawBatonHoldout.DisplayName: Claw Baton Holdout
 			DragonClaw.DisplayName: Dragon Claw
 			HydraClaw.DisplayName: Hydra Claw
+			DepthsandBallGun.DisplayName: Depthsand
+			DepthsandBall.DisplayName: Depthsand
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -4361,6 +4474,10 @@ Mods: {
 			InfernoUBoxPlaced.MapEntry: Music Box
 			IncineriteOre.MapEntry: Cinderite Gold
 			KingsCapPlaced.MapEntry: Alarmshroom
+			AbyssiumOrePlaced.MapEntry: Dreadsoil Ore
+			MireBoxPlaced.MapEntry: Music Box
+			MireDayBoxPlaced.MapEntry: Music Box
+			MireUBoxPlaced.MapEntry: Music Box
 		}
 
 		DeathMessages: {
@@ -4555,6 +4672,11 @@ Mods: {
 				}
 
 				Mire: {
+					Title: Devouring Swamp
+					Name: The Shrouded Mire
+				}
+
+				MireUG: {
 					Title: Beast's Den
 					Name: The Lake Depths
 				}

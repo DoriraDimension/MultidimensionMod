@@ -1,7 +1,9 @@
 ﻿using MultidimensionMod.Tiles.Biomes.ShroomForest;
 using MultidimensionMod.Tiles.Biomes.Inferno;
+using MultidimensionMod.Tiles.Biomes.Mire;
 using MultidimensionMod.Items.Placeables.Biomes.Inferno;
 using MultidimensionMod.Items.Placeables.Biomes.ShroomForest;
+using MultidimensionMod.Items.Placeables.Biomes.Mire;
 using System;
 using Terraria;
 using Terraria.ID;
@@ -80,7 +82,41 @@ namespace MultidimensionMod.Projectiles
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            ProjectileID.Sets.FallingBlockTileItem[Type] = new(ModContent.TileType<MyceliumSandPlaced>());
+            ProjectileID.Sets.FallingBlockTileItem[Type] = new(ModContent.TileType<TorchsandPlaced>());
+        }
+
+        public override void SetDefaults()
+        {
+            // The sandgun projectile when compared to the falling projectile has a ranged damage type, isn't hostile, and has extraupdates = 1.
+            // Note that EbonsandBallGun has infinite penetration, unlike SandBallGun
+            Projectile.CloneDefaults(ProjectileID.EbonsandBallGun);
+            AIType = ProjectileID.EbonsandBallGun; // This is needed for some logic in the ProjAIStyleID.FallingTile code.
+        }
+    }
+
+    public class DepthsandBall : SandBall
+    {
+        public override string Texture => "MultidimensionMod/Tiles/Biomes/Mire/DepthsandBall";
+        public override void SetStaticDefaults()
+        {
+            base.SetStaticDefaults();
+            ProjectileID.Sets.FallingBlockTileItem[Type] = new(ModContent.TileType<DepthsandPlaced>(), ModContent.ItemType<Depthsand>());
+        }
+
+        public override void SetDefaults()
+        {
+            // The falling projectile when compared to the sandgun projectile is hostile.
+            Projectile.CloneDefaults(ProjectileID.EbonsandBallFalling);
+        }
+    }
+
+    public class DepthsandBallGun : SandBall
+    {
+        public override string Texture => "MultidimensionMod/Tiles/Biomes/Mire/DepthsandBall";
+        public override void SetStaticDefaults()
+        {
+            base.SetStaticDefaults();
+            ProjectileID.Sets.FallingBlockTileItem[Type] = new(ModContent.TileType<DepthsandPlaced>());
         }
 
         public override void SetDefaults()

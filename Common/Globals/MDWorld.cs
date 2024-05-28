@@ -51,6 +51,7 @@ namespace MultidimensionMod.Common.Globals
                 }
             }
             #endregion
+            #region Title cards
             if (ModContent.GetInstance<MDConfig>().ALTitleCards)
             {
                 if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()) & !DownedSystem.seenFU)
@@ -93,7 +94,18 @@ namespace MultidimensionMod.Common.Globals
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.InfernoUG.Name"), 90, 120, 1.6f, 0, Color.OrangeRed, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.InfernoUG.Title"));
                     NPC.SetEventFlagCleared(ref DownedSystem.seenVolcano, -1);
                 }
+                if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheShroudedMire>()) & !DownedSystem.seenMire)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Mire.Name"), 90, 120, 1.6f, 0, Color.CornflowerBlue, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Mire.Title"));
+                    NPC.SetEventFlagCleared(ref DownedSystem.seenMire, -1);
+                }
+                if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheLakeDepths>()) & /*Framing.GetTileSafely(player.Center.ToTileCoordinates()).WallType == ModContent.WallType<VolcanicRockWallPlaced>() &*/ !DownedSystem.seenLake)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.MireUG.Name"), 90, 120, 1.6f, 0, Color.CornflowerBlue, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.MireUG.Title"));
+                    NPC.SetEventFlagCleared(ref DownedSystem.seenLake, -1);
+                }
             }
+            #endregion
             #region Night of Madness
             if (!Main.fastForwardTimeToDawn && !Main.fastForwardTimeToDusk)
             {
