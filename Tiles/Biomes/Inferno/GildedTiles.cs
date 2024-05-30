@@ -14,14 +14,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             Main.tileMerge[Type][ModContent.TileType<PagodaColumnPlaced>()] = true;
             Main.tileMerge[Type][ModContent.TileType<PagodaBrickPlaced>()] = true;
             AddMapEntry(new Color(153, 50, 0));
-        }
-        public override bool CanKillTile(int i, int j, ref bool blockDamaged)
-        {
-            if (NPC.downedMoonlord/*AAWorld.downedShen*/)
-            {
-                return true;
-            }
-            return false;
+            MinPick = 210;
         }
 
         public override bool CanExplode(int i, int j)

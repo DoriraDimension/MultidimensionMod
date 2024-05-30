@@ -17,14 +17,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             Main.tileBlendAll[Type] = false;
             Main.tileBlockLight[Type] = true;
             AddMapEntry(new Color(153, 100, 0));
-        }
-        public override bool CanKillTile(int i, int j, ref bool blockDamaged)
-        {
-            if (NPC.downedMoonlord/*DownedSystem.downedShen*/)
-            {
-                return true;
-            }
-            return false;
+            MinPick = 210;
         }
 
         public override bool CanExplode(int i, int j)

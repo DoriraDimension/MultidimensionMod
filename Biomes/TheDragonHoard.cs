@@ -62,6 +62,7 @@ namespace MultidimensionMod.Biomes
                 + tileCounts[ModContent.TileType<TorchsandHardenedPlaced>()]
                 + tileCounts[ModContent.TileType<TorchsandPlaced>()]
                 + tileCounts[ModContent.TileType<TorchsandstonePlaced>()]
+                + tileCounts[ModContent.TileType<VolcanicRockPlaced>()]
                 + tileCounts[ModContent.TileType<TorchstonePlaced>()];
         }
     }

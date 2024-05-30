@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using MultidimensionMod.Tiles.Biomes.Inferno;
+using MultidimensionMod.Tiles.Ores;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -14,6 +15,16 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
         {
             Main.tileSolid[Type] = true;
             TileID.Sets.Conversion.Grass[Type] = true;
+            Main.tileMerge[Type][ModContent.TileType<AbyssiumOrePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthsandPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthsandstonePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthsandHardenedPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<PermafrostPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthIce>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthstonePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<MireGrass>()] = true;
+            Main.tileMerge[TileID.Mud][Type] = true;
+            Main.tileMerge[Type][TileID.Mud] = true;
             Main.tileBlendAll[Type] = true;
             Main.tileMergeDirt[Type] = true;
             Main.tileBlockLight[Type] = true;
@@ -22,6 +33,12 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             DustType = ModContent.DustType<Dusts.AbyssiumDust>();
             HitSound = SoundID.Tink;
             AddMapEntry(new Color(0, 50, 140));
+            MinPick = 210;
+        }
+
+        public override bool CanExplode(int i, int j)
+        {
+            return false;
         }
 
         public override void RandomUpdate(int i, int j)
@@ -35,7 +52,7 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             if (Main.rand.NextBool(1500))
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<HotshroomPlaced>(), mute: true);
-                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<HotshroomPlaced>(), 0, 0, -1, -1);
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<DarkshroomPlaced>(), 0, 0, -1, -1);
 
             }
         }

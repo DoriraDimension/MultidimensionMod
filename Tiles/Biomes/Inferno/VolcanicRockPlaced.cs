@@ -23,16 +23,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             HitSound = SoundID.Tink;
             DustType = ModContent.DustType<RazewoodDust>();
             AddMapEntry(new Color(50, 25, 12));
-            MinPick = 59;
-        }
-
-        public override bool CanKillTile(int i, int j, ref bool blockDamaged)
-        {
-            if (NPC.downedMoonlord/*DownedSystem.downedShen*/)
-            {
-                return true;
-            }
-            return false;
+            MinPick = 210;
         }
 
         public override bool CanExplode(int i, int j)

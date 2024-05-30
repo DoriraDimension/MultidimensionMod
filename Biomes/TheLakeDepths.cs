@@ -17,7 +17,7 @@ namespace MultidimensionMod.Biomes
         public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => ModContent.GetInstance<ShroudedMireBackground>();
         public override ModUndergroundBackgroundStyle UndergroundBackgroundStyle => ModContent.GetInstance<LakeDepthsBackground>();
 
-        //public override ModWaterStyle WaterStyle => ModContent.GetInstance<MireWaterStyle>();
+        public override ModWaterStyle WaterStyle => ModContent.GetInstance<LakeWaterStyle>();
 
         public override void SpecialVisuals(Player player, bool isActive)
         {
@@ -54,11 +54,14 @@ namespace MultidimensionMod.Biomes
         public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
         {
             LDCount = tileCounts[ModContent.TileType<MireGrass>()]
-                //+ tileCounts[ModContent.TileType<TorchAshPlaced>()]
+                + tileCounts[ModContent.TileType<PermafrostPlaced>()]
+                + tileCounts[ModContent.TileType<DepthIce>()]
                 + tileCounts[ModContent.TileType<DepthMoss>()]
                 + tileCounts[ModContent.TileType<DepthsandHardenedPlaced>()]
                 + tileCounts[ModContent.TileType<DepthsandPlaced>()]
                 + tileCounts[ModContent.TileType<DepthsandstonePlaced>()]
+                + tileCounts[ModContent.TileType<DepthMoss>()]
+                + tileCounts[ModContent.TileType<DankDepthstonePlaced>()]
                 + tileCounts[ModContent.TileType<DepthstonePlaced>()];
         }
     }

@@ -62,7 +62,7 @@ namespace MultidimensionMod.Biomes
                 sandstone = (ushort)ModContent.TileType<MyceliumSandstonePlaced>(), hardenedSand = (ushort)ModContent.TileType<MyceliumHardsandPlaced>(), 
                 sporeStone = (ushort)ModContent.TileType<SporeStonePlaced>(), sandstoneWall = (ushort)ModContent.WallType<MyceliumSandstoneWallPlaced>(), hardenedSandWall = (ushort)ModContent.WallType<MyceliumHardsandWallPlaced>();
 
-            int biomeRadius = 300;
+            int biomeRadius = 280;
 
             Point originCenter = new((int)PlaceBiomeX, (int)PlaceBiomeY);
             // TILE CONVERSIONS

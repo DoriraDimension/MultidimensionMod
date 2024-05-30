@@ -1,4 +1,4 @@
-using System;
+using MultidimensionMod.Tiles.Ores;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria;
@@ -11,6 +11,16 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
     {
         public override void SetStaticDefaults()
         {
+            Main.tileMerge[Type][ModContent.TileType<AbyssiumOrePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthsandPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthsandstonePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthsandHardenedPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<PermafrostPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthIce>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthstonePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<MireGrass>()] = true;
+            Main.tileMerge[TileID.Mud][Type] = true;
+            Main.tileMerge[Type][TileID.Mud] = true;
             Main.tileSolid[Type] = true;
             Main.tileMergeDirt[Type] = true;
             Main.tileBrick[Type] = true;

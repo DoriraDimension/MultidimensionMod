@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 using MultidimensionMod.Tiles.Biomes.Inferno;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using MultidimensionMod.Tiles.Ores;
 
 namespace MultidimensionMod.Tiles.Biomes.Mire
 {
@@ -22,6 +23,16 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             Main.tileMergeDirt[Type] = true;
             TileID.Sets.Grass[Type] = true;
             Main.tileBlockLight[Type] = true;
+            Main.tileMerge[Type][ModContent.TileType<AbyssiumOrePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthsandPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthsandstonePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthsandHardenedPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<PermafrostPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthIce>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthstonePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<MireGrass>()] = true;
+            Main.tileMerge[TileID.Mud][Type] = true;
+            Main.tileMerge[Type][TileID.Mud] = true;
             TileID.Sets.DoesntPlaceWithTileReplacement[Type] = true;
             TileID.Sets.NeedsGrassFraming[Type] = true;
             TileID.Sets.JungleSpecial[Type] = true;
@@ -43,7 +54,7 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             if (Main.rand.NextBool(1500))
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<HotshroomPlaced>(), mute: true);
-                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<HotshroomPlaced>(), 0, 0, -1, -1);
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<DarkshroomPlaced>(), 0, 0, -1, -1);
 
             }
             /*if (Main.rand.NextBool(1500))

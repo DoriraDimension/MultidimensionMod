@@ -99,7 +99,7 @@ namespace MultidimensionMod.Common.Globals
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Mire.Name"), 90, 120, 1.6f, 0, Color.CornflowerBlue, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Mire.Title"));
                     NPC.SetEventFlagCleared(ref DownedSystem.seenMire, -1);
                 }
-                if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheLakeDepths>()) & /*Framing.GetTileSafely(player.Center.ToTileCoordinates()).WallType == ModContent.WallType<VolcanicRockWallPlaced>() &*/ !DownedSystem.seenLake)
+                if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheLakeDepths>()) & Framing.GetTileSafely(player.Center.ToTileCoordinates()).WallType == ModContent.WallType<DankDepthstoneWallPlaced>() & !DownedSystem.seenLake)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.MireUG.Name"), 90, 120, 1.6f, 0, Color.CornflowerBlue, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.MireUG.Title"));
                     NPC.SetEventFlagCleared(ref DownedSystem.seenLake, -1);

@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using MultidimensionMod.Tiles.Ores;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -11,7 +12,16 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
 
 		public override void SetStaticDefaults()
 		{
-			Main.tileSolid[Type] = true;
+            Main.tileMerge[Type][ModContent.TileType<AbyssiumOrePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthsandPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthsandstonePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthsandHardenedPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<PermafrostPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthIce>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthstonePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<MireGrass>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DarkmudPlaced>()] = true;
+            Main.tileSolid[Type] = true;
             Main.tileBlockLight[Type] = true;
 			Main.tileBlendAll[Type] = true;
             Main.tileMerge[TileID.Mud][Type] = true;
@@ -19,11 +29,7 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             TileID.Sets.JungleSpecial[Type] = true;
             DustType = ModContent.DustType<Dusts.YamataADust>();
 			AddMapEntry(new Color(100, 0, 30));
-		}
-
-        public override bool CanKillTile(int i, int j, ref bool blockDamaged)
-        {
-            return false;
+            MinPick = 210;
         }
 
         public override bool CanExplode(int i, int j)

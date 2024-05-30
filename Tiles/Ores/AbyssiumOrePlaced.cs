@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using ReLogic.Content;
+using MultidimensionMod.Tiles.Biomes.Mire;
 
 namespace MultidimensionMod.Tiles.Ores
 {
@@ -19,9 +20,18 @@ namespace MultidimensionMod.Tiles.Ores
 			Main.tileMergeDirt[Type] = true;
             Main.tileOreFinderPriority[Type] = 330; 
             Main.tileSpelunker[Type] = true;
-            //Main.tileMerge[Type][mod.TileType("Depthstone")] = true;
+            Main.tileMerge[Type][ModContent.TileType<DenseBiomatterPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthsandPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DankDepthstonePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthsandstonePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthsandHardenedPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<PermafrostPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthIce>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DepthstonePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<MireGrass>()] = true;
             Main.tileBlockLight[Type] = true;
             Main.tileMerge[TileID.Mud][Type] = true;
+            Main.tileMerge[Type][TileID.Mud] = true;
             TileID.Sets.JungleSpecial[Type] = true;
             HitSound = SoundID.Tink;
             Main.tileLighted[Type] = true; 

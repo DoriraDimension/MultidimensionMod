@@ -17,7 +17,7 @@ namespace MultidimensionMod.Biomes
 
         public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => ModContent.GetInstance<ShroudedMireBackground>();
 
-        //public override ModWaterStyle WaterStyle => Main.dayTime ? ModContent.GetInstance<MireWaterStyle>() : ModContent.GetInstance<MireWaterStyleNight>();
+        public override ModWaterStyle WaterStyle => ModContent.GetInstance<MireWaterStyle>();
 
         public override void SpecialVisuals(Player player, bool isActive)
         {
@@ -52,11 +52,15 @@ namespace MultidimensionMod.Biomes
         public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
         {
             SMCount = tileCounts[ModContent.TileType<MireGrass>()]
-                //+ tileCounts[ModContent.TileType<TorchAshPlaced>()]
                 + tileCounts[ModContent.TileType<DepthMoss>()]
                 + tileCounts[ModContent.TileType<DepthsandHardenedPlaced>()]
                 + tileCounts[ModContent.TileType<DepthsandPlaced>()]
                 + tileCounts[ModContent.TileType<DepthsandstonePlaced>()]
+                + tileCounts[ModContent.TileType<PermafrostPlaced>()]
+                + tileCounts[ModContent.TileType<DepthIce>()]
+                + tileCounts[ModContent.TileType<AbyssGrass>()]
+                + tileCounts[ModContent.TileType<DarkmudPlaced>()]
+                + tileCounts[ModContent.TileType<DankDepthstonePlaced>()]
                 + tileCounts[ModContent.TileType<DepthstonePlaced>()];
         }
     }
