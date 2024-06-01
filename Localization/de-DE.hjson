@@ -3885,6 +3885,51 @@ Mods: {
 				// DisplayName: Moonlit Seeds
 				// Tooltip: Plants Lunarmoss Grass on dirt
 			}
+
+			VoidBox: {
+				// DisplayName: Music Box (Void's Edge)
+				// Tooltip: ""
+			}
+
+			VolcanicRock: {
+				// DisplayName: Volcanic Rock
+				// Tooltip: ""
+			}
+
+			DankDepthstone: {
+				// DisplayName: Dank Depthstone
+				// Tooltip: ""
+			}
+
+			ShadowBand: {
+				// DisplayName: Murkwater Bands
+				// Tooltip: Increases movement speed by 25%, jump height by 50 and jump speed by 35% when underwater
+				/* Lore:
+					'''
+					Armbands once worn by those skilled enough to be considered a pro spear fisher.
+					It was seen as a symbol of pride and respect and trying to create replicas was met with punishment.
+					''' */
+			}
+
+			BogwoodBeam: {
+				// DisplayName: Bogwood Beam
+				// Tooltip: ""
+			}
+
+			BogwoodFence: {
+				// DisplayName: Bogwood Fence
+				// Tooltip: ""
+			}
+
+			RazewoodBeam: {
+				// DisplayName: Razewood Beam
+				// Tooltip: ""
+			}
+
+			RazewoodFence: {
+				// DisplayName: Razewood Fence
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -4478,6 +4523,7 @@ Mods: {
 			// MireBoxPlaced.MapEntry: Music Box
 			// MireDayBoxPlaced.MapEntry: Music Box
 			// MireUBoxPlaced.MapEntry: Music Box
+			// VoidBoxPlaced.MapEntry: Void Box Placed
 		}
 
 		DeathMessages: {
@@ -4854,6 +4900,8 @@ Mods: {
 				}
 			}
 		}
+
+		// VanillaTooltipEdits.DraxDenseBlockTip: Is capable of mining Dense Volcanic Rock and Dense Biomatter
 
 		MiscText: {
 			// MadnessStart: You feel your mind pierced...

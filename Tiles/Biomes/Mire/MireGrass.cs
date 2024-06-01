@@ -53,7 +53,7 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             }
             if (Main.rand.NextBool(1500))
             {
-                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<HotshroomPlaced>(), mute: true);
+                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<DarkshroomPlaced>(), mute: true);
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<DarkshroomPlaced>(), 0, 0, -1, -1);
 
             }

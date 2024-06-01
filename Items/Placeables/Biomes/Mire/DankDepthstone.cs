@@ -4,7 +4,7 @@ using Terraria.ID;
 
 namespace MultidimensionMod.Items.Placeables.Biomes.Mire
 {
-    class Bogwood : ModItem
+    public class DankDepthstone : ModItem
     {
         public override void SetDefaults()
         {
@@ -18,16 +18,14 @@ namespace MultidimensionMod.Items.Placeables.Biomes.Mire
             Item.useTime = 10;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
-            Item.createTile = ModContent.TileType<BogwoodPlaced>(); //put your CustomBlock Tile name
-            Item.ammo = Item.type;
-            Item.notAmmo = true;
-            Item.rare = ItemRarityID.White;
+            Item.rare = ItemRarityID.Lime;
+            Item.createTile = ModContent.TileType<DankDepthstonePlaced>();
         }
 
         public override void SetStaticDefaults()
         {
-            //DisplayName.SetDefault("Bogwood");
-            //Tooltip.SetDefault("");
+            //DisplayName.SetDefault("Depthstone");
+            //Tooltip.SetDefault("Dank");
         }
     }
 }

@@ -148,6 +148,13 @@ namespace MultidimensionMod.Worldgen
                 new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
                 new PlaceModWall(SandstoneWall, true)
             }));
+            WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
+            {
+                new InWorld(),
+                new Modifiers.OnlyWalls(new ushort[]{ WallID.Stone, WallID.CrimstoneUnsafe, WallID.EbonstoneUnsafe }),
+                new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
+                new PlaceModWall(StoneWall, true)
+            }));
 
             Dictionary<Color, int> colorToTile = new Dictionary<Color, int>
             {

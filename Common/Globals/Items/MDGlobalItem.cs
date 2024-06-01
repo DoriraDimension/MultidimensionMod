@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Localization;
+using Microsoft.Xna.Framework;
 
 namespace MultidimensionMod.Common.Globals.Items
 {
@@ -102,5 +104,17 @@ namespace MultidimensionMod.Common.Globals.Items
             }
 			return true;
         }
-	}
+
+        public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
+        {
+            if (item.type == ItemID.PickaxeAxe || item.type == ItemID.Drax)
+            {
+                TooltipLine line = new(Mod, "Locked", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.DraxDenseBlockTip"))
+                {
+                    OverrideColor = Color.White
+                };
+                tooltips.Add(line);
+            }
+        }
+    }
 }

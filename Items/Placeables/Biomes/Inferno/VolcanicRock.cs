@@ -1,11 +1,11 @@
-using MultidimensionMod.Tiles.Biomes.Inferno;
+﻿using MultidimensionMod.Tiles.Biomes.Inferno;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 
 namespace MultidimensionMod.Items.Placeables.Biomes.Inferno
 {
-    public class Torchstone : ModItem
+    public class VolcanicRock : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -24,9 +24,9 @@ namespace MultidimensionMod.Items.Placeables.Biomes.Inferno
             Item.useAnimation = 15;
             Item.useTime = 10;
             Item.useStyle = 1;
-            Item.rare = ItemRarityID.Green;
+            Item.rare = ItemRarityID.Lime;
             Item.consumable = true;
-            Item.createTile = ModContent.TileType<TorchstonePlaced>();
+            Item.createTile = ModContent.TileType<VolcanicRockPlaced>();
         }
     }
 }
