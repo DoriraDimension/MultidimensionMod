@@ -246,6 +246,10 @@ namespace MultidimensionMod
             if (spawnInfo.Player.InModBiome<TheShroudedMire>())
 			{
                 pool.Clear();
+				if (!Main.dayTime)
+				{
+                    pool.Add(ModContent.NPCType<MireSkulker>(), .5f);
+                }
             }
             if (spawnInfo.Player.InModBiome<TheLakeDepths>())
 			{

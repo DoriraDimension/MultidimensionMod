@@ -1,5 +1,8 @@
 using MultidimensionMod.Common.ItemDropRules.DropConditions;
 using MultidimensionMod.Common.Systems;
+using MultidimensionMod.Items.Accessories;
+using MultidimensionMod.Items.Hooks;
+using MultidimensionMod.Items.Weapons.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,6 +10,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Bestiary;
 using Terraria.Localization;
+using Terraria.GameContent.ItemDropRules;
 
 namespace MultidimensionMod.NPCs.Bosses.Grips
 {
@@ -65,9 +69,9 @@ namespace MultidimensionMod.NPCs.Bosses.Grips
 
         public override void ModifyNPCLoot(NPCLoot NPCloot)
         {
-            //NPCloot.Add(ItemDropRule.ByCondition(new MissingGripCondition(), ModContent.ItemType<ClawOfChaos>()));
-            //NPCloot.Add(ItemDropRule.ByCondition(new MissingGripCondition(), ModContent.ItemType<GripsOfChaos>(), 2));
-            //NPCloot.Add(ItemDropRule.ByCondition(new MissingGripCondition(), ModContent.ItemType<ClawBaton>(), 3));
+            NPCloot.Add(ItemDropRule.ByCondition(new MissingGripCondition(), ModContent.ItemType<ClawOfChaos>()));
+            NPCloot.Add(ItemDropRule.ByCondition(new MissingGripCondition(), ModContent.ItemType<GripsOfChaos>(), 2));
+            NPCloot.Add(ItemDropRule.ByCondition(new MissingGripCondition(), ModContent.ItemType<ClawBaton>(), 3));
             //NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<GripsRelic>()));
             //NPCloot.Add(ItemDropRule.ByCondition(new MissingGripCondition(), ModContent.ItemType<GripTrophyRed>(), 10));
             //NPCloot.Add(ItemDropRule.ByCondition(new MissingGripCondition(), ModContent.ItemType<HandSoul>()));

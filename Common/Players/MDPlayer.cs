@@ -75,6 +75,7 @@ namespace MultidimensionMod.Common.Players
         public int veilReset = 0;
         public bool chaosClaw = false;
         public bool GripMinion = false;
+        public bool SkulkerShell = false;
 
         public override void ResetEffects()
         {
@@ -105,6 +106,7 @@ namespace MultidimensionMod.Common.Players
             OrnateVeil = false;
             chaosClaw = false;
             GripMinion = false;
+            SkulkerShell = false;
         }
 
         public override void UpdateDead()
@@ -545,6 +547,26 @@ namespace MultidimensionMod.Common.Players
                 if (Main.rand.NextBool(10))
                 {
                     Item.NewItem(target.GetSource_Loot(), target.getRect(), ItemID.Heart, noGrabDelay: true);
+                }
+            }
+        }
+
+        public override void ModifyHitByProjectile(Projectile proj, ref Player.HurtModifiers modifiers)
+        {
+            if (Main.rand.NextBool(10))
+            {
+                if (ALLists.ReflectionExceptions.TrueForAll(x => proj.type != x) && proj.active && !proj.friendly && proj.hostile && proj.damage > 0)
+                {
+                    if (SkulkerShell)
+                    {
+                        proj.hostile = false;
+                        proj.friendly = true;
+                        proj.velocity *= -0.5f;
+                        proj.extraUpdates += 1;
+                        proj.penetrate = 1;
+                        modifiers.SetMaxDamage(proj.damage / 2);
+                        return;
+                    }
                 }
             }
         }

@@ -3933,7 +3933,17 @@ Mods: {
 
 			DarkdrifterItem: {
 				// Tooltip: ""
-				// DisplayName: Darkdrifter Item
+				// DisplayName: Darkdrifter
+			}
+
+			SkulkerShell: {
+				// DisplayName: Skulker Shell
+				/* Tooltip:
+					'''
+					Decreases movement speed by 10%
+					Has a 10% chance to reflect a projectile
+					The reflected projectile only deals half its normal damage to you
+					''' */
 			}
 		}
 
@@ -4350,6 +4360,8 @@ Mods: {
 			// GripOfChaosRed.DisplayName: Magmacore Grip
 			// HydraClawM.DisplayName: Hydra Claw
 			// Darkdrifter.DisplayName: Darkdrifter
+			// SeraphSlug.DisplayName: Seraph Slug
+			// MireSkulker.DisplayName: Skulker
 		}
 
 		Dialogue: {
@@ -4599,6 +4611,8 @@ Mods: {
 			// GripHot: This mysterious blazing hand stalks the night in search of something. Its skin seems to be made of a thin layer of flexible hardened volcanic ash, magma and flames are hiding inside.
 			// GripWet: Mysterious floating hand that seems to be looking for something. Its thin skin layer consists of mud and biomatter, murky water can be found within.
 			// Darkdrifter: Seahorse-like creatures that slowly drift around in the lake depths in groups of 5.
+			// SkySlug: Fascinating slugs that evolved wings to soar through the skies. A perfect majestic slimy being whose beauty rivals those of the gods.
+			// Skulker: Crabs that dwell in the moonlit marshes of the Shrouded Mire. They are extremely territorial and will attack anyone who comes too close to their nest. If defensive measures are required, be aware of their shells as they can reflect incoming bullets.
 		}
 
 		SoulConversation: {
