@@ -14,7 +14,8 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			Main.tileBlockLight[Type] = true;
 			Main.tileLavaDeath[Type] = true;
 			Main.tileNoFail[Type] = true;
-			DustType = DustID.Smoke;
+            TileID.Sets.IsVine[Type] = true;
+            DustType = DustID.Smoke;
 			HitSound = SoundID.Grass;
 			AddMapEntry(new Color(60, 99, 181));
 		}
@@ -31,7 +32,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
         {
             Tile tileAbove = Framing.GetTileSafely(i, j - 1);
             int type = -1;
-            if (tileAbove.HasTile && !tileAbove.BottomSlope)
+            if (tileAbove.HasTile && tileAbove.Slope != SlopeType.SlopeUpLeft && tileAbove.Slope != SlopeType.SlopeUpRight)
             {
                 type = tileAbove.TileType;
             }
@@ -55,7 +56,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
                 while (yTest > j - 10)
                 {
                     Tile testTile = Framing.GetTileSafely(i, yTest);
-                    if (testTile.BottomSlope)
+                    if (testTile.Slope != SlopeType.Solid)
                     {
                         break;
                     }

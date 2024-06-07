@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -7,9 +8,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace MultidimensionMod.Tiles.Biomes.Inferno
+namespace MultidimensionMod.Tiles.Biomes.Mire
 {
-    class RazewoodSapling : ModTile
+    class BogPalmSapling : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -27,7 +28,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 18 };
             TileObjectData.newTile.CoordinateWidth = 16;
             TileObjectData.newTile.CoordinatePadding = 2;
-            TileObjectData.newTile.AnchorValidTiles = new int[] { ModContent.TileType<InfernoGrass>(), ModContent.TileType<TorchAshPlaced>() };
+            TileObjectData.newTile.AnchorValidTiles = new int[] { ModContent.TileType<DepthsandPlaced>() };
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.DrawFlipHorizontal = true;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
@@ -35,8 +36,12 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             TileObjectData.newTile.RandomStyleRange = 3;
             TileObjectData.addTile(Type);
             AddMapEntry(new Color(200, 200, 200));
-            DustType = ModContent.DustType<Dusts.RazewoodDust>();
             AdjTiles = new int[] { TileID.Saplings };
+        }
+
+        public override void NumDust(int i, int j, bool fail, ref int num)
+        {
+            num = fail ? 1 : 3;
         }
 
         public override void RandomUpdate(int i, int j)
@@ -44,7 +49,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             if (WorldGen.genRand.NextBool(20))
             {
                 bool isPlayerNear = WorldGen.PlayerLOS(i, j);
-                bool success = WorldGen.GrowTree(i, j);
+                bool success = WorldGen.GrowPalmTree(i, j);
                 if (success && isPlayerNear)
                 {
                     WorldGen.TreeGrowFXCheck(i, j);

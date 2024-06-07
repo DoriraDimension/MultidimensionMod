@@ -7,7 +7,6 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
 {
     public class InfernoGrass : ModTile
     {
-        public static int _type;
 
         public override void SetStaticDefaults()
         {
@@ -15,11 +14,15 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             TileID.Sets.Conversion.Grass[Type] = true;
             Main.tileBlendAll[Type] = true;
             TileID.Sets.NeedsGrassFraming[Type] = true;
+            TileID.Sets.CanBeDugByShovel[Type] = true;
+            TileID.Sets.SpreadOverground[Type] = true;
+            TileID.Sets.SpreadUnderground[Type] = true;
             Main.tileMergeDirt[Type] = true;
             Main.tileBlockLight[Type] = true;
             TileID.Sets.Grass[Type] = true;
             TileID.Sets.DoesntPlaceWithTileReplacement[Type] = true;
             Main.tileLighted[Type] = true;
+            TileID.Sets.Conversion.MergesWithDirtInASpecialWay[Type] = true;
             DustType = ModContent.DustType<Dusts.RazeleafDust>();
             AddMapEntry(new Color(105, 90, 58));
         }
@@ -29,7 +32,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             if (!fail)
             {
                 fail = true;
-                Framing.GetTileSafely(i, j).TileType = (ushort)ItemID.DirtBlock;
+                Framing.GetTileSafely(i, j).TileType = (ushort)TileID.Dirt;
             }
         }
 

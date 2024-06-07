@@ -43,17 +43,20 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
 
         public override void RandomUpdate(int i, int j)
         {
-            if (Main.rand.NextBool(80))
+            Tile tile = Main.tile[i, j];
+            Tile up = Main.tile[i, j - 1];
+            Tile up2 = Main.tile[i, j - 2];
+            if (Main.rand.NextBool(80) && !up.HasTile && !up2.HasTile && up.LiquidAmount <= 0 && up2.LiquidAmount <= 0 && !tile.LeftSlope && !tile.RightSlope && !tile.IsHalfBlock)
             {
                 int style = Main.rand.Next(23);
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<MireFoliage>(), mute: true, style: Main.rand.Next(23));
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<MireFoliage>(), Main.rand.Next(23), 0, -1, -1);
             }
-            if (Main.rand.NextBool(1500))
+            if (Main.rand.NextBool(80) && !up.HasTile && !up2.HasTile && up.LiquidAmount > 0 && up2.LiquidAmount > 0 && !tile.LeftSlope && !tile.RightSlope && !tile.IsHalfBlock)
             {
-                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<DarkshroomPlaced>(), mute: true);
-                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<DarkshroomPlaced>(), 0, 0, -1, -1);
-
+                int style = Main.rand.Next(23);
+                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<LakeWaterFoliage>(), mute: true, style: Main.rand.Next(23));
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<LakeWaterFoliage>(), Main.rand.Next(23), 0, -1, -1);
             }
         }
 

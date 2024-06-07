@@ -12,7 +12,6 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
 {
     public class MireGrass : ModTile
     {
-        public static int _type;
         private Asset<Texture2D> glowTexture;
 
         public override void SetStaticDefaults()
@@ -23,6 +22,9 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             Main.tileMergeDirt[Type] = true;
             TileID.Sets.Grass[Type] = true;
             Main.tileBlockLight[Type] = true;
+            TileID.Sets.CanBeDugByShovel[Type] = true;
+            TileID.Sets.SpreadOverground[Type] = true;
+            TileID.Sets.SpreadUnderground[Type] = true;
             Main.tileMerge[Type][ModContent.TileType<AbyssiumOrePlaced>()] = true;
             Main.tileMerge[Type][ModContent.TileType<DepthsandPlaced>()] = true;
             Main.tileMerge[Type][ModContent.TileType<DepthsandstonePlaced>()] = true;
@@ -35,6 +37,7 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             Main.tileMerge[Type][TileID.Mud] = true;
             TileID.Sets.DoesntPlaceWithTileReplacement[Type] = true;
             TileID.Sets.NeedsGrassFraming[Type] = true;
+            TileID.Sets.Conversion.MergesWithDirtInASpecialWay[Type] = true;
             TileID.Sets.JungleSpecial[Type] = true;
             DustType = ModContent.DustType<AbyssiumDust>();
             AddMapEntry(new Color(0, 50, 140));
@@ -48,8 +51,8 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             if (Main.rand.NextBool(80))
             {
                 int style = Main.rand.Next(23);
-                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<MireFoliage>(), mute: true, style: Main.rand.Next(23));
-                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<MireFoliage>(), Main.rand.Next(23), 0, -1, -1);
+                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<MireSurfaceFoliage>(), mute: true, style: Main.rand.Next(23));
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<MireSurfaceFoliage>(), Main.rand.Next(23), 0, -1, -1);
             }
             if (Main.rand.NextBool(1500))
             {

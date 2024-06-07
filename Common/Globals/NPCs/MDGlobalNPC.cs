@@ -4,6 +4,8 @@ using MultidimensionMod.NPCs.Tundra;
 using MultidimensionMod.NPCs.FU;
 using MultidimensionMod.NPCs.Madness;
 using MultidimensionMod.NPCs.MushBiomes;
+using MultidimensionMod.NPCs.Mire;
+//using MultidimensionMod.NPCs.Inferno;
 using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Dusts;
@@ -232,6 +234,23 @@ namespace MultidimensionMod
                 pool.Add(ModContent.NPCType<Hovercap>(), 0.35f);
 				if ((Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<MyceliumSandPlaced>() || Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<Mycelium>()) && !NPC.AnyNPCs(ModContent.NPCType<MonarchSlep>()) && !NPC.AnyNPCs(ModContent.NPCType<MushroomMonarch>()) && spawnInfo.Player.InModBiome(ModContent.GetInstance<ShroomForest>()))
 				    pool.Add(ModContent.NPCType<MonarchSlep>(), 0.10f);
+            }
+            if (spawnInfo.Player.InModBiome<TheDragonHoard>())
+			{
+                pool.Clear();
+            }
+            if (spawnInfo.Player.InModBiome<TheDragonBurrow>())
+			{
+                pool.Clear();
+            }
+            if (spawnInfo.Player.InModBiome<TheShroudedMire>())
+			{
+                pool.Clear();
+            }
+            if (spawnInfo.Player.InModBiome<TheLakeDepths>())
+			{
+                pool.Clear();
+                pool.Add(ModContent.NPCType<Darkdrifter>(), 1f);
             }
         }
 	}

@@ -3930,6 +3930,11 @@ Mods: {
 				DisplayName: Razewood Fence
 				Tooltip: ""
 			}
+
+			DarkdrifterItem: {
+				Tooltip: ""
+				DisplayName: Darkdrifter Item
+			}
 		}
 
 		SetBonuses: {
@@ -4344,6 +4349,7 @@ Mods: {
 			GripOfChaosBlue.DisplayName: Bogheart Grip
 			GripOfChaosRed.DisplayName: Magmacore Grip
 			HydraClawM.DisplayName: Hydra Claw
+			Darkdrifter.DisplayName: Darkdrifter
 		}
 
 		Dialogue: {
@@ -4590,8 +4596,9 @@ Mods: {
 			CapBunny: Unique bunny species who have evolved to live in harmony in the Scarlet Mycelium Forest.
 			Puffer: These large reptiles waddle through the Scarlet Mycelium Forest in search of only the best fungi to consume. If anything threatening looking draws too close, they will enter an alerted stance and release large spore clouds from their tail end. Their thick hide makes them extremely resistant against any attack.
 			Hovercap: Red mushrooms that are extremely lightweight with the ability to ride on even the smallest breeze. Just a slight disruption to their swift movement makes them crash down back to earth.
-			GripHot: This mysterious blazing hand stalks the night in search of something unknown. Its skin seems to be made of a thin layer of flexible hardened volcanic ash, magma and flames are hiding inside.
-			GripWet: Mysterious floating hand that seems to be looking for something unknown. Its thin skin layer consists of mud and biomatter, murky water can be found within.
+			GripHot: This mysterious blazing hand stalks the night in search of something. Its skin seems to be made of a thin layer of flexible hardened volcanic ash, magma and flames are hiding inside.
+			GripWet: Mysterious floating hand that seems to be looking for something. Its thin skin layer consists of mud and biomatter, murky water can be found within.
+			Darkdrifter: Seahorse-like creatures that slowly drift around in the lake depths in groups of 5.
 		}
 
 		SoulConversation: {
@@ -4662,6 +4669,7 @@ Mods: {
 			DimensiumTip: Don't know what to do with all those shiny blue crystals? Don't worry, a dimensional traveller will arrive soon enough!
 			VikingTip: Remnants of once proud warriors can be found all across the icy caverns.
 			RahlemTip: The antlion infested desert caves contain remnants of a once proud cult.
+			PitTip: The east of the underworld attracts many demonic warriors, only glory or death awaits them.
 		}
 
 		WindowTitles: {
@@ -4873,7 +4881,7 @@ Mods: {
 				}
 
 				Djinn: {
-					Name: Dsert Djinn
+					Name: Desert Djinn
 					Title: Forsaken Flexer
 				}
 

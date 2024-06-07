@@ -45,6 +45,10 @@ namespace MultidimensionMod
 
                 if (shop.NpcType == NPCID.Steampunker)
                 {
+					shop.Add(new Item(ModContent.ItemType<SporeSolution>())
+                    {
+                        shopCustomPrice = Item.buyPrice(0, 0, 15)
+                    });
                     shop.Add(new Item(ModContent.ItemType<MelterSolution>())
                     {
                         shopCustomPrice = Item.buyPrice(0, 0, 15)
