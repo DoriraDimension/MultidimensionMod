@@ -255,7 +255,7 @@ Mods: {
 				Tooltip:
 					'''
 					Roses are as beautiful as they are dangerous.
-					Reflects 45% of damage back to the enemy if they touch you
+					Reflects 170% of damage back to the enemy if they touch you
 					'''
 				Lore:
 					'''
@@ -606,7 +606,7 @@ Mods: {
 
 			ThornScarf: {
 				DisplayName: Thorn Scarf
-				Tooltip: Reflects 15% of damage back to the enemy if they touch you
+				Tooltip: Reflects 90% of damage back to the enemy if they touch you
 				Lore:
 					'''
 					Old natives of the jungle would wear this to hurt animals that attack them but would also hurt themself,
