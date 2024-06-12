@@ -688,7 +688,7 @@ namespace MultidimensionMod.Common.Players
             //Gives the player certain debuffs and plays a sound if they get hit while wearing an eye accessory
             if (this.HunterEye)
             {
-                if (Main.rand.NextBool(5))
+                if (Main.rand.NextBool(8))
                 {
                     Item item = EyeoftheHunter;
                     player.AddBuff(BuffID.Weak, 480);
@@ -697,7 +697,7 @@ namespace MultidimensionMod.Common.Players
             }
             if (this.DesireEye)
             {
-                if (Main.rand.NextBool(5))
+                if (Main.rand.NextBool(8))
                 {
                     Item item = EyeofDesire;
                     player.AddBuff(BuffID.Cursed, 480);
@@ -706,7 +706,7 @@ namespace MultidimensionMod.Common.Players
             }
             if (this.ExplorerEye)
             {
-                if (Main.rand.NextBool(5))
+                if (Main.rand.NextBool(8))
                 {
                     Item item = EyeoftheExplorer;
                     player.AddBuff(BuffID.Slow, 480);
@@ -715,7 +715,7 @@ namespace MultidimensionMod.Common.Players
             }
             if (this.NightEye)
             {
-                if (Main.rand.NextBool(5))
+                if (Main.rand.NextBool(8))
                 {
                     Item item = EyeoftheNightwalker;
                     player.AddBuff(BuffID.Blackout, 480);
