@@ -65,7 +65,7 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             if (!fail)
             {
                 fail = true;
-                Framing.GetTileSafely(i, j).TileType = (ushort)ModContent.TileType<DepthstonePlaced>();
+                Framing.GetTileSafely(i, j).TileType = (ushort)ModContent.TileType<DankDepthstonePlaced>();
             }
         }
 

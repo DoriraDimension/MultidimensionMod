@@ -165,13 +165,13 @@ namespace MultidimensionMod.Worldgen
                 [new Color(97, 20, 75)] = ModContent.TileType<VolcanicRockDensePlaced>(), //Broodmother and Ashe nests. Later replaced with the Nest Block
                 [new Color(223, 170, 10)] = ModContent.TileType<IncineriteOre>(), // Ore scattered around
                 //Pagoda
-                [new Color(1, 0, 101)] = ModContent.TileType<PagodaBrickPlaced>(), //Pagoda tiles. Later replaced with a new block
-                [new Color(0, 255, 0)] = ModContent.TileType<PagodaBrickPlaced>(), //Pagoda Floor. Later replaced with a new block
-                [new Color(249, 249, 143)] = ModContent.TileType<PagodaFloorPlaced>(), //Pagoda floor tiles //Later replaced with a new block
-                [new Color(0, 255, 187)] = ModContent.TileType<PagodaColumnPlaced>(), //Pagoda columns //Later replaced with a new block
+                [new Color(1, 0, 101)] = ModContent.TileType<PagodaBrickPlaced>(), //Pagoda tiles
+                [new Color(0, 255, 0)] = ModContent.TileType<PagodaBrickPlaced>(), //Pagoda Floor.
+                [new Color(249, 249, 143)] = ModContent.TileType<PagodaFloorPlaced>(), //Pagoda floor tiles
+                [new Color(0, 255, 187)] = ModContent.TileType<PagodaColumnPlaced>(), //Pagoda column.
                 [new Color(45, 40, 40)] = ModContent.TileType<TorchAshPlaced>(), //Ash
                 [new Color(133, 71, 49)] = ModContent.TileType<RazewoodPlaced>(), //Pagoda Bridge and support beams
-                [new Color(255, 255, 0)] = ModContent.TileType<GildedTiles>(), //Pagoda roof. Later replaced with Gilded Tiles
+                [new Color(255, 255, 0)] = ModContent.TileType<GildedTiles>(), //Pagoda roof.
                 [new Color(150, 150, 150)] = -2, //turn into air
                 [Color.Black] = -1 //don't touch when genning
             };

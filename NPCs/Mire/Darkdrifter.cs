@@ -18,9 +18,6 @@ namespace MultidimensionMod.NPCs.Mire
 {
     public class Darkdrifter : ModNPC
     {
-        public bool DoNot = false;
-        public int ech = 0;
-
         public override void SetStaticDefaults()
         {
             NPCID.Sets.CountsAsCritter[Type] = true;
@@ -51,27 +48,11 @@ namespace MultidimensionMod.NPCs.Mire
             });
         }
 
-        public override void OnSpawn(IEntitySource source)
-        {
-            if (!DoNot && ech == 1)
-            {
-                NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X + 20, (int)NPC.Center.Y, ModContent.NPCType<Darkdrifter>());
-                NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X - 20, (int)NPC.Center.Y, ModContent.NPCType<Darkdrifter>());
-                NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, (int)NPC.Center.Y + 20, ModContent.NPCType<Darkdrifter>());
-                NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, (int)NPC.Center.Y - 20, ModContent.NPCType<Darkdrifter>());
-            }
-            if (source is EntitySource_Parent parent && parent.Entity is NPC npc && npc.type == ModContent.NPCType<Darkdrifter>())
-            {
-                DoNot = true;
-            }
-            base.OnSpawn(source);
-        }
+        public int STOP = 0;
 
         public override void AI()
         {
-            ech++;
-            if (ech >= 2)
-                ech = 2;
+            STOP--;
             if (NPC.wet)
             {
                 NPC.noGravity = true;
@@ -79,6 +60,12 @@ namespace MultidimensionMod.NPCs.Mire
                 {
                     NPC.velocity.X = Main.rand.Next(-2, 3);
                     NPC.velocity.Y = Main.rand.Next(-2, 3);
+                    STOP = 60;
+                }
+                else if (STOP == 0)
+                {
+                    NPC.velocity.X = 0;
+                    NPC.velocity.Y = 0;
                 }
             }
             if (!NPC.wet)
@@ -88,15 +75,6 @@ namespace MultidimensionMod.NPCs.Mire
         }
 
         public override bool CanHitPlayer(Player target, ref int cooldownSlot) => false;
-
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (spawnInfo.Player.InModBiome(ModContent.GetInstance<TheLakeDepths>()) && spawnInfo.Water)
-            {
-                return SpawnCondition.CaveJellyfish.Chance * 1.10f;
-            }
-            return 0f;
-        }
 
 
         public override void HitEffect(NPC.HitInfo hit)
@@ -120,6 +98,64 @@ namespace MultidimensionMod.NPCs.Mire
             spriteBatch.Draw(horse, NPC.Center + new Vector2(0f, -5f) - screenPos, NPC.frame, drawColor, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
             spriteBatch.Draw(glow, NPC.Center + new Vector2(0f, -5f) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
             return false;
+        }
+    }
+
+    public class DrifterSpawner : ModNPC
+    {
+        public override string Texture => "MultidimensionMod/Projectiles/NoTexture";
+
+        public override void SetStaticDefaults()
+        {
+            NPCID.Sets.DontDoHardmodeScaling[Type] = true;
+            NPCID.Sets.CantTakeLunchMoney[Type] = true;
+            NPCID.Sets.NPCBestiaryDrawModifiers value = new(0) { Hide = true };
+            NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
+        }
+
+        public override void SetDefaults()
+        {
+            NPC.width = 20;
+            NPC.height = 30;
+            NPC.defense = 0;
+            NPC.lifeMax = 1;
+            NPC.HitSound = SoundID.NPCHit1;
+            NPC.DeathSound = SoundID.NPCDeath1;
+            NPC.value = 0;
+            NPC.knockBackResist = 0.0f;
+            NPC.noGravity = true;
+        }
+
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Darkdrifter")
+            });
+        }
+
+        public override void OnSpawn(IEntitySource source)
+        {
+            NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X + 20, (int)NPC.Center.Y, ModContent.NPCType<Darkdrifter>());
+            NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X - 20, (int)NPC.Center.Y, ModContent.NPCType<Darkdrifter>());
+            NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, (int)NPC.Center.Y + 20, ModContent.NPCType<Darkdrifter>());
+            NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, (int)NPC.Center.Y - 20, ModContent.NPCType<Darkdrifter>());
+        }
+
+        public override void AI()
+        {
+            NPC.active = false;
+        }
+
+        public override bool CanHitPlayer(Player target, ref int cooldownSlot) => false;
+
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        {
+            if (spawnInfo.Player.InModBiome(ModContent.GetInstance<TheLakeDepths>()) && spawnInfo.Water)
+            {
+                return SpawnCondition.CaveJellyfish.Chance * 0.70f;
+            }
+            return 0f;
         }
     }
 }

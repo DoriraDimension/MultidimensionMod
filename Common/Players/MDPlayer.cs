@@ -553,7 +553,7 @@ namespace MultidimensionMod.Common.Players
 
         public override void ModifyHitByProjectile(Projectile proj, ref Player.HurtModifiers modifiers)
         {
-            if (Main.rand.NextBool(10))
+            if (Main.rand.NextBool(5))
             {
                 if (ALLists.ReflectionExceptions.TrueForAll(x => proj.type != x) && proj.active && !proj.friendly && proj.hostile && proj.damage > 0)
                 {

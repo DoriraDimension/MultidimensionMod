@@ -14,7 +14,6 @@ namespace MultidimensionMod
         {
             ReflectionExceptions = new List<int>()
             {
-                // Some hostile boss projectiles
                 ProjectileID.SaucerDeathray,
                 ProjectileID.PhantasmalDeathray,
 

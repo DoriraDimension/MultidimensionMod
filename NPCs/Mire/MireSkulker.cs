@@ -160,10 +160,16 @@ namespace MultidimensionMod.NPCs.Mire
                         AIState = ActionState.Threatening;
                         NPC.netUpdate = true;
                     }
+                    else if (hasNotBeenAttackedSince > 0)
+                    {
+                        SoundEngine.PlaySound(SoundID.Zombie77, NPC.position);
+                        AIState = ActionState.Pursuing;
+                        NPC.netUpdate = true;
+                    }
                     break;
                 case ActionState.Threatening:
                     NPC.frame.Y = 308;
-                    if (distanceToPlayer > aggroDistance) //Return to sleep if player goes far enough away
+                    if (distanceToPlayer > aggroDistance && hasNotBeenAttackedSince <= 0) //Return to sleep if player goes far enough away
                     {
                         AIState = ActionState.Eeping;
                         NPC.netUpdate = true;

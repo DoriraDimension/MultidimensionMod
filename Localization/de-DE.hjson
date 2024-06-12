@@ -3941,7 +3941,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Decreases movement speed by 10%
-					Has a 10% chance to reflect a projectile
+					Has a 20% chance to reflect a projectile
 					The reflected projectile only deals half its normal damage to you
 					''' */
 			}
@@ -4362,6 +4362,7 @@ Mods: {
 			// Darkdrifter.DisplayName: Darkdrifter
 			// SeraphSlug.DisplayName: Seraph Slug
 			// MireSkulker.DisplayName: Skulker
+			// DrifterSpawner.DisplayName: Drifter Spawner
 		}
 
 		Dialogue: {
@@ -4610,9 +4611,9 @@ Mods: {
 			// Hovercap: Red mushrooms that are extremely lightweight with the ability to ride on even the smallest breeze. Just a slight disruption to their swift movement makes them crash down back to earth.
 			// GripHot: This mysterious blazing hand stalks the night in search of something. Its skin seems to be made of a thin layer of flexible hardened volcanic ash, magma and flames are hiding inside.
 			// GripWet: Mysterious floating hand that seems to be looking for something. Its thin skin layer consists of mud and biomatter, murky water can be found within.
-			// Darkdrifter: Seahorse-like creatures that slowly drift around in the lake depths in groups of 5.
+			// Darkdrifter: Seahorse-like creatures that slowly drift around in the lake depths in groups of 4.
 			// SkySlug: Fascinating slugs that evolved wings to soar through the skies. A perfect majestic slimy being whose beauty rivals those of the gods.
-			// Skulker: Crabs that dwell in the moonlit marshes of the Shrouded Mire. They are extremely territorial and will attack anyone who comes too close to their nest. If defensive measures are required, be aware of their shells as they can reflect incoming bullets.
+			// Skulker: Crabs that dwell in the moonlit marshes of the Shrouded Mire. They are extremely territorial and will attack anyone who comes too close to their nest. If defensive measures are required, be aware of their shells, as they can reflect incoming bullets.
 		}
 
 		SoulConversation: {
