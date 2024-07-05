@@ -3733,7 +3733,7 @@ Mods: {
 					''' */
 				/* Lore:
 					'''
-					Wristbands like these were once bestowed upon shrine guardians who tend to the seal,
+					Wristbands like these were once bestowed upon shrine maidens who tend to the seal,
 					they were supposed to protect the wearer from demonic influence coming from deep down in the volcano.
 					However, the seal was undone, incinerated by the roar of the erupting volcano and with it, its people.
 					What was once a mere myth, became reality.
@@ -3804,7 +3804,7 @@ Mods: {
 					'''
 					An especially soft metal covered in muck only found in the Shrouded Mire,
 					it seems to have been fused with biomatter over time.
-					It is in some parts known as "Cursed Earth".
+					It is in some parts known as 'Cursed Earth'.
 					''' */
 			}
 
@@ -4305,7 +4305,7 @@ Mods: {
 					// NoHome: Bro, do you have a couch I can chill on?
 					// FarFromHome: Uh, the trip got me pretty far away.
 					// LoveSpace: Less people around means less people asking about weird substances.
-					// DislikeCrowded: I have noticed people staring at me, it's bothering me. I'd like less people around
+					// DislikeCrowded: I have noticed people staring at me, it's bothering me. I'd like less people around.
 					// HateCrowded: So many people keep asking me about my "stuff", I want to go elsewhere.
 					// LoveBiome: Maybe if I stay here, I can see my uncle again!
 					// LikeBiome: This magical place is pretty cool, maybe I find some mystical mushrooms here.

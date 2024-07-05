@@ -23,5 +23,13 @@ namespace MultidimensionMod.Items.Placeables.Biomes.ShroomForest
             Item.maxStack = 9999;
             Item.DefaultToPlaceableTile(ModContent.TileType<MyceliumHardsandPlaced>(), 0);
         }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddIngredient(ModContent.ItemType<MyceliumHardsandWall>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+        }
     }
 }

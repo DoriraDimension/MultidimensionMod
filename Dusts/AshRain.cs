@@ -1,3 +1,4 @@
+using MultidimensionMod.Common.Players;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
@@ -6,9 +7,9 @@ namespace MultidimensionMod.Dusts
 {
     public class AshRain : ModDust
 	{
-		/*public override void OnSpawn(Dust dust)
+		public override void OnSpawn(Dust dust)
 		{
-            if (!Main.dayTime && !DownedSystem.downedAkuma)
+            if (!Main.dayTime)
             {
                 dust.velocity.Y = Main.rand.Next(-10, 6) * 0.1f;
                 dust.velocity.X *= 0.3f;
@@ -19,9 +20,9 @@ namespace MultidimensionMod.Dusts
 
 		public override bool MidUpdate(Dust dust)
         {
-            if (!Main.dayTime && !AAWorld.downedAkuma)
+            if (!Main.dayTime)
             {
-                AAPlayer.Ashes = 0;
+                MDPlayer.Ashes = 0;
                 if (!dust.noGravity)
                 {
                     dust.velocity.Y += 0.2f;
@@ -35,7 +36,7 @@ namespace MultidimensionMod.Dusts
                     }
                     Lighting.AddLight(dust.position, 0.5f * strength, 0.2f * strength, 0.2f * strength);
                 }
-                AAPlayer.Ashes++;
+                MDPlayer.Ashes++;
                 dust.scale += 0.009f;
                 float y = Main.LocalPlayer.velocity.Y;
                 if (y > 0f && dust.fadeIn == 0f && dust.velocity.Y < y)
@@ -59,6 +60,6 @@ namespace MultidimensionMod.Dusts
         public override Color? GetAlpha(Dust dust, Color lightColor)
         {
             return new Color(190, 30, 30, 25);
-        }*/
+        }
     }
 }

@@ -28,6 +28,15 @@ namespace MultidimensionMod.Items.Placeables.Biomes.ShroomForest
             .AddIngredient(ItemID.Mushroom)
             .AddTile(TileID.WorkBenches)
             .Register();
+
+            CreateRecipe()
+            .AddIngredient(ModContent.ItemType<MushroomBlockWall>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+
+            CreateRecipe()
+            .AddIngredient(ModContent.ItemType<Furniture.RedMush.RedMushPlatform>(), 2)
+            .Register();
         }
 
     }

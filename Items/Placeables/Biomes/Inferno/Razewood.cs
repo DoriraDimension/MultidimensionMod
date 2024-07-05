@@ -37,6 +37,10 @@ namespace MultidimensionMod.Items.Placeables.Biomes.Inferno
                 .AddIngredient(ModContent.ItemType<RazewoodWall>(), 4)
                 .AddTile(TileID.WorkBenches)
                 .Register();
+
+            CreateRecipe()
+            .AddIngredient(ModContent.ItemType<RazewoodPlatform>(), 2)
+            .Register();
         }
     }
 }
