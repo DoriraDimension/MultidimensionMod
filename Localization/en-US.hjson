@@ -3262,6 +3262,7 @@ Mods: {
 					it grants a powerful leap
 					Double tap up to leap
 					You cannot do another leap for 30 seconds
+					Negates fall damage
 					'''
 			}
 

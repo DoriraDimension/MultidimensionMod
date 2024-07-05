@@ -35,7 +35,7 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             TileObjectData.newTile.LavaDeath = true;
             TileObjectData.newTile.RandomStyleRange = 3;
             TileObjectData.addTile(Type);
-            AddMapEntry(new Color(6, 32, 44));
+            AddMapEntry(new Color(198, 52, 52));
             DustType = ModContent.DustType<MushroomDust>();
             AdjTiles = new int[] { TileID.Saplings };
         }

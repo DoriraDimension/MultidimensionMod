@@ -35,7 +35,8 @@ namespace MultidimensionMod.NPCs.Dungeon
 			NPC.knockBackResist = 0.6f;
 			NPC.lavaImmune = true;
 			NPC.noGravity = true;
-			NPC.noTileCollide = true;
+            NPC.chaseable = false;
+            NPC.noTileCollide = true;
 			NPC.aiStyle = -1;
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<DarklingBanner>();
@@ -74,7 +75,8 @@ namespace MultidimensionMod.NPCs.Dungeon
             }
 			if (NPC.life < NPC.lifeMax) //Executes this code only if the enemy lost HP
             {
-				Shootsies++;
+                NPC.chaseable = true;
+                Shootsies++;
 				if (Shootsies >= 200)
 				{
 					SoundEngine.PlaySound(SoundID.DD2_SonicBoomBladeSlash with { Volume = 0.4f }, NPC.position);

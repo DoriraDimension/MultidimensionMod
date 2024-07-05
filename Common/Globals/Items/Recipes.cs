@@ -1,5 +1,7 @@
 ﻿using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Tiles;
+using MultidimensionMod.Items.Placeables.Biomes.ShroomForest;
+using MultidimensionMod.Items.Placeables.Biomes.Mire;
+using MultidimensionMod.Items.Placeables.Biomes.Inferno;
 using MultidimensionMod.Items.Potions;
 using MultidimensionMod.Items.Mushrooms;
 using Terraria.ModLoader;
@@ -1136,6 +1138,7 @@ namespace MultidimensionMod.Common.Globals.Items
 		}
 		public override void AddRecipeGroups()
         {
+            //New recipe groups
 			EvilPowder = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.VilePowder)}",
 	        ItemID.VilePowder, ItemID.ViciousPowder);
 			RecipeGroup.RegisterGroup("MultidimensionMod:VilePowder", EvilPowder);
@@ -1159,6 +1162,18 @@ namespace MultidimensionMod.Common.Globals.Items
 			CopperTin = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperBar)}",
 			ItemID.CopperBar, ItemID.TinBar);
 			RecipeGroup.RegisterGroup("MultidimensionMod:CopperBar", CopperTin);
-		}
+
+            //Vanilla recipe group additions
+            //Sand
+            RecipeGroup.recipeGroups[RecipeGroupID.Sand].ValidItems.Add(ModContent.ItemType<MyceliumSand>());
+            RecipeGroup.recipeGroups[RecipeGroupID.Sand].ValidItems.Add(ModContent.ItemType<Torchsand>());
+            RecipeGroup.recipeGroups[RecipeGroupID.Sand].ValidItems.Add(ModContent.ItemType<Depthsand>());
+            //RecipeGroup.recipeGroups[RecipeGroupID.Sand].ValidItems.Add(ModContent.ItemType<VoidSand>());
+            //Wood
+            RecipeGroup.recipeGroups[RecipeGroupID.Wood].ValidItems.Add(ModContent.ItemType<Razewood>());
+            RecipeGroup.recipeGroups[RecipeGroupID.Wood].ValidItems.Add(ModContent.ItemType<Bogwood>());
+            //RecipeGroup.recipeGroups[RecipeGroupID.Wood].ValidItems.Add(ModContent.ItemType<OroborosWood>());
+            //RecipeGroup.recipeGroups[RecipeGroupID.Wood].ValidItems.Add(ModContent.ItemType<FrigidAshWood>());
+        }
 	}
 }

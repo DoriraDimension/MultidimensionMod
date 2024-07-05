@@ -53,6 +53,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.rarity = 2;
+            NPC.chaseable = false;
             Banner = NPC.type;
             BannerItem = ModContent.ItemType<ToadBanner>();
         }
@@ -82,6 +83,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             if (NPC.life < NPC.lifeMax)
             {
                 aggro = true;
+                NPC.chaseable = true;
             }
             if (aggro)
             {
@@ -90,6 +92,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                 {
                     AIState = ActionState.Idle;
                     NPC.netUpdate = true;
+                    MotivationToMove = 60;
                 }
                 if (IThinkImStupid >= 2)
                 {

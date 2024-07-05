@@ -32,6 +32,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.DeathSound = SoundID.NPCDeath47;
             NPC.knockBackResist = 0.3f;
             NPC.value = 1000f;
+            NPC.chaseable = false;
             NPC.buffImmune[31] = false;
             Banner = NPC.type;
             BannerItem = ModContent.ItemType<MushbugBanner>();
@@ -119,6 +120,10 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     NPC.spriteDirection = 1;
                 }
                 NPC.netUpdate = true;
+            }
+            if (NPC.life < NPC.lifeMax)
+            {
+                NPC.chaseable = true;
             }
             if (Main.rand.NextBool(600))
             {

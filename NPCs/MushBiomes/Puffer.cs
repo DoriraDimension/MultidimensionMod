@@ -24,6 +24,9 @@ namespace MultidimensionMod.NPCs.MushBiomes
         public override void SetStaticDefaults()
         {
             Main.npcFrameCount[NPC.type] = 9;
+            NPCID.Sets.CountsAsCritter[Type] = true;
+            NPCID.Sets.DontDoHardmodeScaling[Type] = true;
+            NPCID.Sets.CantTakeLunchMoney[Type] = true;
         }
 
         public override void SetDefaults()
@@ -37,6 +40,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.HitSound = SoundID.NPCHit10;
             NPC.DeathSound = SoundID.NPCDeath5;
             NPC.knockBackResist = 0.0f;
+            NPC.chaseable = false;
             NPC.value = 1000f;
             NPC.buffImmune[31] = false;
             Banner = NPC.type;
@@ -75,6 +79,10 @@ namespace MultidimensionMod.NPCs.MushBiomes
         {
             Player target = Main.player[NPC.target];
             float distanceToPlayer = Vector2.Distance(target.Center, NPC.Center);
+            if (NPC.life < NPC.lifeMax)
+            {
+                NPC.chaseable = true;
+            }
             switch (AIState)
             {
                 case ActionState.Idle:

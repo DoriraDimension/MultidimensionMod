@@ -42,7 +42,8 @@ namespace MultidimensionMod.NPCs.Tundra
 			NPC.HitSound = SoundID.NPCHit1;
 			NPC.DeathSound = SoundID.NPCDeath1;
 			NPC.value = Item.buyPrice(0, 0, 0, 90);
-			NPC.knockBackResist = 0f;
+            NPC.chaseable = false;
+            NPC.knockBackResist = 0f;
 			NPC.aiStyle = -1;
 			NPC.noGravity = false;
 			Banner = NPC.type;
@@ -66,7 +67,8 @@ namespace MultidimensionMod.NPCs.Tundra
 
 			if (!hasBeenFed && NPC.life < NPC.lifeMax)
             {
-				NPC.width = 54;
+                NPC.chaseable = true;
+                NPC.width = 54;
 				NPC.height = 56;
 				NPC.friendly = false;
 				NPC.knockBackResist = 0.6f;

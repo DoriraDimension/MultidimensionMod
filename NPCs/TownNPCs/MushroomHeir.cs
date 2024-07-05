@@ -12,6 +12,7 @@ using MultidimensionMod.NPCs.Bosses.FeudalFungus;
 using MultidimensionMod.Items.Vanity;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Base;
+using MultidimensionMod.Items.Placeables.Biomes.ShroomForest;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
@@ -752,6 +753,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
         public override void AddShops()
         {
             var npcShop = new NPCShop(Type, ShopName)
+                .Add(new Item(ModContent.ItemType<MyceliumSeeds>()) { shopCustomPrice = Item.buyPrice(copper: 20) })
             .Add(new Item(ModContent.ItemType<TheDapperCap>()) { shopCustomPrice = Item.buyPrice(gold: 2) })
             .Add(new Item(ModContent.ItemType<IntimidatingMushroom>()) { shopCustomPrice = Item.buyPrice(gold: 1) })
             .Add(new Item(ModContent.ItemType<Blue>()) { shopCustomPrice = Item.buyPrice(gold: 18) })
