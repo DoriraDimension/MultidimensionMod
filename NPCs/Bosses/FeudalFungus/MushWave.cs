@@ -17,6 +17,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             //DisplayName.SetDefault("Spore Blast");
             ProjectileID.Sets.TrailCacheLength[Projectile.type] = 5;
             ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
+            Main.projFrames[Projectile.type] = 2;
         }
 
         public override void SetDefaults()
@@ -42,7 +43,13 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             HomeOnce++;
             Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
             Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
-            if (HomeOnce == 1)
+            if (HomeOnce < 30)
+            {
+                Projectile.frame = 0;
+            }
+            else
+                Projectile.frame = 1;
+            if (HomeOnce == 30)
             {
                 Player player = Main.LocalPlayer;
                 Vector2 targetCenter = player.position;
@@ -64,14 +71,15 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Vector2 drawOrigin = new Vector2(TextureAssets.Projectile[Projectile.type].Value.Width * 0.5f, Projectile.height * 0.5f);
-            for (int k = 0; k < Projectile.oldPos.Length; k++)
-            {
-                Vector2 drawPos = Projectile.oldPos[k] - Main.screenPosition + drawOrigin + new Vector2(0f, Projectile.gfxOffY);
-                Color color = Projectile.GetAlpha(lightColor) * ((Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
-                Main.EntitySpriteDraw(TextureAssets.Projectile[Projectile.type].Value, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale, SpriteEffects.None, 0f);
-            }
-            return true;
+            Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+            var effects = Projectile.spriteDirection == -1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+            int height = texture.Height / 2;
+            int y = height * Projectile.frame;
+            Rectangle rect = new(0, y, texture.Width, height);
+            Vector2 drawOrigin = new(texture.Width / 2, Projectile.height / 2);
+
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, new Rectangle?(rect), Color.White, Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            return false;
         }
     }
 }

@@ -93,6 +93,11 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 		}
 		public override void ModifyNPCLoot(NPCLoot NPCloot)
 		{
+            int petChance = 10;
+            if (Main.masterMode)
+            {
+                petChance = 4;
+            }
             LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
 			Main.NewText("Smiley has been defeated!", Color.Purple);
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<PaleMatter>(), 1, 5, 10));
@@ -102,7 +107,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SmileyTrophy>(), 10));
 			notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<LonelyWarriorsVisor>(), 10));
 			notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<DarkCloak>()));
-			notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<CuteEmoji>(), 10));
+			notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<CuteEmoji>(), petChance));
             notExpertRule.OnSuccess(ItemDropRule.OneFromOptions(1, ModContent.ItemType<LonelySword>(), ModContent.ItemType<DarkMatterLauncher>(), ModContent.ItemType<SmileySmile>(), ModContent.ItemType<DarkRebels>()));
             NPCloot.Add(notExpertRule);
         }

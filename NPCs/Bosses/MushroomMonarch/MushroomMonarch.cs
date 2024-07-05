@@ -741,14 +741,19 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
 
         public override void ModifyNPCLoot(NPCLoot NPCloot)
         {
+            int petChance = 10;
+            if (Main.masterMode)
+            {
+                petChance = 4;
+            }
             LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<Mushmatter>(), 1, 5, 10));
             NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MushroomSoul>()));
             NPCloot.Add(ItemDropRule.BossBag(ModContent.ItemType<MonarchBag>()));
             NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<MonarchRelic>()));
             NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MonarchTrophy>(), 10));
-            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusSporeBag>(), 10));
-            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<MushiumBar>(), 10, 1, 2));
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusSporeBag>(), petChance));
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<MushiumBar>(), 5, 1, 2));
             notExpertRule.OnSuccess(ItemDropRule.OneFromOptions(1, ModContent.ItemType<Musharang>(), ModContent.ItemType<Mushbow>()));
             NPCloot.Add(notExpertRule);
         }

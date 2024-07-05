@@ -178,14 +178,19 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 
         public override void ModifyNPCLoot(NPCLoot NPCloot)
         {
+            int petChance = 10;
+            if (Main.masterMode)
+            {
+                petChance = 4;
+            }
             LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<GlowingMushmatter>(), 1, 5, 10));
             NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<GlowshroomSoul>()));
             NPCloot.Add(ItemDropRule.BossBag(ModContent.ItemType<FungusBag>()));
             NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<FungusRelic>()));
             NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<FungusTrophy>(), 10));
-            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusGlowsporeBag>(), 10));
-            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<GlowingMushiumBar>(), 10, 1, 2));
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusGlowsporeBag>(), petChance));
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<GlowingMushiumBar>(), 5, 1, 2));
             notExpertRule.OnSuccess(ItemDropRule.OneFromOptions(1, ModContent.ItemType<UmosShower>(), ModContent.ItemType<RadianceTalisman>()));
             NPCloot.Add(notExpertRule);
         }
@@ -320,7 +325,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                 NPC.netUpdate = true;
                 Waking = 0;
             }
-            if (NPC.life >= NPC.lifeMax / 4)
+            if (NPC.life >= NPC.lifeMax / 2)
             {
                 Lighting.AddLight(NPC.Center, 0, 0, (255 - NPC.alpha) * 0.30f / 255f);
             }
@@ -328,7 +333,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             {
                 Lighting.AddLight(NPC.Center, 0, (255 - NPC.alpha) * 0.15f / 160, (255 - NPC.alpha) * 0.32f / 255f);
             }
-            if (NPC.life <= NPC.lifeMax / 4 && !UmosMode)
+            if (NPC.life <= NPC.lifeMax / 2 && !UmosMode)
             {
                 AIState = ActionState.UmosTransition;
             }
@@ -790,6 +795,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         if (DragonballPowerUpSequence == 60)
                         {
                             AISwitch = 0;
+                            MakeItRain = 0;
                             DragonballPowerUpSequence = 0;
                             UmosMode = true;
                             AIState = ActionState.Hovering;
