@@ -200,16 +200,24 @@ namespace MultidimensionMod
 
         public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)
         {
-			if (spawnInfo.Player.InModBiome<FrozenUnderworld>())
+            if (spawnInfo.Player.ZoneTowerNebula || spawnInfo.Player.ZoneTowerSolar || spawnInfo.Player.ZoneTowerStardust || spawnInfo.Player.ZoneTowerVortex ||
+                Main.eclipse ||
+                Main.invasionType == InvasionID.MartianMadness ||
+                Main.invasionType == InvasionID.CachedPumpkinMoon ||
+                Main.invasionType == InvasionID.CachedFrostMoon)
+            {
+                return;
+            }
+            if (spawnInfo.Player.InModBiome<FrozenUnderworld>())
 			{
 				pool.Clear();
 				//pool.Add(ModContent.NPCType<IceDemon>(), 0.3f);
-				pool.Add(ModContent.NPCType<Victim>(), 0.1f);
+				pool.Add(ModContent.NPCType<Victim>(), 0.08f);
 				//pool.Add(ModContent.NPCType<VeilImp>(), 0.2f);
-				pool.Add(ModContent.NPCType<Dusty>(), 0.1f);
+				pool.Add(ModContent.NPCType<Dusty>(), 0.07f);
 				if (Main.hardMode)
 				{
-                    pool.Add(ModContent.NPCType<Ashton>(), 0.1f);
+                    pool.Add(ModContent.NPCType<Ashton>(), 0.06f);
                 }
 			}
 			if (spawnInfo.Player.InModBiome<MadnessMoon>())
@@ -255,7 +263,7 @@ namespace MultidimensionMod
 			{
                 pool.Clear();
 				if (spawnInfo.Water)
-                pool.Add(ModContent.NPCType<DrifterSpawner>(), 1f);
+                    pool.Add(ModContent.NPCType<DrifterSpawner>(), 1f);
             }
         }
 	}

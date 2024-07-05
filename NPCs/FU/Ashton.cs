@@ -94,7 +94,7 @@ namespace MultidimensionMod.NPCs.FU
 		{
 			if (spawnInfo.Player.InModBiome(ModContent.GetInstance<FrozenUnderworld>()) && Main.hardMode)
 			{
-				return 0.20f;
+				return 0.15f;
 			}
 			return base.SpawnChance(spawnInfo);
 		}

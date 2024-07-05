@@ -82,10 +82,10 @@ namespace MultidimensionMod.NPCs.FU
 			if (distanceToPlayer <= 700) //Only runs the code below if the enemy is close enough
 			{
 				Quadshot++;
-				if (Quadshot >= 100)
+				if (Quadshot >= 180)
 				{
 					SoundEngine.PlaySound(SoundID.Item20 with { Volume = 0.5f }, NPC.position);
-                    Vector2 velocity = Vector2.Normalize(player.Center - NPC.Center) * 10f;
+                    Vector2 velocity = Vector2.Normalize(player.Center - NPC.Center) * 5f;
                     for (int i = 0; i < 3; i++)
                     {
                         int numProj = 3;
@@ -127,7 +127,7 @@ namespace MultidimensionMod.NPCs.FU
 		{
 			if (spawnInfo.Player.InModBiome(ModContent.GetInstance<FrozenUnderworld>()))
 			{
-				return 0.20f;
+				return 0.10f;
 			}
 			return base.SpawnChance(spawnInfo);
 		}
