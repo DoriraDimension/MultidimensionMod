@@ -3946,6 +3946,11 @@ Mods: {
 					The reflected projectile only deals half its normal damage to you
 					'''
 			}
+
+			BogwoodWall: {
+				DisplayName: Bogwood Wall
+				Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -4789,7 +4794,7 @@ Mods: {
 				}
 
 				Bee: {
-					Title: Giant Insect
+					Title: Hive Matriarch
 					Name: Queen Bee
 				}
 

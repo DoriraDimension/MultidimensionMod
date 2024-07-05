@@ -29,5 +29,18 @@ namespace MultidimensionMod.Items.Placeables.Biomes.Mire
             //DisplayName.SetDefault("Bogwood");
             //Tooltip.SetDefault("");
         }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddIngredient(ModContent.ItemType<Furniture.BogwoodF.BogwoodWall>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+
+            /*CreateRecipe()
+            .AddIngredient(ModContent.ItemType<Furniture.BogwoodF.BogwoodPlatform>(), 2)
+            .AddTile(TileID.WorkBenches)
+            .Register();*/
+        }
     }
 }
