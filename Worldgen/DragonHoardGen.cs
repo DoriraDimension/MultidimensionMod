@@ -180,6 +180,7 @@ namespace MultidimensionMod.Worldgen
             {
                 //Volcano
                 [new Color(255, 0, 0)] = ModContent.WallType<VolcanicRockWallPlaced>(), //Main material
+                [new Color(180, 0, 32)] = ModContent.WallType<VolcanicRockWall2Placed>(), //top of the volcano
                 [new Color(144, 4, 97)] = ModContent.WallType<AwakenedRockWallPlaced>(), //Akuma room
                 [new Color(88, 12, 39)] = WallID.ObsidianBrick, //Akuma claw marks //Later replaced I guess
                 [new Color(223, 170, 10)] = WallID.Lavafall, //Self explanatory

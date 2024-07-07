@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Tiles.Ores;
+using MultidimensionMod.Tiles.Biomes.Inferno;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -23,6 +24,7 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             Main.tileMerge[Type][ModContent.TileType<BogwoodPlaced>()] = true;
             Main.tileMerge[Type][ModContent.TileType<DarkmudPlaced>()] = true;
             Main.tileMerge[Type][ModContent.TileType<DenseBiomatterPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<AwakenedRockPlaced>()] = true;
             Main.tileMerge[TileID.Mud][Type] = true;
             Main.tileMerge[Type][TileID.Mud] = true;
             Main.tileMergeDirt[Type] = true;

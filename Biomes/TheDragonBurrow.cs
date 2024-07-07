@@ -6,6 +6,8 @@ using System;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.Graphics.Effects;
+using MultidimensionMod.Walls;
+using Terraria.ID;
 
 namespace MultidimensionMod.Biomes
 {
@@ -45,10 +47,12 @@ namespace MultidimensionMod.Biomes
         public override string BestiaryIcon => "MultidimensionMod/Biomes/InfernoUGIcon";
         public override Color? BackgroundColor => base.BackgroundColor;
 
-
+        //Activates like a normal underground biome depending on height. It also activates when the player steps in front of certain wall types
         public override bool IsBiomeActive(Player player)
         {
-            bool b1 = (player.ZoneRockLayerHeight || player.ZoneDirtLayerHeight) && ModContent.GetInstance<DragonBurrowTileCount>().DBCount >= 50;
+            bool b1 = (player.ZoneRockLayerHeight || player.ZoneDirtLayerHeight) && ModContent.GetInstance<DragonBurrowTileCount>().DBCount >= 50 
+                || (Framing.GetTileSafely(player.Center.ToTileCoordinates()).WallType == ModContent.WallType<VolcanicRockWallPlaced>() || Framing.GetTileSafely(player.Center.ToTileCoordinates()).WallType == WallID.Lavafall)
+                && Framing.GetTileSafely(player.Center.ToTileCoordinates()).WallType != ModContent.WallType<VolcanicRockWall2Placed>() && ModContent.GetInstance<DragonBurrowTileCount>().DBCount >= 50;
             return b1;
         }
     }

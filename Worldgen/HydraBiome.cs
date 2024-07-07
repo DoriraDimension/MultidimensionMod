@@ -189,7 +189,8 @@ namespace MultidimensionMod.Worldgen
             {
                 //Volcano
                 [new Color(0, 0, 255)] = ModContent.WallType<DankDepthstoneWallPlaced>(), //Main material
-                [new Color(195, 0, 130)] = ModContent.WallType<AwakenedRockWallPlaced>(), //Akuma room
+                [new Color(0, 0, 202)] = ModContent.WallType<DankDepthstoneWall2Placed>(), //top of the lake
+                [new Color(195, 0, 130)] = ModContent.WallType<AwakenedRockWallPlaced>(), //Yamata room
                 [new Color(0, 116, 246)] = WallID.Waterfall, //Self explanatory
                 //Pagoda
                 [new Color(88, 55, 146)] = WallID.WoodenFence,
