@@ -77,7 +77,7 @@ namespace MultidimensionMod.NPCs.Dungeon
             {
                 NPC.chaseable = true;
                 Shootsies++;
-				if (Shootsies >= 200)
+				if (Shootsies >= 150)
 				{
 					SoundEngine.PlaySound(SoundID.DD2_SonicBoomBladeSlash with { Volume = 0.4f }, NPC.position);
 					Vector2 velocity = Vector2.Normalize(player.Center - NPC.Center) * 10f;
@@ -131,7 +131,9 @@ namespace MultidimensionMod.NPCs.Dungeon
 			}
 		}
 
-		public override void FindFrame(int frameHeight)
+        public override bool CanHitPlayer(Player target, ref int cooldownSlot) => NPC.life == NPC.lifeMax ? false : true;
+
+        public override void FindFrame(int frameHeight)
 		{
 			NPC.frameCounter += 1.0;
 			if (NPC.frameCounter >= 5.0)

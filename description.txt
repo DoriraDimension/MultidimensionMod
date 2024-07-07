@@ -31,10 +31,11 @@ Developer:
 
 -Dorira  owner/spriter/coder/lore writer
 -DrVoodoo  musician
--Enigmatic  spriting
--TailsTheFox92  coding
--red.laser  coding
-
+-Enigmatic  spriter
+-TailsTheFox92  coder
+-red.laser  coder
+-CrimsonCB  spriter
+-Arc  spriter/coder
 
 Contributor:
 
