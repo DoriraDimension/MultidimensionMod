@@ -20,6 +20,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             Main.tileMerge[Type][ModContent.TileType<PagodaColumnPlaced>()] = true;
             Main.tileMergeDirt[Type] = true;
             Main.tileBlockLight[Type] = true;
+            TileID.Sets.GeneralPlacementTiles[Type] = false;
             HitSound = SoundID.Tink;
             DustType = ModContent.DustType<RazewoodDust>();
             AddMapEntry(new Color(50, 25, 12));

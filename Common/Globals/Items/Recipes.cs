@@ -648,6 +648,13 @@ namespace MultidimensionMod.Common.Globals.Items
             thereIsBugsUnderYourIronSkinTakeItOff.AddTile(TileID.Bottles);
             thereIsBugsUnderYourIronSkinTakeItOff.Register();
 
+            Recipe thereIsMoreBugsUnderYourIronSkinTakeItOff = Recipe.Create(ItemID.IronskinPotion, 3);
+            thereIsMoreBugsUnderYourIronSkinTakeItOff.AddIngredient(ItemID.BottledWater);
+            thereIsMoreBugsUnderYourIronSkinTakeItOff.AddIngredient(ModContent.ItemType<Yellow>());
+            thereIsMoreBugsUnderYourIronSkinTakeItOff.AddIngredient(ItemID.LeadOre, 3);
+            thereIsMoreBugsUnderYourIronSkinTakeItOff.AddTile(TileID.Bottles);
+            thereIsMoreBugsUnderYourIronSkinTakeItOff.Register();
+
             Recipe life = Recipe.Create(ItemID.LifeforcePotion, 3);
             life.AddIngredient(ItemID.BottledWater);
             life.AddIngredient(ModContent.ItemType<Red>());

@@ -34,7 +34,7 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             Main.tileBlockLight[Type] = true;
             Main.tileLighted[Type] = true;
             AddMapEntry(new Color(195, 125, 56));
-            MineResist = 1.5f;
+            MineResist = 0.5f;
             DustType = DustID.Sand;
         }
         public override void FloorVisuals(Player player)

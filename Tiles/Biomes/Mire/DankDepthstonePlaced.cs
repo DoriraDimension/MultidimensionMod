@@ -33,6 +33,7 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             Main.tileLighted[Type] = false;
             Main.tileBlockLight[Type] = true;
             HitSound = SoundID.Tink;
+            TileID.Sets.GeneralPlacementTiles[Type] = false;
             TileID.Sets.JungleSpecial[Type] = true;
             DustType = ModContent.DustType<Dusts.AbyssiumDust>();
             AddMapEntry(new Color(27, 19, 50));
