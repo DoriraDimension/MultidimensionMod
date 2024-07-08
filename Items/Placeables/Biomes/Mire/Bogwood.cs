@@ -37,10 +37,10 @@ namespace MultidimensionMod.Items.Placeables.Biomes.Mire
             .AddTile(TileID.WorkBenches)
             .Register();
 
-            /*CreateRecipe()
+            CreateRecipe()
             .AddIngredient(ModContent.ItemType<Furniture.BogwoodF.BogwoodPlatform>(), 2)
             .AddTile(TileID.WorkBenches)
-            .Register();*/
+            .Register();
         }
     }
 }

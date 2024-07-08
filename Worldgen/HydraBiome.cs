@@ -20,6 +20,7 @@ using Terraria.IO;
 using ReLogic.Content;
 using Terraria.GameContent.Generation;
 using MultidimensionMod.Tiles.Furniture.Razewood;
+using MultidimensionMod.Tiles.Furniture.Bogwood;
 
 namespace MultidimensionMod.Worldgen
 {
@@ -166,34 +167,34 @@ namespace MultidimensionMod.Worldgen
 
             Dictionary<Color, int> colorToTile = new Dictionary<Color, int>
             {
-                //Volcano
+                //Lake
                 [new Color(0, 0, 255)] = ModContent.TileType<DankDepthstonePlaced>(), //Main material
                 [new Color(4, 172, 128)] = ModContent.TileType<DepthMoss>(), //Moss
                 [new Color(12, 150, 71)] = ModContent.TileType<DenseBiomatterPlaced>(), //Hardmode obstacle
-                [new Color(195, 0, 130)] = ModContent.TileType<AwakenedRockPlaced>(), //Akuma room block
-                //[new Color(97, 20, 75)] = ModContent.TileType<VolcanicRockDensePlaced>(), //Broodmother and Ashe nests. Later replaced with the Nest Block
+                [new Color(195, 0, 130)] = ModContent.TileType<AwakenedRockPlaced>(), //Yamata room block
+                //[new Color(97, 20, 75)] = ModContent.TileType<VolcanicRockDensePlaced>(), //e
                 [new Color(7, 42, 111)] = ModContent.TileType<AbyssiumOrePlaced>(), // Ore scattered around
                 [new Color(0, 116, 246)] = ModContent.TileType<DepthIce>(), // Kyanite Crystal under pillar
                 [new Color(0, 131, 255)] = TileID.WaterDrip, // Water dropper
-                //Pagoda
+                //Island and bridges
                 [new Color(244, 41, 86)] = ModContent.TileType<AbyssGrass>(), //Island Grass
                 [new Color(0, 61, 208)] = ModContent.TileType<MireGrass>(),   //Grass on the shores
                 [new Color(88, 55, 146)] = ModContent.TileType<BogwoodPlaced>(), //Bridge Wood
                 [new Color(199, 199, 206)] = ModContent.TileType<DarkmudPlaced>(), //Lake Mud
-                [new Color(59, 30, 111)] = TileID.WoodenBeam, //Bridge Support
+                [new Color(59, 30, 111)] = ModContent.TileType<BogwoodBeamPlaced>(), //Bridge Support
                 [new Color(150, 150, 150)] = -2, //turn into air
                 [Color.Black] = -1 //don't touch when genning
             };
 
             Dictionary<Color, int> colorToWall = new Dictionary<Color, int>
             {
-                //Volcano
+                //Lake
                 [new Color(0, 0, 255)] = ModContent.WallType<DankDepthstoneWallPlaced>(), //Main material
                 [new Color(0, 0, 202)] = ModContent.WallType<DankDepthstoneWall2Placed>(), //top of the lake
                 [new Color(195, 0, 130)] = ModContent.WallType<AwakenedRockWallPlaced>(), //Yamata room
                 [new Color(0, 116, 246)] = WallID.Waterfall, //Self explanatory
-                //Pagoda
-                [new Color(88, 55, 146)] = WallID.WoodenFence,
+                //Island and bridges
+                [new Color(88, 55, 146)] = ModContent.WallType<BogwoodFencePlaced>(),
                 [Color.Black] = -1 //don't touch when genning				
             };
 

@@ -7,6 +7,9 @@ using Terraria.ModLoader;
 using Terraria.Localization;
 using Terraria.ObjectData;
 using Terraria.GameContent.ObjectInteractions;
+using MultidimensionMod.Dusts;
+using MultidimensionMod.Items.Placeables.Furniture.RedMush;
+using MultidimensionMod.Tiles.Furniture.RedMush;
 
 namespace MultidimensionMod.Tiles.Furniture.Razewood
 {
@@ -49,6 +52,8 @@ namespace MultidimensionMod.Tiles.Furniture.Razewood
             AdjTiles = new int[] { TileID.ClosedDoor };
         }
 
+        public override bool Slope(int i, int j) => false;
+
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings) => true;
 
 
@@ -73,8 +78,15 @@ namespace MultidimensionMod.Tiles.Furniture.Razewood
             Main.tileSolid[Type] = false;
             Main.tileLavaDeath[Type] = true;
             Main.tileNoSunLight[Type] = true;
+            TileID.Sets.HousingWalls[Type] = true;
+            TileID.Sets.HasOutlines[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
-            TileID.Sets.OpenDoorID[Type] = ModContent.TileType<RazewoodDoorClosed>();
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsDoor);
+            DustType = ModContent.DustType<RazewoodDust>();
+            AdjTiles = new int[] { TileID.OpenDoor };
+            TileID.Sets.CloseDoorID[Type] = ModContent.TileType<RazewoodDoorClosed>();
+            RegisterItemDrop(ModContent.ItemType<Items.Placeables.Furniture.RazewoodF.RazewoodDoor>(), 0);
+            AddMapEntry(new Color(120, 90, 0));
             TileObjectData.newTile.Width = 2;
             TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.Origin = new Point16(0, 0);
@@ -82,7 +94,7 @@ namespace MultidimensionMod.Tiles.Furniture.Razewood
             TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile, 1, 0);
             TileObjectData.newTile.UsesCustomCanPlace = true;
             TileObjectData.newTile.LavaDeath = true;
-            TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16 };
+            TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16 };
             TileObjectData.newTile.CoordinateWidth = 16;
             TileObjectData.newTile.CoordinatePadding = 2;
             TileObjectData.newTile.StyleHorizontal = true;
@@ -114,17 +126,9 @@ namespace MultidimensionMod.Tiles.Furniture.Razewood
             TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceLeft;
             TileObjectData.addAlternate(1);
             TileObjectData.addTile(Type);
-            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsDoor);
-            TileID.Sets.HousingWalls[Type] = true; //needed for non-solid blocks to count as walls
-            TileID.Sets.HasOutlines[Type] = true;
-            LocalizedText name = CreateMapEntryName();
-            //name.SetDefault("Razewood Door");
-            AddMapEntry(new Color(205, 62, 12), name);
-            DustType = ModContent.DustType<Dusts.RazewoodDust>();
-            RegisterItemDrop(ModContent.ItemType<Items.Placeables.Furniture.RazewoodF.RazewoodDoor>(), 0);
-            AdjTiles = new int[] { TileID.OpenDoor };
         }
 
+        public override bool Slope(int i, int j) => false;
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings) => true;
 
 
