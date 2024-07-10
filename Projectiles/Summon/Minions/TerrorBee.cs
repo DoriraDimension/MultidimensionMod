@@ -29,7 +29,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 			Projectile.tileCollide = false;
 			Projectile.friendly = true;
 			Projectile.minion = true;
-			Projectile.minionSlots = 1f;
+			Projectile.minionSlots = 2f;
 			Projectile.penetrate = -1;
 			Projectile.usesLocalNPCImmunity = true;
 			Projectile.localNPCHitCooldown = 10;
