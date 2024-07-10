@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\buffs\\minions\\twinprayerbuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:buffs\\minions\\twinprayerbuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\buffs\\minions\\prayerbuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:buffs\\minions\\prayerbuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\summon\\sentries\\prayingtwins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\summon\\sentries\\prayingtwins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\summon\\sentries\\prayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\summon\\sentries\\prayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\npcs\\bosses\\mushroommonarch\\mushroommonarch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:npcs\\bosses\\mushroommonarch\\mushroommonarch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -26,50 +30,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MushroomMonarch.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\Bosses\\MushroomMonarch\\MushroomMonarch.cs",
-              "RelativeDocumentMoniker": "NPCs\\Bosses\\MushroomMonarch\\MushroomMonarch.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\Bosses\\MushroomMonarch\\MushroomMonarch.cs",
-              "RelativeToolTip": "NPCs\\Bosses\\MushroomMonarch\\MushroomMonarch.cs",
-              "ViewState": "AQIAAPIAAAAAAAAAAAAtwAIBAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T01:27:42.612Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PrayingTwins.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Summon\\Sentries\\PrayingTwins.cs",
-              "RelativeDocumentMoniker": "Projectiles\\Summon\\Sentries\\PrayingTwins.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Summon\\Sentries\\PrayingTwins.cs",
-              "RelativeToolTip": "Projectiles\\Summon\\Sentries\\PrayingTwins.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAgwCgAAAARAAAA",
+              "Title": "TwinPrayerBuff.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Minions\\TwinPrayerBuff.cs",
+              "RelativeDocumentMoniker": "Buffs\\Minions\\TwinPrayerBuff.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Minions\\TwinPrayerBuff.cs",
+              "RelativeToolTip": "Buffs\\Minions\\TwinPrayerBuff.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB0AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T01:24:49.219Z",
+              "WhenOpened": "2024-07-10T15:31:37.811Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Prayer.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Summon\\Sentries\\Prayer.cs",
-              "RelativeDocumentMoniker": "Projectiles\\Summon\\Sentries\\Prayer.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Summon\\Sentries\\Prayer.cs",
-              "RelativeToolTip": "Projectiles\\Summon\\Sentries\\Prayer.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAgwCgAAAARAAAA",
+              "Title": "PrayerBuff.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Minions\\PrayerBuff.cs",
+              "RelativeDocumentMoniker": "Buffs\\Minions\\PrayerBuff.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Minions\\PrayerBuff.cs",
+              "RelativeToolTip": "Buffs\\Minions\\PrayerBuff.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwAkAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T01:24:47.722Z",
+              "WhenOpened": "2024-07-10T15:31:33.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PrayingTwins.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Summon\\Sentries\\PrayingTwins.cs",
+              "RelativeDocumentMoniker": "Projectiles\\Summon\\Sentries\\PrayingTwins.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Summon\\Sentries\\PrayingTwins.cs",
+              "RelativeToolTip": "Projectiles\\Summon\\Sentries\\PrayingTwins.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAowDUAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T15:31:04.197Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Prayer.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Summon\\Sentries\\Prayer.cs",
+              "RelativeDocumentMoniker": "Projectiles\\Summon\\Sentries\\Prayer.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Summon\\Sentries\\Prayer.cs",
+              "RelativeToolTip": "Projectiles\\Summon\\Sentries\\Prayer.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAwwDUAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T15:31:01.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "en-US.hjson",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US.hjson",

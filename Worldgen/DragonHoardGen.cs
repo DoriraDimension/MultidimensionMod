@@ -64,7 +64,7 @@ namespace MultidimensionMod.Worldgen
                     }
                 }
             }
-            float PlaceBiomeY = e - 50;
+            float PlaceBiomeY = e - 60;
 
             Mod mod = ModContent.GetInstance<MultidimensionMod>();
             //--- Initial variable creation

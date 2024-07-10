@@ -14,7 +14,7 @@ using MultidimensionMod.Base;
 using Terraria.GameContent.Generation;
 using static tModPorter.ProgressUpdate;
 
-namespace MultidimensionMod.Biomes
+namespace MultidimensionMod.Worldgen
 {
     class FUGen : ModSystem
     {
@@ -34,8 +34,10 @@ namespace MultidimensionMod.Biomes
 
 		private void FrozenUnderworldGen(GenerationProgress progress, GameConfiguration configuration)
         {
-			progress.Message = "Freezing Hell";
-			float PlaceBiomeX = (int)(Main.maxTilesX / 7f);
+            int worldSize = GetWorldSize();
+            float biomePlacement = worldSize == 3 ? 12.5f : worldSize == 2 ? 8.5f : 8.5f;
+            progress.Message = "Freezing Hell";
+			float PlaceBiomeX = (int)(Main.maxTilesX / biomePlacement);
 
 			int e = Main.UnderworldLayer;
 			while (Main.tile[(int)PlaceBiomeX, e] != null && !Main.tile[(int)PlaceBiomeX, e].HasTile)
@@ -65,10 +67,9 @@ namespace MultidimensionMod.Biomes
 			ushort ash = (ushort)ModContent.TileType<ColdAsh>(), hellstone = (ushort)ModContent.TileType<AbyssalHellstonePlaced>(), hellstoneBrick = (ushort)ModContent.TileType<AbyssalHellstoneBrickPlaced>(),
             obsidianBrick = (ushort)ModContent.TileType<GlazedObsidianBrickPlaced>(), lava = (ushort)ModContent.TileType<SolidMagmaPlaced>(), grass = (ushort)ModContent.TileType<ColdAshGrass>(), 
 			vines = (ushort)ModContent.TileType<ColdAshVines>(), hellstoneBrickWalls = (ushort)ModContent.WallType<AbyssalHellstoneBrickWallPlaced>();
+            int biomeRadius = worldSize == 3 ? 1000 : worldSize == 2 ? 800 : 600;
 
-			int biomeRadius = 675;
-
-			Point originCenter = new((int)PlaceBiomeX, (int)PlaceBiomeY);
+            Point originCenter = new((int)PlaceBiomeX, (int)PlaceBiomeY);
 			// TILE CONVERSIONS
 			WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
 			{
@@ -166,8 +167,10 @@ namespace MultidimensionMod.Biomes
 
 		private void RemoveLavaOnlyInHell(GenerationProgress progress, GameConfiguration configuration)
 		{
+            int worldSize = GetWorldSize();
+            float biomePlacement = worldSize == 3 ? 14.5f : worldSize == 2 ? 9f : 8.5f;
             progress.Message = "Getting rid of lava";
-            float PlaceBiomeX = (int)(Main.maxTilesX / 7f);
+            float PlaceBiomeX = (int)(Main.maxTilesX / biomePlacement);
 
             int e = Main.UnderworldLayer;
             while (Main.tile[(int)PlaceBiomeX, e] != null && !Main.tile[(int)PlaceBiomeX, e].HasTile)
@@ -196,8 +199,8 @@ namespace MultidimensionMod.Biomes
 
             ushort lava = (ushort)ModContent.TileType<SolidMagmaPlaced>();
 
-            int lavaWidth = 1300;
-			int lavaHeight = 300;
+            int lavaWidth = worldSize == 3 ? 2000 : worldSize == 2 ? 1600 : 1250;
+            int lavaHeight = 300;
 			int petrifiedH = 100;
 			int petrifiedW = 1300;
 
@@ -215,7 +218,15 @@ namespace MultidimensionMod.Biomes
             new SetModTile(lava, true, true)
             }));*/
         }
-	}
+
+        public static int GetWorldSize()
+        {
+            if (Main.maxTilesX == 4200) { return 1; }
+            else if (Main.maxTilesX == 6400) { return 2; }
+            else if (Main.maxTilesX == 8400) { return 3; }
+            return 1; //unknown size, assume small
+        }
+    }
 	public class GenUtils
 	{
 		public static void ObjectPlace(Point Origin, int x, int y, int TileType, int style = 0, int direction = -1)

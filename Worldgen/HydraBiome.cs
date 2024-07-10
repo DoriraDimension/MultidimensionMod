@@ -21,6 +21,7 @@ using ReLogic.Content;
 using Terraria.GameContent.Generation;
 using MultidimensionMod.Tiles.Furniture.Razewood;
 using MultidimensionMod.Tiles.Furniture.Bogwood;
+using static Terraria.GameContent.Animations.IL_Actions.Sprites;
 
 namespace MultidimensionMod.Worldgen
 {
@@ -66,7 +67,7 @@ namespace MultidimensionMod.Worldgen
                     }
                 }
             }
-            float PlaceBiomeY = e - 50;
+            float PlaceBiomeY = e - 60;
 
             Mod mod = ModContent.GetInstance<MultidimensionMod>();
             //--- Initial variable creation
@@ -76,7 +77,6 @@ namespace MultidimensionMod.Worldgen
 
             int worldSize = GetWorldSize();
             int biomeRadius = worldSize == 3 ? 440 : worldSize == 2 ? 380 : 180;
-
             Point originCenter = new((int)PlaceBiomeX, (int)PlaceBiomeY);
             // TILE CONVERSIONS
             WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
@@ -250,6 +250,7 @@ namespace MultidimensionMod.Worldgen
             //WorldGen.PlaceObject(volcanoPoint.X + 46, volcanoPoint.Y + 265, ModContent.TileType<DragonEgg>(), mute: true);
             //WorldGen.PlaceObject(volcanoPoint.X + 41, volcanoPoint.Y + 265, ModContent.TileType<DragonEgg>(), mute: true);
             //WorldGen.PlaceObject(volcanoPoint.X + 33, volcanoPoint.Y + 265, ModContent.TileType<DragonEgg>(), mute: true);
+
         }
 
         public static int GetWorldSize()

@@ -27,7 +27,7 @@ namespace MultidimensionMod.Buffs.Minions
         public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref NPC.HitModifiers modifiers)
         {
             Player player = Main.player[projectile.owner];
-            if (player.HasBuff<PrayerBuff>() && !projectile.npcProj && !projectile.trap && (projectile.minion || ProjectileID.Sets.MinionShot[projectile.type]))
+            if (player.HasBuff<TwinPrayerBuff>() && !projectile.npcProj && !projectile.trap && (projectile.minion || ProjectileID.Sets.MinionShot[projectile.type]))
             {
                 if (Main.rand.NextBool(10))
                 {
@@ -35,7 +35,7 @@ namespace MultidimensionMod.Buffs.Minions
                 }
                 if (Main.rand.NextBool(20))
                 {
-                    Item.NewItem(npc.GetSource_Loot(), npc.getRect(), ItemID.Star, noGrabDelay: true);
+                    Item.NewItem(npc.GetSource_Loot(), npc.getRect(), ItemID.Heart, noGrabDelay: true);
                 }
             }
         }

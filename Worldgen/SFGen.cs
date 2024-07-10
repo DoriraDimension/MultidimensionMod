@@ -12,9 +12,9 @@ using Terraria.WorldBuilding;
 using Terraria.ModLoader;
 using MultidimensionMod.Base;
 using Terraria.GameContent.Generation;
-using static tModPorter.ProgressUpdate;
+using static Terraria.WorldGen;
 
-namespace MultidimensionMod.Biomes
+namespace MultidimensionMod.Worldgen
 {
     class SFGen : ModSystem
     {
@@ -61,8 +61,8 @@ namespace MultidimensionMod.Biomes
             ushort mycelium = (ushort)ModContent.TileType<Mycelium>(), sand = (ushort)ModContent.TileType<MyceliumSandPlaced>(),
                 sandstone = (ushort)ModContent.TileType<MyceliumSandstonePlaced>(), hardenedSand = (ushort)ModContent.TileType<MyceliumHardsandPlaced>(), 
                 sporeStone = (ushort)ModContent.TileType<SporeStonePlaced>(), sandstoneWall = (ushort)ModContent.WallType<MyceliumSandstoneWallPlaced>(), hardenedSandWall = (ushort)ModContent.WallType<MyceliumHardsandWallPlaced>();
-
-            int biomeRadius = 280;
+            int worldSize = GetWorldSize();
+            int biomeRadius = worldSize == 3 ? 300 : worldSize == 2 ? 260 : 180;
 
             Point originCenter = new((int)PlaceBiomeX, (int)PlaceBiomeY);
             // TILE CONVERSIONS
@@ -76,21 +76,21 @@ namespace MultidimensionMod.Biomes
             WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
             {
                 new InWorld(),
-                new Modifiers.OnlyTiles(new ushort[]{ TileID.Sand }),
+                new Modifiers.OnlyTiles(new ushort[]{ TileID.Sand, TileID.Crimsand, TileID.Ebonsand }),
                 new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
                 new SetModTile(sand, true, true)
             }));
             WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
             {
                 new InWorld(),
-                new Modifiers.OnlyTiles(new ushort[]{ TileID.HardenedSand }),
+                new Modifiers.OnlyTiles(new ushort[]{ TileID.HardenedSand, TileID.CorruptHardenedSand, TileID.CrimsonHardenedSand }),
                 new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
                 new SetModTile(hardenedSand, true, true)
             }));
             WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
             {
                 new InWorld(),
-                new Modifiers.OnlyTiles(new ushort[]{ TileID.Sandstone}),
+                new Modifiers.OnlyTiles(new ushort[]{ TileID.Sandstone, TileID.CorruptSandstone,TileID. CrimsonSandstone}),
                 new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
                 new SetModTile(sandstone, true, true)
             }));
@@ -116,6 +116,14 @@ namespace MultidimensionMod.Biomes
                 new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
                 new PlaceModWall(sandstoneWall, true)
             }));
+        }
+
+        public static int GetWorldSize()
+        {
+            if (Main.maxTilesX == 4200) { return 1; }
+            else if (Main.maxTilesX == 6400) { return 2; }
+            else if (Main.maxTilesX == 8400) { return 3; }
+            return 1; //unknown size, assume small
         }
     }
 }
