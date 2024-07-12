@@ -7,13 +7,14 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using ReLogic.Content;
 using MultidimensionMod.Tiles.Biomes.Mire;
+using Terraria.Audio;
 
 namespace MultidimensionMod.Tiles.Ores
 {
     public class AbyssiumOrePlaced : ModTile
     {
         private Asset<Texture2D> glowTexture;
-
+        public static readonly SoundStyle MineSound = new SoundStyle("MultidimensionMod/Sounds/Tiles/DreadsoilHit", 3);
         public override void SetStaticDefaults()
         {
             Main.tileSolid[Type] = true;
@@ -33,7 +34,7 @@ namespace MultidimensionMod.Tiles.Ores
             Main.tileMerge[TileID.Mud][Type] = true;
             Main.tileMerge[Type][TileID.Mud] = true;
             TileID.Sets.JungleSpecial[Type] = true;
-            HitSound = SoundID.Tink;
+            HitSound = AbyssiumOrePlaced.MineSound;
             Main.tileLighted[Type] = true; 
             DustType = ModContent.DustType<AbyssiumDust>();
             LocalizedText name = CreateMapEntryName();

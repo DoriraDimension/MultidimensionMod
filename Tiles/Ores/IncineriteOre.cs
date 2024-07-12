@@ -8,13 +8,14 @@ using Terraria.ModLoader;
 using Terraria.Localization;
 using Terraria.ID;
 using ReLogic.Content;
+using Terraria.Audio;
 
 namespace MultidimensionMod.Tiles.Ores
 {
     public class IncineriteOre : ModTile
     {
         private Asset<Texture2D> glowTexture;
-
+        public static readonly SoundStyle MineSound = new SoundStyle("MultidimensionMod/Sounds/Tiles/CinderiteHit", 3);
         public override void SetStaticDefaults()
         {
             Main.tileSolid[Type] = true;
@@ -25,7 +26,7 @@ namespace MultidimensionMod.Tiles.Ores
             Main.tileMerge[Type][ModContent.TileType<VolcanicRockPlaced>()] = true;
             Main.tileBlockLight[Type] = true;  //true for block to emit light
             Main.tileLighted[Type] = true;
-            HitSound = SoundID.Tink;  
+            HitSound = IncineriteOre.MineSound;
             DustType = ModContent.DustType<IncineriteDust>();
             LocalizedText name = CreateMapEntryName();
             //name.SetDefault("Incinerite Ore");
