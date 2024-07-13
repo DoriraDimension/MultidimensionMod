@@ -4046,6 +4046,36 @@ Mods: {
 				DisplayName: Bogwood Work Bench
 				Tooltip: ""
 			}
+
+			BogwoodChestplate: {
+				DisplayName: Bogwood Chestplate
+				Tooltip: ""
+			}
+
+			BogwoodHat: {
+				DisplayName: Bogwood Hat
+				Tooltip: ""
+			}
+
+			BogwoodLeggings: {
+				DisplayName: Bogwood Leggings
+				Tooltip: ""
+			}
+
+			BogwoodHammer: {
+				DisplayName: Bogwood Hammer
+				Tooltip: ""
+			}
+
+			BogwoodBokken: {
+				DisplayName: Bogwood Bokken
+				Tooltip: ""
+			}
+
+			BogwoodYumi: {
+				DisplayName: Bogwood Yumi
+				Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
