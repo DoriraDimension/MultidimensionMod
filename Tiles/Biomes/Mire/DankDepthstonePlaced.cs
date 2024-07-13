@@ -5,11 +5,13 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using System;
+using Terraria.Audio;
 
 namespace MultidimensionMod.Tiles.Biomes.Mire
 {
     public class DankDepthstonePlaced : ModTile
     {
+        public static readonly SoundStyle MineSound = new SoundStyle("MultidimensionMod/Sounds/Tiles/DankHit", 3);
         public override void SetStaticDefaults()
         {
             Main.tileSolid[Type] = true;
@@ -32,7 +34,7 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             Main.tileBlendAll[Type] = false;
             Main.tileLighted[Type] = false;
             Main.tileBlockLight[Type] = true;
-            HitSound = SoundID.Tink;
+            HitSound = MineSound;
             TileID.Sets.GeneralPlacementTiles[Type] = false;
             TileID.Sets.JungleSpecial[Type] = true;
             DustType = ModContent.DustType<Dusts.AbyssiumDust>();
