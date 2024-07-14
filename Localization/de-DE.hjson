@@ -764,11 +764,13 @@ Mods: {
 			}
 
 			Blight2: {
-				// DisplayName: Mad Titan's Soul
+				// DisplayName: Soul of an Ascended Mind
 				/* Tooltip:
 					'''
-					The soul of a madness titan, their unique souls made them resist death through mind incineration.
-					It seems to currently be carried by a Madness Gazer.
+					The soul of a living brain that stalks madness.
+					This soul did not form naturally,
+					it was planted into this orignally soulless creature by force.
+					Why it is this way is not known.
 					''' */
 			}
 
@@ -4075,6 +4077,11 @@ Mods: {
 			BogwoodYumi: {
 				// DisplayName: Bogwood Yumi
 				// Tooltip: ""
+			}
+
+			MadnessMonolith: {
+				// DisplayName: Madness Monolith
+				// Tooltip: Simulates madness energy lingering in the air
 			}
 		}
 

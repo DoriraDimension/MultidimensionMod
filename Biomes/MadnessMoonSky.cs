@@ -47,7 +47,7 @@ namespace MultidimensionMod.Biomes
 			{
 				string skyTexture = "MadnessMoonSky";
 				string eyeTexture = "MadnessMoonEye";
-				if (!Main.dayTime && MDWorld.MadnessMoon)
+				if (!Main.dayTime)
 				{
 					skyTexture = "MadnessMoonSky";
 					eyeTexture = "MadnessMoonEye";
@@ -58,7 +58,7 @@ namespace MultidimensionMod.Biomes
 				{
 					moonAlpha = 0;
 				}
-				if (!Main.dayTime && MDWorld.MadnessMoon)
+				if (!Main.dayTime)
 				{
 					if (moonAlpha < 1f)
 						moonAlpha += 0.05f;

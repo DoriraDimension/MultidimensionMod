@@ -34,7 +34,7 @@ namespace MultidimensionMod.NPCs.Critters
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.knockBackResist = 0.8f;
-            NPC.value = 1000f;
+            NPC.value = 10f;
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
