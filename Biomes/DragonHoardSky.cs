@@ -77,10 +77,6 @@ namespace MultidimensionMod.Biomes
                     opacity = 0f;
             }
         }
-        public override float GetCloudAlpha()
-        {
-            return (1f - opacity) * 0.97f + 0.03f;
-        }
 
         private bool skyActive;
 

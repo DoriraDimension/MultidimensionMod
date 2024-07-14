@@ -7,7 +7,7 @@ namespace MultidimensionMod.Dusts
 {
     public class AshRain : ModDust
 	{
-		public override void OnSpawn(Dust dust)
+		/*public override void OnSpawn(Dust dust)
 		{
             if (!Main.dayTime)
             {
@@ -60,6 +60,6 @@ namespace MultidimensionMod.Dusts
         public override Color? GetAlpha(Dust dust, Color lightColor)
         {
             return new Color(190, 30, 30, 25);
-        }
+        }*/
     }
 }

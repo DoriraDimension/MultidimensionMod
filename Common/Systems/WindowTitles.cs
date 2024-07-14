@@ -26,13 +26,13 @@ namespace MultidimensionMod.Common.Systems
             {
                  "Press space to live",
                  "Bible III, the coming of shroom",
-                 "Now with a 80 % chance to go mad",
+                 "Now with an 80 % chance to go mad",
                  "The nostalgian dumpster",
                  "You are the harmony to my discord",
                  "Mushroom family drama",
                  "HE is always watching",
                  "A smile at night",
-                 "That's the fattest dragon I've ever seen in my life",
+                 "Now with less structure consumption",
                  "That was chaotic"
             };
 

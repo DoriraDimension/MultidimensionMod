@@ -18,7 +18,8 @@ namespace MultidimensionMod.Common.Globals.Items
 			#region Accessories
 			Recipe aglet = Recipe.Create(ItemID.Aglet); 
 			aglet.AddRecipeGroup(RecipeGroupID.IronBar, 5);
-			aglet.AddTile(TileID.Anvils);
+            aglet.AddRecipeGroup(GoldPlatinum, 2);
+            aglet.AddTile(TileID.Anvils);
 			aglet.Register();
 
 			Recipe anklet = Recipe.Create(ItemID.AnkletoftheWind);
@@ -73,21 +74,23 @@ namespace MultidimensionMod.Common.Globals.Items
 
 			Recipe hermes = Recipe.Create(ItemID.HermesBoots); 
 			hermes.AddIngredient(ItemID.Leather, 5);
-			hermes.AddIngredient(ItemID.SwiftnessPotion, 2);
-			hermes.AddTile(TileID.WorkBenches);
+            hermes.AddIngredient(ItemID.Silk, 10);
+            hermes.AddIngredient(ItemID.SwiftnessPotion, 2);
+			hermes.AddTile(TileID.TinkerersWorkbench);
 			hermes.Register();
 
 			Recipe skates = Recipe.Create(ItemID.IceSkates); 
-			skates.AddIngredient(ItemID.Leather, 5);
+			skates.AddIngredient(ItemID.Leather, 8);
 			skates.AddIngredient(ModContent.ItemType<VikingRelic>(), 3);
 			skates.AddTile(TileID.WorkBenches);
 			skates.Register();
 
 			Recipe waterwalk = Recipe.Create(ItemID.WaterWalkingBoots); 
 			waterwalk.AddIngredient(ItemID.Leather, 5);
-			waterwalk.AddIngredient(ItemID.WaterWalkingPotion, 3);
+			waterwalk.AddIngredient(ItemID.WaterWalkingPotion, 6);
 			waterwalk.AddIngredient(ItemID.Starfish, 5);
-			waterwalk.AddTile(TileID.WorkBenches);
+            waterwalk.AddIngredient(ModContent.ItemType<AbyssiumBar>(), 4);
+            waterwalk.AddTile(TileID.TinkerersWorkbench);
 			waterwalk.Register();
 
 			Recipe lava = Recipe.Create(ItemID.LavaCharm);
@@ -124,16 +127,15 @@ namespace MultidimensionMod.Common.Globals.Items
 			panic.Register();
 
 			Recipe potionStone = Recipe.Create(ItemID.PhilosophersStone);
-			potionStone.AddIngredient(ItemID.LifeCrystal, 2);
+			potionStone.AddIngredient(ItemID.LifeFruit);
 			potionStone.AddIngredient(ModContent.ItemType<Mushmatter>(), 3);
 			potionStone.AddIngredient(ItemID.GreaterHealingPotion, 5);
-			potionStone.AddIngredient(ModContent.ItemType<PotionofLife>());
 			potionStone.AddIngredient(ItemID.SoulofLight ,10);
 			potionStone.AddTile(TileID.CrystalBall);
 			potionStone.Register();
 
 			Recipe longImmune = Recipe.Create(ItemID.CrossNecklace);
-			longImmune.AddRecipeGroup(GoldPlatinum, 8);
+			longImmune.AddIngredient(ItemID.HallowedBar, 8);
 			longImmune.AddIngredient(ItemID.Chain);
 			longImmune.AddIngredient(ItemID.UnicornHorn);
 			longImmune.AddIngredient(ItemID.SoulofLight, 3);
@@ -143,23 +145,32 @@ namespace MultidimensionMod.Common.Globals.Items
 			Recipe rose = Recipe.Create(ItemID.ObsidianRose);
 			rose.AddIngredient(ItemID.JungleRose);
 			rose.AddIngredient(ItemID.Obsidian, 20);
-			rose.AddTile(TileID.Hellforge);
+            rose.AddIngredient(ModContent.ItemType<Incinerite>(), 12);
+            rose.AddTile(TileID.Hellforge);
 			rose.Register();
 
 			Recipe cloak = Recipe.Create(ItemID.StarCloak);
 			cloak.AddIngredient(ItemID.FallenStar, 8);
 			cloak.AddIngredient(ModContent.ItemType<DevilSilk>(), 8);
 			cloak.AddIngredient(ItemID.SoulofLight, 3);
-			cloak.AddTile(TileID.Loom);
+            cloak.AddIngredient(ItemID.SoulofMight, 2);
+            cloak.AddTile(TileID.Loom);
 			cloak.Register();
+
+            Recipe dive = Recipe.Create(ItemID.DivingHelmet);
+            dive.AddIngredient(ModContent.ItemType<AbyssiumBar>(), 14);
+            dive.AddIngredient(ModContent.ItemType<AbyssalHellstoneBar>(), 20);
+            dive.AddIngredient(ItemID.GillsPotion, 5);
+            dive.AddTile(TileID.MythrilAnvil);
+            dive.Register();
             #endregion
 
             #region Ankh Charm Mats
             Recipe bandage = Recipe.Create(ItemID.AdhesiveBandage);
 			bandage.AddIngredient(ItemID.Silk,10);
-			bandage.AddIngredient(ItemID.AncientCloth, 3);
 			bandage.AddIngredient(ItemID.Gel, 5);
-			bandage.AddTile(TileID.WorkBenches);
+            bandage.AddIngredient(ItemID.ButterflyDust);
+            bandage.AddTile(TileID.WorkBenches);
 			bandage.Register();
 
 			Recipe polish = Recipe.Create(ItemID.ArmorPolish);
@@ -172,7 +183,7 @@ namespace MultidimensionMod.Common.Globals.Items
 			Recipe bezoar = Recipe.Create(ItemID.Bezoar);
 			bezoar.AddIngredient(ItemID.Stinger, 3);
 			bezoar.AddIngredient(ItemID.Moonglow, 2);
-			bezoar.AddIngredient(ItemID.BeeWax, 5);
+			bezoar.AddIngredient(ItemID.BeeWax, 9);
 			bezoar.AddTile(TileID.Bottles);
 			bezoar.Register();
 
@@ -185,13 +196,14 @@ namespace MultidimensionMod.Common.Globals.Items
 			Recipe clock = Recipe.Create(ItemID.FastClock);
 			clock.AddIngredient(ItemID.Glass, 5);
 			clock.AddIngredient(ItemID.PearlstoneBlock, 25);
-			clock.AddIngredient(ItemID.PixieDust, 40);
+            clock.AddIngredient(ItemID.HallowedBar, 4);
+            clock.AddIngredient(ItemID.PixieDust, 50);
 			clock.AddTile(TileID.WorkBenches);
 			clock.Register();
 
 			Recipe scream = Recipe.Create(ItemID.Megaphone);
 			scream.AddRecipeGroup(Adamantitanium, 7);
-			scream.AddIngredient(ItemID.PixieDust, 25);
+			scream.AddIngredient(ItemID.PixieDust, 35);
 			scream.AddIngredient(ItemID.Wire, 14);
 			scream.AddTile(TileID.MythrilAnvil);
 			scream.Register();
@@ -200,7 +212,8 @@ namespace MultidimensionMod.Common.Globals.Items
 			nazar.AddIngredient(ItemID.Lens, 2);
 			nazar.AddIngredient(ItemID.SoulofNight, 10);
 			nazar.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 8);
-			nazar.AddTile(TileID.DemonAltar);
+            nazar.AddIngredient(ItemID.DarkShard, 2);
+            nazar.AddTile(TileID.DemonAltar);
 			nazar.Register();
 
 			Recipe map = Recipe.Create(ItemID.TrifoldMap);
@@ -228,18 +241,19 @@ namespace MultidimensionMod.Common.Globals.Items
 			radar.Register();
 
 			Recipe compass = Recipe.Create(ItemID.Compass);
-			compass.AddIngredient(ModContent.ItemType<VikingRelic>(), 3);
+			compass.AddIngredient(ModContent.ItemType<VikingRelic>(), 6);
 			compass.AddRecipeGroup(CopperTin);
-			compass.AddTile(TileID.Anvils);
+			compass.AddTile(TileID.TinkerersWorkbench);
 			compass.Register();
 
 			Recipe deep = Recipe.Create(ItemID.DepthMeter);
 			deep.AddRecipeGroup(RecipeGroupID.IronBar, 8);
 			deep.AddIngredient(ItemID.Obsidian, 20);
-			deep.AddTile(TileID.Anvils);
+            deep.AddIngredient(ItemID.Diamond, 3);
+            deep.AddTile(TileID.Anvils);
 			deep.Register();
 
-			Recipe anal = Recipe.Create(ItemID.LifeformAnalyzer); //People will shit themself from laughter when they find this
+			Recipe anal = Recipe.Create(ItemID.LifeformAnalyzer); //The kids will shit themself from laughter when they find this
 			anal.AddRecipeGroup(RecipeGroupID.IronBar, 12);
 			anal.AddIngredient(ItemID.Gel, 30);
 			anal.AddIngredient(ItemID.GardenGnome);
@@ -250,7 +264,7 @@ namespace MultidimensionMod.Common.Globals.Items
 			watch.AddIngredient(ItemID.Timer1Second);
 			watch.AddIngredient(ItemID.AntlionMandible, 3);
 			watch.AddRecipeGroup(CopperTin, 8);
-			watch.AddTile(TileID.Anvils);
+			watch.AddTile(TileID.TinkerersWorkbench);
 			watch.Register();
 
 			Recipe tally = Recipe.Create(ItemID.TallyCounter);
@@ -260,7 +274,7 @@ namespace MultidimensionMod.Common.Globals.Items
 			tally.Register();
 
 			Recipe detect = Recipe.Create(ItemID.MetalDetector);
-			detect.AddRecipeGroup(Adamantitanium, 8);
+			detect.AddIngredient(ItemID.HallowedBar, 8);
 			detect.AddIngredient(ItemID.Wire, 15);
 			detect.AddTile(TileID.MythrilAnvil);
 			detect.Register();
@@ -274,14 +288,16 @@ namespace MultidimensionMod.Common.Globals.Items
 			Recipe sex = Recipe.Create(ItemID.Sextant);
 			sex.AddRecipeGroup(GoldPlatinum, 8);
 			sex.AddIngredient(ItemID.Lens);
-			sex.AddTile(TileID.Anvils);
+            sex.AddIngredient(ItemID.SharkFin, 2);
+            sex.AddTile(TileID.Anvils);
 			sex.Register();
 
 			Recipe radio = Recipe.Create(ItemID.WeatherRadio);
 			radio.AddRecipeGroup(RecipeGroupID.IronBar, 10);
 			radio.AddIngredient(ItemID.Cloud, 5);
 			radio.AddIngredient(ItemID.RainCloud, 10);
-			radio.AddTile(TileID.Anvils);
+            radio.AddIngredient(ItemID.Wire, 10);
+            radio.AddTile(TileID.Anvils);
 			radio.Register();
 
 			Recipe fish = Recipe.Create(ItemID.FishermansGuide);
@@ -297,7 +313,8 @@ namespace MultidimensionMod.Common.Globals.Items
 			Recipe fury = Recipe.Create(ItemID.Starfury);
 			fury.AddIngredient(ItemID.FallenStar, 10);
 			fury.AddRecipeGroup(GoldPlatinum, 15);
-			fury.AddTile(TileID.SkyMill);
+            fury.AddRecipeGroup(EvilSample, 8);
+            fury.AddTile(TileID.SkyMill);
 			fury.Register();
 
 			Recipe enchant = Recipe.Create(ItemID.EnchantedSword);
@@ -327,19 +344,6 @@ namespace MultidimensionMod.Common.Globals.Items
 			icemerang.AddTile(TileID.Anvils);
 			icemerang.Register();
 
-			Recipe iceblade = Recipe.Create(ItemID.IceBlade);
-			iceblade.AddRecipeGroup(Ice, 43);
-			iceblade.AddIngredient(ModContent.ItemType<FrostScale>(), 4);
-			iceblade.AddIngredient(ModContent.ItemType<VikingRelic>(), 2);
-			iceblade.AddTile(TileID.Anvils);
-			iceblade.Register();
-
-			Recipe brand = Recipe.Create(ItemID.Frostbrand);
-			brand.AddIngredient(ItemID.IceBlade);
-			brand.AddIngredient(ModContent.ItemType<AbyssalHellstoneBar>(), 5);
-			brand.AddTile(TileID.MythrilAnvil);
-			brand.Register();
-
 			Recipe weeb = Recipe.Create(ItemID.Katana);
 			weeb.AddRecipeGroup(RecipeGroupID.IronBar, 7);
 			weeb.AddRecipeGroup(CopperTin, 7);
@@ -348,7 +352,7 @@ namespace MultidimensionMod.Common.Globals.Items
 
 			Recipe muramura = Recipe.Create(ItemID.Muramasa);
 			muramura.AddIngredient(ItemID.Katana);
-			muramura.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 6);
+			muramura.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 12);
 			muramura.AddTile(TileID.DemonAltar);
 			muramura.Register();
 
@@ -357,13 +361,6 @@ namespace MultidimensionMod.Common.Globals.Items
 			sparky.AddIngredient(ItemID.Torch, 12);
 			sparky.AddTile(TileID.WorkBenches);
 			sparky.Register();
-
-			Recipe slime = Recipe.Create(ItemID.SlimeStaff);
-			slime.AddRecipeGroup(RecipeGroupID.Wood, 15);
-			slime.AddIngredient(ItemID.Gel, 50);
-			slime.AddIngredient(ItemID.PinkGel, 10);
-			slime.AddTile(TileID.WorkBenches);
-			slime.Register();
 
 			Recipe mushrang = Recipe.Create(ItemID.Shroomerang);
 			mushrang.AddIngredient(ItemID.WoodenBoomerang);
@@ -384,40 +381,81 @@ namespace MultidimensionMod.Common.Globals.Items
 			Recipe discord = Recipe.Create(ItemID.RodofDiscord);
 			discord.AddIngredient(ItemID.UnicornHorn, 2);
 			discord.AddIngredient(ItemID.PixieDust, 100);
-			discord.AddIngredient(ItemID.SoulofLight, 24);
-			discord.AddTile(TileID.MythrilAnvil);
+			discord.AddIngredient(ItemID.ChaosFish, 3);
+            discord.AddIngredient(ItemID.SoulofLight, 24);
+            discord.AddIngredient(ModContent.ItemType<Prismatine>(), 10);
+            discord.AddTile(TileID.MythrilAnvil);
 			discord.Register();
 
 			Recipe bucket = Recipe.Create(ItemID.BottomlessBucket);
 			bucket.AddIngredient(ItemID.WaterBucket);
-			bucket.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 5);
+			bucket.AddIngredient(ModContent.ItemType<AbyssalHellstoneBar>(), 16);
 			bucket.AddIngredient(ItemID.PinkPearl);
-			bucket.AddTile(TileID.Anvils);
+			bucket.AddTile(TileID.MythrilAnvil);
 			bucket.Register();
 
-			Recipe spongebob = Recipe.Create(ItemID.SuperAbsorbantSponge);
+            Recipe bucketH = Recipe.Create(ItemID.BottomlessHoneyBucket);
+            bucketH.AddIngredient(ItemID.HoneyBucket);
+            bucketH.AddRecipeGroup(Adamantitanium, 16);
+            bucketH.AddIngredient(ItemID.PinkPearl);
+            bucketH.AddTile(TileID.MythrilAnvil);
+            bucketH.Register();
+
+            Recipe bucketL = Recipe.Create(ItemID.BottomlessLavaBucket);
+            bucketL.AddIngredient(ItemID.LavaBucket);
+            bucketL.AddIngredient(ItemID.HellstoneBar, 16);
+            bucketL.AddIngredient(ItemID.PinkPearl);
+            bucketL.AddTile(TileID.MythrilAnvil);
+            bucketL.Register();
+
+            Recipe spongebob = Recipe.Create(ItemID.SuperAbsorbantSponge);
 			spongebob.AddIngredient(ItemID.Silk, 12);
-			spongebob.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 6);
-			spongebob.AddIngredient(ItemID.PinkPearl);
+            spongebob.AddIngredient(ItemID.AncientCloth);
+            spongebob.AddIngredient(ModContent.ItemType<AbyssalHellstoneBar>(), 16);
+            spongebob.AddIngredient(ItemID.PinkPearl);
 			spongebob.AddTile(TileID.WorkBenches);
 			spongebob.Register();
 
-			Recipe conch = Recipe.Create(ItemID.MagicConch);
+            Recipe spongebobH = Recipe.Create(ItemID.HoneyAbsorbantSponge);
+            spongebobH.AddIngredient(ItemID.Silk, 12);
+            spongebobH.AddIngredient(ItemID.AncientCloth);
+            spongebobH.AddRecipeGroup(Adamantitanium, 16);
+            spongebobH.AddIngredient(ItemID.PinkPearl);
+            spongebobH.AddTile(TileID.WorkBenches);
+            spongebobH.Register();
+
+            Recipe spongebobL = Recipe.Create(ItemID.LavaAbsorbantSponge);
+            spongebobL.AddIngredient(ItemID.Silk, 12);
+            spongebobL.AddIngredient(ItemID.AncientCloth);
+            spongebobL.AddIngredient(ItemID.HellstoneBar, 16);
+            spongebobL.AddIngredient(ItemID.PinkPearl);
+            spongebobL.AddTile(TileID.WorkBenches);
+            spongebobL.Register();
+
+            Recipe conch = Recipe.Create(ItemID.MagicConch);
 			conch.AddIngredient(ItemID.Seashell, 6);
 			conch.AddIngredient(ItemID.WhitePearl);
 			conch.Register();
 
 			Recipe hellConch = Recipe.Create(ItemID.DemonConch);
 			hellConch.AddIngredient(ItemID.Seashell, 6);
-			hellConch.AddIngredient(ItemID.HellstoneBar, 10);
+            hellConch.AddIngredient(ItemID.Bone, 14);
+            hellConch.AddIngredient(ItemID.HellstoneBar, 10);
 			hellConch.AddIngredient(ItemID.BlackPearl);
 			hellConch.Register();
-			#endregion
 
-			#region Tiles
-			Recipe milly = Recipe.Create(ItemID.SkyMill);
+            Recipe hellLine = Recipe.Create(ItemID.HotlineFishingHook);
+            hellLine.AddIngredient(ItemID.ReinforcedFishingPole);
+            hellLine.AddIngredient(ItemID.HellstoneBar, 10);
+            hellLine.AddIngredient(ModContent.ItemType<TidalQuartz>(), 4);
+            hellLine.AddIngredient(ItemID.BlackPearl);
+            hellLine.Register();
+            #endregion
+
+            #region Tiles
+            Recipe milly = Recipe.Create(ItemID.SkyMill);
 			milly.AddIngredient(ItemID.SunplateBlock, 30);
-			milly.AddIngredient(ItemID.Cloud, 9);
+			milly.AddIngredient(ItemID.Cloud, 48);
 			milly.AddTile(TileID.Anvils);
 			milly.Register();
 
@@ -1120,14 +1158,25 @@ namespace MultidimensionMod.Common.Globals.Items
             Recipe box = Recipe.Create(ItemID.MusicBox);
             box.AddRecipeGroup(RecipeGroupID.Wood, 20);
             box.AddRecipeGroup(RecipeGroupID.IronBar, 7);
-            box.AddTile(TileID.WorkBenches);
+            box.AddTile(TileID.HeavyWorkBench);
             box.Register();
 
 
             #endregion
         }
 
-		public static RecipeGroup EvilPowder;
+        public override void PostAddRecipes()
+        {
+            for (int i = 0; i < Recipe.numRecipes; i++)
+            {
+                Recipe recipe = Main.recipe[i];
+
+                if (recipe.HasResult(ItemID.TerrasparkBoots))
+                    recipe.AddIngredient(ItemID.HallowedBar, 10);
+            }
+        }
+
+        public static RecipeGroup EvilPowder;
 		public static RecipeGroup EvilSample;
 		public static RecipeGroup GoldPlatinum;
 		public static RecipeGroup Ice;

@@ -79,8 +79,6 @@ namespace MultidimensionMod.Common.Players
         public bool chaosClaw = false;
         public bool GripMinion = false;
         public bool SkulkerShell = false;
-        public bool AshCurse;
-        public static int Ashes = 0;
 
         public override void ResetEffects()
         {
@@ -112,7 +110,6 @@ namespace MultidimensionMod.Common.Players
             chaosClaw = false;
             GripMinion = false;
             SkulkerShell = false;
-            AshCurse = !Main.dayTime;
         }
 
         public override void UpdateDead()
@@ -430,115 +427,6 @@ namespace MultidimensionMod.Common.Players
                 return;
             }
         }
-
-        public override void PostUpdate()
-        {
-            if (Player.InModBiome<TheDragonHoard>())
-            {
-                if (AshCurse)
-                {
-                    AshRain(Player);
-                }
-            }
-        }
-
-        #region
-        public static void AshRain(Player player)
-        {
-            if (Main.gamePaused)
-            {
-                return;
-            }
-            if (player.InModBiome<TheDragonHoard>())
-            {
-                if (Main.LocalPlayer.position.Y < Main.worldSurface * 16.0)
-                {
-                    int maxValue = 800;
-                    float screenWidth = Main.screenWidth / (float)Main.maxScreenW;
-                    int num2 = (int)(500f * screenWidth);
-                    num2 = (int)(num2 * (1f + 2f * Main.cloudAlpha));
-                    float num3 = 1f + 50f * Main.cloudAlpha;
-                    int num4 = 0;
-
-                    while (num4 < num3)
-                    {
-                        try
-                        {
-                            if (Ashes >= num2 * (Main.gfxQuality / 2f + 0.5f) + num2 * 0.1f)
-                            {
-                                break;
-                            }
-
-                            if (Main.rand.NextBool(maxValue))
-                            {
-                                int num5 = Main.rand.Next(Main.screenWidth + 1000) - 500;
-                                int num6 = (int)Main.screenPosition.Y - Main.rand.Next(50);
-
-                                if (Main.LocalPlayer.velocity.Y > 0f)
-                                {
-                                    num6 -= (int)Main.LocalPlayer.velocity.Y;
-                                }
-
-                                if (Main.rand.NextBool(5))
-                                {
-                                    num5 = Main.rand.Next(500) - 500;
-                                }
-                                else if (Main.rand.NextBool(5))
-                                {
-                                    num5 = Main.rand.Next(500) + Main.screenWidth;
-                                }
-
-                                if (num5 < 0 || num5 > Main.screenWidth)
-                                {
-                                    num6 += Main.rand.Next((int)(Main.screenHeight * 0.8)) + (int)(Main.screenHeight * 0.1);
-                                }
-
-                                num5 += (int)Main.screenPosition.X;
-
-                                int num7 = num5 / 16;
-                                int num8 = num6 / 16;
-
-                                if (Main.tile[num7, num8] != null && Main.tile[num7, num8].WallType == 0)
-                                {
-                                    int dust = Dust.NewDust(new Vector2(num5, num6), 10, 10, ModContent.DustType<Dusts.AshRain>(), 0f, 0f, 0);
-                                    Main.dust[dust].velocity.Y = 3f + Main.rand.Next(30) * 0.1f;
-
-                                    Dust expr_292_cp_0 = Main.dust[dust];
-                                    expr_292_cp_0.velocity.Y *= Main.dust[dust].scale;
-
-                                    if (!player.GetModPlayer<MDPlayer>().AshCurse)
-                                    {
-                                        Main.dust[dust].velocity.X = Main.rand.Next(-10, 10) * 0.1f;
-
-                                        Dust expr_2EC_cp_0 = Main.dust[dust];
-                                        expr_2EC_cp_0.velocity.X += Main.windSpeedCurrent * Main.cloudAlpha * 10f;
-                                    }
-                                    else
-                                    {
-                                        Main.dust[dust].velocity.X = (Main.cloudAlpha + 0.5f) * 25f + Main.rand.NextFloat() * 0.2f - 0.1f;
-
-                                        Dust expr_370_cp_0 = Main.dust[dust];
-                                        expr_370_cp_0.velocity.Y *= 0.5f;
-                                    }
-
-                                    Dust expr_38E_cp_0 = Main.dust[dust];
-                                    expr_38E_cp_0.velocity.Y *= 1f + 0.3f * Main.cloudAlpha;
-
-                                    Main.dust[dust].scale += Main.cloudAlpha * 0.2f;
-                                    Main.dust[dust].velocity *= 1f + Main.cloudAlpha * 0.5f;
-                                }
-                            }
-                        }
-                        catch
-                        {
-                        }
-
-                        num4++;
-                    }
-                }
-            }
-        }
-        #endregion
 
         public override void PostUpdateMiscEffects()
         {

@@ -1799,7 +1799,7 @@ Mods: {
 				Tooltip:
 					'''
 					A small magic staff that uses atmospheric energy to produce small stars that fall from the sky
-					Does extra damage to void entities
+					Does extra damage to Darklings
 					'''
 			}
 
