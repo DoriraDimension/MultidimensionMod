@@ -1172,7 +1172,8 @@ namespace MultidimensionMod.Common.Globals.Items
                 Recipe recipe = Main.recipe[i];
 
                 if (recipe.HasResult(ItemID.TerrasparkBoots))
-                    recipe.AddIngredient(ItemID.HallowedBar, 10);
+                    recipe.AddIngredient(ModContent.ItemType<PaleMatter>(), 3);
+				    //recipe.AddIngredient(ModContent.ItemType<TerraShard>(), 10);
             }
         }
 

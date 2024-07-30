@@ -13,27 +13,27 @@ Mods: {
 
 			ShroomForest: {
 				DisplayName: Scarlet Mycelium Forest
-				TownNPCDialogueName: the Scyrlet Mycelium Forest
+				TownNPCDialogueName: the Scarlet Mycelium Forest
 			}
 
 			TheDragonHoard: {
 				DisplayName: The Dragon Hoard
-				TownNPCDialogueName: the The Dragon Hoard
+				TownNPCDialogueName: The Dragon Hoard
 			}
 
 			TheDragonBurrow: {
 				DisplayName: The Dragon Burrow
-				TownNPCDialogueName: the The Dragon Burrow
+				TownNPCDialogueName: The Dragon Burrow
 			}
 
 			TheShroudedMire: {
 				DisplayName: The Shrouded Mire
-				TownNPCDialogueName: the The Shrouded Mire
+				TownNPCDialogueName: The Shrouded Mire
 			}
 
 			TheLakeDepths: {
 				DisplayName: The Lake Depths
-				TownNPCDialogueName: the The Lake Depths
+				TownNPCDialogueName: The Lake Depths
 			}
 		}
 
@@ -140,7 +140,7 @@ Mods: {
 
 			Nihil: {
 				DisplayName: Nihil
-				Description: Void energy has disabled defense
+				Description: Dark energy has disabled defense
 			}
 
 			ManaBurstCooldown: {
@@ -226,6 +226,11 @@ Mods: {
 			GripMinion: {
 				DisplayName: Claw Companions
 				Description: Flaming and Damp claws fight for you
+			}
+
+			TheFlash: {
+				DisplayName: The Flash
+				Description: A lovable noodle is keeping you company
 			}
 		}
 
@@ -344,7 +349,7 @@ Mods: {
 					'''
 					[c/e8b722:A true greed can find every treasure.]
 					Your greedy eyes can now see treasures.
-					Has a chance to inflict the Cursed debuff when you get it
+					Has a chance to inflict the Cursed debuff when you get hit
 					'''
 				Lore:
 					'''
@@ -360,7 +365,7 @@ Mods: {
 					'''
 					[c/93a4d8:A true adventurer can sense traps and danger.]
 					You can see danger sources.
-					Has a chance to inflict the Slow debuff when you get it
+					Has a chance to inflict the Slow debuff when you get hit
 					'''
 				Lore:
 					'''
@@ -377,7 +382,7 @@ Mods: {
 					'''
 					[c/7c091d:A true hunter can sense its prey.]
 					You can now sense your enemies everywhere.
-					Has a chance to inflict the Weak debuff when you get it
+					Has a chance to inflict the Weak debuff when you get hit
 					'''
 				Lore:
 					'''
@@ -393,7 +398,7 @@ Mods: {
 					'''
 					[c/007437:A true resident of the night can see through the darkness.]
 					You now have improved vision at night.
-					Has a chance to inflict the Blackout debuff when you get it
+					Has a chance to inflict the Blackout debuff when you get hit
 					'''
 				Lore:
 					'''
@@ -818,8 +823,9 @@ Mods: {
 				DisplayName: Iceblossom
 				Tooltip:
 					'''
-					A kind of flora found in the Frozen Underworld, its ancestor, the Fireblossom, adapted to the environment to survive.
-					Eating this is a horrible idea.
+					A kind of flora found in the Frozen Underworld, a single bite will freeze most life forms solid
+					It is a mutated Fireblossom that changed to survive when the environment was drastically altered
+					Eating it is a horrible idea
 					'''
 			}
 
@@ -1850,7 +1856,7 @@ Mods: {
 
 			DataMiner: {
 				DisplayName: Data Miner
-				Tooltip: Holds out a charged drill that inflicts Electrified.
+				Tooltip: Holds out a charged drill that inflicts Dimensional Shock.
 				Lore:
 					'''
 					This drill was used by the dimensional god to tear rifts into dimensions.
@@ -2647,7 +2653,7 @@ Mods: {
 					Flames bringing energy
 					Toxins spreading creativity
 					Lights creating technology
-					Fists protection the weak
+					Fists protecting the weak
 					'''
 			}
 
@@ -3905,11 +3911,11 @@ Mods: {
 			}
 
 			ShadowBand: {
-				DisplayName: Murkwater Bands
+				DisplayName: Murkwater Band
 				Tooltip: Increases movement speed by 25%, jump height by 50 and jump speed by 35% when underwater
 				Lore:
 					'''
-					Armbands once worn by those skilled enough to be considered a pro spear fisher.
+					Armband once worn by those skilled enough to be considered a pro spear fisher.
 					It was seen as a symbol of pride and respect and trying to create replicas was met with punishment.
 					'''
 			}
@@ -4082,6 +4088,24 @@ Mods: {
 			MadnessMonolith: {
 				DisplayName: Madness Monolith
 				Tooltip: Simulates madness energy lingering in the air
+			}
+
+			CracklingScale: {
+				DisplayName: Crackling Scale
+				Tooltip:
+					'''
+					Summons Flash, the fastest snake alive
+					Siphons the power of a magic mouse to fly after you
+					He could do it without, but convenience is too enticing
+					Flash's lightning powers grant you 5% movement speed
+					'''
+				Lore:
+					'''
+					"Farewell my friend"
+					"Graceful as a lightning bolt"
+					"Speed through the heavens"
+					"And take your rightful place among the stars"
+					'''
 			}
 		}
 
@@ -4337,6 +4361,7 @@ Mods: {
 			HydraClaw.DisplayName: Hydra Claw
 			DepthsandBallGun.DisplayName: Depthsand
 			DepthsandBall.DisplayName: Depthsand
+			Flash.DisplayName: Flash
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -4523,14 +4548,15 @@ Mods: {
 				GenericHardmodeDialogue1: Hey just between us two, if you happen to possess a sword made of fish, throw it into some weird liquid. ;)
 				YttriumDialogue: Crabs have grown in power, soon they will oberthrow us and become the dominant species. No but seriously, you should check out those crabs at the ocean.
 				MushroomDialogue: I had a dream where you showed me all of these alchemy mushrooms in a glowing mushroom biome while shopping with me. I think you did that after defeating a weird stone construct powered by solar energy.
+				SerpentAscendDialogue: I heard that in its dying moments, a serpent will ascend to become a wyrm. Maybe it's an act of mercy, an apology from their ancestors for stripping them of their primal forms. Truth or not, it is a beautiful thought to hold onto.
 				#Below is help dialogue
 				ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
 				DimensiumHelp: You can find Dimensium by doing many different things. Killing, mining, fishing, and so much more.
 				KingsCapHelp: You know that mushroom forest nearby? If you wait long enough, you may find a mushroom that is larger than the others. You may wake it up using a unique fungus only found in that forest.
 				TouchGrassHelp: Go outside
 				#Below is quest dialogue
-				CassieQuestStart: I wanted to ask if you could do me a favor, during my travel here something important got seperated from me. Could you maybe try and get it back? It might have fallen like a star from the sky, if only there was a matter that could transform it back into its original form.
-				CassieQuestClear: Thank you so much, here, this is what they were before. Since I trust you, you can keep it safe for me.
+				FlashQuestStart: Hey, I thought you could help me out right now, I need some objects for something important. If you were to bring me 10 Frost Scales, 2 mice and around 5 Dimensium that would be great. What do I need them for? Well... I can tell you, if you bring me these things.
+				FlashQuestClear: Thank you so much! With this I could create a magic construct in the image of one I miss alot. Here, you can take him with you for a while, he might be a nice little support.
 				#Below is tpose dialogue
 				Tpose: He seems to be experiencing something real funky.
 			}
@@ -5082,7 +5108,50 @@ Mods: {
 			}
 		}
 
-		VanillaTooltipEdits.DraxDenseBlockTip: Is capable of mining Dense Volcanic Rock and Dense Biomatter
+		VanillaTooltipEdits: {
+			DraxDenseBlockTip: Is capable of mining Dense Volcanic Rock and Dense Biomatter
+			BlinkrootTip:
+				'''
+				A cave dwelling plant that glows gently in the darkness
+				Knowledgeable cave explorers tend to hold several of these
+				as their insides contain spores that grant a short lived glow effect
+				'''
+			DeathweedTip:
+				'''
+				An intruiging herb that grows only in the most disgusting landscapes
+				It contains strong toxins that make the plant inedible to most species
+				'''
+			FireblossomTip:
+				'''
+				Red plants only found in the ash of the underworld caverns
+				The spicy hot top grants a cozy warming effect when consumed
+				No wonder that demons consume these to dive even more into a hellish feeling from within
+				'''
+			DaybloomTip:
+				'''
+				A common surface plant that is famous amongst many for its recovery effects
+				Giving a sick friend such a flower as seasoning in a soup works wonders
+				'''
+			MoonglowTip:
+				'''
+				A blue glowing plant that thrives in the humid caves of the jungle
+				Despite its beautiful glow, the blossom itself is more known for its potent poison
+				Hornets have previously been observed eating these
+				'''
+			ShiverthornTip:
+				'''
+				A thorn covered plant found only in the unnatural environment of the nearby tundra
+				History states that the ancestor of this plant once lived in a very warm environment,
+				a plant known as the Glass Rose
+				Nowadays it is used for concoctions to cool down one's own body
+				'''
+			WaterleafTip:
+				'''
+				A desert herb filled with fresh water it gathered from the air
+				Seen as an invasive species, this plant absorbs all humidity from the air to sustain itself
+				This leads to the environment not being able to recover and remain desolate
+				'''
+		}
 
 		MiscText: {
 			MadnessStart: You feel your mind pierced...

@@ -8,7 +8,7 @@ using MultidimensionMod.Items.Weapons.Melee.Swords;
 using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Common.Globals;
 using MultidimensionMod.Projectiles.Ranged;
-using MultidimensionMod.Items.Quest;
+//using MultidimensionMod.Items.Quest;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -144,7 +144,11 @@ namespace MultidimensionMod.NPCs.TownNPCs
 				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericHardmodeDialogue1"));
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.YttriumDialogue"));
             }
-			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue1"));
+            if (MDQuests.DoriraQuests >= 1)
+            {
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.SerpentAscendDialogue"));
+            }
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue1"));
 			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue2"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue4"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue5"));
@@ -219,22 +223,25 @@ namespace MultidimensionMod.NPCs.TownNPCs
 					case 2:
 						if (MDQuests.DoriraQuests == 0)
 						{
-							chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.CassieStart"));
-							int teamStar = player.FindItem(ModContent.ItemType<TeamStar>());
-							if (teamStar >= 0)
+							chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.FlashStart"));
+							int dinner = player.FindItem(ItemID.Mouse);
+							int scales = player.FindItem(ModContent.ItemType<FrostScale>());
+                            int dimen = player.FindItem(ModContent.ItemType<Dimensium>());
+                            if (dinner >= 2 && scales >= 10 && dimen >= 5)
 							{
-								player.inventory[teamStar].stack--;
-								if (player.inventory[teamStar].stack <= 0)
+								player.inventory[dinner].stack -= 2;
+                                player.inventory[scales].stack -= 10;
+                                player.inventory[dimen].stack -= 5;
+								player.inventory[dinner] = new Item();
+                                player.inventory[scales] = new Item();
+                                player.inventory[dimen] = new Item();
+                                player.QuickSpawnItem(source, ModContent.ItemType<CracklingScale>(), 1);
+								Main.npcChatText = FlashDialogue();
+								MDQuests.DoriraQuests++;
+								NPC.SetEventFlagCleared(ref MDQuests.FlashQuest, -1);
+								if (Main.netMode != NetmodeID.SinglePlayer)
 								{
-									player.inventory[teamStar] = new Item();
-									player.QuickSpawnItem(source, ModContent.ItemType<Cassiopeia>(), 1);
-									Main.npcChatText = CassieDialogue();
-									MDQuests.DoriraQuests++;
-									NPC.SetEventFlagCleared(ref MDQuests.CassieQuest, -1);
-									if (Main.netMode != NetmodeID.SinglePlayer)
-									{
-										NetMessage.SendData(MessageID.WorldData);
-									}
+									NetMessage.SendData(MessageID.WorldData);
 								}
 							}
 							else
@@ -270,15 +277,15 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			WeightedRandom<string> chat = new(Main.rand);
 			if (MDQuests.DoriraQuests == 0)
             {
-				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.CassieQuestStart"));
+				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.FlashQuestStart"));
 			}
 			return chat;
 		}
 
-		public static string CassieDialogue()
+		public static string FlashDialogue()
         {
 			WeightedRandom<string> chat = new(Main.rand);
-			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.CassieQuestClear"));
+			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.FlashQuestClear"));
 			return chat;
 		}
 
