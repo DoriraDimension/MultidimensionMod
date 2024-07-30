@@ -33,10 +33,11 @@ namespace MultidimensionMod.Projectiles.Magic
 		public override void OnKill(int timeLeft)
 		{
 			Player player = Main.player[Projectile.owner];
-			if (ringTimer > 600)
+			if (ringTimer > 420)
 			{
 				player.statLife += 10;
-			}
+                SoundEngine.PlaySound(SoundID.Item30, Projectile.position);
+            }
 		}
 
 		public override void AI()
@@ -55,7 +56,7 @@ namespace MultidimensionMod.Projectiles.Magic
             {
 				ringTimer++;
             }
-			if (ringTimer == 300)
+			if (ringTimer == 240)
 			{
 				if (Projectile.owner == Main.myPlayer)
 				{
@@ -64,7 +65,7 @@ namespace MultidimensionMod.Projectiles.Magic
                     Projectile.netUpdate = true;
                 }
 			}
-			if (ringTimer == 600)
+			if (ringTimer == 420)
 			{
 				if (Projectile.owner == Main.myPlayer)
 				{
@@ -73,9 +74,9 @@ namespace MultidimensionMod.Projectiles.Magic
                     Projectile.netUpdate = true;
                 }
 			}
-			if (ringTimer > 601)
+			if (ringTimer > 421)
             {
-				ringTimer = 601;
+				ringTimer = 421;
             }
 		}
 	}
