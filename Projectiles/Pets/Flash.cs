@@ -12,7 +12,7 @@ namespace MultidimensionMod.Projectiles.Pets
     {
         public override void SetStaticDefaults()
         {
-            Main.projFrames[Projectile.type] = 8;
+            Main.projFrames[Projectile.type] = 9;
             Main.projPet[Projectile.type] = true;
             ProjectileID.Sets.CharacterPreviewAnimations[Projectile.type] = ProjectileID.Sets.SimpleLoop(0, 0).WithOffset(-20, 4).WithSpriteDirection(-1);
         }
@@ -35,13 +35,13 @@ namespace MultidimensionMod.Projectiles.Pets
 
             if (Projectile.ai[0] == 1)
             {
-                if (FrameY < 4)
-                    FrameY = 4;
+                if (FrameY < 5)
+                    FrameY = 5;
                 if (++FrameCounter >= 10)
                 {
                     FrameCounter = 0;
-                    if (++FrameY >= 7)
-                        FrameY = 4;
+                    if (++FrameY >= 8)
+                        FrameY = 5;
                 }
             }
             else
@@ -54,10 +54,10 @@ namespace MultidimensionMod.Projectiles.Pets
                         FrameY = 1;
 
                     FrameCounter += (int)(Projectile.velocity.X * 0.5f);
-                    if (FrameCounter >= 2 || FrameCounter <= -2)
+                    if (FrameCounter >= 6 || FrameCounter <= -6)
                     {
                         FrameCounter = 0;
-                        if (++FrameY >= 3)
+                        if (++FrameY >= 4)
                             FrameY = 0;
                     }
                 }
@@ -68,7 +68,7 @@ namespace MultidimensionMod.Projectiles.Pets
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
-            int height = texture.Height / 8;
+            int height = texture.Height / 9;
             int y = height * FrameY;
             Rectangle rect = new(0, y, texture.Width, height);
             Vector2 drawOrigin = new(texture.Width / 2, height / 2);

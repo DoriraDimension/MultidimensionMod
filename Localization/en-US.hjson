@@ -4107,6 +4107,16 @@ Mods: {
 					"And take your rightful place among the stars"
 					'''
 			}
+
+			DenseBiomatter: {
+				DisplayName: Dense Biomatter
+				Tooltip:
+				    '''
+					Weirdly sturdy biological matter that is found exclusively in the lake depths
+					It seems to consist of multiple different types of organic life from both flora and fauna
+					It can be observed growing out of Dreadsoil Ore
+					'''
+			}
 		}
 
 		SetBonuses: {

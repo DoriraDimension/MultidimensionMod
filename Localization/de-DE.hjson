@@ -823,8 +823,9 @@ Mods: {
 				// DisplayName: Iceblossom
 				/* Tooltip:
 					'''
-					A kind of flora found in the Frozen Underworld, its ancestor, the Fireblossom, adapted to the environment to survive.
-					Eating this is a horrible idea.
+					A kind of flora found in the Frozen Underworld, a single bite will freeze most life forms solid
+					It is a mutated Fireblossom that changed to survive when the environment was drastically altered
+					Eating it is a horrible idea
 					''' */
 			}
 
@@ -4105,6 +4106,11 @@ Mods: {
 					"Speed through the heavens"
 					"And take your rightful place among the stars"
 					''' */
+			}
+
+			DenseBiomatter: {
+				// DisplayName: Dense Biomatter
+				// Tooltip: ""
 			}
 		}
 
