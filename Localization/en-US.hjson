@@ -3915,7 +3915,7 @@ Mods: {
 				Tooltip: Increases movement speed by 25%, jump height by 50 and jump speed by 35% when underwater
 				Lore:
 					'''
-					Armband once worn by those skilled enough to be considered a pro spear fisher.
+					Armband once worn by those skilled enough to be considered a professional spear fisher.
 					It was seen as a symbol of pride and respect and trying to create replicas was met with punishment.
 					'''
 			}
@@ -4116,6 +4116,16 @@ Mods: {
 					It seems to consist of multiple different types of organic life from both flora and fauna
 					It can be observed growing out of Dreadsoil Ore
 					'''
+			}
+
+			BogFrogItem: {
+				DisplayName: Bog Frog
+				Tooltip: ""
+			}
+
+			MoonMorphoItem: {
+				DisplayName: Moonlit Morpho
+				Tooltip: ""
 			}
 		}
 
@@ -4537,6 +4547,8 @@ Mods: {
 			SeraphSlug.DisplayName: Seraph Slug
 			MireSkulker.DisplayName: Skulker
 			DrifterSpawner.DisplayName: Drifter Spawner
+			BogFrog.DisplayName: Bog Frog
+			MoonMorpho.DisplayName: Moonlit Morpho
 		}
 
 		Dialogue: {
@@ -4808,6 +4820,8 @@ Mods: {
 			Darkdrifter: Seahorse-like creatures that slowly drift around in the lake depths in groups of 4.
 			SkySlug: Fascinating slugs that evolved wings to soar through the skies. A perfect majestic slimy being whose beauty rivals those of the gods.
 			Skulker: Crabs that dwell in the moonlit marshes of the Shrouded Mire. They are extremely territorial and will attack anyone who comes too close to their nest. If defensive measures are required, be aware of their shells, as they can reflect incoming bullets.
+			BogFrog: This little friend is a relative of the jungle frogs, although darker in coloration. The Bog Frog prefers the dark and murky atmosphere of the Shrouded Mire over its cousin.
+			MoonMorpho: A peculiar butterfly that seems to enjoy the veil of the night. Its wings glow in a bright blue, serving as beacons in the misty bogs.
 		}
 
 		SoulConversation: {

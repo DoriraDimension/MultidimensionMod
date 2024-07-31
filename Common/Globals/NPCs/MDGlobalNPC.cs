@@ -204,7 +204,9 @@ namespace MultidimensionMod
                 Main.eclipse ||
                 Main.invasionType == InvasionID.MartianMadness ||
                 Main.invasionType == InvasionID.CachedPumpkinMoon ||
-                Main.invasionType == InvasionID.CachedFrostMoon)
+                Main.invasionType == InvasionID.CachedFrostMoon ||
+				Main.invasionType == InvasionID.GoblinArmy ||
+				Main.invasionType == InvasionID.PirateInvasion)
             {
                 return;
             }
@@ -257,6 +259,8 @@ namespace MultidimensionMod
 				if (!Main.dayTime && NPC.CountNPCS(ModContent.NPCType<MireSkulker>()) < 4)
 				{
                     pool.Add(ModContent.NPCType<MireSkulker>(), .35f);
+                    pool.Add(ModContent.NPCType<MoonMorpho>(), .10f);
+                    pool.Add(ModContent.NPCType<BogFrog>(), .10f);
                 }
             }
             if (spawnInfo.Player.InModBiome<TheLakeDepths>())
