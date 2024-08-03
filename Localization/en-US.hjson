@@ -4552,6 +4552,7 @@ Mods: {
 			BogFrog.DisplayName: Bog Frog
 			MoonMorpho.DisplayName: Moonlit Morpho
 			Newt.DisplayName: Newt
+			Miresquito.DisplayName: Miresquito
 		}
 
 		Dialogue: {
@@ -4825,7 +4826,8 @@ Mods: {
 			Skulker: Crabs that dwell in the moonlit marshes of the Shrouded Mire. They are extremely territorial and will attack anyone who comes too close to their nest. If defensive measures are required, be aware of their shells, as they can reflect incoming bullets.
 			BogFrog: This little friend is a relative of the jungle frogs, although darker in coloration. The Bog Frog prefers the dark and murky atmosphere of the Shrouded Mire over its cousin.
 			MoonMorpho: A peculiar butterfly that seems to enjoy the veil of the night. Its wings glow in a bright blue, serving as beacons in the misty bogs.
-			Newt: That fucking lizard that I hate.
+			Newt: Lizards with dark coloration that dwell in the shrouded mire. They have bright green sacks on the sides and underside of their heads that can be used to discharge corrosive acid.
+			Miresquito: Giant bugs with a lust for blood. They relentlessly chase whatever looks large enough to satiate their hunger.
 		}
 
 		SoulConversation: {

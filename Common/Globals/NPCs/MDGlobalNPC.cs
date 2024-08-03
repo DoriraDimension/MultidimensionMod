@@ -256,11 +256,17 @@ namespace MultidimensionMod
             if (spawnInfo.Player.InModBiome<TheShroudedMire>())
 			{
                 pool.Clear();
-				if (!Main.dayTime && NPC.CountNPCS(ModContent.NPCType<MireSkulker>()) < 4)
+				if (!Main.dayTime)
 				{
-                    pool.Add(ModContent.NPCType<MireSkulker>(), .35f);
-                    pool.Add(ModContent.NPCType<MoonMorpho>(), .10f);
-                    pool.Add(ModContent.NPCType<BogFrog>(), .10f);
+					if (NPC.CountNPCS(ModContent.NPCType<MireSkulker>()) < 4)
+                        pool.Add(ModContent.NPCType<MireSkulker>(), .25f);
+                    pool.Add(ModContent.NPCType<MoonMorpho>(), .08f);
+                    pool.Add(ModContent.NPCType<BogFrog>(), .08f);
+                    pool.Add(ModContent.NPCType<Newt>(), .06f);
+					if (NPC.downedBoss2)
+					{
+                        pool.Add(ModContent.NPCType<Miresquito>(), .10f);
+                    }
                 }
             }
             if (spawnInfo.Player.InModBiome<TheLakeDepths>())

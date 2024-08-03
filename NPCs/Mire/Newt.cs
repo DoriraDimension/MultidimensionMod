@@ -108,7 +108,7 @@ namespace MultidimensionMod.NPCs.Mire
                 }
             }
             float distance = NPC.Distance(Main.player[NPC.target].Center);
-            if (distance >= 100) // distance until it does the acid attack
+            if (distance >= 100 && distance <= 400) // distance until it does the acid attack
             {
                 if (Main.rand.NextBool(30)) // so it wont do it repeatedly when the player is near. increase to lower the chance of it doing it
                 {
