@@ -44,7 +44,7 @@ namespace MultidimensionMod.Biomes
 
         public override string BackgroundPath => "MultidimensionMod/Backgrounds/Map/InfernoUGMap";
 
-        public override string BestiaryIcon => "MultidimensionMod/Biomes/InfernoUGIcon";
+        public override string BestiaryIcon => "MultidimensionMod/Biomes/VolcanoIcon";
         public override Color? BackgroundColor => base.BackgroundColor;
 
         //Activates like a normal underground biome depending on height. It also activates when the player steps in front of certain wall types

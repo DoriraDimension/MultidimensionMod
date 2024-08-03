@@ -36,9 +36,9 @@ namespace MultidimensionMod.Biomes
 
         public override string MapBackground => BackgroundPath;
 
-        public override string BackgroundPath => "MultidimensionMod/Backgrounds/Map/MireUGMap";
+        public override string BackgroundPath => "MultidimensionMod/Backgrounds/Map/LakeMap";
 
-        public override string BestiaryIcon => "MultidimensionMod/Biomes/MireUGIcon";
+        public override string BestiaryIcon => "MultidimensionMod/Biomes/LakeIcon";
         public override Color? BackgroundColor => base.BackgroundColor;
 
         //Activates like a normal underground biome depending on height. It also activates when the player steps in front of certain wall types
