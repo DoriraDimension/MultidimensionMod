@@ -260,10 +260,13 @@ namespace MultidimensionMod
 				{
 					if (NPC.CountNPCS(ModContent.NPCType<MireSkulker>()) < 4)
                         pool.Add(ModContent.NPCType<MireSkulker>(), .25f);
-                    pool.Add(ModContent.NPCType<MoonMorpho>(), .08f);
                     pool.Add(ModContent.NPCType<BogFrog>(), .08f);
                     pool.Add(ModContent.NPCType<Newt>(), .06f);
-					if (NPC.downedBoss2)
+                    if (!spawnInfo.Water)
+                        pool.Add(ModContent.NPCType<MoonMorpho>(), .08f);
+                    if (spawnInfo.Water)
+                        pool.Add(ModContent.NPCType<FogAngler>(), 0.3f);
+                    if (NPC.downedBoss2)
 					{
                         pool.Add(ModContent.NPCType<Miresquito>(), .10f);
                     }
@@ -273,7 +276,12 @@ namespace MultidimensionMod
 			{
                 pool.Clear();
 				if (spawnInfo.Water)
+				{
                     pool.Add(ModContent.NPCType<DrifterSpawner>(), 1f);
+                    pool.Add(ModContent.NPCType<FogAngler>(), 0.3f);
+                    if (NPC.CountNPCS(ModContent.NPCType<DepthAngler>()) < 3)
+                        pool.Add(ModContent.NPCType<DepthAngler>(), 0.5f);
+                }
             }
         }
 	}
