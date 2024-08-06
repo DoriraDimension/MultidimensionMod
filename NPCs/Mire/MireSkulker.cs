@@ -156,9 +156,12 @@ namespace MultidimensionMod.NPCs.Mire
                     NPC.frame.Y = 0;
                     if (distanceToPlayer < aggroDistance || hasNotBeenAttackedSince > 0) //Start telling player that this is your territory
                     {
-                        SoundEngine.PlaySound(SoundID.Zombie77, NPC.position);
-                        AIState = ActionState.Threatening;
-                        NPC.netUpdate = true;
+                        if (Collision.CanHit(NPC.position, NPC.width, NPC.height, Main.player[NPC.target].position, Main.player[NPC.target].width, Main.player[NPC.target].height))
+                        {
+                            SoundEngine.PlaySound(SoundID.Zombie77, NPC.position);
+                            AIState = ActionState.Threatening;
+                            NPC.netUpdate = true;
+                        }
                     }
                     else if (hasNotBeenAttackedSince > 0)
                     {

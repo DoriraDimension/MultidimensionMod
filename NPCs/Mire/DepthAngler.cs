@@ -42,7 +42,7 @@ namespace MultidimensionMod.NPCs.Mire
         public override void AI()
         {
             float distance = NPC.Distance(Main.player[NPC.target].Center);
-            if (distance <= 100)
+            if (distance <= 150)
             {
                 Lighting.AddLight(NPC.Center, Color.Yellow.R / 255, Color.Orange.G / 255, Color.Yellow.B / 255);
             }

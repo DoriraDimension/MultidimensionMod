@@ -43,14 +43,14 @@ namespace MultidimensionMod.NPCs.Mire
         public override void AI()
         {
             float distance = NPC.Distance(Main.player[NPC.target].Center);
-            if (distance <= 100)
+            if (distance <= 200)
             {
                 Lighting.AddLight(NPC.Center, Color.Yellow.R / 255, Color.Orange.G / 255, Color.Yellow.B / 255);
             }
             if (NPC.wet)
             {
                 NPC.noGravity = true;
-                BaseAI.AIFish(NPC, ref NPC.ai, true, false, true, 4f, 3f);
+                BaseAI.AIFish(NPC, ref NPC.ai, true, true, true, 4f, 3f);
                 BaseAI.Look(NPC, 1);
                 if (!Collision.WetCollision(NPC.position + NPC.velocity, NPC.width, NPC.height)) { NPC.velocity.Y -= 3f; }
             }
