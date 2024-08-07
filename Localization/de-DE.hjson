@@ -4127,6 +4127,20 @@ Mods: {
 				// DisplayName: Moonlit Morpho
 				// Tooltip: ""
 			}
+
+			MirePod: {
+				// DisplayName: Lunarmoss Peat
+				/* Tooltip:
+					'''
+					A clump of lunarmoss mixed with other plant matter
+					Used by many creatures native to the swamps for easier digestion of food
+					''' */
+			}
+
+			DragonScale: {
+				// DisplayName: Dragon Scale
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {

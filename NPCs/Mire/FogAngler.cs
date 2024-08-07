@@ -6,6 +6,9 @@ using System;
 using Microsoft.Xna.Framework;
 using MultidimensionMod.Biomes;
 using Terraria.GameContent.Bestiary;
+using MultidimensionMod.Items.Accessories;
+using MultidimensionMod.Items.Materials;
+using Terraria.GameContent.ItemDropRules;
 
 namespace MultidimensionMod.NPCs.Mire
 {
@@ -38,6 +41,11 @@ namespace MultidimensionMod.NPCs.Mire
             {
                 new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.FogAngler")
             });
+        }
+
+        public override void ModifyNPCLoot(NPCLoot npcLoot)
+        {
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MirePod>(), 3, 1, 2));
         }
 
         public override void AI()
