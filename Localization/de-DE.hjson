@@ -4139,7 +4139,11 @@ Mods: {
 
 			DragonScale: {
 				// DisplayName: Dragon Scale
-				// Tooltip: ""
+				/* Tooltip:
+					'''
+					The scale of a creature with draconic ancestry
+					Resists flames and seething heat
+					''' */
 			}
 		}
 

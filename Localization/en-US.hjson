@@ -4140,7 +4140,7 @@ Mods: {
 			DragonScale: {
 				DisplayName: Dragon Scale
 				Tooltip:
-				    '''
+					'''
 					The scale of a creature with draconic ancestry
 					Resists flames and seething heat
 					'''
