@@ -19,30 +19,23 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             Main.tileCut[Type] = true;
             Main.tileSolid[Type] = false;
             Main.tileMergeDirt[Type] = true;
-
+            TileID.Sets.SwaysInWindBasic[Type] = true;
+            TileID.Sets.IgnoredByGrowingSaplings[Type] = true;
             DustType = ModContent.DustType<BogwoodDust>();
             HitSound = SoundID.Grass;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
+            TileObjectData.newTile.Width = 1;
+            TileObjectData.newTile.Height = 1;
             TileObjectData.newTile.LavaDeath = true;
             TileObjectData.newTile.WaterDeath = false;
 
             TileObjectData.newTile.CoordinatePadding = 2;
             TileObjectData.newTile.CoordinateWidth = 16;
-            TileObjectData.newTile.CoordinateHeights = new int[]
-            {
-                20
-            };
-            TileObjectData.newTile.DrawYOffset = -2;
+            TileObjectData.newTile.RandomStyleRange = 23;
+            TileObjectData.newTile.CoordinateHeights = new int[] { 20 };
+            TileObjectData.newTile.DrawYOffset = 3;
             TileObjectData.newTile.Style = 0;
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.UsesCustomCanPlace = true;
-
-            for (int i = 0; i < 23; i++)
-            {
-                TileObjectData.newSubTile.CopyFrom(TileObjectData.newTile);
-                TileObjectData.addSubTile(TileObjectData.newSubTile.Style);
-            }
             TileObjectData.addTile(Type);
         }
 
@@ -54,6 +47,7 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
         public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
         {
             Tile tile = Main.tile[i, j];
+			Texture2D Texture = ModContent.Request<Texture2D>("MultidimensionMod/Tiles/Biomes/Mire/MireSurfaceFoliage").Value;
             Texture2D GlowTexture = ModContent.Request<Texture2D>("MultidimensionMod/Tiles/Biomes/Mire/MireSurfaceFoliage_Glow").Value;
 
             Vector2 zero = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
@@ -68,9 +62,11 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             {
                 spriteBatch.Draw(GlowTexture, new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + zero, new Rectangle(tile.TileFrameX, tile.TileFrameY + frameYOffset, 16, height), Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
             }
+			else
+				spriteBatch.Draw(Texture, new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + zero, new Rectangle(tile.TileFrameX, tile.TileFrameY + frameYOffset, 16, height), Lighting.GetColor(i, j), 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
 
             // Return false to stop vanilla draw
-            return true;
+            return false;
         }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)   //light colors

@@ -2863,7 +2863,7 @@ Mods: {
 					'''
 					Left click to stab, right click to swing
 					Hitting enemies with the blade inflicts them with the Mary's Wrath debuff
-					After 20 uses of the weapon, Mary will be summoned
+					After 30 uses of the weapon, Mary will be summoned
 					Any enemy that had the Mary's Wrath debuff on them takes 150 damage and gets their debuff removed
 					It was never just folklore
 					'''
@@ -4143,6 +4143,18 @@ Mods: {
 					'''
 					The scale of a creature with draconic ancestry
 					Resists flames and seething heat
+					'''
+			}
+
+			EGG: {
+				DisplayName: 01000100 01101001 01110110 01101001 01101110 01100101 00100000 01000101 01100111 01100111
+				Tooltip:
+				    '''
+					01001100 01101111 01101110 01100101 01101100 01111001
+					01000001 01101110 01100111 01110010 01111001
+					01000010 01101001 01110100 01110100 01100101 01110010
+					01010011 01110101 01100110 01100110 01100101 01110010 01101001 01101110 01100111
+					01010100 01101000 01100101 00100000 01100111 01110010 01100101 01100001 01110100 01100101 01110010 00100000 01100111 01101111 01101111 01100100
 					'''
 			}
 		}

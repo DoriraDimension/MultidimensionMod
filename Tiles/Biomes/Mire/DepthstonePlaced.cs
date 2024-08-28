@@ -19,6 +19,7 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             Main.tileMerge[Type][ModContent.TileType<DepthIce>()] = true;
             Main.tileMerge[Type][ModContent.TileType<DepthstonePlaced>()] = true;
             Main.tileMerge[Type][ModContent.TileType<MireGrass>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<DarkmudPlaced>()] = true;
             Main.tileMerge[TileID.Mud][Type] = true;
             Main.tileMerge[Type][TileID.Mud] = true;
             Main.tileMergeDirt[Type] = true;

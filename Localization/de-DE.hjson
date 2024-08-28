@@ -4145,6 +4145,11 @@ Mods: {
 					Resists flames and seething heat
 					''' */
 			}
+
+			EGG: {
+				// Tooltip: ""
+				// DisplayName: E G G
+			}
 		}
 
 		SetBonuses: {
