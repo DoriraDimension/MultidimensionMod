@@ -30,7 +30,7 @@ namespace MultidimensionMod.NPCs.Critters
             NPC.width = 62;
             NPC.height = 46;
             NPC.defense = 4;
-            NPC.lifeMax = 20;
+            NPC.lifeMax = 5;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.knockBackResist = 0.8f;
@@ -62,6 +62,7 @@ namespace MultidimensionMod.NPCs.Critters
                 goRight = false;
                 NPC.spriteDirection = 0;
             }
+            NPC.life = 20;
         }
 
         public override void AI()

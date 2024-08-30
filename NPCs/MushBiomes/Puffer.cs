@@ -36,7 +36,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.aiStyle = -1;
             NPC.damage = 0;
             NPC.defense = 1000;
-            NPC.lifeMax = 250;
+            NPC.lifeMax = 5;
             NPC.HitSound = SoundID.NPCHit10;
             NPC.DeathSound = SoundID.NPCDeath5;
             NPC.knockBackResist = 0.0f;
@@ -54,6 +54,11 @@ namespace MultidimensionMod.NPCs.MushBiomes
             {
                 new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Puffer")
             });
+        }
+
+        public override void OnSpawn(IEntitySource source)
+        {
+            NPC.life = 250;
         }
 
         public enum ActionState
