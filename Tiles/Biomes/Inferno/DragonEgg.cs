@@ -23,6 +23,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             Main.tileLighted[Type] = true;
             Main.tileHammer[Type] = true;
             Main.tileNoAttach[Type] = true;
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
             TileObjectData.newTile.Width = 2;
             TileObjectData.newTile.Height = 2;
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16 };

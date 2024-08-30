@@ -26,10 +26,6 @@ namespace MultidimensionMod.Tiles.Furniture.RedMush
             TileID.Sets.HasOutlines[Type] = true;
             TileID.Sets.CanBeSatOnForNPCs[Type] = true;
             TileID.Sets.CanBeSatOnForPlayers[Type] = true;
-            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
-            DustType = ModContent.DustType<MushroomDust>();
-            AdjTiles = new int[] { TileID.Chairs };
-            AddMapEntry(new Color(120, 90, 0));
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2);
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
             TileObjectData.newTile.Direction = TileObjectDirection.PlaceLeft;
@@ -40,6 +36,10 @@ namespace MultidimensionMod.Tiles.Furniture.RedMush
             TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
             TileObjectData.addAlternate(1);
             TileObjectData.addTile(Type);
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
+            DustType = ModContent.DustType<MushroomDust>();
+            AdjTiles = new int[] { TileID.Chairs };
+            AddMapEntry(new Color(120, 90, 0));
         }
 
         public override void NumDust(int i, int j, bool fail, ref int num) => num = fail ? 1 : 3;

@@ -21,11 +21,8 @@ namespace MultidimensionMod.Tiles.Furniture.RedMush
             Main.tileLavaDeath[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newSubTile.CopyFrom(TileObjectData.newTile);
-            TileObjectData.newTile.WaterDeath = true;
-            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
-            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
-            TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleLineSkip = 2;
+            TileObjectData.newSubTile.LavaDeath = false;
+            TileObjectData.newSubTile.LavaPlacement = LiquidPlacement.Allowed;
             TileObjectData.addTile(Type);
             AddMapEntry(new Color(120, 90, 0));
             AdjTiles = new int[] { TileID.HangingLanterns };

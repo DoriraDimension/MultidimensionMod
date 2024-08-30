@@ -7,25 +7,36 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace MultidimensionMod
+namespace MultidimensionMod.Menus
 {
     //This code was made possible by the Calamity Mod
-    public class ALFungusMenu : ModMenu
+    public class ALVoidMenu : ModMenu
     {
-        public override string DisplayName => "Awakened Light Fungal Prayers Style";
+        public static ModMenu Instance
+        {
+            get;
+            private set;
+        }
 
-        public override Asset<Texture2D> Logo => ModContent.Request<Texture2D>("MultidimensionMod/Logo");
+        public override void Load()
+        {
+            Instance = this;
+        }
+
+        public override string DisplayName => "The Red Anomaly";
+
+        public override Asset<Texture2D> Logo => ModContent.Request<Texture2D>("MultidimensionMod/Menus/EggLogo");
         public override Asset<Texture2D> SunTexture => ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/NoTexture");
         public override Asset<Texture2D> MoonTexture => ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/NoTexture");
 
-        public override int Music => MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Shroom");
+        public override int Music => MusicLoader.GetMusicSlot(Mod, "Sounds/Music/VoidsEdge");
 
         public override ModSurfaceBackgroundStyle MenuBackgroundStyle => ModContent.GetInstance<NullBG>();
 
         // Before drawing the logo, draw the entire Calamity background. This way, the typical parallax background is skipped entirely.
         public override bool PreDrawLogo(SpriteBatch spriteBatch, ref Vector2 logoDrawCenter, ref float logoRotation, ref float logoScale, ref Color drawColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/FungusMenuBG").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Menus/VoidMenuBG").Value;
 
             // Calculate the draw position offset and scale in the event that someone is using a non-16:9 monitor
             Vector2 drawOffset = Vector2.Zero;
@@ -66,31 +77,4 @@ namespace MultidimensionMod
             return false;
         }
     }
-    // Thanks to Nycro#0001 <@!262663471189983242> for this null background which cleanly ignores vanilla's parallax mechanics
-    internal class NullBG : ModSurfaceBackgroundStyle
-    {
-        public override void ModifyFarFades(float[] fades, float transitionSpeed)
-        {
-            for (int i = 0; i < fades.Length; i++)
-            {
-                if (i == Slot)
-                {
-                    fades[i] += transitionSpeed;
-                    if (fades[i] > 1f)
-                    {
-                        fades[i] = 1f;
-                    }
-                }
-                else
-                {
-                    fades[i] -= transitionSpeed;
-                    if (fades[i] < 0f)
-                    {
-                        fades[i] = 0f;
-                    }
-                }
-            }
-        }
-    }
-
 }

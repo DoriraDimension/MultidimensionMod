@@ -21,7 +21,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
             Main.tileLavaDeath[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newSubTile.CopyFrom(TileObjectData.newTile);
-            TileObjectData.newTile.StyleHorizontal = true;
+            TileObjectData.newSubTile.LavaDeath = false;
+            TileObjectData.newSubTile.LavaPlacement = LiquidPlacement.Allowed;
             TileObjectData.addTile(Type);
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Void Matter Lantern");

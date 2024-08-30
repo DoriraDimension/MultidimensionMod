@@ -20,7 +20,6 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
             Main.tileLavaDeath[Type] = true;
             Main.tileNoAttach[Type] = true;
             Main.tileWaterDeath[Type] = true;
-
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1xX);
             TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.Origin = new Point16(0, 2);

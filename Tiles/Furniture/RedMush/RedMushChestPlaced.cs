@@ -26,6 +26,9 @@ namespace MultidimensionMod.Tiles.Furniture.RedMush
             Main.tileSpelunker[Type] = true;
             Main.tileShine2[Type] = true;
             Main.tileShine[Type] = 1200;
+            TileID.Sets.HasOutlines[Type] = true;
+            TileID.Sets.BasicChest[Type] = true;
+            TileID.Sets.DisableSmartCursor[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
             TileObjectData.newTile.HookCheckIfCanPlace = new PlacementHook(Chest.FindEmptyChest, -1, 0, true);
@@ -33,9 +36,6 @@ namespace MultidimensionMod.Tiles.Furniture.RedMush
             TileObjectData.newTile.AnchorInvalidTiles = new[] { 127 };
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
-            TileID.Sets.HasOutlines[Type] = true;
-            TileID.Sets.BasicChest[Type] = true;
-            TileID.Sets.DisableSmartCursor[Type] = true;
             TileObjectData.newTile.AnchorInvalidTiles = new[] { 127 };
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
