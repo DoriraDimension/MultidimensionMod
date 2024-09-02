@@ -1,7 +1,7 @@
 ﻿using MultidimensionMod.NPCs.Bosses.FeudalFungus;
 using MultidimensionMod.NPCs.MushBiomes;
 using System.Collections.Generic;
-using static Terraria.ModLoader.ModContent;
+using Terraria.ModLoader;
 using Terraria.ID;
 
 namespace MultidimensionMod
@@ -17,10 +17,15 @@ namespace MultidimensionMod
                 ProjectileID.SaucerDeathray,
                 ProjectileID.PhantasmalDeathray,
 
-                ProjectileType<IlluminaRing>(),
-                ProjectileType<RadiantIlluminaRing>(),
-                ProjectileType<PufferFart>(),
+                ModContent.ProjectileType<IlluminaRing>(),
+                ModContent.ProjectileType<RadiantIlluminaRing>(),
+                ModContent.ProjectileType<PufferFart>(),
             };
+        }
+
+        public static void UnloadLists()
+        {
+            ReflectionExceptions = null;
         }
     }
 }

@@ -44,18 +44,9 @@ namespace MultidimensionMod.NPCs.Mire
 
         public override void SetDefaults()
         {
-            if (grass)
-                NPC.lifeMax = 100;
-            else
-                NPC.lifeMax = 80;
-            if (spiked)
-                NPC.damage = 26;
-            else
-                NPC.damage = 20;
-            if (scarred)
-                NPC.defense = 8;
-            else
-                NPC.defense = 14;
+            NPC.lifeMax = 80;
+            NPC.damage = 20;
+            NPC.defense = 14;
             NPC.value = Item.sellPrice(0, 0, 1, 0);
             NPC.aiStyle = -1;
             NPC.width = 56;
@@ -83,12 +74,12 @@ namespace MultidimensionMod.NPCs.Mire
         private bool scarred = false;
         private bool grass = false;
         private bool spiked = false;
-        private Vector2 homeTile;
+        private int homeTile;
         private int hasNotBeenAttackedSince = 0;
 
         public override void OnSpawn(IEntitySource source)
         {
-            homeTile = new Vector2(NPC.position.X, NPC.position.Y);
+            homeTile = BaseWorldGen.GetFirstTileFloor((int)NPC.Center.X / 16, (int)NPC.Center.Y / 16);
             int choice = Main.rand.Next(4);
             if (choice == 0)
             {
@@ -97,14 +88,17 @@ namespace MultidimensionMod.NPCs.Mire
             else if (choice == 1)
             {
                 scarred = true; //Scarred variant, has less defense but is faster and has a larger aggression radius
+                NPC.defense *= (int)0.6f;
             }
             else if (choice == 2)
             {
                 grass = true; //Overgrown variant, has a glowmask and more health
+                NPC.lifeMax *= (int)1.2f;
             }
             else if (choice == 3)
             {
                 spiked = true; //Spiked variant, does more damage
+                NPC.damage *= (int)1.1f;
             }
         }
 
@@ -112,15 +106,28 @@ namespace MultidimensionMod.NPCs.Mire
         {
             if (NPC.life <= 0)
             {
-
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/SkulkerGore1").Type, 1); //body
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/SkulkerGore2").Type, 1); //right claw
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/SkulkerGore3").Type, 1); //left claw
+            }
+            if (grass)
+            {
+                for (int i = 0; i < 16; i++)
+                {
+                    int dust = Main.dayTime ? DustID.JungleGrass : DustID.BlueTorch;
+                    Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, dust, 0f, 0f, 0);
+                    Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, dust, 0f, 0f, 0);
+                    Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, dust, 0f, 0f, 0);
+                }
             }
         }
 
         public override void AI()
         {
+            Vector2 homePosition = new Vector2(homeTile, homeTile);
             Player target = Main.player[NPC.target];
             float distanceToPlayer = Vector2.Distance(target.Center, NPC.Center);
-            float distanceToHome = Vector2.Distance(homeTile, NPC.Center);
+            float distanceToHome = Vector2.Distance(homePosition, NPC.Center);
             if (target.dead || !target.active || Vector2.Distance(target.Center, NPC.Center) > 5000)
             {
                 NPC.TargetClosest();
@@ -196,7 +203,7 @@ namespace MultidimensionMod.NPCs.Mire
                         }
                     }
                     PursuitAI();
-                    if (distanceToHome > 800 && hasNotBeenAttackedSince > 0) //Stop pursuing and retreat back to nesting tile if not under attack
+                    if (distanceToHome > 800 && hasNotBeenAttackedSince == 0) //Stop pursuing and retreat back to nesting tile if not under attack
                     {
                         AIState = ActionState.Retreating;
                         NPC.netUpdate = true;
@@ -249,12 +256,12 @@ namespace MultidimensionMod.NPCs.Mire
                             NPC.frame.Y = 1 * 44;
                         }
                     }
-                    if (hasNotBeenAttackedSince > 0) //Go back to pursuing of attacked
+                    if (hasNotBeenAttackedSince > 0) //Go back to pursuing if attacked
                     {
                         AIState = ActionState.Pursuing;
                         NPC.netUpdate = true;
                     }
-                    if (NPC.position == homeTile) //Go back to sleep if nesting tile was reached
+                    if (NPC.position == homePosition) //Go back to sleep if nesting tile was reached
                     {
                         AIState = ActionState.Eeping;
                         NPC.netUpdate = true;

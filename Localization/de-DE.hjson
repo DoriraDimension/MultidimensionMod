@@ -3950,7 +3950,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Decreases movement speed by 10%
-					Has a 20% chance to reflect a projectile
+					Has a 10% chance to reflect a projectile
 					The reflected projectile only deals half its normal damage to you
 					''' */
 			}

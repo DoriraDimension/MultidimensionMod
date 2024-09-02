@@ -46,6 +46,7 @@ namespace MultidimensionMod
             SkyManager.Instance["DragonHoardSky"] = new DragonHoardSky();
             SkyManager.Instance["ShroudedMireSky"] = new ShroudedMireSky();
             Filters.Scene["MultidimensionMod:Madness"] = new Filter(new ScreenShaderData("FilterMiniTower").UseColor(0.8f, 0.6f, 0.2f).UseOpacity(0.5f), EffectPriority.High);
+			ALLists.LoadLists();
 			base.Load();
         }
 
@@ -54,6 +55,7 @@ namespace MultidimensionMod
             Terraria.IL_Main.DrawUnderworldBackgroudLayer -= ILMainDrawUnderworldBackgroundLayer;
             Terraria.IL_Player.UpdateBiomes -= NoHeat;
             Terraria.Graphics.Light.On_TileLightScanner.ApplyHellLight -= TileLightScanner_ApplyHellLight;
+			ALLists.UnloadLists();
         }
 
         public override void PostSetupContent()

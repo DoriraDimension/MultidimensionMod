@@ -39,7 +39,7 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             TileID.Sets.NeedsGrassFraming[Type] = true;
             TileID.Sets.Conversion.MergesWithDirtInASpecialWay[Type] = true;
             TileID.Sets.JungleSpecial[Type] = true;
-            DustType = ModContent.DustType<AbyssiumDust>();
+            DustType = Main.dayTime ? DustID.JungleGrass : DustID.BlueTorch;
             AddMapEntry(new Color(0, 50, 140));
             if (!Main.dedServ)
                 glowTexture = ModContent.Request<Texture2D>(Texture + "_Glow");
