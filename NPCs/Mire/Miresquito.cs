@@ -25,11 +25,11 @@ namespace MultidimensionMod.NPCs.Mire
             NPC.aiStyle = 1;
             NPC.noGravity = true;
             NPC.noTileCollide = false;
-            NPC.width = 64;
+            NPC.width = 80;
 			NPC.height = 64;
 			NPC.damage = 25;
 			NPC.defense = 10;
-			NPC.lifeMax = 200;
+			NPC.lifeMax = 60;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 6000f;
@@ -111,14 +111,14 @@ namespace MultidimensionMod.NPCs.Mire
             {
                 maxVelocity = 1;
             }
-            else if (TheNefariousObeseness >= 6)
+            else if (TheNefariousObeseness >= 6) //Fall to the ground on the spot
             {
                 maxVelocity = 0;
                 NPC.noGravity = false;
                 NPC.velocity.X = 0;
                 NPC.aiStyle = -1;
             }
-            if (TheNefariousObeseness < 6)
+            if (TheNefariousObeseness < 6) //Stop flying when too full
             {
                 BaseAI.AIFlier(NPC, ref NPC.ai, false, 0.2f, 0.1f, maxVelocity, 2.5f, true, 250);
             }
@@ -141,6 +141,14 @@ namespace MultidimensionMod.NPCs.Mire
                 TheNefariousObeseness++;
                 NPC.life += 5;
             }
+            if (target.HasBuff(BuffID.Poisoned))
+            {
+                NPC.AddBuff(BuffID.Poisoned, 300);
+            }
+            if (target.HasBuff(BuffID.Venom))
+            {
+                NPC.AddBuff(BuffID.Venom, 300);
+            }
         }
 
         //Drop hearts on death when fat enough (At least tier 3)
@@ -151,7 +159,7 @@ namespace MultidimensionMod.NPCs.Mire
             {
                 NPCloot.Add(ItemDropRule.Common(ItemID.Heart, 1, 4, 4));
             }
-            else if (TheNefariousObeseness >= 6)
+            else if (TheNefariousObeseness < 6 && TheNefariousObeseness >= 4)
             {
                 NPCloot.Add(ItemDropRule.Common(ItemID.Heart, 1, 2, 2));
             }
@@ -171,7 +179,7 @@ namespace MultidimensionMod.NPCs.Mire
                     Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, dust, 0f, 0f, 0);
                     Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, dust, 0f, 0f, 0);
                 }
-                if (TheNefariousObeseness >= 2 && TheNefariousObeseness < 4)
+                else if (TheNefariousObeseness >= 2 && TheNefariousObeseness < 4)
                 {
                     for (int i = 0; i < 16; i++)
                     {
@@ -181,7 +189,7 @@ namespace MultidimensionMod.NPCs.Mire
                         Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, dust, 0f, 0f, 0);
                     }
                 }
-                if (TheNefariousObeseness >= 4 && TheNefariousObeseness < 6)
+                else if (TheNefariousObeseness >= 4 && TheNefariousObeseness < 6)
                 {
                     for (int i = 0; i < 32; i++)
                     {
@@ -191,7 +199,7 @@ namespace MultidimensionMod.NPCs.Mire
                         Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width * (int)1.2, NPC.height * (int)1.2, dust, 0f, 0f, 0);
                     }
                 }
-                if (TheNefariousObeseness >= 6)
+                else if (TheNefariousObeseness >= 6)
                 {
                     for (int i = 0; i < 64; i++)
                     {

@@ -23,8 +23,6 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             TileID.Sets.Grass[Type] = true;
             Main.tileBlockLight[Type] = true;
             TileID.Sets.CanBeDugByShovel[Type] = true;
-            TileID.Sets.SpreadOverground[Type] = true;
-            TileID.Sets.SpreadUnderground[Type] = true;
             Main.tileMerge[Type][ModContent.TileType<AbyssiumOrePlaced>()] = true;
             Main.tileMerge[Type][ModContent.TileType<DepthsandPlaced>()] = true;
             Main.tileMerge[Type][ModContent.TileType<DepthsandstonePlaced>()] = true;
@@ -66,6 +64,8 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<BlackLotusPlaced>(), 0, 0, -1, -1);
 
             }*/
+            if (Main.rand.NextBool(4))
+                WorldGen.SpreadGrass(i + Main.rand.Next(-1, 1), j + Main.rand.Next(-1, 1), ModContent.TileType<DarkmudPlaced>(), Type, false);
         }
         public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)
         {

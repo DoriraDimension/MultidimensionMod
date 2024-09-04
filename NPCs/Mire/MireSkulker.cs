@@ -112,7 +112,7 @@ namespace MultidimensionMod.NPCs.Mire
             }
             if (grass)
             {
-                for (int i = 0; i < 16; i++)
+                for (int i = 0; i < 6; i++)
                 {
                     int dust = Main.dayTime ? DustID.JungleGrass : DustID.BlueTorch;
                     Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, dust, 0f, 0f, 0);

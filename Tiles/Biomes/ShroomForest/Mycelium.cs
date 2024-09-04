@@ -15,8 +15,6 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             Main.tileBlendAll[Type] = true;
             Main.tileBlockLight[Type] = true;
             TileID.Sets.CanBeDugByShovel[Type] = true;
-            TileID.Sets.SpreadOverground[Type] = true;
-            TileID.Sets.SpreadUnderground[Type] = true;
             TileID.Sets.NeedsGrassFraming[Type] = true;
             TileID.Sets.DoesntPlaceWithTileReplacement[Type] = true;
             TileID.Sets.Grass[Type] = true;
@@ -43,6 +41,8 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<KingsCapPlaced>(), mute: true);
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<KingsCapPlaced>(), Main.rand.Next(5), 0, -1, -1);
             }
+            if (Main.rand.NextBool(4))
+                WorldGen.SpreadGrass(i + Main.rand.Next(-1, 1), j + Main.rand.Next(-1, 1), TileID.Dirt, Type, false);
         }
 
         public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)
