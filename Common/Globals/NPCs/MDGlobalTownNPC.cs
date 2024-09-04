@@ -159,6 +159,14 @@ namespace MultidimensionMod
                         shopCustomPrice = Item.buyPrice(0, 12)
                     }, Condition.DownedMartians);
                 }
+
+                if (shop.NpcType == NPCID.Princess)
+                {
+                    shop.Add(new Item(ItemID.TeleportationPylonVictory)
+                    {
+                        shopCustomPrice = Item.buyPrice(5, 0, 0, 0)
+                    }, Condition.DownedMoonLord);
+                }
             }
         }
     }
