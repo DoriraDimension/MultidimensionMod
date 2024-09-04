@@ -1174,6 +1174,10 @@ namespace MultidimensionMod.Common.Globals.Items
                 if (recipe.HasResult(ItemID.TerrasparkBoots))
                     recipe.AddIngredient(ModContent.ItemType<PaleMatter>(), 3);
 				    //recipe.AddIngredient(ModContent.ItemType<TerraShard>(), 10);
+                if (recipe.HasResult(ItemID.PhoenixBlaster))
+                {
+                    recipe.AddIngredient(ItemID.Bone, 23);
+                }
             }
         }
 

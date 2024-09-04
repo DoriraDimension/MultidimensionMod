@@ -24,6 +24,13 @@ namespace MultidimensionMod.Common.Globals.Items
 			{
 				item.UseSound = SoundID.Item103;
 			}
+			if (item.type == ItemID.Handgun)
+			{
+				item.damage = 19;
+				item.useTime = 20;
+				item.useAnimation = 20;
+			}
+			#region Edible Herbs
 			if (item.type == ItemID.Blinkroot)
             {
 				item.useStyle = ItemUseStyleID.EatFood;
@@ -95,6 +102,7 @@ namespace MultidimensionMod.Common.Globals.Items
 				item.buffType = (BuffID.PotionSickness);
 				item.buffTime = 600;
 			}
+			#endregion
 		}
 
 		public override bool CanUseItem(Item item, Player player)

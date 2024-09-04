@@ -15,7 +15,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 
 		public override void SetDefaults()
 		{
-			Item.damage = 30;
+			Item.damage = 52;
 			Item.DamageType = DamageClass.Melee;
 			Item.useAnimation = 24;
 			Item.useTime = 24;
@@ -40,19 +40,10 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 
 		public override void AddRecipes()
 		{
-			CreateRecipe()
-			.AddIngredient(ItemID.TheRottedFork)
+            CreateRecipe()
 			.AddIngredient(ItemID.DarkLance)
-			.AddIngredient(ModContent.ItemType<GrassSpear>())
 			.AddIngredient(ModContent.ItemType<MoltenLance>())
-			.AddTile(TileID.Anvils)
-			.Register();
-
-			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<Soulpiercer>())
-			.AddIngredient(ItemID.DarkLance)
-			.AddIngredient(ModContent.ItemType<GrassSpear>())
-			.AddIngredient(ModContent.ItemType<MoltenLance>())
+			.AddIngredient(ItemID.SoulofNight, 8)
 			.AddTile(TileID.Anvils)
 			.Register();
 		}

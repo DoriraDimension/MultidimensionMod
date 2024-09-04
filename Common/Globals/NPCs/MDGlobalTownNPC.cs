@@ -20,6 +20,13 @@ namespace MultidimensionMod
         {
             if (ModContent.GetInstance<MDConfig>().NPCItemSelling)
             {
+                if (shop.NpcType == NPCID.ArmsDealer)
+                {
+                    shop.Add(new Item(ItemID.Handgun)
+                    {
+                        shopCustomPrice = Item.buyPrice(0, 10, 0, 0)
+                    }, Condition.DownedEowOrBoc);           
+                }
                 if (shop.NpcType == NPCID.Dryad)
                 {
                     shop.Add(new Item(ItemID.SlimeCrown)

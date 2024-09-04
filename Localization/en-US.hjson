@@ -1928,7 +1928,7 @@ Mods: {
 
 			Soulpiercer: {
 				DisplayName: Soulpiercer
-				Tooltip: Doesnt affect soulless beings
+				Tooltip: Doesn't affect soulless beings
 			}
 
 			VikingPolearm: {
