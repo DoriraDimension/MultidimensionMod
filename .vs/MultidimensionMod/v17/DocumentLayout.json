@@ -3,31 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\globals\\items\\mdglobalitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\globals\\items\\mdglobalitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\globals\\npcs\\mdglobaltownnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\globals\\npcs\\mdglobaltownnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\NPCs\\CalamityGlobalTownNPC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\globals\\items\\recipes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\globals\\items\\recipes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\weapons\\melee\\spears\\duskbringer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\weapons\\melee\\spears\\duskbringer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:localization\\en-us.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\globals\\npcs\\drops.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\globals\\npcs\\drops.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Items\\Placeable\\Plants\\AncientGrassSeeds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -77,89 +54,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MDGlobalItem.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\Items\\MDGlobalItem.cs",
-              "RelativeDocumentMoniker": "Common\\Globals\\Items\\MDGlobalItem.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\Items\\MDGlobalItem.cs",
-              "RelativeToolTip": "Common\\Globals\\Items\\MDGlobalItem.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T20:15:05.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CalamityGlobalTownNPC.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\NPCs\\CalamityGlobalTownNPC.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\NPCs\\CalamityGlobalTownNPC.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\NPCs\\CalamityGlobalTownNPC.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\NPCs\\CalamityGlobalTownNPC.cs",
-              "ViewState": "AQIAADMEAAAAAAAAAAAtwEEEAABjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T20:13:45.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MDGlobalTownNPC.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\NPCs\\MDGlobalTownNPC.cs",
-              "RelativeDocumentMoniker": "Common\\Globals\\NPCs\\MDGlobalTownNPC.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\NPCs\\MDGlobalTownNPC.cs",
-              "RelativeToolTip": "Common\\Globals\\NPCs\\MDGlobalTownNPC.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABsAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T20:03:48.956Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Recipes.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\Items\\Recipes.cs",
-              "RelativeDocumentMoniker": "Common\\Globals\\Items\\Recipes.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\Items\\Recipes.cs",
-              "RelativeToolTip": "Common\\Globals\\Items\\Recipes.cs",
-              "ViewState": "AQIAABUCAAAAAAAAAAAlwJoEAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T19:28:59.438Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "DuskBringer.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Melee\\Spears\\DuskBringer.cs",
-              "RelativeDocumentMoniker": "Items\\Weapons\\Melee\\Spears\\DuskBringer.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Melee\\Spears\\DuskBringer.cs",
-              "RelativeToolTip": "Items\\Weapons\\Melee\\Spears\\DuskBringer.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAowC0AAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T18:49:23.609Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Drops.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\NPCs\\Drops.cs",
-              "RelativeDocumentMoniker": "Common\\Globals\\NPCs\\Drops.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\NPCs\\Drops.cs",
-              "RelativeToolTip": "Common\\Globals\\NPCs\\Drops.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAtwEcAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T14:48:31.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "AstralGrassSeeds.cs",
               "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Placeables\\AstralGrassSeeds.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Placeables\\AstralGrassSeeds.cs",
@@ -171,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
               "Title": "IrradiatedCorruptGrassSeeds.cs",
               "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Items\\Placeable\\Plants\\IrradiatedCorruptGrassSeeds.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Items\\Placeable\\Plants\\IrradiatedCorruptGrassSeeds.cs",
@@ -183,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 7,
               "Title": "MyceliumSeeds.cs",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Placeables\\Biomes\\ShroomForest\\MyceliumSeeds.cs",
               "RelativeDocumentMoniker": "Items\\Placeables\\Biomes\\ShroomForest\\MyceliumSeeds.cs",
@@ -195,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "MireSeeds.cs",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Placeables\\Biomes\\Mire\\MireSeeds.cs",
               "RelativeDocumentMoniker": "Items\\Placeables\\Biomes\\Mire\\MireSeeds.cs",
@@ -207,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "InfernoSeeds.cs",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Placeables\\Biomes\\Inferno\\InfernoSeeds.cs",
               "RelativeDocumentMoniker": "Items\\Placeables\\Biomes\\Inferno\\InfernoSeeds.cs",
@@ -219,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "AncientGrassSeeds.cs",
               "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Items\\Placeable\\Plants\\AncientGrassSeeds.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Items\\Placeable\\Plants\\AncientGrassSeeds.cs",
@@ -232,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 6,
               "Title": "AncientGrassTile.cs",
               "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Tiles\\AncientGrassTile.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Tiles\\AncientGrassTile.cs",
@@ -244,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 8,
               "Title": "Mycelium.cs",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\ShroomForest\\Mycelium.cs",
               "RelativeDocumentMoniker": "Tiles\\Biomes\\ShroomForest\\Mycelium.cs",
@@ -256,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 9,
               "Title": "InfernoGrass.cs",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\Inferno\\InfernoGrass.cs",
               "RelativeDocumentMoniker": "Tiles\\Biomes\\Inferno\\InfernoGrass.cs",
@@ -268,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 10,
               "Title": "MireGrass.cs",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\Mire\\MireGrass.cs",
               "RelativeDocumentMoniker": "Tiles\\Biomes\\Mire\\MireGrass.cs",
@@ -280,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 11,
               "Title": "MDPlayer.cs",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Players\\MDPlayer.cs",
               "RelativeDocumentMoniker": "Common\\Players\\MDPlayer.cs",
@@ -292,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "en-US.hjson",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US.hjson",

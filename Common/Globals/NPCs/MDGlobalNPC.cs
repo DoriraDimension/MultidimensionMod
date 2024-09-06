@@ -200,17 +200,7 @@ namespace MultidimensionMod
 
         public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.ZoneTowerNebula || spawnInfo.Player.ZoneTowerSolar || spawnInfo.Player.ZoneTowerStardust || spawnInfo.Player.ZoneTowerVortex ||
-                Main.eclipse ||
-                Main.invasionType == InvasionID.MartianMadness ||
-                Main.invasionType == InvasionID.CachedPumpkinMoon ||
-                Main.invasionType == InvasionID.CachedFrostMoon ||
-				Main.invasionType == InvasionID.GoblinArmy ||
-				Main.invasionType == InvasionID.PirateInvasion)
-            {
-                return;
-            }
-            if (spawnInfo.Player.InModBiome<FrozenUnderworld>())
+            if (spawnInfo.Player.InModBiome<FrozenUnderworld>() && !spawnInfo.Player.ZoneTowerNebula && !spawnInfo.Player.ZoneTowerSolar && !spawnInfo.Player.ZoneTowerStardust && !spawnInfo.Player.ZoneTowerVortex)
 			{
 				pool.Clear();
 				//pool.Add(ModContent.NPCType<IceDemon>(), 0.3f);
@@ -222,7 +212,7 @@ namespace MultidimensionMod
                     pool.Add(ModContent.NPCType<Ashton>(), 0.06f);
                 }
 			}
-			if (spawnInfo.Player.InModBiome<MadnessMoon>())
+			if (spawnInfo.Player.InModBiome<MadnessMoon>() && !spawnInfo.Player.ZoneTowerNebula && !spawnInfo.Player.ZoneTowerSolar && !spawnInfo.Player.ZoneTowerStardust && !spawnInfo.Player.ZoneTowerVortex)
             {
 				pool.Clear();
 				pool.Add(ModContent.NPCType<MadnessBat>(), 1.0f);
@@ -234,7 +224,7 @@ namespace MultidimensionMod
 					//pool.Add(ModContent.NPCType<MadTitan>(), 0.2f);
 				}
 			}
-            if (spawnInfo.Player.InModBiome<ShroomForest>())
+            if (spawnInfo.Player.InModBiome<ShroomForest>() && !spawnInfo.Player.ZoneTowerNebula && !spawnInfo.Player.ZoneTowerSolar && !spawnInfo.Player.ZoneTowerStardust && !spawnInfo.Player.ZoneTowerVortex)
             {
                 pool.Clear();
                 pool.Add(ModContent.NPCType<CapBunny>(), 0.5f);
@@ -245,15 +235,15 @@ namespace MultidimensionMod
 				if ((Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<MyceliumSandPlaced>() || Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<Mycelium>()) && !NPC.AnyNPCs(ModContent.NPCType<MonarchSlep>()) && !NPC.AnyNPCs(ModContent.NPCType<MushroomMonarch>()) && spawnInfo.Player.InModBiome(ModContent.GetInstance<ShroomForest>()))
 				    pool.Add(ModContent.NPCType<MonarchSlep>(), 0.10f);
             }
-            if (spawnInfo.Player.InModBiome<TheDragonHoard>())
+            if (spawnInfo.Player.InModBiome<TheDragonHoard>() && !spawnInfo.Player.ZoneTowerNebula && !spawnInfo.Player.ZoneTowerSolar && !spawnInfo.Player.ZoneTowerStardust && !spawnInfo.Player.ZoneTowerVortex)
 			{
                 pool.Clear();
             }
-            if (spawnInfo.Player.InModBiome<TheDragonBurrow>())
+            if (spawnInfo.Player.InModBiome<TheDragonBurrow>() && !spawnInfo.Player.ZoneTowerNebula && !spawnInfo.Player.ZoneTowerSolar && !spawnInfo.Player.ZoneTowerStardust && !spawnInfo.Player.ZoneTowerVortex)
 			{
                 pool.Clear();
             }
-            if (spawnInfo.Player.InModBiome<TheShroudedMire>())
+            if (spawnInfo.Player.InModBiome<TheShroudedMire>() && !spawnInfo.Player.ZoneTowerNebula && !spawnInfo.Player.ZoneTowerSolar && !spawnInfo.Player.ZoneTowerStardust && !spawnInfo.Player.ZoneTowerVortex)
 			{
                 pool.Clear();
 				if (!Main.dayTime)
@@ -272,7 +262,7 @@ namespace MultidimensionMod
                     }
                 }
             }
-            if (spawnInfo.Player.InModBiome<TheLakeDepths>())
+            if (spawnInfo.Player.InModBiome<TheLakeDepths>() && !spawnInfo.Player.ZoneTowerNebula && !spawnInfo.Player.ZoneTowerSolar && !spawnInfo.Player.ZoneTowerStardust && !spawnInfo.Player.ZoneTowerVortex)
 			{
                 pool.Clear();
 				if (spawnInfo.Water)

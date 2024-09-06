@@ -3,11 +3,13 @@ using MultidimensionMod.Tiles.Ores;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Audio;
 
 namespace MultidimensionMod.Tiles.Biomes.Mire
 {
     public class DarkmudPlaced : ModTile
     {
+		public static readonly SoundStyle MineSound = new SoundStyle("MultidimensionMod/Sounds/Tiles/VeilmudHit", 3);
         public override void SetStaticDefaults()
         {
             Main.tileSolid[Type] = true;
@@ -27,7 +29,7 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             Main.tileBlendAll[Type] = false;
             Main.tileLighted[Type] = false;
             Main.tileBlockLight[Type] = true;
-            HitSound = SoundID.Dig;
+            HitSound = MineSound;
             DustType = ModContent.DustType<Dusts.AbyssiumDust>();
             AddMapEntry(new Color(102, 101, 120));
         }
