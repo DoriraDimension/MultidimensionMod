@@ -15,6 +15,7 @@ using Terraria.ModLoader.IO;
 using Mono.Cecil;
 using Terraria.Audio;
 using ReLogic.Utilities;
+using MultidimensionMod.Sounds;
 
 namespace MultidimensionMod.Common.Globals
 {
@@ -23,8 +24,10 @@ namespace MultidimensionMod.Common.Globals
         public static bool MadnessMoon;
         public static int TposeTimer;
         public static int BoxTimer;
-        private ActiveSound Sound;
-        private SlotId loop;
+        private ActiveSound BlizzardSound;
+        private SlotId BlizzardLoop;
+        private ActiveSound DripSound;
+        private SlotId DripLoop;
         public static bool Monday = false;
         public override void PostUpdateWorld()
         {
@@ -32,22 +35,44 @@ namespace MultidimensionMod.Common.Globals
             Player player = Main.LocalPlayer;
             if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()))
             {
-                if (Sound == null)
+                if (BlizzardSound == null)
                 {
-                    loop = SoundEngine.PlaySound(SoundID.BlizzardStrongLoop with { Volume = 0.50f }, player.Center);
+                    BlizzardLoop = SoundEngine.PlaySound(SoundID.BlizzardStrongLoop with { Volume = 0.50f }, player.Center);
 
                 }
-                if (SoundEngine.TryGetActiveSound(loop, out Sound))
+                if (SoundEngine.TryGetActiveSound(BlizzardLoop, out BlizzardSound))
                 {
-                    Sound.Position = player.Center;
+                    BlizzardSound.Position = player.Center;
                 }
             }
             if (!Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()))
             {
-                if (Sound != null)
+                if (BlizzardSound != null)
                 {
-                    Sound.Stop();
-                    loop = SlotId.Invalid;
+                    BlizzardSound.Stop();
+                    BlizzardLoop = SlotId.Invalid;
+                }
+            }
+            #endregion
+            #region Lake Depths droplet ambience that I stole from Hollow Knight
+            if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheLakeDepths>()))
+            {
+                if (DripSound == null)
+                {
+                    DripLoop = SoundEngine.PlaySound(CustomSounds.LakeAmbience with { Volume = 2.00f }, player.Center);
+
+                }
+                if (SoundEngine.TryGetActiveSound(DripLoop, out DripSound))
+                {
+                    DripSound.Position = player.Center;
+                }
+            }
+            if (!Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheLakeDepths>()))
+            {
+                if (DripSound != null)
+                {
+                    DripSound.Stop();
+                    DripLoop = SlotId.Invalid;
                 }
             }
             #endregion
