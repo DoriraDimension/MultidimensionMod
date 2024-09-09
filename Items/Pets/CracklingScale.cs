@@ -28,6 +28,7 @@ namespace MultidimensionMod.Items.Pets
             Item.height = 18;
             Item.value = Item.sellPrice(gold: 1);
             Item.rare = ItemRarityID.Orange;
+			Item.UseSound = SoundID.Item151;
         }
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)

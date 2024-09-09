@@ -232,6 +232,16 @@ Mods: {
 				DisplayName: The Flash
 				Description: A lovable noodle is keeping you company
 			}
+
+			MildBurn: {
+				DisplayName: Mild Burn
+				Description: Your skin is irritated, you are less durable
+			}
+
+			Hazed: {
+				DisplayName: Hazed
+				Description: You are drugged and weak
+			}
 		}
 
 		Items: {
@@ -4167,6 +4177,28 @@ Mods: {
 					01100110 00100000 01100101 01110100 01100101 01110010 01101110 01101001 01110100 01111001
 					'''
 			}
+
+			Sunpowder: {
+				DisplayName: Sunpowder
+				Tooltip:
+					'''
+					Throw a bag of smoldering powder that inflicts Mild Burn
+					Mild Burn decreases defense by 10
+					The debuff cannot be applied if the enemy is under the effect of Moonpowder
+					or is already inflicted with Mild Burn
+					'''
+			}
+
+			Moonpowder: {
+				DisplayName: Moonpowder
+				Tooltip:
+					'''
+					Throw a bag of drugged powder that inflicts Hazed
+					Hazed decreases enemy damage by 15%
+					The debuff cannot be applied if the enemy is under the effect of Sunpowder
+					or is already inflicted with Hazed
+					'''
+			}
 		}
 
 		SetBonuses: {
@@ -4424,6 +4456,8 @@ Mods: {
 			Flash.DisplayName: Flash
 			NewtAcidBoom.DisplayName: Acid
 			NewtAcidProj.DisplayName: Acid Explosion
+			SunpowderBag.DisplayName: Sunpowder Bag
+			MoonpowderBag.DisplayName: Moonpowder Bag
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability

@@ -88,17 +88,14 @@ namespace MultidimensionMod.NPCs.Mire
             else if (choice == 1)
             {
                 scarred = true; //Scarred variant, has less defense but is faster and has a larger aggression radius
-                NPC.defense *= (int)0.6f;
             }
             else if (choice == 2)
             {
                 grass = true; //Overgrown variant, has a glowmask and more health
-                NPC.lifeMax *= (int)1.2f;
             }
             else if (choice == 3)
             {
                 spiked = true; //Spiked variant, does more damage
-                NPC.damage *= (int)1.1f;
             }
         }
 
@@ -109,15 +106,15 @@ namespace MultidimensionMod.NPCs.Mire
                 Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/SkulkerGore1").Type, 1); //body
                 Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/SkulkerGore2").Type, 1); //right claw
                 Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/SkulkerGore3").Type, 1); //left claw
-            }
-            if (grass)
-            {
-                for (int i = 0; i < 6; i++)
+                if (grass)
                 {
-                    int dust = Main.dayTime ? DustID.JungleGrass : DustID.BlueTorch;
-                    Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, dust, 0f, 0f, 0);
-                    Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, dust, 0f, 0f, 0);
-                    Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, dust, 0f, 0f, 0);
+                    for (int i = 0; i < 6; i++)
+                    {
+                        int dust = Main.dayTime ? DustID.JungleGrass : DustID.BlueTorch;
+                        Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, dust, 0f, 0f, 0);
+                        Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, dust, 0f, 0f, 0);
+                        Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, dust, 0f, 0f, 0);
+                    }
                 }
             }
         }
@@ -132,18 +129,6 @@ namespace MultidimensionMod.NPCs.Mire
             {
                 NPC.TargetClosest();
             }
-            /*if (spiked)
-            {
-                NPC.damage = 30;
-            }
-            if (scarred)
-            {
-                NPC.defense = 8;
-            }
-            if (grass)
-            {
-                NPC.lifeMax *= (int)1.2f;
-            }*/
             hasNotBeenAttackedSince--;
             if (NPC.justHit)
             {
@@ -161,7 +146,7 @@ namespace MultidimensionMod.NPCs.Mire
                 case ActionState.Eeping:
                     NPC.velocity.X = 0;
                     NPC.frame.Y = 0;
-                    if (distanceToPlayer < aggroDistance || hasNotBeenAttackedSince > 0) //Start telling player that this is your territory
+                    if (distanceToPlayer < aggroDistance) //Start telling player that this is your territory
                     {
                         if (Collision.CanHit(NPC.position, NPC.width, NPC.height, Main.player[NPC.target].position, Main.player[NPC.target].width, Main.player[NPC.target].height))
                         {

@@ -154,7 +154,6 @@ namespace MultidimensionMod.NPCs.Mire
         //Drop hearts on death when fat enough (At least tier 3)
         public override void ModifyNPCLoot(NPCLoot NPCloot)
         {
-            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MirePod>(), 3, 1, 2));
             if (TheNefariousObeseness >= 6)
             {
                 NPCloot.Add(ItemDropRule.Common(ItemID.Heart, 1, 4, 4));

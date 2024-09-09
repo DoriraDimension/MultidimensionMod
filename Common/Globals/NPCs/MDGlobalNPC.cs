@@ -21,6 +21,7 @@ using Terraria.ModLoader;
 using Terraria.Localization;
 using Terraria.ModLoader.IO;
 using MultidimensionMod.Tiles.Biomes.ShroomForest;
+using rail;
 
 namespace MultidimensionMod
 {
@@ -38,6 +39,8 @@ namespace MultidimensionMod
 		public bool CantHurtDapper;
 		public bool Accursed;
 		public bool DimensionalShock;
+		public bool hazed;
+		public bool mildBurn;
 
 		public override void ResetEffects(NPC npc)
 		{
@@ -47,6 +50,8 @@ namespace MultidimensionMod
 			Nihil = false;
 			Accursed = false;
 			DimensionalShock = false;
+			hazed = false;
+			mildBurn = false;
 		}
 
 		public int AccursedTimer = 0;
@@ -128,7 +133,24 @@ namespace MultidimensionMod
             }
 		}
 
-		public override void DrawEffects(NPC npc, ref Color drawColor)
+        public override void ModifyHitPlayer(Terraria.NPC npc, Terraria.Player target, ref Terraria.Player.HurtModifiers modifiers)
+        {
+            if (hazed)
+                modifiers.IncomingDamageMultiplier *= 0.85f;
+        }
+        public override void ModifyHitNPC(Terraria.NPC npc, Terraria.NPC target, ref Terraria.NPC.HitModifiers modifiers)
+        {
+            if (hazed)
+                modifiers.FinalDamage *= 0.85f;
+        }
+
+        public override void ModifyIncomingHit(Terraria.NPC npc, ref Terraria.NPC.HitModifiers modifiers)
+        {
+            if (mildBurn)
+                modifiers.Defense *= .90f;
+        }
+
+        public override void DrawEffects(NPC npc, ref Color drawColor)
 		{
 			if (Blaze)
 			{
@@ -181,6 +203,26 @@ namespace MultidimensionMod
                 if (Main.rand.NextBool(6))
                 {
                     int dust = Dust.NewDust(npc.position - new Vector2(2f, 2f), npc.width, npc.height, ModContent.DustType<AccursedGhost>(), 0, -2, 30, default(Color), 1.0f);
+                }
+            }
+            if (hazed)
+            {
+                if (Main.rand.NextBool(60))
+                {
+                    int dust = Dust.NewDust(npc.position - new Vector2(2f, 2f), npc.width + 4, npc.height + 4, ModContent.DustType<MoonpowderDust>(), npc.velocity.X * 0.4f, npc.velocity.Y * 0.4f, 100, default(Color), 0.7f);
+                    Main.dust[dust].noGravity = true;
+                    Main.dust[dust].velocity *= 1.8f;
+                    Main.dust[dust].velocity.Y -= 0.5f;
+                }
+            }
+            if (mildBurn)
+            {
+                if (Main.rand.NextBool(60))
+                {
+                    int dust = Dust.NewDust(npc.position - new Vector2(2f, 2f), npc.width + 4, npc.height + 4, ModContent.DustType<SunpowderDust>(), npc.velocity.X * 0.4f, npc.velocity.Y * 0.4f, 100, default(Color), 0.7f);
+                    Main.dust[dust].noGravity = true;
+                    Main.dust[dust].velocity *= 1.8f;
+                    Main.dust[dust].velocity.Y -= 0.5f;
                 }
             }
         }
