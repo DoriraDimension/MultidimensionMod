@@ -1337,6 +1337,12 @@ Mods: {
 			CultistSoul: {
 				DisplayName: Soul of the Lunatic Cultist
 				Tooltip: ""
+				TTNoSword:
+					'''
+					The soul is still radiating a weird light
+					Maybe using it will unvocer its secrets
+					'''
+				TTWithSword: The weird light has faded away
 				Lore:
 					'''
 					A young boy once dreamed of the day where he could meet a god in flesh,
@@ -1346,8 +1352,6 @@ Mods: {
 					but he had luck in this misfortune, because he found something of great value.
 					Down in a cave at the bottom of a cliff, he found the Celestial Sigil,
 					an artifact that speaks about a deity named Cthulhu.
-					Over time, the man dedicated himself to revive this forgotten god,
-					creating a cult and going more mad day by day.
 					[c/F4cf0cc:What was I thinking, I should have known this deity was not real,]
 					[c/F4cf0cc:this pathetic husk was not even worth my effort, my dream was always a fraud.]
 					'''
@@ -1718,16 +1722,17 @@ Mods: {
 			}
 
 			GreatMoonlight: {
-				DisplayName: False Moonlight
-				Tooltip:
-					'''
-					The blue crystal blade is composed only of light
-					Fires a tile piercing moonlight wave
-					'''
+				DisplayName: Great Moonlight
+				Tooltip: Fires a large medium range piercing moonlight wave
 				Lore:
 					'''
-					The lunatic Cultist was an insane fanatic of the moon and so stole this legendary blade to use it himself,
-					but the blade instead obeys an otherworldly moon.
+					A blue sword of crystalline light from far beyond this realm.
+					The lunatic Cultist was a fanatic of the moon and so conducted rituals in its name.
+					Through a mere coincidence, this blade revealed itself to him during a full moon ritual,
+					claiming to be its gentle shine incarnate, knowing the god that lurks in its shadow.
+
+					But the great moonlight, as he called it, stems from a dimension far beyond ours,
+					shrouded in a light untrue.
 					'''
 			}
 
@@ -4458,6 +4463,8 @@ Mods: {
 			NewtAcidProj.DisplayName: Acid Explosion
 			SunpowderBag.DisplayName: Sunpowder Bag
 			MoonpowderBag.DisplayName: Moonpowder Bag
+			MoonlightBlade.DisplayName: Moonlight Blade
+			GreatMoonlightManifest.DisplayName: Great Moonlight Manifest
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -4950,7 +4957,11 @@ Mods: {
 				Vertrarius12: Vertrarius' soul fades away into Vulkanus.
 			}
 
-			Cultist.Hi: Hi
+			Cultist: {
+				MoonSword1: Embrace me
+				MoonSword2: Bathe in my light
+				MoonSword3: Like he never could
+			}
 		}
 
 		DropConditions: {

@@ -23,6 +23,7 @@ namespace MultidimensionMod.Items.Weapons.Typeless
             Item.noMelee = true;
             Item.noUseGraphic = true;
             Item.value = 75;
+            Item.rare = ItemRarityID.Green;
         }
 
 		public override void SetStaticDefaults()

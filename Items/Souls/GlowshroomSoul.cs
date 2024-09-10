@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Rarities.Souls;
+using MultidimensionMod.Common.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -93,59 +94,6 @@ namespace MultidimensionMod.Items.Souls
                 SpriteEffects.None,
                 0f
             );
-        }
-    }
-
-    public class MemorySystem : ModSystem
-    {
-        public static bool seenMemory;
-        public static bool seenSecondMemory;
-
-        public override void OnWorldLoad()
-        {
-            seenMemory = false;
-            seenSecondMemory = false;
-        }
-
-        public override void OnWorldUnload()
-        {
-            seenMemory = false;
-            seenSecondMemory = false;
-        }
-
-        public override void SaveWorldData(TagCompound tag)
-        {
-            var downed = new List<string>();
-
-            if (seenMemory)
-                downed.Add("seenMemory");
-            if (seenSecondMemory)
-                downed.Add("seenSecondMemory");
-
-            tag["memory"] = downed;
-        }
-
-        public override void LoadWorldData(TagCompound tag)
-        {
-            var downed = tag.GetList<string>("memory");
-
-            seenMemory = downed.Contains("seenMemory");
-            seenSecondMemory = downed.Contains("seenSecondMemory");
-        }
-
-        public override void NetSend(BinaryWriter writer)
-        {
-            var flags = new BitsByte();
-            flags[0] = seenMemory;
-            flags[0] = seenSecondMemory;
-            writer.Write(flags);
-        }
-
-        public override void NetReceive(BinaryReader reader)
-        {
-            BitsByte flags = reader.ReadByte();
-            seenMemory = flags[0];
-            seenSecondMemory = flags[0];
         }
     }
 }

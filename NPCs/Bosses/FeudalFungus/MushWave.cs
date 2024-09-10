@@ -11,10 +11,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 {
     internal class MushWave : ModProjectile
     {
-        //All 4 Mushshot variants reside in this file
         public override void SetStaticDefaults()
         {
-            //DisplayName.SetDefault("Spore Blast");
             ProjectileID.Sets.TrailCacheLength[Projectile.type] = 5;
             ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
             Main.projFrames[Projectile.type] = 2;

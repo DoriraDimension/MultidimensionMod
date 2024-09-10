@@ -211,4 +211,57 @@ namespace MultidimensionMod.Common.Systems
             seenLake = flags3[3];
         }
     }
+
+    public class MemorySystem : ModSystem
+    {
+        public static bool seenMemory;
+        public static bool summonedMoonSword;
+
+        public override void OnWorldLoad()
+        {
+            seenMemory = false;
+            summonedMoonSword = false;
+        }
+
+        public override void OnWorldUnload()
+        {
+            seenMemory = false;
+            summonedMoonSword = false;
+        }
+
+        public override void SaveWorldData(TagCompound tag)
+        {
+            var downed = new List<string>();
+
+            if (seenMemory)
+                downed.Add("seenMemory");
+            if (summonedMoonSword)
+                downed.Add("summonedMoonSword");
+
+            tag["memory"] = downed;
+        }
+
+        public override void LoadWorldData(TagCompound tag)
+        {
+            var downed = tag.GetList<string>("memory");
+
+            seenMemory = downed.Contains("seenMemory");
+            summonedMoonSword = downed.Contains("summonedMoonSword");
+        }
+
+        public override void NetSend(BinaryWriter writer)
+        {
+            var flags = new BitsByte();
+            flags[0] = seenMemory;
+            flags[1] = summonedMoonSword;
+            writer.Write(flags);
+        }
+
+        public override void NetReceive(BinaryReader reader)
+        {
+            BitsByte flags = reader.ReadByte();
+            seenMemory = flags[0];
+            summonedMoonSword = flags[1];
+        }
+    }
 }

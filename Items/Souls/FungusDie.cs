@@ -1,4 +1,4 @@
-﻿using MultidimensionMod.Dusts;
+﻿using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Items.Placeables;
 using Microsoft.Xna.Framework;
 using Terraria;

@@ -24,5 +24,19 @@ namespace MultidimensionMod.Utilities
         {
             return new(rect.Width / 2f, rect.Height / frames / 2f);
         }
+
+        public static bool AnyProjectiles(int projectileID)
+        {
+            for (int i = 0; i < Main.maxProjectiles; i++)
+            {
+                Projectile p = Main.projectile[i];
+                if (p.type != projectileID || !p.active)
+                    continue;
+
+                return true;
+            }
+
+            return false;
+        }
     }
 }
