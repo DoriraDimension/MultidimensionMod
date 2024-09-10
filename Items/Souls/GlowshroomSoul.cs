@@ -10,7 +10,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Terraria.ModLoader.IO;
-using MultidimensionMod.Common.Systems;
 using MultidimensionMod.NPCs.Friendly;
 using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
 using Terraria.Audio;
@@ -41,6 +40,22 @@ namespace MultidimensionMod.Items.Souls
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
+            if (MemorySystem.seenMemory)
+            {
+                TooltipLine line = new(Mod, "MemorySeen", Language.GetTextValue("Mods.MultidimensionMod.Items.GlowshroomSoul.MemorySeen"))
+                {
+                    OverrideColor = Color.White,
+                };
+                tooltips.Add(line);
+            }
+            else
+            {
+                TooltipLine line = new(Mod, "MemoryNotSeen", Language.GetTextValue("Mods.MultidimensionMod.Items.GlowshroomSoul.MemoryNotSeen"))
+                {
+                    OverrideColor = Color.White,
+                };
+                tooltips.Add(line);
+            }
             if (Main.keyState.PressingShift())
             {
                 TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.GlowshroomSoul.Lore"))

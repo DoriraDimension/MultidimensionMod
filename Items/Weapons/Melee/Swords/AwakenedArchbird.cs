@@ -53,6 +53,14 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
                 };
                 tooltips.Add(line);
             }
+            else
+            {
+                TooltipLine line = new(Mod, "OnlyForThoseWorthy", Language.GetTextValue("Mods.MultidimensionMod.Items.AwakenedArchbird.OnlyForThoseWorthy"))
+                {
+                    OverrideColor = Color.White
+                };
+                tooltips.Add(line);
+            }
             if (Main.keyState.PressingShift())
             {
                 TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.AwakenedArchbird.Lore"))

@@ -1516,17 +1516,21 @@ Mods: {
 
 			WallSoul: {
 				// DisplayName: Soul of the Underworld
-				/* Tooltip:
-					'''
-					[c/786d74:You could swear you can hear a conversation happening]
-					Use to listen closer
-					''' */
+				// Tooltip: ""
 				/* Lore:
 					'''
 					It is a flesh prison supposed to hold thousands of souls from both hallowed and demonic forces.
 					It was brought into existence by the old underworld civilization
 					by fusing their bodies into one large magic imbued mass.
 					''' */
+				/* Nonsense:
+					'''
+					[c/786d74:You could swear you can hear a conversation happening]
+					Use to listen closer
+					''' */
+				// AdelGuidance: The soul feels drawn towards the hallowed plains
+				// VertrariusGuidance: The soul feels drawn towards the molten caverns
+				// TheyShutUpNow: The soul has gone silent, no voices linger
 			}
 
 			WomanSlimeSoul: {
@@ -1970,7 +1974,16 @@ Mods: {
 
 			AwakenedArchbird: {
 				// DisplayName: Rahlem's Flamescar
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
+					'''
+					This ceremonial sword was used to burn marks into the skin of cult members, 
+					which was a painful process.
+					The deep red mark shows true dedication to their god and must be done to fully join their cult,
+					anyone who refused was exiled as a heretic.
+					Outside of those ceremonies, this weapon was used by the cult leader for various dark rituals.
+					''' */
+				/* OnlyForThoseWorthy:
 					'''
 					Right click to cut yourself for 20 damage with the tip of the blade to awaken it
 					When the effect runs out, you will be inflicted with Inner Ember
@@ -1979,14 +1992,6 @@ Mods: {
 					This damage resets when the debuff runs out
 					While awakened, the blade inflicts Blazing Suffering and creates green and red embers
 					Green embers pierce enemies and Red embers inflict Blazing Suffering
-					''' */
-				/* Lore:
-					'''
-					This ceremonial sword was used to burn marks into the skin of cult members, 
-					which was a painful process.
-					The deep red mark shows true dedication to their god and must be done to fully join their cult,
-					anyone who refused was exiled as a heretic.
-					Outside of those ceremonies, this weapon was used by the cult leader for various dark rituals.
 					''' */
 				// Locked: The weapon seems to be hiding its power from the unworthy. Defeating a flesh prison might prove your worth
 			}
@@ -2920,12 +2925,7 @@ Mods: {
 
 			GlowshroomSoul: {
 				// DisplayName: Indigo Soul Spore
-				/* Tooltip:
-					'''
-					This soul reflecting spore contains a memory left there by its owner
-					Use to view the memory
-					The memory can only be witnessed once
-					''' */
+				// Tooltip: ""
 				/* Lore:
 					'''
 					The Feudal Fungus, also known as Umos, the Radiant Apostle or glowing royalty is just like his brother and rules over a type of mushroom.
@@ -2934,6 +2934,13 @@ Mods: {
 					This is unlike his brother, who only rules a small forest.
 					He was mindless long ago, obeying distant orders, that was until it was blessed by light, claiming its new self.
 					''' */
+				/* MemoryNotSeen:
+					'''
+					This soul reflecting spore contains a memory left there by its owner
+					Use to view the memory
+					The memory can only be witnessed once
+					''' */
+				// MemorySeen: No memories linger anymore
 			}
 
 			MonarchRelic: {
