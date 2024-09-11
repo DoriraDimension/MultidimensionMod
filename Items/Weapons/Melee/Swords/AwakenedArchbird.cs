@@ -11,7 +11,6 @@ using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using System.Collections.Generic;
 using Terraria.Localization;
-using MultidimensionMod.Projectiles.Melee.Swords;
 using Terraria.Audio;
 using MultidimensionMod.Projectiles.Ranged;
 
@@ -33,7 +32,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			Item.useTime = 30;
 			Item.useAnimation = 30;
 			Item.useStyle = ItemUseStyleID.Swing;
-			Item.knockBack = 5;
+			Item.knockBack = 2;
 			Item.autoReuse = true;
 			Item.value = Item.sellPrice(0, 3, 0, 0);
 			Item.rare = ItemRarityID.LightRed;
@@ -163,13 +162,13 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
                 {
                     Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(20));
                     velocity *= 1f - Main.rand.NextFloat(0.3f);
-                    Projectile.NewProjectileDirect(source, position, newVelocity, ModContent.ProjectileType<SpiritEmber>(), (int)((double)(float)damage * 0.5), knockback, player.whoAmI);
+                    Projectile.NewProjectileDirect(source, position, newVelocity, ModContent.ProjectileType<SpiritEmber>(), (int)((double)(float)damage * 0.5), 1, player.whoAmI);
                 }
                 for (int i = 0; i < 2; i++)
                 {
                     Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(20));
                     velocity *= 1f - Main.rand.NextFloat(0.3f);
-                    Projectile.NewProjectileDirect(source, position, newVelocity, ModContent.ProjectileType<SeethingEmber>(), (int)((double)(float)damage * 0.3), knockback, player.whoAmI);
+                    Projectile.NewProjectileDirect(source, position, newVelocity, ModContent.ProjectileType<SeethingEmber>(), (int)((double)(float)damage * 0.3), 1, player.whoAmI);
                 }
             }
             return false;

@@ -43,7 +43,7 @@ namespace MultidimensionMod.Projectiles.Melee.Boomerangs
                     -Projectile.velocity.Y * 0.2f, 100, default);
             }
             Projectile.netUpdate = true;
-            target.AddBuff(BuffID.Chilled, 200);
+            target.AddBuff(BuffID.Frostburn2, 180);
         }
 
         public override bool OnTileCollide(Vector2 oldVelocity)

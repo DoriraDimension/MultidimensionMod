@@ -30,6 +30,8 @@ namespace MultidimensionMod.Projectiles.Magic
 			Projectile.penetrate = -1;
 			Projectile.extraUpdates = 1;
             Projectile.timeLeft = 180;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = -1;
         }
 
 		public override void OnKill(int timeLeft)

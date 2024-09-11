@@ -3,53 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\souls\\wallsoul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\souls\\wallsoul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\ranged\\shradesdemise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\ranged\\shradesdemise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\ranged\\shradesdemisephase2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\ranged\\shradesdemisephase2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:localization\\en-us.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\souls\\glowshroomsoul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\souls\\glowshroomsoul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\souls\\fungusmemory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\souls\\fungusmemory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\souls\\greatmoonlightmanifest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\souls\\greatmoonlightmanifest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\souls\\cultistsoul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\souls\\cultistsoul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\weapons\\magic\\others\\greatmoonlight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\weapons\\magic\\others\\greatmoonlight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\magic\\moonlightblade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\magic\\moonlightblade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\magic\\moonlightwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\magic\\moonlightwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Items\\Weapons\\ExampleCustomSwingSword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\souls\\fungusdie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\souls\\fungusdie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\NPCs\\MinionBoss\\MinionBossBody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleCustomSwingProjectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\players\\mdplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,167 +26,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WallSoul.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Souls\\WallSoul.cs",
-              "RelativeDocumentMoniker": "Items\\Souls\\WallSoul.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Souls\\WallSoul.cs",
-              "RelativeToolTip": "Items\\Souls\\WallSoul.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAwwEEAAAAvAAAA",
+              "DocumentIndex": 1,
+              "Title": "ShradesDemisePhase2.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Ranged\\ShradesDemisePhase2.cs",
+              "RelativeDocumentMoniker": "Projectiles\\Ranged\\ShradesDemisePhase2.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Ranged\\ShradesDemisePhase2.cs",
+              "RelativeToolTip": "Projectiles\\Ranged\\ShradesDemisePhase2.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBgAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T19:37:37.968Z",
+              "WhenOpened": "2024-09-11T00:37:46.377Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GlowshroomSoul.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Souls\\GlowshroomSoul.cs",
-              "RelativeDocumentMoniker": "Items\\Souls\\GlowshroomSoul.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Souls\\GlowshroomSoul.cs",
-              "RelativeToolTip": "Items\\Souls\\GlowshroomSoul.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAowDYAAAAvAAAA",
+              "DocumentIndex": 0,
+              "Title": "ShradesDemise.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Ranged\\ShradesDemise.cs",
+              "RelativeDocumentMoniker": "Projectiles\\Ranged\\ShradesDemise.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Ranged\\ShradesDemise.cs",
+              "RelativeToolTip": "Projectiles\\Ranged\\ShradesDemise.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABcAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T19:28:25.31Z",
+              "WhenOpened": "2024-09-11T00:37:45.577Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FungusMemory.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Souls\\FungusMemory.cs",
-              "RelativeDocumentMoniker": "Items\\Souls\\FungusMemory.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Souls\\FungusMemory.cs",
-              "RelativeToolTip": "Items\\Souls\\FungusMemory.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowCMAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T14:03:27.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FungusDie.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Souls\\FungusDie.cs",
-              "RelativeDocumentMoniker": "Items\\Souls\\FungusDie.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Souls\\FungusDie.cs",
-              "RelativeToolTip": "Items\\Souls\\FungusDie.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAIwDsAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T13:59:56.42Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GreatMoonlightManifest.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Souls\\GreatMoonlightManifest.cs",
-              "RelativeDocumentMoniker": "Items\\Souls\\GreatMoonlightManifest.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Souls\\GreatMoonlightManifest.cs",
-              "RelativeToolTip": "Items\\Souls\\GreatMoonlightManifest.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAmwEYAAABVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T13:58:02.956Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CultistSoul.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Souls\\CultistSoul.cs",
-              "RelativeDocumentMoniker": "Items\\Souls\\CultistSoul.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Souls\\CultistSoul.cs",
-              "RelativeToolTip": "Items\\Souls\\CultistSoul.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAgwDAAAAB4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T13:51:14.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MinionBossBody.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\NPCs\\MinionBoss\\MinionBossBody.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\NPCs\\MinionBoss\\MinionBossBody.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\NPCs\\MinionBoss\\MinionBossBody.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\NPCs\\MinionBoss\\MinionBossBody.cs",
-              "ViewState": "AQIAABsBAAAAAAAAAAASwCoBAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T13:42:12.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MoonlightWave.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Magic\\MoonlightWave.cs",
-              "RelativeDocumentMoniker": "Projectiles\\Magic\\MoonlightWave.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Magic\\MoonlightWave.cs",
-              "RelativeToolTip": "Projectiles\\Magic\\MoonlightWave.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAUwBYAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T10:49:23.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ExampleCustomSwingSword.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Items\\Weapons\\ExampleCustomSwingSword.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Items\\Weapons\\ExampleCustomSwingSword.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Items\\Weapons\\ExampleCustomSwingSword.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Items\\Weapons\\ExampleCustomSwingSword.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAA0AAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T00:55:15.741Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GreatMoonlight.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Magic\\Others\\GreatMoonlight.cs",
-              "RelativeDocumentMoniker": "Items\\Weapons\\Magic\\Others\\GreatMoonlight.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Magic\\Others\\GreatMoonlight.cs",
-              "RelativeToolTip": "Items\\Weapons\\Magic\\Others\\GreatMoonlight.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAADwvywAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T23:47:02.761Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ExampleCustomSwingProjectile.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleCustomSwingProjectile.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleCustomSwingProjectile.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleCustomSwingProjectile.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleCustomSwingProjectile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T00:55:01.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MoonlightBlade.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Magic\\MoonlightBlade.cs",
-              "RelativeDocumentMoniker": "Projectiles\\Magic\\MoonlightBlade.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Magic\\MoonlightBlade.cs",
-              "RelativeToolTip": "Projectiles\\Magic\\MoonlightBlade.cs",
-              "ViewState": "AQIAAJgAAAAAAAAAAAAgwKMAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T23:40:04.694Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "MDPlayer.cs",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Players\\MDPlayer.cs",
               "RelativeDocumentMoniker": "Common\\Players\\MDPlayer.cs",
@@ -235,13 +68,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "en-US.hjson",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US.hjson",
               "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US.hjson",
               "RelativeToolTip": "Localization\\en-US.hjson",
-              "ViewState": "AQIAAOkFAAAAAAAAAAAowAIGAAAEAAAA",
+              "ViewState": "AQIAAAEIAAAAAAAAAAAAwBAIAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-05-16T15:47:55.951Z",
               "EditorCaption": ""

@@ -5,6 +5,9 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using System.Collections.Generic;
+using Terraria.Localization;
+using Microsoft.Xna.Framework;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Spears
 {
@@ -35,14 +38,34 @@ namespace MultidimensionMod.Items.Weapons.Melee.Spears
 			Item.shoot = ModContent.ProjectileType<Acceptance>();
 		}
 
-		public override bool CanUseItem(Player player)
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+            if (Main.keyState.PressingShift())
+            {
+                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.RadiantAcceptance.Lore"))
+                {
+                    OverrideColor = Color.LightGray
+                };
+                tooltips.Add(line);
+            }
+            else
+            {
+                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Viewer"))
+                {
+                    OverrideColor = Color.Gray,
+                };
+                tooltips.Add(line);
+            }
+        }
+
+        public override bool CanUseItem(Player player)
 		{
 			return player.ownedProjectileCounts[Item.shoot] < 1;
 		}
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<GildedRejection>())
+			.AddIngredient(ModContent.ItemType<WingedNuisance>())
 			.AddIngredient(ItemID.GoldDust, 5)
 			.AddIngredient(ItemID.SoulofLight, 10)
 			.AddIngredient(ModContent.ItemType<PaleMatter>(), 3)

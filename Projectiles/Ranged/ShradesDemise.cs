@@ -21,7 +21,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.alpha = 255;
 			Projectile.friendly = true;
 			Projectile.hostile = false;
-			Projectile.penetrate = 3;
+			Projectile.penetrate = 6;
 			Projectile.timeLeft = 100;
 			Projectile.ignoreWater = false;
 			Projectile.tileCollide = true;

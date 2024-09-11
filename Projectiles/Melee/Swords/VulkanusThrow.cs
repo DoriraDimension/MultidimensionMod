@@ -47,7 +47,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			Projectile.rotation += .3f * Projectile.direction;
 			Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
 
-			for (int i = 0; i < 5; i++)
+			for (int i = 0; i < 10; i++)
 			{
 				int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.CrimsonTorch, 0f, 0f, 100, default(Color), 2f);
 				Main.dust[dustIndex].velocity *= 1.8f;

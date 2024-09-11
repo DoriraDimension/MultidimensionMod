@@ -167,6 +167,7 @@ namespace MultidimensionMod.Projectiles.Magic
             Main.spriteBatch.Draw(glowTexture, Projectile.Center - Main.screenPosition, default, Color.White, Projectile.rotation + rotationOffset, origin, Projectile.scale, effects, 0);
 
             // Since we are doing a custom draw, prevent it from normally drawing
+            // Since we are doing a custom draw, prevent it from normally drawing
             return false;
         }
 
