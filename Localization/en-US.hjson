@@ -1926,7 +1926,7 @@ Mods: {
 				DisplayName: Radiant Acceptance
 				Tooltip: ""
 				Lore:
-				    '''
+					'''
 					The spear of someone who overcame a curse created from envy and spite.
 					With a will of steel, born from depression, he moved on and broke through,
 					forever leaving behind what once bound him.
@@ -2615,7 +2615,7 @@ Mods: {
 
 			CerebroAlloy: {
 				DisplayName: Cerebro Alloy
-				Tooltip: A special metal from a faraway civilization, its special properties can protect one's mind.
+				Tooltip: A special metal from a faraway civilization, its unique properties can protect one's mind.
 			}
 
 			ShadeEye: {
@@ -4916,7 +4916,7 @@ Mods: {
 			MoonMorpho: A peculiar butterfly that seems to enjoy the veil of the night. Its wings glow in a bright blue, serving as beacons in the misty bogs.
 			Newt: Lizards with dark coloration that dwell in the shrouded mire. They have bright green sacks on the sides and underside of their heads that can be used to discharge corrosive acid.
 			Miresquito: Giant bugs with a lust for blood. They relentlessly chase whatever looks large enough to satiate their hunger.
-			FogAngler: Male fish that swim around in the shrouded mire and its depths. They hunt prey using their lures to deliver it to the females.
+			FogAngler: Male anglers that swim around in the shrouded mire and its depths. They hunt prey using their lures to deliver it to the females.
 			DepthAngler: Female Fog Anglers who exclusively live in the lake depths. Unlike their male counterpart, these fish are larger and mostly sit still on the floor. They keep waiting for an unfortunate creature to come too close, only to be swallowed whole.
 		}
 

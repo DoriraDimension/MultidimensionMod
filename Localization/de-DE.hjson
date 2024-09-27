@@ -1904,11 +1904,6 @@ Mods: {
 					''' */
 			}
 
-			GildedRejection: {
-				// DisplayName: Gilded Rejection
-				// Tooltip: Reject your enemies until they go away
-			}
-
 			GrassSpear: {
 				// DisplayName: Jungle Leaf Spear
 				/* Tooltip:
@@ -1929,10 +1924,14 @@ Mods: {
 
 			RadiantAcceptance: {
 				// DisplayName: Radiant Acceptance
-				/* Tooltip:
+				// Tooltip: ""
+				/* Lore:
 					'''
-					The ascended form of a rejective spear
-					After years of rejection, you are finally accepted, now make the best of it
+					The spear of someone who overcame a curse created from envy and spite.
+					With a will of steel, born from depression, he moved on and broke through,
+					forever leaving behind what once bound him.
+
+					'After years of rejection, you are finally accepted, now make the best of it.'
 					''' */
 			}
 
@@ -1964,7 +1963,7 @@ Mods: {
 				// Tooltip: Annoy your enemies until they go away
 				/* Lore:
 					'''
-					The winged spear of a hated entity nobody wishes to be near of.
+					The winged spear of a despised entity nobody wishes to be near of.
 					Even if you approach it with a neutral intention, your mind becomes twisted,
 					your hatred stirs up and you cannot resist the urge to attack.
 					Only a powerful protection spell can save one from this hatred,
@@ -2063,7 +2062,7 @@ Mods: {
 					Swinging the sword channels light energy
 					Right clicking when it is at max light throws the blade skywards
 					Shortly after, 10 lightblades will rain from the sky
-					You have become the very thing you swore to destroy
+					'You have become the very thing you swore to destroy'
 					''' */
 			}
 
@@ -2616,7 +2615,7 @@ Mods: {
 
 			CerebroAlloy: {
 				// DisplayName: Cerebro Alloy
-				// Tooltip: A special metal from a faraway civilization, its special properties can protect one's mind.
+				// Tooltip: A special metal from a faraway civilization, its unique properties can protect one's mind.
 			}
 
 			ShadeEye: {
@@ -2813,7 +2812,7 @@ Mods: {
 
 			HellFlake: {
 				// DisplayName: Hell Flake
-				// Tooltip: ""
+				// Tooltip: Inflicts Frostbite on enemy hits
 			}
 
 			SinnersVeilGreaves: {
@@ -4279,7 +4278,6 @@ Mods: {
 			// Acceptance.DisplayName: Acceptance
 			// DuskBringerProj.DisplayName: Dusk Bringer
 			// DuskCrescent.DisplayName: Dusk Crescent
-			// GildedRejectionProj.DisplayName: Gilded Rejection
 			// GrassSpearProj.DisplayName: Jungle Leaf Spear
 			// JungleLeaf.DisplayName: Jungle Leaf
 			// MoltenLanceProj.DisplayName: Molten Lance
@@ -4918,7 +4916,7 @@ Mods: {
 			// MoonMorpho: A peculiar butterfly that seems to enjoy the veil of the night. Its wings glow in a bright blue, serving as beacons in the misty bogs.
 			// Newt: Lizards with dark coloration that dwell in the shrouded mire. They have bright green sacks on the sides and underside of their heads that can be used to discharge corrosive acid.
 			// Miresquito: Giant bugs with a lust for blood. They relentlessly chase whatever looks large enough to satiate their hunger.
-			// FogAngler: Male fish that swim around in the shrouded mire and its depths. They hunt prey using their lures to deliver it to the females.
+			// FogAngler: Male anglers that swim around in the shrouded mire and its depths. They hunt prey using their lures to deliver it to the females.
 			// DepthAngler: Female Fog Anglers who exclusively live in the lake depths. Unlike their male counterpart, these fish are larger and mostly sit still on the floor. They keep waiting for an unfortunate creature to come too close, only to be swallowed whole.
 		}
 

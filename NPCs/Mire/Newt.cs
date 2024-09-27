@@ -1,9 +1,14 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MultidimensionMod.Base;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Items.Mushrooms;
+using MultidimensionMod.Items.Weapons.Magic.Staffs;
+using System;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -16,13 +21,25 @@ namespace MultidimensionMod.NPCs.Mire
         public override void SetStaticDefaults()
         {
             //DisplayName.SetDefault("Newt");
-            Main.npcFrameCount[NPC.type] = 15;
+            Main.npcFrameCount[NPC.type] = 14;
+        }
+
+        public enum ActionState
+        {
+            Walking,
+            Artillery
+        }
+
+        public ActionState AIState
+        {
+            get => (ActionState)NPC.ai[0];
+            set => NPC.ai[0] = (int)value;
         }
 
         public override void SetDefaults()
         {
-            NPC.width = 112;
-            NPC.height = 30;
+            NPC.width = 114;
+            NPC.height = 40;
             NPC.damage = 10;
             NPC.defense = 10;
             NPC.damage = 28;
@@ -30,10 +47,9 @@ namespace MultidimensionMod.NPCs.Mire
             NPC.lifeMax = 60;
             NPC.knockBackResist = 0.55f;
             NPC.value = 100f;
-            NPC.aiStyle = 3;
+            NPC.aiStyle = -1;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
-            AIType = NPCID.Crawdad;
             SpawnModBiomes = new int[1] { ModContent.GetInstance<TheShroudedMire>().Type };
         }
 
@@ -45,109 +61,151 @@ namespace MultidimensionMod.NPCs.Mire
             });
         }
 
-        private bool acidAttack;
-        private int acidFrame;
-        private int acidCounter;
         private int acidTimer;
+        private bool Pale;
+
+        public override void OnSpawn(IEntitySource source)
+        {
+            if (Main.rand.NextBool(200))
+            {
+                Pale = true;
+            }
+        }
 
         public override void AI()
         {
-            Player player = Main.player[NPC.target]; // makes it so you can reference the player the NPC is targetting
-            if (acidAttack == false)
+            Player target = Main.player[NPC.target];
+            float distanceToPlayer = Vector2.Distance(target.Center, NPC.Center);
+            if (target.dead || !target.active || Vector2.Distance(target.Center, NPC.Center) > 5000)
             {
-                NPC.frameCounter++;
-                if (NPC.frameCounter >= 10)
-                {
-                    NPC.frameCounter = 0;
-                    NPC.frame.Y += 30;
-                    if (NPC.frame.Y > 420)
+                NPC.TargetClosest();
+            }
+            switch (AIState)
+            {
+                case ActionState.Walking:
+                    WalkAI();
+                    NPC.frameCounter += 1;
+                    if (NPC.frameCounter >= 5)
                     {
                         NPC.frameCounter = 0;
-                        NPC.frame.Y = 0;
+                        NPC.frame.Y += 42;
+                        if (NPC.frame.Y >= 6 * 42)
+                        {
+                            NPC.frame.Y = 0 * 42;
+                        }
                     }
-                }
+                    if (distanceToPlayer >= 100 & distanceToPlayer <= 400)
+                    {
+                        AIState = ActionState.Artillery;
+                        NPC.netUpdate = true;
+                    }
+                    break;
+                case ActionState.Artillery:
+                    NPC.velocity.X = 0;
+                    acidTimer++;
+                    if (acidTimer >= 1)
+                    {
+                        if (target.Center.X > NPC.Center.X)
+                        {
+                            NPC.spriteDirection = 1;
+                        }
+                        else
+                        {
+                            NPC.spriteDirection = -1;
+                        }
+                    }
+                    if (NPC.frame.Y < 7)
+                    {
+                        NPC.frame.Y = 7;
+                    }
+                    if (acidTimer == 15)
+                    {
+                        if (NPC.direction == -1)
+                        {
+                            Projectile.NewProjectile(NPC.GetSource_FromAI(), new Vector2(NPC.position.X + 70f, NPC.Center.Y), new Vector2(-3 + Main.rand.Next(-3, 0), -4 + Main.rand.Next(-4, 0)), ModContent.ProjectileType<NewtAcidProj>(), 15 / 4, 3);
+                        }
+                        else
+                        {
+                            Projectile.NewProjectile(NPC.GetSource_FromAI(), new Vector2(NPC.Center.X - 56f, NPC.Center.Y), new Vector2(3 + Main.rand.Next(0, 3), -4 + Main.rand.Next(-4, 0)), ModContent.ProjectileType<NewtAcidProj>(), 15 / 4, 3);
+                        }
+                    }
+                    if (acidTimer <= 30)
+                    {
+                        NPC.frameCounter += 1;
+                        if (NPC.frameCounter >= 5)
+                        {
+                            NPC.frameCounter = 0;
+                            NPC.frame.Y += 42;
+                            if (NPC.frame.Y >= 13 * 42)
+                            {
+                                NPC.frame.Y = 7 * 42;
+                            }
+                        }
+                    }
+                    if (acidTimer == 120)
+                    {
+                        acidTimer = 0;
+                    }
+                    if (acidTimer == 30 && distanceToPlayer <= 100 || acidTimer == 30 && distanceToPlayer >= 400)
+                    {
+                        AIState = ActionState.Walking;
+                        acidTimer = 0;
+                        NPC.netUpdate = true;
+                    }
+                        break;
+            }
+        }
+
+        public void WalkAI()
+        {
+            Player target = Main.player[NPC.target];
+            if (target.Center.X > NPC.Center.X)
+            {
+                NPC.spriteDirection = 1;
             }
             else
             {
-                NPC.frameCounter = 0;
-                NPC.frame.Y = 0;
+                NPC.spriteDirection = -1;
             }
-            if (!acidAttack)
+            float speedUp = 0.70f;
+            float maxVel = 1.80f;
+            if (NPC.Center.X > target.Center.X)
             {
-                if (NPC.velocity.X < 0) // so it faces the player
+                NPC.velocity.X -= speedUp;
+                if (NPC.velocity.X > 0f)
                 {
-                    NPC.direction = 1;
+                    NPC.velocity.X -= speedUp;
                 }
-                else if (NPC.velocity.X > 0)
+                if (NPC.velocity.X < 0f - maxVel)
                 {
-                    NPC.direction = -1;
+                    NPC.velocity.X = 0f - maxVel;
                 }
+                NPC.netUpdate = true;
             }
-            else
+            if (NPC.Center.X < target.Center.X)
             {
-                if (player.position.X < NPC.position.X)
+                NPC.velocity.X += speedUp;
+                if (NPC.velocity.X < 0f)
                 {
-                    NPC.direction = 1;
+                    NPC.velocity.X += speedUp;
                 }
-                else
+                if (NPC.velocity.X > maxVel)
                 {
-                    NPC.direction = -1;
+                    NPC.velocity.X = maxVel;
                 }
+                NPC.netUpdate = true;
             }
-            if (acidAttack == true)
+            BaseAI.WalkupHalfBricks(NPC);
+            if (Math.Abs(NPC.velocity.X) == NPC.ai[1])
+                NPC.velocity.X = NPC.ai[1] * NPC.spriteDirection;
+            if (BaseAI.HitTileOnSide(NPC, 3))
             {
-                if (acidFrame < 3)
+                if (NPC.velocity.X < 0f && NPC.direction == -1 || NPC.velocity.X > 0f && NPC.direction == 1)
                 {
-                    acidCounter++;
+                    Vector2 newVec = BaseAI.AttemptJump(NPC.position, NPC.velocity, NPC.width, NPC.height, NPC.direction, NPC.directionY, 3, 4, 4, true);
+                    if (NPC.velocity != newVec) { NPC.velocity = newVec; NPC.netUpdate = true; }
                 }
-                if (acidCounter > 5)
-                {
-                    acidFrame++;
-                    acidCounter = 0;
-                }
-                if (acidFrame >= 3)
-                {
-                    acidFrame = 0;
-                }
-            }
-            float distance = NPC.Distance(Main.player[NPC.target].Center);
-            if (distance >= 100 && distance <= 400) // distance until it does the acid attack
-            {
-                if (Main.rand.NextBool(30)) // so it wont do it repeatedly when the player is near. increase to lower the chance of it doing it
-                {
-                    if (acidAttack == false)
-                    {
-                        acidAttack = true;
-                    }
-                }
-            }
-            if (acidAttack == true)
-            {
-                acidTimer++;
-                NPC.aiStyle = 0;
-                NPC.velocity.X = 0;
-                if (acidTimer == 90)
-                {
-                    if (NPC.direction == -1)
-                    {
-                        Projectile.NewProjectile(NPC.GetSource_FromAI(), new Vector2(NPC.position.X + 56f, NPC.Center.Y), new Vector2(3 + Main.rand.Next(0, 3), -4 + Main.rand.Next(-4, 0)), ModContent.ProjectileType<NewtAcidProj>(), 15 / 4, 3);
-                    }
-                    else
-                    {
-                        Projectile.NewProjectile(NPC.GetSource_FromAI(), new Vector2(NPC.Center.X - 56f, NPC.Center.Y), new Vector2(-6 + Main.rand.Next(-6, 0), -4 + Main.rand.Next(-4, 0)), ModContent.ProjectileType<NewtAcidProj>(), 15 / 4, 3);
-                    }
-                }
-                if (acidTimer >= 90)
-                {
-                    acidAttack = false;
-                    acidTimer = 0;
-                    acidCounter = 0;
-                    acidFrame = 0;
-                }
-            }
-            if (acidAttack == false) // so it changes back to aiStyle 3 after the attacks are done
-            {
-                NPC.aiStyle = 3;
+                NPC.netUpdate = true;
             }
         }
 
@@ -155,13 +213,26 @@ namespace MultidimensionMod.NPCs.Mire
         {
             if (NPC.life <= 0)
             {
-                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGore1").Type, 1); //tail
-                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGore2").Type, 1); //body
-                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGore3").Type, 1); //legs
-                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGore3").Type, 1);
-                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGore3").Type, 1);
-                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGore3").Type, 1);
-                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGore4").Type, 1); //head
+                if (Pale)
+                {
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGoreWhite1").Type, 1); //head
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGoreWhite2").Type, 1); //body
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGoreWhite3").Type, 1); //front legs
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGoreWhite3").Type, 1);
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGoreWhite4").Type, 1); //hind legs
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGoreWhite4").Type, 1);
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGoreWhite5").Type, 1); //tail
+                }
+                else
+                {
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGore1").Type, 1); //head
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGore2").Type, 1); //body
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGore3").Type, 1); //front legs
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGore3").Type, 1);
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGore4").Type, 1); //hind legs
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGore4").Type, 1);
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/NewtGore5").Type, 1); //tail
+                }
             }
         }
 
@@ -172,20 +243,13 @@ namespace MultidimensionMod.NPCs.Mire
 
         public override bool PreDraw(SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>(NPC.ModNPC.Texture).Value;
-            Texture2D acidAni = ModContent.Request<Texture2D>(NPC.ModNPC.Texture + "_Shoot").Value;
-            var effects = NPC.direction == -1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
-            if (acidAttack == false) // i think this is important for it to not do its usual walking cycle while its also doing those attacks
-            {
-                spriteBatch.Draw(texture, NPC.Center - Main.screenPosition, NPC.frame, drawColor, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0f);
-            }
-            if (acidAttack == true)
-            {
-                Vector2 drawCenter = new Vector2(NPC.Center.X, NPC.Center.Y);
-                int num214 = acidAni.Height / 4;
-                int y6 = num214 * acidFrame;
-                Main.spriteBatch.Draw(acidAni, drawCenter - Main.screenPosition, new Microsoft.Xna.Framework.Rectangle?(new Rectangle(0, y6, acidAni.Width, num214)), drawColor, NPC.rotation, new Vector2(acidAni.Width / 2f, num214 / 2f), NPC.scale, effects, 0f);
-            }
+            Texture2D tex = ModContent.Request<Texture2D>(NPC.ModNPC.Texture).Value;
+            Texture2D whiteTex = ModContent.Request<Texture2D>(NPC.ModNPC.Texture + "White").Value;
+            SpriteEffects effects = NPC.spriteDirection == -1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+            if (Pale)
+                spriteBatch.Draw(whiteTex, NPC.Center + new Vector2(0f, 0f) - screenPos, NPC.frame, drawColor, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
+            else
+                spriteBatch.Draw(tex, NPC.Center + new Vector2(0f, 0f) - screenPos, NPC.frame, drawColor, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
             return false;
         }
     }
