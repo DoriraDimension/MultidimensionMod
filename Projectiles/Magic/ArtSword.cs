@@ -26,6 +26,7 @@ namespace MultidimensionMod.Projectiles.Magic
             Projectile.penetrate = -1;
             Projectile.timeLeft = 15;
             Projectile.alpha = 0;
+            Projectile.ownerHitCheck = true;
         }
         public override bool PreDraw(ref Color lightColor)
         {

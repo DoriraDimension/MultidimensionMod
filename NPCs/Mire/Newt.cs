@@ -66,7 +66,7 @@ namespace MultidimensionMod.NPCs.Mire
 
         public override void OnSpawn(IEntitySource source)
         {
-            if (Main.rand.NextBool(200))
+            if (Main.rand.NextBool(200)) // 1/200 chance to spawn as an albino variant
             {
                 Pale = true;
             }
@@ -94,7 +94,7 @@ namespace MultidimensionMod.NPCs.Mire
                             NPC.frame.Y = 0 * 42;
                         }
                     }
-                    if (distanceToPlayer >= 100 & distanceToPlayer <= 400)
+                    if (distanceToPlayer >= 200 & distanceToPlayer <= 500)
                     {
                         AIState = ActionState.Artillery;
                         NPC.netUpdate = true;
@@ -146,7 +146,7 @@ namespace MultidimensionMod.NPCs.Mire
                     {
                         acidTimer = 0;
                     }
-                    if (acidTimer == 30 && distanceToPlayer <= 100 || acidTimer == 30 && distanceToPlayer >= 400)
+                    if (acidTimer == 30 && distanceToPlayer <= 200 || acidTimer == 30 && distanceToPlayer >= 500)
                     {
                         AIState = ActionState.Walking;
                         acidTimer = 0;

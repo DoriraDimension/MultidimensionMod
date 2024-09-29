@@ -4210,6 +4210,11 @@ Mods: {
 					or is already inflicted with Hazed
 					'''
 			}
+
+			AncientSwordArt: {
+				DisplayName: Ancient Sword Art: Brilliant Gems
+				Tooltip: Conjures sword apparitions in all gem colors at the cursor position
+			}
 		}
 
 		SetBonuses: {
@@ -4470,6 +4475,8 @@ Mods: {
 			MoonpowderBag.DisplayName: Moonpowder Bag
 			MoonlightBlade.DisplayName: Moonlight Blade
 			GreatMoonlightManifest.DisplayName: Great Moonlight Manifest
+			AncientSwordArtHeld.DisplayName: Ancient Sword Art Held
+			ArtSword.DisplayName: Art Sword
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability

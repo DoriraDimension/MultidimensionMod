@@ -30,10 +30,10 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
             Item.mana = 5;
             Item.knockBack = 1.5f;
             Item.noUseGraphic = true;
-            Item.value = Item.sellPrice(1, 2, 3, 4);
-            Item.rare = ItemRarityID.White;
+            Item.value = Item.sellPrice(0, 0, 1, 50);
+            Item.rare = ItemRarityID.Green;
             Item.autoReuse = true;
-            Item.UseSound = SoundID.Item1;
+            Item.UseSound = SoundID.Item15;
             Item.shoot = ModContent.ProjectileType<ArtSword>();
             Item.shootSpeed = 1f;
             Item.channel = true;
