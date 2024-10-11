@@ -47,7 +47,7 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsDoor);
             LocalizedText name = CreateMapEntryName();
             //name.SetDefault("Bogwood Door");
-            AddMapEntry(new Color(205, 62, 12), name);
+            AddMapEntry(new Color(12, 62, 205), name);
             DustType = ModContent.DustType<Dusts.BogwoodDust>();
             AdjTiles = new int[] { TileID.ClosedDoor };
         }
@@ -86,7 +86,7 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
             AdjTiles = new int[] { TileID.OpenDoor };
             TileID.Sets.CloseDoorID[Type] = ModContent.TileType<BogwoodDoorClosed>();
             RegisterItemDrop(ModContent.ItemType<Items.Placeables.Furniture.BogwoodF.BogwoodDoor>(), 0);
-            AddMapEntry(new Color(120, 90, 0));
+            AddMapEntry(new Color(12, 62, 205));
             TileObjectData.newTile.Width = 2;
             TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.Origin = new Point16(0, 0);

@@ -4970,9 +4970,11 @@ Mods: {
 			}
 
 			Cultist: {
-				// MoonSword1: Embrace me
-				// MoonSword2: Bathe in my light
-				// MoonSword3: Like he never could
+				// MoonSwordSpawn: Great Moonlight has awoken.
+				// MoonSword1: Brave human
+				// MoonSword2: Embrace me
+				// MoonSword3: Bathe in my light
+				// MoonSword4: Like he never could
 			}
 		}
 

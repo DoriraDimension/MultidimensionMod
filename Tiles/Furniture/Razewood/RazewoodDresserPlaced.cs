@@ -45,6 +45,8 @@ namespace MultidimensionMod.Tiles.Furniture.Razewood
 
 		public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings) => true;
 
+        public override LocalizedText DefaultContainerName(int frameX, int frameY) => CreateMapEntryName();
+
         public override bool RightClick(int i, int j)
 		{
             Player player = Main.LocalPlayer;

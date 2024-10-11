@@ -28,7 +28,7 @@ namespace MultidimensionMod.Items.Placeables.Furniture.RazewoodF
 
         public override void AddRecipes()
         {
-            CreateRecipe()
+            CreateRecipe(2)
             .AddIngredient(ModContent.ItemType<Razewood>(), 1)
             .AddTile(TileID.Sawmill)
             .Register();

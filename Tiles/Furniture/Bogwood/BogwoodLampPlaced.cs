@@ -35,7 +35,7 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
             TileObjectData.addTile(Type);
             LocalizedText name = CreateMapEntryName();
             //name.SetDefault("Bogwood Lamp");
-            AddMapEntry(new Color(205, 62, 12), name);
+            AddMapEntry(new Color(12, 62, 205), name);
             DustType = ModContent.DustType<Dusts.BogwoodDust>();
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
         }

@@ -4970,9 +4970,11 @@ Mods: {
 			}
 
 			Cultist: {
-				MoonSword1: Embrace me
-				MoonSword2: Bathe in my light
-				MoonSword3: Like he never could
+				MoonSwordSpawn: Great Moonlight has awoken.
+				MoonSword1: Brave human
+				MoonSword2: Embrace me
+				MoonSword3: Bathe in my light
+				MoonSword4: Like he never could
 			}
 		}
 
@@ -5271,9 +5273,9 @@ Mods: {
 				'''
 			ShiverthornTip:
 				'''
-				A thorn covered plant found only in the unnatural environment of the nearby tundra
-				History states that the ancestor of this plant once lived in a very warm environment,
-				a plant known as the Glass Rose
+				A thorn covered plant found only in the cold environment of the Drakenheim tundra
+				History states that an ancient ancestor of this plant once lived in a warmer environment,
+				a plant known as the Glass Blossom
 				Nowadays it is used for concoctions to cool down one's own body
 				'''
 			WaterleafTip:
@@ -5282,6 +5284,16 @@ Mods: {
 				Seen as an invasive species, this plant absorbs all humidity from the air to sustain itself
 				This leads to the environment not being able to recover and remain desolate
 				'''
+		}
+
+		VanillaNPCDialogue: {
+		    Truffle: {
+			    Dapper1: What a wack ass fungus
+				Dapper2: I love this funguy, no cap
+				Umos1: afungus
+				Umos2: I love jesus
+				Umos3: Damn, that's not very religious of you
+			}
 		}
 
 		MiscText: {

@@ -40,7 +40,7 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
 			LocalizedText name = CreateMapEntryName();
 			//name.SetDefault("Bogwood Chest");
             DustType = ModContent.DustType<Dusts.BogwoodDust>();
-            AddMapEntry(new Color(200, 140, 0), name, MapChestName);
+            AddMapEntry(new Color(12, 62, 205), name, MapChestName);
 			AdjTiles = new int[] { TileID.Containers };
 		}
 
@@ -49,6 +49,8 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
             Tile tile = Main.tile[i, j];
             yield return new Item(ModContent.ItemType<BogwoodChest>());
         }
+
+        public override LocalizedText DefaultContainerName(int frameX, int frameY) => CreateMapEntryName();
 
         public string MapChestName(string name, int i, int j)
         {

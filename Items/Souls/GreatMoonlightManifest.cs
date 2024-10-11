@@ -51,24 +51,36 @@ namespace MultidimensionMod.Items.Souls
         }
         public override bool? CanDamage() => false;
         public int AppearTimer = 0;
+        public float ShakeStrength = 0f;
+        public float ShakeFrames = 0f;
 
         public override void AI()
         {
             Projectile.velocity.X = 0;
             Projectile.velocity.Y = 0;
             AppearTimer++;
+            if (ShakeStrength >= 4f)
+            {
+                ShakeStrength = 4f;
+            }
+            if (ShakeFrames >= 5f)
+            {
+                ShakeFrames = 5f;
+            }
             if (AppearTimer == 1)
             {
                 Projectile.rotation += MathHelper.ToRadians(315f);
             }
-            if (AppearTimer >= 60  && AppearTimer < 180)
+            if (AppearTimer >= 60  && AppearTimer < 240)
             {
-                PunchCameraModifier modifier = new PunchCameraModifier(Projectile.Center, (Main.rand.NextFloat() * ((float)Math.PI * 2f)).ToRotationVector2(), 5f, 4f, 20, 500f, FullName);
+                ShakeStrength += 0.0050f;
+                ShakeFrames += 0.050f;
+                PunchCameraModifier modifier = new PunchCameraModifier(Projectile.Center, (Main.rand.NextFloat() * ((float)Math.PI * 2f)).ToRotationVector2(), ShakeFrames, ShakeStrength, 20, 500f, FullName);
                 Main.instance.CameraModifiers.Add(modifier);
             }
-            if (AppearTimer == 180)
+            if (AppearTimer == 240)
             {
-                Main.NewText("Great Moonlight has awoken.", new Color(175, 75, 255));
+                Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.Cultist.MoonSwordSpawn"), new Color(175, 75, 255));
                 SoundEngine.PlaySound(SoundID.Thunder, Projectile.position);
                 SoundEngine.PlaySound(SoundID.Zombie105, Projectile.position);
                 for (int m = 0; m < 30; m++)
@@ -79,29 +91,35 @@ namespace MultidimensionMod.Items.Souls
                     Main.dust[dustID].noGravity = true;
                 }
             }
-            if (AppearTimer >= 180)
+            if (AppearTimer >= 240)
             {
                 Projectile.light = 1.8f;
             }
-            if (AppearTimer == 300)
+            if (AppearTimer == 360)
             {
                 SoundEngine.PlaySound(SoundID.Zombie88, Projectile.position);
                 int i = CombatText.NewText(Projectile.getRect(), Color.Cyan, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.Cultist.MoonSword1"), false, false);
                 Main.combatText[i].lifeTime = 120;
             }
-            if (AppearTimer == 480)
+            if (AppearTimer == 540)
             {
                 SoundEngine.PlaySound(SoundID.Zombie90, Projectile.position);
                 int i = CombatText.NewText(Projectile.getRect(), Color.Cyan, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.Cultist.MoonSword2"), false, false);
                 Main.combatText[i].lifeTime = 120;
             }
-            if (AppearTimer == 600)
+            if (AppearTimer == 720)
             {
                 SoundEngine.PlaySound(SoundID.Zombie91, Projectile.position);
                 int i = CombatText.NewText(Projectile.getRect(), Color.Cyan, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.Cultist.MoonSword3"), false, false);
                 Main.combatText[i].lifeTime = 120;
             }
-            if (AppearTimer == 780)
+            if (AppearTimer == 900)
+            {
+                SoundEngine.PlaySound(SoundID.Zombie91, Projectile.position);
+                int i = CombatText.NewText(Projectile.getRect(), Color.Cyan, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.Cultist.MoonSword4"), false, false);
+                Main.combatText[i].lifeTime = 120;
+            }
+            if (AppearTimer == 1080)
             {
                 SoundEngine.PlaySound(SoundID.Zombie105, Projectile.position);
                 Item.NewItem(Projectile.GetSource_FromThis(), Projectile.position, Projectile.Size, ModContent.ItemType<Weapons.Magic.Others.GreatMoonlight>(), 1);
@@ -116,7 +134,7 @@ namespace MultidimensionMod.Items.Souls
             Vector2 position = Projectile.Center - Main.screenPosition;
             Rectangle rect = new(0, 0, texture.Width, texture.Height);
             Vector2 origin = new(texture.Width / 2f, texture.Height / 2f);
-            if (AppearTimer >= 180)
+            if (AppearTimer >= 240)
             {
                 Main.EntitySpriteDraw(texture, position, new Rectangle?(rect), Projectile.GetAlpha(lightColor), Projectile.rotation, origin, Projectile.scale, SpriteEffects.None, 0);
                 Main.EntitySpriteDraw(glowTexture, position, new Rectangle?(rect), Color.White, Projectile.rotation, origin, Projectile.scale, SpriteEffects.None, 0);

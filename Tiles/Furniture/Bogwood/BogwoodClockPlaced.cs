@@ -20,8 +20,7 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
 			TileObjectData.newTile.CoordinateHeights = new int[] {16, 16, 16, 16, 16};
 			TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();
-			// name.SetDefault("Oroboros Clock"); // Automatic from .lang files
-			AddMapEntry(new Color(70, 0, 10), name);
+			AddMapEntry(new Color(12, 62, 205), name);
 			DustType = ModContent.DustType<Dusts.BogwoodDust>();
 			AdjTiles = new int[] { TileID.GrandfatherClocks };
 		}

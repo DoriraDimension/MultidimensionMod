@@ -39,12 +39,14 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
             LocalizedText name = CreateMapEntryName();
             //name.SetDefault("Bogwood Dresser");
-            AddMapEntry(new Color(205, 62, 12), name);
+            AddMapEntry(new Color(12, 62, 205), name);
             DustType = ModContent.DustType<Dusts.BogwoodDust>();
             AdjTiles = new int[] { TileID.Dressers };
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings) => true;
+
+        public override LocalizedText DefaultContainerName(int frameX, int frameY) => CreateMapEntryName();
 
         public override bool RightClick(int i, int j)
         {
@@ -208,7 +210,7 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
                 }
                 if (player.cursorItemIconText == "Bogwood Dresser")
                 {
-                    player.cursorItemIconID = ModContent.ItemType<Items.Placeables.Furniture.RazewoodF.RazewoodDresser>();
+                    player.cursorItemIconID = ModContent.ItemType<Items.Placeables.Furniture.BogwoodF.BogwoodDresser>();
                     player.cursorItemIconText = "";
                 }
             }

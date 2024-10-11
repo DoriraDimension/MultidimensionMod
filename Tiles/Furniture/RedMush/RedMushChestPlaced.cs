@@ -55,6 +55,8 @@ namespace MultidimensionMod.Tiles.Furniture.RedMush
             num = 1;
         }
 
+        public override LocalizedText DefaultContainerName(int frameX, int frameY) => CreateMapEntryName();
+
         public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
             Tile tile = Main.tile[i, j];

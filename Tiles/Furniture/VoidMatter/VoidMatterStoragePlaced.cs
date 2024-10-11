@@ -54,7 +54,9 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			num = 1;
 		}
 
-		public override IEnumerable<Item> GetItemDrops(int i, int j)
+        public override LocalizedText DefaultContainerName(int frameX, int frameY) => CreateMapEntryName();
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
 		{
 			Tile tile = Main.tile[i, j];
 			yield return new Item(ModContent.ItemType<VoidMatterStorage>());

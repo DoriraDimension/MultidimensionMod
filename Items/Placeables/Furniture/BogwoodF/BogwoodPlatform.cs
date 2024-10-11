@@ -25,7 +25,7 @@ namespace MultidimensionMod.Items.Placeables.Furniture.BogwoodF
 
 		public override void AddRecipes()
         {
-            CreateRecipe()
+            CreateRecipe(2)
             .AddIngredient(ModContent.ItemType<Biomes.Mire.Bogwood>())
 			.Register();
         }

@@ -24,7 +24,7 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
             TileObjectData.addTile(Type);
             LocalizedText name = CreateMapEntryName();
             //name.SetDefault("Bogwood Piano");
-            AddMapEntry(new Color(205, 62, 12), name);
+            AddMapEntry(new Color(12, 62, 205), name);
             DustType = ModContent.DustType<Dusts.BogwoodDust>();
             AdjTiles = new int[] { TileID.Pianos };
         }

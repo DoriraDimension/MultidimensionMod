@@ -45,7 +45,9 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 
 		public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings) => true;
 
-		public override bool RightClick(int i, int j)
+        public override LocalizedText DefaultContainerName(int frameX, int frameY) => CreateMapEntryName();
+
+        public override bool RightClick(int i, int j)
 		{
 			Player player = Main.LocalPlayer;
 			if (Main.tile[Player.tileTargetX, Player.tileTargetY].TileFrameY == 0)

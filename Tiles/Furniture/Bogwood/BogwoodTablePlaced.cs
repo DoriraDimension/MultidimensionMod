@@ -34,7 +34,7 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
             TileObjectData.addTile(Type);
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
             LocalizedText name = CreateMapEntryName();
-            AddMapEntry(new Color(205, 62, 12), name);
+            AddMapEntry(new Color(12, 62, 205), name);
 
         }
 
