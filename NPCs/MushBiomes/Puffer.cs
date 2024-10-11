@@ -204,18 +204,10 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     if (NPC.spriteDirection == 1)
                     {
                         NPC.velocity.X = 4f;
-                        if (BaseAI.HitTileOnSide(NPC, 1, true))
-                        {
-                            AIState = ActionState.Idle;
-                        }
                     }
                     else if (NPC.spriteDirection == -1)
                     {
                         NPC.velocity.X = -4f;
-                        if (BaseAI.HitTileOnSide(NPC, 0, true))
-                        {
-                            AIState = ActionState.Idle;
-                        }
                     }
                     BaseAI.WalkupHalfBricks(NPC);
                     if (BaseAI.HitTileOnSide(NPC, 3))
