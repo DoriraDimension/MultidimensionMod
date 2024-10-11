@@ -22,6 +22,7 @@ using Terraria.Localization;
 using Terraria.ModLoader.IO;
 using MultidimensionMod.Tiles.Biomes.ShroomForest;
 using rail;
+using MultidimensionMod.Items.Summons;
 
 namespace MultidimensionMod
 {
@@ -274,8 +275,16 @@ namespace MultidimensionMod
                 pool.Add(ModContent.NPCType<MushbugBaby>(), 0.30f);
                 pool.Add(ModContent.NPCType<Puffer>(), 0.25f);
                 pool.Add(ModContent.NPCType<Hovercap>(), 0.35f);
-				if ((Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<MyceliumSandPlaced>() || Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<Mycelium>()) && !NPC.AnyNPCs(ModContent.NPCType<MonarchSlep>()) && !NPC.AnyNPCs(ModContent.NPCType<MushroomMonarch>()) && spawnInfo.Player.InModBiome(ModContent.GetInstance<ShroomForest>()))
-				    pool.Add(ModContent.NPCType<MonarchSlep>(), 0.10f);
+                if (spawnInfo.Player.FindItem(ModContent.ItemType<IntimidatingMushroom>()) > 0)
+				{
+                    if ((Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<MyceliumSandPlaced>() || Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<Mycelium>()) && !NPC.AnyNPCs(ModContent.NPCType<MonarchSlep>()) && !NPC.AnyNPCs(ModContent.NPCType<MushroomMonarch>()) && spawnInfo.Player.InModBiome(ModContent.GetInstance<ShroomForest>()))
+                        pool.Add(ModContent.NPCType<MonarchSlep>(), 0.35f);
+                }
+				else
+				{
+                    if ((Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<MyceliumSandPlaced>() || Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<Mycelium>()) && !NPC.AnyNPCs(ModContent.NPCType<MonarchSlep>()) && !NPC.AnyNPCs(ModContent.NPCType<MushroomMonarch>()) && spawnInfo.Player.InModBiome(ModContent.GetInstance<ShroomForest>()))
+                        pool.Add(ModContent.NPCType<MonarchSlep>(), 0.12f);
+                }
             }
             if (spawnInfo.Player.InModBiome<TheDragonHoard>() && !spawnInfo.Player.ZoneTowerNebula && !spawnInfo.Player.ZoneTowerSolar && !spawnInfo.Player.ZoneTowerStardust && !spawnInfo.Player.ZoneTowerVortex)
 			{

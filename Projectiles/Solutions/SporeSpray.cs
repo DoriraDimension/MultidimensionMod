@@ -41,6 +41,10 @@ namespace MultidimensionMod.Projectiles.Solutions
                     {
                         ConvertTile(k, l, (ushort)ModContent.TileType<MyceliumSandstonePlaced>());
                     }
+                    else if (tileType == TileID.Stone || tileType == TileID.Ebonstone || tileType == TileID.Crimstone || tileType == TileID.Pearlstone)
+                    {
+                        ConvertTile(k, l, (ushort)ModContent.TileType<SporeStonePlaced>());
+                    }
                     else if (tileType == TileID.MushroomBlock)
                     {
                         ConvertTile(k, l, (ushort)ModContent.TileType<MushroomBlockPlaced>());
