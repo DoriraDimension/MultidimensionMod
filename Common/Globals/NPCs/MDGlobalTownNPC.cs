@@ -169,5 +169,13 @@ namespace MultidimensionMod
                 }
             }
         }
+
+        public override void GetChat(NPC npc, ref string chat)
+        {
+            if (npc.type == NPCID.Truffle)
+            {
+
+            }
+        }
     }
 }
