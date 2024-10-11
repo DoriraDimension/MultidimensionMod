@@ -115,7 +115,7 @@ namespace MultidimensionMod.Items.Souls
             }
             if (AppearTimer == 900)
             {
-                SoundEngine.PlaySound(SoundID.Zombie91, Projectile.position);
+                SoundEngine.PlaySound(SoundID.Zombie90, Projectile.position);
                 int i = CombatText.NewText(Projectile.getRect(), Color.Cyan, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.Cultist.MoonSword4"), false, false);
                 Main.combatText[i].lifeTime = 120;
             }

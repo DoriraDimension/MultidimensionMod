@@ -5288,12 +5288,18 @@ Mods: {
 
 		VanillaNPCDialogue: {
 			Truffle: {
-				Dapper1: What a wack ass fungus
-				Dapper2: I love this funguy, no cap
-				Umos1: afungus
-				Umos2: I love jesus
-				Umos3: Damn, that's not very religious of you
+				Dapper1: My brother Malcom, always talked about little Dappercap when he visited. But then he eventually stopped showing up, and not even dapper knows where he is now. He just said Malcom was gonna make amends for his crimes.
+				Dapper2: Despite his looks and behavior, Dappercap is the scarlet prince. But even with this title and the respect he gains from it, he ran away and never returned home. Even Umos is in mild distraught by this.
+				Umos1: Our glowing royalty, Umos, he is what keeps us going, that light in the dark. One day he will lead us into the true light beyond our minds.
+				Umos2: It is really scary to be granted sentience out of nowhere. I felt lost at first, but then I was guided by a light, it was his light. These are times of peace for my kin, something not many have.
+				Umos3: Many creatures in the dark caverns come to our glowing sanctuaries. Those often bear hostility however, which makes them intruders rather than guests. Somehow Umos sees them as worthy, saying that all deserve salvation.
+				UmosDead: I know you defeated our apostle in battle. I have no grudge against you, it must have been a misunderstanding. He can be very defensive against outsiders.
+				Unimush1: I feel like something is pulling at my mind recently, it makes me very uneasy...
+				Unimush2: Since recently I hear my brother call to me from afar sometimes, but when I look, there is nobody there.
+				Unimush3: My nightmares have gotten worse, I feel like everyone wants to consume me.
 			}
+
+			Wizard.Carces: I once heard of a settlement called Carces. Apperantly it was a humble town that was famous for its so called 'Twin Libraries', which would contain ancient manuscripts. I would love to get my hands on some of those, but sadly the down was burned down many years ago.
 		}
 
 		MiscText: {

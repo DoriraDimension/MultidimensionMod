@@ -1,5 +1,6 @@
 ﻿using MultidimensionMod.Items.Ammo;
 using MultidimensionMod.Items.Summons;
+using MultidimensionMod.NPCs.TownNPCs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
 using Terraria.ModLoader.IO;
+using MultidimensionMod.Common.Systems;
 
 namespace MultidimensionMod
 {
@@ -172,9 +174,34 @@ namespace MultidimensionMod
 
         public override void GetChat(NPC npc, ref string chat)
         {
+            int Dappercap = NPC.FindFirstNPC(ModContent.NPCType<MushroomHeir>());
             if (npc.type == NPCID.Truffle)
             {
-
+                if (Main.rand.NextBool(10) && Dappercap != -1)
+                {
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Dapper1");
+                    if (Main.rand.NextBool(15))
+                        chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Dapper2");
+                }
+                if (Main.rand.NextBool(10))
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Umos1");
+                if (Main.rand.NextBool(10))
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Umos2");
+                if (Main.rand.NextBool(10))
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Umos3");
+                if (Main.rand.NextBool(12) && DownedSystem.downedFungus)
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Dapper2");
+                if (Main.rand.NextBool(15) && NPC.downedMoonlord)
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Unimush1");
+                if (Main.rand.NextBool(15) && NPC.downedMoonlord)
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Unimush2");
+                if (Main.rand.NextBool(15) && NPC.downedMoonlord)
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Unimush3");
+            }
+            if (npc.type == NPCID.Wizard)
+            {
+                if (Main.rand.NextBool(12))
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Wizard.Carces");
             }
         }
     }
