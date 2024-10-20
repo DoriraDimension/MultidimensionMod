@@ -3,7 +3,6 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using MultidimensionMod.Tiles.Biomes.Inferno;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using MultidimensionMod.Tiles.Ores;
@@ -45,6 +44,9 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
 
         public override void RandomUpdate(int i, int j)
         {
+            Tile tileAbove = Framing.GetTileSafely(i, j - 1);
+            Tile tileAbove2 = Framing.GetTileSafely(i + 1, j - 1);
+            Tile tileAbove3 = Framing.GetTileSafely(i + 2, j - 1);
             WorldGen.SpreadGrass(i + Main.rand.Next(-1, 1), j + Main.rand.Next(-1, 1), TileID.Mud, Type, false);
             if (Main.rand.NextBool(80))
             {
@@ -52,10 +54,20 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<MireSurfaceFoliage>(), mute: true, style: Main.rand.Next(23));
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<MireSurfaceFoliage>(), Main.rand.Next(23), 0, -1, -1);
             }
+            if (!tileAbove.HasTile && !tileAbove2.HasTile && Main.tile[i, j].HasTile && Main.rand.NextBool(120))
+            {
+                WorldGen.PlaceObject(i, j - 1, ModContent.TileType<MireFoliageMedium>(), true, Main.rand.Next(12));
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<MireFoliageMedium>(), Main.rand.Next(12), 0, -1, -1);
+            }
+            if (!tileAbove.HasTile && !tileAbove2.HasTile && !tileAbove3.HasTile && Main.tile[i, j].HasTile && Main.rand.NextBool(120))
+            {
+                WorldGen.PlaceObject(i, j - 1, ModContent.TileType<MireFoliageBig>(), true, Main.rand.Next(9));
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<MireFoliageBig>(), Main.rand.Next(9), 0, -1, -1);
+            }
             if (Main.rand.NextBool(1500))
             {
-                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<DarkshroomPlaced>(), mute: true);
-                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<DarkshroomPlaced>(), 0, 0, -1, -1);
+                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<DarkshroomPlaced>(), mute: true, style: Main.rand.Next(4));
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<DarkshroomPlaced>(), Main.rand.Next(4), 0, -1, -1);
 
             }
             /*if (Main.rand.NextBool(1500))

@@ -3,32 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\npcs\\bosses\\mushroommonarch\\monarchslep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:npcs\\bosses\\mushroommonarch\\monarchslep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\tiles\\biomes\\mire\\miresurfacefoliage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:tiles\\biomes\\mire\\miresurfacefoliage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\globals\\npcs\\mdglobalnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\globals\\npcs\\mdglobalnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\tiles\\biomes\\mire\\mirefoliagemedium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:tiles\\biomes\\mire\\mirefoliagemedium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\npcs\\townnpcs\\mushroomheir.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:npcs\\townnpcs\\mushroomheir.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\tiles\\biomes\\mire\\miregrass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:tiles\\biomes\\mire\\miregrass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\solutions\\sporespray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\solutions\\sporespray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\tiles\\biomes\\mire\\mirefoliagebig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:tiles\\biomes\\mire\\mirefoliagebig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Plants\\AncientShrub2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Tiles\\ExampleAnimatedGlowmaskTile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Tiles\\AncientGrassTile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Plants\\AncientShrub3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\tiles\\biomes\\inferno\\infernograss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:tiles\\biomes\\inferno\\infernograss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:localization\\en-us.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\npcs\\mire\\mireskulker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:npcs\\mire\\mireskulker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\npcs\\mire\\newt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:npcs\\mire\\newt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\players\\mdplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,84 +54,124 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SporeSpray.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Solutions\\SporeSpray.cs",
-              "RelativeDocumentMoniker": "Projectiles\\Solutions\\SporeSpray.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Solutions\\SporeSpray.cs",
-              "RelativeToolTip": "Projectiles\\Solutions\\SporeSpray.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAowC0AAABbAAAA",
+              "DocumentIndex": 4,
+              "Title": "AncientShrub2.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Plants\\AncientShrub2.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Plants\\AncientShrub2.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Plants\\AncientShrub2.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Plants\\AncientShrub2.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T14:34:10.623Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MDGlobalNPC.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\NPCs\\MDGlobalNPC.cs",
-              "RelativeDocumentMoniker": "Common\\Globals\\NPCs\\MDGlobalNPC.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\NPCs\\MDGlobalNPC.cs",
-              "RelativeToolTip": "Common\\Globals\\NPCs\\MDGlobalNPC.cs",
-              "ViewState": "AQIAAAgBAAAAAAAAAAAAAB0BAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T14:27:58.435Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MonarchSlep.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\Bosses\\MushroomMonarch\\MonarchSlep.cs",
-              "RelativeDocumentMoniker": "NPCs\\Bosses\\MushroomMonarch\\MonarchSlep.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\Bosses\\MushroomMonarch\\MonarchSlep.cs",
-              "RelativeToolTip": "NPCs\\Bosses\\MushroomMonarch\\MonarchSlep.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAwwFUAAACgAQAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T14:24:24.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MushroomHeir.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\TownNPCs\\MushroomHeir.cs",
-              "RelativeDocumentMoniker": "NPCs\\TownNPCs\\MushroomHeir.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\TownNPCs\\MushroomHeir.cs",
-              "RelativeToolTip": "NPCs\\TownNPCs\\MushroomHeir.cs",
-              "ViewState": "AQIAAIsAAAAAAAAAAAAYwKEAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T11:17:35.132Z",
+              "WhenOpened": "2024-10-20T20:26:15.262Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "MireSkulker.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\Mire\\MireSkulker.cs",
-              "RelativeDocumentMoniker": "NPCs\\Mire\\MireSkulker.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\Mire\\MireSkulker.cs",
-              "RelativeToolTip": "NPCs\\Mire\\MireSkulker.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAYwAYBAAAoAAAA",
+              "Title": "ExampleAnimatedGlowmaskTile.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Tiles\\ExampleAnimatedGlowmaskTile.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Tiles\\ExampleAnimatedGlowmaskTile.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Tiles\\ExampleAnimatedGlowmaskTile.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Tiles\\ExampleAnimatedGlowmaskTile.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T19:53:23.931Z",
+              "WhenOpened": "2024-10-20T19:58:57.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MireSurfaceFoliage.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\Mire\\MireSurfaceFoliage.cs",
+              "RelativeDocumentMoniker": "Tiles\\Biomes\\Mire\\MireSurfaceFoliage.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\Mire\\MireSurfaceFoliage.cs",
+              "RelativeToolTip": "Tiles\\Biomes\\Mire\\MireSurfaceFoliage.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAA9wDwAAADPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T19:55:01.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MireFoliageMedium.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\Mire\\MireFoliageMedium.cs",
+              "RelativeDocumentMoniker": "Tiles\\Biomes\\Mire\\MireFoliageMedium.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\Mire\\MireFoliageMedium.cs",
+              "RelativeToolTip": "Tiles\\Biomes\\Mire\\MireFoliageMedium.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAIwCEAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T19:51:54.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MireFoliageBig.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\Mire\\MireFoliageBig.cs",
+              "RelativeDocumentMoniker": "Tiles\\Biomes\\Mire\\MireFoliageBig.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\Mire\\MireFoliageBig.cs",
+              "RelativeToolTip": "Tiles\\Biomes\\Mire\\MireFoliageBig.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAA1wB0AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T19:24:27.333Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Newt.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\Mire\\Newt.cs",
-              "RelativeDocumentMoniker": "NPCs\\Mire\\Newt.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\Mire\\Newt.cs",
-              "RelativeToolTip": "NPCs\\Mire\\Newt.cs",
-              "ViewState": "AQIAAH0AAAAAAAAAAAAgwJQAAABAAAAA",
+              "Title": "AncientGrassTile.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Tiles\\AncientGrassTile.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Tiles\\AncientGrassTile.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Tiles\\AncientGrassTile.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Tiles\\AncientGrassTile.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADgAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T19:44:05.884Z"
+              "WhenOpened": "2024-10-20T19:16:55.356Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "AncientShrub3.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Plants\\AncientShrub3.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Plants\\AncientShrub3.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Plants\\AncientShrub3.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\RedemptionAlpha-main\\Tiles\\Plants\\AncientShrub3.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T19:16:39.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MireGrass.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\Mire\\MireGrass.cs",
+              "RelativeDocumentMoniker": "Tiles\\Biomes\\Mire\\MireGrass.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\Mire\\MireGrass.cs",
+              "RelativeToolTip": "Tiles\\Biomes\\Mire\\MireGrass.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAgwD0AAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T19:16:28.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InfernoGrass.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\Inferno\\InfernoGrass.cs",
+              "RelativeDocumentMoniker": "Tiles\\Biomes\\Inferno\\InfernoGrass.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\Inferno\\InfernoGrass.cs",
+              "RelativeToolTip": "Tiles\\Biomes\\Inferno\\InfernoGrass.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowDAAAAB2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T19:17:32.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "MDPlayer.cs",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Players\\MDPlayer.cs",
               "RelativeDocumentMoniker": "Common\\Players\\MDPlayer.cs",
@@ -135,13 +183,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "en-US.hjson",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US.hjson",
               "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US.hjson",
               "RelativeToolTip": "Localization\\en-US.hjson",
-              "ViewState": "AQIAAKAUAAAAAAAAAAAAwLkUAAAuAAAA",
+              "ViewState": "AQIAAPIOAAAAAAAAAAAAwAUPAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-05-16T15:47:55.951Z",
               "EditorCaption": ""

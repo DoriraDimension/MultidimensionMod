@@ -16,8 +16,12 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             Main.tileMergeDirt[Type] = true;
             Main.tileLighted[Type] = false;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
+            TileObjectData.newTile.RandomStyleRange = 4;
             TileObjectData.addTile(Type);
             RegisterItemDrop(ModContent.ItemType<Hotshroom>());
+            RegisterItemDrop(ModContent.ItemType<Hotshroom>(), 1);
+            RegisterItemDrop(ModContent.ItemType<Hotshroom>(), 2);
+            RegisterItemDrop(ModContent.ItemType<Hotshroom>(), 3);
         }
 
         public override bool CreateDust(int i, int j, ref int type)
