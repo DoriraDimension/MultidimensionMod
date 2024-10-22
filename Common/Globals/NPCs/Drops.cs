@@ -48,7 +48,6 @@ namespace MultidimensionMod.Common.Globals.NPCs
             {
                 LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
                 leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.EyeOfCthulhuPetItem, 10));
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EyeTendril>(), 1, 3, 5));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EyeSoul>()));
                 npcLoot.Add(leadingConditionRule);
             }

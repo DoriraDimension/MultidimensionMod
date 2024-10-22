@@ -1875,7 +1875,7 @@ Mods: {
 
 			DataMiner: {
 				DisplayName: Data Miner
-				Tooltip: Holds out a charged drill that inflicts Dimensional Shock.
+				Tooltip: Holds out a charged drill that inflicts Dimensional Shock
 				Lore:
 					'''
 					This drill was used by the dimensional god to tear rifts into dimensions.
