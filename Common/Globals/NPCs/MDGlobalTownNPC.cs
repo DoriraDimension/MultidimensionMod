@@ -135,11 +135,6 @@ namespace MultidimensionMod
                         shopCustomPrice = Item.buyPrice(0, 10, 0)
                     }, Condition.DownedEmpressOfLight);
 
-                    shop.Add(new Item(ModContent.ItemType<MoonRuneStone>())
-                    {
-                        shopCustomPrice = Item.buyPrice(0, 13, 30)
-                    }, Condition.DownedCultist);
-
                     shop.Add(new Item(ItemID.CelestialSigil)
                     {
                         shopCustomPrice = Item.buyPrice(1, 50)
