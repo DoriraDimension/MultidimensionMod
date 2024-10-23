@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using MultidimensionMod.Common.Globals;
 
-namespace MultidimensionMod.Items
+namespace MultidimensionMod.Items.Tools.DevTools
 {
     public class VanillaUndowner : ModItem
     {

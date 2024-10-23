@@ -5,7 +5,7 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace MultidimensionMod.Items
+namespace MultidimensionMod.Items.Tools.DevTools
 {
     public class TitleTester : ModItem
     {

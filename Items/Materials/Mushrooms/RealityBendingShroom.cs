@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.DataStructures;
 
-namespace MultidimensionMod.Items.Mushrooms
+namespace MultidimensionMod.Items.Materials.Mushrooms
 {
     public class RealityBendingShroom : ModItem
     {

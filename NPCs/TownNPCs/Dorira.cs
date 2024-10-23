@@ -19,7 +19,7 @@ using Terraria.GameContent.Personalities;
 using Terraria.Utilities;
 using Terraria.GameContent.Bestiary;
 using Terraria.Audio;
-using MultidimensionMod.Items.Mushrooms;
+using MultidimensionMod.Items.Materials.Mushrooms;
 using MultidimensionMod.Common.Players;
 
 namespace MultidimensionMod.NPCs.TownNPCs
@@ -293,13 +293,13 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		{
 			var downedSmiley = new Condition("Conditions.DownedSmiley", () => DownedSystem.downedSmiley);
 			var npcShop = new NPCShop(Type, ShopName)
-			.Add(new Item(ModContent.ItemType<DimensionalForgeItem>()) { shopCustomPrice = 10, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
-			.Add(new Item(ModContent.ItemType<IronUndies>()) { shopCustomPrice = 5, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
-			.Add(new Item(ModContent.ItemType<BaitLeaf>()) { shopCustomPrice = 7, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
-			.Add(new Item(ModContent.ItemType<ArchtyrantsFace>()) { shopCustomPrice = 15, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedSkeletron)
+			.Add(new Item(ModContent.ItemType<DimensionalForgeItem>()) { shopCustomPrice = 12, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
+			.Add(new Item(ModContent.ItemType<IronUndies>()) { shopCustomPrice = 8, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
+			.Add(new Item(ModContent.ItemType<BaitLeaf>()) { shopCustomPrice = 12, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
+			.Add(new Item(ModContent.ItemType<ArchtyrantsFace>()) { shopCustomPrice = 17, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedSkeletron)
 			.Add(new Item(ModContent.ItemType<UnknownEmoji>()) { shopCustomPrice = 3, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, downedSmiley)
-			.Add(new Item(ModContent.ItemType<CheliaPlushie>()) { shopCustomPrice = 16, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedPlantera)
-			.Add(new Item(ModContent.ItemType<DataMiner>()) { shopCustomPrice = 40, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMoonLord);
+			.Add(new Item(ModContent.ItemType<CheliaPlushie>()) { shopCustomPrice = 20, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedPlantera)
+			.Add(new Item(ModContent.ItemType<DataMiner>()) { shopCustomPrice = 50, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMoonLord);
 			npcShop.Register();
 		}
 

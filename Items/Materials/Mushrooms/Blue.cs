@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 
-namespace MultidimensionMod.Items.Mushrooms
+namespace MultidimensionMod.Items.Materials.Mushrooms
 {
     public class Blue : ModItem
     {

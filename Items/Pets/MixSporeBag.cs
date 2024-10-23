@@ -1,6 +1,6 @@
 ﻿using MultidimensionMod.Buffs.Pets;
 using MultidimensionMod.Projectiles.Pets;
-using MultidimensionMod.Items.Mushrooms;
+using MultidimensionMod.Items.Materials.Mushrooms;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;

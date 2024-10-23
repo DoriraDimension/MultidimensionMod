@@ -21,7 +21,7 @@ namespace MultidimensionMod.Items.Summons
 			Item.height = 26;
 			Item.maxStack = 9999;
 			Item.value = Item.sellPrice(gold: 0);
-			Item.rare = ItemRarityID.Pink;
+			Item.rare = ItemRarityID.Lime;
 			Item.useAnimation = 30;
 			Item.useTime = 30;
 			Item.useStyle = ItemUseStyleID.HoldUp;

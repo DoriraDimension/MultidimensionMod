@@ -3,7 +3,7 @@ using MultidimensionMod.Items.Placeables.Biomes.ShroomForest;
 using MultidimensionMod.Items.Placeables.Biomes.Mire;
 using MultidimensionMod.Items.Placeables.Biomes.Inferno;
 using MultidimensionMod.Items.Potions;
-using MultidimensionMod.Items.Mushrooms;
+using MultidimensionMod.Items.Materials.Mushrooms;
 using Terraria.ModLoader;
 using Terraria;
 using Terraria.Localization;

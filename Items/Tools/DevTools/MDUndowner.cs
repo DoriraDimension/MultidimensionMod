@@ -4,9 +4,9 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using MultidimensionMod.Common.Globals;
 
-namespace MultidimensionMod.Items
+namespace MultidimensionMod.Items.Tools.DevTools
 {
-    public class HardmodeToggler : ModItem
+    public class MDUndowner : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -25,12 +25,11 @@ namespace MultidimensionMod.Items
 
         public override bool? UseItem(Player player)
         {
-            if (Main.hardMode)
-            {
-                Main.hardMode = false;
-            }
-            else
-                Main.hardMode = true;
+            DownedSystem.downedSmiley = false;
+            DownedSystem.downedMonarch = false;
+            DownedSystem.downedFungus = false;
+            DownedSystem.sawUmosTransition = false;
+
             if (Main.netMode == NetmodeID.Server)
                 NetMessage.SendData(MessageID.WorldData);
 

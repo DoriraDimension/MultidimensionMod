@@ -5,7 +5,7 @@ using MultidimensionMod.Items.Summons;
 using MultidimensionMod.Items.Critters;
 using MultidimensionMod.Items.Weapons.Melee.Others;
 using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
-using MultidimensionMod.Items.Mushrooms;
+using MultidimensionMod.Items.Materials.Mushrooms;
 using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Common.Globals;
 using MultidimensionMod.NPCs.Bosses.FeudalFungus;

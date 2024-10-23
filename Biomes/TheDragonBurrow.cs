@@ -42,7 +42,7 @@ namespace MultidimensionMod.Biomes
 
         public override string MapBackground => BackgroundPath;
 
-        public override string BackgroundPath => "MultidimensionMod/Backgrounds/Map/InfernoUGMap";
+        public override string BackgroundPath => "MultidimensionMod/Backgrounds/Map/VolcanoMap";
 
         public override string BestiaryIcon => "MultidimensionMod/Biomes/VolcanoIcon";
         public override Color? BackgroundColor => base.BackgroundColor;

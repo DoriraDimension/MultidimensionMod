@@ -21,7 +21,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.Bestiary;
-using MultidimensionMod.Items.Mushrooms;
+using MultidimensionMod.Items.Materials.Mushrooms;
 using Terraria.GameContent;
 using static Humanizer.In;
 using Terraria.DataStructures;

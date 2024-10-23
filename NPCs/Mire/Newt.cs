@@ -4,8 +4,6 @@ using MultidimensionMod.Base;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Items.Mushrooms;
-using MultidimensionMod.Items.Weapons.Magic.Staffs;
 using System;
 using Terraria;
 using Terraria.DataStructures;

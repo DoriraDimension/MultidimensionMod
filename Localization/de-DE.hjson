@@ -1568,7 +1568,7 @@ Mods: {
 				// DisplayName: Moth Attractor
 				/* Tooltip:
 					'''
-					Summons a Mothron during an eclipse. 
+					Summons a Mothron during an eclipse.
 					It's interesting how easy it is to lure in moths with just light, so if we make a bigger lamp we attract bigger moths, right?.
 					''' */
 			}
@@ -1577,9 +1577,11 @@ Mods: {
 				// DisplayName: Plant Murder Starter Set
 				/* Tooltip:
 					'''
-					Summons Plantera. 
-					Chop this little bulb to make the big plant very angry, now in a small starter pack for kids. No refund warranty.
+					Summons Plantera in the jungle. 
+					Chop this little bulb to make the big plant very angry, now in a small starter pack for kids.
+					Beware, usage of this product on the surface may result in unexpected plant anger levels.
 					Product is made and advertised by Dor Inc.
+					No refund warranty.
 					''' */
 			}
 
