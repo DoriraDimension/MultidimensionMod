@@ -813,11 +813,6 @@ Mods: {
 					'''
 			}
 
-			EyeTendril: {
-				DisplayName: Eye Tendril
-				Tooltip: A tendril from the giant eye that roams the night, contains faint remnants of energy
-			}
-
 			FrostScale: {
 				DisplayName: Frost Scale
 				Tooltip: ""
@@ -1263,11 +1258,6 @@ Mods: {
 					Calms your mind and fends off madness.
 					Pills are only a temporary solution, they only slow the process as the madness consumes the mind itself.
 					'''
-			}
-
-			CookedEyeTendril: {
-				DisplayName: Cooked Tendril
-				Tooltip: Good for the eyes.
 			}
 
 			DimensionalShieldPotion: {
@@ -2214,11 +2204,6 @@ Mods: {
 					'''
 			}
 
-			TendrilBow: {
-				DisplayName: Tendril Bow
-				Tooltip: Has a chance to shoot a small eyeball that deals 50% more damage.
-			}
-
 			ThunderbubbleBow: {
 				DisplayName: Thunderbubble Bow
 				Tooltip: Shoots electrified bubbles that explode into small gravity affected electric bolts that inflict electrified.
@@ -2241,11 +2226,6 @@ Mods: {
 					A flamethrower that does not convert gel into fire but instead shoots a deadly spread of slime
 					The most dangerous slime is a slime with a gun.
 					'''
-			}
-
-			Spazmelter: {
-				DisplayName: Spazmelter
-				Tooltip: Shoots a stream of cursed flames
 			}
 
 			BoneShottie: {
@@ -2276,15 +2256,6 @@ Mods: {
 			SnipeWorm: {
 				DisplayName: Snipe Worm
 				Tooltip: A sniper rifle that was restored from an old relic, it has rotten skin around its metal.
-			}
-
-			CursedMaw: {
-				DisplayName: Cursed Maw
-				Tooltip:
-					'''
-					This grotesque weapon almost seems to be alive...
-					Shoots a cursed fireball that erupts into smaller flames upon hitting an enemy
-					'''
 			}
 
 			DarkMatterLauncher: {
@@ -2388,11 +2359,6 @@ Mods: {
 					Summons a Lesser Sand Elemental to fight for you
 					People always talk about Sand Cake, but what about Sand Buns?
 					'''
-			}
-
-			Tendril: {
-				DisplayName: Tendril Whip
-				Tooltip: You can maybe eat it later...
 			}
 
 			Tentacle: {
@@ -4270,9 +4236,6 @@ Mods: {
 			PrismShards.DisplayName: Prism Shard
 			SandBallz.DisplayName: Sand Ball
 			Smallcicle.DisplayName: Smallcicle
-			SpazBall.DisplayName: Spazzic Bolt
-			SpazExplosion.DisplayName: Spazzic Explosion
-			SpazzicFlame.DisplayName: Spazzic Flame
 			Spooder.DisplayName: Spooder
 			StormDroplet.DisplayName: Storm Droplet
 			Weeeeeeeee.DisplayName: Sonic the Spooder
@@ -4340,7 +4303,6 @@ Mods: {
 			RetinusBlasterHoldOut.DisplayName: Retinus Blaster
 			RottenSpit.DisplayName: Rotten Spit Ball
 			ShradesDemise.DisplayName: Shrades Demise
-			SpazmicFlame.DisplayName: Spazmic Flame
 			SunrayBrickThrown.DisplayName: Nuclear Bomb
 			Thunderbubble.DisplayName: Thunderbubble
 			TidalBubble.DisplayName: Tide Bubble
@@ -4355,7 +4317,6 @@ Mods: {
 			ServantofOcram2.DisplayName: Forgotten Servant
 			TerrorBee.DisplayName: Terror Bee
 			MadnessWhipProj.DisplayName: Mindpunishing Madness
-			TendrilWhip.DisplayName: Tendril Whip
 			TentacleWhip.DisplayName: Celestial Tentacle
 			BloodGeodeThrown.DisplayName: Blood Geode
 			BloodTear.DisplayName: Blood Tear
@@ -4380,8 +4341,6 @@ Mods: {
 			VoidArmProj.DisplayName: Arm from Beyond
 			NeroConstruct.DisplayName: Nero Construct
 			NeroMissile.DisplayName: Nero Missile
-			CursedBlast.DisplayName: Cursed Blast
-			CursedBlastJr.DisplayName: Cursed Blast Jr
 			VoidMatterArrow.DisplayName: Void Matter Arrow
 			Happy.DisplayName: Happy Emoji
 			Joy.DisplayName: Joy Emoji

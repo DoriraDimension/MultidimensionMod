@@ -20,9 +20,6 @@ using Terraria.DataStructures;
 using Terraria.GameInput;
 using Terraria.Audio;
 using Terraria.Localization;
-using static Humanizer.In;
-using Terraria.Map;
-using MultidimensionMod.Common.Globals;
 
 namespace MultidimensionMod.Common.Players
 {
