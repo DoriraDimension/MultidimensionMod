@@ -19,7 +19,7 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
 
         public override Asset<Texture2D> GetFruitTexture()
         {
-            return null;
+            return ModContent.Request<Texture2D>("MultidimensionMod/Tiles/Biomes/ShroomForest/FungactusFruit");
         }
     }
 }

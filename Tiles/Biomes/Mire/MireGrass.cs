@@ -32,6 +32,7 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             Main.tileMerge[Type][ModContent.TileType<MireGrass>()] = true;
             Main.tileMerge[TileID.Mud][Type] = true;
             Main.tileMerge[Type][TileID.Mud] = true;
+            Main.tileLighted[Type] = true;
             TileID.Sets.DoesntPlaceWithTileReplacement[Type] = true;
             TileID.Sets.NeedsGrassFraming[Type] = true;
             TileID.Sets.Conversion.MergesWithDirtInASpecialWay[Type] = true;
@@ -121,8 +122,8 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)   //light colors
         {
             r = 0;
-            g = 0.05f;
-            b = 0.15f;
+            g = 0.10f;
+            b = 0.21f;
         }
     }
 }

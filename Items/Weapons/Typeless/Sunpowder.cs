@@ -13,8 +13,8 @@ namespace MultidimensionMod.Items.Weapons.Typeless
             Item.shoot = ModContent.ProjectileType<Projectiles.Typeless.SunpowderBag>();
             Item.useStyle = ItemUseStyleID.Swing;
             Item.shootSpeed = 10f;
-            Item.width = 16;
-            Item.height = 24;
+            Item.width = 30;
+            Item.height = 30;
             Item.maxStack = 99;
             Item.consumable = true;
             Item.UseSound = SoundID.Item1;

@@ -72,7 +72,7 @@ namespace MultidimensionMod.Items.Tools.ToolsEnviromentChange
 
 		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
 		{
-			Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/ToolsEnviromentChange/MoonlightMoth_Glow").Value;
+			Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Tools/ToolsEnviromentChange/MoonlightMoth_Glow").Value;
 			spriteBatch.Draw
 			(
 				texture,

@@ -33,11 +33,12 @@ namespace MultidimensionMod.Projectiles.Typeless
                 Projectile.velocity.Y = Projectile.velocity.Y + 0.5f;
             }
             if (Projectile.velocity.Y > 16f)
-            {
-                Projectile.velocity.Y = 16f;
-            }
-
-            Projectile.rotation += 0.2f * (float)Projectile.direction;
+			{
+				Projectile.velocity.Y = 16f;
+			}
+            Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
+            Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
+            Projectile.spriteDirection = Projectile.direction;
         }
 
         public override void OnKill(int timeLeft)
