@@ -31,7 +31,7 @@ namespace MultidimensionMod.Biomes
         public override Color OnTileColor(Color inColor)
         {
             Vector4 value = inColor.ToVector4();
-            return new Color(Vector4.Lerp(value, Vector4.One, opacity * skyLight * 0.50f));
+            return new Color(Vector4.Lerp(value, Vector4.One, opacity * skyLight * 0.25f));
         }
 
         public override void Activate(Vector2 position, params object[] args)

@@ -36,7 +36,6 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
 
         public override void RandomUpdate(int i, int j)
         {
-            WorldGen.SpreadGrass(i + Main.rand.Next(-1, 1), j + Main.rand.Next(-1, 1), TileID.Dirt, Type, false);
             if (Main.rand.NextBool(80))
             {
                 int style = Main.rand.Next(23);

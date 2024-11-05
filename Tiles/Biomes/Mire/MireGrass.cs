@@ -48,7 +48,6 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             Tile tileAbove = Framing.GetTileSafely(i, j - 1);
             Tile tileAbove2 = Framing.GetTileSafely(i + 1, j - 1);
             Tile tileAbove3 = Framing.GetTileSafely(i + 2, j - 1);
-            WorldGen.SpreadGrass(i + Main.rand.Next(-1, 1), j + Main.rand.Next(-1, 1), TileID.Mud, Type, false);
             if (Main.rand.NextBool(80))
             {
                 int style = Main.rand.Next(23);
@@ -122,8 +121,8 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)   //light colors
         {
             r = 0;
-            g = 0.10f;
-            b = 0.21f;
+            g = 0.40f;
+            b = 0.61f;
         }
     }
 }
