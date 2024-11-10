@@ -120,9 +120,12 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)   //light colors
         {
-            r = 0;
-            g = 0.40f;
-            b = 0.61f;
+            if (!Main.dayTime)
+            {
+                r = 0;
+                g = 0.40f;
+                b = 0.61f;
+            }
         }
     }
 }
