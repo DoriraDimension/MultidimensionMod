@@ -214,6 +214,16 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             return;
         }
 
+        public void SmoothFrames()//Consider running this only during the intro
+        {
+            if(ActualArmFrame<ArmFrame){
+                ActualArmFrame++;
+            }
+            if(ActualArmFrame>ArmFrame){
+                ActualArmFrame--;
+            }
+        }
+
         //Did you know that I really love using named timers? No? Well now you do!
         public int despawnTimer = 0;
         public int AISwitch = 0;
@@ -232,9 +242,13 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
         public int Away = 0;
         public float ShakeStrength = 0f;
         public float ShakeFrames = 0f;
+        public float FrameTimer=0; //THERE MUST BE MORE COUNTERS
 
         public override void AI()
         {
+            FrameTimer++;
+            if (FrameTimer % 5 == 0)
+                SmoothFrames();
             if (NPC.CountNPCS(ModContent.NPCType<GlowSentry>()) == 2) //Increases defense by 15 if two Glowing Sentries are alive.
             {
                 NPC.defense = 15;
@@ -287,7 +301,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             }
             if (!Desperate && UmosMode)
             {
-                Lighting.AddLight(NPC.Center, 0, (255 - NPC.alpha) * 0.15f / 160, (255 - NPC.alpha) * 0.32f / 255f);
+                Lighting.AddLight(NPC.Center, 0, (255 - NPC.alpha) * 0.13f / 160, (255 - NPC.alpha) * 0.30f / 255f);
             }
             if (NPC.life <= NPC.lifeMax / 2 && !UmosMode)
             {
@@ -325,7 +339,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             int i = CombatText.NewText(NPC.getRect(), MDColors.FeudalBlue, Language.GetTextValue("Mods.MultidimensionMod.NPCs.FeudalFungus.Spawn1"), false, false);
                             Main.combatText[i].lifeTime = 60;
                             HeadFrame = 0;
-                            ArmFrame = 0;
+                            ArmFrame = 1;
                         }
                         if (Waking == 140)
                         {
@@ -340,7 +354,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         if (Waking == 300)
                         {
                             HeadFrame = 3;
-                            ArmFrame = 2;
+                            ArmFrame = 3;
                             int i = CombatText.NewText(NPC.getRect(), MDColors.FeudalBlue, Language.GetTextValue("Mods.MultidimensionMod.NPCs.FeudalFungus.Spawn3"), false, false);
                             Main.combatText[i].lifeTime = 120;
                         }
@@ -353,14 +367,15 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         if (Waking == 540)
                         {
                             HeadFrame = 4;
-                            ArmFrame = 0;
+                            ArmFrame = 1;
                             int i = CombatText.NewText(NPC.getRect(), MDColors.FeudalBlue, Language.GetTextValue("Mods.MultidimensionMod.NPCs.FeudalFungus.Spawn5"), false, false);
                             Main.combatText[i].lifeTime = 120;
                         }
                         if (Waking == 600)
                         {
                             HeadFrame = 0;
-                            ArmFrame = 4;
+                            ActualArmFrame = 8;
+                            ArmFrame = 9;
                         }
                         if (Waking >= 600 && Waking <= 800)
                         {
@@ -372,12 +387,11 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         if (Waking == 800)
                         {
                             HeadFrame = 5;
-                            ArmFrame = 2;
+                            ActualArmFrame = 4;
+                            ArmFrame = 5;
                             int i = CombatText.NewText(NPC.getRect(), MDColors.FeudalBlue, Language.GetTextValue("Mods.MultidimensionMod.NPCs.FeudalFungus.Spawn6"), false, false);
                             Main.combatText[i].lifeTime = 120;
                             SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RoyalRadianceScream"), NPC.position);
-                            if (!Main.dedServ)
-                                Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Fungus");
                         }
                         if (Waking == 920)
                         {
@@ -413,7 +427,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         if (Waking == 60)
                         {
                             HeadFrame = 0;
-                            ArmFrame = 0;
+                            ArmFrame = 1;
                         }
                         if (Waking == 90)
                         {
@@ -429,8 +443,6 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             HeadFrame = 7;
                             int i = CombatText.NewText(NPC.getRect(), Color.LimeGreen, Language.GetTextValue("Mods.MultidimensionMod.NPCs.FeudalFungus.DefeatSpawn"), false, false);
                             Main.combatText[i].lifeTime = 120;
-                            if (!Main.dedServ)
-                                Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Fungus");
                         }
                         if (Waking == 240)
                         {
@@ -449,6 +461,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             NPC.dontTakeDamage = false;
                             NPC.netUpdate = true;
                             Waking = 0;
+                            if (!Main.dedServ)
+                                Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Fungus");
                         }
                     }
                     break;
@@ -479,12 +493,12 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         }
                         if (AISwitch == 50)
                         {
-                            ArmFrame = 1;
+                            ArmFrame = 3;
                             HeadFrame = 4;
                         }
                         if (AISwitch == 150)
                         {
-                            ArmFrame = 2;
+                            ArmFrame = 5;
                             HeadFrame = 5;
                         }
                         if (AISwitch == 300) //Switch to different attack & reset all timers
@@ -524,12 +538,12 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         if (AISwitch == 60)
                         {
                             HeadFrame = 7;
-                            ArmFrame = 1;
+                            ArmFrame = 3;
                         }
                         if (AISwitch == 120)
                         {
                             HeadFrame = 2;
-                            ArmFrame = 2;
+                            ArmFrame = 5;
                         }
                         if (AISwitch == 240) //Switch to different attack & reset all timers
                         {
@@ -553,13 +567,14 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 if (RingTime < 70)
                                 {
                                     NPC.velocity = new Vector2(0, 0);
-                                    ArmFrame = 1;
+                                    ArmFrame = 3;
                                     HeadFrame = 8;
                                 }
                                 if (RingTime == 70)
                                 {
                                     HeadFrame = 2;
-                                    ArmFrame = 3;
+                                    ActualArmFrame = 6;
+                                    ArmFrame = 7;
                                     if (Main.netMode != NetmodeID.MultiplayerClient)
                                     {
                                         int ring = Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, 0f, 0f, ModContent.ProjectileType<RadiantIlluminaRing>(), 72 / 3, 0, Main.myPlayer, NPC.whoAmI);
@@ -571,7 +586,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 if (RingTime == 250)
                                 {
                                     HeadFrame = 2;
-                                    ArmFrame = 0;
+                                    ArmFrame = 1;
                                     AIState = ActionState.Hovering;
                                     RingTime = 0;
                                     NPC.netUpdate = true;
@@ -584,13 +599,14 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 if (RingTime < 90)
                                 {
                                     HeadFrame = 8;
-                                    ArmFrame = 1;
+                                    ArmFrame = 3;
                                     NPC.velocity = new Vector2(0, 0);
                                 }
                                 if (RingTime == 90)
                                 {
                                     HeadFrame = 2;
-                                    ArmFrame = 3;
+                                    ActualArmFrame = 6;
+                                    ArmFrame = 7;
                                     if (Main.netMode != NetmodeID.MultiplayerClient)
                                     {
                                         int ring = Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center.X, NPC.Center.Y, 0f, 0f, ModContent.ProjectileType<IlluminaRing>(), 52 / 3, 0, Main.myPlayer, NPC.whoAmI);
@@ -602,7 +618,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 if (RingTime == 270)
                                 {
                                     HeadFrame = 2;
-                                    ArmFrame = 0;
+                                    ActualArmFrame = 0;
+                                    ArmFrame = 1;
                                     AIState = ActionState.Hovering;
                                     RingTime = 0;
                                     NPC.netUpdate = true;
@@ -615,7 +632,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             DoubleFire++;
                             if (DoubleFire == 90 && DoubleTimer <= 180)
                             {
-                                ArmFrame = 4;
+                                ArmFrame = 5;
                                 if (UmosMode)
                                     HeadFrame = 8;
                                 else
@@ -631,7 +648,10 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 NPC.netUpdate = true;
                             }
                             if (DoubleTimer == 180)
-                                ArmFrame = 0;
+                            {
+                                ActualArmFrame = 0;
+                                ArmFrame = 1;
+                            }
                             if (DoubleTimer == 300)
                             {
                                 HeadFrame = 2;
@@ -646,14 +666,14 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             {
                                 if (SentryTimer > 60)
                                 {
-                                    ArmFrame = 1;
+                                    ArmFrame = 3;
                                     HeadFrame = 8;
                                 }
                                 SentryTimer++;
                                 FungusHoverAI(new Vector2(player.Center.X, player.Center.Y - 200), 0.3f);
                                 if (SentryTimer == 60)
                                 {
-                                    ArmFrame = 4;
+                                    ArmFrame = 9;
                                     HeadFrame = 7;
                                     for (int m = 0; m < 20; m++)
                                     {
@@ -672,7 +692,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 }
                                 if (SentryTimer == 120)
                                 {
-                                    ArmFrame = 0;
+                                    ArmFrame = 1;
                                     AIState = ActionState.Hovering;
                                     SentryTimer = 0;
                                     NPC.netUpdate = true;
@@ -684,14 +704,14 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 {
                                     if (SentryTimer > 60)
                                     {
-                                        ArmFrame = 1;
+                                        ArmFrame = 3;
                                         HeadFrame = 8;
                                     }
                                     SentryTimer++;
                                     FungusHoverAI(new Vector2(player.Center.X, player.Center.Y - 200), 0.3f);
                                     if (SentryTimer == 60)
                                     {
-                                        ArmFrame = 4;
+                                        ArmFrame = 9;
                                         HeadFrame = 7;
                                         for (int m = 0; m < 20; m++)
                                         {
@@ -710,7 +730,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                     }
                                     if (SentryTimer == 80)
                                     {
-                                        ArmFrame = 0;
+                                        ArmFrame = 1;
                                     }
                                     if (SentryTimer == 120)
                                     {
@@ -735,7 +755,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 if (DoubleFire == 90)
                                 {
                                     SoundEngine.PlaySound(SoundID.Item4, NPC.position);
-                                    ArmFrame = 4;
+                                    ArmFrame = 9;
                                     HeadFrame = 7;
                                     if (Main.netMode != NetmodeID.MultiplayerClient)
                                     {
@@ -746,7 +766,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 if (DoubleFire == 180)
                                 {
                                     SoundEngine.PlaySound(SoundID.Item4, NPC.position);
-                                    ArmFrame = 2;
+                                    ArmFrame = 5;
                                     HeadFrame = 4;
                                     if (Main.netMode != NetmodeID.MultiplayerClient)
                                     {
@@ -759,7 +779,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 }
                                 if (DoubleTimer == 270)
                                 {
-                                    ArmFrame = 3;
+                                    ArmFrame = 7;
                                     HeadFrame = 5;
                                     AIState = ActionState.Hovering;
                                     DoubleTimer = 0;
@@ -774,20 +794,21 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 if (ImFalling <= 120)
                                 {
                                     NPC.velocity.Y = 0;
-                                    ArmFrame = 1;
+                                    ArmFrame = 3;
                                     HeadFrame = 8;
                                 }
                                 if (ImFalling == 120)
                                 {
                                     HeadFrame = 0;
-                                    ArmFrame = 0;
+                                    ArmFrame = 1;
                                     NPC.velocity.Y = 20;
                                     NPC.netUpdate = true;
                                 }
                                 if ((player.Center.Y - NPC.Center.Y) <= 30)
                                 {
                                     NPC.noTileCollide = false;
-                                    ArmFrame = 3;
+                                    ActualArmFrame = 6;
+                                    ArmFrame = 7;
                                     HeadFrame = 7;
                                 }
                                 if (BaseAI.HitTileOnSide(NPC, 3))
@@ -811,7 +832,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 }
                                 if (IHaveLanded == 60)
                                 {
-                                    ArmFrame = 0;
+                                    ArmFrame = 1;
                                     HeadFrame = 2;
                                     NPC.noTileCollide = true;
                                     AIState = ActionState.Hovering;
@@ -841,11 +862,20 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                     {
                         int choice = Main.rand.Next(3);
                         if (choice == 0)
-                            ArmFrame = 1;
+                        {
+                            ActualArmFrame = 2;
+                            ArmFrame = 3;
+                        }
                         else if (choice == 1)
-                            ArmFrame = 4;
+                        {
+                            ActualArmFrame = 8;
+                            ArmFrame = 9;
+                        }
                         else if (choice == 2)
-                            ArmFrame = 2;
+                        {
+                            ActualArmFrame = 4;
+                            ArmFrame = 5;
+                        }
                         int choice2 = Main.rand.Next(5);
                         if (choice2 == 0)
                             HeadFrame = 1;
@@ -875,7 +905,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                     }
                     break;
                 case ActionState.Goodbye:
-                    ArmFrame = 0;
+                    ActualArmFrame = 0;
+                    ArmFrame = 1;
                     HeadFrame = 0;
                     NPC.velocity = new Vector2(0, 0);
                     NPC.alpha += 50;
@@ -919,14 +950,16 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         {
                             int i = CombatText.NewText(NPC.getRect(), MDColors.FeudalBlue, Language.GetTextValue("Mods.MultidimensionMod.NPCs.FeudalFungus.Transition1"), false, false);
                             Main.combatText[i].lifeTime = 120;
-                            ArmFrame = 2;
+                            ActualArmFrame = 4;
+                            ArmFrame = 5;
                             HeadFrame = 7;
                         }
                         if (DragonballPowerUpSequence == 300)
                         {
                             int i = CombatText.NewText(NPC.getRect(), Color.LimeGreen, Language.GetTextValue("Mods.MultidimensionMod.NPCs.FeudalFungus.Transition2"), false, false);
                             Main.combatText[i].lifeTime = 120;
-                            ArmFrame = 1;
+                            ActualArmFrame = 2;
+                            ArmFrame = 3;
                             HeadFrame = 6;
                         }
                         if (DragonballPowerUpSequence == 480)
@@ -938,7 +971,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         {
                             int i = CombatText.NewText(NPC.getRect(), Color.LimeGreen, Language.GetTextValue("Mods.MultidimensionMod.NPCs.FeudalFungus.Transition4"), false, false);
                             Main.combatText[i].lifeTime = 120;
-                            ArmFrame = 0;
+                            ActualArmFrame = 0;
+                            ArmFrame = 1;
                         }
                         if (DragonballPowerUpSequence == 840)
                         {
@@ -1009,7 +1043,8 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                     }
                     if (Away < 120)
                     {
-                        ArmFrame = 2;
+                        ActualArmFrame = 2;
+                        ArmFrame = 3;
                         HeadFrame = 0;
                     }
                     if (Away >= 120 && Away < 180)
@@ -1023,42 +1058,25 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             if (HeadFrame >= 11)
                                 HeadFrame = 11;
                         }
-                        if (++A >= 2)
-                        {
-                            A = 0;
-                            ArmFrame++;
-                            if (ArmFrame > 3)
-                                ArmFrame = 3;
-                        }
                     }
                     if (DownedSystem.downedFungus)
                     {
-                        if (Away >= 180 && Away < 220)
+                        if (Away == 180)
                         {
-                            ArmFrame = 8;
-                            if (++A >= 2)
-                            {
-                                A = 0;
-                                ArmFrame++;
-                                if (ArmFrame > 9)
-                                    ArmFrame = 9;
-                            }
+                            ActualArmFrame = 8;
+                            ArmFrame = 9;
                         }
                         if (Away == 220)
                         {
                             int i2 = CombatText.NewText(NPC.getRect(), Color.LimeGreen, Language.GetTextValue("Mods.MultidimensionMod.NPCs.FeudalFungus.Defeat3"), false, false);
                             Main.combatText[i2].lifeTime = 100;
-                            ArmFrame = 4;
+                            ActualArmFrame = 8;
+                            ArmFrame = 9;
                         }
                         if (Away >= 220)
                         {
-                            if (++A >= 2)
-                            {
-                                A = 0;
-                                ArmFrame++;
-                                if (ArmFrame > 5)
-                                    ArmFrame = 5;
-                            }
+                            ActualArmFrame = 4;
+                            ArmFrame = 5;
                         }
                     }
                     else
@@ -1067,13 +1085,15 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         {
                             int i2 = CombatText.NewText(NPC.getRect(), Color.LimeGreen, Language.GetTextValue("Mods.MultidimensionMod.NPCs.FeudalFungus.Defeat1"), false, false);
                             Main.combatText[i2].lifeTime = 30;
-                            ArmFrame = 4;
+                            ActualArmFrame = 8;
+                            ArmFrame = 9;
                         }
                         if (Away == 260)
                         {
                             int i2 = CombatText.NewText(NPC.getRect(), Color.LimeGreen, Language.GetTextValue("Mods.MultidimensionMod.NPCs.FeudalFungus.Defeat2"), false, false);
                             Main.combatText[i2].lifeTime = 60;
-                            ArmFrame = 2;
+                            ActualArmFrame = 4;
+                            ArmFrame = 5;
                         }
                     }
                     if (NPC.ai[1] > 260f && NPC.ai[1] < 320f)
@@ -1097,13 +1117,6 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         }
                     }
                     break;
-            }
-        }
-
-        public override void HitEffect(NPC.HitInfo hit)
-        {
-            if (AIState == ActionState.AwayWithThee && Away == 1)
-            {
             }
         }
 
@@ -1220,7 +1233,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 
             return false;
         }
-
+        private int ActualArmFrame;
         private int ArmFrame;
         private int HeadFrame;
         public int A = 0;
@@ -1232,7 +1245,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             Texture2D armTexture2 = ModContent.Request<Texture2D>(NPC.ModNPC.Texture + "Arms_Radiant").Value;
             Texture2D armTexture3 = ModContent.Request<Texture2D>(NPC.ModNPC.Texture + "Arms_PureRadiant").Value;
             int armHeight = armTexture.Height / 10;
-            int ay = armHeight * ArmFrame;
+            int ay = armHeight * ActualArmFrame;
             Rectangle rect = new(0, ay, armTexture.Width, armHeight);
             Vector2 drawOrigin = new(armTexture.Width / 2, armHeight / 2);
 
@@ -1268,5 +1281,3 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
         }
     }   
 }
-
-
