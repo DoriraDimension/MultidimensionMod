@@ -28,6 +28,7 @@ namespace MultidimensionMod.Common.Systems
         public static bool downedGrips;
         public static bool seenMire;
         public static bool seenLake;
+        public static bool seenFeudalIntro;
 
         public override void OnWorldLoad()
         {
@@ -51,6 +52,7 @@ namespace MultidimensionMod.Common.Systems
             downedGrips = false;
             seenMire = false;
             seenLake = false;
+            seenFeudalIntro = false;
         }
 
         public override void OnWorldUnload()
@@ -75,6 +77,7 @@ namespace MultidimensionMod.Common.Systems
             downedGrips = false;
             seenMire = false;
             seenLake = false;
+            seenFeudalIntro = false;
         }
 
         public override void SaveWorldData(TagCompound tag)
@@ -121,6 +124,8 @@ namespace MultidimensionMod.Common.Systems
                 downed.Add("seenMire");
             if (seenLake)
                 downed.Add("seenLake");
+            if (seenFeudalIntro)
+                downed.Add("seenFeudalIntro");
 
             tag["downed"] = downed;
         }
@@ -149,6 +154,7 @@ namespace MultidimensionMod.Common.Systems
             downedGrips = downed.Contains("downedGrips");
             seenMire = downed.Contains("seenMire");
             seenLake = downed.Contains("seenLake");
+            seenFeudalIntro = downed.Contains("seenFeudalIntro");
         }
 
         public override void NetSend(BinaryWriter writer)
@@ -180,6 +186,7 @@ namespace MultidimensionMod.Common.Systems
             flags3[1] = downedGrips;
             flags3[2] = seenMire;
             flags3[3] = seenLake;
+            flags3[4] = seenFeudalIntro;
         }
 
         public override void NetReceive(BinaryReader reader)
@@ -209,6 +216,7 @@ namespace MultidimensionMod.Common.Systems
             downedGrips = flags3[1];
             seenMire = flags3[2];
             seenLake = flags3[3];
+            seenFeudalIntro = flags3[4];
         }
     }
 

@@ -31,7 +31,7 @@ namespace MultidimensionMod.Tiles.MusicBoxes
 			Player player = Main.LocalPlayer;
 			player.noThrow = 2;
             player.cursorItemIconEnabled = true;
-            player.cursorItemIconID = ModContent.ItemType<MireBox>();
+            player.cursorItemIconID = ModContent.ItemType<MireDayBox>();
         }
 	}
 }

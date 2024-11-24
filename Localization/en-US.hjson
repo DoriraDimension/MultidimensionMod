@@ -4567,13 +4567,25 @@ Mods: {
 				DisplayName: Feudal Fungus
 				SecondPhaseName: Umos
 				DefeatSpawn: So we meet again wretch.
-				Transition1: Amn utak eretus!
+				Spawn1: Rethem?
+				Spawn2: Arkem mi ki?
+				Spawn3: ...
+				Spawn4: Teht ruth...
+				Spawn5: Wat her ju dom geru das..?
+				Spawn6: WAT HER JU DOMATU!?
+				SpawnTranslated1: Brother?
+				SpawnTranslated2: What is it?
+				SpawnTranslated3: That ring...
+				SpawnTranslated4: What have you done to him..?
+				SpawnTranslated5: WHAT HAVE YOU DONE!?
+				Transition1: Terl me, wat her ju domatu!
 				Transition2: Focus now!
-				Transition3: Harje imuna servet inate?
+				Transition3: Teht ordiko essebri me dam rethem's ruth!
 				Transition4: Do not be afraid, thy vengeance will come soon.
 				Transition5: Listen careful, murderous wretch, thy actions shall be punished.
 				Transition6: By the light of Umos!
-				Transition7: Bew ta aeios mi Umos!
+				Transition7: Bew ta loma mi Umos!
+				TransitionTranslated1: This fiend possesses my dear brother's ring!
 				Defeat1: Away!
 				Defeat2: Away with thee!
 				Defeat3: Why art thou not giving up?

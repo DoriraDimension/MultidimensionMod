@@ -29,6 +29,7 @@ namespace MultidimensionMod.Items.Tools.DevTools
             DownedSystem.downedMonarch = false;
             DownedSystem.downedFungus = false;
             DownedSystem.sawUmosTransition = false;
+            DownedSystem.seenFeudalIntro = false;
 
             if (Main.netMode == NetmodeID.Server)
                 NetMessage.SendData(MessageID.WorldData);
