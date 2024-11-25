@@ -4631,7 +4631,7 @@ Mods: {
 				// GenericDialogue2: serglhw3o85zhp35ognpügd1312mfghödfdlhgftzjmdzinhwüß046ihn
 				// GenericDialogue3: I've had a weird feeling since a while, its as if everything could go mad any second...
 				// GenericDialogue4: Do you know this mod named Awakened Light? Yeah, me neither.
-				// GenericDialogue5: Oh yeah, so there was once this guy who was incredible racist against Goblins. Well I killed him, no hesitation. Okay actually I just simply didn't like that guy.
+				// GenericDialogue5: Oh yeah, so there was once this guy who was incredibly racist against Goblins. Well I killed him, no hesitation. Okay actually I just simply didn't like that guy.
 				// GenericDialogue6: Insert something very interesting here
 				// GenericDialogue7: There is fungus among us.
 				// GenericDialogue8: I suddenly have the urge to write an entire essay about why people should stop making flying pigs.
@@ -4643,6 +4643,7 @@ Mods: {
 				// YttriumDialogue: Crabs have grown in power, soon they will oberthrow us and become the dominant species. No but seriously, you should check out those crabs at the ocean.
 				// MushroomDialogue: I had a dream where you showed me all of these alchemy mushrooms in a glowing mushroom biome while shopping with me. I think you did that after defeating a weird stone construct powered by solar energy.
 				// SerpentAscendDialogue: I heard that in its dying moments, a serpent will ascend to become a wyrm. Maybe it's an act of mercy, an apology from their ancestors for stripping them of their primal forms. Truth or not, it is a beautiful thought to hold onto.
+				// ImposterDialogue: Oh hey, that's a cool name you got there, reminds me of someone. Oh? You are feeling weird? You must have eaten something bad.
 				#Below is help dialogue
 				// ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
 				// DimensiumHelp: You can find Dimensium by doing many different things. Killing, mining, fishing, and so much more.

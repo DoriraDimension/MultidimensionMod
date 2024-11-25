@@ -19,7 +19,7 @@ namespace MultidimensionMod.Items.Placeables.Furniture.BogwoodF
             Item.autoReuse = true;
             Item.useAnimation = 15;
             Item.useTime = 10;
-            Item.useStyle = 1;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.value = 250;
             Item.createTile = ModContent.TileType<Tiles.Furniture.Bogwood.BogwoodChandelierPlaced>();
@@ -28,9 +28,8 @@ namespace MultidimensionMod.Items.Placeables.Furniture.BogwoodF
         public override void AddRecipes()
         {
             CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Placeables.Biomes.Mire.Bogwood>(), 4)
+            .AddIngredient(ModContent.ItemType<Biomes.Mire.Bogwood>(), 4)
             .AddIngredient(ItemID.Torch, 4)
-            .AddIngredient(ItemID.Chain)
             .AddTile(TileID.Anvils)
             .Register();
 

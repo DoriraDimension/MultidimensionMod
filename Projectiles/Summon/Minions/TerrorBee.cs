@@ -45,6 +45,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 			return true;
 		}
 
+
 		public override void AI()
 		{
 			Player player = Main.player[Projectile.owner];
@@ -183,10 +184,10 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
             #region Animation and visuals
             if (!foundTarget)
 			{
-				Projectile.rotation = Projectile.velocity.X * 0.03f;
+				Projectile.rotation = Projectile.velocity.X * 0.05f;
 			}
 			else
-				Projectile.rotation += 0.3f * (float)Projectile.direction;
+				Projectile.rotation += 0.5f * (float)Projectile.direction;
 
 			Projectile.frameCounter++;
 			if (!foundTarget)

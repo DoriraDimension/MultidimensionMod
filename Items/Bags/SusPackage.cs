@@ -61,6 +61,7 @@ namespace MultidimensionMod.Items.Bags
 				case "Dorito":
 				case "Karl":
 				case "Silverking":
+				case "They":
 					player.QuickSpawnItem(source, ModContent.ItemType<FishLegacy>());
 					player.QuickSpawnItem(source, ModContent.ItemType<Dimensium>(), 15);
 					player.QuickSpawnItem(source, ModContent.ItemType<DimensionalForgeItem>());
