@@ -32,6 +32,7 @@ using MultidimensionMod.Items.Weapons.Melee.Boomerangs;
 using MultidimensionMod.Items.Weapons.Ranged.Bows;
 using static Terraria.GameContent.Animations.IL_Actions.Sprites;
 using Terraria.Graphics.CameraModifiers;
+using MultidimensionMod.Biomes;
 
 namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
 {
@@ -157,6 +158,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             {
                 NPC.scale = 0.5f;
             }
+            SpawnModBiomes = new int[1] { ModContent.GetInstance<MushStoryBiome>().Type };
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

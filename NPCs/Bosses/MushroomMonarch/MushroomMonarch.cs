@@ -122,7 +122,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPC.DeathSound = SoundID.NPCDeath1;
             if (!Main.dedServ)
                 Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Monarch");
-            SpawnModBiomes = new int[1] { ModContent.GetInstance<ShroomForest>().Type };
+            SpawnModBiomes = new int[2] { ModContent.GetInstance<ShroomForest>().Type, ModContent.GetInstance<MushStoryBiome>().Type };
             NPC.AL().CantHurtDapper = true;
             NPC.BossBar = ModContent.GetInstance<MonarchBossBar>();
             if (Main.getGoodWorld)

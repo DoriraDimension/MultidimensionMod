@@ -10,6 +10,7 @@ using Terraria.ModLoader;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Biomes;
 
 namespace MultidimensionMod.NPCs.Bosses.Grips
 {
@@ -24,6 +25,7 @@ namespace MultidimensionMod.NPCs.Bosses.Grips
             NPC.defense = 10;
             NPC.buffImmune[BuffID.Poisoned] = true;
             offsetBasePoint = new Vector2(240f, 0f);
+            SpawnModBiomes = new int[1] { ModContent.GetInstance<ChaosValorStoryBiome>().Type };
         }
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {

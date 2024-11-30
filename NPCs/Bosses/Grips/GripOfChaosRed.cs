@@ -11,6 +11,7 @@ using Terraria.ModLoader;
 using Terraria.GameContent.Bestiary;
 using Terraria.Localization;
 using Terraria.GameContent.ItemDropRules;
+using MultidimensionMod.Biomes;
 
 namespace MultidimensionMod.NPCs.Bosses.Grips
 {
@@ -24,7 +25,8 @@ namespace MultidimensionMod.NPCs.Bosses.Grips
             NPC.damage = 32;
             NPC.defense = 15;	
             NPC.buffImmune[BuffID.OnFire] = true;			
-			offsetBasePoint = new Vector2(-240f, 0f);			
+			offsetBasePoint = new Vector2(-240f, 0f);
+            SpawnModBiomes = new int[1] { ModContent.GetInstance<ChaosValorStoryBiome>().Type };
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

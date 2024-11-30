@@ -20,6 +20,7 @@ using Terraria.ModLoader.IO;
 using Terraria.Utilities;
 using Terraria.GameContent.Bestiary;
 using Terraria.Audio;
+using MultidimensionMod.Biomes;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -160,7 +161,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			TownNPCStayingHomeless = true;
 			NPC.dontTakeDamage = true;
 			NPC.noGravity = true;
-		}
+            SpawnModBiomes = new int[1] { ModContent.GetInstance<GreaterOneFilterBiome>().Type };
+        }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {

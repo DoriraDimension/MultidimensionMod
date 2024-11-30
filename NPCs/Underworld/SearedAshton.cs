@@ -40,6 +40,7 @@ namespace MultidimensionMod.NPCs.Underworld
 			NPC.aiStyle = -1;
             Banner = NPC.type;
             BannerItem = ModContent.ItemType<SearedAshtonBanner>();
+            SpawnModBiomes = new int[1] { ModContent.GetInstance<SubspeciesFilterBiome>().Type };
         }
 
 		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

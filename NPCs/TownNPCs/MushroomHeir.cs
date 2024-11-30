@@ -81,7 +81,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.knockBackResist = .5f;
             AnimationType = NPCID.Mechanic;
-            SpawnModBiomes = new int[1] { ModContent.GetInstance<ShroomForest>().Type };
+            SpawnModBiomes = new int[2] { ModContent.GetInstance<ShroomForest>().Type, ModContent.GetInstance<MushStoryBiome>().Type };
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

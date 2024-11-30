@@ -35,6 +35,46 @@ Mods: {
 				DisplayName: The Lake Depths
 				TownNPCDialogueName: The Lake Depths
 			}
+
+			ChaosValorStoryBiome: {
+				DisplayName: Chaos and Valor
+				TownNPCDialogueName: the Tales of Chaos and Valor
+			}
+
+			CthulhuStoryBiome: {
+				DisplayName: Eldritch Legacy
+				TownNPCDialogueName: Eldritch Legacy
+			}
+
+			GreaterOneFilterBiome: {
+				DisplayName: Greater One
+				TownNPCDialogueName: the Greater One
+			}
+
+			MushStoryBiome: {
+				DisplayName: Fungal Prayers
+				TownNPCDialogueName: the Fungal Prayers
+			}
+
+			OblivionStoryBiome: {
+				DisplayName: Space-Time Trouble
+				TownNPCDialogueName: the Space-Time Trouble
+			}
+
+			OrderStoryBiome: {
+				DisplayName: Slayer of Order
+				TownNPCDialogueName: the Slayer of Order
+			}
+
+			SinStoryBiome: {
+				DisplayName: Abyssal Sin
+				TownNPCDialogueName: the Abyssal Sin
+			}
+
+			SubspeciesFilterBiome: {
+				DisplayName: Subspecies
+				TownNPCDialogueName: the Subspecies
+			}
 		}
 
 		Buffs: {

@@ -34,7 +34,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPC.netAlways = true;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
-            SpawnModBiomes = new int[1] { ModContent.GetInstance<ShroomForest>().Type };
+            SpawnModBiomes = new int[2] { ModContent.GetInstance<ShroomForest>().Type, ModContent.GetInstance<MushStoryBiome>().Type };
             NPC.AL().CantHurtDapper = true;
         }
 
