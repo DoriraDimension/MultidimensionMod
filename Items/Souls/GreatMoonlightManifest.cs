@@ -73,10 +73,13 @@ namespace MultidimensionMod.Items.Souls
             }
             if (AppearTimer >= 60  && AppearTimer < 240)
             {
-                ShakeStrength += 0.0050f;
-                ShakeFrames += 0.050f;
-                PunchCameraModifier modifier = new PunchCameraModifier(Projectile.Center, (Main.rand.NextFloat() * ((float)Math.PI * 2f)).ToRotationVector2(), ShakeFrames, ShakeStrength, 20, 500f, FullName);
-                Main.instance.CameraModifiers.Add(modifier);
+                if (!ModContent.GetInstance<MDConfig>().ScreenshakeDisable)
+                {
+                    ShakeStrength += 0.0050f;
+                    ShakeFrames += 0.050f;
+                    PunchCameraModifier modifier = new PunchCameraModifier(Projectile.Center, (Main.rand.NextFloat() * ((float)Math.PI * 2f)).ToRotationVector2(), ShakeFrames, ShakeStrength, 20, 500f, FullName);
+                    Main.instance.CameraModifiers.Add(modifier);
+                }
             }
             if (AppearTimer == 240)
             {

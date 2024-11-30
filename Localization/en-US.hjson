@@ -4887,6 +4887,17 @@ Mods: {
 					Label: AL Title Cards
 					Tooltip: Vanilla and Awakened Light bosses and some biomes will display a title card upon being spawned/entered.
 				}
+
+				ScreenshakeDisable: {
+					Label: Disable Screenshakes
+					Tooltip: Disables all instances of screenshakes within the mod.
+				}
+			}
+
+			Headers: {
+				ConfigVisual: Visual changes
+				ConfigUI: UI changes
+				ConfigGameplay: Gameplay changes
 			}
 		}
 

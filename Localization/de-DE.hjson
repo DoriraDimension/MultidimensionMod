@@ -4878,6 +4878,12 @@ Mods: {
 			MDConfig: {
 				// DisplayName: General config
 
+				Headers: {
+					// ConfigVisual: Visual changes
+					// ConfigUI: UI changes
+					// ConfigGameplay: Gameplay changes
+				}
+
 				NPCItemSelling: {
 					// Label: Town NPC Item selling
 					// Tooltip: NPCs sell new items
@@ -4887,6 +4893,17 @@ Mods: {
 					// Label: AL Title Cards
 					// Tooltip: Vanilla and Awakened Light bosses and some biomes will display a title card upon being spawned/entered.
 				}
+
+				ScreenshakeDisable: {
+					// Label: Disable Screenshakes
+					// Tooltip: Disables all instances of screenshakes within the mod.
+				}
+			}
+
+			Headers: {
+				// ConfigVisual: Screenshake Disable Header
+				// ConfigUI: A L Title Cards Header
+				// ConfigGameplay: N P C Item Selling Header
 			}
 		}
 

@@ -381,10 +381,13 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         }
                         if (Waking >= 600 && Waking <= 800)
                         {
-                            ShakeStrength += 0.0020f;
-                            ShakeFrames += 0.020f;
-                            PunchCameraModifier modifier = new PunchCameraModifier(NPC.Center, (Main.rand.NextFloat() * ((float)Math.PI * 2f)).ToRotationVector2(), ShakeFrames, ShakeStrength, 20, 500f, FullName);
-                            Main.instance.CameraModifiers.Add(modifier);
+                            if (!ModContent.GetInstance<MDConfig>().ScreenshakeDisable)
+                            {
+                                ShakeStrength += 0.0020f;
+                                ShakeFrames += 0.020f;
+                                PunchCameraModifier modifier = new PunchCameraModifier(NPC.Center, (Main.rand.NextFloat() * ((float)Math.PI * 2f)).ToRotationVector2(), ShakeFrames, ShakeStrength, 20, 500f, FullName);
+                                Main.instance.CameraModifiers.Add(modifier);
+                            }
                         }
                         if (Waking == 800)
                         {
@@ -819,8 +822,11 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                     IHaveLanded++;
                                     if (IHaveLanded == 1)
                                     {
-                                        PunchCameraModifier modifier = new PunchCameraModifier(NPC.Center, (Main.rand.NextFloat() * ((float)Math.PI * 2f)).ToRotationVector2(), 1f, 1f, 20, 500f, FullName);
-                                        Main.instance.CameraModifiers.Add(modifier);
+                                        if (!ModContent.GetInstance<MDConfig>().ScreenshakeDisable)
+                                        {
+                                            PunchCameraModifier modifier = new PunchCameraModifier(NPC.Center, (Main.rand.NextFloat() * ((float)Math.PI * 2f)).ToRotationVector2(), 1f, 1f, 20, 500f, FullName);
+                                            Main.instance.CameraModifiers.Add(modifier);
+                                        }
                                         if (Main.netMode != NetmodeID.MultiplayerClient)
                                         {
                                             int wall = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X + 400, BaseWorldGen.GetFirstTileFloor((int)NPC.Center.X / 16, (int)NPC.Center.Y / 16) * 16, ModContent.NPCType<EvokedMushroot>(), 0);

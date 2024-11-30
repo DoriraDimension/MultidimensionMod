@@ -11,12 +11,17 @@ namespace MultidimensionMod
 
         public override ConfigScope Mode => ConfigScope.ClientSide;
 
-        [DefaultValue(true)]
+        [Header("$Mods.MultidimensionMod.Configs.Headers.ConfigVisual")]
+        [DefaultValue(false)]
+        public bool ScreenshakeDisable { get; set; }
 
-        public bool NPCItemSelling { get; set; }
-
+        [Header("$Mods.MultidimensionMod.Configs.Headers.ConfigUI")]
         [DefaultValue(true)]
         public bool ALTitleCards { get; set; }
+
+        [Header("$Mods.MultidimensionMod.Configs.Headers.ConfigGameplay")]
+        [DefaultValue(true)]
+        public bool NPCItemSelling { get; set; }
 
 
     }
