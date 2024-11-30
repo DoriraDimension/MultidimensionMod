@@ -4531,7 +4531,7 @@ Mods: {
 					// LikeBiome: I really like it here, all this nature is really nice, but something is still missing.
 					// DislikeBiome: I really like to visit caves and play around in them but I rather have sunlight once in a while.
 					// HateBiome: I really can't stand this blazing heat, it feels like I'm being incinerated.
-					// LoveNPC: Good that you put me near {NPCName}, someone has to be the protector. I'm talking about the others of course, not her. But to be real here, I just can't stand us being seperated for too long
+					// LoveNPC: Good that you put me near {NPCName}, someone has to be the protector. I'm talking about the others of course, not her. But to be real here, I just can't stand us being seperated for too long.
 					// LikeNPC: I really like having {NPCName} around, he is a great source of explosives for my wall bangs.
 					// DislikeNPC: No, get {NPCName} away from me, I want to keep my cheated Platinum Coins.
 					// HateNPC: I don't know why, but I just hate {NPCName}.
@@ -4541,7 +4541,7 @@ Mods: {
 			}
 
 			Taraha: {
-				// DisplayName: Exotic Trader
+				// DisplayName: Interdimensional Trader
 
 				TownNPCMood: {
 					// Content: Me always happy!
@@ -4571,7 +4571,7 @@ Mods: {
 				// PowerUp: The scarlet monarch's faded light stirs...
 
 				BossChecklistIntegration: {
-					// SpawnInfo: Use a [i:MultidimensionMod/IntimidatingMushroom] near a Sleeping Mushroom in the Scarlet Mycelium Forest.
+					// SpawnInfo: Use a [i:MultidimensionMod/IntimidatingMushroom] near a Sleeping Mushroom in the Scarlet Mycelium Forest. Grow naturally on Scarlet Mycelium or drop from fleeing Spore Puffers.
 					// DespawnMessage: The scarlet monarch returns to peace.
 				}
 			}
@@ -4632,7 +4632,7 @@ Mods: {
 				// Defeat3: Why art thou not giving up?
 
 				BossChecklistIntegration: {
-					// SpawnInfo: Use a [i:MultidimensionMod/ConfusingMushroom] in a Glowing Mushroom cave.
+					// SpawnInfo: Use a [i:MultidimensionMod/ConfusingMushroom] in a Glowing Mushroom cave. Obtained by giving 5 [i:MultidimensionMod/HovercapItem] to the Mushroom Heir.
 					// DespawnMessage: Feudal Fungus disappears into the glowing caverns.
 				}
 			}

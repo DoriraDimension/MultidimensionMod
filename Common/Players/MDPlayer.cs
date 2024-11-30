@@ -729,7 +729,7 @@ namespace MultidimensionMod.Common.Players
         {
             Player player = Main.LocalPlayer;
             int sentry = ModContent.ProjectileType<NeroConstruct>();
-            if (MDKeybinds.ArmorAbility.JustPressed && NeroSet && player.ownedProjectileCounts[sentry] <= 0)
+            if (MDKeybinds.ArmorAbility.JustPressed && NeroSet)
             {
                 Vector2 velocity = new Vector2(0, 0);
                 IEntitySource source = player.GetSource_Misc("Nero Set");
