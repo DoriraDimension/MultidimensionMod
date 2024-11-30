@@ -57,8 +57,8 @@ Mods: {
 			}
 
 			OblivionStoryBiome: {
-				// DisplayName: Oblivion Story Biome
-				// TownNPCDialogueName: the Oblivion Story Biome
+				// DisplayName: Space-Time Trouble
+				// TownNPCDialogueName: the Space-Time Trouble
 			}
 
 			OrderStoryBiome: {
@@ -4478,6 +4478,7 @@ Mods: {
 			// GreatMoonlightManifest.DisplayName: Great Moonlight Manifest
 			// AncientSwordArtHeld.DisplayName: Ancient Sword Art Held
 			// ArtSword.DisplayName: Art Sword
+			// SlimeFart.DisplayName: Slime Fart
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -4540,7 +4541,7 @@ Mods: {
 			}
 
 			Taraha: {
-				// DisplayName: Greater One
+				// DisplayName: Exotic Trader
 
 				TownNPCMood: {
 					// Content: Me always happy!
@@ -4606,7 +4607,6 @@ Mods: {
 			FeudalFungus: {
 				// DisplayName: Feudal Fungus
 				// SecondPhaseName: Umos
-				// DefeatSpawn: So we meet again wretch.
 				// Spawn1: Rethem?
 				// Spawn2: Arkem mi ki?
 				// Spawn3: ...
@@ -4618,6 +4618,7 @@ Mods: {
 				// SpawnTranslated3: That ring...
 				// SpawnTranslated4: What have you done to him..?
 				// SpawnTranslated5: WHAT HAVE YOU DONE!?
+				// DefeatSpawn: So we meet again wretch.
 				// Transition1: Terl me, wat her ju domatu!
 				// Transition2: Focus now!
 				// Transition3: Teht ordiko essebri me dam rethem's ruth!
@@ -4625,7 +4626,7 @@ Mods: {
 				// Transition5: Listen careful, murderous wretch, thy actions shall be punished.
 				// Transition6: By the light of Umos!
 				// Transition7: Bew ta loma mi Umos!
-				// TransitionTranslated1: This fiend possesses my dear brother's ring!
+				// TransitionTranslated2: This fiend possesses my dear brother's ring!
 				// Defeat1: Away!
 				// Defeat2: Away with thee!
 				// Defeat3: Why art thou not giving up?
@@ -4661,6 +4662,7 @@ Mods: {
 			// Miresquito.DisplayName: Miresquito
 			// DepthAngler.DisplayName: Depth Angler
 			// FogAngler.DisplayName: Fog Angler
+			// MushSlime.DisplayName: Scarlet Cap Slime
 		}
 
 		Dialogue: {
@@ -4939,6 +4941,7 @@ Mods: {
 			// Miresquito: Giant bugs with a lust for blood. They relentlessly chase whatever looks large enough to satiate their hunger.
 			// FogAngler: Male anglers that swim around in the shrouded mire and its depths. They hunt prey using their lures to deliver it to the females.
 			// DepthAngler: Female Fog Anglers who exclusively live in the lake depths. Unlike their male counterpart, these fish are larger and mostly sit still on the floor. They keep waiting for an unfortunate creature to come too close, only to be swallowed whole.
+			// MushSlime: A slime that has lived within the Scarlet Mycelium Forest for a good while. Mushrooms have grown inside, forming a large cap ontop. Scarlet Cap Slimes can expell a cloud of spores when threatened.
 		}
 
 		SoulConversation: {

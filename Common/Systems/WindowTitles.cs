@@ -33,7 +33,7 @@ namespace MultidimensionMod.Common.Systems
                  "HE is always watching",
                  "A smile at night",
                  "Now with less structure consumption",
-                 "That was chaotic"
+                 "That was rather... chaotic"
             };
 
             Main.instance.Window.Title = $"Awakened Light: {titles[Main.rand.Next(titles.Length)]}";

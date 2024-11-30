@@ -275,6 +275,7 @@ namespace MultidimensionMod
                 pool.Add(ModContent.NPCType<MushbugBaby>(), 0.30f);
                 pool.Add(ModContent.NPCType<Puffer>(), 0.25f);
                 pool.Add(ModContent.NPCType<Hovercap>(), 0.35f);
+                pool.Add(ModContent.NPCType<MushSlime>(), 0.40f);
                 if (spawnInfo.Player.FindItem(ModContent.ItemType<IntimidatingMushroom>()) > 0)
 				{
                     if ((Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<MyceliumSandPlaced>() || Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<Mycelium>()) && !NPC.AnyNPCs(ModContent.NPCType<MonarchSlep>()) && !NPC.AnyNPCs(ModContent.NPCType<MushroomMonarch>()) && spawnInfo.Player.InModBiome(ModContent.GetInstance<ShroomForest>()))
