@@ -21,6 +21,7 @@ namespace MultidimensionMod.NPCs.Critters
             NPCID.Sets.CountsAsCritter[Type] = true;
             NPCID.Sets.DontDoHardmodeScaling[Type] = true;
             NPCID.Sets.TakesDamageFromHostilesWithoutBeingFriendly[Type] = true;
+            NPCID.Sets.ShimmerTransformToNPC[NPC.type] = NPCID.Shimmerfly;
             Main.npcFrameCount[NPC.type] = 9;
         }
 

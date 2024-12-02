@@ -22,6 +22,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
 
         public override void SetDefaults()
         {
+            NPCID.Sets.TownCritter[NPC.type] = true;
             NPC.width = 22;
             NPC.height = 16;
             NPC.defense = 0;
