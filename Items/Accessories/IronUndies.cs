@@ -22,5 +22,11 @@ namespace MultidimensionMod.Items.Accessories
 			Item.rare = ItemRarityID.Blue;
 			Item.defense = 5;
 		}
+
+		public override void UpdateAccessory(Player player, bool hideVisual)
+		{
+			Player.jumpHeight -= (int)0.20f;
+			Player.jumpSpeed -= 1;
+		}
 	}
 }
