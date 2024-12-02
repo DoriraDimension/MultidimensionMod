@@ -18,6 +18,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
         public override void SetStaticDefaults()
         {
             Main.npcFrameCount[NPC.type] = 3;
+            NPCID.Sets.ShimmerTransformToNPC[NPC.type] = NPCID.ShimmerSlime;
         }
 
         public override void SetDefaults()

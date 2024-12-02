@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.Localization;
+using Terraria.GameContent.Drawing;
 
 namespace MultidimensionMod.Tiles.Furniture.Bogwood
 {
@@ -16,6 +17,7 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
             Main.tileLighted[Type] = true;
             Main.tileFrameImportant[Type] = true;
             Main.tileLavaDeath[Type] = true;
+            TileID.Sets.MultiTileSway[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newSubTile.CopyFrom(TileObjectData.newTile);
             TileObjectData.newSubTile.LavaDeath = false;
@@ -64,6 +66,18 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
                 g = 0.9f;
                 b = 0.9f;
             }
+        }
+
+        public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
+        {
+            Tile tile = Main.tile[i, j];
+
+            if (TileObjectData.IsTopLeft(tile))
+            {
+                Main.instance.TilesRenderer.AddSpecialPoint(i, j, TileDrawing.TileCounterType.MultiTileVine);
+            }
+
+            return false;
         }
     }
 }

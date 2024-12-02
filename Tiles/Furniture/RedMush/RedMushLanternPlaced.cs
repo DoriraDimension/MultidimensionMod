@@ -9,6 +9,7 @@ using Terraria.Enums;
 using Terraria.ObjectData;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using Terraria.GameContent.Drawing;
 
 namespace MultidimensionMod.Tiles.Furniture.RedMush
 {
@@ -19,6 +20,7 @@ namespace MultidimensionMod.Tiles.Furniture.RedMush
             Main.tileLighted[Type] = true;
             Main.tileFrameImportant[Type] = true;
             Main.tileLavaDeath[Type] = true;
+            TileID.Sets.MultiTileSway[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newSubTile.CopyFrom(TileObjectData.newTile);
             TileObjectData.newSubTile.LavaDeath = false;
@@ -62,6 +64,18 @@ namespace MultidimensionMod.Tiles.Furniture.RedMush
                 g = 0.0f;
                 b = 0.0f;
             }
+        }
+
+        public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
+        {
+            Tile tile = Main.tile[i, j];
+
+            if (TileObjectData.IsTopLeft(tile))
+            {
+                Main.instance.TilesRenderer.AddSpecialPoint(i, j, TileDrawing.TileCounterType.MultiTileVine);
+            }
+
+            return false;
         }
     }
 }

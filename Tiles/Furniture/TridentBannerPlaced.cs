@@ -7,6 +7,8 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.ID;
 using System;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.GameContent.Drawing;
 
 namespace MultidimensionMod.Tiles.Furniture
 {
@@ -17,6 +19,7 @@ namespace MultidimensionMod.Tiles.Furniture
             Main.tileFrameImportant[Type] = true;
             Main.tileNoAttach[Type] = true;
             Main.tileLavaDeath[Type] = true;
+            TileID.Sets.MultiTileSway[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16 };
@@ -26,6 +29,18 @@ namespace MultidimensionMod.Tiles.Furniture
             TileObjectData.addTile(Type);
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(214, 181, 13), name);
+        }
+
+        public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
+        {
+            Tile tile = Main.tile[i, j];
+
+            if (TileObjectData.IsTopLeft(tile))
+            {
+                Main.instance.TilesRenderer.AddSpecialPoint(i, j, TileDrawing.TileCounterType.MultiTileVine);
+            }
+
+            return false;
         }
     }
 }

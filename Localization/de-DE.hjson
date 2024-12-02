@@ -4878,12 +4878,6 @@ Mods: {
 			MDConfig: {
 				// DisplayName: General config
 
-				Headers: {
-					// ConfigVisual: Visual changes
-					// ConfigUI: UI changes
-					// ConfigGameplay: Gameplay changes
-				}
-
 				NPCItemSelling: {
 					// Label: Town NPC Item selling
 					// Tooltip: NPCs sell new items
@@ -4901,9 +4895,9 @@ Mods: {
 			}
 
 			Headers: {
-				// ConfigVisual: Screenshake Disable Header
-				// ConfigUI: A L Title Cards Header
-				// ConfigGameplay: N P C Item Selling Header
+				// ConfigVisual: Visual changes
+				// ConfigUI: UI changes
+				// ConfigGameplay: Gameplay changes
 			}
 		}
 

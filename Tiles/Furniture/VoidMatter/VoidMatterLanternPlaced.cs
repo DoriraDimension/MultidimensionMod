@@ -9,6 +9,7 @@ using Terraria.ID;
 using Terraria.Enums;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
+using Terraria.GameContent.Drawing;
 
 namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 {
@@ -19,6 +20,7 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
             Main.tileLighted[Type] = true;
             Main.tileFrameImportant[Type] = true;
             Main.tileLavaDeath[Type] = true;
+            TileID.Sets.MultiTileSway[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newSubTile.CopyFrom(TileObjectData.newTile);
             TileObjectData.newSubTile.LavaDeath = false;
@@ -70,5 +72,17 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
                 b = 0.7f;
             }
         }
+        public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
+        {
+            Tile tile = Main.tile[i, j];
+
+            if (TileObjectData.IsTopLeft(tile))
+            {
+                Main.instance.TilesRenderer.AddSpecialPoint(i, j, TileDrawing.TileCounterType.MultiTileVine);
+            }
+
+            return false;
+        }
+
     }
 }
