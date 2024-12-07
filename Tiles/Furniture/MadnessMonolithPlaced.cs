@@ -20,10 +20,11 @@ namespace MultidimensionMod.Tiles.Furniture
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
-            TileObjectData.newTile.Width = 4;
-            TileObjectData.newTile.Origin = new Point16(2, 3);
+            TileObjectData.newTile.Origin = new Point16(1, 3);
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x4);
-            TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 16 };
+            TileObjectData.newTile.Width = 2;
+            TileObjectData.newTile.Height = 4;
+            TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 16};
             TileObjectData.newTile.LavaDeath = false;
             TileObjectData.newTile.UsesCustomCanPlace = true;
             TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop, 4, 0);
@@ -31,14 +32,12 @@ namespace MultidimensionMod.Tiles.Furniture
             RegisterItemDrop(ModContent.ItemType<MadnessMonolith>());
             AddMapEntry(new Color(7, 7, 7));
             DustType = ModContent.DustType<MadnessY>();
-            AnimationFrameHeight = 56;
         }
 
         public override void NearbyEffects(int i, int j, bool closer)
         {
-
             Player player = Main.LocalPlayer;
-            if (Main.tile[i, j].TileFrameY < 72)
+            if (Main.tile[i, j].TileFrameY < 71)
             {
                 SkyManager.Instance.Deactivate("MadnessMoonSky");
                 player.ManageSpecialBiomeVisuals("MultidimensionMod:Madness", false);
@@ -54,19 +53,6 @@ namespace MultidimensionMod.Tiles.Furniture
             {
                 SkyManager.Instance.Activate("MadnessMoonSky");
                 player.ManageSpecialBiomeVisuals("MultidimensionMod:Madness", true);
-            }
-        }
-
-        public override void AnimateTile(ref int frame, ref int frameCounter)
-        {
-            frameCounter++;
-            if (frameCounter >= 7.2)
-            {
-                frameCounter = 0;
-                if (++frame >= 3)
-                {
-                    frame = 0;
-                }
             }
         }
 
@@ -89,33 +75,25 @@ namespace MultidimensionMod.Tiles.Furniture
 
         public override void HitWire(int i, int j)
         {
-            int x = i - Main.tile[i, j].TileFrameX / 18 % 4;
-            int y = j - Main.tile[i, j].TileFrameY / 18 % 4;
-            int tileXX18 = 18 * 4;
-            for (int l = x; l < x + 4; l++)
+            int left = i - Main.tile[i, j].TileFrameX / 18 % 2;
+            int top = j - Main.tile[i, j].TileFrameY / 18 % 4;
+            for (int x = left; x < left + 2; x++)
             {
-                for (int m = y; m < y + 4; m++)
+                for (int y = top; y < top + 4; y++)
                 {
-                    if (Main.tile[l, m].HasTile && Main.tile[l, m].TileType == Type)
-                    {
-                        if (Main.tile[l, m].TileFrameY < tileXX18)
-                            Main.tile[l, m].TileFrameY += (short)(tileXX18);
-                        else
-                            Main.tile[l, m].TileFrameY -= (short)(tileXX18);
-                    }
+
+                    if (Main.tile[x, y].TileFrameY >= 72)
+                        Main.tile[x, y].TileFrameY -= 72;
+                    else
+                        Main.tile[x, y].TileFrameY += 72;
                 }
             }
             if (Wiring.running)
             {
-                for (int o = 0; o < 4; o++)
-                {
-                    for (int p = 0; p < 4; p++)
-                    {
-                        Wiring.SkipWire(x + 0, x + p);
-                    }
-                }
+                Wiring.SkipWire(left, top);
+                Wiring.SkipWire(left, top + 1);
             }
-            NetMessage.SendTileSquare(-1, x, y + 1, 3);
+            NetMessage.SendTileSquare(-1, left, top + 1, 2);
         }
     }
 }

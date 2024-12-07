@@ -4223,6 +4223,11 @@ Mods: {
 				// DisplayName: Ancient Sword Art: Brilliant Gems
 				// Tooltip: Conjures sword apparitions in all gem colors at the cursor position
 			}
+
+			FungusMenuBox: {
+				// DisplayName: Fungus Menu Box
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -4864,6 +4869,7 @@ Mods: {
 			// BogwoodSinkPlaced.MapEntry: Bogwood Sink
 			// BogwoodTablePlaced.MapEntry: Bogwood Table
 			// BogwoodWorkbenchPlaced.MapEntry: Bogwood Work Bench
+			// FungusMenuBoxPlaced.MapEntry: Fungus Menu Box Placed
 		}
 
 		DeathMessages: {
