@@ -175,7 +175,7 @@ namespace MultidimensionMod
                 if (Main.rand.NextBool(10) && Dappercap != -1)
                 {
                     chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Dapper1");
-                    if (Main.rand.NextBool(15))
+                    if (Main.rand.NextBool(15) && DownedSystem.downedFungus)
                         chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Dapper2");
                 }
                 if (Main.rand.NextBool(10))
@@ -185,7 +185,7 @@ namespace MultidimensionMod
                 if (Main.rand.NextBool(10))
                     chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Umos3");
                 if (Main.rand.NextBool(12) && DownedSystem.downedFungus)
-                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Dapper2");
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.UmosDead");
                 if (Main.rand.NextBool(15) && NPC.downedMoonlord)
                     chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Unimush1");
                 if (Main.rand.NextBool(15) && NPC.downedMoonlord)

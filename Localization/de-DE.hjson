@@ -4225,7 +4225,7 @@ Mods: {
 			}
 
 			FungusMenuBox: {
-				// DisplayName: Fungus Menu Box
+				// DisplayName: Music Box (Fungal Prayers)
 				// Tooltip: ""
 			}
 		}
@@ -4667,7 +4667,28 @@ Mods: {
 			// Miresquito.DisplayName: Miresquito
 			// DepthAngler.DisplayName: Depth Angler
 			// FogAngler.DisplayName: Fog Angler
-			// MushSlime.DisplayName: Scarlet Cap Slime
+			// MushSlime.DisplayName: Mushroom Slime
+
+			MushroomFollower: {
+				// DisplayName: Mushroom Follower
+				// Dialogue1: Ooo light, please let me witness your brilliance, am I not worthy?
+				// Dialogue2: I'm but a mere shadow in your presence, oh magnificent light!
+				// Dialogue3: I pray for our continued safety, for a world without crime.
+				// Dialogue4: There are many creatures that break into our sanctuary, but luckily, our light keeps us safe.
+				// Dialogue5: The sleeping light, we defend with all our might. The sleeping light, we defend with all our might.
+				// Dialogue6: Are you a new member of our group?
+			}
+
+			MushroomPreacher: {
+				// DisplayName: Mushroom Preacher
+				// Dialogue1: Greetings traveler, what brings you to our beloved sanctuary? Why not come pray with us, you won't regret it.
+				// Dialogue2: Aaa, aren't the glowing caverns just magnificent this time around?
+				// Dialogue3: My dear, spread the word of light around, more need to bathe in its glory!
+				// Dialogue4: Are you here to see him too? Our glowing royalty. If so, let me teach you the words of light.
+				// Dialogue5: The sleeping light, we defend with all our might. Now my fellows, say it with me! The sleeping light, we defend with all our might.
+				// Dialogue6: From the darkness, there emerged a spark of light. Soon it created the world, filled it with beings it calls its children. This is us, we who follow its radiance, we who dwell in its warmth.
+				// Dialogue7: Even with its height... of power, our beloved light, it was feeling bereft, of its primordial might. With a deep breath, it called forth its 3 most beloved children, tasking them to serve the world and watch over us.
+			}
 		}
 
 		Dialogue: {
@@ -4959,6 +4980,8 @@ Mods: {
 			// FogAngler: Male anglers that swim around in the shrouded mire and its depths. They hunt prey using their lures to deliver it to the females.
 			// DepthAngler: Female Fog Anglers who exclusively live in the lake depths. Unlike their male counterpart, these fish are larger and mostly sit still on the floor. They keep waiting for an unfortunate creature to come too close, only to be swallowed whole.
 			// MushSlime: A slime that has lived within the Scarlet Mycelium Forest for a good while. Mushrooms have grown inside, forming a large cap ontop. Scarlet Cap Slimes can expell a cloud of spores when threatened.
+			// MushroomPreacher: Someshroomwih a funny stick
+			// MushroomFollower: Gullible idiot
 		}
 
 		SoulConversation: {
@@ -5324,7 +5347,7 @@ Mods: {
 			Truffle: {
 				// Dapper1: My brother Malcom, always talked about little Dappercap when he visited. But then he eventually stopped showing up, and not even dapper knows where he is now. He just said Malcom was gonna make amends for his crimes.
 				// Dapper2: Despite his looks and behavior, Dappercap is the scarlet prince. But even with this title and the respect he gains from it, he ran away and never returned home. Even Umos is in mild distraught by this.
-				// Umos1: Our glowing royalty, Umos, he is what keeps us going, that light in the dark. One day he will lead us into the true light beyond our minds.
+				// Umos1: Our glowing royalty, Umos, he is what keeps us going, that light in the dark. While I don't 100% agree with his ways, he is still our light.
 				// Umos2: It is really scary to be granted sentience out of nowhere. I felt lost at first, but then I was guided by a light, it was his light. These are times of peace for my kin, something not many have.
 				// Umos3: Many creatures in the dark caverns come to our glowing sanctuaries. Those often bear hostility however, which makes them intruders rather than guests. Somehow Umos sees them as worthy, saying that all deserve salvation.
 				// UmosDead: I know you defeated our apostle in battle. I have no grudge against you, it must have been a misunderstanding. He can be very defensive against outsiders.
