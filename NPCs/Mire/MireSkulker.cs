@@ -57,6 +57,7 @@ namespace MultidimensionMod.NPCs.Mire
             NPC.noGravity = false;
             NPC.noTileCollide = false;
             NPC.knockBackResist = 0f;
+            NPC.chaseable = false;
             SpawnModBiomes = new int[1] { ModContent.GetInstance<TheShroudedMire>().Type };
         }
 
@@ -158,6 +159,7 @@ namespace MultidimensionMod.NPCs.Mire
                     else if (hasNotBeenAttackedSince > 0)
                     {
                         SoundEngine.PlaySound(SoundID.Zombie77, NPC.position);
+                        NPC.chaseable = true;
                         AIState = ActionState.Pursuing;
                         NPC.netUpdate = true;
                     }
@@ -171,6 +173,7 @@ namespace MultidimensionMod.NPCs.Mire
                     }
                     else if (distanceToPlayer < attackDistance || hasNotBeenAttackedSince > 0) //Start attacking if player keeps getting closer because they have no sense for privacy
                     {
+                        NPC.chaseable = true;
                         AIState = ActionState.Pursuing;
                         NPC.netUpdate = true;
                     }
@@ -190,6 +193,7 @@ namespace MultidimensionMod.NPCs.Mire
                     PursuitAI();
                     if (distanceToHome > 800 && hasNotBeenAttackedSince == 0) //Stop pursuing and retreat back to nesting tile if not under attack
                     {
+                        NPC.chaseable = false;
                         AIState = ActionState.Retreating;
                         NPC.netUpdate = true;
                     }
@@ -225,6 +229,7 @@ namespace MultidimensionMod.NPCs.Mire
                             NPC.defense = 8;
                         else
                             NPC.defense = 14;
+                        NPC.chaseable = false;
                         AIState = ActionState.Retreating;
                         NPC.netUpdate = true;
                     }
@@ -243,6 +248,7 @@ namespace MultidimensionMod.NPCs.Mire
                     }
                     if (hasNotBeenAttackedSince > 0) //Go back to pursuing if attacked
                     {
+                        NPC.chaseable = true;
                         AIState = ActionState.Pursuing;
                         NPC.netUpdate = true;
                     }

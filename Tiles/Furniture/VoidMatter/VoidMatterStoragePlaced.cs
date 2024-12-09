@@ -26,7 +26,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			Main.tileShine2[Type] = true;
 			Main.tileShine[Type] = 1200;
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
-			TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
+            TileObjectData.newTile.Origin = new Point16(1, 1);
+            TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
 			TileObjectData.newTile.HookCheckIfCanPlace = new PlacementHook(Chest.FindEmptyChest, -1, 0, true);
 			TileObjectData.newTile.HookPostPlaceMyPlayer = new PlacementHook(Chest.AfterPlacement_Hook, -1, 0, false);
 			TileObjectData.newTile.AnchorInvalidTiles = new[] { 127 };

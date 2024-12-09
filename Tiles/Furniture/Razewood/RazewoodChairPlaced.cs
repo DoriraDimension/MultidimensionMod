@@ -23,6 +23,7 @@ namespace MultidimensionMod.Tiles.Furniture.Razewood
             TileID.Sets.CanBeSatOnForNPCs[Type] = true;
             TileID.Sets.CanBeSatOnForPlayers[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2);
+            TileObjectData.newTile.Origin = new Point16(0, 1);
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 18 };
             TileObjectData.newTile.Direction = TileObjectDirection.PlaceLeft;
             TileObjectData.newTile.StyleWrapLimit = 2;

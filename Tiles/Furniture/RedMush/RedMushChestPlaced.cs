@@ -30,6 +30,7 @@ namespace MultidimensionMod.Tiles.Furniture.RedMush
             TileID.Sets.BasicChest[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+            TileObjectData.newTile.Origin = new Point16(1, 1);
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
             TileObjectData.newTile.HookCheckIfCanPlace = new PlacementHook(Chest.FindEmptyChest, -1, 0, true);
             TileObjectData.newTile.HookPostPlaceMyPlayer = new PlacementHook(Chest.AfterPlacement_Hook, -1, 0, false);

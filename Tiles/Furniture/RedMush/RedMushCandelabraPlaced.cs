@@ -7,6 +7,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.ObjectData;
 using Terraria.Enums;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Tiles.Furniture.RedMush
 {
@@ -19,6 +20,7 @@ namespace MultidimensionMod.Tiles.Furniture.RedMush
             Main.tileLighted[Type] = true;
             Main.tileLavaDeath[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+            TileObjectData.newTile.Origin = new Point16(1, 1);
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.newTile.WaterDeath = true;

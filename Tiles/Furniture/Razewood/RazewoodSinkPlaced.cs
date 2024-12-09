@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.Localization;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Tiles.Furniture.Razewood
 {
@@ -14,6 +15,7 @@ namespace MultidimensionMod.Tiles.Furniture.Razewood
 			Main.tileNoAttach[Type] = true;
 			Main.tileLavaDeath[Type] = true; 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+            TileObjectData.newTile.Origin = new Point16(1, 1);
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 18 };
             TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();

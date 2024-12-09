@@ -7,6 +7,7 @@ using Terraria.ObjectData;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.Localization;
 using Terraria.GameContent.Drawing;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Tiles.Furniture.Bogwood
 {
@@ -19,6 +20,7 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
             Main.tileLavaDeath[Type] = true;
             TileID.Sets.MultiTileSway[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
+            TileObjectData.newTile.Origin = new Point16(0, 0);
             TileObjectData.newSubTile.CopyFrom(TileObjectData.newTile);
             TileObjectData.newSubTile.LavaDeath = false;
             TileObjectData.newSubTile.LavaPlacement = LiquidPlacement.Allowed;

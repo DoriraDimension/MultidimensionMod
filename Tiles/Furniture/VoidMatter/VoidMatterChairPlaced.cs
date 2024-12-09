@@ -21,7 +21,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			Main.tileFrameImportant[Type] = true;
 			Main.tileNoAttach[Type] = true;
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2);
-			TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
+            TileObjectData.newTile.Origin = new Point16(0, 1);
+            TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
 			TileObjectData.newTile.Direction = TileObjectDirection.PlaceLeft;
 			TileObjectData.newTile.StyleWrapLimit = 2;
 			TileObjectData.newTile.StyleMultiplier = 2;

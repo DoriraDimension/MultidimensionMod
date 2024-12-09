@@ -17,7 +17,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			Main.tileFrameImportant[Type] = true;
 			Main.tileNoAttach[Type] = true;
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
-			TileObjectData.newTile.Height = 5;
+            TileObjectData.newTile.Origin = new Point16(1, 4);
+            TileObjectData.newTile.Height = 5;
 			TileObjectData.newTile.Width = 2;
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 16, 18 };
 			TileID.Sets.DisableSmartCursor[Type] = true;

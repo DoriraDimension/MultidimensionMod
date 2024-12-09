@@ -3,44 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\npcs\\mushbiomes\\mushroomfollower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:npcs\\mushbiomes\\mushroomfollower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\tiles\\furniture\\voidmatter\\voidmatterworkbenchplaced.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:tiles\\furniture\\voidmatter\\voidmatterworkbenchplaced.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\npcs\\mushbiomes\\mushroompreacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:npcs\\mushbiomes\\mushroompreacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\tiles\\furniture\\madnessmonolithplaced.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:tiles\\furniture\\madnessmonolithplaced.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:localization\\en-us.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\npcs\\tundra\\icedrakejuvenile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:npcs\\tundra\\icedrakejuvenile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\npcs\\dungeon\\darkling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:npcs\\dungeon\\darkling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\globals\\npcs\\mdglobaltownnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\globals\\npcs\\mdglobaltownnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\biomes\\bestiaryfilterbiomes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:biomes\\bestiaryfilterbiomes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\npcs\\townnpcs\\taraha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:npcs\\townnpcs\\taraha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\globals\\npcs\\mdglobalnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\globals\\npcs\\mdglobalnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\npcs\\mire\\darkdrifter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:npcs\\mire\\darkdrifter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\players\\mdplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,123 +26,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Darkling.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\Dungeon\\Darkling.cs",
-              "RelativeDocumentMoniker": "NPCs\\Dungeon\\Darkling.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\Dungeon\\Darkling.cs",
-              "RelativeToolTip": "NPCs\\Dungeon\\Darkling.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAIwFwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T17:40:07.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MDGlobalTownNPC.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\NPCs\\MDGlobalTownNPC.cs",
-              "RelativeDocumentMoniker": "Common\\Globals\\NPCs\\MDGlobalTownNPC.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\NPCs\\MDGlobalTownNPC.cs",
-              "RelativeToolTip": "Common\\Globals\\NPCs\\MDGlobalTownNPC.cs",
-              "ViewState": "AQIAAKkAAAAAAAAAAAAgwLsAAABsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T17:33:12.955Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BestiaryFilterBiomes.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Biomes\\BestiaryFilterBiomes.cs",
-              "RelativeDocumentMoniker": "Biomes\\BestiaryFilterBiomes.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Biomes\\BestiaryFilterBiomes.cs",
-              "RelativeToolTip": "Biomes\\BestiaryFilterBiomes.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T17:08:53.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Taraha.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\TownNPCs\\Taraha.cs",
-              "RelativeDocumentMoniker": "NPCs\\TownNPCs\\Taraha.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\TownNPCs\\Taraha.cs",
-              "RelativeToolTip": "NPCs\\TownNPCs\\Taraha.cs",
-              "ViewState": "AQIAAI0AAAAAAAAAAAAmwKMAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T16:31:03.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MDGlobalNPC.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\NPCs\\MDGlobalNPC.cs",
-              "RelativeDocumentMoniker": "Common\\Globals\\NPCs\\MDGlobalNPC.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\NPCs\\MDGlobalNPC.cs",
-              "RelativeToolTip": "Common\\Globals\\NPCs\\MDGlobalNPC.cs",
-              "ViewState": "AQIAAAkBAAAAAAAAAAAnwBgBAAAhAQAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T12:59:40.031Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Darkdrifter.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\Mire\\Darkdrifter.cs",
-              "RelativeDocumentMoniker": "NPCs\\Mire\\Darkdrifter.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\Mire\\Darkdrifter.cs",
-              "RelativeToolTip": "NPCs\\Mire\\Darkdrifter.cs",
-              "ViewState": "AQIAAIsAAAAAAAAAAAAUwIkAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T12:56:44.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MushroomFollower.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\MushBiomes\\MushroomFollower.cs",
-              "RelativeDocumentMoniker": "NPCs\\MushBiomes\\MushroomFollower.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\MushBiomes\\MushroomFollower.cs",
-              "RelativeToolTip": "NPCs\\MushBiomes\\MushroomFollower.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAuwGEAAABHAAAA",
+              "Title": "VoidMatterWorkBenchPlaced.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Furniture\\VoidMatter\\VoidMatterWorkBenchPlaced.cs",
+              "RelativeDocumentMoniker": "Tiles\\Furniture\\VoidMatter\\VoidMatterWorkBenchPlaced.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Furniture\\VoidMatter\\VoidMatterWorkBenchPlaced.cs",
+              "RelativeToolTip": "Tiles\\Furniture\\VoidMatter\\VoidMatterWorkBenchPlaced.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T13:02:02.633Z",
+              "WhenOpened": "2024-12-08T23:52:17.129Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MushroomPreacher.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\MushBiomes\\MushroomPreacher.cs",
-              "RelativeDocumentMoniker": "NPCs\\MushBiomes\\MushroomPreacher.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\MushBiomes\\MushroomPreacher.cs",
-              "RelativeToolTip": "NPCs\\MushBiomes\\MushroomPreacher.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAmwGkAAABHAAAA",
+              "Title": "MadnessMonolithPlaced.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Furniture\\MadnessMonolithPlaced.cs",
+              "RelativeDocumentMoniker": "Tiles\\Furniture\\MadnessMonolithPlaced.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Furniture\\MadnessMonolithPlaced.cs",
+              "RelativeToolTip": "Tiles\\Furniture\\MadnessMonolithPlaced.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T17:06:50.564Z",
+              "WhenOpened": "2024-12-08T23:24:50.453Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IceDrakeJuvenile.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\Tundra\\IceDrakeJuvenile.cs",
-              "RelativeDocumentMoniker": "NPCs\\Tundra\\IceDrakeJuvenile.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\Tundra\\IceDrakeJuvenile.cs",
-              "RelativeToolTip": "NPCs\\Tundra\\IceDrakeJuvenile.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAABwAAAArAAAA",
+              "Title": "MDPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Players\\MDPlayer.cs",
+              "RelativeDocumentMoniker": "Common\\Players\\MDPlayer.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Players\\MDPlayer.cs",
+              "RelativeToolTip": "Common\\Players\\MDPlayer.cs",
+              "ViewState": "AQIAAM0CAAAAAAAAAAAAAN8CAABrAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T12:41:07.565Z",
+              "WhenOpened": "2024-08-30T21:48:15.688Z",
               "EditorCaption": ""
             },
             {
@@ -181,22 +75,10 @@
               "RelativeDocumentMoniker": "Localization\\en-US.hjson",
               "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US.hjson",
               "RelativeToolTip": "Localization\\en-US.hjson",
-              "ViewState": "AQIAAHERAAAAAAAAAADgv0wSAABRAAAA",
+              "ViewState": "AQIAAEoEAAAAAAAAAADgv1sEAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-05-16T15:47:55.951Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MDPlayer.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Players\\MDPlayer.cs",
-              "RelativeDocumentMoniker": "Common\\Players\\MDPlayer.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Players\\MDPlayer.cs",
-              "RelativeToolTip": "Common\\Players\\MDPlayer.cs",
-              "ViewState": "AQIAAM0CAAAAAAAAAAAAAN8CAABrAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T21:48:15.688Z"
             }
           ]
         }

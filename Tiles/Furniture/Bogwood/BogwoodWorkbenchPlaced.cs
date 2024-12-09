@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -17,7 +18,8 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
 			Main.tileTable[Type] = true;
 			Main.tileLavaDeath[Type] = true;
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style2x1);
-			TileObjectData.newTile.CoordinateHeights = new int[]{ 18 };
+            TileObjectData.newTile.Origin = new Point16(1, 0);
+            TileObjectData.newTile.CoordinateHeights = new int[]{ 18 };
 			TileObjectData.addTile(Type);
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 			LocalizedText name = CreateMapEntryName();

@@ -24,7 +24,8 @@ namespace MultidimensionMod.Tiles.Furniture.Razewood
             TileID.Sets.IsValidSpawnPoint[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2); //this style already takes care of direction for us
-			TileObjectData.newTile.CoordinateHeights = new int[]{ 16, 18 };
+            TileObjectData.newTile.Origin = new Point16(2, 1);
+            TileObjectData.newTile.CoordinateHeights = new int[]{ 16, 18 };
 			TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();
 			//name.SetDefault("Razewood Bed");

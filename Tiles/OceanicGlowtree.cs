@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Tiles
 {
@@ -16,7 +17,8 @@ namespace MultidimensionMod.Tiles
 			Main.tileFrameImportant[Type] = true;
 			Main.tileLighted[Type] = true;
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
-			TileObjectData.newTile.LavaDeath = true;
+            TileObjectData.newTile.Origin = new Point16(1, 3);
+            TileObjectData.newTile.LavaDeath = true;
 			TileObjectData.newTile.Height = 4;
 			TileObjectData.newTile.Width = 2;
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 18 };

@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -17,6 +18,7 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
             Main.tileLighted[Type] = true;
             Main.tileLavaDeath[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+            TileObjectData.newTile.Origin = new Point16(1, 1);
             TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();

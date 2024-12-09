@@ -22,6 +22,7 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
             Main.tileLavaDeath[Type] = true;
             TileID.Sets.MultiTileSway[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
+            TileObjectData.newTile.Origin = new Point16(0, 0);
             TileObjectData.newSubTile.CopyFrom(TileObjectData.newTile);
             TileObjectData.newSubTile.LavaDeath = false;
             TileObjectData.newSubTile.LavaPlacement = LiquidPlacement.Allowed;

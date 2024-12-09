@@ -18,6 +18,7 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
             Main.tileNoAttach[Type] = true;
             Main.tileLighted[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+            TileObjectData.newTile.Origin = new Point16(1, 1);
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.addTile(Type);
             LocalizedText name = CreateMapEntryName();

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -14,7 +15,8 @@ namespace MultidimensionMod.Tiles
 			Main.tileFrameImportant[Type] = true;
 			Main.tileNoAttach[Type] = true;
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
-			TileObjectData.newTile.Height = 2;
+            TileObjectData.newTile.Origin = new Point16(1, 1);
+            TileObjectData.newTile.Height = 2;
 			TileObjectData.newTile.Width = 2;
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
 			TileID.Sets.DisableSmartCursor[Type] = true;

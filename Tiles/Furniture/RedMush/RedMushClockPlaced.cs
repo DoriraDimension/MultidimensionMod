@@ -21,6 +21,7 @@ namespace MultidimensionMod.Tiles.Furniture.RedMush
             DustType = ModContent.DustType<MushroomDust>();
             AdjTiles = new int[] { TileID.GrandfatherClocks };
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
+            TileObjectData.newTile.Origin = new Point16(1, 4);
             TileObjectData.newTile.Height = 5;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 16, 16 };
             TileObjectData.newTile.Origin = new Point16(0, 4);

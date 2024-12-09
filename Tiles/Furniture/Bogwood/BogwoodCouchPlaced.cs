@@ -21,6 +21,7 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
             Main.tileLavaDeath[Type] = true;
             TileID.Sets.CanBeSatOnForPlayers[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
+            TileObjectData.newTile.Origin = new Point16(1, 1);
             TileObjectData.newTile.LavaDeath = false;
             TileObjectData.addTile(Type);
             LocalizedText name = CreateMapEntryName();

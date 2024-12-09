@@ -20,7 +20,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			Main.tileLavaDeath[Type] = true;
 			Main.tileFrameImportant[Type] = true;
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style2x1);
-			TileObjectData.newTile.CoordinateHeights = new[] { 18 };
+            TileObjectData.newTile.Origin = new Point16(1, 0);
+            TileObjectData.newTile.CoordinateHeights = new[] { 18 };
 			TileObjectData.addTile(Type);
 			TileID.Sets.DisableSmartCursor[Type] = true;
 			TileID.Sets.IgnoredByNpcStepUp[Type] = true;

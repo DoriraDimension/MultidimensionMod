@@ -1113,7 +1113,7 @@ Mods: {
 
 			IceblossomSeeds: {
 				DisplayName: Iceblossom Seeds
-				Tooltip: Cold seeds that will grow into a Iceblossom when planted on Cold Ash
+				Tooltip: Cold seeds that will grow into an Iceblossom when planted on Cold Ash
 			}
 
 			SolidMagma: {
@@ -5356,7 +5356,7 @@ Mods: {
 				Unimush3: My nightmares have gotten worse, I feel like everyone wants to consume me.
 			}
 
-			Wizard.Carces: I once heard of a settlement called Carces. Apperantly it was a humble town that was famous for its so called 'Twin Libraries', which would contain ancient manuscripts. I would love to get my hands on some of those, but sadly the down was burned down many years ago.
+			Wizard.Carces: I once heard of a settlement called Carces. Apperantly it was a humble town that was famous for its so called 'Twin Libraries', which would contain ancient manuscripts. I would love to get my hands on some of those, but sadly the town was burned down many years ago.
 		}
 
 		MiscText: {

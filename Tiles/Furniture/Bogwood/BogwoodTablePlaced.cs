@@ -24,6 +24,7 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
             TileID.Sets.IgnoredByNpcStepUp[Type] = true;
             DustType = ModContent.DustType<Dusts.BogwoodDust>(); ;
             AdjTiles = new int[] { TileID.Tables };
+            TileObjectData.newTile.Origin = new Point16(1, 0);
             TileObjectData.newTile.Width = 3;
             TileObjectData.newTile.Height = 1;
             TileObjectData.newTile.StyleHorizontal = true;

@@ -25,6 +25,7 @@ namespace MultidimensionMod.Tiles.Furniture.RedMush
             TileID.Sets.IsValidSpawnPoint[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2);
+            TileObjectData.newTile.Origin = new Point16(2, 1);
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
             TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, -2);
             TileObjectData.addTile(Type);

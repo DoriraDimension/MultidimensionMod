@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.Localization;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Tiles.Furniture.Razewood
 {
@@ -19,7 +20,8 @@ namespace MultidimensionMod.Tiles.Furniture.Razewood
             TileID.Sets.DisableSmartCursor[Type] = true;
             TileID.Sets.IgnoredByNpcStepUp[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x1);
-			TileObjectData.newTile.CoordinateHeights = new int[]{ 18 };
+            TileObjectData.newTile.Origin = new Point16(1, 0);
+            TileObjectData.newTile.CoordinateHeights = new int[]{ 18 };
 			TileObjectData.addTile(Type);
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 			LocalizedText name = CreateMapEntryName();
