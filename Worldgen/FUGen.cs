@@ -210,7 +210,9 @@ namespace MultidimensionMod.Worldgen
             WorldUtils.Gen(originCenter, new Shapes.Rectangle(lavaWidth, lavaHeight), Actions.Chain(new GenAction[]
             {
             new InWorld(),
+			new Modifiers.HasLiquid(liquidType:1),
             new Actions.SetLiquid(0, 0),
+			new SetModTile(lava, true, true)
             }));
            /* WorldUtils.Gen(originCenter2, new Shapes.Rectangle(petrifiedH, petrifiedW), Actions.Chain(new GenAction[]
             {
