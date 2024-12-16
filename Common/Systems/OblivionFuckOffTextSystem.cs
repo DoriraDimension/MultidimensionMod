@@ -22,8 +22,8 @@ namespace MultidimensionMod.Common.Systems
 
         public override void OnModLoad()
         {
-            //Terraria.GameContent.UI.IL_GameTipsDisplay.Draw += ChangeTipTextToEgg;
-            //On_Main.DrawMenu += ChangeTextToEgg;
+            Terraria.GameContent.UI.IL_GameTipsDisplay.Draw += ChangeTipTextToEgg;
+            On_Main.DrawMenu += ChangeTextToEgg;
         }
 
         private void ChangeTextToEgg(On_Main.orig_DrawMenu orig, Main self, GameTime gameTime)
@@ -38,7 +38,7 @@ namespace MultidimensionMod.Common.Systems
                     Main.menuMode = 10;
                     returnDelay++;
 
-                    if (returnDelay >= 30)
+                    if (returnDelay >= 180)
                     {
                         Main.menuMode = 0;
                         returnDelay = 0;
@@ -46,6 +46,7 @@ namespace MultidimensionMod.Common.Systems
                 }
                 return;
             }
+            orig(self, gameTime);
         }
 
         public override void PostUpdateEverything()
