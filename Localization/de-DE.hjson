@@ -5299,7 +5299,8 @@ Mods: {
 		}
 
 		VanillaTooltipEdits: {
-			// DraxDenseBlockTip: Is capable of mining Dense Volcanic Rock and Dense Biomatter
+			// DraxDenseBlockTip: Capable of mining Dense Volcanic Rock and Dense Biomatter
+			// PicksawChaosCaveTip: Capable of mining Lihzahrd Bricks, Volcanic Rock and Dank Depthstone
 			/* BlinkrootTip:
 				'''
 				A cave dwelling plant that glows gently in the darkness

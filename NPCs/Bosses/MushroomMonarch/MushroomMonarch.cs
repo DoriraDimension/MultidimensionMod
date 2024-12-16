@@ -113,7 +113,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPC.aiStyle = -1;
             NPC.width = 50;
             NPC.height = 100;
-            NPC.npcSlots = 1f;
+            NPC.npcSlots = 10f;
             NPC.boss = true;
             NPC.noGravity = false;
             NPC.noTileCollide = false;

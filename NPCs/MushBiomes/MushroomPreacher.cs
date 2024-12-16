@@ -99,7 +99,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
         {
             WeightedRandom<string> chat = new WeightedRandom<string>();
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.MushroomPreacher.Dialogue1"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCsNPCs.MushroomPreacher.Dialogue2"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.MushroomPreacher.Dialogue2"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.MushroomPreacher.Dialogue3"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.MushroomPreacher.Dialogue4"));
             chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.MushroomPreacher.Dialogue5"));

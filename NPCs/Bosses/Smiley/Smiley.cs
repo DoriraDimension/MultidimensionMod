@@ -163,7 +163,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
 			NPC.width = 88;
 			NPC.height = 88;
 			NPC.value = Item.buyPrice(0, 10, 0, 0);
-			NPC.npcSlots = 5f;
+			NPC.npcSlots = 10f;
 			NPC.boss = true;
 			NPC.lavaImmune = true;
 			NPC.noGravity = true;

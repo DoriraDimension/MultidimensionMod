@@ -118,7 +118,16 @@ namespace MultidimensionMod.Common.Globals.Items
         {
             if (item.type == ItemID.PickaxeAxe || item.type == ItemID.Drax)
             {
-                TooltipLine line = new(Mod, "Locked", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.DraxDenseBlockTip"))
+                TooltipLine line = new(Mod, "DraxTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.DraxDenseBlockTip"))
+                {
+                    OverrideColor = Color.White
+                };
+                tooltips.Add(line);
+            }
+            if (item.type == ItemID.Picksaw)
+            {
+                tooltips.RemoveAll(TooltipLine => TooltipLine.Name.Equals("Tooltip0"));
+                TooltipLine line = new(Mod, "PicksawTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.PicksawChaosCaveTip"))
                 {
                     OverrideColor = Color.White
                 };
@@ -126,7 +135,7 @@ namespace MultidimensionMod.Common.Globals.Items
             }
             if (item.type == ItemID.Blinkroot)
             {
-                TooltipLine line = new(Mod, "Locked", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.BlinkrootTip"))
+                TooltipLine line = new(Mod, "BlinkrootTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.BlinkrootTip"))
                 {
                     OverrideColor = Color.White
                 };
@@ -134,7 +143,7 @@ namespace MultidimensionMod.Common.Globals.Items
             }
             if (item.type == ItemID.Deathweed)
             {
-                TooltipLine line = new(Mod, "Locked", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.DeathweedTip"))
+                TooltipLine line = new(Mod, "DeathweedTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.DeathweedTip"))
                 {
                     OverrideColor = Color.White
                 };
@@ -142,7 +151,7 @@ namespace MultidimensionMod.Common.Globals.Items
             }
             if (item.type == ItemID.Fireblossom)
             {
-                TooltipLine line = new(Mod, "Locked", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.FireblossomTip"))
+                TooltipLine line = new(Mod, "FireblossomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.FireblossomTip"))
                 {
                     OverrideColor = Color.White
                 };
@@ -150,7 +159,7 @@ namespace MultidimensionMod.Common.Globals.Items
             }
             if (item.type == ItemID.Daybloom)
             {
-                TooltipLine line = new(Mod, "Locked", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.DaybloomTip"))
+                TooltipLine line = new(Mod, "DaybloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.DaybloomTip"))
                 {
                     OverrideColor = Color.White
                 };
@@ -158,7 +167,7 @@ namespace MultidimensionMod.Common.Globals.Items
             }
             if (item.type == ItemID.Moonglow)
             {
-                TooltipLine line = new(Mod, "Locked", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.MoonglowTip"))
+                TooltipLine line = new(Mod, "MoonglowTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.MoonglowTip"))
                 {
                     OverrideColor = Color.White
                 };
@@ -166,7 +175,7 @@ namespace MultidimensionMod.Common.Globals.Items
             }
             if (item.type == ItemID.Shiverthorn)
             {
-                TooltipLine line = new(Mod, "Locked", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.ShiverthornTip"))
+                TooltipLine line = new(Mod, "ShiverthornTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.ShiverthornTip"))
                 {
                     OverrideColor = Color.White
                 };
@@ -174,7 +183,7 @@ namespace MultidimensionMod.Common.Globals.Items
             }
             if (item.type == ItemID.Waterleaf)
             {
-                TooltipLine line = new(Mod, "Locked", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.WaterleafTip"))
+                TooltipLine line = new(Mod, "WaterleafTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.WaterleafTip"))
                 {
                     OverrideColor = Color.White
                 };

@@ -25,7 +25,7 @@ namespace MultidimensionMod.NPCs.Bosses.Grips
             NPC.aiStyle = -1;
 			NPC.knockBackResist = 0f;
             NPC.value = Item.sellPrice(0, 1, 50, 0);
-            NPC.npcSlots = 1f;
+            NPC.npcSlots = 10f;
             NPC.boss = true;
             NPC.lavaImmune = true;
             NPC.noGravity = true;

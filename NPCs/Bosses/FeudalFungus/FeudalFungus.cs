@@ -140,7 +140,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             NPC.aiStyle = -1;
             NPC.width = 74;
             NPC.height = 150;
-            NPC.npcSlots = 1f;
+            NPC.npcSlots = 10f;
             NPC.boss = true;
             NPC.lavaImmune = true;
             NPC.noGravity = true;
