@@ -4228,6 +4228,36 @@ Mods: {
 				// DisplayName: Music Box (Fungal Prayers)
 				// Tooltip: ""
 			}
+
+			AwakenedRock: {
+				// DisplayName: Awakened Rock
+				// Tooltip: ""
+			}
+
+			GildedTilesItem: {
+				// DisplayName: Gilded Tiles Item
+				// Tooltip: ""
+			}
+
+			PagodaBrick: {
+				// DisplayName: Pagoda Brick
+				// Tooltip: ""
+			}
+
+			PagodaColumn: {
+				// DisplayName: Pagoda Column
+				// Tooltip: ""
+			}
+
+			PagodaFloor: {
+				// DisplayName: Pagoda Floor
+				// Tooltip: ""
+			}
+
+			AbyssGrassSeeds: {
+				// DisplayName: Abyss Grass Seeds
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {

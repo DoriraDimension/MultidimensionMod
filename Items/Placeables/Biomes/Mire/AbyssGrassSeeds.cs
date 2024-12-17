@@ -1,22 +1,22 @@
-using MultidimensionMod.Tiles.Biomes.Mire;
+﻿using MultidimensionMod.Tiles.Biomes.Mire;
 using Terraria.ModLoader;
 using Terraria;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 using MultidimensionMod.Tiles.Biomes.Inferno;
+using System;
 
 
 namespace MultidimensionMod.Items.Placeables.Biomes.Mire
 {
-    public class MireSeeds : ModItem
-	{
-		public override void SetStaticDefaults()
+    public class AbyssGrassSeeds : ModItem
+    {
+        public override void SetStaticDefaults()
         {
             //DisplayName.SetDefault("Dank Seeds");
             //Tooltip.SetDefault("Plants Mire grass");
             ItemID.Sets.DisableAutomaticPlaceableDrop[Type] = true;
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
-            ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<AbyssGrassSeeds>();
         }
 
         public override void SetDefaults()
@@ -31,8 +31,8 @@ namespace MultidimensionMod.Items.Placeables.Biomes.Mire
             Item.useTime = 10;
             Item.autoReuse = true;
             Item.useTurn = true;
-            Item.createTile = ModContent.TileType<MireGrass>();
-            Item.consumable = true;		
+            Item.createTile = ModContent.TileType<AbyssGrass>();
+            Item.consumable = true;
         }
 
         public override bool CanUseItem(Player p)

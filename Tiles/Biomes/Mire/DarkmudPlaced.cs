@@ -33,10 +33,5 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             DustType = ModContent.DustType<Dusts.AbyssiumDust>();
             AddMapEntry(new Color(102, 101, 120));
         }
-
-        public override bool CanExplode(int i, int j)
-        {
-            return false;
-        }
     }
 }
