@@ -32,11 +32,18 @@ namespace MultidimensionMod.Projectiles.Melee.Flails
             Projectile.timeLeft = 360;
         }
 
+        public bool drowning = false;
+
         public override void AI()
         {
+            if (Projectile.wet)
+                drowning = true;
             Projectile.rotation += (float)0.2 * Projectile.direction;
-            int dusto = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Torch, Projectile.velocity.X * 0.30f, Projectile.velocity.Y * 0.30f, 68, default(Color), 1f);
-            Main.dust[dusto].noGravity = true;
+            if (!drowning)
+            {
+                int dusto = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Torch, Projectile.velocity.X * 0.30f, Projectile.velocity.Y * 0.30f, 68, default(Color), 1f);
+                Main.dust[dusto].noGravity = true;
+            }
             if (Projectile.velocity.X > 0)
             {
                 Projectile.direction = 1;
@@ -54,14 +61,19 @@ namespace MultidimensionMod.Projectiles.Melee.Flails
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            target.AddBuff(BuffID.OnFire, 180);
+            if (drowning)
+                target.AddBuff(BuffID.OnFire, 180);
         }
 
         public override void OnKill(int timeLeft)
         {
-            SoundEngine.PlaySound(SoundID.NPCDeath14, Projectile.position);
-            if (Main.myPlayer == Projectile.owner)
-                Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<PyrosphereExplosion>(), Projectile.damage, Projectile.knockBack, Main.myPlayer);
+            if (drowning)
+                SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
+            else
+                SoundEngine.PlaySound(SoundID.NPCDeath14, Projectile.position);
+            if (!drowning)
+                if (Main.myPlayer == Projectile.owner)
+                    Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<PyrosphereExplosion>(), Projectile.damage, Projectile.knockBack, Main.myPlayer);
         }
 
         public override bool PreDraw(ref Color lightColor)
@@ -73,14 +85,19 @@ namespace MultidimensionMod.Projectiles.Melee.Flails
             {
                 Vector2 drawPos = Projectile.oldPos[k] - Main.screenPosition + drawOrigin + new Vector2(0f, Projectile.gfxOffY);
                 Color color = Color.White * ((float)(Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
-                Main.spriteBatch.Draw(projectileTexture, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale - k / (float)Projectile.oldPos.Length / 3, spriteEffects, 0f);
+                if (!drowning)
+                    Main.spriteBatch.Draw(projectileTexture, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale - k / (float)Projectile.oldPos.Length / 3, spriteEffects, 0f);
             }
 
             Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+            Texture2D textureOff = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Melee/Flails/PyrosphereBallExtinguished").Value;
             Vector2 drawOrigine = new(texture.Width / 2, texture.Height / 2);
             var effects = Projectile.spriteDirection == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
 
-            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(Color.White), Projectile.rotation, drawOrigine, Projectile.scale, effects, 0);
+            if (drowning)
+                Main.EntitySpriteDraw(textureOff, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(lightColor), Projectile.rotation, drawOrigine, Projectile.scale, effects, 0);
+            else
+                Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(Color.White), Projectile.rotation, drawOrigine, Projectile.scale, effects, 0);
             return false;
         }
     }
