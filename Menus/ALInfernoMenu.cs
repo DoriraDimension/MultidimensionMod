@@ -29,7 +29,7 @@ namespace MultidimensionMod.Menus
         public override Asset<Texture2D> SunTexture => ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/NoTexture");
         public override Asset<Texture2D> MoonTexture => ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/NoTexture");
 
-        public override int Music => MusicLoader.GetMusicSlot(Mod, "Sounds/Music/DragonBurrow");
+        public override int Music => MusicLoader.GetMusicSlot(Mod, "Sounds/Music/ChaosMenu");
 
         public override ModSurfaceBackgroundStyle MenuBackgroundStyle => ModContent.GetInstance<NullBG>();
 

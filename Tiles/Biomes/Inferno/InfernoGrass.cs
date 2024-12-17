@@ -15,6 +15,8 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
             Main.tileBlendAll[Type] = true;
             TileID.Sets.NeedsGrassFraming[Type] = true;
             TileID.Sets.CanBeDugByShovel[Type] = true;
+            TileID.Sets.SpreadOverground[Type] = true;
+            TileID.Sets.SpreadUnderground[Type] = true;
             Main.tileMergeDirt[Type] = true;
             Main.tileBlockLight[Type] = true;
             TileID.Sets.Grass[Type] = true;
@@ -48,8 +50,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<HotshroomPlaced>(), Main.rand.Next(4), 0, -1, -1);
 
             }
-            if (Main.rand.NextBool(4))
-                WorldGen.SpreadGrass(i + Main.rand.Next(-1, 1), j + Main.rand.Next(-1, 1), TileID.Dirt, Type, false);
+            WorldGen.SpreadGrass(i + Main.rand.Next(-1, 1), j + Main.rand.Next(-1, 1), TileID.Dirt, Type, false);
         }
 
         public static bool PlaceObject(int x, int y, int type, bool mute = false, int style = 0, int random = -1, int direction = -1)
