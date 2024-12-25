@@ -1879,7 +1879,7 @@ Mods: {
 				Tooltip: Summons a bouncing ball of sand.
 				Lore:
 					'''
-					This tome was once used by the first desert sorcerers,
+					This old papyrus scroll was once used by the first desert sorcerers,
 					one of their first ever spells concepted.
 					They could not use desert mana to its fullest potential yet,
 					so they bent the sand itself.
@@ -4232,7 +4232,7 @@ Mods: {
 			AwakenedRock: {
 				DisplayName: Awakened Rock
 				Tooltip:
-				    '''
+					'''
 					This type of stone was created by a massive outburst of chaotic energy
 					It was changed similar to the rest of the environment, but to a much worse degree
 					You can hear eerie droning coming from the stone
@@ -4261,10 +4261,7 @@ Mods: {
 
 			AbyssGrassSeeds: {
 				DisplayName: Nightmare Grass Seeds
-				Tooltip:
-				    '''
-					Blood red grass that only grows on the island in the Shrouded Mire
-					'''
+				Tooltip: Blood red grass that only grows on the island in the Shrouded Mire
 			}
 		}
 
@@ -4522,6 +4519,7 @@ Mods: {
 			AncientSwordArtHeld.DisplayName: Ancient Sword Art Held
 			ArtSword.DisplayName: Art Sword
 			SlimeFart.DisplayName: Slime Fart
+			SandBallzHeld.DisplayName: Sand Ballz Held
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability

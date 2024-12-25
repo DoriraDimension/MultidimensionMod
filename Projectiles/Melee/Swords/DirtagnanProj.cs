@@ -7,7 +7,8 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 {
 	public class DirtagnanProj : ModProjectile
 	{
-		public const int FadeInDuration = 26;
+        public override string Texture => "MultidimensionMod/Items/Weapons/Melee/Swords/Dirtagnan";
+        public const int FadeInDuration = 26;
 		public const int FadeOutDuration = 4;
 
 		public const int TotalDuration = 37;
