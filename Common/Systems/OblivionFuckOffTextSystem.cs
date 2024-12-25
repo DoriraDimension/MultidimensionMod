@@ -38,7 +38,7 @@ namespace MultidimensionMod.Common.Systems
                     Main.menuMode = 10;
                     returnDelay++;
 
-                    if (returnDelay >= 180)
+                    if (returnDelay >= 600)
                     {
                         Main.menuMode = 0;
                         returnDelay = 0;

@@ -18,6 +18,7 @@ namespace MultidimensionMod.Items.Placeables.Biomes.Inferno
             Item.useTime = 10;
             Item.useStyle = 1;
             Item.consumable = true;
+            Item.rare = ItemRarityID.Lime;
             Item.createTile = ModContent.TileType<AwakenedRockPlaced>();
         }
     }

@@ -31,6 +31,7 @@ namespace MultidimensionMod.Items.Placeables.Biomes.Mire
             Item.useTime = 10;
             Item.autoReuse = true;
             Item.useTurn = true;
+            Item.rare = ItemRarityID.Purple;
             Item.createTile = ModContent.TileType<AbyssGrass>();
             Item.consumable = true;
         }

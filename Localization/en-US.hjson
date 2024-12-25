@@ -4231,7 +4231,12 @@ Mods: {
 
 			AwakenedRock: {
 				DisplayName: Awakened Rock
-				Tooltip: ""
+				Tooltip:
+				    '''
+					This type of stone was created by a massive outburst of chaotic energy
+					It was changed similar to the rest of the environment, but to a much worse degree
+					You can hear eerie droning coming from the stone
+					'''
 			}
 
 			GildedTilesItem: {
@@ -4256,7 +4261,10 @@ Mods: {
 
 			AbyssGrassSeeds: {
 				DisplayName: Nightmare Grass Seeds
-				Tooltip: ""
+				Tooltip:
+				    '''
+					Blood red grass that only grows on the island in the Shrouded Mire
+					'''
 			}
 		}
 
