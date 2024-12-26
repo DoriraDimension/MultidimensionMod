@@ -122,19 +122,46 @@ namespace MultidimensionMod.Common.Globals.Items
 
         public override bool PreDrawInInventory(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
-            //Based on Calamity Brimstone Locus code, credit goes to them
+            //Based on Calamity Brimstone Locus code and Mod of Redemption Treasure Bag drawcode, credit goes to them
             if (!item.AL().hasShimmerTransmutation) //For some reason this needs to be false, I'm stupid and may fix this later lol
             {
                 Texture2D itemTexture = TextureAssets.Item[item.type].Value;
-                Texture2D shimmerIcon = ModContent.Request<Texture2D>("MultidimensionMod/Items/ShimmerIcon").Value;
                 Rectangle itemFrame = (Main.itemAnimations[item.type] == null) ? itemTexture.Frame() : Main.itemAnimations[item.type].GetFrame(itemTexture);
 
                 if (!Main.LocalPlayer.HasInInventory(ModContent.ItemType<MirrorOfOrigin>())) //Don't run drawcode if player doesn't have the Mirror of Origin
                     return true;
-                spriteBatch.Draw(itemTexture, position, itemFrame, drawColor, 0f, origin, scale, SpriteEffects.None, 0f); //Draw original item texture
-                spriteBatch.Draw(shimmerIcon, position, itemFrame, drawColor, 0f, origin, scale, SpriteEffects.None, 0f); //Draws shimmer transmutation available icon
 
-                return false;
+                Vector2 frameOrigin = itemFrame.Size() / 2f;
+                Vector2 offset = new(item.width / 2 - frameOrigin.X, item.height - itemFrame.Height);
+                Vector2 drawPos = item.position - Main.screenPosition + frameOrigin + offset;
+
+                float time = Main.GlobalTimeWrappedHourly;
+
+                time %= 4f;
+                time /= 2f;
+
+                if (time >= 1f)
+                {
+                    time = 2f - time;
+                }
+
+                time = time * 0.5f + 0.5f;
+
+                for (float i = 0f; i < 1f; i += 0.25f)
+                {
+                    float radians = (i + time) * MathHelper.TwoPi;
+
+                    spriteBatch.Draw(itemTexture, drawPos + new Vector2(0f, 16f).RotatedBy(radians) * time, itemFrame, new Color(90, 70, 255, 50), 0f, origin, scale, SpriteEffects.None, 0);
+                }
+
+                for (float i = 0f; i < 1f; i += 0.34f)
+                {
+                    float radians = (i + time) * MathHelper.TwoPi;
+
+                    spriteBatch.Draw(itemTexture, position + new Vector2(0f, 8f).RotatedBy(radians) * time, itemFrame, new Color(140, 120, 255, 77), 0f, frameOrigin, scale, SpriteEffects.None, 0);
+                }
+
+                return true;
             }
             return true;
         }
