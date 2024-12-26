@@ -10,6 +10,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
+using static Terraria.Player;
 
 namespace MultidimensionMod.Utilities
 {
@@ -37,6 +38,11 @@ namespace MultidimensionMod.Utilities
             }
 
             return false;
+        }
+
+        public static bool HasInInventory(this Player player, params int[] items)
+        {
+            return player.inventory.Any(item => items.Contains(item.type));
         }
     }
 }

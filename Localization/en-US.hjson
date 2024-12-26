@@ -2287,7 +2287,11 @@ Mods: {
 
 			DesertEagle: {
 				DisplayName: Desert Eagle
-				Tooltip: The lamest joke all across the universe.
+				Tooltip:
+					'''
+					Shoots purely cosmetic feathers alongside the shot bullet
+					'The lamest joke all across the universe.'
+					'''
 			}
 
 			MetalWormGun: {
@@ -4262,6 +4266,18 @@ Mods: {
 			AbyssGrassSeeds: {
 				DisplayName: Nightmare Grass Seeds
 				Tooltip: Blood red grass that only grows on the island in the Shrouded Mire
+			}
+
+			MirrorOfOrigin: {
+				DisplayName: Mirror Of Origin
+				Tooltip: Reveals which items have a unique shimmer transmutation while in the inventory
+				Lore:
+				    '''
+					The mysterious shimmer possesses infinite capabilities, but seems to be oddly restricted at the same time.
+					A substance that can transform objects and lifeforms alike into something else,
+					reminiscent of a dna helix that defines what a being will be.
+					Maybe it is nature itself manifest, from concept to a present will.
+					'''
 			}
 		}
 

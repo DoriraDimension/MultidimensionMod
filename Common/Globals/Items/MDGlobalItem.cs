@@ -1,4 +1,4 @@
-﻿//using MultidimensionMod.Items.Quest;
+﻿using MultidimensionMod.Items;
 using MultidimensionMod.Items.Placeables.Banners;
 using MultidimensionMod.Items.Pets;
 using System.Collections.Generic;
@@ -7,30 +7,40 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.GameContent;
+using MultidimensionMod.Utilities;
+using MultidimensionMod.Base;
 
 namespace MultidimensionMod.Common.Globals.Items
 {
 	public class MDGlobalItem : GlobalItem
 	{
+        public override bool InstancePerEntity => true;
+        public bool hasShimmerTransmutation;
+
 		public override void SetStaticDefaults()
         {
+            //Makes these items shimmer into another item (They will no longer decraft if previously possible)
 			ItemID.Sets.ShimmerTransformToItem[ItemID.FallenStar] = ModContent.ItemType<Cassiopeia>();
             ItemID.Sets.ShimmerTransformToItem[ItemID.IceSlimeBanner] = ModContent.ItemType<FrostburnSlimeBanner>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.MagicMirror] = ModContent.ItemType<MirrorOfOrigin>();
         }
 		public override void SetDefaults(Item item)
 		{
 			Player player = Main.LocalPlayer;
-			if (item.type == ItemID.SpiritFlame)
+			if (item.type == ItemID.SpiritFlame) //Changes the sound when using the Spirit Flame because I don't like the original sound :HoldingBackTearsWhileEatingOreos:
 			{
 				item.UseSound = SoundID.Item103;
 			}
-			if (item.type == ItemID.Handgun)
+			if (item.type == ItemID.Handgun) //Nerfs Handgun as it was re-tiered
 			{
 				item.damage = 19;
 				item.useTime = 20;
 				item.useAnimation = 20;
 			}
 			#region Edible Herbs
+            //Give every vanilla herb a unique effect for the funsies
 			if (item.type == ItemID.Blinkroot)
             {
 				item.useStyle = ItemUseStyleID.EatFood;
@@ -103,11 +113,35 @@ namespace MultidimensionMod.Common.Globals.Items
 				item.buffTime = 600;
 			}
 			#endregion
-		}
+            if (ALLists.TransmutableItems.TrueForAll(x => item.type != x))
+            {
+                item.AL().hasShimmerTransmutation = true; //Marks all items in the above list as having a shimmer transmutation
+            }
 
-		public override bool CanUseItem(Item item, Player player)
+        }
+
+        public override bool PreDrawInInventory(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
-			if (item.type == ItemID.Waterleaf)
+            //Based on Calamity Brimstone Locus code, credit goes to them
+            if (!item.AL().hasShimmerTransmutation) //For some reason this needs to be false, I'm stupid and may fix this later lol
+            {
+                Texture2D itemTexture = TextureAssets.Item[item.type].Value;
+                Texture2D shimmerIcon = ModContent.Request<Texture2D>("MultidimensionMod/Items/ShimmerIcon").Value;
+                Rectangle itemFrame = (Main.itemAnimations[item.type] == null) ? itemTexture.Frame() : Main.itemAnimations[item.type].GetFrame(itemTexture);
+
+                if (!Main.LocalPlayer.HasInInventory(ModContent.ItemType<MirrorOfOrigin>())) //Don't run drawcode if player doesn't have the Mirror of Origin
+                    return true;
+                spriteBatch.Draw(itemTexture, position, itemFrame, drawColor, 0f, origin, scale, SpriteEffects.None, 0f); //Draw original item texture
+                spriteBatch.Draw(shimmerIcon, position, itemFrame, drawColor, 0f, origin, scale, SpriteEffects.None, 0f); //Draws shimmer transmutation available icon
+
+                return false;
+            }
+            return true;
+        }
+
+        public override bool CanUseItem(Item item, Player player)
+        {
+			if (item.type == ItemID.Waterleaf) //Waterleaf needs some Potion Sickness, since it heals now
             {
 				return !player.HasBuff(BuffID.PotionSickness);
             }
@@ -116,7 +150,7 @@ namespace MultidimensionMod.Common.Globals.Items
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            if (item.type == ItemID.PickaxeAxe || item.type == ItemID.Drax)
+            if (item.type == ItemID.PickaxeAxe || item.type == ItemID.Drax) //Add tooltip that mentions dense chaos biome blocks being minable with this
             {
                 TooltipLine line = new(Mod, "DraxTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.DraxDenseBlockTip"))
                 {
@@ -124,7 +158,7 @@ namespace MultidimensionMod.Common.Globals.Items
                 };
                 tooltips.Add(line);
             }
-            if (item.type == ItemID.Picksaw)
+            if (item.type == ItemID.Picksaw) //Add tooltip that mentions Dank Depthstone and Volcanic Rock being minable with this
             {
                 tooltips.RemoveAll(TooltipLine => TooltipLine.Name.Equals("Tooltip0"));
                 TooltipLine line = new(Mod, "PicksawTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.PicksawChaosCaveTip"))
@@ -133,6 +167,7 @@ namespace MultidimensionMod.Common.Globals.Items
                 };
                 tooltips.Add(line);
             }
+            //Gives every herb a tooltip that describes what they do more or less vaguely
             if (item.type == ItemID.Blinkroot)
             {
                 TooltipLine line = new(Mod, "BlinkrootTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.BlinkrootTip"))
