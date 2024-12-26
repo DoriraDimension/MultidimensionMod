@@ -3,39 +3,29 @@
   "WorkspaceRootPath": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\mirroroforigin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\mirroroforigin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\tiles\\biomes\\shroomforest\\aridmushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:tiles\\biomes\\shroomforest\\aridmushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\shadeeye.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\shadeeye.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\tiles\\biomes\\shroomforest\\mushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:tiles\\biomes\\shroomforest\\mushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\DraedonStructures\\DraedonLabTurret.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Astral\\AstralShortPlants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Abyss\\AbyssalPots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:localization\\en-us.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\globals\\items\\mdglobalitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\globals\\items\\mdglobalitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\CalamityGlobalItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\materials\\mirepod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\materials\\mirepod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\players\\mdplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\players\\mdplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\allists.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:allists.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\utilities\\mdhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:utilities\\mdhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,97 +35,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ShadeEye.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\ShadeEye.cs",
-              "RelativeDocumentMoniker": "Items\\ShadeEye.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\ShadeEye.cs",
-              "RelativeToolTip": "Items\\ShadeEye.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowBgAAAAIAAAA",
+              "DocumentIndex": 2,
+              "Title": "DraedonLabTurret.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\DraedonStructures\\DraedonLabTurret.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\DraedonStructures\\DraedonLabTurret.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\DraedonStructures\\DraedonLabTurret.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\DraedonStructures\\DraedonLabTurret.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAD4v2UAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T01:28:53.685Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MirePod.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Materials\\MirePod.cs",
-              "RelativeDocumentMoniker": "Items\\Materials\\MirePod.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Materials\\MirePod.cs",
-              "RelativeToolTip": "Items\\Materials\\MirePod.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAA1wAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T00:43:58.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ALLists.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\ALLists.cs",
-              "RelativeDocumentMoniker": "ALLists.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\ALLists.cs",
-              "RelativeToolTip": "ALLists.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAIwH8AAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T21:29:16.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MDHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Utilities\\MDHelper.cs",
-              "RelativeDocumentMoniker": "Utilities\\MDHelper.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Utilities\\MDHelper.cs",
-              "RelativeToolTip": "Utilities\\MDHelper.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAgwCoAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T21:07:14.597Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CalamityGlobalItem.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\CalamityGlobalItem.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\CalamityGlobalItem.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\CalamityGlobalItem.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\CalamityGlobalItem.cs",
-              "ViewState": "AQIAAJkGAAAAAAAAAAD4v6wGAABMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T20:43:14.154Z",
+              "WhenOpened": "2024-12-26T16:49:07.998Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MDGlobalItem.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\Items\\MDGlobalItem.cs",
-              "RelativeDocumentMoniker": "Common\\Globals\\Items\\MDGlobalItem.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\Items\\MDGlobalItem.cs",
-              "RelativeToolTip": "Common\\Globals\\Items\\MDGlobalItem.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAwwIYAAACmAAAA",
+              "Title": "AstralShortPlants.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Astral\\AstralShortPlants.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Astral\\AstralShortPlants.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Astral\\AstralShortPlants.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Astral\\AstralShortPlants.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T20:37:59.67Z",
+              "WhenOpened": "2024-12-26T16:47:07.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AbyssalPots.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Abyss\\AbyssalPots.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Abyss\\AbyssalPots.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Abyss\\AbyssalPots.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Abyss\\AbyssalPots.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAD4vzgAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T16:46:06.55Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MirrorOfOrigin.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\MirrorOfOrigin.cs",
-              "RelativeDocumentMoniker": "Items\\MirrorOfOrigin.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\MirrorOfOrigin.cs",
-              "RelativeToolTip": "Items\\MirrorOfOrigin.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAowBoAAAAnAAAA",
+              "Title": "AridMushroom.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\ShroomForest\\AridMushroom.cs",
+              "RelativeDocumentMoniker": "Tiles\\Biomes\\ShroomForest\\AridMushroom.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\ShroomForest\\AridMushroom.cs",
+              "RelativeToolTip": "Tiles\\Biomes\\ShroomForest\\AridMushroom.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAgwCgAAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T20:41:44.814Z",
+              "WhenOpened": "2024-12-26T16:20:39.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Mushroom.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\ShroomForest\\Mushroom.cs",
+              "RelativeDocumentMoniker": "Tiles\\Biomes\\ShroomForest\\Mushroom.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\ShroomForest\\Mushroom.cs",
+              "RelativeToolTip": "Tiles\\Biomes\\ShroomForest\\Mushroom.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAgwCQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T16:15:27.319Z",
               "EditorCaption": ""
             },
             {
@@ -146,20 +110,20 @@
               "RelativeDocumentMoniker": "Common\\Players\\MDPlayer.cs",
               "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Players\\MDPlayer.cs",
               "RelativeToolTip": "Common\\Players\\MDPlayer.cs",
-              "ViewState": "AQIAAB4CAAAAAAAAAAAtwDACAAAVAAAA",
+              "ViewState": "AQIAAMUBAAAAAAAAAAAIwNgBAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-30T21:48:15.688Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "en-US.hjson",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US.hjson",
               "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US.hjson",
               "RelativeToolTip": "Localization\\en-US.hjson",
-              "ViewState": "AQIAAJ4QAAAAAAAAAAAewLYQAABIAAAA",
+              "ViewState": "AQIAALMQAAAAAAAAAAAewMgQAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-05-16T15:47:55.951Z",
               "EditorCaption": ""

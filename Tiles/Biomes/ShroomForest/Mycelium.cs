@@ -27,18 +27,23 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
 
         public override void RandomUpdate(int i, int j)
         {
+            Tile tile = Main.tile[i, j];
+            Tile up = Main.tile[i, j - 1];
+            Tile up2 = Main.tile[i, j - 2];
+            Tile upRight = Main.tile[i + 1, j - 1];
+            Tile upRight2 = Main.tile[i + 1, j - 2];
             WorldGen.SpreadGrass(i + Main.rand.Next(-1, 1), j + Main.rand.Next(-1, 1), TileID.Dirt, Type, false);
-            if (Main.rand.NextBool(60))
+            if (Main.rand.NextBool(60) && !up.HasTile && !tile.LeftSlope && !tile.RightSlope && !tile.IsHalfBlock)
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<Mushroom>(), mute: true, style: Main.rand.Next(5));
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<Mushroom>(), Main.rand.Next(5), 0, -1, -1);
             }
-            if (Main.rand.NextBool(5000))
+            if (Main.rand.NextBool(5000) && !up.HasTile && !up2.HasTile && !tile.LeftSlope && !tile.RightSlope && !tile.IsHalfBlock)
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<YoungMushroom>(), mute: true, style: Main.rand.Next(3));
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<YoungMushroom>(), Main.rand.Next(5), 0, -1, -1);
             }
-            if (Main.rand.NextBool(2500))
+            if (Main.rand.NextBool(2500) && !up.HasTile && !up2.HasTile && !upRight.HasTile && !upRight2.HasTile && !tile.LeftSlope && !tile.RightSlope && !tile.IsHalfBlock)
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<KingsCapPlaced>(), mute: true);
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<KingsCapPlaced>(), Main.rand.Next(5), 0, -1, -1);

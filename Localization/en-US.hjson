@@ -4272,12 +4272,29 @@ Mods: {
 				DisplayName: Mirror Of Origin
 				Tooltip: Reveals which items have a unique shimmer transmutation while in the inventory
 				Lore:
-				    '''
+					'''
 					The mysterious shimmer possesses infinite capabilities, but seems to be oddly restricted at the same time.
 					A substance that can transform objects and lifeforms alike into something else,
 					reminiscent of a dna helix that defines what a being will be.
 					Maybe it is nature itself manifest, from concept to a present will.
 					'''
+			}
+
+			ImpactTreads: {
+				DisplayName: Impact Treads
+				Tooltip:
+					'''
+					Allows flight
+					Negates fall damage
+					Increases fall speed by 15% and maximum fall speed by 30%
+					Increases defense by 6 while falling fast
+					Falling fast enough and hitting the ground will create a short lived shockwave
+					'''
+			}
+
+			InvigoratingMushroom: {
+				DisplayName: Invigorating Mushroom
+				Tooltip: Increases max life by 20
 			}
 		}
 
@@ -4536,6 +4553,7 @@ Mods: {
 			ArtSword.DisplayName: Art Sword
 			SlimeFart.DisplayName: Slime Fart
 			SandBallzHeld.DisplayName: Sand Ballz Held
+			ImpactTreadsImpact.DisplayName: Impact Treads Impact
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability

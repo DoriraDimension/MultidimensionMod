@@ -5,6 +5,8 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.ID;
 using Terraria.DataStructures;
+using MultidimensionMod.Items.Accessories;
+using System.Collections.Generic;
 
 namespace MultidimensionMod.Tiles.Biomes.ShroomForest
 {
@@ -21,7 +23,6 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.addTile(Type);
             TileID.Sets.SwaysInWindBasic[Type] = true;
-            RegisterItemDrop(ItemID.Mushroom);
             DustType = ModContent.DustType<MushroomDust>();
             HitSound = SoundID.Grass;
         }
@@ -29,6 +30,14 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
         public override void NumDust(int i, int j, bool fail, ref int num)
         {
             num = 10;
+        }
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            if (Main.rand.NextBool(4))
+                yield return new Item(ItemID.Mushroom);
+            else if (Main.rand.NextBool(35))
+                yield return new Item(ModContent.ItemType<InvigoratingMushroom>());
         }
 
         public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)

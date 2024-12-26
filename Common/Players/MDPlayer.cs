@@ -76,6 +76,8 @@ namespace MultidimensionMod.Common.Players
         public bool chaosClaw = false;
         public bool GripMinion = false;
         public bool SkulkerShell = false;
+        public bool impactTreads = false;
+        public bool impactSpeedReached = false;
 
         public override void ResetEffects()
         {
@@ -107,6 +109,7 @@ namespace MultidimensionMod.Common.Players
             chaosClaw = false;
             GripMinion = false;
             SkulkerShell = false;
+            impactTreads = false;
         }
 
         public override void UpdateDead()
@@ -452,6 +455,53 @@ namespace MultidimensionMod.Common.Players
                     GiveBirth = 0;
                 }
             }
+            if (impactTreads)
+            {
+                int fallTimer = 0;
+                if (Player.pulley || Player.mount.Active || Player.grappling[0] != -1 || Player.tongued)
+                {
+                    impactSpeedReached = false;
+                }
+                if (Player.velocity.Y > 0)
+                {
+                    fallTimer++;
+                }
+                if (Player.velocity.Y >= 5f)
+                {
+                    Player.gravity *= 1.15f;
+                }
+                if (Player.velocity.Y >= 13f)
+                {
+                    Player.statDefense += 6;
+                }
+                if (Player.velocity.Y >= 13f)
+                {
+                    impactSpeedReached = true;
+                }
+                if (impactSpeedReached)
+                {
+                    if (Main.rand.Next(4) < 3)
+                    {
+                        int dust = Dust.NewDust(Player.position - new Vector2(2f, 2f), Player.width + 4, Player.height + 4, DustID.Torch, Player.velocity.X * 0.4f, Player.velocity.Y * 0.4f, 100, default(Color), 3.5f);
+                        Main.dust[dust].noGravity = true;
+                        Main.dust[dust].velocity *= 1.8f;
+                        Main.dust[dust].velocity.Y -= 0.5f;
+                        if (Main.rand.NextBool(4))
+                        {
+                            Main.dust[dust].noGravity = false;
+                            Main.dust[dust].scale *= 0.5f;
+                        }
+                    }
+                    Lighting.AddLight(Player.position, 0.3f, 0.2f, 0.2f);
+                    if (Player.oldVelocity.Y == Player.velocity.Y)
+                    {
+                        int damage = 50;
+                        SoundEngine.PlaySound(SoundID.NPCDeath14, Player.position);
+                        Projectile.NewProjectile(Player.GetSource_Accessory(new Item(ModContent.ItemType<ImpactTreads>())), Player.Center.X, Player.Center.Y + 10, 0, 0, ModContent.ProjectileType<ImpactTreadsImpact>(), damage, 0f, Player.whoAmI);
+                        impactSpeedReached = false;
+                    }
+                }
+            }
         }
 
         public override void UpdateBadLifeRegen()
@@ -524,12 +574,27 @@ namespace MultidimensionMod.Common.Players
 
         public override void DrawEffects(PlayerDrawSet drawInfo, ref float r, ref float g, ref float b, ref float a, ref bool fullBright)
         {
+            if (Blaze)
+            {
+                if (Main.rand.Next(4) < 3)
+                {
+                    int dust = Dust.NewDust(Player.position - new Vector2(2f, 2f), Player.width + 4, Player.height + 4, DustID.CrimsonTorch, Player.velocity.X * 0.4f, Player.velocity.Y * 0.4f, 100, default(Color), 3.5f);
+                    Main.dust[dust].noGravity = true;
+                    Main.dust[dust].velocity *= 1.8f;
+                    Main.dust[dust].velocity.Y -= 0.5f;
+                    if (Main.rand.NextBool(4))
+                    {
+                        Main.dust[dust].noGravity = false;
+                        Main.dust[dust].scale *= 0.5f;
+                    }
+                }
+                Lighting.AddLight(Player.position, 0.1f, 0.2f, 0.7f);
+            }
         }
 
         public override void OnHitNPCWithItem(Item item, NPC target, NPC.HitInfo hit, int damageDone)
         {
             Player player = Main.LocalPlayer;
-            int useTimeSub = item.useTime / 2; //Gets the usetime of the held weapon
             if (StarvingLarva)
             {
                 if (target.life > 0)
