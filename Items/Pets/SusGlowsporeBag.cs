@@ -19,9 +19,7 @@ namespace MultidimensionMod.Items.Pets
 
         public override void SetDefaults()
         {
-            Item.CloneDefaults(ItemID.ZephyrFish);
-            Item.shoot = ModContent.ProjectileType<FeudalBab>();
-            Item.buffType = ModContent.BuffType<FeudalBabBuff>();
+            Item.DefaultToVanitypet(ModContent.ProjectileType<FeudalBab>(), ModContent.BuffType<FeudalBabBuff>());
             Item.width = 26;
             Item.height = 26;
             Item.value = Item.sellPrice(silver: 50);

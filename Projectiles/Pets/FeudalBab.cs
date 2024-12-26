@@ -16,6 +16,7 @@ namespace MultidimensionMod.Projectiles.Pets
         {
             Main.projFrames[Projectile.type] = 8;
             Main.projPet[Projectile.type] = true;
+            ProjectileID.Sets.LightPet[Projectile.type] = true;
         }
 
         public override void SetDefaults()
@@ -78,6 +79,7 @@ namespace MultidimensionMod.Projectiles.Pets
                 vectorToIdlePosition *= speed;
                 Projectile.velocity = (Projectile.velocity * (inertia - 1) + vectorToIdlePosition) / inertia;
             }
+            Lighting.AddLight(Projectile.Center, (255 - Projectile.alpha) * 0.4f / 255f, (255 - Projectile.alpha) * 0.3f / 255f, (255 - Projectile.alpha) * 1.0f / 255f);
         }
 
         public override bool PreDraw(ref Color lightColor)

@@ -3,21 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\tiles\\biomes\\shroomforest\\aridmushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:tiles\\biomes\\shroomforest\\aridmushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\pets\\susglowsporebag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\pets\\susglowsporebag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\tiles\\biomes\\shroomforest\\mushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:tiles\\biomes\\shroomforest\\mushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\AAMod\\Content\\Items\\Accessories\\Pets\\Toadstool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\DraedonStructures\\DraedonLabTurret.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\AAMod\\Content\\Projectiles\\Pets\\FungalFroglet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Astral\\AstralShortPlants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\pets\\feudalbab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\pets\\feudalbab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Abyss\\AbyssalPots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Pets\\StrangeOrb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Pets\\LittleLight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Pets\\RadiatingCrystal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -35,76 +41,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DraedonLabTurret.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\DraedonStructures\\DraedonLabTurret.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\DraedonStructures\\DraedonLabTurret.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\DraedonStructures\\DraedonLabTurret.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\DraedonStructures\\DraedonLabTurret.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAD4v2UAAAAQAAAA",
+              "Title": "FungalFroglet.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\AAMod\\Content\\Projectiles\\Pets\\FungalFroglet.cs",
+              "RelativeDocumentMoniker": "..\\AAMod\\Content\\Projectiles\\Pets\\FungalFroglet.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\AAMod\\Content\\Projectiles\\Pets\\FungalFroglet.cs",
+              "RelativeToolTip": "..\\AAMod\\Content\\Projectiles\\Pets\\FungalFroglet.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAFIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T16:49:07.998Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AstralShortPlants.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Astral\\AstralShortPlants.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Astral\\AstralShortPlants.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Astral\\AstralShortPlants.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Astral\\AstralShortPlants.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T16:47:07.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AbyssalPots.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Abyss\\AbyssalPots.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Abyss\\AbyssalPots.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Abyss\\AbyssalPots.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Tiles\\Abyss\\AbyssalPots.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAD4vzgAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T16:46:06.55Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AridMushroom.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\ShroomForest\\AridMushroom.cs",
-              "RelativeDocumentMoniker": "Tiles\\Biomes\\ShroomForest\\AridMushroom.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\ShroomForest\\AridMushroom.cs",
-              "RelativeToolTip": "Tiles\\Biomes\\ShroomForest\\AridMushroom.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAgwCgAAABTAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T16:20:39.389Z",
+              "WhenOpened": "2024-12-26T17:17:32.261Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Mushroom.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\ShroomForest\\Mushroom.cs",
-              "RelativeDocumentMoniker": "Tiles\\Biomes\\ShroomForest\\Mushroom.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Tiles\\Biomes\\ShroomForest\\Mushroom.cs",
-              "RelativeToolTip": "Tiles\\Biomes\\ShroomForest\\Mushroom.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAgwCQAAAAMAAAA",
+              "Title": "Toadstool.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\AAMod\\Content\\Items\\Accessories\\Pets\\Toadstool.cs",
+              "RelativeDocumentMoniker": "..\\AAMod\\Content\\Items\\Accessories\\Pets\\Toadstool.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\AAMod\\Content\\Items\\Accessories\\Pets\\Toadstool.cs",
+              "RelativeToolTip": "..\\AAMod\\Content\\Items\\Accessories\\Pets\\Toadstool.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T16:15:27.319Z",
+              "WhenOpened": "2024-12-26T17:14:18.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LittleLight.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Pets\\LittleLight.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Pets\\LittleLight.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Pets\\LittleLight.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Pets\\LittleLight.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T17:09:12.696Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "RadiatingCrystal.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Pets\\RadiatingCrystal.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Pets\\RadiatingCrystal.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Pets\\RadiatingCrystal.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Pets\\RadiatingCrystal.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T17:09:07.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StrangeOrb.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Pets\\StrangeOrb.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Pets\\StrangeOrb.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Pets\\StrangeOrb.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\CalamityModPublic-1.4.4\\Items\\Pets\\StrangeOrb.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T17:09:00.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FeudalBab.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Pets\\FeudalBab.cs",
+              "RelativeDocumentMoniker": "Projectiles\\Pets\\FeudalBab.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Pets\\FeudalBab.cs",
+              "RelativeToolTip": "Projectiles\\Pets\\FeudalBab.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAwwFEAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T17:16:03.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SusGlowsporeBag.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Pets\\SusGlowsporeBag.cs",
+              "RelativeDocumentMoniker": "Items\\Pets\\SusGlowsporeBag.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Pets\\SusGlowsporeBag.cs",
+              "RelativeToolTip": "Items\\Pets\\SusGlowsporeBag.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowBUAAAByAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T17:07:59.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "MDPlayer.cs",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Players\\MDPlayer.cs",
               "RelativeDocumentMoniker": "Common\\Players\\MDPlayer.cs",
@@ -117,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "en-US.hjson",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US.hjson",
