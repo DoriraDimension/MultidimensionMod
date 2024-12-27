@@ -2,6 +2,8 @@ using MultidimensionMod.Tiles.MusicBoxes;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
+using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Items.Placeables.Biomes.Inferno;
 
 namespace MultidimensionMod.Items.Placeables.MusicBoxes
 {
@@ -34,8 +36,8 @@ namespace MultidimensionMod.Items.Placeables.MusicBoxes
         {
             CreateRecipe()
             .AddIngredient(ItemID.MusicBox)
-            .AddIngredient(ModContent.ItemType<Placeables.Biomes.Inferno.Razewood>(), 40)
-            //.AddIngredient(ModContent.ItemType<DragonScale>(), 10)
+            .AddIngredient(ModContent.ItemType<Razewood>(), 40)
+            .AddIngredient(ModContent.ItemType<DragonScale>(), 10)
             .AddTile(TileID.Sawmill)
             .Register();
         }

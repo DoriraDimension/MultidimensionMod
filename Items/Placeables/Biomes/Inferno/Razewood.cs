@@ -20,9 +20,7 @@ namespace MultidimensionMod.Items.Placeables.Biomes.Inferno
             Item.useTime = 10;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
-            Item.createTile = ModContent.TileType<RazewoodPlaced>(); //put your CustomBlock Tile name
-            Item.ammo = Item.type;
-            Item.notAmmo = true;
+            Item.createTile = ModContent.TileType<RazewoodPlaced>();
         }
 
         public override void SetStaticDefaults()

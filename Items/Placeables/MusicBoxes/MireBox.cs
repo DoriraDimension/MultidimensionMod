@@ -3,6 +3,7 @@ using Terraria.ID;
 using MultidimensionMod.Tiles.MusicBoxes;
 using Terraria.GameContent.Creative;
 using MultidimensionMod.Items.Placeables.Biomes.Mire;
+using MultidimensionMod.Items.Materials;
 
 namespace MultidimensionMod.Items.Placeables.MusicBoxes
 {
@@ -36,6 +37,7 @@ namespace MultidimensionMod.Items.Placeables.MusicBoxes
             CreateRecipe()
                .AddIngredient(ItemID.MusicBox)
                .AddIngredient(ModContent.ItemType<Bogwood>(), 40)
+			   .AddIngredient(ModContent.ItemType<MirePod>(), 10)
                .AddTile(TileID.Sawmill)
                .Register();
         }

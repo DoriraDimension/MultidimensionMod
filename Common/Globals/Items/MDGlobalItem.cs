@@ -151,14 +151,14 @@ namespace MultidimensionMod.Common.Globals.Items
                 {
                     float radians = (i + time) * MathHelper.TwoPi;
 
-                    spriteBatch.Draw(itemTexture, drawPos + new Vector2(0f, 16f).RotatedBy(radians) * time, itemFrame, new Color(90, 70, 255, 50), 0f, origin, scale, SpriteEffects.None, 0);
+                    spriteBatch.Draw(itemTexture, drawPos + new Vector2(0f, 16f).RotatedBy(radians) * time, itemFrame, new Color(223, 98, 223, 50), 0f, origin, scale, SpriteEffects.None, 0);
                 }
 
                 for (float i = 0f; i < 1f; i += 0.34f)
                 {
                     float radians = (i + time) * MathHelper.TwoPi;
 
-                    spriteBatch.Draw(itemTexture, position + new Vector2(0f, 8f).RotatedBy(radians) * time, itemFrame, new Color(140, 120, 255, 77), 0f, frameOrigin, scale, SpriteEffects.None, 0);
+                    spriteBatch.Draw(itemTexture, position + new Vector2(0f, 8f).RotatedBy(radians) * time, itemFrame, new Color(197, 121, 255, 77), 0f, frameOrigin, scale, SpriteEffects.None, 0);
                 }
 
                 return true;
