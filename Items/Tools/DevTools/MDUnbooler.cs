@@ -42,6 +42,8 @@ namespace MultidimensionMod.Items.Tools.DevTools
             DownedSystem.seenLake = false;
             MemorySystem.seenMemory = false;
             MemorySystem.summonedMoonSword = false;
+            DownedSystem.consumedTheFish = false;
+            DownedSystem.usedLicense = false;
 
             if (Main.netMode == NetmodeID.Server)
                 NetMessage.SendData(MessageID.WorldData);

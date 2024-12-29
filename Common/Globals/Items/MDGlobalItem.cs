@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria.GameContent;
 using MultidimensionMod.Utilities;
 using MultidimensionMod.Base;
+using MultidimensionMod.Items.Permabuffs;
 
 namespace MultidimensionMod.Common.Globals.Items
 {
@@ -21,10 +22,11 @@ namespace MultidimensionMod.Common.Globals.Items
 
 		public override void SetStaticDefaults()
         {
-            //Makes these items shimmer into another item (They will no longer decraft if previously possible)
+            //Makes these items shimmer into another item (They will no longer decraft if previously possible in vanilla)
 			ItemID.Sets.ShimmerTransformToItem[ItemID.FallenStar] = ModContent.ItemType<Cassiopeia>();
             ItemID.Sets.ShimmerTransformToItem[ItemID.IceSlimeBanner] = ModContent.ItemType<FrostburnSlimeBanner>();
             ItemID.Sets.ShimmerTransformToItem[ItemID.MagicMirror] = ModContent.ItemType<MirrorOfOrigin>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.GoldenCarp] = ModContent.ItemType<ShimmerCarp>();
         }
 		public override void SetDefaults(Item item)
 		{
@@ -146,13 +148,6 @@ namespace MultidimensionMod.Common.Globals.Items
                 }
 
                 time = time * 0.5f + 0.5f;
-
-                for (float i = 0f; i < 1f; i += 0.25f)
-                {
-                    float radians = (i + time) * MathHelper.TwoPi;
-
-                    spriteBatch.Draw(itemTexture, drawPos + new Vector2(0f, 16f).RotatedBy(radians) * time, itemFrame, new Color(223, 98, 223, 50), 0f, origin, scale, SpriteEffects.None, 0);
-                }
 
                 for (float i = 0f; i < 1f; i += 0.34f)
                 {

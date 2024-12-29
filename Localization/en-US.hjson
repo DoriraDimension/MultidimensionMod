@@ -4296,6 +4296,26 @@ Mods: {
 				DisplayName: Invigorating Mushroom
 				Tooltip: Increases max life by 20
 			}
+
+			AdvancedFishingLicense: {
+				DisplayName: Advanced Fishing License
+				Tooltip:
+				    '''
+					A license, showing proof of being one of greatest fishermen in the world
+					Increases the amount of Angler Quests per day by one
+					Only one may be used
+				    '''
+			}
+
+			ShimmerCarp: {
+				DisplayName: Shimmering Carp
+				Tooltip:
+				    '''
+					A beautiful iridescent carp
+					Increases the amount of Angler Quests per day by one
+					Only one may be used
+					'''
+			}
 		}
 
 		SetBonuses: {

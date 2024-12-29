@@ -20,6 +20,7 @@ using Terraria.ID;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader;
 using Terraria.GameContent;
+using MultidimensionMod.Items.Permabuffs;
 
 namespace MultidimensionMod.Common.Globals.NPCs
 {
@@ -404,6 +405,27 @@ namespace MultidimensionMod.Common.Globals.NPCs
             {
                 LeadingConditionRule leadingConditionRule = new LeadingConditionRule(new Conditions.IsHardmode());
                 leadingConditionRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<YtriumStaff>(), 20));
+                npcLoot.Add(leadingConditionRule);
+            }
+
+            if (NPC.type == NPCID.ZombieMerman || NPC.type == NPCID.EyeballFlyingFish)
+            {
+                LeadingConditionRule leadingConditionRule = new LeadingConditionRule(new Conditions.IsHardmode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<AdvancedFishingLicense>(), 20));
+                npcLoot.Add(leadingConditionRule);
+            }
+
+            if (NPC.type == NPCID.BloodEelHead || NPC.type == NPCID.GoblinShark)
+            {
+                LeadingConditionRule leadingConditionRule = new LeadingConditionRule(new Conditions.IsHardmode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<AdvancedFishingLicense>(), 5));
+                npcLoot.Add(leadingConditionRule);
+            }
+
+            if (NPC.type == NPCID.BloodNautilus)
+            {
+                LeadingConditionRule leadingConditionRule = new LeadingConditionRule(new Conditions.IsHardmode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<AdvancedFishingLicense>(), 1));
                 npcLoot.Add(leadingConditionRule);
             }
         }

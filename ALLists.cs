@@ -123,6 +123,7 @@ namespace MultidimensionMod
                 ItemID.IceSlimeBanner,
                 ItemID.FallenStar,
                 ItemID.MagicMirror,
+                ItemID.GoldenCarp,
 
                 ModContent.ItemType<FishCleaver>(),
                 ModContent.ItemType<OceanTrident>(),

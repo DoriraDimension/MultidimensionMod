@@ -205,11 +205,15 @@ namespace MultidimensionMod
 
         public override void OnChatButtonClicked(NPC npc, bool firstButton)
         {
-            int Amount = 1;
-            /*if (DownedSystem.ConsumedTheFish)
+            int Amount = 0;
+            if (DownedSystem.consumedTheFish || DownedSystem.usedLicense)
+            {
+                Amount = 1;
+            }
+            if (DownedSystem.consumedTheFish && DownedSystem.usedLicense)
             {
                 Amount = 2;
-            }*/
+            }
             if (Main.anglerQuestFinished && AngelerInt < Amount)
             {
                 AngelerInt += 1;

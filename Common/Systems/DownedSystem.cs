@@ -29,6 +29,8 @@ namespace MultidimensionMod.Common.Systems
         public static bool seenMire;
         public static bool seenLake;
         public static bool seenFeudalIntro;
+        public static bool consumedTheFish;
+        public static bool usedLicense;
 
         public override void OnWorldLoad()
         {
@@ -53,6 +55,8 @@ namespace MultidimensionMod.Common.Systems
             seenMire = false;
             seenLake = false;
             seenFeudalIntro = false;
+            consumedTheFish = false;
+            usedLicense = false;
         }
 
         public override void OnWorldUnload()
@@ -78,6 +82,8 @@ namespace MultidimensionMod.Common.Systems
             seenMire = false;
             seenLake = false;
             seenFeudalIntro = false;
+            consumedTheFish = false;
+            usedLicense = false;
         }
 
         public override void SaveWorldData(TagCompound tag)
@@ -126,6 +132,10 @@ namespace MultidimensionMod.Common.Systems
                 downed.Add("seenLake");
             if (seenFeudalIntro)
                 downed.Add("seenFeudalIntro");
+            if (consumedTheFish)
+                downed.Add("consumedTheFish");
+            if (usedLicense)
+                downed.Add("usedLicense");
 
             tag["downed"] = downed;
         }
@@ -155,6 +165,8 @@ namespace MultidimensionMod.Common.Systems
             seenMire = downed.Contains("seenMire");
             seenLake = downed.Contains("seenLake");
             seenFeudalIntro = downed.Contains("seenFeudalIntro");
+            consumedTheFish = downed.Contains("consumedTheFish");
+            usedLicense = downed.Contains("usedLicense");
         }
 
         public override void NetSend(BinaryWriter writer)
@@ -187,6 +199,8 @@ namespace MultidimensionMod.Common.Systems
             flags3[2] = seenMire;
             flags3[3] = seenLake;
             flags3[4] = seenFeudalIntro;
+            flags3[5] = consumedTheFish;
+            flags3[6] = usedLicense;
         }
 
         public override void NetReceive(BinaryReader reader)
@@ -217,6 +231,8 @@ namespace MultidimensionMod.Common.Systems
             seenMire = flags3[2];
             seenLake = flags3[3];
             seenFeudalIntro = flags3[4];
+            consumedTheFish = flags3[5];
+            usedLicense = flags3[6];
         }
     }
 
