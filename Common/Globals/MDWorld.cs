@@ -2,6 +2,7 @@
 using MultidimensionMod.Common.Systems;
 using MultidimensionMod.NPCs.TownNPCs;
 using MultidimensionMod.Walls;
+using MultidimensionMod.Base;
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -165,6 +166,10 @@ namespace MultidimensionMod.Common.Globals
                 //Drops Light Depreived Eye
             }
             #endregion
+            if (Main.dayTime && Main.time == 0)
+            {
+                MDGlobalTownNPC.AngelerInt = 0;
+            }
         }
 
         public override void PostUpdateNPCs()

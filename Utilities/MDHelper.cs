@@ -4,6 +4,8 @@ using System.Linq;
 using System.Reflection;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MultidimensionMod.Base;
+using MultidimensionMod.Common.Globals.Projectiles;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -43,6 +45,20 @@ namespace MultidimensionMod.Utilities
         public static bool HasInInventory(this Player player, params int[] items)
         {
             return player.inventory.Any(item => items.Contains(item.type));
+        }
+
+        //Fishing condition for Shimmer (does nothing)
+        public static bool InShimmer(this FishingAttempt attempt)
+        {
+            for (int e = 0; e < Main.maxProjectiles; e++)
+            {
+                Projectile projectile = Main.projectile[e];
+                if (projectile.bobber && projectile.shimmerWet)
+                    continue;
+
+                return true;
+            }
+            return false;
         }
     }
 }

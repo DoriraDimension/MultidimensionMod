@@ -18,6 +18,7 @@ namespace MultidimensionMod
 {
     public class MDGlobalTownNPC : GlobalNPC
     {
+
         public override void ModifyShop(NPCShop shop)
         {
             if (ModContent.GetInstance<MDConfig>().NPCItemSelling)
@@ -197,6 +198,31 @@ namespace MultidimensionMod
             {
                 if (Main.rand.NextBool(12))
                     chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Wizard.Carces");
+            }
+        }
+
+        public static int AngelerInt = 0;
+
+        public override void OnChatButtonClicked(NPC npc, bool firstButton)
+        {
+            int Amount = 1;
+            /*if (DownedSystem.ConsumedTheFish)
+            {
+                Amount = 2;
+            }*/
+            if (Main.anglerQuestFinished && AngelerInt < Amount)
+            {
+                AngelerInt += 1;
+                if (Main.netMode == 0)
+                {
+                    Main.AnglerQuestSwap();
+                }
+                else if (Main.netMode == 1)
+                {
+                    ModPacket packet = base.Mod.GetPacket();
+                    packet.Write((byte)3);
+                    packet.Send();
+                }
             }
         }
     }
