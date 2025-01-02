@@ -7,6 +7,7 @@ using Terraria.ID;
 using Terraria.DataStructures;
 using MultidimensionMod.Items.Accessories;
 using System.Collections.Generic;
+using MultidimensionMod.Items.Placeables.Biomes.ShroomForest;
 
 namespace MultidimensionMod.Tiles.Biomes.ShroomForest
 {
@@ -36,7 +37,9 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
         {
             if (Main.rand.NextBool(4))
                 yield return new Item(ItemID.Mushroom);
-            else if (Main.rand.NextBool(35))
+            else if (Main.rand.NextBool(40))
+                yield return new Item(ModContent.ItemType<MyceliumSeeds>());
+            else if (Main.rand.NextBool(80))
                 yield return new Item(ModContent.ItemType<InvigoratingMushroom>());
         }
 

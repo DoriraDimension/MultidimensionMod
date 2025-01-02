@@ -3150,8 +3150,8 @@ Mods: {
 				DisplayName: Music Box (Feudal Fungus)
 				Tooltip:
 					'''
-					Plays Bioluminescent Beatdown
-					By SpectralAves
+					Plays ???
+					By Clyder8
 					'''
 			}
 
@@ -3165,11 +3165,11 @@ Mods: {
 			}
 
 			ShroomForestBox: {
-				DisplayName: Music Box (Scarlet Mycelium Forest)
+				DisplayName: Music Box (Scarlet Mycelium Forest Day)
 				Tooltip:
 					'''
-					Plays Regrowth
-					By SpectralAves
+					Plays ???
+					By Clyder8
 					'''
 			}
 
@@ -3719,17 +3719,29 @@ Mods: {
 
 			InfernoBox: {
 				DisplayName: Music Box (Dragon's Hoard Day)
-				Tooltip: ""
+				Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					'''
 			}
 
 			InfernoNightBox: {
 				DisplayName: Music Box (Dragon's Hoard Night)
-				Tooltip: ""
+				Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					'''
 			}
 
 			InfernoUBox: {
 				DisplayName: Music Box (Dragon's Burrow)
-				Tooltip: ""
+				Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					'''
 			}
 
 			Pyrosphere: {
@@ -3900,17 +3912,29 @@ Mods: {
 
 			MireBox: {
 				DisplayName: Music Box (Shrouded Mire Night)
-				Tooltip: ""
+				Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					'''
 			}
 
 			MireDayBox: {
 				DisplayName: Music Box (Shrouded Mire Day)
-				Tooltip: ""
+				Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					'''
 			}
 
 			MireUBox: {
 				DisplayName: Music Box (Lake Depths)
-				Tooltip: ""
+				Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					'''
 			}
 
 			Permafrost: {
@@ -3930,7 +3954,11 @@ Mods: {
 
 			VoidBox: {
 				DisplayName: Music Box (Void's Edge)
-				Tooltip: ""
+				Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					'''
 			}
 
 			VolcanicRock: {
@@ -4230,7 +4258,11 @@ Mods: {
 
 			FungusMenuBox: {
 				DisplayName: Music Box (Fungal Prayers)
-				Tooltip: ""
+				Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					'''
 			}
 
 			AwakenedRock: {
@@ -4315,6 +4347,11 @@ Mods: {
 					Increases the amount of Angler Quests per day by one
 					Only one may be used
 					'''
+			}
+
+			ShroomForestNightBox: {
+				DisplayName: Shroom Forest Night Box
+				Tooltip: ""
 			}
 		}
 
@@ -4981,6 +5018,7 @@ Mods: {
 			BogwoodTablePlaced.MapEntry: Bogwood Table
 			BogwoodWorkbenchPlaced.MapEntry: Bogwood Work Bench
 			FungusMenuBoxPlaced.MapEntry: Fungus Menu Box Placed
+			ShroomForestBoxNightPlaced.MapEntry: Shroom Forest Box Night Placed
 		}
 
 		DeathMessages: {
@@ -5053,7 +5091,7 @@ Mods: {
 			FeudalFungus: A large humanoid glowing mushroom who is known as the glowing royalty. As its name suggests, it possesses an elegant blue hued glow that only becomes stronger the more it taps into its inner light. A long time ago it took upon the name "Umos", referencing the memory it now shares. Only the mushrooms know what hides under its light.
 			Toad: Rare toads that have grown large and somehow found their way into the glowing caverns. Their ability to jump is greatly crippled due to mycelium restraining the movement of their back legs. They are peaceful until provoked.
 			ShroomJelly: A jellyfish like creature who likes to hide buried in the ground disguised as a mushroom.
-			MyceliBug: Large insect that lives in the Scarlet Mycelium Forest, they feast on nutrients inside the mushrooms.
+			MyceliBug: Large insect that lives in the Scarlet Mycelium Forest, they feast on nutrients inside the mushrooms. They are harmless and simply sit beside travelers to observe them unless provoked.
 			MyceliLarva: Small larva who will eventually grow into a Myceli Bug. Just like their adult counterparts, they consume mushroom nutrients.
 			CapBunny: Unique bunny species who have evolved to live in harmony in the Scarlet Mycelium Forest.
 			Puffer: These large reptiles waddle through the Scarlet Mycelium Forest in search of only the best fungi to consume. If anything threatening looking draws too close, they will enter an alerted stance and release large spore clouds from their tail end. Their thick hide makes them extremely resistant against any attack.
@@ -5069,7 +5107,7 @@ Mods: {
 			Miresquito: Giant bugs with a lust for blood. They relentlessly chase whatever looks large enough to satiate their hunger.
 			FogAngler: Male anglers that swim around in the shrouded mire and its depths. They hunt prey using their lures to deliver it to the females.
 			DepthAngler: Female Fog Anglers who exclusively live in the lake depths. Unlike their male counterpart, these fish are larger and mostly sit still on the floor. They keep waiting for an unfortunate creature to come too close, only to be swallowed whole.
-			MushSlime: A slime that has lived within the Scarlet Mycelium Forest for a good while. Mushrooms have grown inside, forming a large cap ontop. Scarlet Cap Slimes can expell a cloud of spores when threatened.
+			MushSlime: A slime that has lived within the Scarlet Mycelium Forest for a good while. Mushrooms have grown inside, forming a large cap ontop. Mushroom Slimes can expell a cloud of spores when threatened.
 			MushroomPreacher: Someshroomwih a funny stick
 			MushroomFollower: Gullible idiot
 		}

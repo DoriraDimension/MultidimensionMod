@@ -3150,8 +3150,8 @@ Mods: {
 				// DisplayName: Music Box (Feudal Fungus)
 				/* Tooltip:
 					'''
-					Plays Bioluminescent Beatdown
-					By SpectralAves
+					Plays ???
+					By Clyder8
 					''' */
 			}
 
@@ -3165,11 +3165,11 @@ Mods: {
 			}
 
 			ShroomForestBox: {
-				// DisplayName: Music Box (Scarlet Mycelium Forest)
+				// DisplayName: Music Box (Scarlet Mycelium Forest Day)
 				/* Tooltip:
 					'''
-					Plays Regrowth
-					By SpectralAves
+					Plays ???
+					By Clyder8
 					''' */
 			}
 
@@ -3719,17 +3719,29 @@ Mods: {
 
 			InfernoBox: {
 				// DisplayName: Music Box (Dragon's Hoard Day)
-				// Tooltip: ""
+				/* Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					''' */
 			}
 
 			InfernoNightBox: {
 				// DisplayName: Music Box (Dragon's Hoard Night)
-				// Tooltip: ""
+				/* Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					''' */
 			}
 
 			InfernoUBox: {
 				// DisplayName: Music Box (Dragon's Burrow)
-				// Tooltip: ""
+				/* Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					''' */
 			}
 
 			Pyrosphere: {
@@ -3900,17 +3912,29 @@ Mods: {
 
 			MireBox: {
 				// DisplayName: Music Box (Shrouded Mire Night)
-				// Tooltip: ""
+				/* Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					''' */
 			}
 
 			MireDayBox: {
 				// DisplayName: Music Box (Shrouded Mire Day)
-				// Tooltip: ""
+				/* Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					''' */
 			}
 
 			MireUBox: {
 				// DisplayName: Music Box (Lake Depths)
-				// Tooltip: ""
+				/* Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					''' */
 			}
 
 			Permafrost: {
@@ -3930,7 +3954,11 @@ Mods: {
 
 			VoidBox: {
 				// DisplayName: Music Box (Void's Edge)
-				// Tooltip: ""
+				/* Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					''' */
 			}
 
 			VolcanicRock: {
@@ -4230,7 +4258,11 @@ Mods: {
 
 			FungusMenuBox: {
 				// DisplayName: Music Box (Fungal Prayers)
-				// Tooltip: ""
+				/* Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					''' */
 			}
 
 			AwakenedRock: {
@@ -4315,6 +4347,11 @@ Mods: {
 					Increases the amount of Angler Quests per day by one
 					Only one may be used
 					''' */
+			}
+
+			ShroomForestNightBox: {
+				// DisplayName: Shroom Forest Night Box
+				// Tooltip: ""
 			}
 		}
 
@@ -4981,6 +5018,7 @@ Mods: {
 			// BogwoodTablePlaced.MapEntry: Bogwood Table
 			// BogwoodWorkbenchPlaced.MapEntry: Bogwood Work Bench
 			// FungusMenuBoxPlaced.MapEntry: Fungus Menu Box Placed
+			// ShroomForestBoxNightPlaced.MapEntry: Shroom Forest Box Night Placed
 		}
 
 		DeathMessages: {
