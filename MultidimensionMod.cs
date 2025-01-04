@@ -45,6 +45,7 @@ namespace MultidimensionMod
             SkyManager.Instance["MadnessMoonSky"] = new MadnessMoonSky();
             SkyManager.Instance["DragonHoardSky"] = new DragonHoardSky();
             SkyManager.Instance["ShroudedMireSky"] = new ShroudedMireSky();
+			SkyManager.Instance["ShroudedMireDaySky"] = new ShroudedMireDaySky();
             Filters.Scene["MultidimensionMod:Madness"] = new Filter(new ScreenShaderData("FilterMiniTower").UseColor(0.8f, 0.6f, 0.2f).UseOpacity(0.5f), EffectPriority.High);
 			ALLists.LoadLists();
 			base.Load();

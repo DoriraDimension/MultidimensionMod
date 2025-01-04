@@ -1,6 +1,7 @@
 ﻿using MultidimensionMod.Tiles.Biomes.Mire;
 using MultidimensionMod.Backgrounds;
 using MultidimensionMod.Water;
+using MultidimensionMod.Base;
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;
@@ -24,12 +25,15 @@ namespace MultidimensionMod.Biomes
             if (isActive)
             {
                 SkyManager.Instance.Activate("ShroudedMireSky");
+                SkyManager.Instance.Activate("ShroudedMireDaySky");
             }
         }
 
         public override void OnLeave(Player player)
         {
             SkyManager.Instance.Deactivate("ShroudedMireSky");
+            SkyManager.Instance.Deactivate("ShroudedMireDaySky");
+
         }
 
         public override string MapBackground => BackgroundPath;
@@ -62,6 +66,66 @@ namespace MultidimensionMod.Biomes
                 + tileCounts[ModContent.TileType<DarkmudPlaced>()]
                 + tileCounts[ModContent.TileType<DankDepthstonePlaced>()]
                 + tileCounts[ModContent.TileType<DepthstonePlaced>()];
+        }
+    }
+    public class ShroudedMireLighting : ModSystem
+    {
+        public override void ModifySunLightColor(ref Color tileColor, ref Color backgroundColor)
+        {
+            if (ModContent.GetInstance<ShroudedMireTileCount>().SMCount >= 50&&Main.dayTime)
+            {
+                float strength = ModContent.GetInstance<ShroudedMireTileCount>().SMCount / 50f;
+                strength = Math.Min(strength, 1f);
+
+                strength *= 1f - Main.lightning;
+
+                int sunR = backgroundColor.R;
+                int sunG = backgroundColor.G;
+                int sunB = backgroundColor.B;
+
+                sunR -= (int)(242f * strength * (backgroundColor.R / 255f));
+                sunG -= (int)(238f * strength * (backgroundColor.G / 255f));
+                sunB -= (int)(214f * strength * (backgroundColor.B / 255f));
+
+                sunR = (int)MathHelper.Clamp(sunR, 1, 255);
+                sunG = (int)MathHelper.Clamp(sunG, 1, 255);
+                sunB = (int)MathHelper.Clamp(sunB, 1, 255);
+
+                Main.ColorOfTheSkies.R = (byte)sunR;
+                Main.ColorOfTheSkies.G = (byte)sunG;
+                Main.ColorOfTheSkies.B = (byte)sunB;
+
+                tileColor.R = (byte)((Main.ColorOfTheSkies.R + Main.ColorOfTheSkies.G + Main.ColorOfTheSkies.B + Main.ColorOfTheSkies.R * 8) / 10);
+                tileColor.G = (byte)((Main.ColorOfTheSkies.R + Main.ColorOfTheSkies.G + Main.ColorOfTheSkies.B + Main.ColorOfTheSkies.G * 8) / 10);
+                tileColor.B = (byte)((Main.ColorOfTheSkies.R + Main.ColorOfTheSkies.G + Main.ColorOfTheSkies.B + Main.ColorOfTheSkies.B * 8) / 10);
+            }
+            if (ModContent.GetInstance<ShroudedMireTileCount>().SMCount >= 50&&!Main.dayTime)
+            {
+                float strength = ModContent.GetInstance<ShroudedMireTileCount>().SMCount / 50f;
+                strength = Math.Min(strength, 0.3f);
+
+                strength *= 0.3f - Main.lightning;
+
+                int sunR = backgroundColor.R;
+                int sunG = backgroundColor.G;
+                int sunB = backgroundColor.B;
+
+                sunR -= (int)(32f * strength * (backgroundColor.R / 255f));
+                sunG -= (int)(215f * strength * (backgroundColor.G / 255f));
+                sunB -= (int)(156f * strength * (backgroundColor.B / 255f));
+
+                sunR = (int)MathHelper.Clamp(sunR, 1, 255);
+                sunG = (int)MathHelper.Clamp(sunG, 1, 255);
+                sunB = (int)MathHelper.Clamp(sunB, 1, 255);
+
+                Main.ColorOfTheSkies.R = (byte)sunR;
+                Main.ColorOfTheSkies.G = (byte)sunG;
+                Main.ColorOfTheSkies.B = (byte)sunB;
+
+                tileColor.R = (byte)((Main.ColorOfTheSkies.R + Main.ColorOfTheSkies.G + Main.ColorOfTheSkies.B + Main.ColorOfTheSkies.R * 8) / 10);
+                tileColor.G = (byte)((Main.ColorOfTheSkies.R + Main.ColorOfTheSkies.G + Main.ColorOfTheSkies.B + Main.ColorOfTheSkies.G * 8) / 10);
+                tileColor.B = (byte)((Main.ColorOfTheSkies.R + Main.ColorOfTheSkies.G + Main.ColorOfTheSkies.B + Main.ColorOfTheSkies.B * 8) / 10);
+            }
         }
     }
 }

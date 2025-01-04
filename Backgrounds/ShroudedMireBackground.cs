@@ -1,9 +1,14 @@
 ﻿using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using MultidimensionMod.Biomes;
 
 namespace MultidimensionMod.Backgrounds
 {
     public class ShroudedMireBackground : ModSurfaceBackgroundStyle
     {
+        readonly MireFog Fog = new MireFog(true);
+
         // Use this to keep far Backgrounds like the mountains.
         public override void ModifyFarFades(float[] fades, float transitionSpeed)
         {
@@ -44,5 +49,12 @@ namespace MultidimensionMod.Backgrounds
         {
             return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Backgrounds/MireBG");
         }
+        public override bool PreDrawCloseBackground(SpriteBatch spriteBatch)
+		{
+            Color DefaultFog = new Color(120, 120, 200);            
+            Fog.Update(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture").Value);
+			Fog.Draw(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture").Value, true,DefaultFog);
+            return true;
+		}
     }
 }
