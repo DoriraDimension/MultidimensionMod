@@ -74,6 +74,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
         public override void UseStyle(Player player, Rectangle heldItemFrame)
         {
+            BaseExtension.AL(player).progress = BaseExtension.AL(player).swingDir == 1 ? MathHelper.Lerp(0f, 1f, HeavySwingEase((float)BaseExtension.AL(player).Player.itemAnimation / BaseExtension.AL(player).Player.itemAnimationMax)) : MathHelper.Lerp(1f, 0f, HeavySwingEase((float)BaseExtension.AL(player).Player.itemAnimation / BaseExtension.AL(player).Player.itemAnimationMax));
 
             if (player.Center.X + BaseExtension.AL(player).startingDirection.X > player.Center.X)
                 player.ChangeDir(-1);
@@ -103,13 +104,6 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
             scale = 1f;
 
         }
-
-        public override void UpdateInventory(Player player)
-        {
-            BaseExtension.AL(player).progress = BaseExtension.AL(player).swingDir == 1 ? MathHelper.Lerp(0f, 1f, HeavySwingEase((float)BaseExtension.AL(player).Player.itemAnimation / BaseExtension.AL(player).Player.itemAnimationMax)) : MathHelper.Lerp(1, 0, HeavySwingEase((float)BaseExtension.AL(player).Player.itemAnimation / BaseExtension.AL(player).Player.itemAnimationMax));
-
-        }
-
 
     }
 
