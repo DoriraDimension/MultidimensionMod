@@ -1,8 +1,41 @@
-.vscode/settings.json
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+*.suo
+*.dll
+
+*.xnb
+
+packages/*
+bin/*
+obj/*
+lib/*
+
 .vs/
 .idea/
-bin/
-obj/
-obj/Debug/net6.0/MultidimensionMod.assets.cache
-obj/Debug/net6.0/MultidimensionMod.csproj.AssemblyReference.cache
-obj/Debug/net6.0/MultidimensionMod.GeneratedMSBuildEditorConfig.editorconfig

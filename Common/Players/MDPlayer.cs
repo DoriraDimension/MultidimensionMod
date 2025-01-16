@@ -80,6 +80,14 @@ namespace MultidimensionMod.Common.Players
         public bool impactTreads = false;
         public bool impactSpeedReached = false;
 
+        #region Custom Sword Swing Fields
+        public int swingDir = 1;
+        public Vector2 currentArmPosition = Vector2.Zero;
+        public float currentArmRotation = 0;
+        public Vector2 startingDirection = Vector2.Zero;
+        public float progress = 0;
+        #endregion
+
         public override void ResetEffects()
         {
             SmileyJr = false;
@@ -112,7 +120,6 @@ namespace MultidimensionMod.Common.Players
             SkulkerShell = false;
             impactTreads = false;
         }
-
         public override void UpdateDead()
         {
             if (!Symbio)

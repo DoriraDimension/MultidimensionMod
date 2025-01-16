@@ -4611,6 +4611,7 @@ Mods: {
 			SlimeFart.DisplayName: Slime Fart
 			SandBallzHeld.DisplayName: Sand Ballz Held
 			ImpactTreadsImpact.DisplayName: Impact Treads Impact
+			AquaticVisualSlashTrail.DisplayName: Aquatic Visual Slash Trail
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
