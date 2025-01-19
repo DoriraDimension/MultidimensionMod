@@ -20,6 +20,7 @@ using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
 using Terraria.Utilities;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.NPCs.Bosses.FeudalFungus;
+using MultidimensionMod.Common.Systems;
 
 namespace MultidimensionMod.NPCs.MushBiomes
 {
@@ -35,8 +36,8 @@ namespace MultidimensionMod.NPCs.MushBiomes
         {
             NPC.friendly = true;
             NPC.dontTakeDamageFromHostiles = true;
-            NPC.width = 88;
-            NPC.height = 93;
+            NPC.width = 96;
+            NPC.height = 112;
             NPC.damage = 0;
             NPC.defense = 15;
             NPC.lifeMax = 100;
@@ -58,12 +59,42 @@ namespace MultidimensionMod.NPCs.MushBiomes
             });
         }
 
+        public bool mike = false;
+        public bool piper = false;
+        public bool fungalf = false;
+        public bool utmungus = false;
+
         public override void OnSpawn(IEntitySource source)
         {
             NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X + 60, (int)NPC.Center.Y, ModContent.NPCType<MushroomFollower>());
             NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X - 60, (int)NPC.Center.Y, ModContent.NPCType<MushroomFollower>());
             NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X + 110, (int)NPC.Center.Y, ModContent.NPCType<MushroomFollower>());
             NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X - 110, (int)NPC.Center.Y, ModContent.NPCType<MushroomFollower>());
+            int choice = Main.rand.Next(4);
+            if (choice == 0)
+            {
+                mike = true;
+                NPC.width = 88;
+                NPC.height = 93;
+            }
+            else if (choice == 1)
+            {
+                piper = true;
+                NPC.width = 96;
+                NPC.height = 112;
+            }
+            else if (choice == 2)
+            {
+                fungalf = true;
+                NPC.width = 58;
+                NPC.height = 100;
+            }
+            else if (choice == 3)
+            {
+                utmungus = true;
+                NPC.width = 74;
+                NPC.height = 84;
+            }
         }
 
         public override void AI()
@@ -72,7 +103,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             {
                 SoundEngine.PlaySound(SoundID.NPCDeath6 with { Volume = .2f }, NPC.position);
                 NPC.active = false;
-                for (int i = 0; i < 5; i++) //spawns half the amount of dust than when the enemy gets hit
+                for (int i = 0; i < 10; i++)
                 {
                     int dustType = DustID.GlowingMushroom;
                     int dustIndex = Dust.NewDust(NPC.position, NPC.width * 2, NPC.height * 2, dustType);
@@ -118,13 +149,9 @@ namespace MultidimensionMod.NPCs.MushBiomes
         {
         }
 
-        public override void ModifyNPCLoot(NPCLoot NPCloot)
-        {
-        }
-
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.ZoneGlowshroom && spawnInfo.SpawnTileY <= Main.maxTilesY - 200 && spawnInfo.SpawnTileY > Main.rockLayer && !NPC.AnyNPCs(ModContent.NPCType<MushroomPreacher>()))
+            if (spawnInfo.Player.ZoneGlowshroom && DownedSystem.downedFungus && spawnInfo.SpawnTileY <= Main.maxTilesY - 200 && spawnInfo.SpawnTileY > Main.rockLayer && !NPC.AnyNPCs(ModContent.NPCType<MushroomPreacher>()))
             {
                 return 0.13f;
             }
@@ -138,10 +165,27 @@ namespace MultidimensionMod.NPCs.MushBiomes
             }
         }
 
-        private int frame;
         public override void FindFrame(int frameHeight)
         {
 
+        }
+
+        public override bool PreDraw(SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)
+        {
+            Texture2D mikeshroom = ModContent.Request<Texture2D>(NPC.ModNPC.Texture).Value;
+            Texture2D pipeshroom = ModContent.Request<Texture2D>(NPC.ModNPC.Texture + "_Piper").Value;
+            Texture2D dalfshroom = ModContent.Request<Texture2D>(NPC.ModNPC.Texture + "_Fungalf").Value;
+            Texture2D mungshroom = ModContent.Request<Texture2D>(NPC.ModNPC.Texture + "_Utmungus").Value;
+            SpriteEffects effects = NPC.spriteDirection == -1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+            if (utmungus)
+                spriteBatch.Draw(mungshroom, NPC.Center + new Vector2(16f, -14f) - screenPos, NPC.frame, drawColor, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
+            else if (fungalf)
+                spriteBatch.Draw(dalfshroom, NPC.Center + new Vector2(26f, -4f) - screenPos, NPC.frame, drawColor, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
+            else if (piper)
+                spriteBatch.Draw(pipeshroom, NPC.Center + new Vector2(0f, 2f) - screenPos, NPC.frame, drawColor, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
+            else if (mike)
+                spriteBatch.Draw(mikeshroom, NPC.Center + new Vector2(0f, -14f) - screenPos, NPC.frame, drawColor, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, effects, 0);
+            return false;
         }
     }
 }

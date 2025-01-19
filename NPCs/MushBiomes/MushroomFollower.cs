@@ -68,7 +68,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             {
                 SoundEngine.PlaySound(SoundID.NPCDeath6 with { Volume = .2f }, NPC.position);
                 NPC.active = false;
-                for (int i = 0; i < 5; i++) //spawns half the amount of dust than when the enemy gets hit
+                for (int i = 0; i < 10; i++)
                 {
                     int dustType = DustID.GlowingMushroom;
                     int dustIndex = Dust.NewDust(NPC.position, NPC.width, NPC.height, dustType);

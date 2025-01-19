@@ -5109,8 +5109,8 @@ Mods: {
 			FogAngler: Male anglers that swim around in the shrouded mire and its depths. They hunt prey using their lures to deliver it to the females.
 			DepthAngler: Female Fog Anglers who exclusively live in the lake depths. Unlike their male counterpart, these fish are larger and mostly sit still on the floor. They keep waiting for an unfortunate creature to come too close, only to be swallowed whole.
 			MushSlime: A slime that has lived within the Scarlet Mycelium Forest for a good while. Mushrooms have grown inside, forming a large cap ontop. Mushroom Slimes can expell a cloud of spores when threatened.
-			MushroomPreacher: Someshroomwih a funny stick
-			MushroomFollower: Gullible idiot
+			MushroomPreacher: A mushroom given life by Umos the Feudal Fungus. They attempt to spread the words of the Light across the caverns, just as their glowing royalty did.
+			MushroomFollower: A sentient mushroom that follows the words of Light, seeking enlightenment. They will be often seen accompanying preachers.
 		}
 
 		SoulConversation: {
