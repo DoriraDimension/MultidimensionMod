@@ -99,6 +99,8 @@ namespace MultidimensionMod.Items.Accessories
                 LeapDelay = LeapCooldown;
                 LeapTimer = LeapDuration;
                 Player.velocity = newVelocity;
+                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Dash"), Player.Center);
+                SoundEngine.PlaySound(SoundID.Zombie13, Player.Center);
                 for (int m = 0; m < 20; m++)
                 {
                     int dustID = Dust.NewDust(new Vector2(Player.Center.X - 1, Player.Center.Y - 1), 6, 6, DustID.GlowingMushroom, 0f, 0f, 100, Color.White, 1.6f);
