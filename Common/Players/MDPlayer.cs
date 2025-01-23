@@ -681,7 +681,7 @@ namespace MultidimensionMod.Common.Players
             {
                 healValue = 15;
             }
-            if (CrippledHealing || MonarchHeart)
+            if (CrippledHealing)
             {
                 healValue = (int)(healValue * 0.50f);
             }
