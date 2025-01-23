@@ -80,6 +80,16 @@ namespace MultidimensionMod.NPCs.MushBiomes
         public ref float TimerRand => ref NPC.ai[2];
         public bool goRight = false;
 
+        public override bool CheckDead()
+        {
+            NPC.life = 1;
+            if (Main.netMode != NetmodeID.MultiplayerClient)
+                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<PufferFart>(), 0, 0);
+            SoundEngine.PlaySound(new("MultidimensionMod/Sounds/NPC/BigFart"), NPC.position);
+            NPC.active = false;
+            return false;
+        }
+
         public override void AI()
         {
             Player target = Main.player[NPC.target];
@@ -235,14 +245,6 @@ namespace MultidimensionMod.NPCs.MushBiomes
                         NPC.netUpdate = true;
                     }
                     break;
-            }
-            if (NPC.life <= 1)
-            {
-                NPC.life = 1;
-                if (Main.netMode != NetmodeID.MultiplayerClient)
-                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<PufferFart>(), 0, 0);
-                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/NPC/BigFart"), NPC.position);
-                NPC.active = false;
             }
         }
 

@@ -2079,12 +2079,16 @@ Mods: {
 
 			FishCleaver: {
 				// DisplayName: Fish Cleaver
-				// Tooltip: ""
+				// Tooltip: "'The backfin is surprisingly sharp'"
 			}
 
 			FishronCleaver: {
 				// DisplayName: Fishron Cleaver
-				// Tooltip: Spews bubbles with every swing
+				/* Tooltip:
+					'''
+					Spews bubbles with every swing
+					'The backfin is surprisingly even sharper'
+					''' */
 			}
 
 			Lifelight: {
@@ -2324,7 +2328,11 @@ Mods: {
 
 			RetinusBlaster: {
 				// DisplayName: Retinus Blaster
-				// Tooltip: Charges a devastating death beam
+				/* Tooltip:
+					'''
+					Charge briefly to unleash retinus beams
+					The delay between shots decreases after the first two are fired
+					''' */
 			}
 
 			RotSpit: {
