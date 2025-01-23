@@ -4,6 +4,8 @@ using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using Terraria.Audio;
+using MultidimensionMod.Projectiles.Ranged;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 {
@@ -29,9 +31,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			Item.rare = ItemRarityID.Orange;
 			Item.UseSound = SoundID.Item38;
 			Item.autoReuse = true;
-			Item.shoot = ProjectileID.PurificationPowder;
-			Item.shootSpeed = 11f;
-			Item.useAmmo = AmmoID.Bullet;
+			Item.shoot = ModContent.ProjectileType<BoneShard>();
+			Item.shootSpeed = 20f;
 		}
 
 		public override Vector2? HoldoutOffset()
@@ -39,17 +40,10 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			return new Vector2(-8, 0);
 		}
 
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ItemID.Bone, 34)
-			.AddTile(TileID.BoneWelder)
-			.Register();
-		}
-
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
-			int numberProjectiles = 4;
+            SoundEngine.PlaySound(SoundID.NPCHit2, player.position);
+            int numberProjectiles = 4;
 			for (int i = 0; i < numberProjectiles; i++)
 			{
 				Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(12));																												

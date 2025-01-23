@@ -4620,6 +4620,7 @@ Mods: {
 			// SandBallzHeld.DisplayName: Sand Ballz Held
 			// ImpactTreadsImpact.DisplayName: Impact Treads Impact
 			// AquaticVisualSlashTrail.DisplayName: Aquatic Visual Slash Trail
+			// BoneShard.DisplayName: Bone Shard
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -5479,6 +5480,7 @@ Mods: {
 				Seen as an invasive species, this plant absorbs all humidity from the air to sustain itself
 				This leads to the environment not being able to recover and remain desolate
 				''' */
+			// ShimmerablePostMoonLord: "[c/dd8fb2:Can only be shimmered after the Moon Lord has been defeated]"
 		}
 
 		VanillaNPCDialogue: {
