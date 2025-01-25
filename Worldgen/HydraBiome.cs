@@ -43,7 +43,7 @@ namespace MultidimensionMod.Worldgen
 
             int e = (int)GenVars.worldSurfaceLow + 30;
             ChaosPositioningPlacement = Main.dungeonX > Main.maxTilesX / 2 ? 0 : 1;
-            ChaosPositioningMultiplier = ChaosPositioningPlacement == 0 ? 2f : 4f;
+            ChaosPositioningMultiplier = ChaosPositioningPlacement == 0 ? 1.6f : 4.4f;
             float PlaceBiomeX = (int)(Main.maxTilesX / 7f * ChaosPositioningMultiplier);
             while (Main.tile[(int)PlaceBiomeX, e] != null && !Main.tile[(int)PlaceBiomeX, e].HasTile)
             {
