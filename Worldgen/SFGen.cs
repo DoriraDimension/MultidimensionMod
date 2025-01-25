@@ -25,14 +25,19 @@ namespace MultidimensionMod.Worldgen
             if (BiomesIndex != -1)
             {
                 tasks.Insert(BiomesIndex + 1, new PassLegacy("Scarlet Mycelium Forest", ShroomForestGen));
+                int GenIndex2 = tasks.FindIndex(genpass => genpass.Name.Equals("Final Cleanup"));
+                if (GenIndex2 != -1)
+                {
+                    tasks.Insert(GenIndex2 + 1, new PassLegacy("Scarlet Mycelium Forest Trees", GrowTrees));
+                }
             }
         }
+        
+        float PlaceBiomeX = (int)(Main.maxTilesX / 7f * (WorldGen.genRand.NextBool(2) ? 2.25f : 2.75f));
 
         private void ShroomForestGen(GenerationProgress progress, GameConfiguration configuration)
         {
             progress.Message = "Spreading scarlet mycelium";
-            float PlaceBiomeX = (int)(Main.maxTilesX / 2.5f);
-
             int e = (int)GenVars.worldSurfaceLow + 30;
             while (Main.tile[(int)PlaceBiomeX, e] != null && !Main.tile[(int)PlaceBiomeX, e].HasTile)
             {
@@ -57,6 +62,35 @@ namespace MultidimensionMod.Worldgen
                 }
             }
             float PlaceBiomeY = e;
+            int checkforsnow = Main.tile[(int)PlaceBiomeX, (int)PlaceBiomeY].TileType;
+            if(checkforsnow==TileID.SnowBlock||checkforsnow==TileID.IceBlock)
+            {
+                PlaceBiomeX = (int)(Main.maxTilesX / 7f * (PlaceBiomeX==(int)(Main.maxTilesX / 7f*2.25f) ?2.75f : 2.25f));
+                e = (int)GenVars.worldSurfaceLow + 30;
+            while (Main.tile[(int)PlaceBiomeX, e] != null && !Main.tile[(int)PlaceBiomeX, e].HasTile)
+            {
+                e++;
+            }
+            for (int l = (int)PlaceBiomeX - 25; l < (int)PlaceBiomeX + 25; l++)
+            {
+                for (int m = e - 6; m < e + 90; m++)
+                {
+                    if (Main.tile[l, m] != null && Main.tile[l, m].HasTile)
+                    {
+                        int type = Main.tile[l, m].TileType;
+                        if (type == TileID.Cloud || type == TileID.RainCloud || type == TileID.Sunplate)
+                        {
+                            e++;
+                            if (!Main.tile[l, m].HasTile)
+                            {
+                                e++;
+                            }
+                        }
+                    }
+                }
+            }
+            PlaceBiomeY = e;
+            }
 
             ushort mycelium = (ushort)ModContent.TileType<Mycelium>(), sand = (ushort)ModContent.TileType<MyceliumSandPlaced>(),
                 sandstone = (ushort)ModContent.TileType<MyceliumSandstonePlaced>(), hardenedSand = (ushort)ModContent.TileType<MyceliumHardsandPlaced>(), 
@@ -78,7 +112,7 @@ namespace MultidimensionMod.Worldgen
             WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
             {
                 new InWorld(),
-                new Modifiers.OnlyTiles(new ushort[]{ TileID.Mud}),
+                new Modifiers.OnlyTiles(new ushort[]{ TileID.Mud, TileID.SnowBlock}),
                 new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
                 new SetModTile(0, true, true)
             }));
@@ -106,7 +140,7 @@ namespace MultidimensionMod.Worldgen
             WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
             {
                 new InWorld(),
-                new Modifiers.OnlyTiles(new ushort[]{ TileID.Stone, TileID.Crimstone, TileID.Ebonstone }),
+                new Modifiers.OnlyTiles(new ushort[]{ TileID.Stone, TileID.Crimstone, TileID.Ebonstone, TileID.IceBlock}),
                 new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
                 new SetModTile(sporeStone, true, true)
             }));
@@ -148,15 +182,14 @@ namespace MultidimensionMod.Worldgen
          
             //tunnels
             List<Point> MoreTunnels = new();
-
             for(int count=0; count<WorldGen.genRand.Next(3,6);count++){
             int CurrentX= (int)(PlaceBiomeX+(((biomeRadius*WorldGen.genRand.NextFloat(0f,0.7f))*(WorldGen.genRand.NextBool(2)==true ? -1:1))));
             int CurrentY=(int)PlaceBiomeY;
             int rand = WorldGen.genRand.Next(1, 100);
-            while(CurrentY<PlaceBiomeY+(int)(biomeRadius *1.5f))
+            while(CurrentY<(int)PlaceBiomeY+(int)(biomeRadius *1.5f)+(int)(biomeRadius*0.05f)+WorldGen.genRand.Next(45,51))
             {
                 
-                WorldUtils.Gen(new((int)CurrentX, (int)CurrentY), new Shapes.Circle((int)(WorldGen.genRand.Next(5, 8))), Actions.Chain(new GenAction[]
+                WorldUtils.Gen(new((int)CurrentX, (int)CurrentY), new Shapes.Circle((int)(WorldGen.genRand.Next(2, 5))), Actions.Chain(new GenAction[]
                 {
                     new InWorld(),
                     new Actions.ClearTile(true)
@@ -183,7 +216,7 @@ namespace MultidimensionMod.Worldgen
                {
                     if (CurrentY<Main.worldSurface)
                         continue;
-                    WorldUtils.Gen(new((int)CurrentX, (int)CurrentY), new Shapes.Circle((int)(WorldGen.genRand.Next(3, 5))), Actions.Chain(new GenAction[]
+                    WorldUtils.Gen(new((int)CurrentX, (int)CurrentY), new Shapes.Circle((int)(WorldGen.genRand.Next(1, 3))), Actions.Chain(new GenAction[]
                     {
                         new InWorld(),
                         new Actions.ClearTile(true)
@@ -209,6 +242,16 @@ namespace MultidimensionMod.Worldgen
                         new Actions.ClearTile(true)
                     }));     
                 Radi+=1;
+            }
+            //Make tunnel underneath
+            for(int X = (int)PlaceBiomeX-(int)(biomeRadius*0.5); X <= (int)PlaceBiomeX+(int)(biomeRadius*0.5); X += 1)
+            {
+                
+                WorldUtils.Gen(new((int)X, (int)PlaceBiomeY+(int)(biomeRadius *1.5f)+Radi+WorldGen.genRand.Next(25,33)), new Shapes.Circle((WorldGen.genRand.Next(4,10))), Actions.Chain(new GenAction[]
+                    {
+                        new InWorld(),
+                        new Actions.ClearTile(true)
+                    }));     
             }
             for(int X = (int)PlaceBiomeX; X <= (int)PlaceBiomeX+(int)(biomeRadius*0.5); X += 6)
             {
@@ -242,6 +285,8 @@ namespace MultidimensionMod.Worldgen
                 }
                 }
             }
+                
+            
 
 
             for (int X = (int)PlaceBiomeX-(int)(biomeRadius); X <= (int)PlaceBiomeX+(int)(biomeRadius); X++)
@@ -282,10 +327,15 @@ namespace MultidimensionMod.Worldgen
             {
                 for (int Y = (int)PlaceBiomeY -(int)(biomeRadius); Y <= (int)PlaceBiomeY+(int)(2f*biomeRadius); Y++)
                 {
-                   
+                    
+                    if (Main.tile[X, Y].TileType == (ushort)ModContent.TileType<Mycelium>())
+                    {
+                        if (WorldGen.genRand.NextBool(5))
+                            WorldGen.TryGrowingTreeByType(5, X, Y-1);
+                    }
                     if (Main.tile[X, Y].TileType == 70)
                     {
-                        if (WorldGen.genRand.NextBool(6))
+                        if (WorldGen.genRand.NextBool(3))
                             WorldGen.GrowTree(X, Y);
                     }
                     
@@ -293,6 +343,69 @@ namespace MultidimensionMod.Worldgen
             }
           
 
+        }
+        
+        private void GrowTrees(GenerationProgress progress, GameConfiguration configuration)
+        {
+            int e = (int)GenVars.worldSurfaceLow + 30;
+            while (Main.tile[(int)PlaceBiomeX, e] != null && !Main.tile[(int)PlaceBiomeX, e].HasTile)
+            {
+                e++;
+            }
+            for (int l = (int)PlaceBiomeX - 25; l < (int)PlaceBiomeX + 25; l++)
+            {
+                for (int m = e - 6; m < e + 90; m++)
+                {
+                    if (Main.tile[l, m] != null && Main.tile[l, m].HasTile)
+                    {
+                        int type = Main.tile[l, m].TileType;
+                        if (type == TileID.Cloud || type == TileID.RainCloud || type == TileID.Sunplate)
+                        {
+                            e++;
+                            if (!Main.tile[l, m].HasTile)
+                            {
+                                e++;
+                            }
+                        }
+                    }
+                }
+            }
+            int worldSize = GetWorldSize();
+
+            float PlaceBiomeY = e;
+            int biomeRadius = worldSize == 3 ? 300 : worldSize == 2 ? 260 : 180;
+
+            for (int X = (int)PlaceBiomeX-(int)(biomeRadius); X <= (int)PlaceBiomeX+(int)(biomeRadius); X++)
+                {
+                    for (int Y = (int)PlaceBiomeY -(int)(biomeRadius); Y <= (int)PlaceBiomeY+(int)(2f*biomeRadius); Y++)
+                    {
+                        
+                        if (Main.tile[X, Y].TileType == (ushort)ModContent.TileType<Mycelium>())
+                        {
+                            if (WorldGen.genRand.NextBool(5))
+                                WorldGen.TryGrowingTreeByType(5, X, Y-1);
+                        }
+                        if (Main.tile[X, Y].TileType == 70)
+                        {
+                            if (WorldGen.genRand.NextBool(3))
+                                WorldGen.GrowTree(X, Y);
+                        }
+                        
+                    }
+                }
+            for (int X = (int)PlaceBiomeX-(int)(biomeRadius); X <= (int)PlaceBiomeX+(int)(biomeRadius); X++)
+                {
+                    for (int Y = (int)PlaceBiomeY -(int)(biomeRadius); Y <= (int)PlaceBiomeY+(int)(2f*biomeRadius); Y++)
+                    {
+                        
+                        if (Main.tile[X, Y].TileType == 583 || Main.tile[X, Y].TileType == 584 || Main.tile[X, Y].TileType == 585 || Main.tile[X, Y].TileType == 586 || Main.tile[X, Y].TileType == 587 || Main.tile[X, Y].TileType == 588 || Main.tile[X, Y].TileType == 589)
+                        {   
+                            Tile tile = Main.tile[X, Y];
+                            tile.HasTile=false;  
+                        }
+                        
+                    }
+                }
         }
 
         
@@ -307,4 +420,5 @@ namespace MultidimensionMod.Worldgen
             return 1; //unknown size, assume small
         }
     }
+
 }
