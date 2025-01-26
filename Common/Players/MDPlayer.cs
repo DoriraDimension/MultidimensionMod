@@ -445,11 +445,25 @@ namespace MultidimensionMod.Common.Players
 
         public override void PostUpdateMiscEffects()
         {
-            if ((Player.InModBiome<TheShroudedMire>() && Main.IsItDay() && ((FogProgress < 1f && !FogLantern) || (FogLantern && FogProgress < FogLanternThreshold))))
-                FogProgress += 0.05f;
-            if (!Main.IsItDay() || ((FogProgress > 0 && !Player.InModBiome<TheShroudedMire>()) || (FogLantern && FogProgress > FogLanternThreshold)))
-                FogProgress -= 0.05f;
+            
+            
+            //Alright so uh determine fog
+            float DesiredFog;
+            if(Player.InModBiome<TheLakeDepths>()){
+                DesiredFog=0f; 
+            }
+            else if(Player.InModBiome<TheShroudedMire>()&&Main.dayTime)
+                DesiredFog = FogLantern ? 0.7f :1f;
+            else if(Player.InModBiome<TheShroudedMire>()&&!Main.dayTime)
+                DesiredFog = FogLantern ? 0.3f :0.6f;
+            else
+                DesiredFog=0f;
 
+            if (FogProgress<DesiredFog)
+                FogProgress += 0.05f;
+            if (FogProgress>DesiredFog)
+                FogProgress -= 0.05f;
+            
             if (Main.netMode != NetmodeID.Server)
             {
                 Filters.Scene["FogMist"].GetShader().UseProgress(FogProgress);
