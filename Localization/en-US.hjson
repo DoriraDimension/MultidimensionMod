@@ -3144,7 +3144,7 @@ Mods: {
 				Tooltip:
 					'''
 					Draws the attention of the glowing royalty
-					Can only be used in an underground Glowing Mushroom Biome
+					Can only be used in a Glowing Mushroom Biome
 					Non-consumable
 					'''
 				Lore:
