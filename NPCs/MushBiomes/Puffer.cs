@@ -94,7 +94,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
         {
             Player target = Main.player[NPC.target];
             float distanceToPlayer = Vector2.Distance(target.Center, NPC.Center);
-            if (NPC.life < NPC.lifeMax)
+            if (NPC.life < NPC.lifeMax||Main.hardMode)
             {
                 NPC.chaseable = true;
             }

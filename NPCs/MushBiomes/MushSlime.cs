@@ -63,7 +63,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     jump++;
                 }
             }
-            if (NPC.life < NPC.lifeMax)
+            if (NPC.life < NPC.lifeMax||Main.hardMode)
             {
                 upset = true; //initiate ability to emit spores
                 NPC.chaseable = true; //Make it so minions can attack now
@@ -112,7 +112,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
 
         public override bool CanHitPlayer(Player target, ref int cooldownSlot)
         {
-            if (NPC.life < NPC.lifeMax) //Only enable hitbox after it lost health
+            if (NPC.life < NPC.lifeMax||Main.hardMode) //Only enable hitbox after it lost health
             {
                 return true;
             }
