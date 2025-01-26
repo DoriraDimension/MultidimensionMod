@@ -131,7 +131,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             {
                 SoundEngine.PlaySound(SoundID.Zombie77, NPC.position);
             }
-            if (NPC.life < NPC.lifeMax)
+            if (NPC.life < NPC.lifeMax||Main.hardMode)
             {
                 NPC.chaseable = true;
                 AIState = ActionState.Kill;
@@ -367,7 +367,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             }
         }
 
-        public override bool CanHitPlayer(Player target, ref int cooldownSlot) => NPC.life == NPC.lifeMax ? false : true;
+        public override bool CanHitPlayer(Player target, ref int cooldownSlot) => NPC.life < NPC.lifeMax ||Main.hardMode ? true : false;
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
