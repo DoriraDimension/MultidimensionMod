@@ -463,7 +463,7 @@ Mods: {
 				DisplayName: Fishron Tooth Necklace
 				Tooltip:
 					'''
-					Increases armor penetration by 12.
+					Increases armor penetration by 12
 					Grants the ability to breathe underwater
 					'''
 				Lore:
@@ -2079,12 +2079,16 @@ Mods: {
 
 			FishCleaver: {
 				DisplayName: Fish Cleaver
-				Tooltip: ""
+				Tooltip: "'The backfin is surprisingly sharp'"
 			}
 
 			FishronCleaver: {
 				DisplayName: Fishron Cleaver
-				Tooltip: Spews bubbles with every swing
+				Tooltip:
+					'''
+					Spews bubbles with every swing
+					'The backfin is surprisingly even sharper'
+					'''
 			}
 
 			Lifelight: {
@@ -2324,7 +2328,11 @@ Mods: {
 
 			RetinusBlaster: {
 				DisplayName: Retinus Blaster
-				Tooltip: Charges a devastating death beam
+				Tooltip:
+					'''
+					Charge briefly to unleash retinus beams
+					The delay between shots decreases after the first two are fired
+					'''
 			}
 
 			RotSpit: {
@@ -3136,7 +3144,7 @@ Mods: {
 				Tooltip:
 					'''
 					Draws the attention of the glowing royalty
-					Can only be used in an underground Glowing Mushroom Biome
+					Can only be used in a Glowing Mushroom Biome
 					Non-consumable
 					'''
 				Lore:
@@ -3151,7 +3159,7 @@ Mods: {
 				Tooltip:
 					'''
 					Plays ???
-					By Clyder8
+					By ???
 					'''
 			}
 
@@ -3159,8 +3167,8 @@ Mods: {
 				DisplayName: Music Box (Mushroom Monarch)
 				Tooltip:
 					'''
-					Plays Fungal Face-off
-					By SpectralAves
+					Plays ???
+					By Clyder8
 					'''
 			}
 
@@ -4350,8 +4358,21 @@ Mods: {
 			}
 
 			ShroomForestNightBox: {
-				DisplayName: Shroom Forest Night Box
-				Tooltip: ""
+				DisplayName: Music Box (Scarlet Mycelium Forest Night)
+				Tooltip:
+				    '''
+					Plays ???
+					By Clyder8
+					'''
+			}
+
+			ShroomForestNightArrivalBox: {
+				DisplayName: Music Box (Scarlet Mycelium Forest Night - Tarnished)
+				Tooltip:
+				    '''
+					Plays ???
+					By Clyder8
+					'''
 			}
 		}
 
@@ -4612,6 +4633,7 @@ Mods: {
 			SandBallzHeld.DisplayName: Sand Ballz Held
 			ImpactTreadsImpact.DisplayName: Impact Treads Impact
 			AquaticVisualSlashTrail.DisplayName: Aquatic Visual Slash Trail
+			BoneShard.DisplayName: Bone Shard
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -5018,8 +5040,9 @@ Mods: {
 			BogwoodSinkPlaced.MapEntry: Bogwood Sink
 			BogwoodTablePlaced.MapEntry: Bogwood Table
 			BogwoodWorkbenchPlaced.MapEntry: Bogwood Work Bench
-			FungusMenuBoxPlaced.MapEntry: Fungus Menu Box Placed
-			ShroomForestBoxNightPlaced.MapEntry: Shroom Forest Box Night Placed
+			FungusMenuBoxPlaced.MapEntry: Music Box
+			ShroomForestBoxNightPlaced.MapEntry: Music Box
+			ShroomForestNightArrivalBoxPlaced.MapEntry: Music Box
 		}
 
 		DeathMessages: {
@@ -5109,8 +5132,8 @@ Mods: {
 			FogAngler: Male anglers that swim around in the shrouded mire and its depths. They hunt prey using their lures to deliver it to the females.
 			DepthAngler: Female Fog Anglers who exclusively live in the lake depths. Unlike their male counterpart, these fish are larger and mostly sit still on the floor. They keep waiting for an unfortunate creature to come too close, only to be swallowed whole.
 			MushSlime: A slime that has lived within the Scarlet Mycelium Forest for a good while. Mushrooms have grown inside, forming a large cap ontop. Mushroom Slimes can expell a cloud of spores when threatened.
-			MushroomPreacher: Someshroomwih a funny stick
-			MushroomFollower: Gullible idiot
+			MushroomPreacher: A mushroom given life by Umos the Feudal Fungus. They attempt to spread the words of the Light across the caverns, just as their glowing royalty did.
+			MushroomFollower: A sentient mushroom that follows the words of Light, seeking enlightenment. They will be often seen accompanying preachers.
 		}
 
 		SoulConversation: {
@@ -5471,6 +5494,7 @@ Mods: {
 				Seen as an invasive species, this plant absorbs all humidity from the air to sustain itself
 				This leads to the environment not being able to recover and remain desolate
 				'''
+			ShimmerablePostMoonLord: "[c/dd8fb2:Can only be shimmered after the Moon Lord has been defeated]"
 		}
 
 		VanillaNPCDialogue: {

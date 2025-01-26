@@ -19,12 +19,14 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             Main.tileMerge[Type][ModContent.TileType<Mycelium>()] = true;
             Main.tileMerge[Type][TileID.Stone] = true;
             Main.tileMerge[TileID.Stone][Type] = true;
+            Main.tileMerge[Type][TileID.Mud] = true;
+            Main.tileMerge[TileID.Mud][Type] = true;
             Terraria.ID.TileID.Sets.Conversion.Stone[Type] = true;
             Main.tileMergeDirt[Type] = true;
             Main.tileBlockLight[Type] = true;
             HitSound = SoundID.Tink;
             DustType = ModContent.DustType<MushroomDust>();
-            AddMapEntry(new Color(129, 10, 47));
+            AddMapEntry(new Color(179, 146, 131));
             MinPick = 59;
         }
     }

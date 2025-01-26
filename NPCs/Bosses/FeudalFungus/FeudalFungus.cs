@@ -216,6 +216,20 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             return;
         }
 
+        public override bool CheckDead()
+        {
+            if (AIState == ActionState.AwayWithThee)
+                return true;
+            else
+            {
+                NPC.life = 1;
+                AIState = ActionState.AwayWithThee;
+                if (Main.netMode == NetmodeID.Server && NPC.whoAmI < Main.maxNPCs)
+                    NetMessage.SendData(MessageID.SyncNPC, number: NPC.whoAmI);
+                return false;
+            }
+        }
+
         public void SmoothFrames()//Consider running this only during the intro
         {
             if(ActualArmFrame<ArmFrame){
@@ -309,15 +323,10 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             {
                 AIState = ActionState.UmosTransition;
             }
-            if (NPC.life <= NPC.lifeMax / 10 && Main.expertMode)
+            if (NPC.life <= NPC.lifeMax / 10 && NPC.life != 1 && Main.expertMode)
             {
                 AIState = ActionState.Radiance;
                 NPC.netUpdate = true;
-            }
-            if (NPC.life <= (int)(NPC.lifeMax * 0.01f))
-            {
-                NPC.life = 1;
-                AIState = ActionState.AwayWithThee;
             }
             switch (AIState)
             {

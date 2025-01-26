@@ -246,6 +246,18 @@ namespace MultidimensionMod.Common.Globals.Items
                 };
                 tooltips.Add(line);
             }
+            if (item.type == ItemID.RodofDiscord || item.type == ItemID.Clentaminator || item.type == ItemID.BottomlessBucket || item.type == ItemID.BottomlessShimmerBucket)
+            {
+                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<MirrorOfOrigin>()))
+                {
+
+                    TooltipLine line = new(Mod, "ShimmerablePostMoonLord", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.ShimmerablePostMoonLord"))
+                    {
+                        OverrideColor = Color.White
+                    };
+                    tooltips.Add(line);
+                }
+            }
         }
     }
 }
