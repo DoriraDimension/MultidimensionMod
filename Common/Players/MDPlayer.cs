@@ -458,6 +458,11 @@ namespace MultidimensionMod.Common.Players
                     Filters.Scene.Activate("FogMist");
                 else if (FogProgress <= 0 && Filters.Scene["FogMist"].IsInUse())
                     Filters.Scene.Deactivate("FogMist");
+
+                Filters.Scene["FogMist"].GetShader().UseDirection(new Vector2(0.01f, 0.01f)); // also a multiplier for its timer 
+                Filters.Scene["FogMist"].GetShader().UseIntensity(25); // the denisty
+                Filters.Scene["FogMist"].GetShader().Shader.Parameters["uDirection2"].SetValue(new Vector2(0.025f,0.025f)); // the directoin of the fog's "Mask" effect, also a multiplier for its timer
+
             }
 
             if (Symbio)

@@ -401,7 +401,10 @@ namespace MultidimensionMod
 			{
 
                 Filters.Scene["FogMist"].GetShader().UseImage(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture"), 1, SamplerState.LinearWrap);
-                
+                Filters.Scene["FogMist"].GetShader().UseDirection(new Vector2(1,0)); // also a multiplier of the timer 
+                Filters.Scene["FogMist"].GetShader().UseIntensity(15); // the denisty
+
+
 
             }
         }
