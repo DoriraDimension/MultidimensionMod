@@ -60,25 +60,9 @@ namespace MultidimensionMod.Backgrounds
 
         public override bool PreDrawCloseBackground(SpriteBatch spriteBatch)
 		{
-            //Color DefaultFog = new Color(120, 120, 200);
-            //Fog.Update(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture").Value);
-            //Fog.Draw(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture").Value, true,DefaultFog);
-
-            if(Main.netMode != NetmodeID.Server) 
-            {
-
-                if (Main.LocalPlayer.InModBiome<TheShroudedMire>() && !Filters.Scene["FogMist"].IsInUse())
-                    Filters.Scene.Activate("FogMist");
-                else if (!Main.LocalPlayer.InModBiome<TheShroudedMire>() && Filters.Scene["FogMist"].IsInUse())
-                    Filters.Scene.Deactivate("FogMist");
-
-
-                Filters.Scene["FogMist"].GetShader().UseImage(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture"), 1, SamplerState.LinearWrap);
-                Filters.Scene["FogMist"].GetShader().UseColor(Color.Gray);
-
-
-
-            }
+            Color DefaultFog = new Color(120, 120, 200);
+            Fog.Update(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture").Value);
+            Fog.Draw(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture").Value, true, DefaultFog);
 
 
             return true;

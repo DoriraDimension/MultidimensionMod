@@ -24,7 +24,7 @@ namespace MultidimensionMod.Items
 
         public override void UpdateEquip(Player player)
         {
-            player.AL().
+            player.AL().FogLantern = true;
         }
     }
 }

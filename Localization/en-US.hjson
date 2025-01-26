@@ -4360,7 +4360,7 @@ Mods: {
 			ShroomForestNightBox: {
 				DisplayName: Music Box (Scarlet Mycelium Forest Night)
 				Tooltip:
-				    '''
+					'''
 					Plays ???
 					By Clyder8
 					'''
@@ -4369,10 +4369,15 @@ Mods: {
 			ShroomForestNightArrivalBox: {
 				DisplayName: Music Box (Scarlet Mycelium Forest Night - Tarnished)
 				Tooltip:
-				    '''
+					'''
 					Plays ???
 					By Clyder8
 					'''
+			}
+
+			FogLantern: {
+				DisplayName: Fog Lantern
+				Tooltip: ""
 			}
 		}
 

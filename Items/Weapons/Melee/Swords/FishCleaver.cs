@@ -59,8 +59,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
             if (player.whoAmI == Main.myPlayer)
             {
-                BaseExtension.AL(player).swingDir *= -1;
-                BaseExtension.AL(player).startingDirection = (player.Center - Main.MouseWorld).SafeNormalize(Vector2.UnitY);
+                player.AL().swingDir *= -1;
+                player.AL().startingDirection = (player.Center - Main.MouseWorld).SafeNormalize(Vector2.UnitY);
 
             }
 
@@ -74,27 +74,27 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 
         public override void UseStyle(Player player, Rectangle heldItemFrame)
         {
-            BaseExtension.AL(player).progress = BaseExtension.AL(player).swingDir == 1 ? MathHelper.Lerp(0f, 1f, HeavySwingEase((float)BaseExtension.AL(player).Player.itemAnimation / BaseExtension.AL(player).Player.itemAnimationMax)) : MathHelper.Lerp(1f, 0f, HeavySwingEase((float)BaseExtension.AL(player).Player.itemAnimation / BaseExtension.AL(player).Player.itemAnimationMax));
+            player.AL().progress = player.AL().swingDir == 1 ? MathHelper.Lerp(0f, 1f, HeavySwingEase((float)player.AL().Player.itemAnimation / player.AL().Player.itemAnimationMax)) : MathHelper.Lerp(1f, 0f, HeavySwingEase((float)player.AL().Player.itemAnimation / player.AL().Player.itemAnimationMax));
 
-            if (player.Center.X + BaseExtension.AL(player).startingDirection.X > player.Center.X)
+            if (player.Center.X + player.AL().startingDirection.X > player.Center.X)
                 player.ChangeDir(-1);
             else
                 player.ChangeDir(1);
-            BaseExtension.AL(player).currentArmRotation = BaseExtension.AL(player).startingDirection.RotatedBy(-MathHelper.PiOver4).ToRotation() + (MathHelper.Pi * 1.5f) * BaseExtension.AL(player).progress;
-            BaseExtension.AL(player).currentArmPosition = BaseExtension.AL(player).Player.GetFrontHandPosition(Player.CompositeArmStretchAmount.Full, BaseExtension.AL(player).currentArmRotation);
-            player.itemLocation = BaseExtension.AL(player).currentArmPosition;
-            player.itemRotation = player.direction == 1 ? BaseExtension.AL(player).currentArmRotation + MathHelper.PiOver4 * 3 : BaseExtension.AL(player).currentArmRotation - MathHelper.PiOver4 * 3;
-            player.SetCompositeArmFront(true, Player.CompositeArmStretchAmount.Full, BaseExtension.AL(player).currentArmRotation);
+            player.AL().currentArmRotation = player.AL().startingDirection.RotatedBy(-MathHelper.PiOver4).ToRotation() + (MathHelper.Pi * 1.5f) * player.AL().progress;
+            player.AL().currentArmPosition = player.AL().Player.GetFrontHandPosition(Player.CompositeArmStretchAmount.Full, player.AL().currentArmRotation);
+            player.itemLocation = player.AL().currentArmPosition;
+            player.itemRotation = player.direction == 1 ? player.AL().currentArmRotation + MathHelper.PiOver4 * 3 : player.AL().currentArmRotation - MathHelper.PiOver4 * 3;
+            player.SetCompositeArmFront(true, Player.CompositeArmStretchAmount.Full, player.AL().currentArmRotation);
 
             if (player.HeldItem.type == ModContent.ItemType<FishCleaver>())
-                Dust.NewDust(BaseExtension.AL(player).currentArmPosition + (MathHelper.PiOver2 + BaseExtension.AL(player).currentArmRotation).ToRotationVector2() * Main.rand.Next(0, 129), 2, 2, DustID.WaterCandle);
+                Dust.NewDust(player.AL().currentArmPosition + (MathHelper.PiOver2 + player.AL().currentArmRotation).ToRotationVector2() * Main.rand.Next(0, 129), 2, 2, DustID.WaterCandle);
 
         }
 
         public override void UseItemHitbox(Player player, ref Rectangle hitbox, ref bool noHitbox)
         {
             hitbox.Width = hitbox.Height = 128;
-            hitbox.Location = ((BaseExtension.AL(player).currentArmPosition - player.MountedCenter).SafeNormalize(Vector2.UnitY) * 64f + player.MountedCenter - hitbox.Size() / 2f).ToPoint();
+            hitbox.Location = ((player.AL().currentArmPosition - player.MountedCenter).SafeNormalize(Vector2.UnitY) * 64f + player.MountedCenter - hitbox.Size() / 2f).ToPoint();
 
         }
 

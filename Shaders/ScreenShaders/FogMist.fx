@@ -19,7 +19,7 @@ float2 uImageOffset;
 float uSaturation;
 float4 uSourceRect;
 float2 uZoom;
-bool uHasLantern;
+bool uLightSources [50];
 
 float4 FogMist(float2 coords : TEXCOORD0) : COLOR0
 {
@@ -27,11 +27,11 @@ float4 FogMist(float2 coords : TEXCOORD0) : COLOR0
     
     float4 color = tex2D(uImage2, coords * 2. - 1.  + uTime * 0.1) * uColor.rgbr;
     float4 mask = tex2D(uImage2,coords+ uTime * 0.1);
-    
-    color *= mask.r * 5;
+
+    mask.a = mask.r;
     float circle = length(squareUV);
-    
-    return saturate(tex2D(uImage0, coords) + color * smoothstep(0., uHasLantern ? 25 : 5, circle) * 25) * uColor.rgbr * mask.r;
+    color = saturate(tex2D(uImage0, coords) + color * smoothstep(0., 2 * 1 / uProgress, circle) * 15) * uColor.rgbr * mask.r;
+    return lerp(tex2D(uImage0, coords), color,uProgress);
     
     
 }

@@ -22,6 +22,7 @@ using Terraria.Audio;
 using Terraria.Localization;
 using MultidimensionMod.Utilities;
 using Terraria.Graphics.Effects;
+using MultidimensionMod.Items;
 
 namespace MultidimensionMod.Common.Players
 {
@@ -80,7 +81,9 @@ namespace MultidimensionMod.Common.Players
         public bool SkulkerShell = false;
         public bool impactTreads = false;
         public bool impactSpeedReached = false;
-
+        public bool FogLantern = false;
+        public float FogProgress = 0f;
+        public float FogLanternThreshold = 0.7f;
         #region Custom Sword Swing Fields
         public int swingDir = 1;
         public Vector2 currentArmPosition = Vector2.Zero;
@@ -120,6 +123,7 @@ namespace MultidimensionMod.Common.Players
             GripMinion = false;
             SkulkerShell = false;
             impactTreads = false;
+            FogLantern = false;
         }
         public override void UpdateDead()
         {
@@ -133,6 +137,7 @@ namespace MultidimensionMod.Common.Players
 
         public override void UpdateEquips()
         {
+   
             if (!Symbio)
             {
                 Mario = 0;
@@ -440,6 +445,21 @@ namespace MultidimensionMod.Common.Players
 
         public override void PostUpdateMiscEffects()
         {
+            if ((Player.InModBiome<TheShroudedMire>() && Main.IsItDay() && ((FogProgress < 1f && !FogLantern) || (FogLantern && FogProgress < FogLanternThreshold))))
+                FogProgress += 0.05f;
+            if (!Main.IsItDay() || ((FogProgress > 0 && !Player.InModBiome<TheShroudedMire>()) || (FogLantern && FogProgress > FogLanternThreshold)))
+                FogProgress -= 0.05f;
+
+            if (Main.netMode != NetmodeID.Server)
+            {
+                Filters.Scene["FogMist"].GetShader().UseProgress(FogProgress);
+                Filters.Scene["FogMist"].GetShader().UseColor(Color.DarkGray);
+                if (FogProgress > 0 && !Filters.Scene["FogMist"].IsInUse())
+                    Filters.Scene.Activate("FogMist");
+                else if (FogProgress <= 0 && Filters.Scene["FogMist"].IsInUse())
+                    Filters.Scene.Deactivate("FogMist");
+            }
+
             if (Symbio)
             {
                 int damage = 75;

@@ -400,9 +400,10 @@ namespace MultidimensionMod
 			if (Main.netMode != NetmodeID.Server)
 			{
 
-				Filters.Scene["FogMist"].GetShader().UseImage(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture").Value).Shader.Parameters["uLightSources"].SetValue(LightsBuffer.LightSorucesIndex);
+                Filters.Scene["FogMist"].GetShader().UseImage(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture"), 1, SamplerState.LinearWrap);
+                
 
-			}
+            }
         }
 
         public void LoadScreenShaders()

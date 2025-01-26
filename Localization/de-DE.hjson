@@ -3144,7 +3144,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Draws the attention of the glowing royalty
-					Can only be used in an underground Glowing Mushroom Biome
+					Can only be used in a Glowing Mushroom Biome
 					Non-consumable
 					''' */
 				/* Lore:
@@ -3159,7 +3159,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					Plays ???
-					By Clyder8
+					By ???
 					''' */
 			}
 
@@ -3167,8 +3167,8 @@ Mods: {
 				// DisplayName: Music Box (Mushroom Monarch)
 				/* Tooltip:
 					'''
-					Plays Fungal Face-off
-					By SpectralAves
+					Plays ???
+					By Clyder8
 					''' */
 			}
 
@@ -4358,12 +4358,25 @@ Mods: {
 			}
 
 			ShroomForestNightBox: {
-				// DisplayName: Shroom Forest Night Box
-				// Tooltip: ""
+				// DisplayName: Music Box (Scarlet Mycelium Forest Night)
+				/* Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					''' */
 			}
 
 			ShroomForestNightArrivalBox: {
-				// DisplayName: Shroom Forest Night Arrival Box
+				// DisplayName: Music Box (Scarlet Mycelium Forest Night - Tarnished)
+				/* Tooltip:
+					'''
+					Plays ???
+					By Clyder8
+					''' */
+			}
+
+			FogLantern: {
+				// DisplayName: Fog Lantern
 				// Tooltip: ""
 			}
 		}
@@ -5032,9 +5045,9 @@ Mods: {
 			// BogwoodSinkPlaced.MapEntry: Bogwood Sink
 			// BogwoodTablePlaced.MapEntry: Bogwood Table
 			// BogwoodWorkbenchPlaced.MapEntry: Bogwood Work Bench
-			// FungusMenuBoxPlaced.MapEntry: Fungus Menu Box Placed
-			// ShroomForestBoxNightPlaced.MapEntry: Shroom Forest Box Night Placed
-			// ShroomForestNightArrivalBoxPlaced.MapEntry: Shroom Forest Night Arrival Box Placed
+			// FungusMenuBoxPlaced.MapEntry: Music Box
+			// ShroomForestBoxNightPlaced.MapEntry: Music Box
+			// ShroomForestNightArrivalBoxPlaced.MapEntry: Music Box
 		}
 
 		DeathMessages: {
