@@ -4376,8 +4376,8 @@ Mods: {
 			}
 
 			FogLantern: {
-				// DisplayName: Fog Lantern
-				// Tooltip: ""
+				// DisplayName: Defog Lantern
+				// Tooltip: Partially clears up the thick fog in the Shrouded Mire
 			}
 		}
 
