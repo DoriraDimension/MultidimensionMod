@@ -19,6 +19,8 @@ using Terraria.GameContent;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.Graphics.Light;
+using System.Text;
+
 
 namespace MultidimensionMod
 {
@@ -382,4 +384,52 @@ namespace MultidimensionMod
                 TradingUILayer.Update(gameTime);
         }
     }
+
+	public class EffectsLoader : ModSystem 
+	{
+
+        public const string ScreenShadersFolderPath = "Shaders/ScreenShaders/";
+        public override void Load()
+        {
+            LoadScreenShaders();
+			SetupShaderProperties();
+        }
+
+		public void SetupShaderProperties()
+        {
+			if (Main.netMode != NetmodeID.Server)
+			{
+
+				Filters.Scene["FogMist"].GetShader().UseImage(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture").Value).Shader.Parameters["uLightSources"].SetValue(LightsBuffer.LightSorucesIndex);
+
+			}
+        }
+
+        public void LoadScreenShaders()
+        {
+            if (Main.netMode != NetmodeID.Server)
+            {
+
+                foreach (string path in Mod.GetFileNames())
+                {
+                    if (!path.StartsWith(ScreenShadersFolderPath) || !path.EndsWith(".xnb"))
+                        continue;
+
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append(path);
+                    sb.Remove(0, ScreenShadersFolderPath.Length);
+                    sb.Replace(".xnb", "");
+                    string shaderName = sb.ToString();
+
+                    Asset<Effect> screen = ModContent.Request<Effect>(Mod.Name + "/" + ScreenShadersFolderPath + shaderName, AssetRequestMode.ImmediateLoad);
+                    Filters.Scene[shaderName] = new Filter(new ScreenShaderData(screen, shaderName + "Pass"), EffectPriority.High);
+                    Filters.Scene[shaderName].Load();
+                }
+            }
+
+        }
+    }
+
+
 }
+

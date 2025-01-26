@@ -37,7 +37,6 @@ obj/Debug/net6.0/MultidimensionMod.GeneratedMSBuildEditorConfig.editorconfig
 *.suo
 *.dll
 
-*.xnb
 
 packages/*
 bin/*

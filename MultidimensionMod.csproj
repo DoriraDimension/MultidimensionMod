@@ -5,4 +5,8 @@
     <AssemblyName>MultidimensionMod</AssemblyName>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Items\FogLantern.png" />
+    <None Remove="shaders\MireFog.fx" />
+  </ItemGroup>
 </Project>

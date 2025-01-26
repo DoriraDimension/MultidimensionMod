@@ -21,6 +21,7 @@ using Terraria.GameInput;
 using Terraria.Audio;
 using Terraria.Localization;
 using MultidimensionMod.Utilities;
+using Terraria.Graphics.Effects;
 
 namespace MultidimensionMod.Common.Players
 {
@@ -153,6 +154,7 @@ namespace MultidimensionMod.Common.Players
 
         public override void PreUpdate()
         {
+
             if (MonarchHeart && !Player.HasBuff(BuffID.PotionSickness) && !Player.dead)
             {
                 int healDividing = 4;

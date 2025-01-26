@@ -2,6 +2,14 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MultidimensionMod.Biomes;
+using Terraria.Graphics.Shaders;
+using Terraria.Graphics.Effects;
+using Terraria.ID;
+using Terraria;
+using Terraria.Initializers;
+using System;
+using ReLogic.Content.Sources;
+using System.Linq;
 
 namespace MultidimensionMod.Backgrounds
 {
@@ -49,11 +57,30 @@ namespace MultidimensionMod.Backgrounds
         {
             return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Backgrounds/MireBG");
         }
+
         public override bool PreDrawCloseBackground(SpriteBatch spriteBatch)
 		{
-            Color DefaultFog = new Color(120, 120, 200);            
-            Fog.Update(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture").Value);
-			Fog.Draw(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture").Value, true,DefaultFog);
+            //Color DefaultFog = new Color(120, 120, 200);
+            //Fog.Update(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture").Value);
+            //Fog.Draw(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture").Value, true,DefaultFog);
+
+            if(Main.netMode != NetmodeID.Server) 
+            {
+
+                if (Main.LocalPlayer.InModBiome<TheShroudedMire>() && !Filters.Scene["FogMist"].IsInUse())
+                    Filters.Scene.Activate("FogMist");
+                else if (!Main.LocalPlayer.InModBiome<TheShroudedMire>() && Filters.Scene["FogMist"].IsInUse())
+                    Filters.Scene.Deactivate("FogMist");
+
+
+                Filters.Scene["FogMist"].GetShader().UseImage(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture"), 1, SamplerState.LinearWrap);
+                Filters.Scene["FogMist"].GetShader().UseColor(Color.Gray);
+
+
+
+            }
+
+
             return true;
 		}
     }
