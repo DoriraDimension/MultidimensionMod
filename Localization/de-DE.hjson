@@ -4361,6 +4361,11 @@ Mods: {
 				// DisplayName: Shroom Forest Night Box
 				// Tooltip: ""
 			}
+
+			ShroomForestNightArrivalBox: {
+				// DisplayName: Shroom Forest Night Arrival Box
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -5029,6 +5034,7 @@ Mods: {
 			// BogwoodWorkbenchPlaced.MapEntry: Bogwood Work Bench
 			// FungusMenuBoxPlaced.MapEntry: Fungus Menu Box Placed
 			// ShroomForestBoxNightPlaced.MapEntry: Shroom Forest Box Night Placed
+			// ShroomForestNightArrivalBoxPlaced.MapEntry: Shroom Forest Night Arrival Box Placed
 		}
 
 		DeathMessages: {
