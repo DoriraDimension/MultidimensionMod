@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using MultidimensionMod.Items.Placeables.Biomes.Mire;
 using System;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -48,9 +49,28 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
                 Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 32, ModContent.ItemType<MireSeeds>());
         }
 
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            Vector2 worldPosition = new Vector2(i, j).ToWorldCoordinates();
+            Player nearestPlayer = Main.player[Player.FindClosest(worldPosition, 16, 16)];
+            if (nearestPlayer.active)
+            {
+                if (nearestPlayer.HeldItem.type == ItemID.Sickle)
+                {
+                    yield return new Item(ItemID.Hay, Main.rand.Next(1, 2 + 1));
+                }
+
+                if (Main.rand.NextBool(20))
+                {
+                    yield return new Item(ModContent.ItemType<MireSeeds>());
+                }
+            }
+        }
+
         public override void SetDrawPositions(int i, int j, ref int width, ref int offsetY, ref int height, ref short tileFrameX, ref short tileFrameY)
         {
-            offsetY = 2;
+            offsetY = -14;
+            height = 38;
         }
 
         public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
@@ -59,17 +79,17 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
 			Texture2D Texture = ModContent.Request<Texture2D>("MultidimensionMod/Tiles/Biomes/Mire/MireSurfaceFoliage").Value;
             Texture2D GlowTexture = ModContent.Request<Texture2D>("MultidimensionMod/Tiles/Biomes/Mire/MireSurfaceFoliage_Glow").Value;
 
-            Vector2 zero = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
+            Vector2 zero = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange, Main.offScreenRange);
             // Offset along the Y axis depending on the current frame
 
             // Make sure to draw with Color.White or at least a color that is fully opaque
             // Achieve opaqueness by increasing the alpha channel closer to 255. (lowering closer to 0 will achieve transparency)
             if (!Main.dayTime)
             {
-                spriteBatch.Draw(GlowTexture, new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + zero, new Rectangle(tile.TileFrameX, tile.TileFrameY, 8, 16), Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+                spriteBatch.Draw(GlowTexture, new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + zero, new Rectangle(tile.TileFrameX, tile.TileFrameY, 16, 18), Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
             }
 			else
-				spriteBatch.Draw(Texture, new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + zero, new Rectangle(tile.TileFrameX, tile.TileFrameY, 8, 16), Lighting.GetColor(i, j), 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+				spriteBatch.Draw(Texture, new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + zero, new Rectangle(tile.TileFrameX, tile.TileFrameY, 16, 18), Lighting.GetColor(i, j), 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
 
             // Return false to stop vanilla draw
             return false;

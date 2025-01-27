@@ -15,6 +15,7 @@ namespace MultidimensionMod.Biomes
         public override int Music => Main.dayTime ? MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Shroom") : Main.hardMode ? MusicLoader.GetMusicSlot(Mod, "Sounds/Music/ShroomNightArrival") : MusicLoader.GetMusicSlot(Mod, "Sounds/Music/ShroomNight");
 
         public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => ModContent.GetInstance<ShroomForestBackground>();
+        public override ModUndergroundBackgroundStyle UndergroundBackgroundStyle => ModContent.GetInstance<ShroomForestUGBackground>();
 
         public override ModWaterStyle WaterStyle => ModContent.GetInstance<MushroomWaterStyle>();
 
@@ -45,7 +46,8 @@ namespace MultidimensionMod.Biomes
             SFCount = tileCounts[ModContent.TileType<Mycelium>()]
                 + tileCounts[ModContent.TileType<MyceliumSandPlaced>()]
                 + tileCounts[ModContent.TileType<MyceliumSandstonePlaced>()]
-                + tileCounts[ModContent.TileType<MyceliumHardsandPlaced>()];
+                + tileCounts[ModContent.TileType<MyceliumHardsandPlaced>()]
+                + tileCounts[ModContent.TileType<SporeStonePlaced>()];
         }
     }
 }
