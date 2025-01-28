@@ -2904,7 +2904,7 @@ Mods: {
 					Hitting enemies with the blade inflicts them with the Mary's Wrath debuff
 					After 30 uses of the weapon, Mary will be summoned
 					Any enemy that had the Mary's Wrath debuff on them takes 150 damage and gets their debuff removed
-					It was never just folklore
+					'It was never just folklore'
 					''' */
 			}
 
@@ -5530,5 +5530,9 @@ Mods: {
 				// GiveRare: Give Rare Plant
 			}
 		}
+
+		// MushroomMonarch.BossChecklistIntegration.DespawnMessage: Mods.MultidimensionMod.MushroomMonarch.BossChecklistIntegration.DespawnMessage
+		// FeudalFungus.BossChecklistIntegration.DespawnMessage: Mods.MultidimensionMod.FeudalFungus.BossChecklistIntegration.DespawnMessage
+		// Smiley.BossChecklistIntegration.DespawnMessage: Mods.MultidimensionMod.Smiley.BossChecklistIntegration.DespawnMessage
 	}
 }

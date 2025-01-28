@@ -10,6 +10,8 @@ using Terraria.GameContent.Bestiary;
 using Terraria.Audio;
 using MultidimensionMod.Base;
 using MultidimensionMod.Items.Critters;
+using MultidimensionMod.Items.Accessories;
+using Terraria.GameContent.ItemDropRules;
 
 namespace MultidimensionMod.NPCs.MushBiomes
 {
@@ -77,6 +79,11 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<SlimeFart>(), 10, 0);
                 }
             }
+        }
+
+        public override void ModifyNPCLoot(NPCLoot NPCloot)
+        {
+            NPCloot.Add(ItemDropRule.Common(ItemID.Gel, 5, 1, 2));
         }
 
         public override void FindFrame(int frameHeight)

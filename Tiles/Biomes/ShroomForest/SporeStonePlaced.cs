@@ -27,7 +27,7 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             HitSound = SoundID.Tink;
             DustType = ModContent.DustType<MushroomDust>();
             AddMapEntry(new Color(179, 146, 131));
-            MinPick = 59;
+            MinPick = 50;
         }
     }
 }
