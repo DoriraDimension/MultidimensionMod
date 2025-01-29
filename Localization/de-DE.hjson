@@ -4379,6 +4379,11 @@ Mods: {
 				// DisplayName: Defog Lantern
 				// Tooltip: Partially clears up the thick fog in the Shrouded Mire
 			}
+
+			SporePotItem: {
+				// DisplayName: Spore Pot
+				// Tooltip: You are not supposed to have this.
+			}
 		}
 
 		SetBonuses: {
