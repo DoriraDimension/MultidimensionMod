@@ -11,9 +11,9 @@ namespace MultidimensionMod.Dusts
             dust.noGravity = true;
             dust.noLight = true;
             dust.frame = new Rectangle(0, 0, 22, 12);
-            dust.scale -= 0.012f;
+            dust.scale -= 0.022f;
             dust.position += dust.velocity;
-            dust.rotation = dust.velocity.X / 50f;
+            dust.rotation *= .01f * Main.rand.Next(3);
             if (dust.scale <= 0)
             {
                 dust.active = false;

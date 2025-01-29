@@ -46,7 +46,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			for (int i = 0; i < 8; i++)
 			{
                 Vector2 perturbedSpeed = new Vector2(velocity.X / 2, velocity.Y / 2).RotatedByRandom(MathHelper.ToRadians(8));
-                int dust = Dust.NewDust(player.position + player.velocity, player.width, player.height, ModContent.DustType<DesertEagleFeather>(), perturbedSpeed.X + Main.rand.Next(4), perturbedSpeed.Y);
+                int dust = Dust.NewDust(player.position + player.velocity, player.width, player.height, ModContent.DustType<DesertEagleFeather>(), perturbedSpeed.X + Main.rand.Next(4) / 2, perturbedSpeed.Y + Main.rand.Next(4) / 2);
             }
 			return true;
         }
