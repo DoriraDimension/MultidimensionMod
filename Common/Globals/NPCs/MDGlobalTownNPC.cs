@@ -21,15 +21,30 @@ namespace MultidimensionMod
 
         public override void ModifyShop(NPCShop shop)
         {
+            if (shop.NpcType == NPCID.ArmsDealer)
+            {
+                shop.Add(new Item(ItemID.Handgun)
+                {
+                    shopCustomPrice = Item.buyPrice(0, 10, 0, 0)
+                }, Condition.DownedEowOrBoc);
+            }
+            if (shop.NpcType == NPCID.SkeletonMerchant)
+            {
+                shop.Add(new Item(ItemID.MiningHelmet)
+                {
+                    shopCustomPrice = Item.buyPrice(0, 2, 0, 0)
+                }, Condition.MoonPhaseNew);
+                shop.Add(new Item(ItemID.MiningShirt)
+                {
+                    shopCustomPrice = Item.buyPrice(0, 10, 0, 0)
+                }, Condition.MoonPhaseNew);
+                shop.Add(new Item(ItemID.MiningPants)
+                {
+                    shopCustomPrice = Item.buyPrice(0, 10, 0, 0)
+                }, Condition.MoonPhaseNew);
+            }
             if (ModContent.GetInstance<MDConfig>().NPCItemSelling)
             {
-                if (shop.NpcType == NPCID.ArmsDealer)
-                {
-                    shop.Add(new Item(ItemID.Handgun)
-                    {
-                        shopCustomPrice = Item.buyPrice(0, 10, 0, 0)
-                    }, Condition.DownedEowOrBoc);           
-                }
                 if (shop.NpcType == NPCID.Dryad)
                 {
                     shop.Add(new Item(ItemID.SlimeCrown)
