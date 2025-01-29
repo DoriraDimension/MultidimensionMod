@@ -4654,7 +4654,18 @@ Mods: {
 			OtherworldlyGlowmarin.DisplayName: Otherworldly Glowmarin
 			ParrotLobster.DisplayName: Parrot Lobster
 			StormFrontEel.DisplayName: Storm Front Eel
-			TownDrake.DisplayName: Ice Drake Juvenile
+
+			TownDrake: {
+				DisplayName: Ice Drake Juvenile
+				Dialogue1: Sniff Sniff
+				Dialogue2: Shi Shi Shia
+				Dialogue3: grrrrrr
+				Dialogue4: *It stares at you intensely*
+				TheThreat: Mark my words mortal, as they will be the last thing you hear in your worthless life. We will strike when you least expect it.
+				Adoption: You adopted a juvenile Ice Drake, treat it well.
+				Death: Your Drake left, try to find a new one!
+			}
+
 			IceDrakeJuvenile.DisplayName: Ice Drake Juvenile
 			SearedAshton.DisplayName: Seared Ashton
 			Dusty.DisplayName: Dusty
