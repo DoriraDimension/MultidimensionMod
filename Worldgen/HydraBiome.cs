@@ -182,6 +182,10 @@ namespace MultidimensionMod.Worldgen
                 [new Color(88, 55, 146)] = ModContent.TileType<BogwoodPlaced>(), //Bridge Wood
                 [new Color(199, 199, 206)] = ModContent.TileType<DarkmudPlaced>(), //Lake Mud
                 [new Color(59, 30, 111)] = ModContent.TileType<BogwoodBeamPlaced>(), //Bridge Support
+                [new Color(62, 62, 62)] = TileID.Cobweb, //sponder wep
+                [new Color(255, 0, 255)] = TileID.AmethystGemspark, //Bridge Support
+                [new Color(0, 255, 0)] = TileID.DiamondGemspark, //Bridge Support
+                [new Color(255, 0, 0)] = TileID.AmberGemspark, //Bridge Support
                 [new Color(150, 150, 150)] = -2, //turn into air
                 [Color.Black] = -1 //don't touch when genning
             };
@@ -195,6 +199,7 @@ namespace MultidimensionMod.Worldgen
                 [new Color(0, 116, 246)] = WallID.Waterfall, //Self explanatory
                 //Island and bridges
                 [new Color(88, 55, 146)] = ModContent.WallType<BogwoodFencePlaced>(),
+                [new Color(47, 18, 99)] = ModContent.WallType<BogwoodWallPlaced>(),
                 [Color.Black] = -1 //don't touch when genning				
             };
 
@@ -222,7 +227,7 @@ namespace MultidimensionMod.Worldgen
                 gen.Generate(genX, genY, true, true);
             });
             Vector2 losOriginos = new(originCenter.X - (654 / 2), originCenter.Y);
-            Point volcanoPoint = losOriginos.ToPoint();
+            Point lakePoint = losOriginos.ToPoint();
             //WorldGen.PlaceObject(originCenter.X - 91, originCenter.Y + 18, ModContent.TileType<OrnateBand>(), mute: true);
             //WorldGen.PlaceObject(originCenter.X + 44, originCenter.Y - 308, ModContent.TileType<PagodaBell>(), mute: true);
             //WorldGen.PlaceObject(originCenter.X + 28, originCenter.Y - 403, ModContent.TileType<SamuraiCorpse>(), mute: true);
@@ -251,6 +256,31 @@ namespace MultidimensionMod.Worldgen
             //WorldGen.PlaceObject(volcanoPoint.X + 41, volcanoPoint.Y + 265, ModContent.TileType<DragonEgg>(), mute: true);
             //WorldGen.PlaceObject(volcanoPoint.X + 33, volcanoPoint.Y + 265, ModContent.TileType<DragonEgg>(), mute: true);
 
+            for (int i = lakePoint.X; i < lakePoint.X + 654; i++)
+            {
+                for (int j = lakePoint.Y; j < lakePoint.Y + 760; j++)
+                {
+                    switch (Main.tile[i, j].TileType)
+                    {
+                        case TileID.DiamondGemspark:
+                            Main.tile[i, j].ClearTile();
+                            WorldGen.PlaceTile(i, j, ModContent.TileType<BogwoodPlatformPlaced>(), true, false, -1, 0);
+                            WorldGen.SlopeTile(i, j, 2);
+                            break;
+                        case TileID.AmberGemspark:
+                            Main.tile[i, j].ClearTile();
+                            WorldGen.PlaceTile(i, j, ModContent.TileType<BogwoodPlatformPlaced>(), true, false, -1, 0);
+                            WorldGen.SlopeTile(i, j, 1);
+                            break;
+                        case TileID.AmethystGemspark:
+                            Main.tile[i, j].ClearTile();
+                            WorldGen.PlaceTile(i, j, ModContent.TileType<BogwoodPlatformPlaced>(), true, false, -1, 0);
+                            break;
+                    }
+                    if (WorldGen.genRand.NextBool(3))
+                        WorldGen.PlacePot(i, j - 1);
+                }
+            }
         }
 
         public static int GetWorldSize()
