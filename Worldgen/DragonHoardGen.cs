@@ -164,6 +164,9 @@ namespace MultidimensionMod.Worldgen
                 [new Color(144, 4, 97)] = ModContent.TileType<AwakenedRockPlaced>(), //Akuma room block
                 [new Color(97, 20, 75)] = ModContent.TileType<VolcanicRockDensePlaced>(), //Broodmother and Ashe nests. Later replaced with the Nest Block
                 [new Color(223, 170, 10)] = ModContent.TileType<IncineriteOre>(), // Ore scattered around
+                [new Color(52, 44, 73)] = TileID.Obsidian, //Obsidian in lower section
+                [new Color(96, 255, 248)] = TileID.WaterDrip, // Water dropper
+                [new Color(240, 104, 14)] = TileID.LavaDrip, // Lava dropper
                 //Pagoda
                 [new Color(1, 0, 101)] = ModContent.TileType<PagodaBrickPlaced>(), //Pagoda tiles
                 [new Color(0, 255, 0)] = ModContent.TileType<PagodaBrickPlaced>(), //Pagoda Floor.

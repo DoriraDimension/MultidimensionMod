@@ -4384,6 +4384,11 @@ Mods: {
 				DisplayName: Spore Pot
 				Tooltip: You are not supposed to have this.
 			}
+
+			SporeStoneWall: {
+				DisplayName: Spore Stone Wall
+				Tooltip: ""
+			}
 		}
 
 		SetBonuses: {

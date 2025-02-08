@@ -277,8 +277,8 @@ namespace MultidimensionMod.Worldgen
                             WorldGen.PlaceTile(i, j, ModContent.TileType<BogwoodPlatformPlaced>(), true, false, -1, 0);
                             break;
                     }
-                    if (WorldGen.genRand.NextBool(3))
-                        WorldGen.PlacePot(i, j - 1);
+                    /*if (WorldGen.genRand.NextBool(3)) //keeping this here to remember, in case it's needed
+                        WorldGen.PlacePot(i, j - 1);*/
                 }
             }
         }
