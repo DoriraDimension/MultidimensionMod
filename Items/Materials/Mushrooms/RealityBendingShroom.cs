@@ -26,8 +26,8 @@ namespace MultidimensionMod.Items.Materials.Mushrooms
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Mushrooms/RealityBendingShroom").Value;
-            Texture2D textureGlow = ModContent.Request<Texture2D>("MultidimensionMod/Items/Mushrooms/RealityBendingShroom_Glow").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Materials/Mushrooms/RealityBendingShroom").Value;
+            Texture2D textureGlow = ModContent.Request<Texture2D>("MultidimensionMod/Items/Materials/Mushrooms/RealityBendingShroom_Glow").Value;
             Rectangle frame;
             frame = Main.itemAnimations[Item.type].GetFrame(texture, Main.itemFrameCounter[whoAmI]);
             Vector2 origin = frame.Size() / 2f;
