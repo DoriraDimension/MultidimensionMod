@@ -51,11 +51,19 @@ namespace MultidimensionMod.Projectiles.Solutions
                     }
 
                     int wallType = Main.tile[k, l].WallType;
-                    if (wallType == WallID.HardenedSand || tileType == WallID.CorruptHardenedSand || tileType == WallID.CrimsonHardenedSand || tileType == WallID.HallowHardenedSand)
+                    if (wallType == WallID.HardenedSand || wallType == WallID.CorruptHardenedSand || wallType == WallID.CrimsonHardenedSand || wallType == WallID.HallowHardenedSand)
                     {
                         ConvertWall(k, l, (ushort)ModContent.WallType<MyceliumHardsandWallPlaced>());
                     }
-                    if (wallType == WallID.Sandstone || tileType == WallID.CorruptSandstone || tileType == WallID.CrimsonSandstone || tileType == WallID.HallowSandstone)
+                    if (wallType == WallID.Stone || wallType == WallID.EbonstoneUnsafe || wallType == WallID.CrimstoneUnsafe || wallType == WallID.PearlstoneBrickUnsafe)
+                    {
+                        ConvertWall(k, l, (ushort)ModContent.WallType<SporeStoneWallPlaced>());
+                    }
+                    if (wallType == WallID.GrassUnsafe || wallType == WallID.JungleUnsafe || wallType == WallID.FlowerUnsafe || wallType == WallID.Grass|| wallType == WallID.Jungle|| wallType == WallID.Flower|| wallType == WallID.CorruptGrassUnsafe|| wallType == WallID.HallowedGrassUnsafe|| wallType == WallID.CrimsonGrassUnsafe)
+                    {
+                        ConvertWall(k, l, (ushort)ModContent.WallType<MyceliumWallPlaced>());
+                    }
+                    if (wallType == WallID.Sandstone || wallType == WallID.CorruptSandstone || wallType == WallID.CrimsonSandstone || wallType == WallID.HallowSandstone)
                     {
                         ConvertWall(k, l, (ushort)ModContent.WallType<MyceliumSandstoneWallPlaced>());
                     }

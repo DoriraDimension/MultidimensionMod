@@ -73,7 +73,7 @@ namespace MultidimensionMod.Worldgen
 
             ushort mycelium = (ushort)ModContent.TileType<Mycelium>(), sand = (ushort)ModContent.TileType<MyceliumSandPlaced>(),
                 sandstone = (ushort)ModContent.TileType<MyceliumSandstonePlaced>(), hardenedSand = (ushort)ModContent.TileType<MyceliumHardsandPlaced>(), 
-                sporeStone = (ushort)ModContent.TileType<SporeStonePlaced>(), sandstoneWall = (ushort)ModContent.WallType<MyceliumSandstoneWallPlaced>(), hardenedSandWall = (ushort)ModContent.WallType<MyceliumHardsandWallPlaced>(),sporeStoneWall = (ushort)ModContent.WallType<SporeStoneWallPlaced>();
+                sporeStone = (ushort)ModContent.TileType<SporeStonePlaced>(), sandstoneWall = (ushort)ModContent.WallType<MyceliumSandstoneWallPlaced>(), hardenedSandWall = (ushort)ModContent.WallType<MyceliumHardsandWallPlaced>(),sporeStoneWall = (ushort)ModContent.WallType<SporeStoneWallPlaced>(),fungusGrassWall = (ushort)ModContent.WallType<MyceliumWallPlaced>();
             int worldSize = GetWorldSize();
             int biomeRadius = worldSize == 3 ? 300 : worldSize == 2 ? 260 : 180;
            
@@ -141,9 +141,16 @@ namespace MultidimensionMod.Worldgen
             WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
             {
                 new InWorld(),
-                new Modifiers.OnlyWalls(new ushort[]{WallID.Stone,WallID.SnowWallUnsafe}),
+                new Modifiers.OnlyWalls(new ushort[]{WallID.Stone,WallID.SnowWallUnsafe, WallID.EbonstoneUnsafe,WallID.CrimstoneUnsafe}),
                 new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
                 new PlaceModWall(sporeStoneWall, true)
+            }));
+            WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
+            {
+                new InWorld(),
+                new Modifiers.OnlyWalls(new ushort[]{WallID.GrassUnsafe,WallID.FlowerUnsafe, WallID.JungleUnsafe,WallID.CorruptGrassUnsafe,WallID.CrimsonGrassUnsafe,WallID.Grass,WallID.Flower, WallID.Jungle}),
+                new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
+                new PlaceModWall(fungusGrassWall, true)
             }));
             WorldUtils.Gen(new((int)PlaceBiomeX, (int)PlaceBiomeY+ (int)(biomeRadius *1f)), new Shapes.Circle((int)(biomeRadius*0.6)), Actions.Chain(new GenAction[]
             {
@@ -464,11 +471,14 @@ namespace MultidimensionMod.Worldgen
 
             ushort mycelium = (ushort)ModContent.TileType<Mycelium>(), sand = (ushort)ModContent.TileType<MyceliumSandPlaced>(),
                 sandstone = (ushort)ModContent.TileType<MyceliumSandstonePlaced>(), hardenedSand = (ushort)ModContent.TileType<MyceliumHardsandPlaced>(), 
-                sporeStone = (ushort)ModContent.TileType<SporeStonePlaced>(), sandstoneWall = (ushort)ModContent.WallType<MyceliumSandstoneWallPlaced>(), hardenedSandWall = (ushort)ModContent.WallType<MyceliumHardsandWallPlaced>();
+                sporeStone = (ushort)ModContent.TileType<SporeStonePlaced>(), sandstoneWall = (ushort)ModContent.WallType<MyceliumSandstoneWallPlaced>(), hardenedSandWall = (ushort)ModContent.WallType<MyceliumHardsandWallPlaced>(),sporeStoneWall = (ushort)ModContent.WallType<SporeStoneWallPlaced>(),fungusGrassWall = (ushort)ModContent.WallType<MyceliumWallPlaced>();
             int worldSize = GetWorldSize();
             int biomeRadius = worldSize == 3 ? 300 : worldSize == 2 ? 260 : 180;
-            Point originCenter = new((int)PlaceBiomeX, (int)PlaceBiomeY);
+           
 
+
+            Point originCenter = new((int)PlaceBiomeX, (int)PlaceBiomeY);
+            // TILE CONVERSIONS
             WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
             {
                 new InWorld(),
@@ -476,13 +486,7 @@ namespace MultidimensionMod.Worldgen
                 new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
                 new SetModTile(mycelium, true, true)
             }));
-            WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
-            {
-                new InWorld(),
-                new Modifiers.OnlyTiles(new ushort[]{ TileID.SnowBlock}),
-                new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
-                new SetModTile(0, true, true)
-            }));
+           
             WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
             {
                 new InWorld(),
@@ -526,6 +530,28 @@ namespace MultidimensionMod.Worldgen
                 new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
                 new PlaceModWall(sandstoneWall, true)
             }));
+            WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
+            {
+                new InWorld(),
+                new Modifiers.OnlyWalls(new ushort[]{WallID.Stone,WallID.SnowWallUnsafe, WallID.EbonstoneUnsafe,WallID.CrimstoneUnsafe}),
+                new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
+                new PlaceModWall(sporeStoneWall, true)
+            }));
+            WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
+            {
+                new InWorld(),
+                new Modifiers.OnlyWalls(new ushort[]{WallID.GrassUnsafe,WallID.FlowerUnsafe, WallID.JungleUnsafe,WallID.CorruptGrassUnsafe,WallID.CrimsonGrassUnsafe,WallID.Grass,WallID.Flower, WallID.Jungle}),
+                new Modifiers.RadialDither(biomeRadius - 5, biomeRadius),
+                new PlaceModWall(fungusGrassWall, true)
+            }));
+            WorldUtils.Gen(new((int)PlaceBiomeX, (int)PlaceBiomeY+ (int)(biomeRadius *1f)), new Shapes.Circle((int)(biomeRadius*0.6)), Actions.Chain(new GenAction[]
+            {
+                new InWorld(),
+                new Modifiers.OnlyWalls(new ushort[]{WallID.Dirt}),
+                new Modifiers.RadialDither(((biomeRadius)) /2, ((biomeRadius)/0.9)),
+                new PlaceModWall(sporeStoneWall, true)
+            }));
+
 
             WorldUtils.Gen(new((int)PlaceBiomeX, (int)PlaceBiomeY+ (int)(biomeRadius *1.5f)), new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
             {
@@ -545,6 +571,18 @@ namespace MultidimensionMod.Worldgen
                             if (WorldGen.genRand.NextBool(5))
                                 WorldGen.TryGrowingTreeByType(5, X, Y-1);
                         }
+                        if (Main.tile[X, Y].TileType == (ushort)ModContent.TileType<MyceliumSandPlaced>())
+                        {
+                            if (WorldGen.genRand.NextBool(5))
+                                WorldGen.GrowPalmTree(X, Y);
+
+                        }
+                        if (Main.tile[X, Y].TileType == (ushort)ModContent.TileType<MyceliumHardsandPlaced>())
+                        {
+                            if (WorldGen.genRand.NextBool(5))
+                                WorldGen.GrowPalmTree(X, Y);
+
+                        }
                         if (Main.tile[X, Y].TileType == 70)
                         {
                             if (WorldGen.genRand.NextBool(3))
@@ -562,6 +600,48 @@ namespace MultidimensionMod.Worldgen
                         {   
                             Tile tile = Main.tile[X, Y];
                             tile.HasTile=false;  
+                        }
+                        
+                    }
+                }
+
+            for (int X = (int)PlaceBiomeX-(int)(biomeRadius); X <= (int)PlaceBiomeX+(int)(biomeRadius); X++)
+                {
+                    for (int Y = (int)PlaceBiomeY -(int)(biomeRadius); Y <= (int)PlaceBiomeY+(int)(2f*biomeRadius); Y++)
+                    {
+                        
+                        if (Main.tile[X, Y].TileType == TileID.Pots)
+                        {   
+                           	WorldGen.KillTile(X, Y);
+
+                            WorldGen.PlaceTile(X, Y +1, ModContent.TileType<SporePots>(), style: WorldGen.genRand.Next(3), mute: true);
+                        }
+                        
+                    }
+                }
+            for (int X = (int)PlaceBiomeX-(int)(biomeRadius); X <= (int)PlaceBiomeX+(int)(biomeRadius); X++)
+                {
+                    for (int Y = (int)PlaceBiomeY -(int)(biomeRadius); Y <= (int)PlaceBiomeY+(int)(2f*biomeRadius); Y++)
+                    {
+                        if (Main.tile[X, Y].TileType == ModContent.TileType<SporeStonePlaced>()&& Main.tile[X, Y].HasTile&&WorldGen.genRand.NextFloat()<0.2f)
+                        {   
+                            WorldGen.PlaceTile(X, Y -1, ModContent.TileType<SporeStoneAmbient>(), style: WorldGen.genRand.Next(3), mute: true);
+                        }
+                        if (Main.tile[X, Y].TileType == ModContent.TileType<SporeStonePlaced>()&& Main.tile[X, Y].HasTile&&WorldGen.genRand.NextFloat()<0.2f)
+                        {   
+                            WorldGen.PlaceTile(X, Y +1, ModContent.TileType<SporeStalactite2>(), style: WorldGen.genRand.Next(3), mute: true);
+                        }
+                        if (Main.tile[X, Y].TileType == ModContent.TileType<SporeStonePlaced>()&& Main.tile[X, Y].HasTile&&WorldGen.genRand.NextFloat()<0.1f)
+                        {   
+                            WorldGen.PlaceTile(X, Y +1, ModContent.TileType<SporeStalactite1>(), style: WorldGen.genRand.Next(3), mute: true);
+                        }
+                        if (Main.tile[X, Y].TileType == ModContent.TileType<SporeStonePlaced>()&& Main.tile[X, Y].HasTile&&WorldGen.genRand.NextFloat()<0.2f)
+                        {   
+                            WorldGen.PlaceTile(X, Y -1, ModContent.TileType<SporeStalagmite2>(), style: WorldGen.genRand.Next(3), mute: true);
+                        }
+                        if (Main.tile[X, Y].TileType == ModContent.TileType<SporeStonePlaced>()&& Main.tile[X, Y].HasTile&&WorldGen.genRand.NextFloat()<0.1f)
+                        {   
+                            WorldGen.PlaceTile(X, Y -1, ModContent.TileType<SporeStalagmite1>(), style: WorldGen.genRand.Next(3), mute: true);
                         }
                         
                     }
