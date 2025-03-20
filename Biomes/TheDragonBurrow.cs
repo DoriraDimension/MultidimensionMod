@@ -27,10 +27,10 @@ namespace MultidimensionMod.Biomes
             if (isActive)
             {
                 SkyManager.Instance.Activate("DragonHoardSky");
-            }
-            if (Main.UseHeatDistortion)
-            {
-                player.ManageSpecialBiomeVisuals("HeatDistortion", player.InModBiome(ModContent.GetInstance<TheDragonHoard>()));
+                if (Main.UseHeatDistortion)
+                {
+                    player.ManageSpecialBiomeVisuals("HeatDistortion", true);
+                }
             }
         }
 
