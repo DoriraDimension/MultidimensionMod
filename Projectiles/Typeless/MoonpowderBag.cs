@@ -54,7 +54,7 @@ namespace MultidimensionMod.Projectiles.Typeless
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            if (!target.HasBuff(ModContent.BuffType<Hazed>()) || !target.HasBuff(ModContent.BuffType<MildBurn>()))
+            if (!target.HasBuff(ModContent.BuffType<Hazed>()) && !target.HasBuff(ModContent.BuffType<MildBurn>()))
             {
                 target.AddBuff(ModContent.BuffType<Hazed>(), 2400);
             }
