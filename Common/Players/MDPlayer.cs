@@ -506,27 +506,19 @@ namespace MultidimensionMod.Common.Players
             }
             if (impactTreads)
             {
-                int fallTimer = 0;
-                if (Player.pulley || Player.mount.Active || Player.grappling[0] != -1 || Player.tongued)
+                Player.maxFallSpeed *= (float)1.15;
+                //Take away effects and projectile spawn ability when going slower than desired, when on a mount, using a hook or being pulled by the Wall of Flesh's tongue
+                if (Player.pulley || Player.mount.Active || Player.grappling[0] != -1 || Player.tongued || Player.velocity.Y < 14.5f)
                 {
                     impactSpeedReached = false;
                 }
-                if (Player.velocity.Y > 0)
-                {
-                    fallTimer++;
-                }
-                if (Player.velocity.Y >= 5f)
-                {
-                    Player.gravity *= 1.15f;
-                }
-                if (Player.velocity.Y >= 13f)
-                {
-                    Player.statDefense += 6;
-                }
-                if (Player.velocity.Y >= 13f)
+                if (Player.velocity.Y >= 14.5f)
                 {
                     impactSpeedReached = true;
+                    Player.statDefense += 6;
                 }
+                //Start spawning flame dust and emit light upon reaching desired speed.
+                //Enable ability to spawn impact projectile as well.
                 if (impactSpeedReached)
                 {
                     if (Main.rand.Next(4) < 3)
@@ -544,7 +536,7 @@ namespace MultidimensionMod.Common.Players
                     Lighting.AddLight(Player.position, 0.3f, 0.2f, 0.2f);
                     if (Player.oldVelocity.Y == Player.velocity.Y)
                     {
-                        int damage = 50;
+                        int damage = 40;
                         SoundEngine.PlaySound(SoundID.NPCDeath14, Player.position);
                         Projectile.NewProjectile(Player.GetSource_Accessory(new Item(ModContent.ItemType<ImpactTreads>())), Player.Center.X, Player.Center.Y + 10, 0, 0, ModContent.ProjectileType<ImpactTreadsImpact>(), damage, 0f, Player.whoAmI);
                         impactSpeedReached = false;
@@ -602,6 +594,7 @@ namespace MultidimensionMod.Common.Players
                 }
                 player.lifeRegen -= 16;
             }
+            //Disable life regeneration during Potion Sickness as part of the Heart of the Monarch's tradeoff
             if (MonarchHeart && Player.HasBuff(BuffID.PotionSickness))
             {
                 if (player.lifeRegen > 0)

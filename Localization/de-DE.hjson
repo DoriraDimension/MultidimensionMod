@@ -4336,7 +4336,7 @@ Mods: {
 					'''
 					Allows flight
 					Negates fall damage
-					Increases fall speed by 15% and maximum fall speed by 30%
+					Increases fall speed and maximum fall speed by 15%
 					Increases defense by 6 while falling fast
 					Falling fast enough and hitting the ground will create a short lived shockwave
 					''' */
