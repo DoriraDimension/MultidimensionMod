@@ -35,7 +35,7 @@ namespace MultidimensionMod.NPCs.Mire
             AnimationType = NPCID.Frog;
             NPC.dontTakeDamageFromHostiles = false;
             NPC.catchItem = (short)ModContent.ItemType<BogFrogItem>();
-            SpawnModBiomes = new int[1] { ModContent.GetInstance<TheShroudedMire>().Type };
+            SpawnModBiomes = new int[2] { ModContent.GetInstance<TheShroudedMire>().Type, ModContent.GetInstance<SubspeciesFilterBiome>().Type };
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

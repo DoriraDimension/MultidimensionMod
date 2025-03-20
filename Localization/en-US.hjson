@@ -5229,11 +5229,11 @@ Mods: {
 		}
 
 		DropConditions: {
-			DownedSkeletronCondition: Only available after defeating Skeletron.
-			RealityCondition: Drops by doing unessecery complicated stuff.
-			DimensiumCondition: This item won't appear in the bestiary.
-			DownedMoonLordCondition: Only available after defeating Moon Lord.
-			MissingGripCondition: Only drops if one Grip of Chaos is alive.
+			DownedSkeletronCondition: Only available after defeating Skeletron
+			RealityCondition: Drops by doing unessecery complicated stuff
+			DimensiumCondition: This item won't appear in the bestiary
+			DownedMoonLordCondition: Only available after defeating Moon Lord
+			MissingGripCondition: Only drops from the last Grip of Chaos
 		}
 
 		SpecialTooltips: {

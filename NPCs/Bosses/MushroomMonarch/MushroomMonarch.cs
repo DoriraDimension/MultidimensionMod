@@ -203,7 +203,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             if (NPC.life < NPC.lifeMax / 2)
             {
                 NPC.damage = 33;
-                Lighting.AddLight(NPC.Center, (100 - NPC.alpha) * 0.0075f, 0, 0); //Makes him emit light in phase 2
+                Lighting.AddLight(NPC.Center, (100 - NPC.alpha) * 0.0085f, 0, 0); //Makes him emit light in phase 2
             }
             NPC.TargetClosest();
 

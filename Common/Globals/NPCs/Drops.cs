@@ -135,7 +135,6 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 leadingConditionRule.OnSuccess(leadingConditionRule2.OnSuccess(ItemDropRule.Common(ItemID.TwinsPetItem, 10)));
                 leadingConditionRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<TwinSoul>()));
                 npcLoot.Add(leadingConditionRule);
-                npcLoot.Add(leadingConditionRule2);
             }
 
             if (NPC.type == NPCID.TheDestroyer)
