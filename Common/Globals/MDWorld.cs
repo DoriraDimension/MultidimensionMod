@@ -83,52 +83,52 @@ namespace MultidimensionMod.Common.Globals
                 if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()) & !DownedSystem.seenFU)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.FU.Name"), 90, 120, 1.6f, 0, Color.LightGray, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.FU.Title"));
-                    NPC.SetEventFlagCleared(ref DownedSystem.seenFU, -1);
+                    DownedSystem.seenFU = true;
                 }
                 if (Main.LocalPlayer.ZoneDungeon & !DownedSystem.seenDungeon)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Dungeon.Name"), 90, 120, 1.6f, 0, Color.DarkGray, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Dungeon.Title"));
-                    NPC.SetEventFlagCleared(ref DownedSystem.seenDungeon, -1);
+                    DownedSystem.seenDungeon = true;
                 }
                 if (Main.LocalPlayer.ZoneLihzhardTemple & !DownedSystem.seenTemple)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.JungleTemple.Name"), 90, 120, 1.6f, 0, Color.Brown, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.JungleTemple.Title"));
-                    NPC.SetEventFlagCleared(ref DownedSystem.seenTemple, -1);
+                    DownedSystem.seenTemple = true;
                 }
                 if (Main.LocalPlayer.ZoneUnderworldHeight & !Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()) & !DownedSystem.seenHell)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Underworld.Name"), 90, 120, 1.6f, 0, Color.OrangeRed, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Underworld.Title"));
-                    NPC.SetEventFlagCleared(ref DownedSystem.seenHell, -1);
+                    DownedSystem.seenHell = true;
                 }
                 if (Main.LocalPlayer.ZoneShimmer & !DownedSystem.seenAether)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Aether.Name"), 90, 120, 1.6f, 0, Color.Pink, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Aether.Title"));
-                    NPC.SetEventFlagCleared(ref DownedSystem.seenAether, -1);
+                    DownedSystem.seenAether = true;
                 }
                 if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<ShroomForest>()) & !DownedSystem.seenMushroom)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.ShroomForest.Name"), 90, 120, 1.6f, 0, Color.Red, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.ShroomForest.Title"));
-                    NPC.SetEventFlagCleared(ref DownedSystem.seenMushroom, -1);
+                    DownedSystem.seenMushroom = true;
                 }
                 if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheDragonHoard>()) & !DownedSystem.seenInferno)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Inferno.Name"), 90, 120, 1.6f, 0, Color.OrangeRed, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Inferno.Title"));
-                    NPC.SetEventFlagCleared(ref DownedSystem.seenInferno, -1);
+                    DownedSystem.seenInferno = true;
                 }
                 if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheDragonBurrow>()) & Framing.GetTileSafely(player.Center.ToTileCoordinates()).WallType == ModContent.WallType<VolcanicRockWallPlaced>() & !DownedSystem.seenVolcano)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.InfernoUG.Name"), 90, 120, 1.6f, 0, Color.OrangeRed, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.InfernoUG.Title"));
-                    NPC.SetEventFlagCleared(ref DownedSystem.seenVolcano, -1);
+                    DownedSystem.seenVolcano = true;
                 }
                 if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheShroudedMire>()) & !DownedSystem.seenMire)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Mire.Name"), 90, 120, 1.6f, 0, Color.CornflowerBlue, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Mire.Title"));
-                    NPC.SetEventFlagCleared(ref DownedSystem.seenMire, -1);
+                    DownedSystem.seenMire = true;
                 }
                 if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheLakeDepths>()) & Framing.GetTileSafely(player.Center.ToTileCoordinates()).WallType == ModContent.WallType<DankDepthstoneWallPlaced>() & !DownedSystem.seenLake)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.MireUG.Name"), 90, 120, 1.6f, 0, Color.CornflowerBlue, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.MireUG.Title"));
-                    NPC.SetEventFlagCleared(ref DownedSystem.seenLake, -1);
+                    DownedSystem.seenLake = true;
                 }
             }
             #endregion
