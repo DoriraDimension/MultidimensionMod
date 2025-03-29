@@ -32,6 +32,65 @@ namespace MultidimensionMod.Worldgen
                 tasks.Insert(BiomesIndex + 1, new PassLegacy("The Dragon's Hoard", DragonHoardGen));
             }
         }
+        public int getYPos(int x, int width)
+        {
+            int e = (int)GenVars.worldSurfaceLow + 30;
+           
+            float PlaceBiomeX = x-(int)(width/2);
+            while (Main.tile[(int)PlaceBiomeX, e] != null && !Main.tile[(int)PlaceBiomeX, e].HasTile)
+            {
+                e++;
+            }
+            for (int l = (int)PlaceBiomeX - 25; l < (int)PlaceBiomeX + 25; l++)
+            {
+                for (int m = e - 6; m < e + 90; m++)
+                {
+                    if (Main.tile[l, m] != null && Main.tile[l, m].HasTile)
+                    {
+                        int type = Main.tile[l, m].TileType;
+                        if (type == TileID.Cloud || type == TileID.RainCloud || type == TileID.Sunplate) //type == TileID.BlueDungeonBrick || type == TileID.GreenDungeonBrick || type == TileID.PinkDungeonBrick
+                        {
+                            e++;
+                            if (!Main.tile[l, m].HasTile)
+                            {
+                                e++;
+                            }
+                        }
+                    }
+                }
+            }
+            float PlaceBiomeY1 = e - 60;
+            e = (int)GenVars.worldSurfaceLow + 30;
+           
+            PlaceBiomeX = x+(int)(width/2);
+            while (Main.tile[(int)PlaceBiomeX, e] != null && !Main.tile[(int)PlaceBiomeX, e].HasTile)
+            {
+                e++;
+            }
+            for (int l = (int)PlaceBiomeX - 25; l < (int)PlaceBiomeX + 25; l++)
+            {
+                for (int m = e - 6; m < e + 90; m++)
+                {
+                    if (Main.tile[l, m] != null && Main.tile[l, m].HasTile)
+                    {
+                        int type = Main.tile[l, m].TileType;
+                        if (type == TileID.Cloud || type == TileID.RainCloud || type == TileID.Sunplate) //type == TileID.BlueDungeonBrick || type == TileID.GreenDungeonBrick || type == TileID.PinkDungeonBrick
+                        {
+                            e++;
+                            if (!Main.tile[l, m].HasTile)
+                            {
+                                e++;
+                            }
+                        }
+                    }
+                }
+            }
+            float PlaceBiomeY2 = e - 60;
+            if(PlaceBiomeY2>PlaceBiomeY1)
+                return (int)PlaceBiomeY1;
+            else
+                return (int)PlaceBiomeY2;
+        }
         float ChaosPositioningMultiplier = 1f;
         int ChaosPositioningPlacement = 1;
         public void DragonHoardGen(GenerationProgress progress, GameConfiguration configuration)
@@ -76,6 +135,29 @@ namespace MultidimensionMod.Worldgen
             int biomeRadius = worldSize == 3 ? 440 : worldSize == 2 ? 380 : 180;
 
             Point originCenter = new((int)PlaceBiomeX, (int)PlaceBiomeY);
+            Texture2D clearTex = ModContent.Request<Texture2D>("MultidimensionMod/Worldgen/VolcanoClear", AssetRequestMode.ImmediateLoad).Value;
+
+            bool foundSpot=false;
+            while(!foundSpot)
+            {
+                int YPos= getYPos(originCenter.X,clearTex.Width);
+                
+                Point checkCenter=new(originCenter.X,YPos);
+                foundSpot=true;
+                for(int xcheck=checkCenter.X-(int)(clearTex.Width/2);xcheck<checkCenter.X+(int)(clearTex.Width/2);xcheck++)
+                {
+                    for(int ycheck=YPos;ycheck<YPos+clearTex.Height;ycheck++)
+                    {
+                        Tile tile = Main.tile[xcheck,ycheck];
+                        if(tile.TileType==41||tile.TileType==43||tile.TileType==44)
+                            foundSpot=false;
+                    }  
+                }
+                if(foundSpot==false)
+                    originCenter=new((int)PlaceBiomeX+WorldGen.genRand.Next(-200,200), (int)PlaceBiomeY);
+                else
+                    originCenter=new(originCenter.X, YPos);
+            }
             // TILE CONVERSIONS
             WorldUtils.Gen(originCenter, new Shapes.Circle(biomeRadius), Actions.Chain(new GenAction[]
             {
@@ -194,7 +276,6 @@ namespace MultidimensionMod.Worldgen
                 [Color.Black] = -1 //don't touch when genning				
             };
 
-            Texture2D clearTex = ModContent.Request<Texture2D>("MultidimensionMod/Worldgen/VolcanoClear", AssetRequestMode.ImmediateLoad).Value;
             Texture2D volcanoTex = ModContent.Request<Texture2D>("MultidimensionMod/Worldgen/Volcano", AssetRequestMode.ImmediateLoad).Value;
             Texture2D wallTex = ModContent.Request<Texture2D>("MultidimensionMod/Worldgen/VolcanoWalls", AssetRequestMode.ImmediateLoad).Value;
             Texture2D lavaTex = ModContent.Request<Texture2D>("MultidimensionMod/Worldgen/VolcanoLiquid", AssetRequestMode.ImmediateLoad).Value;
