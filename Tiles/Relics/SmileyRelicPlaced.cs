@@ -90,21 +90,16 @@ namespace MultidimensionMod.Tiles.Relics
         {
             if (drawData.tileFrameX % FrameWidth == 0 && drawData.tileFrameY % FrameHeight == 0)
             {
-                Main.instance.TilesRenderer.AddSpecialLegacyPoint(i, j);
+                Main.instance.TilesRenderer.AddSpecialPoint(i, j, Terraria.GameContent.Drawing.TileDrawing.TileCounterType.CustomNonSolid);
+
             }
         }
 
         public override void SpecialDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            Vector2 offScreen = new(Main.offScreenRange);
-            if (Main.drawToScreen)
-            {
-                offScreen = Vector2.Zero;
-            }
-
             Point p = new(i, j);
             Tile tile = Main.tile[p.X, p.Y];
-            if (tile == null || !tile.HasTile)
+            if (!tile.HasTile)
             {
                 return;
             }
@@ -124,7 +119,7 @@ namespace MultidimensionMod.Tiles.Relics
 
             const float TwoPi = (float)Math.PI * 2f;
             float offset = (float)Math.Sin(Main.GlobalTimeWrappedHourly * TwoPi / 5f);
-            Vector2 drawPos = worldPos + offScreen - Main.screenPosition + new Vector2(0f, -40f) + new Vector2(0f, offset * 4f);
+            Vector2 drawPos = worldPos - Main.screenPosition + new Vector2(0f, -40f) + new Vector2(0f, offset * 4f);
 
             spriteBatch.Draw(texture, drawPos, frame, color, 0f, origin, 1f, effects, 0f);
 
