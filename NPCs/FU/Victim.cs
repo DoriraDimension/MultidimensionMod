@@ -54,7 +54,17 @@ namespace MultidimensionMod.NPCs.FU
 			});
 		}
 
-		public int spawn;
+		public override bool CheckDead()
+		{
+			if (Main.hardMode)
+			{
+                return true;
+            }
+            return false;
+        }
+
+
+        public int spawn;
 		public override void AI()
 		{
 			if (Main.hardMode)
