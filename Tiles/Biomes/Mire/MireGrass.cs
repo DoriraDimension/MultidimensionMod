@@ -66,13 +66,13 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
                 WorldGen.PlaceObject(i, j - 1, ModContent.TileType<MireFoliageBig>(), true, Main.rand.Next(9));
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<MireFoliageBig>(), Main.rand.Next(9), 0, -1, -1);
             }
-            if (Main.rand.NextBool(1500))
+            if (Main.rand.NextBool(2500))
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<DarkshroomPlaced>(), mute: true, style: Main.rand.Next(4));
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<DarkshroomPlaced>(), Main.rand.Next(4), 0, -1, -1);
 
             }
-            /*if (Main.rand.NextBool(1500))
+            /*if (Main.rand.NextBool(1222500))
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<BlackLotusPlaced>(), mute: true);
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<BlackLotusPlaced>(), 0, 0, -1, -1);

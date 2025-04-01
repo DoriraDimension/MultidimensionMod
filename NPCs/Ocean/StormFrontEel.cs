@@ -37,7 +37,8 @@ namespace MultidimensionMod.NPCs.Ocean
 			AnimationType = NPCID.Bird;
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<StormEelBanner>();
-		}
+            ItemID.Sets.KillsToBanner[BannerItem] = 10;
+        }
 
 		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
 		{

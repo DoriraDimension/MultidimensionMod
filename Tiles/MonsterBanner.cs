@@ -28,110 +28,46 @@ namespace MultidimensionMod.Tiles
 			Main.tileFrameImportant[Type] = true;
 			Main.tileNoAttach[Type] = true;
 			Main.tileLavaDeath[Type] = true;
+            TileID.Sets.DisableSmartCursor[Type] = true;
             TileID.Sets.MultiTileSway[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
 			TileObjectData.newTile.Height = 3;
-			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16 };
+			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 18 };
 			TileObjectData.newTile.StyleHorizontal = true;
-			TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.SolidBottom, TileObjectData.newTile.Width, 0);
-			TileObjectData.newTile.StyleWrapLimit = 111;
-			TileID.Sets.DisableSmartCursor[Type] = true;
-			TileObjectData.addTile(Type);
+			TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.SolidBottom | AnchorType.PlanterBox, TileObjectData.newTile.Width, 0);
+            TileObjectData.newTile.DrawYOffset = -2;
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.Platform, TileObjectData.newTile.Width, 0);
+            TileObjectData.newAlternate.DrawYOffset = -10;
+            TileObjectData.addAlternate(0);
+            TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();
-			AddMapEntry(new Color(13, 88, 130), name);
+			AddMapEntry(new Color(13, 88, 130), Language.GetText("MapObject.Banner"));
 			DustType = -1;
 		}
 
-		public override void NearbyEffects(int i, int j, bool closer)
-		{
-			if (closer)
-			{
-				Player player = Main.LocalPlayer;
-				int style = Main.tile[i, j].TileFrameX / 18;
-				int type = 0;
-				switch (style)
-				{
-					case 0:
-						type = ModContent.NPCType<Darkling>();
-						break;
-					case 1:
-						type = ModContent.NPCType<CorrGuy>();
-						break;
-					case 2:
-						//type = ModContent.NPCType<MagicTrident>();
-						break;
-					case 3:
-						type = ModContent.NPCType<OtherworldlyGlowmarin>();
-						break;
-					case 4:
-						type = ModContent.NPCType<StormFrontEel>();
-						break;
-					case 5:
-						type = ModContent.NPCType<ParrotLobster>();
-						break;
-					case 6:
-						type = ModContent.NPCType<BabyGlowmarin>();
-						break;
-					case 7:
-						type = ModContent.NPCType<IceDrakeJuvenile>();
-						break;
-					case 8:
-						//type = ModContent.NPCType<FrostburnSlime>();
-						break;
-					case 9:
-						type = ModContent.NPCType<LesserSandElemental>();
-						break;
-					case 10:
-						type = ModContent.NPCType<GilaMonster>();
-						break;
-                    case 11:
-                        type = ModContent.NPCType<SearedAshton>();
-                        break;
-                    case 12:
-                        type = ModContent.NPCType<Ashton>();
-                        break;
-                    case 13:
-                        type = ModContent.NPCType<Victim>();
-                        break;
-                    case 14:
-                        type = ModContent.NPCType<MadnessBat>();
-                        break;
-                    case 15:
-                        type = ModContent.NPCType<MadnessBat2>();
-                        break;
-                    case 16:
-                        type = ModContent.NPCType<MadnessDog>();
-                        break;
-                    case 17:
-                        type = ModContent.NPCType<Madman>();
-                        break;
-					case 18:
-						type = ModContent.NPCType<TruffleToad>();
-						break;
-                    case 19:
-                        type = ModContent.NPCType<Mushbug>();
-                        break;
-                    case 20:
-                        type = ModContent.NPCType<ShroomJelly>();
-                        break;
-                    case 21:
-                        type = ModContent.NPCType<Puffer>();
-                        break;
-                    default:
-						return;
-				}
-				Main.SceneMetrics.NPCBannerBuff[type] = true;
-				Main.SceneMetrics.hasBanner = true;
-			}
-		}
+        public override void NearbyEffects(int i, int j, bool closer)
+        {
+            if (closer)
+            {
+                return;
+            }
 
-		public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
-		{
-			if (i % 2 == 1)
-			{
-				spriteEffects = SpriteEffects.FlipHorizontally;
-			}
-		}
+            int tileStyle = TileObjectData.GetTileStyle(Main.tile[i, j]);
+            int itemType = TileLoader.GetItemDropFromTypeAndStyle(Type, tileStyle);
+            int bannerID = NPCLoader.BannerItemToNPC(itemType);
+
+            if (bannerID == -1)
+            {
+                return;
+            }
+
+            if (ItemID.Sets.BannerStrength.IndexInRange(itemType) && ItemID.Sets.BannerStrength[itemType].Enabled)
+            {
+                Main.SceneMetrics.NPCBannerBuff[bannerID] = true;
+                Main.SceneMetrics.hasBanner = true;
+            }
+        }
 
         public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
         {
@@ -142,6 +78,12 @@ namespace MultidimensionMod.Tiles
                 Main.instance.TilesRenderer.AddSpecialPoint(i, j, TileDrawing.TileCounterType.MultiTileVine);
             }
             return false;
+        }
+
+        public override void SetDrawPositions(int i, int j, ref int width, ref int offsetY, ref int height, ref short tileFrameX, ref short tileFrameY)
+        {
+            offsetY += 2;
+            return;
         }
     }
 }

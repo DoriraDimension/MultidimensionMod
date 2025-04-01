@@ -56,6 +56,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.chaseable = false;
             Banner = NPC.type;
             BannerItem = ModContent.ItemType<ToadBanner>();
+            ItemID.Sets.KillsToBanner[BannerItem] = 25;
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

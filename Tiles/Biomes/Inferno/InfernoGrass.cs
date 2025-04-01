@@ -44,7 +44,7 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<InfernoFoliage>(), mute: true, style: Main.rand.Next(23));
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<InfernoFoliage>(), Main.rand.Next(23), 0, -1, -1);
             }
-            if (Main.rand.NextBool(1500))
+            if (Main.rand.NextBool(2500))
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<HotshroomPlaced>(), mute: true, style: Main.rand.Next(4));
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<HotshroomPlaced>(), Main.rand.Next(4), 0, -1, -1);

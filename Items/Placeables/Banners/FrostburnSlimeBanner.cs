@@ -27,6 +27,6 @@ namespace MultidimensionMod.Items.Placeables.Banners
 			Item.rare = ItemRarityID.Blue;
 			Item.value = Item.sellPrice(0, 0, 2, 0);
 			Item.createTile = ModContent.TileType<FrostburnSlimeBannerPlaced>();
-		}
+        }
 	}
 }
