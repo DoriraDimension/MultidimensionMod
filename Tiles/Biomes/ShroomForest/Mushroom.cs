@@ -39,7 +39,7 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
                 yield return new Item(ItemID.Mushroom);
             else if (Main.rand.NextBool(40))
                 yield return new Item(ModContent.ItemType<MyceliumSeeds>());
-            else if (Main.rand.NextBool(80))
+            else if (Main.rand.NextBool(160))
                 yield return new Item(ModContent.ItemType<InvigoratingMushroom>());
         }
 

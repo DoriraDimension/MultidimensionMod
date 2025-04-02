@@ -238,11 +238,6 @@ Mods: {
 				// Description: The prayer of the mushrooms empowers you
 			}
 
-			BrothersBuff: {
-				// DisplayName: The fungal brothers
-				// Description: Happy to have eachother... and you too I guess
-			}
-
 			MonarchBabBuff: {
 				// DisplayName: Bab Monarch
 				// Description: Does not want to be here right now

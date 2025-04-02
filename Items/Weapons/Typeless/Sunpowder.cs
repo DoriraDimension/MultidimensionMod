@@ -34,7 +34,7 @@ namespace MultidimensionMod.Items.Weapons.Typeless
 
         public override void AddRecipes()
         {
-            CreateRecipe()
+            CreateRecipe(3)
                 .AddIngredient(ModContent.ItemType<Materials.Hotshroom>(), 1)
                 .AddIngredient(ModContent.ItemType<Materials.DragonScale>(), 2)
                 .AddTile(TileID.Bottles)

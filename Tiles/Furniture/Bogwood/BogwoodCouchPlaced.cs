@@ -41,6 +41,9 @@ namespace MultidimensionMod.Tiles.Furniture.Bogwood
         {
             Tile tile = Framing.GetTileSafely(i, j);
 
+            //info.VisualOffset.Y += 2f;
+            info.VisualOffset = new Vector2(-8, 0);
+
             info.TargetDirection = -1;
             if (tile.TileFrameX != 0)
             {

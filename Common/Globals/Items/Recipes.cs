@@ -274,7 +274,6 @@ namespace MultidimensionMod.Common.Globals.Items
 			watch.AddIngredient(ItemID.Timer1Second);
 			watch.AddIngredient(ItemID.AntlionMandible, 3);
 			watch.AddRecipeGroup(CopperTin, 8);
-            watch.AddIngredient(ModContent.ItemType<PaleMatter>(), 2);
             watch.AddTile(TileID.TinkerersWorkbench);
 			watch.Register();
 

@@ -41,6 +41,7 @@ namespace MultidimensionMod.Tiles.Furniture.Razewood
             Tile tile = Framing.GetTileSafely(i, j);
 
             info.VisualOffset.Y += 2f;
+            info.VisualOffset = new Vector2(-8, 2);
 
             info.TargetDirection = -1;
             if (tile.TileFrameX != 0)
