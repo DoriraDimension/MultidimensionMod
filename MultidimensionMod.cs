@@ -43,7 +43,6 @@ namespace MultidimensionMod
 			DimensiumEuronen = CustomCurrencyManager.RegisterCurrency(new MDCurrency(ModContent.ItemType<Dimensium>(), 999L, "Dimensium"));
 			Terraria.IL_Main.DrawUnderworldBackgroudLayer += ILMainDrawUnderworldBackgroundLayer;
             Terraria.IL_Player.UpdateBiomes += NoHeat;
-            Terraria.Graphics.Light.On_TileLightScanner.ApplyHellLight += TileLightScanner_ApplyHellLight;
             SkyManager.Instance["MadnessMoonSky"] = new MadnessMoonSky();
             SkyManager.Instance["DragonHoardSky"] = new DragonHoardSky();
             SkyManager.Instance["ShroudedMireSky"] = new ShroudedMireSky();
@@ -57,7 +56,6 @@ namespace MultidimensionMod
         {
             Terraria.IL_Main.DrawUnderworldBackgroudLayer -= ILMainDrawUnderworldBackgroundLayer;
             Terraria.IL_Player.UpdateBiomes -= NoHeat;
-            Terraria.Graphics.Light.On_TileLightScanner.ApplyHellLight -= TileLightScanner_ApplyHellLight;
 			ALLists.UnloadLists();
         }
 
@@ -286,25 +284,6 @@ namespace MultidimensionMod
             catch (Exception e)
             {
                 Logger.Error(e.Message);
-            }
-        }
-        #endregion
-
-        #region Underworld Lighting Removing
-        private void TileLightScanner_ApplyHellLight(Terraria.Graphics.Light.On_TileLightScanner.orig_ApplyHellLight orig, TileLightScanner self, Tile tile, int x, int y, ref Vector3 lightColor)
-        {
-            orig.Invoke(self, tile, x, y, ref lightColor);
-            if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()))
-            {
-                if ((!tile.HasTile || !Main.tileNoSunLight[tile.TileType] || ((tile.Slope != 0 || tile.IsHalfBlock) && Main.tile[x, y - 1].LiquidAmount == 0 && Main.tile[x, y + 1].LiquidAmount == 0 && Main.tile[x - 1, y].LiquidAmount == 0 && Main.tile[x + 1, y].LiquidAmount == 0)) && (Main.wallLight[tile.WallType] || tile.WallType == 73 || tile.WallType == 227) && tile.LiquidAmount < 200 && (!tile.IsHalfBlock || Main.tile[x, y - 1].LiquidAmount < 200))
-                {
-                    lightColor = new Vector3(0.06f, 0.06f, 0.06f);
-                }
-                if ((!tile.HasTile || tile.IsHalfBlock || !Main.tileNoSunLight[tile.TileType]) && tile.LiquidAmount < byte.MaxValue)
-                {
-                    lightColor = new Vector3(0.06f, 0.06f, 0.06f);
-                }
-                lightColor = new Vector3(0.06f, 0.06f, 0.06f);
             }
         }
         #endregion
