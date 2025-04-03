@@ -277,6 +277,16 @@ Mods: {
 				// DisplayName: Hazed
 				// Description: You are drugged and weak
 			}
+
+			TidalWhipTag: {
+				// DisplayName: Tidal Whip Tag
+				// Description: Mods.MultidimensionMod.Buffs.TidalWhipTag.Description
+			}
+
+			VoidArmWhipTag: {
+				// DisplayName: Void Arm Whip Tag
+				// Description: Mods.MultidimensionMod.Buffs.VoidArmWhipTag.Description
+			}
 		}
 
 		Items: {
@@ -2388,7 +2398,11 @@ Mods: {
 
 			MadnessWhip: {
 				// DisplayName: Mindpunishing Madness
-				// Tooltip: Inflicts Madness
+				/* Tooltip:
+					'''
+					{$CommonItemTooltip.Whips}
+					Inflicts Madness
+					''' */
 			}
 
 			marcO: {
@@ -2670,12 +2684,22 @@ Mods: {
 
 			EuniceFlagellum: {
 				// DisplayName: Eunice Flagellum
-				// Tooltip: A whip sword created from ancient blueprints engraved in a stone tablet
+				/* Tooltip:
+					'''
+					{$CommonItemTooltip.SummonTagDamage}
+					{$CommonItemTooltip.Whips}
+					A whip sword created from ancient blueprints engraved in a stone tablet
+					Strike enemies to gain whip attack speed
+					''' */
 			}
 
 			VoidArm: {
 				// DisplayName: Arm from Beyond
-				// Tooltip: ""
+				/* Tooltip:
+					'''
+					{$CommonItemTooltip.SummonTagDamage}
+					{$CommonItemTooltip.Whips}
+					''' */
 			}
 
 			TeamStar: {

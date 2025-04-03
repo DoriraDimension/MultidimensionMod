@@ -27,7 +27,7 @@ namespace MultidimensionMod.Projectiles.Summon.Whips
 		{
 			target.AddBuff(ModContent.BuffType<Madness>(), 120);
 			Main.player[Projectile.owner].MinionAttackTargetNPC = target.whoAmI;
-            Projectile.damage = (int)(Projectile.damage * 0.7f);
+            Projectile.damage = (int)(Projectile.damage * 0.65f);
         }
 
 		private void DrawLine(List<Vector2> list)

@@ -6,6 +6,7 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
+using MultidimensionMod.Buffs.Minions;
 
 namespace MultidimensionMod.Projectiles.Summon.Whips
 {
@@ -25,8 +26,9 @@ namespace MultidimensionMod.Projectiles.Summon.Whips
 
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
-			Main.player[Projectile.owner].MinionAttackTargetNPC = target.whoAmI;
-            Projectile.damage = (int)(Projectile.damage * 0.7f);
+            target.AddBuff(ModContent.BuffType<VoidArmWhipTag>(), 240);
+            Main.player[Projectile.owner].MinionAttackTargetNPC = target.whoAmI;
+            Projectile.damage = (int)(Projectile.damage * 0.65f);
         }
 
 		private void DrawLine(List<Vector2> list)

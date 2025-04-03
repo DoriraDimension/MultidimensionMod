@@ -5,29 +5,30 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using Terraria.Localization;
+using MultidimensionMod.Buffs.Minions;
 
 namespace MultidimensionMod.Items.Weapons.Summon
 {
 	public class VoidArm : ModItem
 	{
-		public override void SetStaticDefaults()
+        public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(VoidArmWhipTag.TagDamage);
+        public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
-			Item.damage = 37;
 			Item.width = 42;
 			Item.height = 42;
-			Item.useTime = 17;
-			Item.useAnimation = 17;
+			Item.useTime = 40;
+			Item.useAnimation = 40;
 			Item.noUseGraphic = true;
 			Item.noMelee = true;
 			Item.value = Item.sellPrice(0, 0, 70, 0);
 			Item.rare = ItemRarityID.Orange;
-			Item.DefaultToWhip(ModContent.ProjectileType<VoidArmProj>(), 37, 6, 20);
-			Item.shootSpeed = 6;
+			Item.DefaultToWhip(ModContent.ProjectileType<VoidArmProj>(), 22, 6, 7);
 
 		}
 
