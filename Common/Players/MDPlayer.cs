@@ -108,6 +108,7 @@ namespace MultidimensionMod.Common.Players
             Madness = false;
             DrakePoison = false;
             NeroSet = false;
+            SinnerSet = false;
             MonarchHeart = false;
             DrakeShield = false;
             DesertNeck = false;
