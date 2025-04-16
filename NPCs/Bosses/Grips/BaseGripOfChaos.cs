@@ -35,7 +35,7 @@ namespace MultidimensionMod.NPCs.Bosses.Grips
             NPC.netAlways = true;
             if (!Main.dedServ)
             {
-                Music = MultidimensionMod.Instance.GetMusicFromMusicMod("Grips") ?? MusicID.Boss1;
+                Music = MultidimensionMod.Instance.GetMusicFromMusicMod("GripsTheme") ?? MusicID.Boss1;
             }
         }
 
