@@ -15,7 +15,7 @@ namespace MultidimensionMod.Biomes
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
 
-        public override int Music => MusicLoader.GetMusicSlot(Mod, "Sounds/Music/LakeDepths");
+        public override int Music => MultidimensionMod.Instance.GetMusicFromMusicMod("LakeDepths") ?? MusicID.JungleUnderground;
         public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => ModContent.GetInstance<ShroudedMireBackground>();
         public override ModUndergroundBackgroundStyle UndergroundBackgroundStyle => ModContent.GetInstance<LakeDepthsBackground>();
 

@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace MultidimensionMod.Biomes
 {
@@ -12,7 +13,7 @@ namespace MultidimensionMod.Biomes
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
 
-        public override int Music => Main.dayTime ? MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Shroom") : Main.hardMode ? MusicLoader.GetMusicSlot(Mod, "Sounds/Music/ShroomNightArrival") : MusicLoader.GetMusicSlot(Mod, "Sounds/Music/ShroomNight");
+        public override int Music => (Main.dayTime ? MultidimensionMod.Instance.GetMusicFromMusicMod("Shroom") : Main.hardMode ? MultidimensionMod.Instance.GetMusicFromMusicMod("ShroomNightArrival") : MultidimensionMod.Instance.GetMusicFromMusicMod("ShroomNight")) ?? MusicID.Mushrooms;
 
         public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => ModContent.GetInstance<ShroomForestBackground>();
         public override ModUndergroundBackgroundStyle UndergroundBackgroundStyle => ModContent.GetInstance<ShroomForestUGBackground>();

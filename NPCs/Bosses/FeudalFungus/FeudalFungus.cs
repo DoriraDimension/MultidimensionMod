@@ -149,7 +149,9 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.noTileCollide = true;
             if (!Main.dedServ)
-                Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Fungus");
+            {
+                Music = MultidimensionMod.Instance.GetMusicFromMusicMod("Fungus") ?? MusicID.Boss3;
+            }
             NPC.alpha = 255;
             NPC.dontTakeDamage = true;
             NPC.AL().CantHurtDapper = true;
@@ -332,7 +334,9 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             {
                 case ActionState.TPose:
                     if (!Main.dedServ)
+                    {
                         Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Silence");
+                    }
                     NPC.Center = player.Center + new Vector2(0, -200);
                     Waking++;
                     if (!DownedSystem.seenFeudalIntro)
@@ -433,7 +437,9 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                                 }
                             }
                             if (!Main.dedServ)
-                                Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Fungus");
+                            {
+                                Music = MultidimensionMod.Instance.GetMusicFromMusicMod("Fungus") ?? MusicID.Boss3;
+                            }
                         }
                     }
                     else
@@ -476,7 +482,9 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             NPC.netUpdate = true;
                             Waking = 0;
                             if (!Main.dedServ)
-                                Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Fungus");
+                            {
+                                Music = MultidimensionMod.Instance.GetMusicFromMusicMod("Fungus") ?? MusicID.Boss3;
+                            }
                         }
                     }
                     break;
@@ -1018,7 +1026,9 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                         {
                             NPC.dontTakeDamage = false;
                             if (!Main.dedServ)
-                                Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Fungus");
+                            {
+                                Music = MultidimensionMod.Instance.GetMusicFromMusicMod("Fungus") ?? MusicID.Boss3;
+                            }
                             AISwitch = 0;
                             MakeItRain = 0;
                             FireShroom = 0;

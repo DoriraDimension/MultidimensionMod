@@ -6,6 +6,7 @@ using System;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.Graphics.Effects;
+using Terraria.ID;
 
 namespace MultidimensionMod.Biomes
 {
@@ -13,7 +14,7 @@ namespace MultidimensionMod.Biomes
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
 
-        public override int Music => Main.dayTime ? MusicLoader.GetMusicSlot(Mod, "Sounds/Music/DragonHoardDay") : MusicLoader.GetMusicSlot(Mod, "Sounds/Music/DragonHoardNight");
+        public override int Music => (Main.dayTime ? MultidimensionMod.Instance.GetMusicFromMusicMod("DragonHoardDay") : MultidimensionMod.Instance.GetMusicFromMusicMod("DragonHoardNight")) ?? MusicID.Crimson;
 
         public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => ModContent.GetInstance<DragonHoardBackground>();
 

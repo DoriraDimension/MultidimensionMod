@@ -4,6 +4,7 @@ using System;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.Graphics.Light;
+using Terraria.ID;
 
 namespace MultidimensionMod.Biomes
 {
@@ -11,7 +12,7 @@ namespace MultidimensionMod.Biomes
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
 
-        public override int Music => Main.hardMode ? MusicLoader.GetMusicSlot(Mod, "Sounds/Music/FrozenUnderworld2") : MusicLoader.GetMusicSlot(Mod, "Sounds/Music/FrozenUnderworld");
+        public override int Music => (Main.hardMode ? MultidimensionMod.Instance.GetMusicFromMusicMod("FrozenUnderworld2") : MultidimensionMod.Instance.GetMusicFromMusicMod("FrozenUnderworld")) ?? MusicID.Snow;
         public override string MapBackground => BackgroundPath;
 
         public override string BackgroundPath => "MultidimensionMod/Backgrounds/Map/FUMap";

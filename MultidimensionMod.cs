@@ -20,6 +20,7 @@ using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.Graphics.Light;
 using System.Text;
+using System.Linq;
 
 
 namespace MultidimensionMod
@@ -27,7 +28,7 @@ namespace MultidimensionMod
 	public class MultidimensionMod : Mod
 	{
 		//Many things here in the mod are made possible by Ancients Awakened, so pay them a visit too!
-		internal static MultidimensionMod Instance;
+		internal static MultidimensionMod Instance => (MultidimensionMod)ModLoader.GetMod("MultidimensionMod");
 
 		internal bool vanillaLoaded = true;
 
@@ -37,10 +38,15 @@ namespace MultidimensionMod
 
         public TradingUI TradingUIElement;
 
+        internal Mod musicMod = null;
+        internal bool MusicAvailable => musicMod is not null;
+
         //Thanks to Lion8cake for the help with the Frozen Underworld ILs.
         public override void Load()
 		{
-			DimensiumEuronen = CustomCurrencyManager.RegisterCurrency(new MDCurrency(ModContent.ItemType<Dimensium>(), 999L, "Dimensium"));
+            musicMod = null;
+            ModLoader.TryGetMod("ALMusic", out musicMod);
+            DimensiumEuronen = CustomCurrencyManager.RegisterCurrency(new MDCurrency(ModContent.ItemType<Dimensium>(), 999L, "Dimensium"));
 			Terraria.IL_Main.DrawUnderworldBackgroudLayer += ILMainDrawUnderworldBackgroundLayer;
             Terraria.IL_Player.UpdateBiomes += NoHeat;
             SkyManager.Instance["MadnessMoonSky"] = new MadnessMoonSky();
@@ -49,15 +55,18 @@ namespace MultidimensionMod
 			SkyManager.Instance["ShroudedMireDaySky"] = new ShroudedMireDaySky();
             Filters.Scene["MultidimensionMod:Madness"] = new Filter(new ScreenShaderData("FilterMiniTower").UseColor(0.8f, 0.6f, 0.2f).UseOpacity(0.5f), EffectPriority.High);
 			ALLists.LoadLists();
-			base.Load();
+            base.Load();
         }
 
 		public override void Unload()
         {
+            musicMod = null;
             Terraria.IL_Main.DrawUnderworldBackgroudLayer -= ILMainDrawUnderworldBackgroundLayer;
             Terraria.IL_Player.UpdateBiomes -= NoHeat;
 			ALLists.UnloadLists();
         }
+
+        public int? GetMusicFromMusicMod(string songFilename) => MusicAvailable ? MusicLoader.GetMusicSlot(musicMod, "Sounds/Music/" + songFilename) : null;
 
         public override void PostSetupContent()
         {

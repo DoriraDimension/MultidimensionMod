@@ -33,7 +33,10 @@ namespace MultidimensionMod.NPCs.Bosses.Grips
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.netAlways = true;
-            Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/GripsTheme");
+            if (!Main.dedServ)
+            {
+                Music = MultidimensionMod.Instance.GetMusicFromMusicMod("Grips") ?? MusicID.Boss1;
+            }
         }
 
         public override void FindFrame(int frameHeight)

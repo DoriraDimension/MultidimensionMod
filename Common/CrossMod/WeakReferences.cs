@@ -7,7 +7,6 @@ using MultidimensionMod.Items.Vanity;
 using MultidimensionMod.NPCs.Bosses.FeudalFungus;
 using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
 using MultidimensionMod.NPCs.Bosses.Smiley;
-using MultidimensionMod.Items.Placeables.MusicBoxes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
@@ -39,7 +38,7 @@ namespace MultidimensionMod.Common.CrossMod
                         ModContent.ItemType<MonarchRelic>(),
                         ModContent.ItemType<MonarchTrophy>(),
                         ModContent.ItemType<MonarchMask>(),
-                        ModContent.ItemType<MonarchBox>(),
+                        //ModContent.ItemType<MonarchBox>(),
                         ModContent.ItemType<SusSporeBag>(),
                     },
                     ["customPortrait"] = (SpriteBatch sb, Rectangle rect, Color color) =>
@@ -61,7 +60,7 @@ namespace MultidimensionMod.Common.CrossMod
                         ModContent.ItemType<FungusRelic>(),
                         ModContent.ItemType<FungusTrophy>(),
                         ModContent.ItemType<FungusMask>(),
-                        ModContent.ItemType<FungusBox>(),
+                        //ModContent.ItemType<FungusBox>(),
                         ModContent.ItemType<SusGlowsporeBag>()
                 },
                     ["customPortrait"] = (SpriteBatch sb, Rectangle rect, Color color) =>

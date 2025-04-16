@@ -7,6 +7,7 @@ using System;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.Graphics.Effects;
+using Terraria.ID;
 
 namespace MultidimensionMod.Biomes
 {
@@ -14,7 +15,7 @@ namespace MultidimensionMod.Biomes
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
 
-        public override int Music => Main.dayTime ? MusicLoader.GetMusicSlot(Mod, "Sounds/Music/ShroudedMireDay") : MusicLoader.GetMusicSlot(Mod, "Sounds/Music/ShroudedMireNight");
+        public override int Music => (Main.dayTime ? MultidimensionMod.Instance.GetMusicFromMusicMod("ShroudedMireDay") : MultidimensionMod.Instance.GetMusicFromMusicMod("ShroudedMireNight")) ?? MusicID.JungleNight;
 
         public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => ModContent.GetInstance<ShroudedMireBackground>();
 

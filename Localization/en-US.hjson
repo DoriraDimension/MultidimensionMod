@@ -1282,15 +1282,6 @@ Mods: {
 				Tooltip: A small glowing seed from another world. Instantly grows a glowtree when placed
 			}
 
-			ColdHellBox: {
-				DisplayName: Music Box (Frozen Underworld)
-				Tooltip:
-					'''
-					Plays Frigid Sins
-					By DrVoodoo
-					'''
-			}
-
 			SmileyTrophy: {
 				DisplayName: Smiley Trophy
 				Tooltip: ""
@@ -2591,15 +2582,6 @@ Mods: {
 				Tooltip: Eat this eye at night to awaken the madness that lurks in the shadows
 			}
 
-			ColdEnragedHellBox: {
-				DisplayName: Music Box (Frozen Underworld - Enraged)
-				Tooltip:
-					'''
-					Plays Raging Sins
-					By DrVoodoo
-					'''
-			}
-
 			SmileyBag: {
 				DisplayName: Treasure Bag (Smiley)
 				Tooltip: Right-click to open
@@ -2620,15 +2602,6 @@ Mods: {
 					'''
 					Left click to undown all Pre-Hardmode vanilla bosses except the Wall of Flesh
 					Right click to undown all Hardmode vanilla bosses
-					'''
-			}
-
-			MadnessBox: {
-				DisplayName: Music Box (Night of Madness)
-				Tooltip:
-					'''
-					Plays Visage's Visit
-					By DrVoodoo
 					'''
 			}
 
@@ -3170,33 +3143,6 @@ Mods: {
 					'''
 					A ring made of pure gold that is covered in glowing mushmatter.
 					It has inscriptions on it which spell the name 'Umos'.
-					'''
-			}
-
-			FungusBox: {
-				DisplayName: Music Box (Feudal Fungus)
-				Tooltip:
-					'''
-					Plays ???
-					By ???
-					'''
-			}
-
-			MonarchBox: {
-				DisplayName: Music Box (Mushroom Monarch)
-				Tooltip:
-					'''
-					Plays ???
-					By Clyder8
-					'''
-			}
-
-			ShroomForestBox: {
-				DisplayName: Music Box (Scarlet Mycelium Forest Day)
-				Tooltip:
-					'''
-					Plays ???
-					By Clyder8
 					'''
 			}
 
@@ -3744,33 +3690,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			InfernoBox: {
-				DisplayName: Music Box (Dragon's Hoard Day)
-				Tooltip:
-					'''
-					Plays ???
-					By Clyder8
-					'''
-			}
-
-			InfernoNightBox: {
-				DisplayName: Music Box (Dragon's Hoard Night)
-				Tooltip:
-					'''
-					Plays ???
-					By Clyder8
-					'''
-			}
-
-			InfernoUBox: {
-				DisplayName: Music Box (Dragon's Burrow)
-				Tooltip:
-					'''
-					Plays ???
-					By Clyder8
-					'''
-			}
-
 			Pyrosphere: {
 				DisplayName: Pyrosphere
 				Tooltip:
@@ -3937,33 +3856,6 @@ Mods: {
 				DisplayName: Mudsand
 			}
 
-			MireBox: {
-				DisplayName: Music Box (Shrouded Mire Night)
-				Tooltip:
-					'''
-					Plays ???
-					By Clyder8
-					'''
-			}
-
-			MireDayBox: {
-				DisplayName: Music Box (Shrouded Mire Day)
-				Tooltip:
-					'''
-					Plays ???
-					By Clyder8
-					'''
-			}
-
-			MireUBox: {
-				DisplayName: Music Box (Lake Depths)
-				Tooltip:
-					'''
-					Plays ???
-					By Clyder8
-					'''
-			}
-
 			Permafrost: {
 				DisplayName: Permafrost
 				Tooltip: Snow covered mud that has been frozen solid for years
@@ -3977,15 +3869,6 @@ Mods: {
 			MireSeeds: {
 				DisplayName: Moonlit Seeds
 				Tooltip: Plants Lunarmoss Grass on dirt
-			}
-
-			VoidBox: {
-				DisplayName: Music Box (Void's Edge)
-				Tooltip:
-					'''
-					Plays ???
-					By Clyder8
-					'''
 			}
 
 			VolcanicRock: {
@@ -4293,15 +4176,6 @@ Mods: {
 				Tooltip: Conjures sword apparitions in all gem colors at the cursor position
 			}
 
-			FungusMenuBox: {
-				DisplayName: Music Box (Fungal Prayers)
-				Tooltip:
-					'''
-					Plays ???
-					By Clyder8
-					'''
-			}
-
 			AwakenedRock: {
 				DisplayName: Awakened Rock
 				Tooltip:
@@ -4383,24 +4257,6 @@ Mods: {
 					A beautiful iridescent carp
 					Increases the amount of Angler Quests per day by one
 					Only one may be used
-					'''
-			}
-
-			ShroomForestNightBox: {
-				DisplayName: Music Box (Scarlet Mycelium Forest Night)
-				Tooltip:
-					'''
-					Plays ???
-					By Clyder8
-					'''
-			}
-
-			ShroomForestNightArrivalBox: {
-				DisplayName: Music Box (Scarlet Mycelium Forest Night - Tarnished)
-				Tooltip:
-					'''
-					Plays ???
-					By Clyder8
 					'''
 			}
 
@@ -5025,22 +4881,16 @@ Mods: {
 			VoidMatterTablePlaced.MapEntry: Void Matter Table
 			VoidMatterWorkBenchPlaced.MapEntry: Void Matter Workbench
 			MonsterBanner.MapEntry: Banner
-			ColdHellBoxPlaced.MapEntry: Music Box
 			OceanicGlowtree.MapEntry: Oceanic Glowtree
 			Dimensium.MapEntry: Dimensium
 			PlacedCrimsonAltar.MapEntry: Crimson Altar
 			PlacedDemonAltar.MapEntry: Demon Altar
-			ColdEnragedHellBoxPlaced.MapEntry: Music Box
-			MadnessBoxPlaced.MapEntry: Music Box
 			DimensiumPlaced.MapEntry: Dimensium
 			FrostburnSlimeBannerPlaced.MapEntry: Frostburn Slime Banner
 			TridentBannerPlaced.MapEntry: Magic Trident Banner
 			MonarchTrophyPlaced.MapEntry: Monarch Trophy Placed
 			SmileyTrophyPlaced.MapEntry: Smiley Trophy Placed
 			TheAncientChaosPlaced.MapEntry: The Ancient Chaos
-			FungusBoxPlaced.MapEntry: Music Box
-			MonarchBoxPlaced.MapEntry: Music Box
-			ShroomForestBoxPlaced.MapEntry: Music Box
 			RottenMemoryPlaced.MapEntry: Rotten Memory
 			RedMushBathtubPlaced.MapEntry: Red Mushroom Bathtub
 			RedMushBookcasePlaced.MapEntry: Red Mushroom Bookcase
@@ -5071,16 +4921,9 @@ Mods: {
 			RazewoodTablePlaced.MapEntry: Razewood Table
 			RazewoodTubPlaced.MapEntry: Razewood Bathtub
 			RazewoodWorkbenchPlaced.MapEntry: Razewood Work Bench
-			InfernoBoxPlaced.MapEntry: Music Box
-			InfernoNightBoxPlaced.MapEntry: Music Box
-			InfernoUBoxPlaced.MapEntry: Music Box
 			IncineriteOre.MapEntry: Cinderite Gold
 			KingsCapPlaced.MapEntry: Alarmshroom
 			AbyssiumOrePlaced.MapEntry: Dreadsoil Ore
-			MireBoxPlaced.MapEntry: Music Box
-			MireDayBoxPlaced.MapEntry: Music Box
-			MireUBoxPlaced.MapEntry: Music Box
-			VoidBoxPlaced.MapEntry: Void Box Placed
 			BogwoodBathtubPlaced.MapEntry: Bogwood Bathtub
 			BogwoodBedPlaced.MapEntry: Bogwood Bed
 			BogwoodBookshelfPlaced.MapEntry: Bogwood Bookshelf
@@ -5100,9 +4943,6 @@ Mods: {
 			BogwoodSinkPlaced.MapEntry: Bogwood Sink
 			BogwoodTablePlaced.MapEntry: Bogwood Table
 			BogwoodWorkbenchPlaced.MapEntry: Bogwood Work Bench
-			FungusMenuBoxPlaced.MapEntry: Music Box
-			ShroomForestBoxNightPlaced.MapEntry: Music Box
-			ShroomForestNightArrivalBoxPlaced.MapEntry: Music Box
 		}
 
 		DeathMessages: {
