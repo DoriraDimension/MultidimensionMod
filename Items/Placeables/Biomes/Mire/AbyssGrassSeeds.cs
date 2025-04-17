@@ -3,8 +3,8 @@ using Terraria.ModLoader;
 using Terraria;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
-using MultidimensionMod.Tiles.Biomes.Inferno;
-using System;
+using Terraria.Audio;
+using Terraria.DataStructures;
 
 
 namespace MultidimensionMod.Items.Placeables.Biomes.Mire
@@ -32,27 +32,22 @@ namespace MultidimensionMod.Items.Placeables.Biomes.Mire
             Item.autoReuse = true;
             Item.useTurn = true;
             Item.rare = ItemRarityID.Purple;
-            Item.createTile = ModContent.TileType<AbyssGrass>();
             Item.consumable = true;
         }
 
-        public override bool CanUseItem(Player p)
+        public override bool? UseItem(Player player)
         {
             Tile tile = Framing.GetTileSafely(Player.tileTargetX, Player.tileTargetY);
-            if (tile != null && tile.HasTile && tile.TileType == ModContent.TileType<DarkmudPlaced>())
-            {
-                WorldGen.destroyObject = true;
-                TileID.Sets.BreakableWhenPlacing[ModContent.TileType<DarkmudPlaced>()] = true;
-                return base.CanUseItem(p);
-            }
-            return false;
-        }
 
-        public override bool? UseItem(Player p)
-        {
-            WorldGen.destroyObject = false;
-            TileID.Sets.BreakableWhenPlacing[ModContent.TileType<DarkmudPlaced>()] = false;
-            return base.UseItem(p);
+            if (tile.HasTile && tile.TileType == ModContent.TileType<DarkmudPlaced>() && player.IsInTileInteractionRange(Player.tileTargetX, Player.tileTargetY, TileReachCheckSettings.Simple))
+            {
+                Main.tile[Player.tileTargetX, Player.tileTargetY].TileType = (ushort)ModContent.TileType<AbyssGrass>();
+                SoundEngine.PlaySound(SoundID.Dig, player.Center);
+
+                return true;
+            }
+
+            return false;
         }
     }
 }

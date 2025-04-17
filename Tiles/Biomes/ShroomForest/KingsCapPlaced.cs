@@ -15,7 +15,6 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
-            Main.tileCut[Type] = true;
             Main.tileSolid[Type] = false;
             Main.tileLighted[Type] = false;
             Main.tileNoAttach[Type] = true;

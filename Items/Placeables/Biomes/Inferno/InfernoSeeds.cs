@@ -3,6 +3,8 @@ using Terraria.ModLoader;
 using Terraria;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
+using Terraria.Audio;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Items.Placeables.Biomes.Inferno
 {
@@ -28,27 +30,22 @@ namespace MultidimensionMod.Items.Placeables.Biomes.Inferno
             Item.useTime = 10;
             Item.autoReuse = true;
             Item.useTurn = true;
-            Item.createTile = ModContent.TileType<InfernoGrass>();
             Item.consumable = true;		
         }
 
-        public override bool CanUseItem(Player p)
+        public override bool? UseItem(Player player)
         {
             Tile tile = Framing.GetTileSafely(Player.tileTargetX, Player.tileTargetY);
-            if (tile != null && tile.HasTile && tile.TileType == TileID.Dirt)
-            {
-                WorldGen.destroyObject = true;
-                TileID.Sets.BreakableWhenPlacing[TileID.Dirt] = true;
-                return base.CanUseItem(p);
-            }
-            return false;
-        }
 
-        public override bool? UseItem(Player p)
-        {
-            WorldGen.destroyObject = false;
-            TileID.Sets.BreakableWhenPlacing[TileID.Dirt] = false;
-            return base.UseItem(p);
+            if (tile.HasTile && tile.TileType == TileID.Dirt && player.IsInTileInteractionRange(Player.tileTargetX, Player.tileTargetY, TileReachCheckSettings.Simple))
+            {
+                Main.tile[Player.tileTargetX, Player.tileTargetY].TileType = (ushort)ModContent.TileType<InfernoGrass>();
+                SoundEngine.PlaySound(SoundID.Dig, player.Center);
+
+                return true;
+            }
+
+            return false;
         }
     }
 }
