@@ -47,7 +47,7 @@ namespace MultidimensionMod.Common.CrossMod
                         Vector2 centered = new(rect.X + (rect.Width / 2) - (texture.Width / 2), rect.Y + (rect.Height / 2) - (texture.Height / 2));
                         sb.Draw(texture, centered, color);
                     },
-                    ["despawnMessage"] = Language.GetOrRegister("Mods.MultidimensionMod.NPCs.MushroomMonarch.BossChecklistIntegration.DespawnMessage").Value
+                    ["despawnMessage"] = Language.GetOrRegister("Mods.MultidimensionMod.NPCs.MushroomMonarch.BossChecklistIntegration.DespawnMessage").Value,
                 });
                 #endregion
 
@@ -69,7 +69,7 @@ namespace MultidimensionMod.Common.CrossMod
                         Vector2 centered = new(rect.X + (rect.Width / 2) - (texture.Width / 2), rect.Y + (rect.Height / 2) - (texture.Height / 2));
                         sb.Draw(texture, centered, color);
                     },
-                    ["despawnMessage"] = Language.GetOrRegister("Mods.MultidimensionMod.NPCs.FeudalFungus.BossChecklistIntegration.DespawnMessage").Value
+                    ["despawnMessage"] = Language.GetOrRegister("Mods.MultidimensionMod.NPCs.FeudalFungus.BossChecklistIntegration.DespawnMessage").Value,
                 });
                 #endregion
 
@@ -90,7 +90,7 @@ namespace MultidimensionMod.Common.CrossMod
                         Vector2 centered = new(rect.X + (rect.Width / 2) - (texture.Width / 2), rect.Y + (rect.Height / 2) - (texture.Height / 2));
                         sb.Draw(texture, centered, color);
                     },
-                    ["despawnMessage"] = Language.GetOrRegister("Mods.MultidimensionMod.NPCs.Smiley.BossChecklistIntegration.DespawnMessage").Value
+                    ["despawnMessage"] = Language.GetOrRegister("Mods.MultidimensionMod.NPCs.Smiley.BossChecklistIntegration.DespawnMessage").Value,
                 });
                 #endregion
 

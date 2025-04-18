@@ -29,7 +29,7 @@ namespace MultidimensionMod.NPCs.Critters
         {
             NPC.noGravity = true;
             NPC.width = 62;
-            NPC.height = 46;
+            NPC.height = 22;
             NPC.defense = 4;
             NPC.lifeMax = 5;
             NPC.HitSound = SoundID.NPCHit1;
