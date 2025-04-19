@@ -337,6 +337,7 @@ namespace MultidimensionMod
                     if (NPC.CountNPCS(ModContent.NPCType<DepthAngler>()) < 3)
                         pool.Add(ModContent.NPCType<DepthAngler>(), 0.5f);
 					pool.Add(ModContent.NPCType<LakeBat>(), 0.2f);
+					pool.Add(ModContent.NPCType<Finfly>(), 0.2f);
                 }
             }
         }

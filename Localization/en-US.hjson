@@ -4764,6 +4764,7 @@ Mods: {
 
 			AMindFromBeyond.DisplayName: A Mind from Beyond
 			LakeBat.DisplayName: Lil' Terror
+			Finfly.DisplayName: Finfly
 		}
 
 		Dialogue: {
@@ -5045,6 +5046,7 @@ Mods: {
 			MushroomFollower: A sentient mushroom that follows the words of Light, seeking enlightenment. They will be often seen accompanying preachers.
 			AMindFromBeyond: Big Brain Brian
 			LilTerror: Oh shit, a bat
+			Finfly: Speedy Boi
 		}
 
 		SoulConversation: {

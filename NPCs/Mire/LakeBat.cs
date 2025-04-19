@@ -54,14 +54,7 @@ namespace MultidimensionMod.NPCs.Mire
         {
             Player player = Main.player[NPC.target];
 
-            if (player.Center.X > NPC.Center.X)
-            {
-                NPC.spriteDirection = 1;
-            }
-            else
-            {
-                NPC.spriteDirection = -1;
-            }
+            NPC.spriteDirection = NPC.direction;
             BaseAI.AIFlier(NPC, ref NPC.ai, true, 0.1f, 0.04f, 4f, 1.5f, true, 300);
         }
         /*public override float SpawnChance(NPCSpawnInfo spawnInfo)
