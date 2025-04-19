@@ -280,12 +280,17 @@ Mods: {
 
 			TidalWhipTag: {
 				DisplayName: Tidal Whip Tag
-				Description: Mods.MultidimensionMod.Buffs.TidalWhipTag.Description
+				Description: Taggers
 			}
 
 			VoidArmWhipTag: {
 				DisplayName: Void Arm Whip Tag
-				Description: Mods.MultidimensionMod.Buffs.VoidArmWhipTag.Description
+				Description: Taggers
+			}
+
+			MadnessEmpower: {
+				DisplayName: Madness Frenzy
+				Description: Madness even madder now
 			}
 		}
 
@@ -4539,6 +4544,7 @@ Mods: {
 			ImpactTreadsImpact.DisplayName: Impact Treads Impact
 			AquaticVisualSlashTrail.DisplayName: Aquatic Visual Slash Trail
 			BoneShard.DisplayName: Bone Shard
+			BigBrainProjectile.DisplayName: Big Brain Blast
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -4755,6 +4761,9 @@ Mods: {
 				Dialogue6: From the darkness, there emerged a spark of light. Soon it created the world, filled it with beings it calls its children. This is us, we who follow its radiance, we who dwell in its warmth.
 				Dialogue7: Even with its height... of power, our beloved light, it was feeling bereft, of its primordial might. With a deep breath, it called forth its 3 most beloved children, tasking them to serve the world and watch over us.
 			}
+
+			AMindFromBeyond.DisplayName: A Mind from Beyond
+			LakeBat.DisplayName: Lil' Terror
 		}
 
 		Dialogue: {
@@ -5034,6 +5043,8 @@ Mods: {
 			MushSlime: A slime that has lived within the Scarlet Mycelium Forest for a good while. Mushrooms have grown inside, forming a large cap ontop. Mushroom Slimes can expell a cloud of spores when threatened.
 			MushroomPreacher: A mushroom given life by Umos the Feudal Fungus. They attempt to spread the words of the Light across the caverns, just as their glowing royalty did.
 			MushroomFollower: A sentient mushroom that follows the words of Light, seeking enlightenment. They will be often seen accompanying preachers.
+			AMindFromBeyond: Big Brain Brian
+			LilTerror: Oh shit, a bat
 		}
 
 		SoulConversation: {

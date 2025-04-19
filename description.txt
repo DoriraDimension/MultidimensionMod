@@ -29,7 +29,6 @@ Developer:
 
 -Dorira  owner/spriter/coder/lore writer
 -TailsTheFox92  coder
--red.laser  coder
 -Big E  coder
 -Arc  spriter/coder
 -CrimsonCB  spriter
@@ -46,6 +45,7 @@ Contributor:
 -HybridDeath  coding
 -nebs  coding
 -torra th  spriting
+-red.laser  coding
 
 Special Thanks:
 

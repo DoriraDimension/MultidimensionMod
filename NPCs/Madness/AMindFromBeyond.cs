@@ -51,7 +51,7 @@ namespace MultidimensionMod.NPCs.Madness
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.Opacity=0f;
             NPC.scale=2f;
-
+            ItemID.Sets.KillsToBanner[BannerItem] = 5;
             SpawnModBiomes = new int[1] { ModContent.GetInstance<MadnessMoon>().Type };
         }
 
