@@ -23,6 +23,7 @@ using Terraria.ModLoader.IO;
 using MultidimensionMod.Tiles.Biomes.ShroomForest;
 using rail;
 using MultidimensionMod.Items.Summons;
+using MultidimensionMod.Common.Globals;
 
 namespace MultidimensionMod
 {
@@ -42,6 +43,7 @@ namespace MultidimensionMod
 		public bool DimensionalShock;
 		public bool hazed;
 		public bool mildBurn;
+		public bool MadnessEmpower;
 
 		public override void ResetEffects(NPC npc)
 		{
@@ -53,6 +55,7 @@ namespace MultidimensionMod
 			DimensionalShock = false;
 			hazed = false;
 			mildBurn = false;
+			MadnessEmpower=false;
 		}
 
 		public int AccursedTimer = 0;
@@ -138,6 +141,8 @@ namespace MultidimensionMod
         {
             if (hazed)
                 modifiers.IncomingDamageMultiplier *= 0.85f;
+			if(MadnessEmpower)
+				modifiers.IncomingDamageMultiplier *= 1.2f;
         }
         public override void ModifyHitNPC(Terraria.NPC npc, Terraria.NPC target, ref Terraria.NPC.HitModifiers modifiers)
         {
@@ -147,12 +152,19 @@ namespace MultidimensionMod
 
         public override void ModifyIncomingHit(Terraria.NPC npc, ref Terraria.NPC.HitModifiers modifiers)
         {
+			if(MadnessEmpower)
+				modifiers.FinalDamage *= .3f;
             if (mildBurn)
                 modifiers.Defense *= .90f;
         }
 
         public override void DrawEffects(NPC npc, ref Color drawColor)
 		{
+			if(MadnessEmpower)
+			{
+				Dust.NewDust(npc.position, npc.width, npc.height, Main.rand.NextBool(2) ? DustID.YellowTorch : 54);
+            	Dust.NewDust(npc.position, npc.width, npc.height, Main.rand.NextBool(2) ? DustID.YellowTorch : 54);
+			}
 			if (Blaze)
 			{
 				if (Main.rand.Next(4) < 3)
@@ -264,7 +276,8 @@ namespace MultidimensionMod
 				if (Main.hardMode)
                 {
 					pool.Add(ModContent.NPCType<MadnessBat2>(), 1.0f);
-					//pool.Add(ModContent.NPCType<MadTitan>(), 0.2f);
+					if(ModContent.GetInstance<MadnessBrainSpawnSystem>().CanBrainSpawn)
+						pool.Add(ModContent.NPCType<AMindFromBeyond>(), 0.02f);
 				}
 			}
             if (spawnInfo.Player.InModBiome<ShroomForest>() && !spawnInfo.Player.ZoneTowerNebula && !spawnInfo.Player.ZoneTowerSolar && !spawnInfo.Player.ZoneTowerStardust && !spawnInfo.Player.ZoneTowerVortex)

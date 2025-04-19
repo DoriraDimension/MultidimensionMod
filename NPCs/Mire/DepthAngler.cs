@@ -42,13 +42,38 @@ namespace MultidimensionMod.NPCs.Mire
         public int goingToBite = 0;
         public int cooldown = 0;
         public bool theBiteOf87 = false;
+        public Entity GetTarget()
+        {
+            NPC.TargetClosest();
+            Player p = Main.player[NPC.target];
+            float distanceToNPC = 9999999f;
+            NPC thePrey=null;
+            for (int i = 0; i < Main.maxNPCs; i++)
+                {
+                    NPC npc = Main.npc[i];
+                    if (npc.type == ModContent.NPCType<Darkdrifter>() && npc.active && (Vector2.Distance(npc.Center,NPC.Center)<distanceToNPC))
+                    {
+                        distanceToNPC=Vector2.Distance(npc.Center,NPC.Center);
+                        thePrey=npc;
+                    }
+                    
+                }
+            if(thePrey is not null)
+            {
+                if(distanceToNPC<Vector2.Distance(p.Center,NPC.Center))
+                    return thePrey;
+            }
+
+            return p;
+        }
         public override void AI()
         {
-            float distance = NPC.Distance(Main.player[NPC.target].Center);
-            Player target = Main.player[NPC.target];
-            NPC.TargetClosest();
+            Entity target = GetTarget();
+
+            float distance = NPC.Distance(target.Center);
+
             //Turn on lantern just before getting into bite range and face the player
-            if (distance <= 60)
+            if (distance <= 120)
             {
                 Lighting.AddLight(NPC.Center, Color.Yellow.R / 255, Color.Orange.G / 255, Color.Yellow.B / 255);
                 if (target.Center.X > NPC.Center.X)
@@ -80,11 +105,11 @@ namespace MultidimensionMod.NPCs.Mire
                 NPC.frameCounter++;
                 if (NPC.frameCounter >= 3)
                 {
-                    NPC.frame.Y += 46;
-                    if (NPC.frame.Y > (46 * 3))
+                    NPC.frame.Y += 48;
+                    if (NPC.frame.Y > (48 * 3))
                     {
                         NPC.frameCounter = 0;
-                        NPC.frame.Y = 46 * 3;
+                        NPC.frame.Y = 48 * 3;
                     }
                 }
                 if (goingToBite == 15)

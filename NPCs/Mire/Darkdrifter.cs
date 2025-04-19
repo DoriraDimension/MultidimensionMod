@@ -35,6 +35,7 @@ namespace MultidimensionMod.NPCs.Mire
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 0;
+            NPC.npcSlots=0f;
             NPC.knockBackResist = 0.5f;
             NPC.noGravity = true;
             NPC.catchItem = (short)ModContent.ItemType<DarkdrifterItem>();
@@ -76,6 +77,8 @@ namespace MultidimensionMod.NPCs.Mire
         }
 
         public override bool CanHitPlayer(Player target, ref int cooldownSlot) => false;
+
+        public override bool CanBeHitByNPC(NPC attacker) =>attacker.type==ModContent.NPCType<DepthAngler>();
 
 
         public override void HitEffect(NPC.HitInfo hit)

@@ -86,5 +86,49 @@ namespace MultidimensionMod.Utilities
             FieldInfo field = type.GetField(fieldName, flags.Value);
             return (T)field.GetValue(obj);
         }
+
+        //Some uh AA stuff here
+        public static int GetFirstTileFloor(int x, int startY, bool solid = true)
+        {
+            if (!WorldGen.InWorld(x, startY)) return startY;
+            for (int y = startY; y < Main.maxTilesY - 10; y++)
+            {
+                Tile tile = Framing.GetTileSafely(x, y);
+                if (tile is { HasTile: true } && (!solid || Main.tileSolid[tile.TileType])) { return y; }
+            }
+            return Main.maxTilesY - 10;
+        }
+
+        public static Vector2 FindGroundVector(this Terraria.NPC npc, Vector2 vector, int distFromVector, Func<int, int, bool> canTeleportTo = null)
+        {
+            int vectorX = (int)vector.X / 16;
+            int vectorY = (int)vector.Y / 16;
+            int tileX = (int)npc.position.X / 16;
+            int tileY = (int)npc.position.Y / 16;
+            int teleportCheckCount = 0;
+
+            while (teleportCheckCount < 1000)
+            {
+                teleportCheckCount++;
+                int tpTileX = Main.rand.Next(vectorX - distFromVector, vectorX + distFromVector);
+                int tpTileY = Main.rand.Next(vectorY - distFromVector, vectorY + distFromVector);
+                for (int tpY = tpTileY; tpY < vectorY + distFromVector; tpY++)
+                {
+                    if ((tpY < vectorY - 4 || tpY > vectorY + 4 || tpTileX < vectorX - 4 || tpTileX > vectorX + 4) &&
+                        (tpY < tileY - 1 || tpY > tileY + 1 || tpTileX < tileX - 1 || tpTileX > tileX + 1) &&
+                        Framing.GetTileSafely(tpTileX, tpY).HasUnactuatedTile)
+                    {
+                        if (canTeleportTo != null && canTeleportTo(tpTileX, tpY) ||
+                            Main.tile[tpTileX, tpY - 1].LiquidType != 2 &&
+                            (Main.tileSolid[Framing.GetTileSafely(tpTileX, tpY).TileType] || Main.tileSolidTop[Framing.GetTileSafely(tpTileX, tpY).TileType]) &&
+                            !Collision.SolidTiles(tpTileX - 1, tpTileX + 1, tpY - 4, tpY - 1))
+                        {
+                            return new Vector2(tpTileX, tpY) * 16;
+                        }
+                    }
+                }
+            }
+            return new Vector2(npc.Center.X, npc.Center.Y);
+        }
     }
 }

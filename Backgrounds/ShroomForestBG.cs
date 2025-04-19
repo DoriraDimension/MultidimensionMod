@@ -6,11 +6,15 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
+using MultidimensionMod.Biomes;
+using System.Collections.Generic;
 
 namespace MultidimensionMod.Backgrounds
 {
     public class ShroomForestBackground : ModSurfaceBackgroundStyle
     {
+        readonly SporeHaze Fog = new SporeHaze(true);
+
         // Use this to keep far Backgrounds like the mountains.
         public override void ModifyFarFades(float[] fades, float transitionSpeed)
         {
@@ -44,14 +48,50 @@ namespace MultidimensionMod.Backgrounds
         {
             return -1;
         }
+        public class Spore
+        {
+            public Vector2 Position;
+            public float Scale = 1f;
+            public float Opacity = 0f;
+            public int LifeTime = 0;
+            public float Rotation = 0f;
+
+            public Spore(Vector2 StartPosition, float scale, float startingRotation)
+            {
+                Position = StartPosition;
+                Scale = scale;
+                Rotation = startingRotation;
+            }
+        }
 
         public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b)
         {
             return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Backgrounds/ShroomForestBG1");
         }
+        public static List<Spore> Spores { get; internal set; } = new();
 
         public override bool PreDrawCloseBackground(SpriteBatch spriteBatch)
         {
+            if (Main.rand.NextBool(10))
+            {
+                Spores.Add(new Spore(new Vector2(Main.rand.NextFloat(0f, Main.screenWidth), Main.screenHeight), Main.rand.NextFloat(0.9f, 1.2f), MathHelper.ToRadians(Main.rand.NextFloat(-30f, 30f))));
+            }
+
+            for (int i = 0; i < Spores.Count; i++)
+            {
+                Spores[i].LifeTime++;
+                if (Main.dayTime)
+                    Spores[i].Opacity -= 0.1f;
+                if (Spores[i].LifeTime < 120 && Spores[i].Opacity < 0.5f)
+                    Spores[i].Opacity += 0.01f;
+                if (Spores[i].LifeTime > 1100)
+                    Spores[i].Opacity -= 0.01f;
+                Spores[i].Position.X += 1f * (float)Math.Sin((Main.time + Spores[i].Position.X) / 600);
+                Spores[i].Position.Y += -2f * (float)Math.Abs(Math.Sin((Main.time + Spores[i].Position.Y) / 540));
+                Spores[i].Scale += 0.001f;
+            }
+            Spores.RemoveAll(spore => spore.LifeTime > 1200);
+
             float a = 1300f;
             float b = 1750f;
             int[] textureSlots = new int[] {
@@ -119,6 +159,12 @@ namespace MultidimensionMod.Backgrounds
                 }
 
             }
+            if(!Main.dayTime && Main.hardMode){
+                Color DefaultFog = new Color(46, 0, 217);
+                Fog.Update(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture").Value);
+                Fog.Draw(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture").Value, true, DefaultFog);
+            }
+
             int length = textureSlots.Length;
             for (int i = 0; i < textureSlots.Length; i++)
             {
@@ -146,6 +192,15 @@ namespace MultidimensionMod.Backgrounds
                 }
 
             }
+
+            Texture2D sporeTexture = ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/Spore").Value;
+            for (int i = 0; i < Spores.Count; i++)
+            {
+                Vector2 drawCenter =Main.LocalPlayer.Center;//Main.screenPosition + new Vector2(Main.screenWidth * 0.5f, Main.screenHeight * 0.5f);
+                spriteBatch.Draw(sporeTexture, Spores[i].Position, null, (Main.hardMode ? new Color(214, 185, 252) : new Color(255, 80, 80)) * Spores[i].Opacity * 0.3f, 1f * ((float)(Main.time + Spores[i].Position.Y) / 900), sporeTexture.Size() * 0.5f, Spores[i].Scale, 0, 0f);
+            }
+
+
             return false;
         }
     }

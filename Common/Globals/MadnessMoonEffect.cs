@@ -5,6 +5,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.Graphics.Effects;
+using MultidimensionMod.NPCs.Madness;
 
 namespace MultidimensionMod.Common.Globals
 {
@@ -24,6 +25,26 @@ namespace MultidimensionMod.Common.Globals
             bool MadnessMoonActive = Main.LocalPlayer.InModBiome(ModContent.GetInstance<MadnessMoon>());
 
             return MadnessMoonActive && MDWorld.MadnessMoon;
+        }
+    }
+    public class MadnessBrainSpawnSystem : ModSystem
+    {
+        public bool CanBrainSpawn=true;
+        public override void PostUpdateNPCs()
+        {
+            if(!MDWorld.MadnessMoon)
+            {
+                CanBrainSpawn=true;
+            }
+            else
+            {
+                for(int i=0; i < Main.maxNPCs;i++)
+                {
+                    NPC n = Main.npc[i];
+                    if(n.active && n.type == ModContent.NPCType<AMindFromBeyond>())
+                        CanBrainSpawn=false;
+                }
+            }
         }
     }
 }
