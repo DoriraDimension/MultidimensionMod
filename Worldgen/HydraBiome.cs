@@ -362,6 +362,19 @@ namespace MultidimensionMod.Worldgen
                         WorldGen.PlacePot(i, j - 1);*/
                 }
             }
+            for (int X = 20; X <= Main.maxTilesX - 20; X++)
+            {
+                for (int Y = 20; Y <= Main.maxTilesY - 100; Y++)
+                {
+                    
+                    ModTile tile = TileLoader.GetTile(Main.tile[X, Y].TileType);
+                    if (tile != null && tile is MireGrass)
+                    {
+                        for (int v = 0; v < 10; v++)
+                            tile.RandomUpdate(X, Y);
+                    }
+                }
+            }
         }
 
         public static int GetWorldSize()

@@ -612,8 +612,8 @@ namespace MultidimensionMod.Worldgen
                         
                         if (Main.tile[X, Y].TileType == TileID.Pots)
                         {   
-                           	WorldGen.KillTile(X, Y);
-
+                           	Tile t =Main.tile[X, Y];
+                            t.HasTile=false;
                             WorldGen.PlaceTile(X, Y +1, ModContent.TileType<SporePots>(), style: WorldGen.genRand.Next(3), mute: true);
                         }
                         
@@ -626,6 +626,10 @@ namespace MultidimensionMod.Worldgen
                         if (Main.tile[X, Y].TileType == ModContent.TileType<SporeStonePlaced>()&& Main.tile[X, Y].HasTile&&WorldGen.genRand.NextFloat()<0.2f)
                         {   
                             WorldGen.PlaceTile(X, Y -1, ModContent.TileType<SporeStoneAmbient>(), style: WorldGen.genRand.Next(3), mute: true);
+                        }
+                        if (Main.tile[X, Y].TileType == ModContent.TileType<Mycelium>()&& Main.tile[X, Y].HasTile&&WorldGen.genRand.NextFloat()<0.1f&&Y>Main.worldSurface)
+                        {   
+                            WorldGen.PlaceTile(X, Y -1, ModContent.TileType<SporePots>(), style: WorldGen.genRand.Next(3), mute: true);
                         }
                         if (Main.tile[X, Y].TileType == ModContent.TileType<SporeStonePlaced>()&& Main.tile[X, Y].HasTile&&WorldGen.genRand.NextFloat()<0.2f)
                         {   
@@ -643,9 +647,16 @@ namespace MultidimensionMod.Worldgen
                         {   
                             WorldGen.PlaceTile(X, Y -1, ModContent.TileType<SporeStalagmite1>(), style: WorldGen.genRand.Next(3), mute: true);
                         }
-                        
+
+                        Tile tile = Main.tile[X, Y];
+                        if (tile != null && (tile.TileType==mycelium ||tile.TileType==70))
+                        {
+                            for (int v = 0; v < 10; v++)
+                                TileLoader.RandomUpdate(X, Y,tile.TileType);
+                        }
                     }
                 }
+            
         }
 
         
