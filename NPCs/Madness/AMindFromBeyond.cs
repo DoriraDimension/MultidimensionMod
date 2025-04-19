@@ -211,6 +211,8 @@ namespace MultidimensionMod.NPCs.Madness
         public override void OnHitPlayer(Player target, Player.HurtInfo info)
         {
             target.AddBuff(ModContent.BuffType<Buffs.Debuffs.Madness>(), 300);
+            target.AddBuff(BuffID.Confused, 30);
+
         }
     }
     public class BigBrainProjectile : ModProjectile
