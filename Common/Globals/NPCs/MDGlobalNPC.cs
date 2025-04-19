@@ -330,14 +330,15 @@ namespace MultidimensionMod
             if (spawnInfo.Player.InModBiome<TheLakeDepths>() && !spawnInfo.Player.ZoneTowerNebula && !spawnInfo.Player.ZoneTowerSolar && !spawnInfo.Player.ZoneTowerStardust && !spawnInfo.Player.ZoneTowerVortex)
 			{
                 pool.Clear();
-				if (spawnInfo.Water)
+                pool.Add(ModContent.NPCType<LakeBat>(), 0.2f);
+                if (spawnInfo.Water)
 				{
                     pool.Add(ModContent.NPCType<DrifterSpawner>(), 1f);
                     pool.Add(ModContent.NPCType<FogAngler>(), 0.3f);
                     if (NPC.CountNPCS(ModContent.NPCType<DepthAngler>()) < 3)
                         pool.Add(ModContent.NPCType<DepthAngler>(), 0.5f);
-					pool.Add(ModContent.NPCType<LakeBat>(), 0.2f);
 					pool.Add(ModContent.NPCType<Finfly>(), 0.2f);
+					pool.Add(ModContent.NPCType<Biofeeder>(), 0.2f);
                 }
             }
         }

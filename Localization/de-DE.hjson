@@ -4765,6 +4765,7 @@ Mods: {
 			// AMindFromBeyond.DisplayName: A Mind from Beyond
 			// LakeBat.DisplayName: Lil' Terror
 			// Finfly.DisplayName: Finfly
+			// Biofeeder.DisplayName: Biofeeder
 		}
 
 		Dialogue: {
@@ -5047,6 +5048,7 @@ Mods: {
 			// AMindFromBeyond: Big Brain Brian
 			// LilTerror: Oh shit, a bat
 			// Finfly: Speedy Boi
+			// Biofeeder: John feeder.
 		}
 
 		SoulConversation: {
