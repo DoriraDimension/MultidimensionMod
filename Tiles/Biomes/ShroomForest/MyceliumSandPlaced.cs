@@ -66,11 +66,23 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
 
         public override void RandomUpdate(int i, int j)
         {
+            Tile above=Framing.GetTileSafely(i, j-1);
+
             WorldGen.SpreadGrass(i + Main.rand.Next(-1, 1), j + Main.rand.Next(-1, 1), TileID.Dirt, Type, false);
             if (Main.rand.NextBool(60))
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<AridMushroom>(), mute: true, style: Main.rand.Next(5));
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<AridMushroom>(), Main.rand.Next(5), 0, -1, -1);
+            }
+            if (Main.rand.NextBool(60)&& !above.HasTile && above.LiquidType == LiquidID.Water)
+            {
+                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<MushroomAridReed>(), mute: true);
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<MushroomAridReed>(),0, 0, -1, -1);
+            }
+            if (Main.rand.NextBool(120))
+            {
+                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<TallAridMushroom>(), mute: true, style: Main.rand.Next(5));
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<TallAridMushroom>(), Main.rand.Next(5), 0, -1, -1);
             }
             if (Main.rand.NextBool(2500))
             {
