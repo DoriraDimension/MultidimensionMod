@@ -94,7 +94,7 @@ namespace MultidimensionMod.NPCs.Madness
             //Find a good spot to emerge
             if(isHiding&&!HasFoundSpot)
             {
-                Vector2 playerCenter = new(player.Center.X, MDHelper.GetFirstTileFloor((int)player.Center.X / 16, (int)player.Center.Y / 16) * 16);
+                Vector2 playerCenter = new(player.Center.X+70, MDHelper.GetFirstTileFloor((int)player.Center.X / 16, (int)player.Center.Y / 16) * 16);
                 NPC.Center = NPC.FindGroundVector(playerCenter, 15);
                 HasFoundSpot=true;
                 AnchorPosition=NPC.Center;
@@ -113,7 +113,7 @@ namespace MultidimensionMod.NPCs.Madness
                 for(int i=0; i < Main.maxNPCs;i++)
                 {
                     NPC n = Main.npc[i];
-                    if(n.active && (n.type == ModContent.NPCType<Madman>()||n.type == ModContent.NPCType<MadnessDog>()||n.type == ModContent.NPCType<MadnessBat2>()||n.type == ModContent.NPCType<MadnessBat>())&&!n.HasBuff<MadnessEmpower>())
+                    if(n.active && (n.type == ModContent.NPCType<Madman>()||n.type == ModContent.NPCType<MadnessDog>()||n.type == ModContent.NPCType<MadnessBat2>()||n.type == ModContent.NPCType<MadnessBat>())&&!n.HasBuff<MadnessEmpower>()&&Vector2.Distance(n.Center,NPC.Center)<600f)
                         n.AddBuff(ModContent.BuffType<MadnessEmpower>(),5);
                 }
                 NPC.dontTakeDamage=false;
@@ -134,10 +134,10 @@ namespace MultidimensionMod.NPCs.Madness
                 if(AITimer%180==0)
                 {
                     if (Main.netMode != NetmodeID.MultiplayerClient)
-                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, (player.Center-NPC.Center).SafeNormalize(Vector2.UnitX)*19f, ModContent.ProjectileType<BigBrainProjectile>(), NPC.damage / 3, 0f, Main.myPlayer);
+                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, ((player.Center+(player.velocity*18f))-NPC.Center).SafeNormalize(Vector2.UnitX)*19f, ModContent.ProjectileType<BigBrainProjectile>(), NPC.damage / 3, 0f, Main.myPlayer);
                 }
 
-                if(Vector2.Distance(player.Center,NPC.Center)>1000f||NPC.Opacity!=1f)
+                if(Vector2.Distance(player.Center,NPC.Center)>1600f||NPC.Opacity!=1f)
                 {
                     NPC.Opacity-=0.05f;
                     if(NPC.Opacity<0.01f)
@@ -211,7 +211,6 @@ namespace MultidimensionMod.NPCs.Madness
         public override void OnHitPlayer(Player target, Player.HurtInfo info)
         {
             target.AddBuff(ModContent.BuffType<Buffs.Debuffs.Madness>(), 300);
-            target.AddBuff(BuffID.Confused, 30);
 
         }
     }
@@ -241,6 +240,7 @@ namespace MultidimensionMod.NPCs.Madness
         public override void OnHitPlayer(Player target, Player.HurtInfo info)
         {
             target.AddBuff(ModContent.BuffType<Buffs.Debuffs.Madness>(), 300);
+            target.AddBuff(BuffID.Confused, 30);
         }
     }
 }
