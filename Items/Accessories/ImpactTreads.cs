@@ -17,6 +17,7 @@ namespace MultidimensionMod.Items.Accessories
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
+            player.fireWalk = true;
             player.noFallDmg = true;
             player.rocketBoots = 2;
             player.maxFallSpeed *= 1.3f;
@@ -32,7 +33,7 @@ namespace MultidimensionMod.Items.Accessories
         {
             CreateRecipe()
             .AddIngredient(ItemID.RocketBoots)
-            .AddIngredient(ItemID.LuckyHorseshoe)
+            .AddIngredient(ItemID.ObsidianHorseshoe)
             .AddIngredient(ItemID.MeteoriteBar, 18)
             .AddTile(TileID.Anvils)
             .Register();
