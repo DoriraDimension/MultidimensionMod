@@ -4766,6 +4766,11 @@ Mods: {
 			LakeBat.DisplayName: Lil' Terror
 			Finfly.DisplayName: Finfly
 			Biofeeder.DisplayName: Biofeeder
+			Stalker.DisplayName: Stalker
+			Mossling.DisplayName: Mossling
+			Mosster.DisplayName: Mosster
+			Lecharvis.DisplayName: Lecharvis
+			Bloatleech.DisplayName: Bloatleech
 		}
 
 		Dialogue: {
@@ -5045,10 +5050,15 @@ Mods: {
 			MushSlime: A slime that has lived within the Scarlet Mycelium Forest for a good while. Mushrooms have grown inside, forming a large cap ontop. Mushroom Slimes can expell a cloud of spores when threatened.
 			MushroomPreacher: A mushroom given life by Umos the Feudal Fungus. They attempt to spread the words of the Light across the caverns, just as their glowing royalty did.
 			MushroomFollower: A sentient mushroom that follows the words of Light, seeking enlightenment. They will be often seen accompanying preachers.
-			AMindFromBeyond: Big Brain Brian
-			LilTerror: Oh shit, a bat
-			Finfly: Speedy Boi
-			Biofeeder: John feeder.
+			AMindFromBeyond: Massive living brains that empower other maddened beings with a cerebral aura.
+			LilTerror: Bats with dark coloration that have evolved from Cave Bats to survive in the lake depths. Their claws contain a paralyzing venom.
+			Finfly: These bean shaped guys are an evolutionary offbranch of the Biofeeder. They flap their fins in such a high frequency that they look like underwater flies.
+			Biofeeder: Aquatic maggot like animal that sticks to walls in the lake depths to feed on washed up biomatter.
+			Mossling: Small younglings that cover themselves in moss to avoid detection from other predators. If threatened, they will ram into their opponent and run away.
+			Mosster: These hulking monsters roam the Shrouded Mire as one of its apex predators. With its giant arms and claws, it tears apart prey with ease. They are very social, and tend to their young until adulthood
+			Stalker: Strange plant like creatures that dwell in foggy bogs. Unlike most other creatures native to the Shrouded Mire, these tend to disappear during nighttime.
+			Bloatleech: Large rotund leeches that have their home in the lake depths. With their sharp teeth, they dig into flesh to create big wounds to feed on.
+			Lecharvis: Wriggly bloatleech larvae that live in the lake depths. Due to their teeth not being developed yet, they rely on fresh blood their parents release from their caught prey.
 		}
 
 		SoulConversation: {

@@ -317,6 +317,8 @@ namespace MultidimensionMod
                         pool.Add(ModContent.NPCType<MireSkulker>(), .25f);
                     pool.Add(ModContent.NPCType<BogFrog>(), .08f);
                     pool.Add(ModContent.NPCType<Newt>(), .06f);
+                    pool.Add(ModContent.NPCType<Mossling>(), 0.2f);
+                    pool.Add(ModContent.NPCType<Mosster>(), 0.05f);
                     if (!spawnInfo.Water)
                         pool.Add(ModContent.NPCType<MoonMorpho>(), .08f);
                     if (spawnInfo.Water)
@@ -326,11 +328,16 @@ namespace MultidimensionMod
                         pool.Add(ModContent.NPCType<Miresquito>(), .10f);
                     }
                 }
+				else if (Main.dayTime)
+				{
+                    pool.Add(ModContent.NPCType<Stalker>(), 0.2f);
+                }
             }
             if (spawnInfo.Player.InModBiome<TheLakeDepths>() && !spawnInfo.Player.ZoneTowerNebula && !spawnInfo.Player.ZoneTowerSolar && !spawnInfo.Player.ZoneTowerStardust && !spawnInfo.Player.ZoneTowerVortex)
 			{
                 pool.Clear();
-                pool.Add(ModContent.NPCType<LakeBat>(), 0.2f);
+                pool.Add(ModContent.NPCType<LakeBat>(), 0.1f);
+                pool.Add(ModContent.NPCType<Mossling>(), 0.2f);
                 if (spawnInfo.Water)
 				{
                     pool.Add(ModContent.NPCType<DrifterSpawner>(), 1f);
@@ -339,6 +346,8 @@ namespace MultidimensionMod
                         pool.Add(ModContent.NPCType<DepthAngler>(), 0.5f);
 					pool.Add(ModContent.NPCType<Finfly>(), 0.2f);
 					pool.Add(ModContent.NPCType<Biofeeder>(), 0.2f);
+                    pool.Add(ModContent.NPCType<Bloatleech>(), 0.15f);
+                    pool.Add(ModContent.NPCType<Lecharvis>(), 0.3f);
                 }
             }
         }

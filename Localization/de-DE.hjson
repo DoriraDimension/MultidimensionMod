@@ -4766,6 +4766,11 @@ Mods: {
 			// LakeBat.DisplayName: Lil' Terror
 			// Finfly.DisplayName: Finfly
 			// Biofeeder.DisplayName: Biofeeder
+			// Stalker.DisplayName: Stalker
+			// Mossling.DisplayName: Mossling
+			// Mosster.DisplayName: Mosster
+			// Lecharvis.DisplayName: Lecharvis
+			// Bloatleech.DisplayName: Bloatleech
 		}
 
 		Dialogue: {
@@ -5049,6 +5054,11 @@ Mods: {
 			// LilTerror: Oh shit, a bat
 			// Finfly: Speedy Boi
 			// Biofeeder: John feeder.
+			// Mossling: Child
+			// Mosster: Adult
+			// Stalker: Your ex [gender]friend
+			// Bloatleech: sucker
+			// Lecharvis: sucker jr
 		}
 
 		SoulConversation: {
