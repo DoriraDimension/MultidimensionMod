@@ -84,6 +84,7 @@ namespace MultidimensionMod.Common.Players
         public bool FogLantern = false;
         public float FogProgress = 0f;
         public float FogLanternThreshold = 0.7f;
+        public bool SpiderNecklace = false;
         #region Custom Sword Swing Fields
         public int swingDir = 1;
         public Vector2 currentArmPosition = Vector2.Zero;
@@ -125,6 +126,7 @@ namespace MultidimensionMod.Common.Players
             SkulkerShell = false;
             impactTreads = false;
             FogLantern = false;
+            SpiderNecklace = false;
         }
         public override void UpdateDead()
         {
@@ -548,24 +550,23 @@ namespace MultidimensionMod.Common.Players
 
         public override void UpdateBadLifeRegen()
         {
-            Player player = Main.LocalPlayer;
             if (Blaze) //Blazing Suffering debuff
             {
-                if (player.lifeRegen > 0)
+                if (Player.lifeRegen > 0)
                 {
-                    player.lifeRegen = 0;
+                    Player.lifeRegen = 0;
                 }
-                player.lifeRegenTime = 0;
-                player.lifeRegen -= 36;
+                Player.lifeRegenTime = 0;
+                Player.lifeRegen -= 36;
             }
             if (Madness) //Madness debuff
             {
                 MadnessTimer++;
-                if (player.lifeRegen > 0)
+                if (Player.lifeRegen > 0)
                 {
-                    player.lifeRegen = 0;
+                    Player.lifeRegen = 0;
                 }
-                player.lifeRegenTime = 0;
+                Player.lifeRegenTime = 0;
                 if (MadnessTimer >= 160)
                 {
                     MadnessCringe += 5; //Increases the damage this debuff does
@@ -580,7 +581,7 @@ namespace MultidimensionMod.Common.Players
                 {
                     MadnessCringe = 40; //Maximum damage the debuff can do
                 }
-                player.lifeRegen -= MadnessCringe;
+                Player.lifeRegen -= MadnessCringe;
             }
             if (!Madness)
             {
@@ -589,18 +590,18 @@ namespace MultidimensionMod.Common.Players
             }
             if (DrakePoison) //Drakeblood Poison debuff
             {
-                if (player.lifeRegen > 0)
+                if (Player.lifeRegen > 0)
                 {
-                    player.lifeRegen = 0;
+                    Player.lifeRegen = 0;
                 }
-                player.lifeRegen -= 16;
+                Player.lifeRegen -= 16;
             }
             //Disable life regeneration during Potion Sickness as part of the Heart of the Monarch's tradeoff
             if (MonarchHeart && Player.HasBuff(BuffID.PotionSickness))
             {
-                if (player.lifeRegen > 0)
+                if (Player.lifeRegen > 0)
                 {
-                    player.lifeRegen = 0;
+                    Player.lifeRegen = 0;
                 }
             }
         }
@@ -637,20 +638,19 @@ namespace MultidimensionMod.Common.Players
 
         public override void OnHitNPCWithItem(Item item, NPC target, NPC.HitInfo hit, int damageDone)
         {
-            Player player = Main.LocalPlayer;
             if (StarvingLarva)
             {
                 if (target.life > 0)
                 {
                     return;
                 }
-                player.statLife += 5; //Heals the player for 5 HP if an enemy dies from a melee attack
+                Player.statLife += 5; //Heals the player for 5 HP if an enemy dies from a melee attack
             }
             if (SinnerSet && item.CountsAsClass(DamageClass.Magic))
             {
                 target.AddBuff(BuffID.Frostburn, 120);
             }
-            if (MushiumSet && !IndigoMode && player.HasBuff(ModContent.BuffType<LightStarved>()))
+            if (MushiumSet && !IndigoMode && Player.HasBuff(ModContent.BuffType<LightStarved>()))
             {
                 if (Main.rand.NextBool(10))
                 {
@@ -681,8 +681,7 @@ namespace MultidimensionMod.Common.Players
 
         public override void OnHitNPCWithProj(Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
         {
-            Player player = Main.LocalPlayer;
-            Item item = player.HeldItem;
+            Item item = Player.HeldItem;
             int useTimeSub = item.useTime / 2;
             if (StarvingLarva)
             {
@@ -690,13 +689,13 @@ namespace MultidimensionMod.Common.Players
                 {
                     return;
                 }
-                player.statLife += 5; //Heals the player for 5 HP if an enemy dies from a projectile
+                Player.statLife += 5; //Heals the player for 5 HP if an enemy dies from a projectile
             }
             if (SinnerSet && proj.CountsAsClass(DamageClass.Magic))
             {
                 target.AddBuff(BuffID.Frostburn, 120);
             }
-            if (MushiumSet && !IndigoMode && player.HasBuff(ModContent.BuffType<LightStarved>()) && !proj.npcProj && !proj.trap)
+            if (MushiumSet && !IndigoMode && Player.HasBuff(ModContent.BuffType<LightStarved>()) && !proj.npcProj && !proj.trap)
             {
                 if (Main.rand.NextBool(10))
                 {
@@ -707,12 +706,11 @@ namespace MultidimensionMod.Common.Players
 
         public override void GetHealLife(Item item, bool quickHeal, ref int healValue)
         {
-            Player player = Main.LocalPlayer;
-            if (item.type == ItemID.Mushroom && player.GetModPlayer<MDPlayer>().Healthy)
+            if (item.type == ItemID.Mushroom && Player.GetModPlayer<MDPlayer>().Healthy)
             {
                 healValue = 40; //Makes Mushrooms heal more HP when the Healthy Cap accessory is equipped
             }
-            else if (item.type == ItemID.Mushroom && !player.GetModPlayer<MDPlayer>().Healthy)
+            else if (item.type == ItemID.Mushroom && !Player.GetModPlayer<MDPlayer>().Healthy)
             {
                 healValue = 15;
             }
@@ -726,54 +724,62 @@ namespace MultidimensionMod.Common.Players
             }
         }
 
+        public override void OnHitByProjectile(Projectile projectile, Player.HurtInfo hurtinfo)
+        {
+            if (Probe)
+            {
+                if (Main.myPlayer == Player.whoAmI && Player.ownedProjectileCounts[ModContent.ProjectileType<FriendlyProbe>()] < 4)
+                {
+                    int probeDamage = (int)Player.GetBestClassDamage().ApplyTo(40);
+                    Item item = DiggerEngine;
+                    Projectile.NewProjectile(Player.GetSource_FromThis(), Player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<FriendlyProbe>(), probeDamage, 0f, Player.whoAmI);
+                }
+            }
+        }
+
         public override void OnHitByNPC(NPC npc, Player.HurtInfo hurtInfo)
         {
             if (DragonsGuard)
             {
                 npc.AddBuff(BuffID.OnFire, 180);
             }
-        }
-
-        public override void PostHurt(Player.HurtInfo info)
-        {
-            //This code spawns a friendly Destroyer Probe when the player gets hit, the amount of Probes caps at 4
-            Player player = Main.LocalPlayer;
-            if (this.Probe && !Player.lavaWet)
+            if (SpiderNecklace)
+            {
+                //Spawn 5 flying spiders when hit by an enemy
+                for (int i = 0; i < 5; i++)
+                {
+                    int spiderDamage = (int)Player.GetBestClassDamage().ApplyTo(16);
+                    Projectile bee = Projectile.NewProjectileDirect(Player.GetSource_FromThis(), Player.Center, new Vector2(2, 2).RotatedByRandom(100) * Main.rand.NextFloat(0.5f, 1.2f), ModContent.ProjectileType<FlyingSpider>(), spiderDamage, 0f, Player.whoAmI, 0, 0, 2);
+                }
+                Player.AddBuff(BuffID.Honey, 600);
+            }
+            if (Probe)
             {
                 if (Main.myPlayer == Player.whoAmI && Player.ownedProjectileCounts[ModContent.ProjectileType<FriendlyProbe>()] < 4)
                 {
+                    int probeDamage = (int)Player.GetBestClassDamage().ApplyTo(40);
                     Item item = DiggerEngine;
-                    Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<FriendlyProbe>(), (int)info.Damage + 40, 0f, Player.whoAmI);
+                    Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<FriendlyProbe>(), probeDamage, 0f, Player.whoAmI);
                 }
             }
-            if (DrakeShield && !Player.lavaWet && Player.ownedProjectileCounts[ModContent.ProjectileType<FrostScaleProj>()] < 4)
+            if (DrakeShield && Player.ownedProjectileCounts[ModContent.ProjectileType<FrostScaleProj>()] < 8)
             {
                 if (Main.myPlayer == Player.whoAmI)
                 {
                     for (int i = 0; i < 2; i++)
                     {
+                        int scaleDamage = (int)Player.GetBestClassDamage().ApplyTo(10);
                         Item item = DrakescaleShield;
-                        Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.Next(-11, 11) * .25f, -7 * .75f), ModContent.ProjectileType<FrostScaleProj>(), (int)info.Damage / 2, 0f, Player.whoAmI);
-                    }
-                }
-            }
-            if (DrakeShield && !Player.lavaWet && Player.ownedProjectileCounts[ModContent.ProjectileType<FrostScaleProj>()] < 4)
-            {
-                if (Main.myPlayer == Player.whoAmI)
-                {
-                    for (int i = 0; i < 2; i++)
-                    {
-                        Item item = ColdDesertShield;
-                        Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.Next(-11, 11) * .25f, -7 * .75f), ModContent.ProjectileType<FrostScaleProj>(), (int)info.Damage/ 2, 0f, Player.whoAmI);
+                        Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.Next(-11, 11) * .25f, -7 * .75f), ModContent.ProjectileType<FrostScaleProj>(), scaleDamage, 0f, Player.whoAmI);
                     }
                 }
             }
             if (DesertNeck && !Player.HasBuff(ModContent.BuffType<ManaBurstCooldown>()))
             {
-                int damage = Player.statMana / 2;
+                int damage = (int)Player.GetBestClassDamage().ApplyTo(Player.statMana / 2);
                 if (Main.hardMode)
                 {
-                    damage = Player.statMana;
+                    damage = (int)Player.GetBestClassDamage().ApplyTo(Player.statMana);
                 }
                 if (Main.myPlayer == Player.whoAmI)
                 {
@@ -784,6 +790,10 @@ namespace MultidimensionMod.Common.Players
                     Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(0, 0), ModContent.ProjectileType<ManaShockwave>(), damage, 0f, Player.whoAmI);
                 }
             }
+        }
+
+        public override void PostHurt(Player.HurtInfo info)
+        {
             if (MonarchHeart)
             {
                 if (Player.HasBuff(BuffID.PotionSickness))
@@ -799,8 +809,8 @@ namespace MultidimensionMod.Common.Players
                 if (Main.rand.NextBool(8))
                 {
                     Item item = EyeoftheHunter;
-                    player.AddBuff(BuffID.Weak, 480);
-                    SoundEngine.PlaySound(SoundID.DD2_BetsyDeath, player.position);
+                    Player.AddBuff(BuffID.Weak, 480);
+                    SoundEngine.PlaySound(SoundID.DD2_BetsyDeath, Player.position);
                 }
             }
             if (this.DesireEye)
@@ -808,8 +818,8 @@ namespace MultidimensionMod.Common.Players
                 if (Main.rand.NextBool(8))
                 {
                     Item item = EyeofDesire;
-                    player.AddBuff(BuffID.Cursed, 480);
-                    SoundEngine.PlaySound(SoundID.DD2_BetsyDeath, player.position);
+                    Player.AddBuff(BuffID.Cursed, 480);
+                    SoundEngine.PlaySound(SoundID.DD2_BetsyDeath, Player.position);
                 }
             }
             if (this.ExplorerEye)
@@ -817,8 +827,8 @@ namespace MultidimensionMod.Common.Players
                 if (Main.rand.NextBool(8))
                 {
                     Item item = EyeoftheExplorer;
-                    player.AddBuff(BuffID.Slow, 480);
-                    SoundEngine.PlaySound(SoundID.DD2_BetsyDeath, player.position);
+                    Player.AddBuff(BuffID.Slow, 480);
+                    SoundEngine.PlaySound(SoundID.DD2_BetsyDeath, Player.position);
                 }
             }
             if (this.NightEye)
@@ -826,8 +836,8 @@ namespace MultidimensionMod.Common.Players
                 if (Main.rand.NextBool(8))
                 {
                     Item item = EyeoftheNightwalker;
-                    player.AddBuff(BuffID.Blackout, 480);
-                    SoundEngine.PlaySound(SoundID.DD2_BetsyDeath, player.position);
+                    Player.AddBuff(BuffID.Blackout, 480);
+                    SoundEngine.PlaySound(SoundID.DD2_BetsyDeath, Player.position);
                 }
             }
             #endregion
@@ -835,21 +845,20 @@ namespace MultidimensionMod.Common.Players
 
         public override void ProcessTriggers(TriggersSet triggersSet)
         {
-            Player player = Main.LocalPlayer;
             int sentry = ModContent.ProjectileType<NeroConstruct>();
             if (MDKeybinds.ArmorAbility.JustPressed && NeroSet)
             {
                 Vector2 velocity = new Vector2(0, 0);
-                IEntitySource source = player.GetSource_Misc("Nero Set");
-                Projectile.NewProjectile(source, Main.MouseWorld, velocity, sentry, 75, 0f, player.whoAmI);
-                SoundEngine.PlaySound(SoundID.DD2_DefenseTowerSpawn, player.Center);
+                IEntitySource source = Player.GetSource_Misc("Nero Set");
+                Projectile.NewProjectile(source, Main.MouseWorld, velocity, sentry, 75, 0f, Player.whoAmI);
+                SoundEngine.PlaySound(SoundID.DD2_DefenseTowerSpawn, Player.Center);
             }
-            if (MDKeybinds.ArmorAbility.JustPressed && MushiumSet && !IndigoMode && !player.HasBuff(ModContent.BuffType<SwapExhaustion>()))
+            if (MDKeybinds.ArmorAbility.JustPressed && MushiumSet && !IndigoMode && !Player.HasBuff(ModContent.BuffType<SwapExhaustion>()))
             {
                 IndigoMode = true;
-                player.AddBuff(ModContent.BuffType<SwapExhaustion>(), 1800);
-                player.AddBuff(ModContent.BuffType<LightOverload>(), 300);
-                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RoyalRadianceScream"), player.position);
+                Player.AddBuff(ModContent.BuffType<SwapExhaustion>(), 1800);
+                Player.AddBuff(ModContent.BuffType<LightOverload>(), 300);
+                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RoyalRadianceScream"), Player.position);
                 for (int m = 0; m < 20; m++)
                 {
                     int dustID = Dust.NewDust(new Vector2(Player.Center.X - 1, Player.Center.Y - 1), 2, 2, DustID.GlowingMushroom, 0f, 0f, 100, Color.White, 1.6f);
@@ -858,14 +867,14 @@ namespace MultidimensionMod.Common.Players
                     Main.dust[dustID].noGravity = true;
                 }
             }
-            else if (MDKeybinds.ArmorAbility.JustPressed && MushiumSet && IndigoMode && !player.HasBuff(ModContent.BuffType<SwapExhaustion>()))
+            else if (MDKeybinds.ArmorAbility.JustPressed && MushiumSet && IndigoMode && !Player.HasBuff(ModContent.BuffType<SwapExhaustion>()))
             {
                 IndigoMode = false;
                 Player.statLife += 10;
                 Player.HealEffect(10);
-                player.AddBuff(ModContent.BuffType<SwapExhaustion>(), 1800);
-                player.AddBuff(ModContent.BuffType<LightStarved>(), 300);
-                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RoyalRadianceScream"), player.position);
+                Player.AddBuff(ModContent.BuffType<SwapExhaustion>(), 1800);
+                Player.AddBuff(ModContent.BuffType<LightStarved>(), 300);
+                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RoyalRadianceScream"), Player.position);
                 for (int m = 0; m < 20; m++)
                 {
                     int dustID = Dust.NewDust(new Vector2(Player.Center.X - 1, Player.Center.Y - 1), 2, 2, ModContent.DustType<MushroomDust>(), 0f, 0f, 100, Color.White, 1.6f);

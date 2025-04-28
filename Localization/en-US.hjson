@@ -620,6 +620,7 @@ Mods: {
 					'''
 					A necklace made of spider fangs.
 					Increases armor penetration by 9.
+					Releases flying spiders and douses the user in honey when damaged
 					'''
 			}
 
@@ -4232,8 +4233,7 @@ Mods: {
 				DisplayName: Impact Treads
 				Tooltip:
 					'''
-					Allows flight
-					Negates fall damage
+					Allows flight, negates fall damage and grants immunity to fire blocks
 					Increases fall speed and maximum fall speed by 15%
 					Increases defense by 6 while falling fast
 					Falling fast enough and hitting the ground will create a short lived shockwave
@@ -4545,6 +4545,7 @@ Mods: {
 			AquaticVisualSlashTrail.DisplayName: Aquatic Visual Slash Trail
 			BoneShard.DisplayName: Bone Shard
 			BigBrainProjectile.DisplayName: Big Brain Blast
+			FlyingSpider.DisplayName: Flying Spider
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
