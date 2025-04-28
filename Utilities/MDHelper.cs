@@ -44,7 +44,40 @@ namespace MultidimensionMod.Utilities
 
         //Adapted from Calamity
         /// <summary>
-        /// Retrieves the currently strongest class boost the player has. Can be used to grant certain projectiles damage boosts from the player's accessories and buffs.
+        /// A simple to use helper method to create rain projectiles similar to the Star Cloak stars or Daedalus Stormbow
+        /// </summary>
+        /// <param name="source">The source of the projectile</param>
+        /// <param name="targetPos">Position of the targeted entity</param>
+        /// <param name="xLimit">Horizontal range limit of the projectiles</param>
+        /// <param name="xVariance">Horizontal range variation of the pojectiles</param>
+        /// <param name="yLimitLower">Vertical lower height limit. Determines the lowest possible spawn location</param>
+        /// <param name="yLimitUpper">Vertical upper height limit. Determines the highest possible spawn location</param>
+        /// <param name="projSpeed">The speed of the projectile</param>
+        /// <param name="projType">Which projectile to use</param>
+        /// <param name="damage">Damage of the projectile</param>
+        /// <param name="knockback">Knockback of the projectile</param>
+        /// <param name="owner">Owner of the projectile</param>
+        /// <returns></returns>
+        public static Projectile ProjectileRain(IEntitySource source, Vector2 targetPos, float xLimit, float xVariance, float yLimitLower, float yLimitUpper, float projSpeed, int projType, int damage, float knockback, int owner)
+        {
+            float x = targetPos.X + Main.rand.NextFloat(-xLimit, xLimit);
+            float y = targetPos.Y - Main.rand.NextFloat(yLimitLower, yLimitUpper);
+            Vector2 spawnPosition = new Vector2(x, y);
+            Vector2 velocity = targetPos - spawnPosition;
+            velocity.X += Main.rand.NextFloat(-xVariance, xVariance);
+            float speed = projSpeed;
+            float targetDist = velocity.Length();
+            targetDist = speed / targetDist;
+            velocity.X *= targetDist;
+            velocity.Y *= targetDist;
+            return Projectile.NewProjectileDirect(source, spawnPosition, velocity, projType, damage, knockback, owner);
+
+
+        }
+
+        //Adapted from Calamity
+        /// <summary>
+        /// Retrieves the currently strongest class boost the player has. Can be used to grant certain projectiles damage boosts from the player's class specific accessories and buffs.
         /// </summary>
         /// <param name="player">The owner of the damage source to be boosted</param>
         /// <returns></returns>
@@ -244,5 +277,8 @@ namespace MultidimensionMod.Utilities
             }
             return closestTarget;
         }
+
+        public static bool WithinBounds(this int index, int cap) => index >= 0 && index < cap;
+
     }
 }

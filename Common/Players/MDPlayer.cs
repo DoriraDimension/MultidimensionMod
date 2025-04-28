@@ -85,6 +85,8 @@ namespace MultidimensionMod.Common.Players
         public float FogProgress = 0f;
         public float FogLanternThreshold = 0.7f;
         public bool SpiderNecklace = false;
+        public bool starBless = false;
+        public Item DivineStarBlessing;
         #region Custom Sword Swing Fields
         public int swingDir = 1;
         public Vector2 currentArmPosition = Vector2.Zero;
@@ -127,6 +129,7 @@ namespace MultidimensionMod.Common.Players
             impactTreads = false;
             FogLantern = false;
             SpiderNecklace = false;
+            starBless = false;
         }
         public override void UpdateDead()
         {
@@ -733,6 +736,34 @@ namespace MultidimensionMod.Common.Players
                     int probeDamage = (int)Player.GetBestClassDamage().ApplyTo(40);
                     Item item = DiggerEngine;
                     Projectile.NewProjectile(Player.GetSource_FromThis(), Player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<FriendlyProbe>(), probeDamage, 0f, Player.whoAmI);
+                }
+            }
+            if (starBless)
+            {
+                Item item = DivineStarBlessing;
+                var source = Player.GetSource_Accessory(item);
+                for (int n = 0; n < 3; n++)
+                {
+                    int modeDependantDamage = 120;
+                    if (Main.expertMode)
+                    {
+                        modeDependantDamage = 180;
+                    }
+                    else if (Main.masterMode)
+                    {
+                        modeDependantDamage = 230;
+                    }
+
+                    int starDamage = (int)Player.GetBestClassDamage().ApplyTo(modeDependantDamage);
+
+                    Projectile theStar = MDHelper.ProjectileRain(source, Player.Center, 350f, 50f, 550f, 650f, 24f, ProjectileID.StarVeilStar, starDamage, 3f, Player.whoAmI);
+                    if (theStar.whoAmI.WithinBounds(Main.maxProjectiles))
+                    {
+                        theStar.DamageType = DamageClass.Generic;
+                        theStar.ArmorPenetration = 30;
+                        theStar.usesLocalNPCImmunity = true;
+                        theStar.localNPCHitCooldown = 7;
+                    }
                 }
             }
         }

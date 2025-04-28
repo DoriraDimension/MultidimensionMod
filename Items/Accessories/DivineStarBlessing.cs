@@ -7,6 +7,7 @@ using Terraria.GameContent.Creative;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria.Localization;
+using MultidimensionMod.Common.Players;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -48,17 +49,14 @@ namespace MultidimensionMod.Items.Accessories
 
         public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.starCloakItem = Item;
-			player.pStone = true;
-			player.longInvince = true;
-			player.lifeRegen++;
+            player.GetModPlayer<MDPlayer>().starBless = true;
+            player.longInvince = true;
 		}
 
 		public override void AddRecipes()
         {
 			CreateRecipe()
 			.AddIngredient(ItemID.StarVeil)
-			.AddIngredient(ItemID.CharmofMyths)
 			.AddIngredient(ModContent.ItemType<Prismatine>(), 4)
 			//.AddIngredient(ModContent.ItemType<CelestialPlating>(), 4)
 			.AddTile(ModContent.TileType<DimensionalForge>())
