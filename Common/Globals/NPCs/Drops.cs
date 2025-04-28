@@ -210,43 +210,28 @@ namespace MultidimensionMod.Common.Globals.NPCs
             {
                 LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
                 leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.MartianPetItem, 10));
-                npcLoot.Add(ItemDropRule.Common(ItemID.CompanionCube, 20));
+                npcLoot.Add(ItemDropRule.Common(ItemID.CompanionCube, 30));
                 npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.Penguin)
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.Fish, 20));
+                npcLoot.Add(ItemDropRule.Common(ItemID.Fish, 40));
             }
 
             if (NPC.type == NPCID.FlyingFish)
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.ZephyrFish, 30));
+                npcLoot.Add(ItemDropRule.Common(ItemID.ZephyrFish, 45));
             }
 
             if (NPC.type == NPCID.ZombieEskimo)
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.HandWarmer, 25));
-            }
-
-            if (NPC.type == NPCID.SkeletonArcher)
-            {
-                npcLoot.Add(ItemDropRule.Common(ItemID.EndlessQuiver, 50));
-            }
-
-            if (NPC.type == NPCID.Shark)
-            {
-                npcLoot.Add(ItemDropRule.Common(ItemID.SharkToothNecklace, 12));
+                npcLoot.Add(ItemDropRule.Common(ItemID.HandWarmer, 40));
             }
 
             if (NPC.type == NPCID.UmbrellaSlime)
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.Umbrella, 30));
-            }
-
-            if (NPC.type == NPCID.WyvernHead)
-            {
-                npcLoot.Add(ItemDropRule.Common(ItemID.SkyFracture, 100));
+                npcLoot.Add(ItemDropRule.Common(ItemID.Umbrella, 40));
             }
 
             if (NPC.type == NPCID.SantaNK1)
@@ -258,7 +243,7 @@ namespace MultidimensionMod.Common.Globals.NPCs
             {
                 LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
                 leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.PumpkingPetItem, 10));
-                npcLoot.Add(ItemDropRule.Common(ItemID.GoodieBag));
+                npcLoot.Add(ItemDropRule.Common(ItemID.GoodieBag, 1, 1, 3));
                 npcLoot.Add(leadingConditionRule);
             }
 
@@ -266,6 +251,7 @@ namespace MultidimensionMod.Common.Globals.NPCs
             {
                 LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
                 leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.IceQueenPetItem, 10));
+                npcLoot.Add(ItemDropRule.Common(ItemID.BluePresent, 1, 1, 3));
                 npcLoot.Add(leadingConditionRule);
             }
 
@@ -274,6 +260,11 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
                 leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.EverscreamPetItem, 10));
                 npcLoot.Add(leadingConditionRule);
+            }
+
+            if (NPC.type == NPCID.MourningWood)
+            {
+                npcLoot.Add(ItemDropRule.Common(ItemID.GoodieBag, 2));
             }
 
             if (NPC.type == NPCID.DD2OgreT2 || NPC.type == NPCID.DD2OgreT3)
@@ -347,12 +338,12 @@ namespace MultidimensionMod.Common.Globals.NPCs
 
             if (NPC.type == NPCID.BigMimicHallow)
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.LightShard, 1, 1, 3));
+                npcLoot.Add(ItemDropRule.Common(ItemID.LightShard, 1, 1, 2));
             }
 
             if ((NPC.type == NPCID.BigMimicCrimson) || (NPC.type == NPCID.BigMimicCorruption))
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.DarkShard, 1, 1, 3));
+                npcLoot.Add(ItemDropRule.Common(ItemID.DarkShard, 1, 1, 2));
             }
 
             if (NPC.type == NPCID.Harpy || NPC.type == NPCID.WyvernHead)
