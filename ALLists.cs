@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using MultidimensionMod.Items.Weapons.Melee.Swords;
 using MultidimensionMod.Items.Weapons.Magic.Staffs;
+using MultidimensionMod.Items.Armor;
 
 namespace MultidimensionMod
 {
@@ -127,6 +128,10 @@ namespace MultidimensionMod
 
                 ModContent.ItemType<FishCleaver>(),
                 ModContent.ItemType<OceanTrident>(),
+                ModContent.ItemType<NeroShellHelmet>(),
+                ModContent.ItemType<NeroPredatorHead>(),
+                ModContent.ItemType<NeroHammerheadMask>(),
+                ModContent.ItemType<NeroLanternHelm>(),
             };
             #endregion
         }
