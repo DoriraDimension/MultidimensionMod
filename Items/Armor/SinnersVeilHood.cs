@@ -23,7 +23,7 @@ namespace MultidimensionMod.Items.Armor
             Item.height = 18;
             Item.value = Item.sellPrice(0, 0, 24, 0);
             Item.rare = ItemRarityID.Green;
-            Item.defense = 3;
+            Item.defense = 4;
         }
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
@@ -37,13 +37,13 @@ namespace MultidimensionMod.Items.Armor
             player.GetModPlayer<MDPlayer>().SinnerSet = true;
             ArmorIDs.Head.Sets.DrawHead[Item.headSlot] = false;
             player.manaRegen += 2;
-            player.manaCost -= 0.2f;
+            player.manaCost -= 0.14f;
         }
 
         public override void UpdateEquip(Player player)
         {
             player.statManaMax2 += 30;
-            player.GetDamage(DamageClass.Magic) += 0.04f;
+            player.GetDamage(DamageClass.Magic) += 0.03f;
         }
 
         public override void AddRecipes()
