@@ -8,7 +8,8 @@ using MultidimensionMod.Base;
 
 namespace MultidimensionMod.Items.Accessories
 {
-	public class Socks : ModItem
+    [AutoloadEquip(EquipType.Shoes)]
+    public class Socks : ModItem
 	{
 		public override void SetStaticDefaults()
 		{

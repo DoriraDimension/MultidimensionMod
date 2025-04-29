@@ -408,7 +408,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					[c/e8b722:A true greed can find every treasure.]
-					Your greedy eyes can now see treasures.
+					Your greedy eyes can now see treasures
 					Has a chance to inflict the Cursed debuff when you get hit
 					''' */
 				/* Lore:
@@ -424,7 +424,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					[c/93a4d8:A true adventurer can sense traps and danger.]
-					You can see danger sources.
+					You can see danger sources
 					Has a chance to inflict the Slow debuff when you get hit
 					''' */
 				/* Lore:
@@ -441,7 +441,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					[c/7c091d:A true hunter can sense its prey.]
-					You can now sense your enemies everywhere.
+					You can now sense your enemies everywhere
 					Has a chance to inflict the Weak debuff when you get hit
 					''' */
 				/* Lore:
@@ -457,7 +457,7 @@ Mods: {
 				/* Tooltip:
 					'''
 					[c/007437:A true resident of the night can see through the darkness.]
-					You now have improved vision at night.
+					You now have improved vision
 					Has a chance to inflict the Blackout debuff when you get hit
 					''' */
 				/* Lore:
@@ -535,7 +535,11 @@ Mods: {
 				/* Tooltip:
 					'''
 					[c/650670:You... can... see. Beware not to get blinded by its forbidden magic.]
-					Highlights danger sources, enemies and treasures, also gives nightvision
+					Highlights danger sources, enemies, treasures and infected blocks
+					Your vision is improved
+					Infected blocks are highlighted
+					The highlighting can be turned off by disabling accessory visibility
+
 					''' */
 				/* Lore:
 					'''
@@ -4282,13 +4286,33 @@ Mods: {
 			}
 
 			EyeoftheFisher: {
-				// DisplayName: Eyeofthe Fisher
-				// Tooltip: ""
+				// DisplayName: Eye of the Fisher
+				/* Tooltip:
+					'''
+					[c/ccb3e1:A true fisher knows the catch.]
+					You always see which fish is biting the hook
+					''' */
+				/* Lore:
+					'''
+					Many a fisher is misunderstood, shrugged off as an annoyance, or even seen as insane.
+					But they, they know the truth, hidden beneath the waters, whispered by the aquatic beings.
+					Maybe some day you will understand too.
+					''' */
 			}
 
 			EyeofthePurifier: {
-				// DisplayName: Eyeofthe Purifier
-				// Tooltip: ""
+				// DisplayName: Eye of the Purifier
+				/* Tooltip:
+					'''
+					[c/f776a8:A true pure one notices the impure at first glance.]
+					Highlights infected blocks
+					''' */
+				/* Lore:
+					'''
+					If one thinks they are pure and free from all filth they are mistaken,
+					there is no such thing as true purity.
+					So who goes to say those impure ones aren't pure in their own right?
+					''' */
 			}
 		}
 

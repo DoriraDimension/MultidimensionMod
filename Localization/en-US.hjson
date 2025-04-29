@@ -539,7 +539,7 @@ Mods: {
 					Your vision is improved
 					Infected blocks are highlighted
 					The highlighting can be turned off by disabling accessory visibility
-					
+
 					'''
 				Lore:
 					'''
@@ -4288,7 +4288,7 @@ Mods: {
 			EyeoftheFisher: {
 				DisplayName: Eye of the Fisher
 				Tooltip:
-				    '''
+					'''
 					[c/ccb3e1:A true fisher knows the catch.]
 					You always see which fish is biting the hook
 					'''
@@ -4303,7 +4303,7 @@ Mods: {
 			EyeofthePurifier: {
 				DisplayName: Eye of the Purifier
 				Tooltip:
-				    '''
+					'''
 					[c/f776a8:A true pure one notices the impure at first glance.]
 					Highlights infected blocks
 					'''
