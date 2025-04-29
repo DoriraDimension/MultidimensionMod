@@ -653,12 +653,9 @@ namespace MultidimensionMod.Common.Players
             {
                 target.AddBuff(BuffID.Frostburn, 120);
             }
-            if (MushiumSet && !IndigoMode && Player.HasBuff(ModContent.BuffType<LightStarved>()))
+            if (MushiumSet && !IndigoMode && Player.HasBuff(ModContent.BuffType<LightStarved>()) && target.type != NPCID.TargetDummy)
             {
-                if (Main.rand.NextBool(10))
-                {
-                    Item.NewItem(target.GetSource_Loot(), target.getRect(), ItemID.Heart, noGrabDelay: true);
-                }
+                Player.AddBuff(BuffID.RapidHealing, 180);
             }
         }
 
@@ -698,12 +695,9 @@ namespace MultidimensionMod.Common.Players
             {
                 target.AddBuff(BuffID.Frostburn, 120);
             }
-            if (MushiumSet && !IndigoMode && Player.HasBuff(ModContent.BuffType<LightStarved>()) && !proj.npcProj && !proj.trap)
+            if (MushiumSet && !IndigoMode && Player.HasBuff(ModContent.BuffType<LightStarved>()) && !proj.npcProj && !proj.trap && target.type != NPCID.TargetDummy)
             {
-                if (Main.rand.NextBool(10))
-                {
-                    Item.NewItem(target.GetSource_Loot(), target.getRect(), ItemID.Heart, noGrabDelay: true);
-                }
+                Player.AddBuff(BuffID.RapidHealing, 180);
             }
         }
 
@@ -821,6 +815,34 @@ namespace MultidimensionMod.Common.Players
                     Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(0, 0), ModContent.ProjectileType<ManaShockwave>(), damage, 0f, Player.whoAmI);
                 }
             }
+            if (starBless)
+            {
+                Item item = DivineStarBlessing;
+                var source = Player.GetSource_Accessory(item);
+                for (int n = 0; n < 3; n++)
+                {
+                    int modeDependantDamage = 120;
+                    if (Main.expertMode)
+                    {
+                        modeDependantDamage = 180;
+                    }
+                    else if (Main.masterMode)
+                    {
+                        modeDependantDamage = 230;
+                    }
+
+                    int starDamage = (int)Player.GetBestClassDamage().ApplyTo(modeDependantDamage);
+
+                    Projectile theStar = MDHelper.ProjectileRain(source, Player.Center, 350f, 50f, 550f, 650f, 24f, ProjectileID.StarVeilStar, starDamage, 3f, Player.whoAmI);
+                    if (theStar.whoAmI.WithinBounds(Main.maxProjectiles))
+                    {
+                        theStar.DamageType = DamageClass.Generic;
+                        theStar.ArmorPenetration = 30;
+                        theStar.usesLocalNPCImmunity = true;
+                        theStar.localNPCHitCooldown = 7;
+                    }
+                }
+            }
         }
 
         public override void PostHurt(Player.HurtInfo info)
@@ -909,7 +931,7 @@ namespace MultidimensionMod.Common.Players
                 for (int m = 0; m < 20; m++)
                 {
                     int dustID = Dust.NewDust(new Vector2(Player.Center.X - 1, Player.Center.Y - 1), 2, 2, ModContent.DustType<MushroomDust>(), 0f, 0f, 100, Color.White, 1.6f);
-                    Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(6f, 0f), m / (float)20 * 6.28f);
+                    Main.dust[dustID].velocity = BaseUtility.RotateVector(default, new Vector2(12f, 0f), m / (float)20 * 6.28f);
                     Main.dust[dustID].noLight = false;
                     Main.dust[dustID].noGravity = true;
                 }

@@ -2834,7 +2834,7 @@ Mods: {
 				Tooltip:
 					'''
 					Increases maximum mana by 30
-					Increases magic damage by 4%
+					Increases magic damage by 3%
 					'''
 			}
 
@@ -2843,7 +2843,7 @@ Mods: {
 				Tooltip:
 					'''
 					Increases maximum mana by 30
-					Increases magic damage by 4%
+					Increases magic damage by 3%
 					'''
 			}
 
@@ -2852,7 +2852,7 @@ Mods: {
 				Tooltip:
 					'''
 					Increases maximum mana by 30
-					Increases magic damage by 4%
+					Increases magic damage by 3%
 					'''
 			}
 
@@ -4295,23 +4295,22 @@ Mods: {
 				'''
 				All magic attacks inflict Frostburn
 				Increases mana regeneration
-				Reduces mana cost by 20%
+				Reduces mana cost by 14%
 				'''
 			MushiumSet:
 				'''
+				Increases max number of sentries by 1
 				Press the Armor Ability hotkey to swap modes
 				After switching, you have to wait 30 seconds before being able to switch again
 				[c/c63434:Scarlet mode]:
 				Increases life regeneration by 3
 				Increases defense by 4
-				Swapping to Scarlet mode will heal 10 health and grant the ability to spawn hearts on enemy hits for 5 seconds
+				Swapping to Scarlet mode will heal 10 health and grant increased life regeneration on enemy hits for 5 seconds
 				[c/0080ff:Indigo mode]:
 				Increases mana regeneration by 3
-				Increases max number of sentries by 1
-				Increases melee critical strike chance by 10%
-				Grants 20% chance not to consume ammo
-				Decreases defense by 4
-				Swapping to Indigo mode will increase damage by 10% and use speed by 30% for 5 seconds.
+				Increases critical strike chance by 7%
+				Decreases defense by 6
+				Swapping to Indigo mode will increase damage by 20% 5 seconds.
 				'''
 		}
 
