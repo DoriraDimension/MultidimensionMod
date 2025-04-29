@@ -4280,6 +4280,16 @@ Mods: {
 				// DisplayName: Mycelium Wall
 				// Tooltip: ""
 			}
+
+			EyeoftheFisher: {
+				// DisplayName: Eyeofthe Fisher
+				// Tooltip: ""
+			}
+
+			EyeofthePurifier: {
+				// DisplayName: Eyeofthe Purifier
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {

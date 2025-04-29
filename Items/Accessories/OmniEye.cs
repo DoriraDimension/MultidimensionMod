@@ -53,6 +53,11 @@ namespace MultidimensionMod.Items.Accessories
 			player.detectCreature = true;
 			player.nightVision = true;
 			player.dangerSense = true;
+            player.sonarPotion = true;
+            if (!hideVisual)
+			{
+                player.biomeSight = true;
+            }
 		}
 
 
@@ -63,7 +68,9 @@ namespace MultidimensionMod.Items.Accessories
 			.AddIngredient(ModContent.ItemType<EyeoftheHunter>())
 			.AddIngredient(ModContent.ItemType<EyeoftheNightwalker>())
 			.AddIngredient(ModContent.ItemType<EyeofDesire>())
-			.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 10)
+            .AddIngredient(ModContent.ItemType<EyeoftheFisher>())
+            .AddIngredient(ModContent.ItemType<EyeofthePurifier>())
+            .AddIngredient(ModContent.ItemType<DarkMatterClump>(), 10)
 			.AddOnCraftCallback(delegate (Recipe recipe, Item Item, List<Item> consumedItems, Item destinationStack) 
 			 {
 				 Main.LocalPlayer.AddBuff(BuffID.Obstructed, 6000);

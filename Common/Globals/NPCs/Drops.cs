@@ -418,6 +418,20 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 leadingConditionRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<AdvancedFishingLicense>(), 1));
                 npcLoot.Add(leadingConditionRule);
             }
+
+            if (NPC.type == NPCID.Shark)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EyeoftheFisher>(), 30));
+            }
+
+            if (NPC.type == NPCID.AngryBones || NPC.type == NPCID.ShortBones || NPC.type == NPCID.BigBoned || NPC.type == NPCID.AngryBonesBig
+                 || NPC.type == NPCID.AngryBonesBigMuscle || NPC.type == NPCID.AngryBonesBigHelmet || NPC.type == NPCID.BlueArmoredBones || NPC.type == NPCID.BlueArmoredBonesMace
+                  || NPC.type == NPCID.BlueArmoredBonesNoPants || NPC.type == NPCID.BlueArmoredBonesSword || NPC.type == NPCID.RustyArmoredBonesAxe || NPC.type == NPCID.RustyArmoredBonesFlail
+                   || NPC.type == NPCID.RustyArmoredBonesSword || NPC.type == NPCID.RustyArmoredBonesSwordNoArmor || NPC.type == NPCID.HellArmoredBones || NPC.type == NPCID.HellArmoredBonesSpikeShield
+                    || NPC.type == NPCID.HellArmoredBonesMace || NPC.type == NPCID.HellArmoredBonesSword)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EyeofthePurifier>(), 120));
+            }
         }
     }
 }
