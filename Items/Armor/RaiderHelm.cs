@@ -23,7 +23,7 @@ namespace MultidimensionMod.Items.Armor
 			Item.height = 26;
 			Item.value = Item.sellPrice(0, 0, 40, 0);
 			Item.rare = ItemRarityID.Green;
-			Item.defense = 8;
+			Item.defense = 7;
 			ArmorIDs.Head.Sets.DrawHead[Item.headSlot] = false;
 		}
 

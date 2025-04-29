@@ -1735,17 +1735,17 @@ Mods: {
 
 			VikingBoots: {
 				DisplayName: Viking Boots
-				Tooltip: The boots of a normal modern Viking, not as strong as the Raider Armor, but still provides good protection.
+				Tooltip: The boots of a normal modern Viking, not as strong as the Raider Armor.
 			}
 
 			VikingHelm: {
 				DisplayName: Viking Helm
-				Tooltip: The helm of a normal modern Viking, not as strong as the Raider Armor, but still provides good protection.
+				Tooltip: The helm of a normal modern Viking, not as strong as the Raider Armor.
 			}
 
 			VikingPlate: {
 				DisplayName: Viking Chestplate
-				Tooltip: The chestplate of a normal modern Viking, not as strong as the Raider Armor, but still provides good protection.
+				Tooltip: The chestplate of a normal modern Viking, not as strong as the Raider Armor.
 			}
 
 			Cursemark: {
