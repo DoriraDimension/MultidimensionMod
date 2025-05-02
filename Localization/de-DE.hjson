@@ -4317,7 +4317,18 @@ Mods: {
 
 			HerbGuide: {
 				// DisplayName: Guide to Master Herbology
-				// Tooltip: Displays blooming conditions in herb tooltips
+				// Tooltip: Displays blooming conditions in herb tooltips while in your inventory
+			}
+
+			NatureGuide: {
+				// DisplayName: Guide to Understanding Nature
+				/* Tooltip:
+					'''
+					Allows the collection of Vine Rope from vines
+					Prevents you from hurting critters and accidentally destroying the environment while favorited in the inventory,
+					or while accessory visibility is enabled while equipped
+					Displays blooming conditions in herb tooltips while in your inventory
+					''' */
 			}
 		}
 

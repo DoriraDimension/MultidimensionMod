@@ -13,6 +13,7 @@ using Terraria.ModLoader;
 using Terraria.Localization;
 using Terraria.ModLoader.IO;
 using MultidimensionMod.Common.Systems;
+using MultidimensionMod.Items;
 
 namespace MultidimensionMod
 {
@@ -100,6 +101,11 @@ namespace MultidimensionMod
 
                 if (shop.NpcType == NPCID.WitchDoctor)
                 {
+                    shop.Add(new Item(ModContent.ItemType<HerbGuide>())
+                    {
+                        shopCustomPrice = Item.buyPrice(0, 5, 0)
+                    });
+
                     shop.Add(new Item(ItemID.Abeemination)
                     {
                         shopCustomPrice = Item.buyPrice(0, 6, 20)

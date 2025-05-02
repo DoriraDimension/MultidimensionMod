@@ -87,6 +87,7 @@ namespace MultidimensionMod.Common.Players
         public bool SpiderNecklace = false;
         public bool starBless = false;
         public Item DivineStarBlessing;
+        public bool herbBook = false;
         #region Custom Sword Swing Fields
         public int swingDir = 1;
         public Vector2 currentArmPosition = Vector2.Zero;
@@ -130,6 +131,7 @@ namespace MultidimensionMod.Common.Players
             FogLantern = false;
             SpiderNecklace = false;
             starBless = false;
+            herbBook = false;
         }
         public override void UpdateDead()
         {

@@ -1209,6 +1209,7 @@ namespace MultidimensionMod.Common.Globals.Items
 		public static RecipeGroup Ice;
 		public static RecipeGroup Adamantitanium;
 		public static RecipeGroup CopperTin;
+        public static RecipeGroup PeaceGuide;
 
 		public override void Unload()
 		{
@@ -1218,6 +1219,7 @@ namespace MultidimensionMod.Common.Globals.Items
 			Ice = null;
 			Adamantitanium = null;
 			CopperTin = null;
+            PeaceGuide = null;
 		}
 		public override void AddRecipeGroups()
         {
@@ -1245,6 +1247,10 @@ namespace MultidimensionMod.Common.Globals.Items
 			CopperTin = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperBar)}",
 			ItemID.CopperBar, ItemID.TinBar);
 			RecipeGroup.RegisterGroup("MultidimensionMod:CopperBar", CopperTin);
+
+            PeaceGuide = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.DontHurtComboBook)}",
+            ItemID.DontHurtComboBook, ItemID.DontHurtComboBookInactive);
+            RecipeGroup.RegisterGroup("MultidimensionMod:DontHurtComboBook", PeaceGuide);
 
             //Vanilla recipe group additions
             //Sand

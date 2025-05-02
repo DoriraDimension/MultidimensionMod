@@ -12,6 +12,7 @@ using Terraria.GameContent;
 using MultidimensionMod.Utilities;
 using MultidimensionMod.Base;
 using MultidimensionMod.Items.Permabuffs;
+using MultidimensionMod.Common.Players;
 
 namespace MultidimensionMod.Common.Globals.Items
 {
@@ -122,6 +123,19 @@ namespace MultidimensionMod.Common.Globals.Items
 
         }
 
+        public override void UpdateInventory(Item item, Player player)
+        {
+            if (item.type == ModContent.ItemType<NatureGuide>())
+            {
+                if (item.favorited)
+                {
+                    player.dontHurtCritters = true;
+                    player.dontHurtNature = true;
+                }
+                player.cordage = true;
+            }
+        }
+
         public override bool PreDrawInInventory(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
             //Based on Calamity Brimstone Locus code and Mod of Redemption Treasure Bag drawcode, credit goes to them
@@ -197,7 +211,7 @@ namespace MultidimensionMod.Common.Globals.Items
                     OverrideColor = Color.White
                 };
                 tooltips.Add(line);
-                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()))
+                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()) || Main.LocalPlayer.HasInInventory(ModContent.ItemType<NatureGuide>()) || Main.LocalPlayer.GetModPlayer<MDPlayer>().herbBook)
                 {
                     if (Main.keyState.PressingShift())
                     {
@@ -224,7 +238,7 @@ namespace MultidimensionMod.Common.Globals.Items
                     OverrideColor = Color.White
                 };
                 tooltips.Add(line);
-                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()))
+                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()) || Main.LocalPlayer.HasInInventory(ModContent.ItemType<NatureGuide>()) || Main.LocalPlayer.GetModPlayer<MDPlayer>().herbBook)
                 {
                     if (Main.keyState.PressingShift())
                     {
@@ -251,7 +265,7 @@ namespace MultidimensionMod.Common.Globals.Items
                     OverrideColor = Color.White
                 };
                 tooltips.Add(line);
-                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()))
+                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()) || Main.LocalPlayer.HasInInventory(ModContent.ItemType<NatureGuide>()) || Main.LocalPlayer.GetModPlayer<MDPlayer>().herbBook)
                 {
                     if (Main.keyState.PressingShift())
                     {
@@ -278,13 +292,13 @@ namespace MultidimensionMod.Common.Globals.Items
                     OverrideColor = Color.White
                 };
                 tooltips.Add(line);
-                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()))
+                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()) || Main.LocalPlayer.HasInInventory(ModContent.ItemType<NatureGuide>()) || Main.LocalPlayer.GetModPlayer<MDPlayer>().herbBook)
                 {
                     if (Main.keyState.PressingShift())
                     {
                         TooltipLine bloomLine = new(Mod, "DaybloomBloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.DaybloomBloomTip"))
                         {
-                            OverrideColor = Color.LightGoldenrodYellow
+                            OverrideColor = Color.Yellow
                         };
                         tooltips.Add(bloomLine);
                     }
@@ -305,7 +319,7 @@ namespace MultidimensionMod.Common.Globals.Items
                     OverrideColor = Color.White
                 };
                 tooltips.Add(line);
-                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()))
+                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()) || Main.LocalPlayer.HasInInventory(ModContent.ItemType<NatureGuide>()) || Main.LocalPlayer.GetModPlayer<MDPlayer>().herbBook)
                 {
                     if (Main.keyState.PressingShift())
                     {
@@ -332,7 +346,7 @@ namespace MultidimensionMod.Common.Globals.Items
                     OverrideColor = Color.White
                 };
                 tooltips.Add(line);
-                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()))
+                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()) || Main.LocalPlayer.HasInInventory(ModContent.ItemType<NatureGuide>()) || Main.LocalPlayer.GetModPlayer<MDPlayer>().herbBook)
                 {
                     if (Main.keyState.PressingShift())
                     {
@@ -359,7 +373,7 @@ namespace MultidimensionMod.Common.Globals.Items
                     OverrideColor = Color.White
                 };
                 tooltips.Add(line);
-                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()))
+                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()) || Main.LocalPlayer.HasInInventory(ModContent.ItemType<NatureGuide>()) || Main.LocalPlayer.GetModPlayer<MDPlayer>().herbBook)
                 {
                     if (Main.keyState.PressingShift())
                     {
