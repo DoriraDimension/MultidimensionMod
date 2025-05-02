@@ -197,6 +197,25 @@ namespace MultidimensionMod.Common.Globals.Items
                     OverrideColor = Color.White
                 };
                 tooltips.Add(line);
+                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()))
+                {
+                    if (Main.keyState.PressingShift())
+                    {
+                        TooltipLine bloomLine = new(Mod, "BlinkrootBloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.BlinkrootBloomTip"))
+                        {
+                            OverrideColor = Color.Orange
+                        };
+                        tooltips.Add(bloomLine);
+                    }
+                    else
+                    {
+                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Blooming"))
+                        {
+                            OverrideColor = Color.Gray,
+                        };
+                        tooltips.Add(shiftLine);
+                    }
+                }
             }
             if (item.type == ItemID.Deathweed)
             {
@@ -205,6 +224,25 @@ namespace MultidimensionMod.Common.Globals.Items
                     OverrideColor = Color.White
                 };
                 tooltips.Add(line);
+                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()))
+                {
+                    if (Main.keyState.PressingShift())
+                    {
+                        TooltipLine bloomLine = new(Mod, "DeathweedBloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.DeathweedBloomTip"))
+                        {
+                            OverrideColor = Color.Purple
+                        };
+                        tooltips.Add(bloomLine);
+                    }
+                    else
+                    {
+                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Blooming"))
+                        {
+                            OverrideColor = Color.Gray,
+                        };
+                        tooltips.Add(shiftLine);
+                    }
+                }
             }
             if (item.type == ItemID.Fireblossom)
             {
@@ -213,6 +251,25 @@ namespace MultidimensionMod.Common.Globals.Items
                     OverrideColor = Color.White
                 };
                 tooltips.Add(line);
+                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()))
+                {
+                    if (Main.keyState.PressingShift())
+                    {
+                        TooltipLine bloomLine = new(Mod, "FireblossomBloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.FireblossomBloomTip"))
+                        {
+                            OverrideColor = Color.OrangeRed
+                        };
+                        tooltips.Add(bloomLine);
+                    }
+                    else
+                    {
+                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Blooming"))
+                        {
+                            OverrideColor = Color.Gray,
+                        };
+                        tooltips.Add(shiftLine);
+                    }
+                }
             }
             if (item.type == ItemID.Daybloom)
             {
@@ -221,6 +278,25 @@ namespace MultidimensionMod.Common.Globals.Items
                     OverrideColor = Color.White
                 };
                 tooltips.Add(line);
+                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()))
+                {
+                    if (Main.keyState.PressingShift())
+                    {
+                        TooltipLine bloomLine = new(Mod, "DaybloomBloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.DaybloomBloomTip"))
+                        {
+                            OverrideColor = Color.LightGoldenrodYellow
+                        };
+                        tooltips.Add(bloomLine);
+                    }
+                    else
+                    {
+                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Blooming"))
+                        {
+                            OverrideColor = Color.Gray,
+                        };
+                        tooltips.Add(shiftLine);
+                    }
+                }
             }
             if (item.type == ItemID.Moonglow)
             {
@@ -229,6 +305,25 @@ namespace MultidimensionMod.Common.Globals.Items
                     OverrideColor = Color.White
                 };
                 tooltips.Add(line);
+                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()))
+                {
+                    if (Main.keyState.PressingShift())
+                    {
+                        TooltipLine bloomLine = new(Mod, "MoonglowBloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.MoonglowBloomTip"))
+                        {
+                            OverrideColor = Color.LightBlue
+                        };
+                        tooltips.Add(bloomLine);
+                    }
+                    else
+                    {
+                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Blooming"))
+                        {
+                            OverrideColor = Color.Gray,
+                        };
+                        tooltips.Add(shiftLine);
+                    }
+                }
             }
             if (item.type == ItemID.Shiverthorn)
             {
@@ -237,6 +332,25 @@ namespace MultidimensionMod.Common.Globals.Items
                     OverrideColor = Color.White
                 };
                 tooltips.Add(line);
+                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()))
+                {
+                    if (Main.keyState.PressingShift())
+                    {
+                        TooltipLine bloomLine = new(Mod, "ShiverthornBloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.ShiverthornBloomTip"))
+                        {
+                            OverrideColor = Color.CornflowerBlue
+                        };
+                        tooltips.Add(bloomLine);
+                    }
+                    else
+                    {
+                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Blooming"))
+                        {
+                            OverrideColor = Color.Gray,
+                        };
+                        tooltips.Add(shiftLine);
+                    }
+                }
             }
             if (item.type == ItemID.Waterleaf)
             {
@@ -245,6 +359,25 @@ namespace MultidimensionMod.Common.Globals.Items
                     OverrideColor = Color.White
                 };
                 tooltips.Add(line);
+                if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()))
+                {
+                    if (Main.keyState.PressingShift())
+                    {
+                        TooltipLine bloomLine = new(Mod, "ShiverthornBloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.WaterleafBloomTip"))
+                        {
+                            OverrideColor = Color.DeepSkyBlue
+                        };
+                        tooltips.Add(bloomLine);
+                    }
+                    else
+                    {
+                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Blooming"))
+                        {
+                            OverrideColor = Color.Gray,
+                        };
+                        tooltips.Add(shiftLine);
+                    }
+                }
             }
             if (item.type == ItemID.RodofDiscord || item.type == ItemID.Clentaminator || item.type == ItemID.BottomlessBucket || item.type == ItemID.BottomlessShimmerBucket)
             {

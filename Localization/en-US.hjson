@@ -537,8 +537,8 @@ Mods: {
 					[c/650670:You... can... see. Beware not to get blinded by its forbidden magic.]
 					Highlights danger sources, enemies, treasures and infected blocks
 					Your vision is improved
-					Infected blocks are highlighted
-					The highlighting can be turned off by disabling accessory visibility
+					You can see what's biting your hook during fishing
+					The infected block highlighting can be turned off by disabling accessory visibility
 
 					'''
 				Lore:
@@ -4314,6 +4314,11 @@ Mods: {
 					So who goes to say those impure ones aren't pure in their own right?
 					'''
 			}
+
+			HerbGuide: {
+				DisplayName: Guide to Master Herbology
+				Tooltip: Displays blooming conditions in herb tooltips while in your inventory
+			}
 		}
 
 		SetBonuses: {
@@ -5152,6 +5157,7 @@ Mods: {
 		SpecialTooltips: {
 			Viewer: Hold [Shift] to view lore
 			Listen: Hold [Shift] to listen closer
+			Blooming: Hold [Shift] to read about blooming conditions
 		}
 
 		GameTips: {
@@ -5413,10 +5419,20 @@ Mods: {
 				Knowledgeable cave explorers tend to hold several of these
 				as their insides contain spores that grant a short lived glow effect
 				'''
+			BlinkrootBloomTip:
+				'''
+				The Blinkroot blooming conditions are rather unique, since they do not follow a set pattern.
+				As such it is impossible to predict their blooming state.
+				'''
 			DeathweedTip:
 				'''
 				An intruiging herb that grows only in the most disgusting landscapes
 				It contains strong toxins that make the plant inedible to most species
+				'''
+			DeathweedBloomTip:
+				'''
+				Deathweed will only bloom under the light of a full moon.
+				Due to unknown causes, the herb seems to be forced into bloom by a Blood Moon's light as well.
 				'''
 			FireblossomTip:
 				'''
@@ -5424,17 +5440,24 @@ Mods: {
 				The spicy hot top grants a cozy warming effect when consumed
 				No wonder that demons consume these to dive even more into a hellish feeling from within
 				'''
+			FireblossomBloomTip:
+				'''
+				The flower of this herb will only bloom during sunset, roughly around 3:45 PM to 7:30 PM.
+				It has been observed that the presence of active rain will prevent blooming, even down in the underworld caverns.
+				'''
 			DaybloomTip:
 				'''
 				A common surface plant that is famous amongst many for its recovery effects
 				Giving a sick friend such a flower as seasoning in a soup works wonders
 				'''
+			DaybloomBloomTip: As the name of this herb suggests, it will bloom during the entirety of the day.
 			MoonglowTip:
 				'''
-				A blue glowing plant that thrives in the humid caves of the jungle
+				A blue glowing plant that thrives in the humidity of the jungle
 				Despite its beautiful glow, the blossom itself is more known for its potent poison
 				Hornets have previously been observed eating these
 				'''
+			MoonglowBloomTip: The Moonglow will only bloom during the night.
 			ShiverthornTip:
 				'''
 				A thorn covered plant found only in the cold environment of the Drakenheim tundra
@@ -5442,12 +5465,18 @@ Mods: {
 				a plant known as the Glass Blossom
 				Nowadays it is used for concoctions to cool down one's own body
 				'''
+			ShiverthornBloomTip:
+				'''
+				Shiverthorn are unpredictable when it comes to blooming, as it is entirely random when it will occour.
+				However, unlike many other herbs, it will stay blooming until harvested or withering.
+				'''
 			WaterleafTip:
 				'''
 				A desert herb filled with fresh water it gathered from the air
 				Seen as an invasive species, this plant absorbs all humidity from the air to sustain itself
 				This leads to the environment not being able to recover and remain desolate
 				'''
+			WaterleafBloomTip: Due to the nature of this herb, it will bloom once it starts raining, as the humidity level in the air increases.
 			ShimmerablePostMoonLord: "[c/dd8fb2:Can only be shimmered after the Moon Lord has been defeated]"
 		}
 
