@@ -1421,11 +1421,10 @@ Mods: {
 				Tooltip: ""
 				Lore:
 					'''
-					She was once the guardian angel of the kingdom of Gunresat, protecting it with all her might.
-					She is bound to it by a spell, created by their ancestors when they were in need of this protection.
+					She is bound to the people of Gunresat by a spell, created by their ancestors when they were in need of her protection.
 					That is the sole reason why she fought in the war between Gunresat and Baaruun,
 					she was dragged into it using the ancient spell.
-					But when the armies got captured, she was able to roam free, free from her shackles,
+					But when the armies got encased inside the Wall of Flesh, she was able to roam free,
 					and there she now found a new purpose in protecting something with her own will, small Prismatic Lacewings.
 					'''
 			}
@@ -1435,8 +1434,8 @@ Mods: {
 				Tooltip: ""
 				Lore:
 					'''
-					A massive flying eye, said to belong to a slain deity,
-					in reality, this is just one of many abominations spawned from the crimson flesh.
+					Like every entity that emerges from the brain's will, this one is equipped with a minor flawed soul.
+					It shares its master's desire to violently destroy everything in its path to gain back its form.
 					'''
 			}
 
@@ -1480,7 +1479,7 @@ Mods: {
 				Lore:
 					'''
 					The great deity that the cultist wished to revive, only known under the name Cthulhu, 
-					a greater one of mindless destruction. 
+					a greater one of destruction. 
 					But this is not the real Cthulhu, the real one is long gone, this is only a husk. 
 					This body is unfinished and flawed, it does not hold the greatness of the deity it is supposed to represent. 
 					Empty brain, another false soul and a weak vessel, nothing great about this greater one.
@@ -1494,8 +1493,8 @@ Mods: {
 					'''
 					A plant that was brought to life by an experiment about granting life to inanimate objects.
 					She was granted a soul and the will to live and a simple task: "Protect the Jungle".
-					Unfortunately she never had a mind and so did not care about this task,
-					she was only interested in protecting her offspring, lead by emotions only.
+					Without a mind of her own she could not process higher thought, so nothing but this task mattered.
+					It is unknown who created her and where they went.
 					'''
 			}
 
@@ -1515,11 +1514,11 @@ Mods: {
 				Tooltip: ""
 				Lore:
 					'''
-					A curse, Skeletron was nothing more than the offshoot of an old curse,
-					this form of the curse has used its host's own desire for the dungeons secrets to bind him to guard the dark dungeon for all eternity.
+					A curse, Skeletron was nothing more than the offshoot of an old curse.
+					This form of the curse has used its host's own desire for the dungeons secrets to bind him to guard the dark dungeon for all eternity.
 					This old clothier fell victim to this curse due to his own curiosity when he entered a place he wasnt supposed to enter.
 					The curses influence didn't just possess the old man but also created copies of its physical form to guard the dungeon on lower levels.
-					The origins of the curse lie deep below the dungeon itself, but only a fool would dare to find it.
+					The origins of the curse lie deep within the dungeon itself, but only a fool would dare to find it.
 					'''
 			}
 
@@ -1555,9 +1554,8 @@ Mods: {
 				Tooltip: ""
 				Lore:
 					'''
-					It is a flesh prison supposed to hold thousands of souls from both hallowed and demonic forces.
-					It was brought into existence by the old underworld civilization
-					by fusing their bodies into one large magic imbued mass.
+					The flesh prison was supposed to hold thousands of souls from both hallowed and demonic forces in an attempt to end their struggle.
+					It was brought into existence by the old underworld civilization by fusing their bodies into one large magic imbued mass.
 					'''
 				Nonsense:
 					'''
@@ -1575,7 +1573,7 @@ Mods: {
 				Lore:
 					'''
 					Where a king is, there is a queen, and this queen is an angel.
-					Once an ordinary pinky, this grand gelatine queen uses the pure holy crystal inside her to gain more power.
+					Once an ordinary slime, this grand gelatine queen uses the pure holy crystal inside her to gain more power.
 					'''
 			}
 
@@ -1584,8 +1582,8 @@ Mods: {
 				Tooltip: ""
 				Lore:
 					'''
-					A species of giant worm, responsible for the chasms in the corruption, almost went extinct
-					if they didn't find a new home in the infectious Corruption.
+					This species of giant worm almost went extinct due to the nature of their metabolism, causing them to suffer eternal hunger.
+					Lucky to them, they found a new home in the Corruption where they took advantage of the decaying microbes.
 					The rotten flesh merely satisfies their eternal hunger, so a fresh meal approaching suits them well.
 					'''
 			}
@@ -5032,6 +5030,11 @@ Mods: {
 					Label: Disable Screenshakes
 					Tooltip: Disables all instances of screenshakes within the mod.
 				}
+
+				VanillaBestiaryRewrite: {
+					Label: Vanilla Bestiary Rewrite
+					Tooltip: Rewrites various vanilla Bestiary entries to fit into Awakened Light lore.
+				}
 			}
 
 			Headers: {
@@ -5505,6 +5508,39 @@ Mods: {
 			}
 
 			Wizard.Carces: I once heard of a settlement called Carces. Apperantly it was a humble town that was famous for its so called 'Twin Libraries', which would contain ancient manuscripts. I would love to get my hands on some of those, but sadly the town was burned down many years ago.
+		}
+
+		VanillaBestiaryEdits: {
+			EyeofCthulhu: A massive flying eye, said to belong to a slain deity. Its origins lie in the lands of crimson flesh. Just another abomination born from a dying will.
+			EaterofWorlds: A massive worm who is responsible for the many large chasms in the Corruption. It will devour all in its path in order to satisfy its hunger.
+			BrainofCthulhu: The source of all crimson, a flying mastermind bereft of its former being. The brain has rotted beyond belief.
+			Skeletron: The results of a necromantic experiment created deep within the Dungeon. Equipped with a sturdy curse, this tyrant guards the entrance to its home at all cost.
+			WallofFlesh: This gigantic mass of flesh is the combined effort of thousands of demons who had to give their life to it. It houses the souls of many warriors who were locked away to end a war.
+			Spazmatism: Needs lore rewrite first
+			Retinazer: Needs lore rewrite first
+			Destroyer: Needs lore rewrite first
+			SkeletronPrime: Needs lore rewrite first
+			Plantera: Filled with an artificial soul, this floral guardian wanders the jungle caverns with its only task in hand. It violently attacks those who hurt its offspring and the jungle they inhabit.
+			EmpressofLight: The former guardian angel of the kingdom of Gunresat. She served in a rebellious army, but with her former masters gone, she moved on to follow goals of her own.
+			MoonLord: The Moon Lord is but a husk, an unfinished shell to house Cthulhu's lost soul. Allowing this being to continue existing would spell certain doom for all life.
+			Wyvern: Large draconic creatures that rule the skies of Veteravit as their apex predator. The release of the ancient spirits have agitated them greatly. They seem more powerful above other continents.
+			Wraith: Souls belonging to the darkest of hearts, brought back into our world as evil shadows. Their malice stems from their forced pull into the mortal realm.
+			WorldFeeder: Devourers that evolved due to excessive demon soul energy being released. They are destined to grow into an Eater of Worlds if not disposed of.
+			Paladin: In distant history, these mighty undead knights once guarded the great kingdom of Librias before a massive curse befell them.
+			ChaosElemental: Once warriors from the kingdom of Gunresat, they erratically make chase with an uncontrollable surge of luminous power.
+			VoodooDemon: Higher ranking demons can possess a voodoo doll they shape into whatever they like. For some reason they collectively seem to love modeling the Guide.
+			UndeadViking: Vikings who lost their lives during their war against the drakes, now reanimated, forced to roam the icy caverns.
+			Harpy: Winged, demi-human women defend their territory against invaders by impaling them with their razor-sharp feathers. They originate from the Nimbaes Plateau hovering over the eastern continent.
+			TacticalSkeleton: A skeleton equipped with firearms built by the mechanic. With thick armor and mighty boomsticks, it's clear these bones are prepared for a siege
+			SkeletonCommando: A skeleton equipped with firearms built by the mechanic. Rocket-powered and fueled with rage, these cursed skeletons prefer the nuclear option.
+			SkeletonSniper: A skeleton equipped with firearms built by the mechanic. These eagle-eyed sharpshooters let nothing escape their crosshairs.
+			Demolitionist: An explosives revering dwarf from overseas. He honed his his skills with explosives for a few years in the Steal Realm of Itorum, as it has only the most quality gunpowder.
+			GoblinTinkerer: This goblin was exiled from the rest of his clan for being an intelligent pacifist. He attempted to hone his skills in gear augmenting in the outskirts of Itorum, but ended up breaking many an armament. Instead of not taking payment for these mistakes, he blames it on the objects durability and offers another attempt.
+			ArmsDealer: A rude human individual who came from another dimension entirely. He got around in his life by selling illegal firearms and bullets to others. You might want to avoid messing with this shady guy on bad days.
+			Mechanic: A woman with great technological knowledge who came from another dimension. She was transported here by an anomaly in space-time. She was found by the Cthulhu cult and thrown into the Dungeon to force her to use this “magic” she brought with her to aid their rituals.
+			Steampunker: The steampunker seems to come from the same dimension as the Mechanic. She has a unique taste of inventions, where there is normally steel and wire, are instead cogs and steam. Despite being inferior to proper tech in terms of efficiency, it has been proven to run smoothly without issues ever.
+			Cyborg: A group project that was built by the Mechanic and Steampunker during their time in here. It was an great challenge with the limited technology they have here. The cyborg has an unusually well crafted soul system that grants him pre-coded emotions.
+			Princess: Why are you like this..?
 		}
 
 		MiscText: {

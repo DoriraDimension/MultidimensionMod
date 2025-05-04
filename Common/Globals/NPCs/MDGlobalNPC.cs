@@ -24,6 +24,7 @@ using MultidimensionMod.Tiles.Biomes.ShroomForest;
 using rail;
 using MultidimensionMod.Items.Summons;
 using MultidimensionMod.Common.Globals;
+using Terraria.GameContent.Bestiary;
 
 namespace MultidimensionMod
 {
@@ -136,6 +137,254 @@ namespace MultidimensionMod
                 npc.lifeRegen -= 60;
             }
 		}
+
+		//Here we rewrite bestiary entries for vanilla enemies to fall in line with our own lore
+        public override void SetBestiary(NPC npc, BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+			if (ModContent.GetInstance<MDConfig>().VanillaBestiaryRewrite)
+			{
+                if (npc.type == NPCID.EyeofCthulhu)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.EyeofCthulhu")
+                    });
+                }
+                if (npc.type == NPCID.EaterofWorldsHead)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.EaterofWorlds")
+                    });
+                }
+                if (npc.type == NPCID.BrainofCthulhu)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.BrainofCthulhu")
+                    });
+                }
+                if (npc.type == NPCID.SkeletronHead)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Skeletron")
+                    });
+                }
+                if (npc.type == NPCID.WallofFlesh)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.WallofFlesh")
+                    });
+                }
+                if (npc.type == NPCID.Spazmatism)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Spazmatism")
+                    });
+                }
+                if (npc.type == NPCID.Retinazer)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Retinazer")
+                    });
+                }
+                if (npc.type == NPCID.TheDestroyer)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Destroyer")
+                    });
+                }
+                if (npc.type == NPCID.SkeletronPrime)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.SkeletronPrime")
+                    });
+                }
+                if (npc.type == NPCID.Plantera)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Plantera")
+                    });
+                }
+                if (npc.type == NPCID.HallowBoss)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.EmpressofLight")
+                    });
+                }
+                if (npc.type == NPCID.MoonLordCore)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.MoonLord")
+                    });
+                }
+                if (npc.type == NPCID.WyvernHead)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Wyvern")
+                    });
+                }
+                if (npc.type == NPCID.Wraith)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Wraith")
+                    });
+                }
+                if (npc.type == NPCID.SeekerHead)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.WorldFeeder")
+                    });
+                }
+                if (npc.type == NPCID.Paladin)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Paladin")
+                    });
+                }
+                if (npc.type == NPCID.ChaosElemental)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.ChaosElemental")
+                    });
+                }
+                if (npc.type == NPCID.VoodooDemon)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.VoodooDemon")
+                    });
+                }
+                if (npc.type == NPCID.UndeadViking)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.UndeadViking")
+                    });
+                }
+                if (npc.type == NPCID.Harpy)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Harpy")
+                    });
+                }
+                if (npc.type == NPCID.TacticalSkeleton)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.TacticalSkeleton")
+                    });
+                }
+                if (npc.type == NPCID.SkeletonCommando)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.SkeletonCommando")
+                    });
+                }
+                if (npc.type == NPCID.SkeletonSniper)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.SkeletonSniper")
+                    });
+                }
+                if (npc.type == NPCID.Demolitionist)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Demolitionist")
+                    });
+                }
+                if (npc.type == NPCID.GoblinTinkerer)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.GoblinTinkerer")
+                    });
+                }
+                if (npc.type == NPCID.ArmsDealer)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.ArmsDealer")
+                    });
+                }
+                if (npc.type == NPCID.Mechanic)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Mechanic")
+                    });
+                }
+                if (npc.type == NPCID.Steampunker)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Steampunker")
+                    });
+                }
+                if (npc.type == NPCID.Cyborg)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Cyborg")
+                    });
+                }
+                if (npc.type == NPCID.Princess)
+                {
+                    bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
+                    bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+                    {
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Princess")
+                    });
+                }
+            }
+        }
 
         public override void ModifyHitPlayer(Terraria.NPC npc, Terraria.Player target, ref Terraria.Player.HurtModifiers modifiers)
         {
