@@ -569,13 +569,15 @@ namespace MultidimensionMod
                     pool.Add(ModContent.NPCType<Mossling>(), 0.2f);
                     pool.Add(ModContent.NPCType<Mosster>(), 0.05f);
                     if (!spawnInfo.Water)
+                    {
                         pool.Add(ModContent.NPCType<MoonMorpho>(), .08f);
+                        if (NPC.downedBoss2)
+                        {
+                            pool.Add(ModContent.NPCType<Miresquito>(), .10f);
+                        }
+                    }
                     if (spawnInfo.Water)
                         pool.Add(ModContent.NPCType<FogAngler>(), 0.3f);
-                    if (NPC.downedBoss2)
-					{
-                        pool.Add(ModContent.NPCType<Miresquito>(), .10f);
-                    }
                 }
 				else if (Main.dayTime)
 				{

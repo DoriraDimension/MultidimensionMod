@@ -887,6 +887,11 @@ Mods: {
 					It is a mutated Fireblossom that changed to survive when the environment was drastically altered
 					Eating it is a horrible idea
 					'''
+				BloomTip:
+					'''
+					Just like its cousin the Fireblossom, this herb blooms only during a specific time of day.
+					Similar to how its element is flipped, its blooming condition also is, blooming roughly around 4:30 to 8:15.
+					'''
 			}
 
 			MadnessFragment: {

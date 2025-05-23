@@ -2,6 +2,11 @@
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
+using System.Collections.Generic;
+using Terraria.Localization;
+using Microsoft.Xna.Framework;
+using MultidimensionMod.Common.Players;
+using MultidimensionMod.Utilities;
 
 namespace MultidimensionMod.Items.Materials
 {
@@ -27,5 +32,28 @@ namespace MultidimensionMod.Items.Materials
 			Item.buffType = 47; //Frozen
 			Item.buffTime = 900;
 		}
-	}
+
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+			if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<HerbGuide>()) || Main.LocalPlayer.HasInInventory(ModContent.ItemType<NatureGuide>()) || Main.LocalPlayer.GetModPlayer<MDPlayer>().herbBook)
+			{
+                if (Main.keyState.PressingShift())
+                {
+                    TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.IceblossomItem.BloomTip"))
+                    {
+                        OverrideColor = Color.LightGray
+                    };
+                    tooltips.Add(line);
+                }
+                else
+                {
+                    TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Blooming"))
+                    {
+                        OverrideColor = Color.Gray,
+                    };
+                    tooltips.Add(line);
+                }
+            }
+        }
+    }
 }
