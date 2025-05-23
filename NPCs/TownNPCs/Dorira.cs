@@ -21,6 +21,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.Audio;
 using MultidimensionMod.Items.Materials.Mushrooms;
 using MultidimensionMod.Common.Players;
+using MultidimensionMod.Common.Globals.NPCs;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -97,7 +98,11 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
         public override bool CanTownNPCSpawn(int numTownNPCs)
 		{
-			for (int k = 0; k < 255; k++)
+            if (TownNPCRespawnSystem.metDorira)
+            {
+                return true;
+            }
+            for (int k = 0; k < 255; k++)
 			{
 				Player player = Main.player[k];
 				if (player.active)

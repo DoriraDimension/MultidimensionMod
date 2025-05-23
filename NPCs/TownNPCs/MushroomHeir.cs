@@ -29,6 +29,7 @@ using MultidimensionMod.NPCs.Friendly;
 using Microsoft.CodeAnalysis;
 using System.IO;
 using Terraria.ModLoader.IO;
+using MultidimensionMod.Common.Globals.NPCs;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -107,6 +108,10 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
         public override bool CanTownNPCSpawn(int numTownNPCs)
         {
+            if (DownedSystem.metDapper)
+            {
+                return true;
+            }
             for (int k = 0; k < 255; k++)
             {
                 Player player = Main.player[k];

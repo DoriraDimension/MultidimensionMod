@@ -11,6 +11,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 using Terraria.GameContent.Bestiary;
+using MultidimensionMod.Common.Globals.NPCs;
 
 namespace MultidimensionMod.NPCs.TownPets
 {
@@ -74,7 +75,21 @@ namespace MultidimensionMod.NPCs.TownPets
 
         public override void OnSpawn(IEntitySource source)
         {
+            if (source is EntitySource_SpawnNPC)
+            {
+                // A TownNPC is "unlocked" once it successfully spawns into the world.
+                TownNPCRespawnSystem.adoptedDrake = true;
+            }
             Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.NPCs.TownDrake.Adoption"), 50, 125, 255);
+        }
+
+        public override bool CanTownNPCSpawn(int numTownNPCs)
+        {
+            if (TownNPCRespawnSystem.adoptedDrake)
+            {
+                return true;
+            }
+            return false;
         }
 
         public override void AI()
