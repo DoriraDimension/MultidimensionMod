@@ -24,7 +24,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.noMelee = true;
 			Item.value = Item.sellPrice(0, 0, 30, 0);
 			Item.rare = ItemRarityID.Green;
-			Item.DefaultToWhip(ModContent.ProjectileType<MadnessWhipProj>(), 17, 2, 3);
+			Item.DefaultToWhip(ModContent.ProjectileType<MadnessWhipProj>(), 17, 2, 6);
 
 		}
 

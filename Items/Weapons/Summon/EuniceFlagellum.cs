@@ -27,9 +27,9 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.noMelee = true;
 			Item.value = Item.sellPrice(0, 2, 0, 0);
 			Item.rare = ItemRarityID.Yellow;
-			Item.DefaultToWhip(ModContent.ProjectileType<Eunice>(), 100, 6, 26);
+			Item.DefaultToWhip(ModContent.ProjectileType<Eunice>(), 100, 6, 6);
 
-		}
+        }
 
 		public override void AddRecipes()
 		{

@@ -15,7 +15,7 @@ namespace MultidimensionMod.Items.Weapons.Typeless
             Item.shootSpeed = 10f;
             Item.width = 30;
             Item.height = 30;
-            Item.maxStack = 99;
+            Item.maxStack = 9999;
             Item.consumable = true;
             Item.UseSound = SoundID.Item1;
             Item.useAnimation = 15;
