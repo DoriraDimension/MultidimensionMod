@@ -80,7 +80,6 @@ namespace MultidimensionMod.NPCs.TownPets
                 // A TownNPC is "unlocked" once it successfully spawns into the world.
                 TownNPCRespawnSystem.adoptedDrake = true;
             }
-            Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.NPCs.TownDrake.Adoption"), 50, 125, 255);
         }
 
         public override bool CanTownNPCSpawn(int numTownNPCs)

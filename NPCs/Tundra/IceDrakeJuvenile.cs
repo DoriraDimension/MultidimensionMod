@@ -136,10 +136,17 @@ namespace MultidimensionMod.NPCs.Tundra
 
 		public override void OnChatButtonClicked(bool firstButton, ref string shopName)
 		{
-			//Makes the Drake drop an item upon feeding it
-			if (firstButton && !isAdoptable)
+            //Makes the Drake drop an item upon feeding it
+            Player player = Main.LocalPlayer;
+            int bird = player.FindItem(ItemID.RoastedBird);
+            if (firstButton && !Main.LocalPlayer.HasItem(ItemID.RoastedBird))
 			{
-				hasBeenFed = true;
+                Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.NPCs.IceDrakeJuvenile.FeedingFail"), 50, 125, 255);
+            }
+			if (firstButton && Main.LocalPlayer.HasItem(ItemID.RoastedBird) && !isAdoptable)
+			{
+                player.inventory[bird].stack--;
+                hasBeenFed = true;
 				SoundEngine.PlaySound(SoundID.NPCDeath13 with { Volume = 0.5f }, NPC.position);
 				int commonDrop = Main.rand.Next(2);
 				int uncommonDrop = Main.rand.Next(2);
@@ -168,9 +175,13 @@ namespace MultidimensionMod.NPCs.Tundra
 			}
 			else if (firstButton && isAdoptable)
             {
-				Vector2 spawnAt = NPC.Center + new Vector2(0f, (float)NPC.height / 2f);
+				int midas = player.FindItem(ItemID.GoldenDelight);
+                player.inventory[midas].stack--;
+                SoundEngine.PlaySound(SoundID.Item2 with { Volume = 1f }, NPC.position);
+                Vector2 spawnAt = NPC.Center + new Vector2(0f, (float)NPC.height / 2f);
 				NPC.NewNPC(NPC.GetSource_FromAI(), (int)spawnAt.X, (int)spawnAt.Y, ModContent.NPCType<TownDrake>());
-				NPC.active = false;
+                Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.NPCs.TownDrake.Adoption"), 50, 125, 255);
+                NPC.active = false;
 			}
 		}
 

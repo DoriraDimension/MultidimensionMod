@@ -4620,7 +4620,11 @@ Mods: {
 				Death: Your Drake left, try to find a new one!
 			}
 
-			IceDrakeJuvenile.DisplayName: Ice Drake Juvenile
+			IceDrakeJuvenile: {
+				DisplayName: Ice Drake Juvenile
+				FeedingFail: You need Roasted Bird to feed it.
+			}
+
 			SearedAshton.DisplayName: Seared Ashton
 			Dusty.DisplayName: Dusty
 			Victim.DisplayName: Victim
