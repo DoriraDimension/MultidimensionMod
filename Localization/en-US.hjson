@@ -4336,7 +4336,11 @@ Mods: {
 
 			HydraTrishot: {
 				DisplayName: Hydra Trishot
-				Tooltip: Shoots 3 bullets at once in a spread
+				Tooltip:
+					'''
+					Shoots 3 bullets at once in a spread
+					The lower your health is, the more bullets will be shot
+					'''
 			}
 
 			GunkWand: {

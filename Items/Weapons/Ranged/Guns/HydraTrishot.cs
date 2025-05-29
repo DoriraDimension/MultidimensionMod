@@ -39,7 +39,20 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
-            for (int i = 0; i < 3; i++)
+            int bulletAmount = 3;
+            if (player.statLife < player.statLifeMax2 * 0.75f)
+            {
+                bulletAmount = 4;
+            }
+            if (player.statLife < player.statLifeMax2 * 0.50f)
+            {
+                bulletAmount = 5;
+            }
+            if (player.statLife < player.statLifeMax2 * 0.25f)
+            {
+                bulletAmount = 6;
+            }
+            for (int i = 0; i < bulletAmount; i++)
             {
                 Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(12));
                 Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
