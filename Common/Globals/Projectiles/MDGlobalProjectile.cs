@@ -28,6 +28,20 @@ namespace MultidimensionMod.Common.Globals.Projectiles
             base.OnSpawn(projectile, source);
         }
 
+        public override bool PreAI(Projectile projectile)
+        {
+            if (projectile.owner == Main.myPlayer && (projectile.aiStyle == 61 || projectile.bobber) && projectile.shimmerWet)
+            {
+                Player player = Main.player[projectile.owner];
+                MDPlayer modPlayer = player.GetModPlayer<MDPlayer>();
+                if (modPlayer.shimmerProofHook)
+                {
+                    modPlayer.currentlyShimmerFishing = true;
+                }
+            }
+            return base.PreAI(projectile);
+        }
+
         public override void AI(Projectile projectile)
         {
             Player player = Main.LocalPlayer;

@@ -27,7 +27,6 @@ namespace MultidimensionMod.Common.Globals.Items
 			ItemID.Sets.ShimmerTransformToItem[ItemID.FallenStar] = ModContent.ItemType<Cassiopeia>();
             ItemID.Sets.ShimmerTransformToItem[ItemID.IceSlimeBanner] = ModContent.ItemType<FrostburnSlimeBanner>();
             ItemID.Sets.ShimmerTransformToItem[ItemID.MagicMirror] = ModContent.ItemType<MirrorOfOrigin>();
-            ItemID.Sets.ShimmerTransformToItem[ItemID.GoldenCarp] = ModContent.ItemType<ShimmerCarp>();
         }
 		public override void SetDefaults(Item item)
 		{

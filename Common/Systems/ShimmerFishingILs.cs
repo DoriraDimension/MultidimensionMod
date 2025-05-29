@@ -1,5 +1,6 @@
 ﻿using Mono.Cecil.Cil;
 using MonoMod.Cil;
+using MultidimensionMod.Common.Players;
 using System;
 using Terraria;
 using Terraria.Audio;
@@ -11,7 +12,7 @@ namespace MultidimensionMod.Common.Systems
     public class ShimmerFishingILs : ModSystem
     {
         //Code is based off of a mod called Auto Fisher
-        /*public override void Load()
+        public override void Load()
         {
             Terraria.IL_Projectile.AI_061_FishingBobber += IL_Projectile_AI_061_FishingBobber;
         }
@@ -29,11 +30,23 @@ namespace MultidimensionMod.Common.Systems
         }
         private static bool KillBobber(bool source)
         {
-            return source;
+            Player player = Main.LocalPlayer;
+            MDPlayer modPlayer = player.GetModPlayer<MDPlayer>();
+            if (modPlayer.shimmerProofHook)
+            {
+                return source;
+            }
+            return true;
         }
         private static bool ShimmerWet(bool source)
         {
-            return false;
-        }*/
+            Player player = Main.LocalPlayer;
+            MDPlayer modPlayer = player.GetModPlayer<MDPlayer>();
+            if (modPlayer.shimmerProofHook)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

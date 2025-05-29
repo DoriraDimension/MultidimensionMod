@@ -23,6 +23,7 @@ using Terraria.Localization;
 using MultidimensionMod.Utilities;
 using Terraria.Graphics.Effects;
 using MultidimensionMod.Items;
+using MultidimensionMod.Items.Permabuffs;
 
 namespace MultidimensionMod.Common.Players
 {
@@ -88,6 +89,8 @@ namespace MultidimensionMod.Common.Players
         public bool starBless = false;
         public Item DivineStarBlessing;
         public bool herbBook = false;
+        public bool currentlyShimmerFishing = false;
+        public bool shimmerProofHook = false;
         #region Custom Sword Swing Fields
         public int swingDir = 1;
         public Vector2 currentArmPosition = Vector2.Zero;
@@ -132,6 +135,8 @@ namespace MultidimensionMod.Common.Players
             SpiderNecklace = false;
             starBless = false;
             herbBook = false;
+            shimmerProofHook = false;
+            currentlyShimmerFishing = false;
         }
         public override void UpdateDead()
         {
@@ -448,6 +453,14 @@ namespace MultidimensionMod.Common.Players
             {
                 itemDrop = ModContent.ItemType<EnergyFish>();
                 return;
+            }
+            if (currentlyShimmerFishing)
+            {
+                itemDrop = ModContent.ItemType<ShimmerProofFishingHook>();
+                if (attempt.veryrare && !attempt.legendary && Main.rand.NextBool())
+                {
+                    itemDrop = ModContent.ItemType<ShimmerCarp>();
+                }
             }
         }
 

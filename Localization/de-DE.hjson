@@ -4356,6 +4356,11 @@ Mods: {
 				// DisplayName: Depthwalker
 				// Tooltip: Throws out 3 yoyos at once that poison enemies on hit
 			}
+
+			ShimmerProofFishingHook: {
+				// DisplayName: Shimmerproof Fishing Hook
+				// Tooltip: Allows fishing in shimmer
+			}
 		}
 
 		SetBonuses: {
