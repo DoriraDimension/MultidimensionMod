@@ -70,7 +70,7 @@ namespace MultidimensionMod.NPCs.TownPets
         public override void OnKill()
         {
             int baby = NPC.FindFirstNPC(ModContent.NPCType<TownDrake>());
-            Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.NPCs.TownDrake.Death"), 50, 125, 255);
+            //Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.NPCs.TownDrake.Death"), 50, 125, 255);
         }
 
         public override void OnSpawn(IEntitySource source)

@@ -4333,6 +4333,25 @@ Mods: {
 					Displays blooming conditions in herb tooltips while in your inventory
 					'''
 			}
+
+			HydraTrishot: {
+				DisplayName: Hydra Trishot
+				Tooltip: Shoots 3 bullets at once in a spread
+			}
+
+			GunkWand: {
+				DisplayName: Gunk Wand
+				Tooltip:
+					'''
+					Shoots a gunk ball that grows over time
+					The larger the ball is, the more damage it does
+					'''
+			}
+
+			Depthwalker: {
+				DisplayName: Depthwalker
+				Tooltip: Throws out 3 yoyos at once that poison enemies on hit
+			}
 		}
 
 		SetBonuses: {
@@ -4593,6 +4612,8 @@ Mods: {
 			BoneShard.DisplayName: Bone Shard
 			BigBrainProjectile.DisplayName: Big Brain Blast
 			FlyingSpider.DisplayName: Flying Spider
+			Gunk.DisplayName: Gunk
+			DepthwalkerProj.DisplayName: Depthwalker Proj
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
