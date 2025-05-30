@@ -4361,6 +4361,11 @@ Mods: {
 				// DisplayName: Shimmerproof Fishing Hook
 				// Tooltip: Allows fishing in shimmer
 			}
+
+			HydraStaff: {
+				// Tooltip: ""
+				// DisplayName: Hydra Staff
+			}
 		}
 
 		SetBonuses: {
@@ -4623,6 +4628,9 @@ Mods: {
 			// FlyingSpider.DisplayName: Flying Spider
 			// Gunk.DisplayName: Gunk
 			// DepthwalkerProj.DisplayName: Depthwalker Proj
+			// StoneHydra.DisplayName: Stone Hydra
+			// BogBoom.DisplayName: Bog Boom
+			// BogBomb.DisplayName: Bog Bomb
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
