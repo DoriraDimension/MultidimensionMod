@@ -13,6 +13,7 @@ using MultidimensionMod.Utilities;
 using MultidimensionMod.Base;
 using MultidimensionMod.Items.Permabuffs;
 using MultidimensionMod.Common.Players;
+using MultidimensionMod.Items.Accessories;
 
 namespace MultidimensionMod.Common.Globals.Items
 {
@@ -24,9 +25,52 @@ namespace MultidimensionMod.Common.Globals.Items
 		public override void SetStaticDefaults()
         {
             //Makes these items shimmer into another item (They will no longer decraft if previously possible in vanilla)
-			ItemID.Sets.ShimmerTransformToItem[ItemID.FallenStar] = ModContent.ItemType<Cassiopeia>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.FallenStar] = ModContent.ItemType<Cassiopeia>();
             ItemID.Sets.ShimmerTransformToItem[ItemID.IceSlimeBanner] = ModContent.ItemType<FrostburnSlimeBanner>();
             ItemID.Sets.ShimmerTransformToItem[ItemID.MagicMirror] = ModContent.ItemType<MirrorOfOrigin>();
+            #region Shimmerproof Fishing Hook
+            ItemID.Sets.ShimmerTransformToItem[ItemID.AmanitaFungifin] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Angelfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Batfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.BloodyManowar] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Bonefish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.BumblebeeTuna] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Bunnyfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.CapnTunabeard] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Catfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Cloudfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Clownfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Cursedfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.DemonicHellfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Derpfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Dirtfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.DynamiteFish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.EaterofPlankton] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.FallenStarfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Fishotron] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Fishron] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.GuideVoodooFish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Harpyfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Hungerfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Ichorfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.InfectedScabbardfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Jewelfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.MirageFish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Mudfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.MutantFlinxfin] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Pengfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Pixiefish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.ScarabFish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.ScorpioFish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Slimefish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Spiderfish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.TheFishofCthulu] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.TropicalBarracuda] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.TundraTrout] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.UnicornFish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Wyverntail] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ItemID.ZombieFish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            #endregion
         }
 		public override void SetDefaults(Item item)
 		{

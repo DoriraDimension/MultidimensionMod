@@ -122,20 +122,6 @@ namespace MultidimensionMod.Utilities
             return player.inventory.Any(item => items.Contains(item.type));
         }
 
-        //Fishing condition for Shimmer (does nothing)
-        public static bool InShimmer(this FishingAttempt attempt)
-        {
-            for (int e = 0; e < Main.maxProjectiles; e++)
-            {
-                Projectile projectile = Main.projectile[e];
-                if (projectile.bobber && projectile.shimmerWet)
-                    continue;
-
-                return true;
-            }
-            return false;
-        }
-
         public static object GetFieldValue(this Type type, string fieldName, object obj = null, BindingFlags? flags = null)
         {
             if (flags == null)

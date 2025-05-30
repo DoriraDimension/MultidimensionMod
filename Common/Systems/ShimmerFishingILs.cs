@@ -12,7 +12,7 @@ namespace MultidimensionMod.Common.Systems
     public class ShimmerFishingILs : ModSystem
     {
         //Code is based off of a mod called Auto Fisher
-        public override void Load()
+        /*public override void Load()
         {
             Terraria.IL_Projectile.AI_061_FishingBobber += IL_Projectile_AI_061_FishingBobber;
         }
@@ -47,6 +47,6 @@ namespace MultidimensionMod.Common.Systems
                 return false;
             }
             return true;
-        }
+        }*/
     }
 }

@@ -38,7 +38,7 @@ namespace MultidimensionMod.Items.Summons
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddRecipeGroup(Recipes.Adamantitanium, 8)
+			.AddIngredient(ItemID.MartianConduitPlating, 100)
 			.AddIngredient(ItemID.LihzahrdPowerCell)
 			.AddIngredient(ItemID.Nanites, 36)
 			.AddTile(TileID.MythrilAnvil)

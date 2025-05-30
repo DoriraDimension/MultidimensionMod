@@ -36,6 +36,7 @@ namespace MultidimensionMod.Common.Globals.Projectiles
                 MDPlayer modPlayer = player.GetModPlayer<MDPlayer>();
                 if (modPlayer.shimmerProofHook)
                 {
+                    player.buffImmune[BuffID.Shimmer] = true;
                     modPlayer.currentlyShimmerFishing = true;
                 }
             }
@@ -45,6 +46,7 @@ namespace MultidimensionMod.Common.Globals.Projectiles
         public override void AI(Projectile projectile)
         {
             Player player = Main.LocalPlayer;
+            MDPlayer mdPlayer = Main.player[projectile.owner].GetModPlayer<MDPlayer>();
             if (projectile.owner == Main.myPlayer && projectile.type == Terraria.ID.ProjectileID.PureSpray)
                 ConvertMush((int)(projectile.position.X + projectile.width / 2) / 16, (int)(projectile.position.Y + projectile.height / 2) / 16, 2);
             if (projectile.owner == Main.myPlayer && projectile.type == Terraria.ID.ProjectileID.MushroomSpray)
@@ -63,6 +65,26 @@ namespace MultidimensionMod.Common.Globals.Projectiles
                             npc.AddBuff(BuffID.Poisoned, 360);
                         }
                     }
+                }
+            }
+            if (mdPlayer.shimmerProofHook && (projectile.aiStyle == 61 || projectile.bobber) && projectile.shimmerWet && projectile.ai[1] < 0f)
+            {
+                if (Math.Abs(projectile.velocity.Y) <= 0.01f)
+                {
+                    projectile.velocity.Y = (float)Main.rand.Next(100, 500) * 0.015f;
+                    projectile.velocity.X = (float)Main.rand.Next(-100, 101) * 0.015f;
+                    projectile.wet = false;
+                    projectile.lavaWet = false;
+                    projectile.honeyWet = false;
+                    projectile.shimmerWet = false;
+                    projectile.netUpdate = true;
+                }
+                projectile.ai[1] += Main.rand.Next(1, 5);
+                if (projectile.ai[1] >= 0f)
+                {
+                    projectile.ai[1] = 0f;
+                    projectile.localAI[1] = 0f;
+                    projectile.netUpdate = true;
                 }
             }
         }
