@@ -75,6 +75,21 @@ Mods: {
 				// DisplayName: Subspecies
 				// TownNPCDialogueName: the Subspecies
 			}
+
+			Scrapyard: {
+				// DisplayName: Scrapyard
+				// TownNPCDialogueName: the Scrapyard
+			}
+
+			VoidsEdge: {
+				// DisplayName: Voids Edge
+				// TownNPCDialogueName: the Voids Edge
+			}
+
+			HarmonyCaverns: {
+				// DisplayName: Harmony Caverns
+				// TownNPCDialogueName: the Harmony Caverns
+			}
 		}
 
 		Buffs: {
@@ -4363,8 +4378,63 @@ Mods: {
 			}
 
 			HydraStaff: {
-				// Tooltip: ""
 				// DisplayName: Hydra Staff
+				// Tooltip: Summons a one headed hydra sentry that spits acoid bombs at enemies
+			}
+
+			Apocalyptite: {
+				// DisplayName: Apocalyptite
+				// Tooltip: ""
+			}
+
+			BlackIce: {
+				// DisplayName: Black Ice
+				// Tooltip: ""
+			}
+
+			DoomSeeds: {
+				// DisplayName: Warped Seeds
+				// Tooltip: ""
+			}
+
+			Doomstone: {
+				// DisplayName: Charged Omenstone
+				// Tooltip: ""
+			}
+
+			DoomstoneB: {
+				// DisplayName: Warpstone
+				// Tooltip: ""
+			}
+
+			DustSnow: {
+				// DisplayName: Dust Snow
+				// Tooltip: ""
+			}
+
+			OroborosWood: {
+				// DisplayName: Oroboros Wood
+				// Tooltip: ""
+			}
+
+			Warpsand: {
+				// DisplayName: Warpsand
+				// Tooltip: ""
+			}
+
+			WarpsandHardened: {
+				// DisplayName: Hardened Warpsand
+				// Tooltip: ""
+			}
+
+			Warpsandstone: {
+				// DisplayName: Warpsandstone
+				// Tooltip: ""
+			}
+
+			MetallicSand: {
+				// DisplayName: Metallic Sand
+				// Tooltip: ""
 			}
 		}
 
@@ -4627,10 +4697,12 @@ Mods: {
 			// BigBrainProjectile.DisplayName: Big Brain Blast
 			// FlyingSpider.DisplayName: Flying Spider
 			// Gunk.DisplayName: Gunk
-			// DepthwalkerProj.DisplayName: Depthwalker Proj
-			// StoneHydra.DisplayName: Stone Hydra
+			// DepthwalkerProj.DisplayName: Depthwalker
+			// StoneHydra.DisplayName: One-headed Hydra
 			// BogBoom.DisplayName: Bog Boom
 			// BogBomb.DisplayName: Bog Bomb
+			// WarpsandBall.DisplayName: Warpsand Ball
+			// WarpsandBallGun.DisplayName: Warpsand Ball Gun
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -5049,6 +5121,7 @@ Mods: {
 			// BogwoodSinkPlaced.MapEntry: Bogwood Sink
 			// BogwoodTablePlaced.MapEntry: Bogwood Table
 			// BogwoodWorkbenchPlaced.MapEntry: Bogwood Work Bench
+			// ApocalyptitePlaced.MapEntry: Apocalyptite Placed
 		}
 
 		DeathMessages: {

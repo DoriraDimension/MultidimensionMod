@@ -8,6 +8,8 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using MultidimensionMod.Tiles.Biomes.Void;
+using MultidimensionMod.Items.Placeables.Biomes.Void;
 
 // This file contains ExampleSandBallProjectile, ExampleSandBallFallingProjectile, and ExampleSandBallGunProjectile.
 // ExampleSandBallFallingProjectile and ExampleSandBallGunProjectile inherit from ExampleSandBallProjectile, allowing cleaner code and shared logic.
@@ -117,6 +119,40 @@ namespace MultidimensionMod.Projectiles
         {
             base.SetStaticDefaults();
             ProjectileID.Sets.FallingBlockTileItem[Type] = new(ModContent.TileType<DepthsandPlaced>());
+        }
+
+        public override void SetDefaults()
+        {
+            // The sandgun projectile when compared to the falling projectile has a ranged damage type, isn't hostile, and has extraupdates = 1.
+            // Note that EbonsandBallGun has infinite penetration, unlike SandBallGun
+            Projectile.CloneDefaults(ProjectileID.EbonsandBallGun);
+            AIType = ProjectileID.EbonsandBallGun; // This is needed for some logic in the ProjAIStyleID.FallingTile code.
+        }
+    }
+
+    public class WarpsandBall : SandBall
+    {
+        public override string Texture => "MultidimensionMod/Tiles/Biomes/Void/WarpsandBall";
+        public override void SetStaticDefaults()
+        {
+            base.SetStaticDefaults();
+            ProjectileID.Sets.FallingBlockTileItem[Type] = new(ModContent.TileType<WarpsandPlaced>(), ModContent.ItemType<Warpsand>());
+        }
+
+        public override void SetDefaults()
+        {
+            // The falling projectile when compared to the sandgun projectile is hostile.
+            Projectile.CloneDefaults(ProjectileID.EbonsandBallFalling);
+        }
+    }
+
+    public class WarpsandBallGun : SandBall
+    {
+        public override string Texture => "MultidimensionMod/Tiles/Biomes/Void/WarpsandBall";
+        public override void SetStaticDefaults()
+        {
+            base.SetStaticDefaults();
+            ProjectileID.Sets.FallingBlockTileItem[Type] = new(ModContent.TileType<WarpsandPlaced>());
         }
 
         public override void SetDefaults()

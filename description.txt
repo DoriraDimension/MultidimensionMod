@@ -52,4 +52,4 @@ Special Thanks:
 -ZSolar1  For making the old logo for the 1.3 wiki.
 -Lion8cake  For the help with the Frozen Underworld ILs.
 -TheDoctorDallin  For allowing me to use the old Ancients Awakened mod content.
--SpectralAves  For allowing me to keep his music tracks in the mod.
+-SpectralAves  For allowing me to keep his music tracks in the mod as placeholders.
