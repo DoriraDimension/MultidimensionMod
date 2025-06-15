@@ -4387,8 +4387,8 @@ Mods: {
 			}
 
 			Apocalyptite: {
-				DisplayName: Apocalyptite
-				Tooltip: ""
+				DisplayName: Eschatyte
+				Tooltip: An ominous ore eminating a foreboding droning
 			}
 
 			BlackIce: {
@@ -4444,13 +4444,13 @@ Mods: {
 			PenroseFish: {
 				DisplayName: Penrose Fish
 				Tooltip: Caught in Aether
-				QuestDialogue: I'm going timsane, bring fish, bring fish, bring fish, FIIIIIIIIIIIIIIISH.
+				QuestDialogue: Heya, I don't know who I'm using to call you right now but I want you to catch a uhm... fish? Yeah a fish. It's somewhere deep below in a cave with some gleamy liquid. Wait, this is the angler I should stay in character. Ahem. Go get me that thing so I can shove it into someones toilet.
 			}
 
 			SelfSimilarStarfish: {
 				DisplayName: Self-Similar Starfish
 				Tooltip: Caught in Aether
-				QuestDialogue: Holy shit, is that Selfsimilar Sentinel Polarities?! I need it!!!!!!!!!!
+				QuestDialogue: I heard of a place called the Aether, some fairytale place with some fairytale powers. And a fairytale place must have some fairytale fish. There is this incredibly sharp one that could be perfect to use as a magic shuriken, so go to wonderland and get me that twinkle star!
 			}
 
 			ShieldedAetherfish: {
