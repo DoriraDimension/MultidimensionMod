@@ -2226,7 +2226,7 @@ Mods: {
 				Tooltip:
 					'''
 					Low chance to confuse enemies on hit
-					Le Bonk
+					'Le Bonk'
 					'''
 			}
 
@@ -2241,7 +2241,7 @@ Mods: {
 					'''
 					Shoot a wide spread of flames to incinerate your enemies
 					Flames become hotter and much more lethal at half health
-					Fatalis, Fatalis, heaven and earth are yours
+					'Fatalis, Fatalis, heaven and earth are yours'
 					'''
 			}
 
@@ -2294,7 +2294,7 @@ Mods: {
 				Tooltip:
 					'''
 					A flamethrower that does not convert gel into fire but instead shoots a deadly spread of slime
-					The most dangerous slime is a slime with a gun.
+					'The most dangerous slime is a slime with a gun'
 					'''
 			}
 
@@ -2309,7 +2309,7 @@ Mods: {
 					'''
 					65% chance to not consume ammo.
 					Has a 25% chance to convert a shot bullet into a Nano Bullet
-					Metal General approved
+					'Metal General approved'
 					'''
 			}
 
@@ -2318,7 +2318,7 @@ Mods: {
 				Tooltip:
 					'''
 					Shoots purely cosmetic feathers alongside the shot bullet
-					'The lamest joke all across the universe.'
+					'The lamest joke all across the universe'
 					'''
 			}
 
@@ -2346,7 +2346,7 @@ Mods: {
 				Tooltip:
 					'''
 					Shoots different kinds of adorable slimes
-					Normally not used for combat, more of a rancher tool.
+					'Normally not used for combat, more of a rancher tool'
 					'''
 			}
 
@@ -2401,7 +2401,7 @@ Mods: {
 				Tooltip:
 					'''
 					Summons a tame juvenile Ice Drake to fight for you
-					[c/12fff7:I still have nightmares from the icy caves...]
+					[c/12fff7:'I still have nightmares from the icy caves...']
 					'''
 			}
 
@@ -2411,7 +2411,7 @@ Mods: {
 					'''
 					Summons a Golem mask above you
 					The mask shoots lasers and fireballs at enemies
-					He judges every single one of you
+					'He judges every single one of you'
 					'''
 			}
 
@@ -2739,7 +2739,11 @@ Mods: {
 
 			Mindburner: {
 				DisplayName: Mindburner
-				Tooltip: A blowpipe can blow your mind but this one burns
+				Tooltip:
+					'''
+					Shoots madness flames in short bursts
+					'A blowpipe can blow your mind but this one burns'
+					'''
 			}
 
 			ImpBodyPlate: {
@@ -2779,7 +2783,7 @@ Mods: {
 				Tooltip:
 					'''
 					Shoots a greatarrow with heavy knockback that inflicts Frostburn.
-					With great arrows comes great knockback
+					'With great arrows comes great knockback'
 					'''
 			}
 
@@ -4436,6 +4440,38 @@ Mods: {
 				DisplayName: Metallic Sand
 				Tooltip: ""
 			}
+
+			PenroseFish: {
+				DisplayName: Penrose Fish
+				Tooltip: Caught in Aether
+				QuestDialogue: I'm going timsane, bring fish, bring fish, bring fish, FIIIIIIIIIIIIIIISH.
+			}
+
+			SelfSimilarStarfish: {
+				DisplayName: Self-Similar Starfish
+				Tooltip: Caught in Aether
+				QuestDialogue: Holy shit, is that Selfsimilar Sentinel Polarities?! I need it!!!!!!!!!!
+			}
+
+			ShieldedAetherfish: {
+				DisplayName: Shielded Aetherfish
+				Tooltip: ""
+			}
+
+			StargazerBass: {
+				DisplayName: Stargazer Bass
+				Tooltip: ""
+			}
+
+			TreasureClam: {
+				DisplayName: Treasure Clam
+				Tooltip: ""
+			}
+
+			Iridul: {
+				DisplayName: Iridul
+				Tooltip: A rare gemstone that forms from excessive shimmer gas in the atmosphere.
+			}
 		}
 
 		SetBonuses: {
@@ -5665,6 +5701,12 @@ Mods: {
 
 		MiscText: {
 			MadnessStart: You feel your mind pierced...
+			AetherCatchFishTooltip: Caught in the Aether
+			MireCatchFishTooltip: Caught in the Shrouded Mire
+			InfernoCatchFishTooltip: Caught in the Dragon's Hoard
+			HarmonyCatchFishTooltip: Caught in the Harmony Caverns
+			VoidCatchFishTooltip: Caught in the Void's Edge
+			ScrapyardCatchFishTooltip: Caught in the Scrapyard Shores
 
 			Dappercap: {
 				FirstTalk1: I am?

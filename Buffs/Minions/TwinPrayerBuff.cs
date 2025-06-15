@@ -29,11 +29,11 @@ namespace MultidimensionMod.Buffs.Minions
             Player player = Main.player[projectile.owner];
             if (player.HasBuff<TwinPrayerBuff>() && !projectile.npcProj && !projectile.trap && (projectile.minion || ProjectileID.Sets.MinionShot[projectile.type]))
             {
-                if (Main.rand.NextBool(10))
+                if (Main.rand.NextBool(30))
                 {
                     Item.NewItem(npc.GetSource_Loot(), npc.getRect(), ItemID.Star, noGrabDelay: true);
                 }
-                if (Main.rand.NextBool(20))
+                if (Main.rand.NextBool(50))
                 {
                     Item.NewItem(npc.GetSource_Loot(), npc.getRect(), ItemID.Heart, noGrabDelay: true);
                 }

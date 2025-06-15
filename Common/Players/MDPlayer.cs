@@ -24,6 +24,7 @@ using MultidimensionMod.Utilities;
 using Terraria.Graphics.Effects;
 using MultidimensionMod.Items;
 using MultidimensionMod.Items.Permabuffs;
+using MultidimensionMod.Items.Fishing;
 
 namespace MultidimensionMod.Common.Players
 {
@@ -449,17 +450,41 @@ namespace MultidimensionMod.Common.Players
 
         public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
         {
-            if (attempt.uncommon && !attempt.inLava && !attempt.inHoney && Main.rand.NextBool(5)) //Replaces any uncommon fishing item with an Energy Fish with a 1/5 chance
+            if (attempt.uncommon && !attempt.inLava && !attempt.inHoney && !currentlyShimmerFishing && Main.rand.NextBool(5)) //Replaces any uncommon fishing item with an Energy Fish with a 1/5 chance
             {
                 itemDrop = ModContent.ItemType<EnergyFish>();
                 return;
             }
             if (currentlyShimmerFishing)
             {
-                itemDrop = ModContent.ItemType<ShimmerProofFishingHook>();
+                itemDrop = ModContent.ItemType<StargazerBass>();
+                if (attempt.common && !attempt.uncommon && !attempt.rare && !attempt.veryrare && !attempt.legendary && Main.rand.NextBool())
+                {
+                    itemDrop = ModContent.ItemType<ShieldedAetherfish>();
+                }
+                if (attempt.rare && !attempt.veryrare && !attempt.legendary && Main.rand.NextBool())
+                {
+                    itemDrop = ModContent.ItemType<TreasureClam>();
+                }
                 if (attempt.veryrare && !attempt.legendary && Main.rand.NextBool())
                 {
                     itemDrop = ModContent.ItemType<ShimmerCarp>();
+                }
+                if (attempt.questFish == ModContent.ItemType<SelfSimilarStarfish>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<SelfSimilarStarfish>();
+                        return;
+                    }
+                }
+                if (attempt.questFish == ModContent.ItemType<PenroseFish>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<PenroseFish>();
+                        return;
+                    }
                 }
             }
         }

@@ -7,6 +7,7 @@ using MultidimensionMod.Items.Weapons.Melee.Swords;
 using MultidimensionMod.Items.Weapons.Magic.Staffs;
 using MultidimensionMod.Items.Armor;
 using MultidimensionMod.Items.Accessories;
+using MultidimensionMod.Items.Fishing;
 
 namespace MultidimensionMod
 {
@@ -174,6 +175,8 @@ namespace MultidimensionMod
                 ModContent.ItemType<NeroPredatorHead>(),
                 ModContent.ItemType<NeroHammerheadMask>(),
                 ModContent.ItemType<NeroLanternHelm>(),
+                ModContent.ItemType<SelfSimilarStarfish>(),
+                ModContent.ItemType<PenroseFish>(),
             };
             #endregion
         }

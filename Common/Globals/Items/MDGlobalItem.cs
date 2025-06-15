@@ -14,6 +14,7 @@ using MultidimensionMod.Base;
 using MultidimensionMod.Items.Permabuffs;
 using MultidimensionMod.Common.Players;
 using MultidimensionMod.Items.Accessories;
+using MultidimensionMod.Items.Fishing;
 
 namespace MultidimensionMod.Common.Globals.Items
 {
@@ -70,6 +71,8 @@ namespace MultidimensionMod.Common.Globals.Items
             ItemID.Sets.ShimmerTransformToItem[ItemID.UnicornFish] = ModContent.ItemType<ShimmerProofFishingHook>();
             ItemID.Sets.ShimmerTransformToItem[ItemID.Wyverntail] = ModContent.ItemType<ShimmerProofFishingHook>();
             ItemID.Sets.ShimmerTransformToItem[ItemID.ZombieFish] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<SelfSimilarStarfish>()] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<PenroseFish>()] = ModContent.ItemType<ShimmerProofFishingHook>();
             #endregion
         }
 		public override void SetDefaults(Item item)

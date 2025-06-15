@@ -9,10 +9,10 @@ namespace MultidimensionMod.Items.Accessories
     {
         public override void SetDefaults()
         {
-            Item.width = 30;
-            Item.height = 56;
-            Item.rare = 7;
+            Item.width = 24;
+            Item.height = 36;
             Item.value = Item.sellPrice(0, 2);
+            Item.rare = ItemRarityID.LightRed;
             Item.accessory = true;
         }
 
@@ -20,15 +20,5 @@ namespace MultidimensionMod.Items.Accessories
         {
             player.GetModPlayer<MDPlayer>().shimmerProofHook = true;
         }
-
-        /*public override void AddRecipes()
-        {
-            CreateRecipe()
-            .AddIngredient(ModContent.ItemType<ThornScarf>())
-            .AddIngredient(ItemID.VialofVenom, 2)
-            .AddIngredient(ItemID.Deathweed, 3)
-            .AddTile(TileID.MythrilAnvil)
-            .Register();
-        }*/
     }
 }
