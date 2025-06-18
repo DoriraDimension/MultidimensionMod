@@ -30,6 +30,7 @@ Allows you to dash into enemies, damaging them");*/
         {
 			player.GetModPlayer<MDPlayer>().chaosClaw = true;
             player.dash = 2;
+            player.dashType = 2;
         }
         public override void AddRecipes()
         {
