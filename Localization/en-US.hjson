@@ -4472,6 +4472,37 @@ Mods: {
 				DisplayName: Iridul
 				Tooltip: A rare gemstone that forms from excessive shimmer gas in the atmosphere.
 			}
+
+			FishroomMonarch: {
+				DisplayName: Fishroom Monarch
+				Tooltip: Caught in Scarlet Mycelium Forest
+				QuestDialogue: There was once a mighty king, loyal were his servants, valiantly protecting their king. Though one day one deserted their duty, and as they were hunted down by the other servants, they fell into the cursed waters of the dark scarlet woods. They transformed into a scaled monstrosity and became known as the monarch of the cursed fish. Well, you are curious, so go check if it's real.
+			}
+
+			Pufftail: {
+				DisplayName: Pufftail
+				Tooltip: Caught in Scarlet Mycelium Forest
+				QuestDialogue: *cough* You won't believe it, earlier I was poking some bugs for fun when that big brown fella walked up to me and blasted me with some gas. I fell right into the pond next to me only to be gassed once more by a swimming one. I'm still reeling from that gas cloud. I will go show them not to mess with me. With that I mean, you will go get that lethal gasser, so I can sell it to some company as gas bombs.
+			}
+
+			ScarletWetworm: {
+				DisplayName: Scarlet Wetworm
+				Tooltip:
+					'''
+					Dark murky worms that live in the deep red waters of the Scarlet Mycelium Forest
+					They are regularly consumed by Spotted Capsters
+					'''
+			}
+
+			SpottedCapster: {
+				DisplayName: Spotted Capster
+				Tooltip: A loyal member of a swarm who will follow their captain anywhere, even if they are lead straight to their deaths
+			}
+
+			SpottedCaptain: {
+				DisplayName: Spotted Captain
+				Tooltip: A leader of a capster swarm, relatively rare and might sell for good money
+			}
 		}
 
 		SetBonuses: {
@@ -5702,6 +5733,7 @@ Mods: {
 		MiscText: {
 			MadnessStart: You feel your mind pierced...
 			AetherCatchFishTooltip: Caught in the Aether
+			RedMushCatchFishTooltip: Caught in the Scarlet Mycelium Forest
 			MireCatchFishTooltip: Caught in the Shrouded Mire
 			InfernoCatchFishTooltip: Caught in the Dragon's Hoard
 			HarmonyCatchFishTooltip: Caught in the Harmony Caverns

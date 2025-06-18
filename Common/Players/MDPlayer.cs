@@ -487,6 +487,37 @@ namespace MultidimensionMod.Common.Players
                     }
                 }
             }
+            if (Player.InModBiome(ModContent.GetInstance<ShroomForest>()))
+            {
+                if (attempt.common)
+                {
+                    itemDrop = ModContent.ItemType<SpottedCapster>();
+                }
+                if (attempt.rare)
+                {
+                    itemDrop = ModContent.ItemType<ScarletWetworm>();
+                }
+                if (attempt.veryrare)
+                {
+                    itemDrop = ModContent.ItemType<SpottedCaptain>();
+                }
+                if (attempt.questFish == ModContent.ItemType<Pufftail>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<Pufftail>();
+                        return;
+                    }
+                }
+                if (attempt.questFish == ModContent.ItemType<FishroomMonarch>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<FishroomMonarch>();
+                        return;
+                    }
+                }
+            }
         }
 
         public override void PostUpdateMiscEffects()
