@@ -48,7 +48,7 @@ namespace MultidimensionMod.Items.Accessories
 
         public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.pickSpeed += 0.35f;
+			player.pickSpeed -= 0.35f;
 			player.GetModPlayer<MDPlayer>().Probe = true;
 		}
 

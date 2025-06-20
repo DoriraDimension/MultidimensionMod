@@ -73,6 +73,8 @@ namespace MultidimensionMod.Common.Globals.Items
             ItemID.Sets.ShimmerTransformToItem[ItemID.ZombieFish] = ModContent.ItemType<ShimmerProofFishingHook>();
             ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<SelfSimilarStarfish>()] = ModContent.ItemType<ShimmerProofFishingHook>();
             ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<PenroseFish>()] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<Pufftail>()] = ModContent.ItemType<ShimmerProofFishingHook>();
+            ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<FishroomMonarch>()] = ModContent.ItemType<ShimmerProofFishingHook>();
             #endregion
         }
 		public override void SetDefaults(Item item)

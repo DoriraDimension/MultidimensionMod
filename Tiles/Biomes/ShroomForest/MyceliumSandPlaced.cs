@@ -47,6 +47,7 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             Main.tileBlockLight[Type] = true;
             AddMapEntry(new Color(195, 125, 56));
             DustType = DustID.Sand;
+            MineResist = 0.5f;
         }
 
         public override bool HasWalkDust()

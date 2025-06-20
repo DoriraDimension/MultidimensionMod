@@ -99,6 +99,7 @@ namespace MultidimensionMod.Common.Players
         public Vector2 startingDirection = Vector2.Zero;
         public float progress = 0;
         #endregion
+        public bool AngelBelt = false;
 
         public override void ResetEffects()
         {
@@ -138,6 +139,7 @@ namespace MultidimensionMod.Common.Players
             herbBook = false;
             shimmerProofHook = false;
             currentlyShimmerFishing = false;
+            AngelBelt = false;
         }
         public override void UpdateDead()
         {
@@ -718,7 +720,7 @@ namespace MultidimensionMod.Common.Players
                 {
                     return;
                 }
-                Player.statLife += 5; //Heals the player for 5 HP if an enemy dies from a melee attack
+                Player.Heal(5); //Heals the player for 5 HP if an enemy dies from a melee attack
             }
             if (SinnerSet && item.CountsAsClass(DamageClass.Magic))
             {
@@ -743,7 +745,8 @@ namespace MultidimensionMod.Common.Players
                         proj.velocity *= -0.5f;
                         proj.extraUpdates += 1;
                         proj.penetrate = 1;
-                        modifiers.SetMaxDamage(proj.damage / 2);
+                        modifiers.FinalDamage = modifiers.SourceDamage / 2;
+                        SoundEngine.PlaySound(SoundID.Item150, Player.position);
                         return;
                     }
                 }
@@ -760,7 +763,7 @@ namespace MultidimensionMod.Common.Players
                 {
                     return;
                 }
-                Player.statLife += 5; //Heals the player for 5 HP if an enemy dies from a projectile
+                Player.Heal(5); //Heals the player for 5 HP if an enemy dies from a projectile
             }
             if (SinnerSet && proj.CountsAsClass(DamageClass.Magic))
             {
@@ -796,9 +799,9 @@ namespace MultidimensionMod.Common.Players
         {
             if (Probe)
             {
-                if (Main.myPlayer == Player.whoAmI && Player.ownedProjectileCounts[ModContent.ProjectileType<FriendlyProbe>()] < 4)
+                if (Main.myPlayer == Player.whoAmI && Player.ownedProjectileCounts[ModContent.ProjectileType<FriendlyProbe>()] < 2)
                 {
-                    int probeDamage = (int)Player.GetBestClassDamage().ApplyTo(40);
+                    int probeDamage = (int)Player.GetBestClassDamage().ApplyTo(20);
                     Item item = DiggerEngine;
                     Projectile.NewProjectile(Player.GetSource_FromThis(), Player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<FriendlyProbe>(), probeDamage, 0f, Player.whoAmI);
                 }
@@ -830,6 +833,10 @@ namespace MultidimensionMod.Common.Players
                         theStar.localNPCHitCooldown = 7;
                     }
                 }
+            }
+            if (AngelBelt)
+            {
+                Player.wingTime += 100;
             }
         }
 
@@ -913,6 +920,10 @@ namespace MultidimensionMod.Common.Players
                         theStar.localNPCHitCooldown = 7;
                     }
                 }
+            }
+            if (AngelBelt)
+            {
+                Player.wingTime += 150;
             }
         }
 

@@ -14,13 +14,13 @@ namespace MultidimensionMod.Items.Accessories
             Item.value = Item.sellPrice(0, 0, 30, 0);
             Item.rare = ItemRarityID.Green;
             Item.accessory = true;
-            Item.defense = 10;
+            Item.defense = 8;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.GetModPlayer<MDPlayer>().SkulkerShell = true;
-            player.moveSpeed -= 0.10f;
+            player.moveSpeed -= 0.80f;
         }
     }
 }

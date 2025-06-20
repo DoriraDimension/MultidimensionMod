@@ -35,7 +35,7 @@ namespace MultidimensionMod.Projectiles.Magic
 			Player player = Main.player[Projectile.owner];
 			if (ringTimer > 420)
 			{
-				player.statLife += 10;
+                player.Heal(10);
                 SoundEngine.PlaySound(SoundID.Item30, Projectile.position);
             }
 		}

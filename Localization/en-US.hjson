@@ -569,7 +569,8 @@ Mods: {
 				DisplayName: Angelic Belt
 				Tooltip:
 					'''
-					Increases movement speed by 10%.
+					Increases movement speed by 5%.
+					Increases movement speed by 10% when moving up or down.
 					Restores a small fraction of flight time upon getting hit.
 					Seriously why do legless slimes keep having these?
 					'''
@@ -628,7 +629,7 @@ Mods: {
 				Tooltip:
 					'''
 					A cursed artifact found in the spider caverns. 
-					Increases movement speed by 10% and gives +1 minion slot. 
+					Increases movement speed by 6% and gives +1 minion slot. 
 					You can stick to walls like a spider.
 					'''
 			}

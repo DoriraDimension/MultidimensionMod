@@ -177,6 +177,8 @@ namespace MultidimensionMod
                 ModContent.ItemType<NeroLanternHelm>(),
                 ModContent.ItemType<SelfSimilarStarfish>(),
                 ModContent.ItemType<PenroseFish>(),
+                ModContent.ItemType<Pufftail>(),
+                ModContent.ItemType<FishroomMonarch>()
             };
             #endregion
         }

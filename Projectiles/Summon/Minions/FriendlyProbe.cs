@@ -30,7 +30,9 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 			Projectile.penetrate = -1;
 			Projectile.tileCollide = true;
 			Projectile.minion = true;
-		}
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 60;
+        }
 
 		public override void AI()
 		{

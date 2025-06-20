@@ -121,7 +121,7 @@ namespace MultidimensionMod.Items.Accessories
             }
             if (LeapTimer == 1)
             {
-                Player.AddBuff(ModContent.BuffType<LegPain>(), 1800);
+                Player.AddBuff(ModContent.BuffType<LegPain>(), 600);
             }
         }
 
