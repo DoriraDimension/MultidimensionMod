@@ -29,7 +29,6 @@ Developer:
 
 -Dorira  owner/spriter/coder/lore writer
 -TailsTheFox92  coder
--Big E  coder
 -Arc  spriter/coder
 -CrimsonCB  spriter
 -Hat in a River  spriter/concept artist
@@ -46,6 +45,10 @@ Contributor:
 -nebs  coding
 -torra th  spriting
 -red.laser  coding
+-John tModLoader  coding
+
+Tester:
+-RebelSpy64
 
 Special Thanks:
 

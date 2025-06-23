@@ -964,13 +964,18 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             AIState = ActionState.Hovering;
                             SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/RoyalRadianceScream"), NPC.position);
                             NPC.dontTakeDamage = false;
-
+                            if (!Main.dedServ)
+                            {
+                                Music = MultidimensionMod.Instance.GetMusicFromMusicMod("Fungus2") ?? MusicID.Boss3;
+                            }
                         }
                     }
                     else
                     {
                         if (!Main.dedServ)
-                            Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Silence");
+                        {
+                            MusicLoader.GetMusicSlot("Silence");
+                        }
                         if (DragonballPowerUpSequence == 120)
                         {
                             int i = CombatText.NewText(NPC.getRect(), MDColors.FeudalBlue, Language.GetTextValue("Mods.MultidimensionMod.NPCs.FeudalFungus.Transition1"), false, false);
@@ -1027,7 +1032,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
                             NPC.dontTakeDamage = false;
                             if (!Main.dedServ)
                             {
-                                Music = MultidimensionMod.Instance.GetMusicFromMusicMod("Fungus") ?? MusicID.Boss3;
+                                Music = MultidimensionMod.Instance.GetMusicFromMusicMod("Fungus2") ?? MusicID.Boss3;
                             }
                             AISwitch = 0;
                             MakeItRain = 0;

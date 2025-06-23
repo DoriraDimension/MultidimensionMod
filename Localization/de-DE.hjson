@@ -5001,6 +5001,7 @@ Mods: {
 			// Mosster.DisplayName: Mosster
 			// Lecharvis.DisplayName: Lecharvis
 			// Bloatleech.DisplayName: Bloatleech
+			// Gaster.DisplayName: Mysterious Man
 		}
 
 		Dialogue: {
@@ -5295,6 +5296,7 @@ Mods: {
 			// Stalker: Strange plant like creatures that dwell in foggy bogs. Unlike most other creatures native to the Shrouded Mire, these tend to disappear during nighttime.
 			// Bloatleech: Large rotund leeches that have their home in the lake depths. With their sharp teeth, they dig into flesh to create big wounds to feed on.
 			// Lecharvis: Wriggly bloatleech larvae that live in the lake depths. Due to their teeth not being developed yet, they rely on fresh blood their parents release from their caught prey.
+			// Gaster: Interesting. VERY interesting.
 		}
 
 		SoulConversation: {
