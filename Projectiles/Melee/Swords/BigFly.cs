@@ -9,7 +9,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 	{
 		public override void SetStaticDefaults()
 		{
-			Main.projFrames[Projectile.type] = 4;
+			Main.projFrames[Projectile.type] = 5;
 		}
 
 		public override void SetDefaults()
@@ -23,5 +23,17 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			Projectile.type = ProjectileID.GiantBee;
 			return true;
 		}
-	}
+
+        public override void AI()
+        {
+            if (++Projectile.frameCounter >= 8)
+            {
+                Projectile.frameCounter = 0;
+                if (++Projectile.frame >= 5)
+                {
+                    Projectile.frame = 0;
+                }
+            }
+        }
+    }
 }

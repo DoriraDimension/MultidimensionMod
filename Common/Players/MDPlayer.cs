@@ -450,6 +450,7 @@ namespace MultidimensionMod.Common.Players
             };
         }
 
+        #region fishing catches
         public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
         {
             if (attempt.uncommon && !attempt.inLava && !attempt.inHoney && !currentlyShimmerFishing && Main.rand.NextBool(5)) //Replaces any uncommon fishing item with an Energy Fish with a 1/5 chance
@@ -520,7 +521,212 @@ namespace MultidimensionMod.Common.Players
                     }
                 }
             }
+            if (Player.InModBiome(ModContent.GetInstance<TheDragonHoard>()))
+            {
+                itemDrop = ItemID.RockLobster;
+                if (attempt.uncommon)
+                {
+                    itemDrop = ItemID.Bass;
+                }
+                if (attempt.common && !Main.dayTime)
+                {
+                    itemDrop = ModContent.ItemType<TuffCarp>();
+                }
+                if (attempt.veryrare && Main.dayTime)
+                {
+                    itemDrop = ModContent.ItemType<TuffCarp>();
+                }
+                if (attempt.veryrare && Main.dayTime)
+                {
+                    itemDrop = ModContent.ItemType<HeatsparkGoldfish>();
+                }
+                if (attempt.questFish == ModContent.ItemType<DragonKoi>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<DragonKoi>();
+                        return;
+                    }
+                }
+                if (attempt.questFish == ModContent.ItemType<JadeArowana>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<JadeArowana>();
+                        return;
+                    }
+                }
+            }
+            if (Player.InModBiome(ModContent.GetInstance<TheDragonBurrow>()))
+            {
+                itemDrop = ItemID.RockLobster;
+                if (attempt.rare)
+                {
+                    itemDrop = ModContent.ItemType<HeatsparkGoldfish>();
+                }
+                if (attempt.questFish == ModContent.ItemType<DragonKoi>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<DragonKoi>();
+                        return;
+                    }
+                }
+                if (attempt.questFish == ModContent.ItemType<JadeArowana>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<JadeArowana>();
+                        return;
+                    }
+                }
+            }
+            if (Player.InModBiome(ModContent.GetInstance<TheShroudedMire>()))
+            {
+                itemDrop = ItemID.NeonTetra;
+                if (attempt.rare)
+                {
+                    itemDrop = ItemID.VariegatedLardfish;
+                }
+                if (attempt.uncommon)
+                {
+                    itemDrop = ItemID.DoubleCod;
+                }
+                if (attempt.common)
+                {
+                    itemDrop = ModContent.ItemType<Mudskipper>();
+                }
+                if (attempt.rare)
+                {
+                    itemDrop = ModContent.ItemType<SpiritCrawfish>();
+                }
+                if (attempt.questFish == ModContent.ItemType<BogfinKoi>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<BogfinKoi>();
+                        return;
+                    }
+                }
+                if (attempt.questFish == ModContent.ItemType<Miresquitofish>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<Miresquitofish>();
+                        return;
+                    }
+                }
+            }
+            if (Player.InModBiome(ModContent.GetInstance<TheLakeDepths>()))
+            {
+                itemDrop = ItemID.NeonTetra;
+                if (attempt.uncommon)
+                {
+                    itemDrop = ItemID.VariegatedLardfish;
+                }
+                if (attempt.uncommon)
+                {
+                    itemDrop = ItemID.DoubleCod;
+                }
+                if (attempt.common)
+                {
+                    itemDrop = ModContent.ItemType<Mudskipper>();
+                }
+                if (attempt.veryrare)
+                {
+                    itemDrop = ModContent.ItemType<SpiritCrawfish>();
+                }
+                if (attempt.questFish == ModContent.ItemType<BogfinKoi>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<BogfinKoi>();
+                        return;
+                    }
+                }
+                if (attempt.questFish == ModContent.ItemType<Miresquitofish>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<Miresquitofish>();
+                        return;
+                    }
+                }
+            }
+            if (Player.InModBiome(ModContent.GetInstance<HarmonyCaverns>()))
+            {
+                itemDrop = ItemID.Bass;
+                if (attempt.rare)
+                {
+                    itemDrop = ItemID.GreenJellyfish;
+                }
+                if (attempt.uncommon)
+                {
+                    itemDrop = ItemID.ArmoredCavefish;
+                }
+                if (attempt.common)
+                {
+                    itemDrop = ModContent.ItemType<HeartleafFlatfish>();
+                }
+                if (attempt.veryrare)
+                {
+                    itemDrop = ModContent.ItemType<HerbalNibbler>();
+                }
+                if (attempt.questFish == ModContent.ItemType<TheWhole>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<TheWhole>();
+                        return;
+                    }
+                }
+                if (attempt.questFish == ModContent.ItemType<BloomSnail>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<BloomSnail>();
+                        return;
+                    }
+                }
+            }
+            if (Player.InModBiome(ModContent.GetInstance<Scrapyard>()))
+            {
+                itemDrop = ItemID.Shrimp;
+                if (attempt.common)
+                {
+                    itemDrop = ItemID.Tuna;
+                }
+                if (attempt.uncommon)
+                {
+                    itemDrop = ItemID.RedSnapper;
+                }
+                if (attempt.common)
+                {
+                    itemDrop = ModContent.ItemType<DarkStarfish>();
+                }
+                if (attempt.rare && Main.hardMode)
+                {
+                    itemDrop = ModContent.ItemType<GlitchFish>();
+                }
+                if (attempt.questFish == ModContent.ItemType<ScrapSearcher>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<ScrapSearcher>();
+                        return;
+                    }
+                }
+                if (attempt.questFish == ModContent.ItemType<EternalOroboros>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<EternalOroboros>();
+                        return;
+                    }
+                }
+            }
         }
+        #endregion
 
         public override void PostUpdateMiscEffects()
         {

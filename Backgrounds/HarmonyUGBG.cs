@@ -7,10 +7,10 @@ namespace MultidimensionMod.Backgrounds
     {
         public override void FillTextureArray(int[] textureSlots)
         {
-            textureSlots[0] = BackgroundTextureLoader.GetBackgroundSlot("Backgrounds/TerrariumBG");
-            textureSlots[1] = BackgroundTextureLoader.GetBackgroundSlot("Backgrounds/TerrariumBG");
-            textureSlots[2] = BackgroundTextureLoader.GetBackgroundSlot("Backgrounds/TerrariumBG");
-            textureSlots[3] = BackgroundTextureLoader.GetBackgroundSlot("Backgrounds/TerrariumBG");
+            textureSlots[0] = BackgroundTextureLoader.GetBackgroundSlot("Backgrounds/HarmonyUGBG");
+            textureSlots[1] = BackgroundTextureLoader.GetBackgroundSlot("Backgrounds/HarmonyUGBG");
+            textureSlots[2] = BackgroundTextureLoader.GetBackgroundSlot("Backgrounds/HarmonyUGBG");
+            textureSlots[3] = BackgroundTextureLoader.GetBackgroundSlot("Backgrounds/HarmonyUGBG");
         }
     }
 }

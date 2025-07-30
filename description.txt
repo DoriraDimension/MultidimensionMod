@@ -29,14 +29,8 @@ Developer:
 
 -Dorira  owner/spriter/coder/lore writer
 -TailsTheFox92  coder
--Arc  spriter/coder
--CrimsonCB  spriter
--Hat in a River  spriter/concept artist
--Enigmatic  spriter
 -DrVoodoo  musician
 -musicman  musician
--Clyder8  musician
-
 Contributor:
 
 -kcragon  spriting
@@ -45,10 +39,14 @@ Contributor:
 -nebs  coding
 -torra th  spriting
 -red.laser  coding
--John tModLoader  coding
+-Rakan  coding
+-Enigmatic  spriter
+-CrimsonCB  spriter
+-Hat in a River  spriter/concept artist
+-Clyder8  musician
 
 Tester:
--RebelSpy64
+-Origami
 
 Special Thanks:
 

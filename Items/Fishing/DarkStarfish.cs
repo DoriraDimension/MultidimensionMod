@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Fishing
 {
-    public class StargazerBass : ModItem
+    public class DarkStarfish : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -15,10 +15,10 @@ namespace MultidimensionMod.Items.Fishing
 
         public override void SetDefaults()
         {
-            Item.width = 34;
-            Item.height = 34;
+            Item.width = 28;
+            Item.height = 26;
             Item.maxStack = 9999;
-            Item.rare = ItemRarityID.White;
+            Item.rare = ItemRarityID.Green;
             Item.value = Item.sellPrice(0, 0, 0, 10);
         }
     }

@@ -4445,7 +4445,7 @@ Mods: {
 			PenroseFish: {
 				DisplayName: Penrose Fish
 				Tooltip: Caught in Aether
-				QuestDialogue: Heya, I don't know who I'm using to call you right now but I want you to catch a uhm... fish? Yeah a fish. It's somewhere deep below in a cave with some gleamy liquid. Wait, this is the angler I should stay in character. Ahem. Go get me that thing so I can shove it into someones toilet.
+				QuestDialogue: Heya, I don't know who I'm using to call you right now but I want you to catch a uhm... fish? Yeah a fish. It's somewhere deep below in a cave with some gleamy liquid. Oh wait, this is the angler I should stay in character. Ahem. Go get me that thing so I can shove it into someones toilet.
 			}
 
 			SelfSimilarStarfish: {
@@ -4503,6 +4503,138 @@ Mods: {
 			SpottedCaptain: {
 				DisplayName: Spotted Captain
 				Tooltip: A leader of a capster swarm, relatively rare and might sell for good money
+			}
+
+			DarkStarfish: {
+				DisplayName: Dark Starfish
+				Tooltip: A starfish-like creature that twinkles like an evil star
+			}
+
+			EternalOroboros: {
+				DisplayName: Eternal Oroboros
+				Tooltip: Caught in Scrapyard
+				QuestDialogue: There is this eel that thinks he is so smart and cool by imitating two cycle symbols in one go. It is such a poser, I tell you. I think the wall behind me would make a good spot for its ego.
+			}
+
+			GlitchFish: {
+				DisplayName: Glitch Fish
+				Tooltip: ""
+				Lore:
+					'''
+					A dark aquatic lifeform encountered in the Void’s Edge and the Scrapyard below.
+					It seems to be made of some twisted energy, the instability caused by that makes it constantly fade in and out of reality.
+					Must be handled with extreme caution as it contains enough power to destroy the entire continent when releasing its energy supply.
+					'''
+			}
+
+			ScrapSearcher: {
+				DisplayName: Scrap Searcher
+				Tooltip: Caught in Scrapyard
+				QuestDialogue: Over at that clouded ocean I saw some weird fish in the water. Upon closer inspection it was made of metal and kept trying to stick some random scrap to itself. That thing would make a good vaccuum cleaner for my room and I bet you love salvaging things. Don't worry, if it acts up, try a controlled shock.
+			}
+
+			DragonKoi: {
+				DisplayName: Dragon Koi
+				Tooltip: Caught in Dragon's Hoard
+				QuestDialogue: I read in my Grand Book of our World's Fish that there exists a rare carp that was used as a pet by this cool city. It's said it will turn into a dragon when passing through some gates, so I want to throw one through my door to see if that works too. C'mon, I just want to ride a badass dragon.
+			}
+
+			HeatsparkGoldfish: {
+				DisplayName: Heatspark Goldfish
+				Tooltip:
+					'''
+					A small fish with white and blue scales, like a seething blue flame
+					Seeks shelter from the ashen pollution at night
+					'''
+			}
+
+			JadeArowana: {
+				DisplayName: Jade Arowana
+				Tooltip: Caught in Dragon's Hoard
+				QuestDialogue: I've read that the most expensive fish around here is called a Jade Arowana. I need one to flex my "wealth" with my fishing buddies. Or maybe I open a farm with them and make millions. Get one and I'll share 10% of my farm earnings with you, let's be business buddies.
+			}
+
+			TuffCarp: {
+				DisplayName: Tuff Carp
+				Tooltip: ""
+				Lore:
+					'''
+					A type of carp that lives in the ash polluted waters of the Dragon’s Hoard.
+					They primarily filter ash particles from the water during nighttime which helps keep it clean and drinkable during the day.
+					The absorbed particles are used to form a protective shell around the fish’s scales to defend itself from predators.
+					They are closely related to the local Dragon Carp, likely an evolutionary offshoot.
+					'''
+			}
+
+			BogfinKoi: {
+				DisplayName: Bogfin Koi
+				Tooltip: Caught in Shrouded Mire
+				QuestDialogue: You know that ornamental carp from the volcanic region? Apperantly the former inhabitants did some trading and some ended up in the swamplands. Legends state that they can become mighty sea serpents if they pass through a submerged stone gate. I already placed my neighbor's door in a nearby pond, I just need the fish.
+			}
+
+			Miresquitofish: {
+				DisplayName: Miresquitofish
+				Tooltip: Caught in Shrouded Mire
+				QuestDialogue: You know what everyone hates? That's right, mosquitos. You know what everyone hates more? GIANT mosquitos. But imagine something even worse, a giant mosquito that SWIMS. I've found exactly that, I just need someone to neutralize it, so I can do some funny pool pranks with it.
+			}
+
+			Mudskipper: {
+				DisplayName: Mudskipper
+				Tooltip: ""
+				Lore:
+					'''
+					Amphibian fish that live in the Shrouded Mire.
+					Their front fins function similar to arms, allowing the creature to skip across the muddy surface of the swamp.
+					Some have apparently been observed being able to leap up into the air.
+					'''
+			}
+
+			SpiritCrawfish: {
+				DisplayName: Spirit Crawfish
+				Tooltip:
+					'''
+					Unique crawfish that live in the Shrouded Mire
+					These creatures are said to be attuned to the luminous dark moon itself, which drew many seasoned fishermen into the mist shrouded swamp.
+					'''
+			}
+
+			BloomSnail: {
+				DisplayName: Bloom Snail
+				Tooltip: ""
+				QuestDialogue: I prepared the perfect prank for some of my allergic friends. I need this snail that bears a flower on its back, it releases these funny pollen that tickle your nose when you squeeze it. Would you be so nice to catch one? Oh and don't be too slow, or it might outrun you.
+			}
+
+			HeartleafFlatfish: {
+				DisplayName: Heartleaf Flatfish
+				Tooltip:
+					'''
+					Rare type of flatfish only found in the Harmony Caverns.
+					Unlike their desert dwelling cousins, these float on the water surface to imitate fallen leafes.
+					'''
+			}
+
+			HerbalNibbler: {
+				DisplayName: Herbal Nibbler
+				Tooltip:
+					'''
+					A fish that consumes all kinds of different herbs to turn them into a unique spice
+					Can be used for cooking
+					'''
+			}
+
+			TheWhole: {
+				DisplayName: The Whole
+				Tooltip: ""
+				QuestDialogue: You know love? I don't know anything about it, but I want to impress someone I like. So, there is this type of fish where the couple sticks together like glue, and my book said it symbolises loyalty or something. That one should work as a gift. Just catch one, the other will be stupid enough to follow the other.
+			}
+
+			TerraCrystalItem: {
+				DisplayName: Crystal of Order
+				Tooltip:
+				    '''
+					A large chunk of crystalized order energy.
+					Formed during a heavy impact.
+					'''
 			}
 		}
 
@@ -5742,6 +5874,7 @@ Mods: {
 			HarmonyCatchFishTooltip: Caught in the Harmony Caverns
 			VoidCatchFishTooltip: Caught in the Void's Edge
 			ScrapyardCatchFishTooltip: Caught in the Scrapyard Shores
+			ScrapyardAndVoidCatchFishRooltip: Caught in the Scrapyard Shores and Void's Edge
 
 			Dappercap: {
 				FirstTalk1: I am?
