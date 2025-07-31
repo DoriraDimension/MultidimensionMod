@@ -4629,7 +4629,61 @@ Mods: {
 			}
 
 			TerraCrystalItem: {
-				// DisplayName: Terra Crystal Item
+				// DisplayName: Crystal of Order
+				/* Tooltip:
+					'''
+					A large chunk of crystalized order energy.
+					Formed during a heavy impact.
+					''' */
+			}
+
+			DragonCrate: {
+				// DisplayName: Dragon Crate
+				// Tooltip: ""
+			}
+
+			HarmonyCrate: {
+				// DisplayName: Harmony Crate
+				// Tooltip: ""
+			}
+
+			MossyCrate: {
+				// DisplayName: Mossy Crate
+				// Tooltip: ""
+			}
+
+			MurkyCrate: {
+				// DisplayName: Murky Crate
+				// Tooltip: ""
+			}
+
+			MushroomCrate: {
+				// DisplayName: Mushroom Crate
+				// Tooltip: ""
+			}
+
+			MyceliumCrate: {
+				// DisplayName: Mycelium Crate
+				// Tooltip: ""
+			}
+
+			RustyCrate: {
+				// DisplayName: Rusty Crate
+				// Tooltip: ""
+			}
+
+			ScorchedCrate: {
+				// DisplayName: Scorched Crate
+				// Tooltip: ""
+			}
+
+			ScrapCrate: {
+				// DisplayName: Scrap Crate
+				// Tooltip: ""
+			}
+
+			UnityCrate: {
+				// DisplayName: Unity Crate
 				// Tooltip: ""
 			}
 		}
@@ -5319,6 +5373,7 @@ Mods: {
 			// BogwoodTablePlaced.MapEntry: Bogwood Table
 			// BogwoodWorkbenchPlaced.MapEntry: Bogwood Work Bench
 			// ApocalyptitePlaced.MapEntry: Apocalyptite Placed
+			// CratePlaced.MapEntry: Crate Placed
 		}
 
 		DeathMessages: {
@@ -5484,6 +5539,9 @@ Mods: {
 			// DimensiumCondition: This item won't appear in the bestiary
 			// DownedMoonLordCondition: Only available after defeating Moon Lord
 			// MissingGripCondition: Only drops from the last Grip of Chaos
+			// DownedMushroomMonarchCondition: Only available after defeating Mushroom Monarch
+			// DownedFeudalFungusCondition: Only available after defeating Feudal Fungus
+			// DownedSmileyCondition: Only available after defeating Smiley
 		}
 
 		SpecialTooltips: {

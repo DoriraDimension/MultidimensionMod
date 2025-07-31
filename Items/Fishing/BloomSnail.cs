@@ -26,7 +26,7 @@ namespace MultidimensionMod.Items.Fishing
         public override void AnglerQuestChat(ref string description, ref string catchLocation)
         {
             description = Language.GetTextValue("Mods.MultidimensionMod.Items.BloomSnail.QuestDialogue");
-            catchLocation = Language.GetTextValue("Mods.MultidimensionMod.MiscText.AetherCatchFishTooltip");
+            catchLocation = Language.GetTextValue("Mods.MultidimensionMod.MiscText.HarmonyCatchFishTooltip");
         }
     }
 }

@@ -25,6 +25,8 @@ using Terraria.Graphics.Effects;
 using MultidimensionMod.Items;
 using MultidimensionMod.Items.Permabuffs;
 using MultidimensionMod.Items.Fishing;
+using Humanizer;
+using MultidimensionMod.Items.Fishing.Crates;
 
 namespace MultidimensionMod.Common.Players
 {
@@ -520,6 +522,10 @@ namespace MultidimensionMod.Common.Players
                         return;
                     }
                 }
+                if (!attempt.inLava && !attempt.inHoney && attempt.crate)
+                {
+                    itemDrop = Main.hardMode ? ModContent.ItemType<MyceliumCrate>() : ModContent.ItemType<MushroomCrate>();
+                }
             }
             if (Player.InModBiome(ModContent.GetInstance<TheDragonHoard>()))
             {
@@ -556,6 +562,10 @@ namespace MultidimensionMod.Common.Players
                         return;
                     }
                 }
+                if (!attempt.inLava && !attempt.inHoney && attempt.crate)
+                {
+                    itemDrop = Main.hardMode ? ModContent.ItemType<DragonCrate>() : ModContent.ItemType<ScorchedCrate>();
+                }
             }
             if (Player.InModBiome(ModContent.GetInstance<TheDragonBurrow>()))
             {
@@ -579,6 +589,10 @@ namespace MultidimensionMod.Common.Players
                         itemDrop = ModContent.ItemType<JadeArowana>();
                         return;
                     }
+                }
+                if (!attempt.inLava && !attempt.inHoney && attempt.crate)
+                {
+                    itemDrop = Main.hardMode ? ModContent.ItemType<DragonCrate>() : ModContent.ItemType<ScorchedCrate>();
                 }
             }
             if (Player.InModBiome(ModContent.GetInstance<TheShroudedMire>()))
@@ -616,6 +630,10 @@ namespace MultidimensionMod.Common.Players
                         return;
                     }
                 }
+                if (!attempt.inLava && !attempt.inHoney && attempt.crate)
+                {
+                    itemDrop = Main.hardMode ? ModContent.ItemType<MurkyCrate>() : ModContent.ItemType<MossyCrate>();
+                }
             }
             if (Player.InModBiome(ModContent.GetInstance<TheLakeDepths>()))
             {
@@ -651,6 +669,10 @@ namespace MultidimensionMod.Common.Players
                         itemDrop = ModContent.ItemType<Miresquitofish>();
                         return;
                     }
+                }
+                if (!attempt.inLava && !attempt.inHoney && attempt.crate)
+                {
+                    itemDrop = Main.hardMode ? ModContent.ItemType<MurkyCrate>() : ModContent.ItemType<MossyCrate>();
                 }
             }
             if (Player.InModBiome(ModContent.GetInstance<HarmonyCaverns>()))
@@ -688,6 +710,10 @@ namespace MultidimensionMod.Common.Players
                         return;
                     }
                 }
+                if (!attempt.inLava && !attempt.inHoney && attempt.crate)
+                {
+                    itemDrop = Main.hardMode ? ModContent.ItemType<UnityCrate>() : ModContent.ItemType<HarmonyCrate>();
+                }
             }
             if (Player.InModBiome(ModContent.GetInstance<Scrapyard>()))
             {
@@ -723,6 +749,10 @@ namespace MultidimensionMod.Common.Players
                         itemDrop = ModContent.ItemType<EternalOroboros>();
                         return;
                     }
+                }
+                if (!attempt.inLava && !attempt.inHoney && attempt.crate)
+                {
+                    itemDrop = Main.hardMode ? ModContent.ItemType<ScrapCrate>() : ModContent.ItemType<RustyCrate>();
                 }
             }
         }
