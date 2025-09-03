@@ -8,6 +8,8 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
 using MultidimensionMod.Tiles.Ores;
+using Terraria.Enums;
+using MultidimensionMod.Items.Potions.Food;
 
 namespace MultidimensionMod.Common.Globals
 {
@@ -37,6 +39,24 @@ namespace MultidimensionMod.Common.Globals
         public override void SetStaticDefaults()
         {
             Main.tileMerge[TileID.Ash][TileID.Hellstone] = true;
+        }
+
+        public override bool ShakeTree(int x, int y, TreeTypes treeType)
+        {
+            if (treeType == TreeTypes.Mushroom && Main.rand.NextBool(120))
+            {
+                if (Main.rand.NextBool(2))
+                {
+                    Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<SparklyHoneydew>());
+                    return true;
+                }
+                else
+                {
+                    Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<BlackPersimmon>());
+                    return true;
+                }
+            }
+            return false;
         }
 
         public override void Drop(int i, int j, int type)

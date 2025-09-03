@@ -9,6 +9,7 @@ using Terraria.ModLoader;
 using Terraria.DataStructures;
 using Terraria.Utilities;
 using MultidimensionMod.NPCs.MushBiomes;
+using MultidimensionMod.Items.Potions.Food;
 
 namespace MultidimensionMod.Tiles.Biomes.ShroomForest
 {
@@ -43,11 +44,9 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             if (Main.rand.NextBool(120))
             {
                 if (Main.rand.NextBool(2))
-                    Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ItemID.Mushroom);
-                //Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<MycelialCantaloupe>());
+                Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<MycelialCantaloupe>());
                 else
-                    Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ItemID.Mushroom);
-                //Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<RedPersimmon>());
+                Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<RedPersimmon>());
             }
             if (Main.rand.NextBool(70))
             {

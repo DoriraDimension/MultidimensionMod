@@ -3853,7 +3853,7 @@ Mods: {
 
 			Darkmud: {
 				DisplayName: Veilmud
-				Tooltip: Swamp mud that has gone through a drastic change, turning it pale gray
+				Tooltip: Swampy mud that has been drained of all life and color, all that remains are the memories
 			}
 
 			IndigoIce: {
@@ -4686,6 +4686,96 @@ Mods: {
 				DisplayName: Unity Crate
 				Tooltip: ""
 			}
+
+			VoidenMangosteen: {
+				Tooltip: ""
+				DisplayName: Voiden Mangosteen
+			}
+
+			TranquilityFig: {
+				Tooltip: ""
+				DisplayName: Tranquility Fig
+			}
+
+			SparklyHoneydew: {
+				Tooltip: ""
+				DisplayName: Sparkly Honeydew
+			}
+
+			SapphireSlider: {
+				Tooltip: ""
+				DisplayName: Sapphire Slider
+			}
+
+			RubyRusher: {
+				Tooltip: ""
+				DisplayName: Ruby Rusher
+			}
+
+			RedPersimmon: {
+				Tooltip: ""
+				DisplayName: Red Persimmon
+			}
+
+			PassionFruit: {
+				Tooltip: ""
+				DisplayName: Passion Fruit
+			}
+
+			OrderOracle: {
+				Tooltip: ""
+				DisplayName: Order Oracle
+			}
+
+			MycelialCantaloupe: {
+				Tooltip: ""
+				DisplayName: Mycelial Cantaloupe
+			}
+
+			MistyPear: {
+				Tooltip: ""
+				DisplayName: Misty Pear
+			}
+
+			MistyMire: {
+				Tooltip: ""
+				DisplayName: Misty Mire
+			}
+
+			LavaLung: {
+				Tooltip: ""
+				DisplayName: Lava Lung
+			}
+
+			FlimmerLychee: {
+				Tooltip: ""
+				DisplayName: Flimmer Lychee
+			}
+
+			DoomsdayDrink: {
+				Tooltip: ""
+				DisplayName: Doomsday Drink
+			}
+
+			Cranberry: {
+				Tooltip: ""
+				DisplayName: Cranberry
+			}
+
+			BlackPersimmon: {
+				Tooltip: ""
+				DisplayName: Black Persimmon
+			}
+
+			BinaryStarFruit: {
+				Tooltip: ""
+				DisplayName: Binary Star Fruit
+			}
+
+			AshgrayDurian: {
+				Tooltip: ""
+				DisplayName: Ashgray Durian
+			}
 		}
 
 		SetBonuses: {
@@ -5372,8 +5462,8 @@ Mods: {
 			BogwoodSinkPlaced.MapEntry: Bogwood Sink
 			BogwoodTablePlaced.MapEntry: Bogwood Table
 			BogwoodWorkbenchPlaced.MapEntry: Bogwood Work Bench
-			ApocalyptitePlaced.MapEntry: Apocalyptite Placed
-			CratePlaced.MapEntry: Crate Placed
+			ApocalyptitePlaced.MapEntry: Eschatyte
+			CratePlaced.MapEntry: Crate
 		}
 
 		DeathMessages: {

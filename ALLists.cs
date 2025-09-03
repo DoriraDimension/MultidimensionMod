@@ -178,7 +178,15 @@ namespace MultidimensionMod
                 ModContent.ItemType<SelfSimilarStarfish>(),
                 ModContent.ItemType<PenroseFish>(),
                 ModContent.ItemType<Pufftail>(),
-                ModContent.ItemType<FishroomMonarch>()
+                ModContent.ItemType<FishroomMonarch>(),
+                ModContent.ItemType<DragonKoi>(),
+                ModContent.ItemType<JadeArowana>(),
+                ModContent.ItemType<BogfinKoi>(),
+                ModContent.ItemType<Miresquitofish>(),
+                ModContent.ItemType<TheWhole>(),
+                ModContent.ItemType<BloomSnail>(),
+                ModContent.ItemType<ScrapSearcher>(),
+                ModContent.ItemType<EternalOroboros>(),
             };
             #endregion
         }

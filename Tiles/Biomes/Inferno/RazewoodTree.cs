@@ -6,6 +6,9 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 using ReLogic.Content;
+using Terraria.DataStructures;
+using MultidimensionMod.Items.Potions.Food;
+using MultidimensionMod.Items.Placeables.Biomes.Inferno;
 
 
 namespace MultidimensionMod.Tiles.Biomes.Inferno
@@ -33,7 +36,17 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
 
         public override bool Shake(int x, int y, ref bool createLeaves)
         {
-            Item.NewItem(WorldGen.GetItemSource_FromTreeShake(x, y), new Vector2(x, y) * 16, ModContent.ItemType<Items.Placeables.Biomes.Inferno.Razewood>());
+            if (Main.rand.NextBool(120))
+            {
+                if (Main.rand.NextBool(2))
+                    Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<AshgrayDurian>());
+                else
+                    Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<FlimmerLychee>());
+            }
+            if (Main.rand.NextBool(70))
+            {
+                Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<Razewood>(), Main.rand.Next(6, 8));
+            }
             return false;
         }
 

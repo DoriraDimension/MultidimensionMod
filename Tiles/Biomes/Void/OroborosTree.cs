@@ -2,9 +2,12 @@
 using Microsoft.Xna.Framework.Graphics;
 using MultidimensionMod.Items.Placeables.Biomes.Mire;
 using MultidimensionMod.Items.Placeables.Biomes.Void;
+using MultidimensionMod.Items.Potions.Food;
+using MultidimensionMod.NPCs.Mire;
 using MultidimensionMod.Tiles.Biomes.Mire;
 using ReLogic.Content;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
@@ -33,7 +36,17 @@ namespace MultidimensionMod.Tiles.Biomes.Void
 
         public override bool Shake(int x, int y, ref bool createLeaves)
         {
-            Item.NewItem(WorldGen.GetItemSource_FromTreeShake(x, y), new Vector2(x, y) * 16, ModContent.ItemType<OroborosWood>());
+            if (Main.rand.NextBool(120))
+            {
+                if (Main.rand.NextBool(2))
+                    Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<BinaryStarFruit>());
+                else
+                    Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<VoidenMangosteen>());
+            }
+            if (Main.rand.NextBool(70))
+            {
+                Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<OroborosWood>(), Main.rand.Next(6, 8));
+            }
             return false;
         }
 

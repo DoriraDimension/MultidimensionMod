@@ -25,7 +25,7 @@ namespace MultidimensionMod.Tiles
 
             // Etc
             LocalizedText name = CreateMapEntryName();
-            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Banner"));
+            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Crate"));
         }
 
         public override bool CreateDust(int i, int j, ref int type)

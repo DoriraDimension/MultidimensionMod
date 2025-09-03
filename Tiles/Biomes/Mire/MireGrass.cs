@@ -124,8 +124,8 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
             if (!Main.dayTime)
             {
                 r = 0;
-                g = 0.40f;
-                b = 0.61f;
+                g = 0.30f;
+                b = 0.51f;
             }
         }
     }
