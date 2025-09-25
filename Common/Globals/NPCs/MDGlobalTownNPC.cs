@@ -14,6 +14,8 @@ using Terraria.Localization;
 using Terraria.ModLoader.IO;
 using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Items;
+using MutidimensionMod.Common;
+using MultidimensionMod.Items.Placeables.Biomes.Mire;
 
 namespace MultidimensionMod
 {
@@ -48,6 +50,11 @@ namespace MultidimensionMod
             {
                 if (shop.NpcType == NPCID.Dryad)
                 {
+                    shop.Add(new Item(ModContent.ItemType<MireGrassWall>())
+                    {
+                        shopCustomPrice = Item.buyPrice(0, 0, 0, 10)
+                    }, ALConditions.InShroudedMire);
+
                     shop.Add(new Item(ItemID.SlimeCrown)
                     {
                         shopCustomPrice = Item.buyPrice(0, 1, 50)

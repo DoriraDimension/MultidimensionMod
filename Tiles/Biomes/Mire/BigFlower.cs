@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace MultidimensionMod.Tiles.Biomes.Mire
 {
-    public class BogPalmTree : ModPalmTree
+    public class BigFlower : ModPalmTree
     {
         private Asset<Texture2D> texture;
         private Asset<Texture2D> oasisTopsTexture;
@@ -23,10 +23,10 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
 
         public override void SetStaticDefaults()
         {
-            GrowsOnTileId = new int[1] { ModContent.TileType<DepthsandPlaced>() };
-            texture = ModContent.Request<Texture2D>("MultidimensionMod/Tiles/Biomes/Mire/BogPalmTree");
-            topsTexture = ModContent.Request<Texture2D>("MultidimensionMod/Tiles/Biomes/Mire/BogPalmTreetops");
-            oasisTopsTexture = ModContent.Request<Texture2D>("MultidimensionMod/Tiles/Biomes/Mire/BogPalmTreeTopsOasis");
+            GrowsOnTileId = new int[1] { ModContent.TileType<MireGrass>() };
+            texture = ModContent.Request<Texture2D>("MultidimensionMod/Tiles/Biomes/Mire/BigFlower");
+            topsTexture = ModContent.Request<Texture2D>("MultidimensionMod/Tiles/Biomes/Mire/BigFlowerTops");
+            oasisTopsTexture = ModContent.Request<Texture2D>("MultidimensionMod/Tiles/Biomes/Mire/BigFlowerTopsOasis");
         }
 
         public override Asset<Texture2D> GetTexture() => texture;
@@ -34,12 +34,12 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
         public override int SaplingGrowthType(ref int style)
         {
             style = 0;
-            return ModContent.TileType<BogPalmSapling>();
+            return ModContent.TileType<BigFlowerSapling>();
         }
 
         public override int DropWood()
         {
-            return ModContent.ItemType<Items.Placeables.Biomes.Mire.Bogwood>();
+            return ModContent.ItemType<Items.Placeables.Biomes.Mire.MireSeeds>();
         }
 
         public override Asset<Texture2D> GetOasisTopTextures() => oasisTopsTexture;
