@@ -12,6 +12,9 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using MultidimensionMod.NPCs.MushBiomes;
+using Terraria.DataStructures;
+using MultidimensionMod.NPCs.Corruption;
 
 namespace MultidimensionMod.Items.Bags
 {
@@ -38,19 +41,11 @@ namespace MultidimensionMod.Items.Bags
 		public override void RightClick(Player player)
 		{
 			var source = player.GetSource_OpenItem(Type);
-			player.QuickSpawnItem(source, ModContent.ItemType<WoodenBat>());
-			player.QuickSpawnItem(source, ItemID.CopperBow);
-			player.QuickSpawnItem(source, ItemID.WoodenArrow, 75);
-			player.QuickSpawnItem(source, ModContent.ItemType<StarRod>());
-			player.QuickSpawnItem(source, ItemID.ManaCrystal);
-			player.QuickSpawnItem(source, ItemID.SlimeStaff);
-			player.QuickSpawnItem(source, ItemID.CopperHammer);
-			player.QuickSpawnItem(source, ItemID.Torch, 30);
-			player.QuickSpawnItem(source, ItemID.RecallPotion, 5);
-			player.QuickSpawnItem(source, ItemID.Rope, 100);
-			player.QuickSpawnItem(source, ItemID.Bomb, 15);
-			player.QuickSpawnItem(source, ItemID.Dynamite, 2);
-			player.QuickSpawnItem(source, ItemID.BuilderPotion, 3);
+			player.QuickSpawnItem(source, ItemID.Torch, 10);
+			player.QuickSpawnItem(source, ItemID.RecallPotion, 3);
+			player.QuickSpawnItem(source, ItemID.Rope, 35);
+			player.QuickSpawnItem(source, ItemID.Bomb, 5);
+			player.QuickSpawnItem(source, ItemID.BuilderPotion, 2);
 			player.QuickSpawnItem(source, ItemID.CopperCoin);
 			player.QuickSpawnItem(source, ModContent.ItemType<Socks>());
             player.QuickSpawnItem(source, ModContent.ItemType<TheAncientChaos>());
@@ -84,6 +79,7 @@ namespace MultidimensionMod.Items.Bags
 				case "Tim":
 				case "Illuminatim":
 					player.QuickSpawnItem(source, ModContent.ItemType<Rambam>());
+					player.QuickSpawnItem(source, ModContent.ItemType<MirrorOfOrigin>());
 					break;
 
 				case "Clint":
@@ -100,6 +96,17 @@ namespace MultidimensionMod.Items.Bags
 					player.QuickSpawnItem(source, ModContent.ItemType<FrostScale>(), 14);
 					player.QuickSpawnItem(source, ItemID.LihzahrdBanner);
 					break;
+				case "Rebel":
+				case "RebelSpy":
+				case "John Decay Fly":
+					player.QuickSpawnItem(source, ModContent.ItemType<DecayGeode>(), 5);
+					NPC.NewNPC(source, (int)player.Center.X, (int)player.Center.Y, ModContent.NPCType<DecayFly>());
+                    NPC.NewNPC(source, (int)player.Center.X, (int)player.Center.Y - 5, ModContent.NPCType<DecayFly>());
+                    NPC.NewNPC(source, (int)player.Center.X - 10, (int)player.Center.Y, ModContent.NPCType<DecayFly>());
+                    NPC.NewNPC(source, (int)player.Center.X - 5, (int)player.Center.Y, ModContent.NPCType<DecayFly>());
+                    NPC.NewNPC(source, (int)player.Center.X + 5, (int)player.Center.Y, ModContent.NPCType<DecayFly>());
+                    NPC.NewNPC(source, (int)player.Center.X + 10, (int)player.Center.Y, ModContent.NPCType<DecayFly>());
+                    break;
 			}
 		}
 	}

@@ -4466,7 +4466,11 @@ Mods: {
 
 			TreasureClam: {
 				DisplayName: Treasure Clam
-				Tooltip: ""
+				Tooltip:
+					'''
+					May contain a precious pearl
+					Right click to dismantle
+					'''
 			}
 
 			Iridul: {
@@ -4790,6 +4794,11 @@ Mods: {
 			MireGrassWall: {
 				Tooltip: ""
 				DisplayName: Lunarmoss Grass Wall
+			}
+
+			FortunePearl: {
+				DisplayName: Fortune Pearl
+				Tooltip: ""
 			}
 		}
 
@@ -5327,13 +5336,22 @@ Mods: {
 			Taraha: {
 				GenericDialogue1: Hello, welcome, trade rarities?
 				GenericDialogue2: *eldritch gibberish*
-				GenericDialogue3: Madness is bad, be careful
+				GenericDialogue3: Madness is lurking, be careful.
 				GenericDialogue4: The LIGHT, so bright, so bright!
+				GenericDialogue5: You ask why acorns needed? Taraha has to plant lots of acorns. Taraha wants own woods, big trees, many trees.
+				GenericDialogue6: Has human ever tried finding sparkly soup? Sparkly soup somewhere behind humid place with stingy insects. Need to dig deep.
+				GenericDialogue7: Taraha love this dimension, so much energy, feels comfy.
+				GenericDialogue8: Taraha sees many persons here petting small fluffy creature. Taraha not know why food is being pet.
+				GenericHardmodeDialogue1: Taraha traded wax for superpowerful relic the other day. Funny man thought wax was holy blood from deity.
+				GenericHardmodeDialogue2: Taraha feel so many different signatures around. Why so many people here who don't belong?
 				DoriraDialogue: Dorira, he traded powerful objects for… chocolate...
-				BloodMoonDialogue: ...
-				SlimeRainDialogue: Yum yum, gelatine heaven!
+				DapperDialogue: Taraha talked to small mushroom boy about mushrooms earlier. Taraha really wanted lollipop but boy didn't want to trade for anything Taraha provided. Taraha is suffering, wants lollipop.
+				BloodMoonDialogue: Taraha will bite hand off if human keeps staring.
+				SlimeRainDialogue: Yum yum, gelatin heaven!
 				ShadeItemDialogue: Shadow, I can smell it, say hello to him for Taraha.
+				LollipopDialogue: Taraha can feel it. Human has lollipop. Give! Give now!
 				SmileyDialogue: The king, empty, alone, withering...
+				FeudalDialogue: Taraha know Umos, bad influence, he speak nonsense!
 			}
 
 			Dappercap: {
@@ -6022,12 +6040,12 @@ Mods: {
 			TacticalSkeleton: A skeleton equipped with firearms built by the mechanic. With thick armor and mighty boomsticks, it's clear these bones are prepared for a siege
 			SkeletonCommando: A skeleton equipped with firearms built by the mechanic. Rocket-powered and fueled with rage, these cursed skeletons prefer the nuclear option.
 			SkeletonSniper: A skeleton equipped with firearms built by the mechanic. These eagle-eyed sharpshooters let nothing escape their crosshairs.
-			Demolitionist: An explosives revering dwarf from overseas. He honed his his skills with explosives for a few years in the Steal Realm of Itorum, as it has only the most quality gunpowder.
+			Demolitionist: An explosives revering dwarf from overseas. He honed his skills with explosives for a few years in the Steal Realm of Itorum, as it has only the most quality gunpowder.
 			GoblinTinkerer: This goblin was exiled from the rest of his clan for being an intelligent pacifist. He attempted to hone his skills in gear augmenting in the outskirts of Itorum, but ended up breaking many an armament. Instead of not taking payment for these mistakes, he blames it on the objects durability and offers another attempt.
 			ArmsDealer: A rude human individual who came from another dimension entirely. He got around in his life by selling illegal firearms and bullets to others. You might want to avoid messing with this shady guy on bad days.
 			Mechanic: A woman with great technological knowledge who came from another dimension. She was transported here by an anomaly in space-time. She was found by the Cthulhu cult and thrown into the Dungeon to force her to use this “magic” she brought with her to aid their rituals.
 			Steampunker: The steampunker seems to come from the same dimension as the Mechanic. She has a unique taste of inventions, where there is normally steel and wire, are instead cogs and steam. Despite being inferior to proper tech in terms of efficiency, it has been proven to run smoothly without issues ever.
-			Cyborg: A group project that was built by the Mechanic and Steampunker during their time in here. It was an great challenge with the limited technology they have here. The cyborg has an unusually well crafted soul system that grants him pre-coded emotions.
+			Cyborg: A group project that was built by the Mechanic and Steampunker during their time here. It was a great challenge with the limited technology they have here. The cyborg has an unusually well crafted soul system that grants him pre-coded emotions.
 			Princess: Why are you like this..?
 		}
 

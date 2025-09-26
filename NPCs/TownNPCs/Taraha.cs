@@ -21,6 +21,7 @@ using Terraria.Utilities;
 using Terraria.GameContent.Bestiary;
 using Terraria.Audio;
 using MultidimensionMod.Biomes;
+using MultidimensionMod.Items.Materials.Mushrooms;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -35,7 +36,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		// the time of day the traveler will spawn (double.MaxValue for no spawn)
 		// saved and loaded with the world in TravelingMerchantSystem
 		public static double spawnTime = double.MaxValue;
-
+		public bool Blink = false;
+		#region Spawn & despawn code
 		public override bool PreAI()
 		{
 			if ((!Main.dayTime || Main.time >= despawnTime) && !IsNpcOnscreen(NPC.Center)) // If it's past the despawn time and the NPC isn't onscreen
@@ -128,17 +130,11 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			// A simple formula to get a random time between two chosen times
 			return (maxTime - minTime) * Main.rand.NextDouble() + minTime;
 		}
+#endregion
 
 		public override void SetStaticDefaults()
 		{
-			Main.npcFrameCount[NPC.type] = 1;
-			NPCID.Sets.ExtraFramesCount[NPC.type] = 9;
-			NPCID.Sets.AttackFrameCount[NPC.type] = 4;
-			NPCID.Sets.DangerDetectRange[NPC.type] = 700;
-			NPCID.Sets.AttackType[NPC.type] = 0;
-			NPCID.Sets.AttackTime[NPC.type] = 90;
-			NPCID.Sets.AttackAverageChance[NPC.type] = 30;
-			NPCID.Sets.HatOffsetY[NPC.type] = 4;
+            Main.npcFrameCount[NPC.type] = 9;
             NPCID.Sets.NoTownNPCHappiness[Type] = true;
             var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
             {
@@ -151,7 +147,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		{
 			NPC.townNPC = true;
 			NPC.friendly = true;
-			NPC.width = 60;
+			NPC.width = 100;
 			NPC.height = 100;
 			NPC.aiStyle = -1;
 			NPC.damage = 10;
@@ -200,33 +196,57 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			WeightedRandom<string> chat = new WeightedRandom<string>();
 
 			int dor = NPC.FindFirstNPC(ModContent.NPCType<Dorira>());
+            int dapper = NPC.FindFirstNPC(ModContent.NPCType<MushroomHeir>());
 
-			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue1"));
-			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue2"));
-			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue3"));
-			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue4"));
-            if (dor >= 0)
+            if (Main.LocalPlayer.HasItem(ModContent.ItemType<Pink>()))
             {
-				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.DoriraDialogue"));
-			}
-			if (Main.bloodMoon)
-            {
-				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.BloodMoonDialogue"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.LollipopDialogue"));
+                Main.npcChatCornerItem = ModContent.ItemType<Pink>();
             }
-			if (Main.slimeRain)
-            {
-				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.SlimeRainDialogue"));
-            }
-			if (DownedSystem.downedSmiley)
+			else
 			{
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.SmileyDialogue"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue1"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue2"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue3"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue4"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue5"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue6"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue7"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue8"));
+                if (Main.hardMode)
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericHardmodeDialogue1"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericHardmodeDialogue2"));
+                }
+                if (dor >= 0)
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.DoriraDialogue"));
+                }
+                if (dor >= 0)
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.DapperDialogue"));
+                }
+                if (Main.bloodMoon)
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.BloodMoonDialogue"));
+                }
+                if (Main.slimeRain)
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.SlimeRainDialogue"));
+                }
+                if (DownedSystem.downedSmiley)
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.SmileyDialogue"));
+                }
+                if (DownedSystem.downedFungus)
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.FeudalDialogue"));
+                }
+                if (Main.LocalPlayer.HasItem(ModContent.ItemType<ShadeEye>()))
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.ShadeItemDialogue"));
+                }
             }
-            /*Player player = Main.LocalPlayer;
-            int shadeEye = player.FindItem(ModContent.ItemType<ShadeEye>());
-            if (player.inventory[shadeEye].stack >= 0)
-			{
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.ShadeItemDialogue"));
-            }*/
 
             string dialogueLine = chat; // chat is implicitly cast to a string.
 			return dialogueLine;
@@ -237,36 +257,72 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			button = "Trade";
 		}
 
-        public override void OnChatButtonClicked(bool firstButton, ref string shopName)
-        {
-            if (firstButton)
-            {
-                SoundEngine.PlaySound(SoundID.MenuOpen);
-                TradingUI.Visible = true;
-            }
-        }
+		public override void OnChatButtonClicked(bool firstButton, ref string shopName)
+		{
+			if (firstButton)
+			{
+				SoundEngine.PlaySound(SoundID.MenuOpen);
+				TradingUI.Visible = true;
+			}
+		}
+
+		public int Blinkers = 0;
 
         public override void AI()
 		{
-			NPC.homeless = true; // Make sure it stays homeless
-		}
+            Blinkers++;
+			if (Blinkers == (Main.LocalPlayer.HasItem(ModContent.ItemType<Pink>()) ? 120 : 240))
+			{
+				Blink = true;
+			}
+			if (Blink)
+			{
+				NPC.frameCounter++;
+                if (NPC.frameCounter >= 5)
+                {
+					NPC.frameCounter = 0;
+                    NPC.frame.Y += 64;
+                    if (NPC.frame.Y >= (64 * 8))
+                    {
+                        NPC.frame.Y = 0;
+                        Blink = false;
+                        Blinkers = 0;
+                    }
+                }
+            }
+            NPC.homeless = true;
+        }
 
+        float Rotation = 0;
 		public override bool PreDraw(SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)
 		{
-			Texture2D portalTexture = ModContent.Request<Texture2D>("MultidimensionMod/NPCs/TownNPCs/TarahaPortal").Value;
+            Player player = Main.LocalPlayer;
+            Texture2D portalTexture = ModContent.Request<Texture2D>("MultidimensionMod/NPCs/TownNPCs/TarahaPortal").Value;
 			Texture2D eyeTexture = ModContent.Request<Texture2D>("MultidimensionMod/NPCs/TownNPCs/Taraha").Value;
 			Vector2 position = NPC.Center - Main.screenPosition;
 			Rectangle rect = new(0, 0, portalTexture.Width, portalTexture.Height);
-			Rectangle eyeRect = new(0, 0, eyeTexture.Width, eyeTexture.Height);
+			int eyeHeight = eyeTexture.Height / 8;
+			int eyeFrame = eyeHeight * NPC.frame.Y;
+			Rectangle eyeRect = new(0, eyeFrame, eyeTexture.Width, eyeHeight);
 			Vector2 origin = new(portalTexture.Width / 2f, portalTexture.Height / 2f);
 			Vector2 eyeOrigin = new(eyeTexture.Width / 2f, eyeTexture.Height / 2f);
+			Rotation -= .022f;
+            float distanceToPlayer = Vector2.Distance(player.Center, NPC.Center);
+            if (Main.LocalPlayer.HasItem(ModContent.ItemType<Pink>()) && distanceToPlayer < 100)
+			{
+                Main.EntitySpriteDraw(portalTexture, position, new Rectangle?(rect), NPC.GetAlpha(drawColor), Rotation, origin, NPC.scale, SpriteEffects.None, 0);
+                Main.EntitySpriteDraw(eyeTexture, NPC.Center + new Vector2(Main.rand.Next(-2, 2), Main.rand.Next(-2, 2)) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, SpriteEffects.None, 0);
+            }
+			else
+			{
+                Main.EntitySpriteDraw(portalTexture, position, new Rectangle?(rect), NPC.GetAlpha(drawColor), Rotation, origin, NPC.scale, SpriteEffects.None, 0);
+                Main.EntitySpriteDraw(eyeTexture, NPC.Center + new Vector2(0f, 0f) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, SpriteEffects.None, 0);
+            }
 
-			Main.EntitySpriteDraw(portalTexture, position, new Rectangle?(rect), NPC.GetAlpha(drawColor), NPC.rotation, origin, NPC.scale, SpriteEffects.None, 0);
-			Main.EntitySpriteDraw(eyeTexture, position, new Rectangle?(eyeRect), NPC.GetAlpha(drawColor), NPC.rotation, eyeOrigin, NPC.scale, SpriteEffects.None, 0);
 
 			return false;
 		}
-	}
+    }
 
 	public class TarahaProfile : ITownNPCProfile
 	{

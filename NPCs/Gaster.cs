@@ -39,6 +39,7 @@ namespace MultidimensionMod.NPCs
             NPC.noGravity = true;
             NPC.noTileCollide = true;
             NPC.aiStyle = -1;
+            NPC.dontTakeDamage = false;
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
