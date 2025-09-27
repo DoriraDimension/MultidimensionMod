@@ -46,11 +46,11 @@ namespace MultidimensionMod.Biomes
             if (maxDepth >= 3E+38f && minDepth < 3E+38f)
             {
                 string skyTexture = "InfernoSky";
-                string sunTexture = "Sun";
+                //string sunTexture = "Sun";
                 if (Main.dayTime && player.InModBiome<TheDragonHoard>())
                 {
                     skyTexture = "InfernoSky";
-                    sunTexture = "Sun";
+                    //sunTexture = "Sun";
                     spriteBatch.Draw(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/" + skyTexture).Value, new Rectangle(0, 0, Main.screenWidth, Main.screenHeight), new Color(opacity * opacity, opacity * opacity, opacity * opacity, opacity));
                 }
             }

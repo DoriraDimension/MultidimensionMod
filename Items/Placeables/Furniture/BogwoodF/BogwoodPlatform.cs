@@ -1,3 +1,4 @@
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Placeables.Furniture.BogwoodF
@@ -18,7 +19,7 @@ namespace MultidimensionMod.Items.Placeables.Furniture.BogwoodF
 			Item.autoReuse = true;
 			Item.useAnimation = 15;
 			Item.useTime = 10;
-			Item.useStyle = 1;
+			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
 			Item.createTile = ModContent.TileType<Tiles.Furniture.Bogwood.BogwoodPlatformPlaced>();
         }

@@ -42,6 +42,8 @@ namespace MultidimensionMod.Utilities
             return false;
         }
 
+        public static Item ActiveItem(this Player player) => Main.mouseItem.IsAir ? player.HeldItem : Main.mouseItem;
+
         //Adapted from Calamity
         /// <summary>
         /// A simple to use helper method to create rain projectiles similar to the Star Cloak stars or Daedalus Stormbow

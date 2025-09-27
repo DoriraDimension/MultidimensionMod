@@ -10,6 +10,7 @@ using Terraria.DataStructures;
 using MultidimensionMod.Tiles.Ores;
 using Terraria.Enums;
 using MultidimensionMod.Items.Potions.Food;
+using MultidimensionMod.Items.Accessories;
 
 namespace MultidimensionMod.Common.Globals
 {
@@ -61,6 +62,13 @@ namespace MultidimensionMod.Common.Globals
 
         public override void Drop(int i, int j, int type)
         {
+            if (type == TileID.Larva)
+            {
+                if (Main.rand.NextBool(3))
+                {
+                    Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 16, ModContent.ItemType<HiveNugget>());
+                }
+            }
             if (Main.player[Main.myPlayer].GetModPlayer<MDPlayer>().Geodes)
             {
                 if (TileID.Sets.Conversion.Stone[type] && !MDSets.Tiles.EbonBlocks[type] && !MDSets.Tiles.CrimBlocks[type] && !MDSets.Tiles.HallowBlocks[type] && Main.rand.NextBool(100))

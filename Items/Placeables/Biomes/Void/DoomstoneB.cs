@@ -1,4 +1,5 @@
 using MultidimensionMod.Tiles.Biomes.Void;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Placeables.Biomes.Void
@@ -21,8 +22,8 @@ namespace MultidimensionMod.Items.Placeables.Biomes.Void
             Item.autoReuse = true;
             Item.useAnimation = 15;
             Item.useTime = 10;
-            Item.useStyle = 1;
-            Item.rare = 2;
+            Item.useStyle = ItemUseStyleID.Swing;
+            Item.rare = ItemRarityID.Green;
             Item.consumable = true;
             Item.createTile = ModContent.TileType<DoomstoneBPlaced>();
         }

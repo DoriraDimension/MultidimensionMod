@@ -15,8 +15,8 @@ namespace MultidimensionMod.Items.Placeables.Biomes.Harmony
             Item.autoReuse = true;
             Item.useAnimation = 15;
             Item.useTime = 10;
-            Item.useStyle = 1;
-            Item.rare = 1;
+            Item.useStyle = ItemUseStyleID.Swing;
+            Item.rare = ItemRarityID.Blue;
             Item.value = Terraria.Item.sellPrice(0, 0, 8, 0);
             Item.consumable = true;
             Item.createTile = ModContent.TileType<TerraCrystalPlaced>();

@@ -102,6 +102,7 @@ namespace MultidimensionMod.Common.Players
         public float progress = 0;
         #endregion
         public bool AngelBelt = false;
+        public bool hiveNugget = false;
 
         public override void ResetEffects()
         {
@@ -142,6 +143,7 @@ namespace MultidimensionMod.Common.Players
             shimmerProofHook = false;
             currentlyShimmerFishing = false;
             AngelBelt = false;
+            hiveNugget = false;
         }
         public override void UpdateDead()
         {
@@ -856,6 +858,37 @@ namespace MultidimensionMod.Common.Players
                         Projectile.NewProjectile(Player.GetSource_Accessory(new Item(ModContent.ItemType<ImpactTreads>())), Player.Center.X, Player.Center.Y + 10, 0, 0, ModContent.ProjectileType<ImpactTreadsImpact>(), damage, 0f, Player.whoAmI);
                         impactSpeedReached = false;
                     }
+                }
+            }
+            if (hiveNugget)
+            {
+                Item heldItem = Player.ActiveItem();
+                bool dealsDamage = heldItem.damage > 0;
+                bool isChannelable = heldItem.channel;
+                bool hasHitbox = heldItem.shoot > ProjectileID.None || !heldItem.noMelee;
+                bool isPickaxe = heldItem.pick > 0;
+                bool isAxe = heldItem.axe > 0;
+                bool isHammer = heldItem.hammer > 0;
+                bool isPlaceable = heldItem.createTile != -1;
+                bool isNothing = heldItem.IsAir;
+                bool notAWeapon = /*isChannelable ||*/ isPickaxe || isAxe || isHammer || isPlaceable || isNothing;
+
+                bool playerIsUsingWeapon = dealsDamage || hasHitbox || !notAWeapon;
+
+                if (Player.itemAnimation > 0)
+                {
+                    if (!dealsDamage || !hasHitbox || notAWeapon)
+                        if (Player.velocity.X == 0 || Player.velocity.Y == 0)
+                            playerIsUsingWeapon = false;
+                        else if (Player.velocity.X != 0 || Player.velocity.Y != 0)
+                            playerIsUsingWeapon = true;
+
+                }
+
+                if (!playerIsUsingWeapon || Player.itemAnimation <= 0 && Player.velocity.X == 0 && Player.velocity.Y == 0)
+                {
+                    Player.AddBuff(BuffID.Honey, 1);
+                    Main.buffNoTimeDisplay[BuffID.Honey] = true;
                 }
             }
         }

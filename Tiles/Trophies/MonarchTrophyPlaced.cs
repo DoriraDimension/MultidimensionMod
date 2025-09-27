@@ -22,7 +22,7 @@ namespace MultidimensionMod.Tiles.Trophies
             TileObjectData.newTile.StyleWrapLimit = 36;
             TileID.Sets.DisableSmartCursor[Type] = true;
             TileObjectData.addTile(Type);
-            DustType = 7;
+            DustType = DustID.WoodFurniture;
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Trophy");
             AddMapEntry(new Color(120, 85, 60), name);

@@ -22,7 +22,7 @@ namespace MultidimensionMod.Tiles
 			TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();
 			AddMapEntry(new Color(225, 71, 173), name);
-			DustType = 228;
+			DustType = DustID.GoldFlame;
 		}
 	}
 }

@@ -14,7 +14,7 @@ namespace MultidimensionMod.Tiles.Biomes.Harmony
             Main.tileBlockLight[Type] = true;
             HitSound = SoundID.Tink;
             Main.tileLighted[Type] = true;
-            DustType = 107;
+            DustType = DustID.Terra;
             AddMapEntry(new Color(39, 125, 37));
             MinPick = 225;
         }

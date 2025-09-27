@@ -23,7 +23,7 @@ namespace MultidimensionMod.Items.Placeables.Biomes.ShroomForest
             Item.autoReuse = true;
             Item.useAnimation = 15;
             Item.useTime = 10;
-            Item.useStyle = 1;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.rare = ItemRarityID.White;
             Item.consumable = true;
             Item.createTile = ModContent.TileType<SporeStonePlaced>();

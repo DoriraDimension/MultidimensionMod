@@ -26,7 +26,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			Main.tileFrameImportant[Type] = true;
 			Main.tileCut[Type] = true;
 			Main.tileNoFail[Type] = true;
-			DustType = 135;
+			DustType = DustID.IceTorch;
 
 			TileObjectData.newTile.CopyFrom(TileObjectData.StyleAlch);
 

@@ -28,7 +28,7 @@ namespace MultidimensionMod.Tiles.Ores
 			// name.SetDefault("Dimensium");
 			AddMapEntry(new Color(28, 180, 234), name);
 
-			DustType = 84;
+			DustType = DustID.Platinum;
 			HitSound = DimensiumPlaced.MineSound;
 		}
 	}

@@ -1,5 +1,6 @@
 using MultidimensionMod.Tiles.Biomes.Inferno;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Placeables.Biomes.Inferno
@@ -16,8 +17,8 @@ namespace MultidimensionMod.Items.Placeables.Biomes.Inferno
             Item.autoReuse = true;
             Item.useAnimation = 15;
             Item.useTime = 10;
-            Item.useStyle = 1;
-            Item.rare = 2;
+            Item.useStyle = ItemUseStyleID.Swing;
+            Item.rare = ItemRarityID.Green;
             Item.consumable = true;
             Item.createTile = ModContent.TileType<TorchsandstonePlaced>(); //put your CustomBlock Tile name
         }

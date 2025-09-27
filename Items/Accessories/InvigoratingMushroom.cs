@@ -1,4 +1,5 @@
 ﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Accessories
@@ -9,7 +10,7 @@ namespace MultidimensionMod.Items.Accessories
         {
             Item.width = 26;
             Item.height = 26;
-            Item.rare = 1;
+            Item.rare = ItemRarityID.Blue;
             Item.accessory = true;
         }
 

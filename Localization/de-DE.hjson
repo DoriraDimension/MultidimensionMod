@@ -4841,6 +4841,15 @@ Mods: {
 					History books tell the story of a girl who was in a state of perpetual sleep, but with the ability to interact with the world as if she was awake.
 					''' */
 			}
+
+			HiveNugget: {
+				// DisplayName: Hive Nugget
+				/* Tooltip:
+					'''
+					Grants the honey buff while standing still and not using weapons
+					You can walk on honey blocks and swim through honey without being slowed down
+					''' */
+			}
 		}
 
 		SetBonuses: {

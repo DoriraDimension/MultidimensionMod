@@ -14,7 +14,7 @@ namespace MultidimensionMod.Items.Placeables.Biomes.ShroomForest
             Item.autoReuse = true;
             Item.useAnimation = 15;
             Item.useTime = 10;
-            Item.useStyle = 1;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.createWall = ModContent.WallType<Walls.MyceliumWallPlaced>();
         }

@@ -69,7 +69,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
                         {
                             if (!target.immortal)
                             {
-                                if (Main.netMode != 1)
+                                if (Main.netMode != NetmodeID.MultiplayerClient)
                                 {
                                     target.SimpleStrikeNPC(150, 0, false, 0f, DamageClass.Melee, false, 0, true);
                                 }

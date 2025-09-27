@@ -47,7 +47,7 @@ namespace MultidimensionMod.Biomes
             if (maxDepth >= 3E+38f && minDepth < 3E+38f)
             {
                 string skyTexture = "MireDaySky";
-                string sunTexture = "Sun";
+                //string sunTexture = "Sun";
                 if (Main.dayTime && player.InModBiome<TheShroudedMire>())
                 {
                     skyTexture = "MireDaySky";

@@ -730,7 +730,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPC.velocity *= velMultiplier;
         }
 
-        public override void BossLoot(ref string name, ref int potionType)
+        public override void BossLoot(ref int potionType)
         {
             potionType = ItemID.LesserHealingPotion;
             DownedSystem.downedMonarch = true;

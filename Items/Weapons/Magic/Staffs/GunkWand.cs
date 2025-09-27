@@ -22,11 +22,11 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
             Item.height = 38;
             Item.useTime = 37;
             Item.useAnimation = 37;
-            Item.useStyle = 1;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.noMelee = true;
             Item.knockBack = 3;
             Item.value = 1000;
-            Item.rare = 2;
+            Item.rare = ItemRarityID.Green;
             Item.UseSound = SoundID.Item20;
             Item.autoReuse = true;
             Item.shoot = ModContent.ProjectileType<Gunk>();

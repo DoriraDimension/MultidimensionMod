@@ -47,7 +47,7 @@ namespace MultidimensionMod.NPCs.Bosses.Grips
                 Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, ModContent.Find<ModGore>("MultidimensionMod/MireGripGore4").Type, 1);
             }
         }
-        public override void BossLoot(ref string name, ref int potionType)
+        public override void BossLoot(ref int potionType)
         {
             potionType = ItemID.LesserHealingPotion;
             DownedSystem.downedGrips = true;

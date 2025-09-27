@@ -19,7 +19,7 @@ namespace MultidimensionMod.Items.Placeables.Furniture.BogwoodF
             Item.autoReuse = true;
             Item.useAnimation = 15;
             Item.useTime = 10;
-            Item.useStyle = 1;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.value = 250;
             Item.createTile = ModContent.TileType<Tiles.Furniture.Bogwood.BogwoodDoorClosed>();

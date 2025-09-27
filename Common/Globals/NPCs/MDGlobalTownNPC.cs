@@ -245,11 +245,11 @@ namespace MultidimensionMod
             if (Main.anglerQuestFinished && AngelerInt < Amount)
             {
                 AngelerInt += 1;
-                if (Main.netMode == 0)
+                if (Main.netMode == NetmodeID.SinglePlayer)
                 {
                     Main.AnglerQuestSwap();
                 }
-                else if (Main.netMode == 1)
+                else if (Main.netMode == NetmodeID.MultiplayerClient)
                 {
                     ModPacket packet = base.Mod.GetPacket();
                     packet.Write((byte)3);

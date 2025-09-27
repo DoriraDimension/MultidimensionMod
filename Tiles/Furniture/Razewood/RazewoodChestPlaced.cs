@@ -225,7 +225,7 @@ namespace MultidimensionMod.Tiles.Furniture.Razewood
 
             if (player.cursorItemIconText == "")
             {
-                player.cursorItemIconID = 0;
+                player.cursorItemIconID = ItemID.None;
             }
         }
     }

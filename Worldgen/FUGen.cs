@@ -201,8 +201,8 @@ namespace MultidimensionMod.Worldgen
 
             int lavaWidth = worldSize == 3 ? 2000 : worldSize == 2 ? 1600 : 1250;
             int lavaHeight = 300;
-			int petrifiedH = 100;
-			int petrifiedW = 1300;
+			//int petrifiedH = 100;
+			//int petrifiedW = 1300;
 
             Point originCenter = new((int)PlaceBiomeX - 675, (int)PlaceBiomeY);
 			Point originCenter2 = new((int)PlaceBiomeX, (int)PlaceBiomeY + 100);

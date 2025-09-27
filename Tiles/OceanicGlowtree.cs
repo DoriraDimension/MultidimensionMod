@@ -29,7 +29,7 @@ namespace MultidimensionMod.Tiles
 			TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();
 			AddMapEntry(new Color(31, 22, 45), name);
-			DustType = 68;
+			DustType = DustID.BlueCrystalShard;
             RegisterItemDrop(ModContent.ItemType<Glowseed>(), 1);
             RegisterItemDrop(ModContent.ItemType<Glowseed>(), 2);
         }

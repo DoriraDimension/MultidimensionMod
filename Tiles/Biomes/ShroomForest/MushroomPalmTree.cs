@@ -5,18 +5,10 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
-using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
 using Terraria.Localization;
-using ReLogic.Content;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using System;
-
-using Terraria.ModLoader;
-using Terraria.DataStructures;
 using Terraria.Utilities;
 using MultidimensionMod.NPCs.MushBiomes;
 

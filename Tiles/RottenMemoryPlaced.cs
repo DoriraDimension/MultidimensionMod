@@ -24,7 +24,7 @@ namespace MultidimensionMod.Tiles
             TileObjectData.addTile(Type);
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(47, 54, 88), name);
-            DustType = 41;
+            DustType = DustID.GlowingMushroom;
         }
     }
 }

@@ -16,7 +16,7 @@ namespace MultidimensionMod.Items.Placeables.Biomes.Inferno
             Item.autoReuse = true;
             Item.useAnimation = 15;
             Item.useTime = 10;
-            Item.useStyle = 1;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.rare = ItemRarityID.Lime;
             Item.createTile = ModContent.TileType<AwakenedRockPlaced>();
