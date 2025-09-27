@@ -15,6 +15,11 @@ using MultidimensionMod.Items.Permabuffs;
 using MultidimensionMod.Common.Players;
 using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Fishing;
+using System.Linq;
+using Terraria.GameContent.ItemDropRules;
+using MultidimensionMod.Items.Placeables.Biomes.Mire;
+using MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld;
+using MultidimensionMod.Items.Placeables.Biomes.Inferno;
 
 namespace MultidimensionMod.Common.Globals.Items
 {
@@ -181,6 +186,34 @@ namespace MultidimensionMod.Common.Globals.Items
                     player.dontHurtNature = true;
                 }
                 player.cordage = true;
+            }
+        }
+
+        public override void ModifyItemLoot(Item item, ItemLoot itemLoot)
+        {
+            //Adds Awakened Light herbs to the Herb Bag loot pool
+            if (item.type == ItemID.HerbBag)
+            {
+                int[] herbs = new int[6]
+                {
+                    ModContent.ItemType<global::MultidimensionMod.Items.Materials.DreamLilyItem>(),
+                    ModContent.ItemType<DreamLilySeeds>(),
+                    ModContent.ItemType<global::MultidimensionMod.Items.Materials.DragonToothItem>(),
+                    ModContent.ItemType<DragonToothSeeds>(),
+                    ModContent.ItemType<global::MultidimensionMod.Items.Materials.IceblossomItem>(),
+                    ModContent.ItemType<IceblossomSeeds>()
+                };
+                foreach (IItemDropRule herbBagAdditions in itemLoot.Get(includeGlobalDrops: false))
+                {
+                    HerbBagDropsItemDropRule herbRule = herbBagAdditions as HerbBagDropsItemDropRule;
+                    if (herbRule != null)
+                    {
+                        HashSet<int> itemSet = new HashSet<int>(herbRule.dropIds);
+                        itemSet.UnionWith(herbs);
+                        herbRule.dropIds = itemSet.ToArray();
+                        break;
+                    }
+                }
             }
         }
 

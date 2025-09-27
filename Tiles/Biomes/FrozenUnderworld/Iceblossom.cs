@@ -142,5 +142,11 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			Tile tile = Framing.GetTileSafely(i, j);
 			return (PlantStage)(tile.TileFrameX / FrameWidth);
 		}
-	}
+
+        public override bool IsTileSpelunkable(int i, int j)
+        {
+            PlantStage stage = GetStage(i, j);
+            return stage == PlantStage.Grown;
+        }
+    }
 }

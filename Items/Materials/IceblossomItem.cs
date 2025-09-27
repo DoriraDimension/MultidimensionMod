@@ -41,7 +41,7 @@ namespace MultidimensionMod.Items.Materials
                 {
                     TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.IceblossomItem.BloomTip"))
                     {
-                        OverrideColor = Color.LightGray
+                        OverrideColor = Color.SkyBlue
                     };
                     tooltips.Add(line);
                 }

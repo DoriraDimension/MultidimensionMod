@@ -83,6 +83,22 @@ namespace MultidimensionMod.UI
                 BgSprite.Append(new TradingPanelUI(new Item(ModContent.ItemType<Pink>()), new Item(ModContent.ItemType<Rambam>())) { Top = new StyleDimension(pad, 0) });
                 pad += 40;
                 BgSprite.Append(new TradingPanelUI(new Item(ModContent.ItemType<Pink>()), new Item(ModContent.ItemType<Rambam>())) { Top = new StyleDimension(pad, 0) });
+                pad += 40;
+                BgSprite.Append(new TradingPanelUI(new Item(ModContent.ItemType<Pink>()), new Item(ModContent.ItemType<Rambam>())) { Top = new StyleDimension(pad, 0) });
+                pad += 40;
+                BgSprite.Append(new TradingPanelUI(new Item(ModContent.ItemType<Pink>()), new Item(ModContent.ItemType<Rambam>())) { Top = new StyleDimension(pad, 0) });
+                pad += 40;
+                BgSprite.Append(new TradingPanelUI(new Item(ModContent.ItemType<Pink>()), new Item(ModContent.ItemType<Rambam>())) { Top = new StyleDimension(pad, 0) });
+                pad += 40;
+                BgSprite.Append(new TradingPanelUI(new Item(ModContent.ItemType<Pink>()), new Item(ModContent.ItemType<Rambam>())) { Top = new StyleDimension(pad, 0) });
+                pad += 40;
+                BgSprite.Append(new TradingPanelUI(new Item(ModContent.ItemType<Pink>()), new Item(ModContent.ItemType<Rambam>())) { Top = new StyleDimension(pad, 0) });
+                pad += 40;
+                BgSprite.Append(new TradingPanelUI(new Item(ModContent.ItemType<Pink>()), new Item(ModContent.ItemType<Rambam>())) { Top = new StyleDimension(pad, 0) });
+                pad += 40;
+                BgSprite.Append(new TradingPanelUI(new Item(ModContent.ItemType<Pink>()), new Item(ModContent.ItemType<Rambam>())) { Top = new StyleDimension(pad, 0) });
+                pad += 40;
+                BgSprite.Append(new TradingPanelUI(new Item(ModContent.ItemType<Pink>()), new Item(ModContent.ItemType<Rambam>())) { Top = new StyleDimension(pad, 0) });
                 Append(BgSprite);
                 EldritchWomanLollipop = true;
             }

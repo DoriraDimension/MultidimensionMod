@@ -4798,7 +4798,48 @@ Mods: {
 
 			FortunePearl: {
 				// DisplayName: Fortune Pearl
+				// Tooltip: Very rare green pearl that was thought to be a mere myth
+			}
+
+			DragonToothItem: {
+				// DisplayName: Dragon Tooth
+				/* Tooltip:
+					'''
+					An herb found in the Dragon’s Hoard.
+					Despite being a small grass blade-like plant,
+					the outer epidermis of this species is so thick that it can pierce someone’s foot if they step on it.
+					''' */
+				/* BloomTip:
+					'''
+					The small orange receptors on this herb react to harsh sunlight,
+					as such, this herb blooms only during the hours the sun is at its zenith.
+					''' */
+			}
+
+			DreamLilyItem: {
+				// DisplayName: Dream Lily
+				/* Tooltip:
+					'''
+					An herb found in the Shrouded Mire.
+					This rare lily is said to reveal the sweetest dreams in a sleep eternal.
+					Contains a powerful drug that was often used in medication to lull the ill to sleep.
+					''' */
+				// BloomTip: This nocturnal flower is most comfortable during the midnight hours, during which it will bloom.
+			}
+
+			DragonToothSeeds: {
+				// DisplayName: Dragon Tooth Seeds
 				// Tooltip: ""
+			}
+
+			DreamLilySeeds: {
+				// DisplayName: Dream Lily Seeds
+				// Tooltip: ""
+				/* Lore:
+					'''
+					In Ryomare, people believed that these lilies were bestowed upon their land by a saint who is often referred to as the ‘Gentle Daydream’.
+					History books tell the story of a girl who was in a state of perpetual sleep, but with the ability to interact with the world as if she was awake.
+					''' */
 			}
 		}
 

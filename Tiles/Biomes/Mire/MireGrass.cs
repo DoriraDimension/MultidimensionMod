@@ -72,6 +72,12 @@ namespace MultidimensionMod.Tiles.Biomes.Mire
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<DarkshroomPlaced>(), Main.rand.Next(4), 0, -1, -1);
 
             }
+            if (Main.rand.NextBool(5000))
+            {
+                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<DreamLily>(), mute: true, style: Main.rand.Next(4));
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<DreamLily>(), Main.rand.Next(4), 0, -1, -1);
+
+            }
             /*if (Main.rand.NextBool(1222500))
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<BlackLotusPlaced>(), mute: true);

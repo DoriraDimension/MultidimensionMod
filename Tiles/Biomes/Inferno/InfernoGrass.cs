@@ -50,6 +50,12 @@ namespace MultidimensionMod.Tiles.Biomes.Inferno
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<HotshroomPlaced>(), Main.rand.Next(4), 0, -1, -1);
 
             }
+            if (Main.rand.NextBool(5000))
+            {
+                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<DragonTooth>(), mute: true, style: Main.rand.Next(4));
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<DragonTooth>(), Main.rand.Next(4), 0, -1, -1);
+
+            }
             WorldGen.SpreadGrass(i + Main.rand.Next(-1, 1), j + Main.rand.Next(-1, 1), TileID.Dirt, Type, false);
         }
 

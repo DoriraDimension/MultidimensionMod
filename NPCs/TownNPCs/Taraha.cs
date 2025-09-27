@@ -66,7 +66,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 				// You can also add a day counter here to prevent the merchant from possibly spawning multiple days in a row.
 
 				// NPC won't spawn today if it stayed all night
-				if (!travelerIsThere && Main.rand.NextBool(4))
+				if (!travelerIsThere && Main.rand.NextBool(6))
 				{ // 4 = 25% Chance
 				  // Here we can make it so the NPC doesnt spawn at the EXACT same time every time it does spawn
 					spawnTime = GetRandomSpawnTime(5400, 8100); // minTime = 6:00am, maxTime = 7:30am
@@ -299,7 +299,9 @@ namespace MultidimensionMod.NPCs.TownNPCs
             Player player = Main.LocalPlayer;
             Texture2D portalTexture = ModContent.Request<Texture2D>("MultidimensionMod/NPCs/TownNPCs/TarahaPortal").Value;
 			Texture2D eyeTexture = ModContent.Request<Texture2D>("MultidimensionMod/NPCs/TownNPCs/Taraha").Value;
-			Vector2 position = NPC.Center - Main.screenPosition;
+            Texture2D eyeTextureLeft = ModContent.Request<Texture2D>("MultidimensionMod/NPCs/TownNPCs/TarahaLeft").Value;
+            Texture2D eyeTextureRight = ModContent.Request<Texture2D>("MultidimensionMod/NPCs/TownNPCs/TarahaRight").Value;
+            Vector2 position = NPC.Center - Main.screenPosition;
 			Rectangle rect = new(0, 0, portalTexture.Width, portalTexture.Height);
 			int eyeHeight = eyeTexture.Height / 8;
 			int eyeFrame = eyeHeight * NPC.frame.Y;
@@ -311,12 +313,22 @@ namespace MultidimensionMod.NPCs.TownNPCs
             if (Main.LocalPlayer.HasItem(ModContent.ItemType<Pink>()) && distanceToPlayer < 100)
 			{
                 Main.EntitySpriteDraw(portalTexture, position, new Rectangle?(rect), NPC.GetAlpha(drawColor), Rotation, origin, NPC.scale, SpriteEffects.None, 0);
-                Main.EntitySpriteDraw(eyeTexture, NPC.Center + new Vector2(Main.rand.Next(-2, 2), Main.rand.Next(-2, 2)) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, SpriteEffects.None, 0);
+				if (player.talkNPC == NPC.whoAmI && player.Center.X > NPC.Center.X)
+                    Main.EntitySpriteDraw(eyeTextureRight, NPC.Center + new Vector2(Main.rand.Next(-2, 2), Main.rand.Next(-2, 2)) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, SpriteEffects.None, 0);
+				else if (player.talkNPC == NPC.whoAmI && player.Center.X < NPC.Center.X)
+                    Main.EntitySpriteDraw(eyeTextureLeft, NPC.Center + new Vector2(Main.rand.Next(-2, 2), Main.rand.Next(-2, 2)) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, SpriteEffects.None, 0);
+				else
+                    Main.EntitySpriteDraw(eyeTexture, NPC.Center + new Vector2(Main.rand.Next(-2, 2), Main.rand.Next(-2, 2)) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, SpriteEffects.None, 0);
             }
 			else
 			{
                 Main.EntitySpriteDraw(portalTexture, position, new Rectangle?(rect), NPC.GetAlpha(drawColor), Rotation, origin, NPC.scale, SpriteEffects.None, 0);
-                Main.EntitySpriteDraw(eyeTexture, NPC.Center + new Vector2(0f, 0f) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, SpriteEffects.None, 0);
+                if (player.talkNPC == NPC.whoAmI && player.Center.X > NPC.Center.X)
+                    Main.EntitySpriteDraw(eyeTextureRight, NPC.Center + new Vector2(0f, 0f) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, SpriteEffects.None, 0);
+                else if (player.talkNPC == NPC.whoAmI && player.Center.X < NPC.Center.X)
+                    Main.EntitySpriteDraw(eyeTextureLeft, NPC.Center + new Vector2(0f, 0f) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, SpriteEffects.None, 0);
+                else
+                    Main.EntitySpriteDraw(eyeTexture, NPC.Center + new Vector2(0f, 0f) - screenPos, NPC.frame, Color.White, NPC.rotation, NPC.frame.Size() / 2, NPC.scale, SpriteEffects.None, 0);
             }
 
 
