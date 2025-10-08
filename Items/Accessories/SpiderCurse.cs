@@ -100,6 +100,7 @@ namespace MultidimensionMod.Items.Accessories
         {
             CreateRecipe()
             .AddIngredient(ModContent.ItemType<EggPouch>())
+            .AddIngredient(ItemID.TigerClimbingGear)
             .AddIngredient(ItemID.SpiderFang, 10)
             .AddIngredient(ItemID.Cobweb, 25)
             .AddTile(TileID.MythrilAnvil)
