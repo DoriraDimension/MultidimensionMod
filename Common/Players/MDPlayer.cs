@@ -27,6 +27,7 @@ using MultidimensionMod.Items.Permabuffs;
 using MultidimensionMod.Items.Fishing;
 using Humanizer;
 using MultidimensionMod.Items.Fishing.Crates;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MultidimensionMod.Common.Players
 {
@@ -103,6 +104,8 @@ namespace MultidimensionMod.Common.Players
         #endregion
         public bool AngelBelt = false;
         public bool hiveNugget = false;
+        public bool EggPouch = false;
+        public int EggBirth = 0;
 
         public override void ResetEffects()
         {
@@ -144,6 +147,7 @@ namespace MultidimensionMod.Common.Players
             currentlyShimmerFishing = false;
             AngelBelt = false;
             hiveNugget = false;
+            EggPouch = false;
         }
         public override void UpdateDead()
         {
@@ -821,6 +825,17 @@ namespace MultidimensionMod.Common.Players
                     GiveBirth = 0;
                 }
             }
+            if (EggPouch)
+            {
+                int damage = 75;
+                EggBirth++;
+                if (EggBirth >= 300)
+                {
+                    SoundEngine.PlaySound(SoundID.Item2);
+                    Projectile.NewProjectile(Player.GetSource_Accessory(new Item(ModContent.ItemType<EggPouch>())), Player.Center, new Vector2(0, 0), ModContent.ProjectileType<FlyingSpider>(), damage, 0f, Player.whoAmI);
+                    EggBirth = 0;
+                }
+            }
             if (impactTreads)
             {
                 Player.maxFallSpeed *= (float)1.15;
@@ -862,29 +877,31 @@ namespace MultidimensionMod.Common.Players
             }
             if (hiveNugget)
             {
+                //code to determine if an item has certain properties that classifies it as a weapon
                 Item heldItem = Player.ActiveItem();
-                bool dealsDamage = heldItem.damage > 0;
-                bool isChannelable = heldItem.channel;
-                bool hasHitbox = heldItem.shoot > ProjectileID.None || !heldItem.noMelee;
-                bool isPickaxe = heldItem.pick > 0;
-                bool isAxe = heldItem.axe > 0;
-                bool isHammer = heldItem.hammer > 0;
-                bool isPlaceable = heldItem.createTile != -1;
-                bool isNothing = heldItem.IsAir;
-                bool notAWeapon = /*isChannelable ||*/ isPickaxe || isAxe || isHammer || isPlaceable || isNothing;
+                bool dealsDamage = heldItem.damage > 0; //Weapon deals damage
+                bool isChannelable = heldItem.channel; //Weapon has a button hold property like a holdout projectile, similar to as example, the Last Prism
+                bool hasHitbox = heldItem.shoot > ProjectileID.None || !heldItem.noMelee; //Item either shoots a projectile or has a melee hitbox
+                bool isPickaxe = heldItem.pick > 0; //Item has pickaxe power and thus is a pickaxe
+                bool isAxe = heldItem.axe > 0; //Item has axe power and thus is an axe
+                bool isHammer = heldItem.hammer > 0; //Item has hammer power and thus is a hammer
+                bool isPlaceable = heldItem.createTile != -1; //Item places something down, like a block or furniture
+                bool isNothing = heldItem.IsAir; //Current selected item bar slot is empty
+                bool notAWeapon = /*isChannelable ||*/ isPickaxe || isAxe || isHammer || isPlaceable || isNothing; //Combined to determine that the selected item is not considered a weapon
 
                 bool playerIsUsingWeapon = dealsDamage || hasHitbox || !notAWeapon;
 
-                if (Player.itemAnimation > 0)
+                if (Player.itemAnimation > 0) //player is currently using an item
                 {
                     if (!dealsDamage || !hasHitbox || notAWeapon)
-                        if (Player.velocity.X == 0 || Player.velocity.Y == 0)
+                        if (Player.velocity.X == 0 || Player.velocity.Y == 0) //player isn't moving
                             playerIsUsingWeapon = false;
-                        else if (Player.velocity.X != 0 || Player.velocity.Y != 0)
+                        else if (Player.velocity.X != 0 || Player.velocity.Y != 0) //player is moving
                             playerIsUsingWeapon = true;
 
                 }
 
+                //Apply honey buff if the player is not moving and not using a weapon
                 if (!playerIsUsingWeapon || Player.itemAnimation <= 0 && Player.velocity.X == 0 && Player.velocity.Y == 0)
                 {
                     Player.AddBuff(BuffID.Honey, 1);

@@ -628,9 +628,9 @@ Mods: {
 				// DisplayName: Spider Curse
 				/* Tooltip:
 					'''
-					A cursed artifact found in the spider caverns. 
-					Increases movement speed by 6% and gives +1 minion slot. 
-					You can stick to walls like a spider.
+					Turns you into a spider that cannot be webbed and can cling to walls
+					Causes spider hatchlings to burst out of you every 5 seconds that deal summon damage
+					Hatchlings poison enemies on hit
 					''' */
 			}
 
@@ -4846,8 +4846,18 @@ Mods: {
 				// DisplayName: Hive Nugget
 				/* Tooltip:
 					'''
-					Grants the honey buff while standing still and not using weapons
+					Grants the honey buff while not moving and not using weapons
 					You can walk on honey blocks and swim through honey without being slowed down
+					''' */
+			}
+
+			EggPouch: {
+				// DisplayName: Egg Pouch
+				/* Tooltip:
+					'''
+					An eggsack retrieved from a spider's body
+					Causes spider hatchlings to burst out of you every 5 seconds that deal summon damage
+					Hatchlings poison enemies on hit
 					''' */
 			}
 		}

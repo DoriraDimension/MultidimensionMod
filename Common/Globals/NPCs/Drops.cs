@@ -307,14 +307,10 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EyeofDesire>(), 20));
             }
 
-            if ((NPC.type == NPCID.WallCreeper) || (NPC.type == NPCID.WallCreeperWall))
+            if ((NPC.type == NPCID.WallCreeper) || (NPC.type == NPCID.WallCreeperWall) || (NPC.type == NPCID.BlackRecluse) || (NPC.type == NPCID.BlackRecluseWall) 
+                || (NPC.type == NPCID.JungleCreeper) || (NPC.type == NPCID.JungleCreeperWall) || (NPC.type == NPCID.BloodCrawler) || (NPC.type == NPCID.BloodCrawlerWall))
             {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SpooderLexicon>(), 50));
-            }
-
-            if ((NPC.type == NPCID.BlackRecluse) || (NPC.type == NPCID.BlackRecluseWall))
-            {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SpiderCurse>(), 20));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EggPouch>(), 20));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SpooderLexicon>(), 50));
             }
 
