@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using MultidimensionMod.Items.Weapons.Typeless;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 {
@@ -43,12 +44,13 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			for (int i = 0; i < 6; i++)
 			{
 				Vector2 perturbedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(12));
-				Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
-			}
+				int waters = Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
+            }
 			if (BlastCount == 4)
             {
 			    int immunity = Projectile.NewProjectile(source, position.X, position.Y, velocity.X * 2, velocity.Y * 2, ModContent.ProjectileType<SaltwaterBolt>(), damage, knockback, player.whoAmI);
-				Main.projectile[immunity].localNPCHitCooldown = 10;
+                Main.projectile[immunity].usesLocalNPCImmunity = true;
+                Main.projectile[immunity].localNPCHitCooldown = 10;
             }
 
 			return false;

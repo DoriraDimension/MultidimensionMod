@@ -29,7 +29,7 @@ namespace MultidimensionMod.Items.Summons
 
 		public override bool CanUseItem(Player player)
 		{
-			return player.ZoneJungle && Main.hardMode && NPC.downedMechBoss1 && NPC.downedMechBoss2 && NPC.downedMechBoss3 && !NPC.AnyNPCs(NPCID.Plantera);
+			return player.ZoneJungle && Main.hardMode && !NPC.AnyNPCs(NPCID.Plantera);
 		}
 
 		public override bool? UseItem(Player player)
@@ -44,13 +44,15 @@ namespace MultidimensionMod.Items.Summons
 			CreateRecipe()
 			.AddIngredient(ItemID.JungleSpores, 5)
 			.AddIngredient(ItemID.Vine, 2)
-			.AddIngredient(ItemID.CopperBar)
+            .AddIngredient(ItemID.Ectoplasm)
+            .AddIngredient(ItemID.CopperBar)
 			.AddTile(TileID.MythrilAnvil)
 			.Register();
 
 			CreateRecipe()
 		    .AddIngredient(ItemID.JungleSpores, 5)
 			.AddIngredient(ItemID.Vine, 2)
+			.AddIngredient(ItemID.Ectoplasm)
 			.AddIngredient(ItemID.TinBar)
 			.AddTile(TileID.MythrilAnvil)
 			.Register();

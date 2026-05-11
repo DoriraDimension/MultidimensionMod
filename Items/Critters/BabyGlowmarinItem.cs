@@ -28,7 +28,7 @@ namespace MultidimensionMod.Items.Critters
 			Item.noUseGraphic = true;
 			Item.CloneDefaults(ItemID.GlowingSnail);
 			Item.value = Item.sellPrice(0, 0, 15, 0);
-			Item.bait = 45;
+			Item.bait = 30;
 			Item.makeNPC = (short)ModContent.NPCType<BabyGlowmarin>();
 		}
 	}

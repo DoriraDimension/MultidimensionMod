@@ -17,6 +17,7 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             Main.tileBrick[Type] = true;
             Main.tileMerge[Type][ModContent.TileType<MyceliumSandstonePlaced>()] = true;
             Main.tileMerge[Type][ModContent.TileType<MyceliumSandPlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<SporeStonePlaced>()] = true;
             Main.tileMerge[Type][TileID.HardenedSand] = true;
             Main.tileMerge[TileID.HardenedSand][Type] = true;
             Main.tileMerge[Type][TileID.CorruptHardenedSand] = true;
@@ -33,7 +34,7 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             Main.tileBlockLight[Type] = true;
             Main.tileLighted[Type] = true;
             AddMapEntry(new Color(195, 125, 56));
-            MineResist = 1.5f;
+            MineResist = 0.5f;
             DustType = DustID.Sand;
         }
         public override void FloorVisuals(Player player)

@@ -21,7 +21,7 @@ namespace MultidimensionMod.Items.Summons
 			Item.height = 26;
 			Item.maxStack = 9999;
 			Item.value = Item.sellPrice(gold: 0);
-			Item.rare = ItemRarityID.Pink;
+			Item.rare = ItemRarityID.Lime;
 			Item.useAnimation = 30;
 			Item.useTime = 30;
 			Item.useStyle = ItemUseStyleID.HoldUp;
@@ -31,7 +31,7 @@ namespace MultidimensionMod.Items.Summons
 
 		public override bool CanUseItem(Player player)
 		{
-			return Main.eclipse && Main.hardMode && NPC.downedMechBoss1 && NPC.downedMechBoss2 && NPC.downedMechBoss3 && !NPC.AnyNPCs(NPCID.Mothron);
+			return Main.eclipse && Main.hardMode && !NPC.AnyNPCs(NPCID.Mothron);
 		}
 
 		public override bool? UseItem(Player player)
@@ -64,8 +64,9 @@ namespace MultidimensionMod.Items.Summons
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddRecipeGroup(RecipeGroupID.IronBar, 3)
+			.AddIngredient(ItemID.HallowedBar, 3)
 			.AddIngredient(ItemID.SoulofLight, 3)
+			.AddIngredient(ItemID.Ectoplasm, 2)
 			.AddTile(TileID.MythrilAnvil)
 			.Register();
 		}

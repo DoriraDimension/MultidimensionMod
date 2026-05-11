@@ -26,7 +26,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			Main.tileFrameImportant[Type] = true;
 			Main.tileCut[Type] = true;
 			Main.tileNoFail[Type] = true;
-			DustType = 135;
+			DustType = DustID.IceTorch;
 
 			TileObjectData.newTile.CopyFrom(TileObjectData.StyleAlch);
 
@@ -98,26 +98,55 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			return false;
 		}
 
-		public override void RandomUpdate(int i, int j)
+        public override void NearbyEffects(int i, int j, bool closer)
 		{
-			Tile tile = Framing.GetTileSafely(i, j);
-			PlantStage stage = GetStage(i, j);
+            Tile tile = Framing.GetTileSafely(i, j);
+            PlantStage stage = GetStage(i, j);
+            //Blooms between 4:30am and 8:15am
+            if (stage == PlantStage.Growing && Main.time > 0 && Main.dayTime && Main.time <= 13500)
+            {
+                tile.TileFrameX += FrameWidth;
 
-			if (stage != PlantStage.Grown)
-			{
-				tile.TileFrameX += FrameWidth;
+                if (Main.netMode != NetmodeID.SinglePlayer)
+                {
+                    NetMessage.SendTileSquare(-1, i, j, 1);
+                }
+            }
+            if (stage == PlantStage.Grown && Main.dayTime && Main.time >= 13500)
+            {
+                tile.TileFrameX -= FrameWidth;
 
-				if (Main.netMode != NetmodeID.SinglePlayer)
-				{
-					NetMessage.SendTileSquare(-1, i, j, 1);
-				}
-			}
-		}
+                if (Main.netMode != NetmodeID.SinglePlayer)
+                {
+                    NetMessage.SendTileSquare(-1, i, j, 1);
+                }
+            }
+        }
+
+
+        public override void RandomUpdate(int i, int j)
+		{
+            Tile tile = Framing.GetTileSafely(i, j);
+            PlantStage stage = GetStage(i, j);
+            if (stage == PlantStage.Planted)
+            {
+                tile.TileFrameX += FrameWidth;
+
+                if (Main.netMode != NetmodeID.SinglePlayer)
+                    NetMessage.SendTileSquare(-1, i, j, 1);
+            }
+        }
 
 		private static PlantStage GetStage(int i, int j)
 		{
 			Tile tile = Framing.GetTileSafely(i, j);
 			return (PlantStage)(tile.TileFrameX / FrameWidth);
 		}
-	}
+
+        public override bool IsTileSpelunkable(int i, int j)
+        {
+            PlantStage stage = GetStage(i, j);
+            return stage == PlantStage.Grown;
+        }
+    }
 }

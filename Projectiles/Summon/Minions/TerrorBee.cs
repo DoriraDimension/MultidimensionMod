@@ -29,7 +29,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 			Projectile.tileCollide = false;
 			Projectile.friendly = true;
 			Projectile.minion = true;
-			Projectile.minionSlots = 1f;
+			Projectile.minionSlots = 2f;
 			Projectile.penetrate = -1;
 			Projectile.usesLocalNPCImmunity = true;
 			Projectile.localNPCHitCooldown = 10;
@@ -44,6 +44,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 		{
 			return true;
 		}
+
 
 		public override void AI()
 		{
@@ -183,10 +184,10 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
             #region Animation and visuals
             if (!foundTarget)
 			{
-				Projectile.rotation = Projectile.velocity.X * 0.03f;
+				Projectile.rotation = Projectile.velocity.X * 0.05f;
 			}
 			else
-				Projectile.rotation += 0.3f * (float)Projectile.direction;
+				Projectile.rotation += 0.5f * (float)Projectile.direction;
 
 			Projectile.frameCounter++;
 			if (!foundTarget)

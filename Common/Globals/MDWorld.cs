@@ -1,6 +1,8 @@
 ﻿using MultidimensionMod.Biomes;
 using MultidimensionMod.Common.Systems;
 using MultidimensionMod.NPCs.TownNPCs;
+using MultidimensionMod.Walls;
+using MultidimensionMod.Base;
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -14,6 +16,7 @@ using Terraria.ModLoader.IO;
 using Mono.Cecil;
 using Terraria.Audio;
 using ReLogic.Utilities;
+using MultidimensionMod.Sounds;
 
 namespace MultidimensionMod.Common.Globals
 {
@@ -22,8 +25,10 @@ namespace MultidimensionMod.Common.Globals
         public static bool MadnessMoon;
         public static int TposeTimer;
         public static int BoxTimer;
-        private ActiveSound Sound;
-        private SlotId loop;
+        private ActiveSound BlizzardSound;
+        private SlotId BlizzardLoop;
+        private ActiveSound DripSound;
+        private SlotId DripLoop;
         public static bool Monday = false;
         public override void PostUpdateWorld()
         {
@@ -31,58 +36,102 @@ namespace MultidimensionMod.Common.Globals
             Player player = Main.LocalPlayer;
             if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()))
             {
-                if (Sound == null)
+                if (BlizzardSound == null)
                 {
-                    loop = SoundEngine.PlaySound(SoundID.BlizzardStrongLoop with { Volume = 0.50f }, player.Center);
+                    BlizzardLoop = SoundEngine.PlaySound(SoundID.BlizzardStrongLoop with { Volume = 0.50f }, player.Center);
 
                 }
-                if (SoundEngine.TryGetActiveSound(loop, out Sound))
+                if (SoundEngine.TryGetActiveSound(BlizzardLoop, out BlizzardSound))
                 {
-                    Sound.Position = player.Center;
+                    BlizzardSound.Position = player.Center;
                 }
             }
             if (!Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()))
             {
-                if (Sound != null)
+                if (BlizzardSound != null)
                 {
-                    Sound.Stop();
-                    loop = SlotId.Invalid;
+                    BlizzardSound.Stop();
+                    BlizzardLoop = SlotId.Invalid;
                 }
             }
             #endregion
+            #region Lake Depths droplet ambience that I stole from Hollow Knight
+            /*if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheLakeDepths>()))
+            {
+                if (DripSound == null)
+                {
+                    DripLoop = SoundEngine.PlaySound(CustomSounds.LakeAmbience with { Volume = 2.00f }, player.Center);
+
+                }
+                if (SoundEngine.TryGetActiveSound(DripLoop, out DripSound))
+                {
+                    DripSound.Position = player.Center;
+                }
+            }
+            if (!Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheLakeDepths>()))
+            {
+                if (DripSound != null)
+                {
+                    DripSound.Stop();
+                    DripLoop = SlotId.Invalid;
+                }
+            }*/
+            #endregion
+            #region Title cards
             if (ModContent.GetInstance<MDConfig>().ALTitleCards)
             {
                 if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()) & !DownedSystem.seenFU)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.FU.Name"), 90, 120, 1.6f, 0, Color.LightGray, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.FU.Title"));
-                    NPC.SetEventFlagCleared(ref DownedSystem.seenFU, -1);
+                    DownedSystem.seenFU = true;
                 }
                 if (Main.LocalPlayer.ZoneDungeon & !DownedSystem.seenDungeon)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Dungeon.Name"), 90, 120, 1.6f, 0, Color.DarkGray, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Dungeon.Title"));
-                    NPC.SetEventFlagCleared(ref DownedSystem.seenDungeon, -1);
+                    DownedSystem.seenDungeon = true;
                 }
                 if (Main.LocalPlayer.ZoneLihzhardTemple & !DownedSystem.seenTemple)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.JungleTemple.Name"), 90, 120, 1.6f, 0, Color.Brown, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.JungleTemple.Title"));
-                    NPC.SetEventFlagCleared(ref DownedSystem.seenTemple, -1);
+                    DownedSystem.seenTemple = true;
                 }
                 if (Main.LocalPlayer.ZoneUnderworldHeight & !Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()) & !DownedSystem.seenHell)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Underworld.Name"), 90, 120, 1.6f, 0, Color.OrangeRed, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Underworld.Title"));
-                    NPC.SetEventFlagCleared(ref DownedSystem.seenHell, -1);
+                    DownedSystem.seenHell = true;
                 }
                 if (Main.LocalPlayer.ZoneShimmer & !DownedSystem.seenAether)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Aether.Name"), 90, 120, 1.6f, 0, Color.Pink, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Aether.Title"));
-                    NPC.SetEventFlagCleared(ref DownedSystem.seenAether, -1);
+                    DownedSystem.seenAether = true;
                 }
                 if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<ShroomForest>()) & !DownedSystem.seenMushroom)
                 {
                     MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.ShroomForest.Name"), 90, 120, 1.6f, 0, Color.Red, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.ShroomForest.Title"));
-                    NPC.SetEventFlagCleared(ref DownedSystem.seenMushroom, -1);
+                    DownedSystem.seenMushroom = true;
                 }
+                /*if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheDragonHoard>()) & !DownedSystem.seenInferno)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Inferno.Name"), 90, 120, 1.6f, 0, Color.OrangeRed, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Inferno.Title"));
+                    DownedSystem.seenInferno = true;
+                }
+                if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheDragonBurrow>()) & Framing.GetTileSafely(player.Center.ToTileCoordinates()).WallType == ModContent.WallType<VolcanicRockWallPlaced>() & !DownedSystem.seenVolcano)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.InfernoUG.Name"), 90, 120, 1.6f, 0, Color.OrangeRed, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.InfernoUG.Title"));
+                    DownedSystem.seenVolcano = true;
+                }
+                if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheShroudedMire>()) & !DownedSystem.seenMire)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Mire.Name"), 90, 120, 1.6f, 0, Color.CornflowerBlue, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.Mire.Title"));
+                    DownedSystem.seenMire = true;
+                }
+                if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<TheLakeDepths>()) & Framing.GetTileSafely(player.Center.ToTileCoordinates()).WallType == ModContent.WallType<DankDepthstoneWallPlaced>() & !DownedSystem.seenLake)
+                {
+                    MDSystem.Instance.TitleCardUIElement.DisplayTitle(Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.MireUG.Name"), 90, 120, 1.6f, 0, Color.CornflowerBlue, Language.GetTextValue("Mods.MultidimensionMod.TitleCards.Biomes.MireUG.Title"));
+                    DownedSystem.seenLake = true;
+                }*/
             }
+            #endregion
             #region Night of Madness
             if (!Main.fastForwardTimeToDawn && !Main.fastForwardTimeToDusk)
             {
@@ -117,6 +166,10 @@ namespace MultidimensionMod.Common.Globals
                 //Drops Light Depreived Eye
             }
             #endregion
+            if (Main.dayTime && Main.time == 0)
+            {
+                MDGlobalTownNPC.AngelerInt = 0;
+            }
         }
 
         public override void PostUpdateNPCs()

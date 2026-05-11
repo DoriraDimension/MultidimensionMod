@@ -16,7 +16,6 @@ namespace MultidimensionMod.Items.Weapons.Summon
 
 		public override void SetDefaults()
 		{
-			Item.damage = 24;
 			Item.width = 66;
 			Item.height = 40;
 			Item.useTime = 19;
@@ -25,8 +24,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 			Item.noMelee = true;
 			Item.value = Item.sellPrice(0, 0, 30, 0);
 			Item.rare = ItemRarityID.Green;
-			Item.DefaultToWhip(ModContent.ProjectileType<MadnessWhipProj>(), 24, 2, 3);
-			Item.shootSpeed = 6;
+			Item.DefaultToWhip(ModContent.ProjectileType<MadnessWhipProj>(), 17, 2, 6);
 
 		}
 

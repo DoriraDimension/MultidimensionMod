@@ -28,7 +28,7 @@ namespace MultidimensionMod.Items.Armor
         public override void UpdateEquip(Player player)
         {
             player.statManaMax2 += 30;
-            player.GetDamage(DamageClass.Magic) += 0.04f;
+            player.GetDamage(DamageClass.Magic) += 0.03f;
         }
 
         public override void AddRecipes()

@@ -6,6 +6,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace MultidimensionMod.Biomes
 {
@@ -13,7 +14,7 @@ namespace MultidimensionMod.Biomes
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.Event;
 
-        public override int Music => MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Madness");
+        public override int Music => MultidimensionMod.Instance.GetMusicFromMusicMod("Madness") ?? MusicID.Eclipse;
 
         public override bool IsBiomeActive(Player player)
         {

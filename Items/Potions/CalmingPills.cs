@@ -36,7 +36,7 @@ namespace MultidimensionMod.Items.Potions
             CreateRecipe()
             .AddIngredient(ItemID.Bottle)
             .AddIngredient(ModContent.ItemType<MadnessShroom>())
-            .AddIngredient(ModContent.ItemType<EyeTendril>(), 2)
+            .AddIngredient(ItemID.Deathweed)
             .AddTile(TileID.Bottles)
             .Register();
 

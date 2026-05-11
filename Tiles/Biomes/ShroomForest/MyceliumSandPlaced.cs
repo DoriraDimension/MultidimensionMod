@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Items.Placeables.Biomes.ShroomForest;
+using MultidimensionMod.Projectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -19,6 +20,7 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             Main.tileMerge[Type][ModContent.TileType<Mycelium>()] = true;
             Main.tileMerge[ModContent.TileType<Mycelium>()][Type] = true;
             Main.tileMerge[Type][ModContent.TileType<MyceliumSandstonePlaced>()] = true;
+            Main.tileMerge[Type][ModContent.TileType<SporeStonePlaced>()] = true;
             Main.tileMerge[ModContent.TileType<MyceliumSandstonePlaced>()][Type] = true;
             Main.tileMerge[Type][ModContent.TileType<MyceliumHardsandPlaced>()] = true;
             Main.tileMerge[ModContent.TileType<MyceliumHardsandPlaced>()][Type] = true;
@@ -45,6 +47,7 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             Main.tileBlockLight[Type] = true;
             AddMapEntry(new Color(195, 125, 56));
             DustType = DustID.Sand;
+            MineResist = 0.5f;
         }
 
         public override bool HasWalkDust()
@@ -64,11 +67,23 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
 
         public override void RandomUpdate(int i, int j)
         {
+            Tile above=Framing.GetTileSafely(i, j-1);
+
             WorldGen.SpreadGrass(i + Main.rand.Next(-1, 1), j + Main.rand.Next(-1, 1), TileID.Dirt, Type, false);
             if (Main.rand.NextBool(60))
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<AridMushroom>(), mute: true, style: Main.rand.Next(5));
                 NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<AridMushroom>(), Main.rand.Next(5), 0, -1, -1);
+            }
+            if (Main.rand.NextBool(60)&& !above.HasTile && above.LiquidType == LiquidID.Water)
+            {
+                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<MushroomAridReed>(), mute: true);
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<MushroomAridReed>(),0, 0, -1, -1);
+            }
+            if (Main.rand.NextBool(120))
+            {
+                WorldGen.PlaceTile(i, j - 1, ModContent.TileType<TallAridMushroom>(), mute: true, style: Main.rand.Next(5));
+                NetMessage.SendObjectPlacement(-1, i, j - 1, ModContent.TileType<TallAridMushroom>(), Main.rand.Next(5), 0, -1, -1);
             }
             if (Main.rand.NextBool(2500))
             {
@@ -77,7 +92,9 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
             }
         }
     }
-    public class MyceliumSandBall : ModProjectile
+
+    //Unused due to tmod changes, kept here in case I need it again
+    /*public class MyceliumSandBalls : ModProjectile
     {
         protected bool falling = true;
         protected int tileType;
@@ -200,5 +217,5 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
                 }
             }
         }
-    }
+    }*/
 }

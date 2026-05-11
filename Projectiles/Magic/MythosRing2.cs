@@ -6,6 +6,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using Terraria.GameContent;
 
 namespace MultidimensionMod.Projectiles.Magic
 {
@@ -29,7 +30,8 @@ namespace MultidimensionMod.Projectiles.Magic
 			Projectile.hide = false;
 			Projectile.alpha = 255;
 			Projectile.localNPCHitCooldown = 20;
-		}
+            Projectile.scale = 1.3f;
+        }
 
 		public override void AI()
 		{
@@ -49,5 +51,22 @@ namespace MultidimensionMod.Projectiles.Magic
 			Projectile.Center = player.Center;
 			Projectile.light = 1f;
 		}
-	}
+
+        public override bool? CanCutTiles()
+        {
+            return false;
+        }
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+            Vector2 position = Projectile.Center - Main.screenPosition;
+            Rectangle rect = new(0, 0, texture.Width, texture.Height);
+            Vector2 origin = new(texture.Width / 2f, texture.Height / 2f);
+
+            Main.EntitySpriteDraw(texture, position, new Rectangle?(rect), Projectile.GetAlpha(lightColor), Projectile.rotation, origin, Projectile.scale, SpriteEffects.None, 0);
+
+            return false;
+        }
+    }
 }

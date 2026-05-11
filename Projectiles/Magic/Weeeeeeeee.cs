@@ -15,8 +15,8 @@ namespace MultidimensionMod.Projectiles.Magic
 
 		public override void SetDefaults()
 		{
-			Projectile.width = 38;
-			Projectile.height = 38;
+			Projectile.width = 26;
+			Projectile.height = 26;
 			Projectile.friendly = true;
 			Projectile.DamageType = DamageClass.Magic;
 			Projectile.tileCollide = true;

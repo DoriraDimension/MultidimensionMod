@@ -6,6 +6,10 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.DataStructures;
+using Terraria.Utilities;
+using MultidimensionMod.NPCs.MushBiomes;
+using MultidimensionMod.Items.Potions.Food;
 
 namespace MultidimensionMod.Tiles.Biomes.ShroomForest
 {
@@ -37,7 +41,32 @@ namespace MultidimensionMod.Tiles.Biomes.ShroomForest
 
         public override bool Shake(int x, int y, ref bool createLeaves)
         {
-            Item.NewItem(WorldGen.GetItemSource_FromTreeShake(x, y), new Vector2(x, y) * 16, ItemID.Mushroom);
+            if (Main.rand.NextBool(120))
+            {
+                if (Main.rand.NextBool(2))
+                Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<MycelialCantaloupe>());
+                else
+                Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<RedPersimmon>());
+            }
+            if (Main.rand.NextBool(70))
+            {
+                Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ItemID.Mushroom, Main.rand.Next(1, 2));
+            }
+            if (Main.rand.NextBool(100))
+            {
+                NPC jumpscare = Main.npc[NPC.NewNPC(new EntitySource_ShakeTree(x, y), x * 16, y * 16, ModContent.NPCType<MushSlime>())];
+                jumpscare.velocity = Main.rand.NextVector2CircularEdge(3f, 3f);
+                jumpscare.netUpdate = true;
+            }
+            if (Main.rand.NextBool(100))
+            {
+                for (int b = 0; b < Main.rand.Next(1, 3); b++)
+                {
+                    NPC theBugs = Main.npc[NPC.NewNPC(new EntitySource_ShakeTree(x, y), x * Main.rand.Next(12, 20), y * 16, ModContent.NPCType<MushbugBaby>())];
+                    theBugs.velocity = Main.rand.NextVector2CircularEdge(6f, 6f);
+                    theBugs.netUpdate = true;
+                }
+            }
             return false;
         }
 

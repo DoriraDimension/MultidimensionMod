@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿/*
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
@@ -24,25 +25,20 @@ namespace MultidimensionMod.Common.Systems
         {
             string[] titles =
             {
-                /* Language.GetTextValue("Mods.MultidimensionMod.WindowTitles.Space"),
-                 Language.GetTextValue("Mods.MultidimensionMod.WindowTitles.Religion"),
-                 Language.GetTextValue("Mods.MultidimensionMod.WindowTitles.Madness"),
-                 Language.GetTextValue("Mods.MultidimensionMod.WindowTitles.Dump"),
-                 Language.GetTextValue("Mods.MultidimensionMod.WindowTitles.BadFlirt"),
-                 Language.GetTextValue("Mods.MultidimensionMod.WindowTitles.Drama"),
-                 Language.GetTextValue("Mods.MultidimensionMod.WindowTitles.Watching"),
-                 Language.GetTextValue("Mods.MultidimensionMod.WindowTitles.Smiley")*/
                  "Press space to live",
                  "Bible III, the coming of shroom",
-                 "Now with a 80 % chance to go mad",
+                 "Now with an 80% chance to go mad",
                  "The nostalgian dumpster",
                  "You are the harmony to my discord",
                  "Mushroom family drama",
                  "HE is always watching",
-                 "A smile at night"
+                 "A smile at night",
+                 "Now with less structure consumption",
+                 "That was rather... chaotic"
             };
 
             Main.instance.Window.Title = $"Awakened Light: {titles[Main.rand.Next(titles.Length)]}";
         }
     }
 }
+*/

@@ -23,6 +23,14 @@ namespace MultidimensionMod.Common.Systems
         public static bool metDapper;
         public static bool downedFungus;
         public static bool sawUmosTransition;
+        public static bool seenInferno;
+        public static bool seenVolcano;
+        public static bool downedGrips;
+        public static bool seenMire;
+        public static bool seenLake;
+        public static bool seenFeudalIntro;
+        public static bool consumedTheFish;
+        public static bool usedLicense;
 
         public override void OnWorldLoad()
         {
@@ -41,6 +49,14 @@ namespace MultidimensionMod.Common.Systems
             metDapper = false;
             downedFungus = false;
             sawUmosTransition = false;
+            seenInferno = false;
+            seenVolcano = false;
+            downedGrips = false;
+            seenMire = false;
+            seenLake = false;
+            seenFeudalIntro = false;
+            consumedTheFish = false;
+            usedLicense = false;
         }
 
         public override void OnWorldUnload()
@@ -60,6 +76,14 @@ namespace MultidimensionMod.Common.Systems
             metDapper = false;
             downedFungus = false;
             sawUmosTransition = false;
+            seenInferno = false;
+            seenVolcano = false;
+            downedGrips = false;
+            seenMire = false;
+            seenLake = false;
+            seenFeudalIntro = false;
+            consumedTheFish = false;
+            usedLicense = false;
         }
 
         public override void SaveWorldData(TagCompound tag)
@@ -96,6 +120,22 @@ namespace MultidimensionMod.Common.Systems
                 downed.Add("downedFungus");
             if (sawUmosTransition)
                 downed.Add("sawUmosTransition");
+            if (seenInferno)
+                downed.Add("seenInferno");
+            if (seenVolcano)
+                downed.Add("seenVolcano");
+            if (downedGrips)
+                downed.Add("downedGrips");
+            if (seenMire)
+                downed.Add("seenMire");
+            if (seenLake)
+                downed.Add("seenLake");
+            if (seenFeudalIntro)
+                downed.Add("seenFeudalIntro");
+            if (consumedTheFish)
+                downed.Add("consumedTheFish");
+            if (usedLicense)
+                downed.Add("usedLicense");
 
             tag["downed"] = downed;
         }
@@ -119,6 +159,14 @@ namespace MultidimensionMod.Common.Systems
             metDapper = downed.Contains("metDapper");
             downedFungus = downed.Contains("downedFungus");
             sawUmosTransition = downed.Contains("sawUmosTransition");
+            seenInferno = downed.Contains("seenInferno");
+            seenVolcano = downed.Contains("seenVolcano");
+            downedGrips = downed.Contains("downedGrips");
+            seenMire = downed.Contains("seenMire");
+            seenLake = downed.Contains("seenLake");
+            seenFeudalIntro = downed.Contains("seenFeudalIntro");
+            consumedTheFish = downed.Contains("consumedTheFish");
+            usedLicense = downed.Contains("usedLicense");
         }
 
         public override void NetSend(BinaryWriter writer)
@@ -142,7 +190,17 @@ namespace MultidimensionMod.Common.Systems
             flags2[4] = metDapper;
             flags2[5] = downedFungus;
             flags2[6] = sawUmosTransition;
+            flags2[7] = seenInferno;
             writer.Write(flags2);
+
+            var flags3 = new BitsByte();
+            flags3[0] = seenVolcano;
+            flags3[1] = downedGrips;
+            flags3[2] = seenMire;
+            flags3[3] = seenLake;
+            flags3[4] = seenFeudalIntro;
+            flags3[5] = consumedTheFish;
+            flags3[6] = usedLicense;
         }
 
         public override void NetReceive(BinaryReader reader)
@@ -165,6 +223,69 @@ namespace MultidimensionMod.Common.Systems
             metDapper = flags2[4];
             downedFungus = flags2[5];
             sawUmosTransition = flags2[6];
+            seenInferno = flags2[7];
+
+            BitsByte flags3 = reader.ReadByte();
+            seenVolcano = flags3[0];
+            downedGrips = flags3[1];
+            seenMire = flags3[2];
+            seenLake = flags3[3];
+            seenFeudalIntro = flags3[4];
+            consumedTheFish = flags3[5];
+            usedLicense = flags3[6];
+        }
+    }
+
+    public class MemorySystem : ModSystem
+    {
+        public static bool seenMemory;
+        public static bool summonedMoonSword;
+
+        public override void OnWorldLoad()
+        {
+            seenMemory = false;
+            summonedMoonSword = false;
+        }
+
+        public override void OnWorldUnload()
+        {
+            seenMemory = false;
+            summonedMoonSword = false;
+        }
+
+        public override void SaveWorldData(TagCompound tag)
+        {
+            var downed = new List<string>();
+
+            if (seenMemory)
+                downed.Add("seenMemory");
+            if (summonedMoonSword)
+                downed.Add("summonedMoonSword");
+
+            tag["memory"] = downed;
+        }
+
+        public override void LoadWorldData(TagCompound tag)
+        {
+            var downed = tag.GetList<string>("memory");
+
+            seenMemory = downed.Contains("seenMemory");
+            summonedMoonSword = downed.Contains("summonedMoonSword");
+        }
+
+        public override void NetSend(BinaryWriter writer)
+        {
+            var flags = new BitsByte();
+            flags[0] = seenMemory;
+            flags[1] = summonedMoonSword;
+            writer.Write(flags);
+        }
+
+        public override void NetReceive(BinaryReader reader)
+        {
+            BitsByte flags = reader.ReadByte();
+            seenMemory = flags[0];
+            summonedMoonSword = flags[1];
         }
     }
 }

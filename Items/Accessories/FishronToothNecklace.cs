@@ -54,7 +54,7 @@ namespace MultidimensionMod.Items.Accessories
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<SpiderFangNecklace>())
+			.AddIngredient(ItemID.SharkToothNecklace)
 			.AddIngredient(ModContent.ItemType<TidalQuartz>(), 7)
 			.AddTile(TileID.WorkBenches)
 			.Register();

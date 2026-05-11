@@ -27,5 +27,10 @@ namespace MultidimensionMod.NPCs.FU
         {
 
         }
+
+        public override Color? GetAlpha(Color lightColor)
+        {
+            return Color.White;
+        }
     }
 }

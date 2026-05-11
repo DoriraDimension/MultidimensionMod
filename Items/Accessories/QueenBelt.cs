@@ -2,6 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using MultidimensionMod.Common.Players;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -25,15 +26,12 @@ namespace MultidimensionMod.Items.Accessories
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.moveSpeed += 0.5f;
+			player.moveSpeed += 0.05f;
 			if (player.velocity.Y != 0f)
 			{
-				player.moveSpeed += 0.5f;
+				player.moveSpeed += 0.05f;
 			}
-			if (player.immune)
-            {
-				player.wingTime += 2;
-            }
-		}
+            player.GetModPlayer<MDPlayer>().AngelBelt = true;
+        }
 	}
 }

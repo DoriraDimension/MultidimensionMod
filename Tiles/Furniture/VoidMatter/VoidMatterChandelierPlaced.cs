@@ -18,7 +18,8 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 			Main.tileLighted[Type] = true;
 			Main.tileFrameImportant[Type] = true;
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
-			TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide, 1, 1);
+            TileObjectData.newTile.Origin = new Point16(1, 0);
+            TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide, 1, 1);
 			TileObjectData.newTile.AnchorBottom = AnchorData.Empty;
 			TileObjectData.newTile.Height = 3;
 			TileObjectData.newTile.Width = 3;

@@ -22,6 +22,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
 
         public override void SetDefaults()
         {
+            NPCID.Sets.TownCritter[NPC.type] = true;
             NPC.width = 22;
             NPC.height = 16;
             NPC.defense = 0;
@@ -45,6 +46,8 @@ namespace MultidimensionMod.NPCs.MushBiomes
         }
 
         public override bool CanHitPlayer(Player target, ref int cooldownSlot) => false;
+
+        public override bool CanBeHitByNPC(NPC attacker) => attacker.type == ModContent.NPCType<Mushbug>() ? false : true;
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {

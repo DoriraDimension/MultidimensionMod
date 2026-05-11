@@ -25,12 +25,11 @@ namespace MultidimensionMod.NPCs.MushBiomes
             Projectile.ignoreWater = true;
             Projectile.tileCollide = false;
             Projectile.penetrate = -1;
+            Projectile.timeLeft = 180;
         }
 
         public override void AI()
         {
-            if (Projectile.timeLeft > 180)
-                Projectile.timeLeft = 180;
             for (int i = 0; i < 4; i++)
             {
                 int purple = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<PufferFartDust>(), Projectile.velocity.X * 0.30f, Projectile.velocity.Y * 0.30f, 200, default(Color), 3f);

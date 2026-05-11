@@ -23,7 +23,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
         public override void SetDefaults()
         {
             NPC.lifeMax = 100;
-            NPC.damage = 0;
+            NPC.damage = 40;
             NPC.defense = 0;
             NPC.knockBackResist = 0f;
             NPC.value = Item.sellPrice(0, 0, 0, 0);

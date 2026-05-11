@@ -31,7 +31,8 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 			Projectile.tileCollide = false;
 			Projectile.penetrate = -1;
 			Projectile.hide = false;
-			Projectile.localNPCHitCooldown = 10;
+            Projectile.minionSlots = 0.5f;
+            Projectile.localNPCHitCooldown = 10;
 		}
 
 		public bool Ugly = false;

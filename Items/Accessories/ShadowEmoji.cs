@@ -65,9 +65,9 @@ namespace MultidimensionMod.Items.Accessories
         public const int DashLeft = 3;
 
         public const int DashCooldown = 65; // Time (frames) between starting dashes. If this is shorter than DashDuration you can start a new dash before an old one has finished
-        public const int DashDuration = 50; // Duration of the dash afterimage effect in frames
+        public const int DashDuration = 35; // Duration of the dash afterimage effect in frames
 
-        public const float DashVelocity = 15f;
+        public const float DashVelocity = 11.7f;
 
         public int DashDir = -1;
 
@@ -131,8 +131,6 @@ namespace MultidimensionMod.Items.Accessories
                 }
                 else
                     SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Dash"));
-                // Here you'd be able to set an effect that happens when the dash first activates
-                // Some examples include:  the larger smoke effect from the Master Ninja Gear and Tabi
             }
 
             if (DashDelay > 0)

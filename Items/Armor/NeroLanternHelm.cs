@@ -23,7 +23,7 @@ namespace MultidimensionMod.Items.Armor
 			Item.height = 28;
 			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Yellow;
-			Item.defense = 15;
+			Item.defense = 11;
 		}
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
@@ -34,8 +34,6 @@ namespace MultidimensionMod.Items.Armor
 		public override void UpdateArmorSet(Player player)
 		{
 			player.setBonus = Language.GetTextValue("Mods.MultidimensionMod.SetBonuses.NeroSet");
-			player.maxMinions += 2;
-            player.accDivingHelm = true;
             player.whipRangeMultiplier += 0.4f;
 			player.GetModPlayer<MDPlayer>().NeroSet = true;
 			ArmorIDs.Head.Sets.DrawHead[Item.headSlot] = false;
@@ -49,16 +47,8 @@ namespace MultidimensionMod.Items.Armor
 
 		public override void UpdateEquip(Player player)
 		{
-			player.GetDamage(DamageClass.Summon) += 0.12f;
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<TidalQuartz>(), 6)
-			.AddIngredient(ItemID.HallowedBar, 7)
-			.AddTile(TileID.MythrilAnvil)
-			.Register();
+            player.accDivingHelm = true;
+            player.GetDamage(DamageClass.Summon) += 0.12f;
 		}
 	}
 }

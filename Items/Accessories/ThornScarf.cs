@@ -47,7 +47,7 @@ namespace MultidimensionMod.Items.Accessories
 
         public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.thorns = 0.15f;
+			player.thorns = 0.90f;
 
 		}
 

@@ -11,6 +11,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 using Terraria.GameContent.Bestiary;
+using MultidimensionMod.Common.Globals.NPCs;
 
 namespace MultidimensionMod.NPCs.TownPets
 {
@@ -55,13 +56,13 @@ namespace MultidimensionMod.NPCs.TownPets
         {
             Main.player[Main.myPlayer].currentShoppingSettings.HappinessReport = "";
             WeightedRandom<string> chat = new();
-            chat.Add(Language.GetTextValue("Sniff Sniff"));
-            chat.Add(Language.GetTextValue("Shi Shi Shia"));
-            chat.Add(Language.GetTextValue("grrrrrr"));
-            chat.Add(Language.GetTextValue("*It stares at you intensely*"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.TownDrake.Dialogue1"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.TownDrake.Dialogue2"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.TownDrake.Dialogue3"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.TownDrake.Dialogue4"));
             if (Main.rand.NextBool(3333))
             {
-                chat.Add(Language.GetTextValue("Mark my words mortal, as they will be the last thing you hear in your worthless life. We will strike when you least expect it."));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.TownDrake.TheThreat"));
             }
             return chat;
         }
@@ -69,12 +70,25 @@ namespace MultidimensionMod.NPCs.TownPets
         public override void OnKill()
         {
             int baby = NPC.FindFirstNPC(ModContent.NPCType<TownDrake>());
-            Main.NewText(Language.GetTextValue("Your Drake left, try to find a new one!"), 50, 125, 255);
+            //Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.NPCs.TownDrake.Death"), 50, 125, 255);
         }
 
         public override void OnSpawn(IEntitySource source)
         {
-            Main.NewText(Language.GetTextValue("You adopted a juvenile Ice Drake, treat it well."), 50, 125, 255);
+            if (source is EntitySource_SpawnNPC)
+            {
+                // A TownNPC is "unlocked" once it successfully spawns into the world.
+                TownNPCRespawnSystem.adoptedDrake = true;
+            }
+        }
+
+        public override bool CanTownNPCSpawn(int numTownNPCs)
+        {
+            if (TownNPCRespawnSystem.adoptedDrake)
+            {
+                return true;
+            }
+            return false;
         }
 
         public override void AI()

@@ -84,7 +84,7 @@ namespace MultidimensionMod.Projectiles.Pets
         }
         private void CheckActive(Player player)
         {
-            if (!player.dead && player.HasBuff(ModContent.BuffType<MonarchBabBuff>()) || !player.dead && player.HasBuff(ModContent.BuffType<BrothersBuff>()))
+            if (!player.dead && player.HasBuff(ModContent.BuffType<MonarchBabBuff>()))
                 Projectile.timeLeft = 2;
         }
     }

@@ -35,7 +35,8 @@ namespace MultidimensionMod.NPCs.Dungeon
 			NPC.knockBackResist = 0.6f;
 			NPC.lavaImmune = true;
 			NPC.noGravity = true;
-			NPC.noTileCollide = true;
+            NPC.chaseable = false;
+            NPC.noTileCollide = true;
 			NPC.aiStyle = -1;
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<DarklingBanner>();
@@ -74,8 +75,9 @@ namespace MultidimensionMod.NPCs.Dungeon
             }
 			if (NPC.life < NPC.lifeMax) //Executes this code only if the enemy lost HP
             {
-				Shootsies++;
-				if (Shootsies >= 200)
+                NPC.chaseable = true;
+                Shootsies++;
+				if (Shootsies >= 150)
 				{
 					SoundEngine.PlaySound(SoundID.DD2_SonicBoomBladeSlash with { Volume = 0.4f }, NPC.position);
 					Vector2 velocity = Vector2.Normalize(player.Center - NPC.Center) * 10f;
@@ -129,7 +131,9 @@ namespace MultidimensionMod.NPCs.Dungeon
 			}
 		}
 
-		public override void FindFrame(int frameHeight)
+        public override bool CanHitPlayer(Player target, ref int cooldownSlot) => NPC.life == NPC.lifeMax ? false : true;
+
+        public override void FindFrame(int frameHeight)
 		{
 			NPC.frameCounter += 1.0;
 			if (NPC.frameCounter >= 5.0)

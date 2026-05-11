@@ -82,7 +82,7 @@ namespace MultidimensionMod.Common.Globals.NPCs
                         }
                     }
                 }
-                if (!NPC.AnyNPCs(NPCID.EaterofWorldsHead))
+                if (!NPC.AnyNPCs(NPCID.EaterofWorldsBody))
                 {
                     WormTitleCard = false;
                 }

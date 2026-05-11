@@ -24,6 +24,9 @@ namespace MultidimensionMod.NPCs.MushBiomes
         public override void SetStaticDefaults()
         {
             Main.npcFrameCount[NPC.type] = 9;
+            NPCID.Sets.CountsAsCritter[Type] = true;
+            NPCID.Sets.DontDoHardmodeScaling[Type] = true;
+            NPCID.Sets.CantTakeLunchMoney[Type] = true;
         }
 
         public override void SetDefaults()
@@ -33,10 +36,11 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.aiStyle = -1;
             NPC.damage = 0;
             NPC.defense = 1000;
-            NPC.lifeMax = 250;
+            NPC.lifeMax = 5;
             NPC.HitSound = SoundID.NPCHit10;
             NPC.DeathSound = SoundID.NPCDeath5;
             NPC.knockBackResist = 0.0f;
+            NPC.chaseable = false;
             NPC.value = 1000f;
             NPC.buffImmune[31] = false;
             Banner = NPC.type;
@@ -50,6 +54,11 @@ namespace MultidimensionMod.NPCs.MushBiomes
             {
                 new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Puffer")
             });
+        }
+
+        public override void OnSpawn(IEntitySource source)
+        {
+            NPC.life = 250;
         }
 
         public enum ActionState
@@ -71,10 +80,24 @@ namespace MultidimensionMod.NPCs.MushBiomes
         public ref float TimerRand => ref NPC.ai[2];
         public bool goRight = false;
 
+        public override bool CheckDead()
+        {
+            NPC.life = 1;
+            if (Main.netMode != NetmodeID.MultiplayerClient)
+                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<PufferFart>(), 0, 0);
+            SoundEngine.PlaySound(new("MultidimensionMod/Sounds/NPC/BigFart"), NPC.position);
+            NPC.active = false;
+            return false;
+        }
+
         public override void AI()
         {
             Player target = Main.player[NPC.target];
             float distanceToPlayer = Vector2.Distance(target.Center, NPC.Center);
+            if (NPC.life < NPC.lifeMax||Main.hardMode)
+            {
+                NPC.chaseable = true;
+            }
             switch (AIState)
             {
                 case ActionState.Idle:
@@ -191,18 +214,10 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     if (NPC.spriteDirection == 1)
                     {
                         NPC.velocity.X = 4f;
-                        if (BaseAI.HitTileOnSide(NPC, 1, true))
-                        {
-                            AIState = ActionState.Idle;
-                        }
                     }
                     else if (NPC.spriteDirection == -1)
                     {
                         NPC.velocity.X = -4f;
-                        if (BaseAI.HitTileOnSide(NPC, 0, true))
-                        {
-                            AIState = ActionState.Idle;
-                        }
                     }
                     BaseAI.WalkupHalfBricks(NPC);
                     if (BaseAI.HitTileOnSide(NPC, 3))
@@ -230,14 +245,6 @@ namespace MultidimensionMod.NPCs.MushBiomes
                         NPC.netUpdate = true;
                     }
                     break;
-            }
-            if (NPC.life <= 1)
-            {
-                NPC.life = 1;
-                if (Main.netMode != NetmodeID.MultiplayerClient)
-                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<PufferFart>(), 0, 0);
-                SoundEngine.PlaySound(new("MultidimensionMod/Sounds/NPC/BigFart"), NPC.position);
-                NPC.active = false;
             }
         }
 

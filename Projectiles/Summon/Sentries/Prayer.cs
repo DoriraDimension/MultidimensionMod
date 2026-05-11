@@ -9,6 +9,7 @@ using Terraria.ModLoader;
 using Terraria.DataStructures;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.GameContent;
+using MultidimensionMod.Base;
 
 namespace MultidimensionMod.Projectiles.Summon.Sentries
 {
@@ -37,6 +38,10 @@ namespace MultidimensionMod.Projectiles.Summon.Sentries
 
         public override void AI()
         {
+            if (!BaseAI.HitTileOnSide(Projectile, 3))
+            {
+                Projectile.velocity.Y = 6;
+            }
             Player pope = Main.player[Projectile.owner];
             if (!CheckActive(pope))
                 return;

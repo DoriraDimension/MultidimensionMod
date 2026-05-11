@@ -2,6 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using MultidimensionMod.Common.Players;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -24,12 +25,13 @@ namespace MultidimensionMod.Items.Accessories
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
 			player.GetArmorPenetration(DamageClass.Generic) += 9;
-		}
+            player.GetModPlayer<MDPlayer>().SpiderNecklace = true;
+        }
 
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ItemID.SharkToothNecklace)
+			.AddIngredient(ItemID.StingerNecklace)
 			.AddIngredient(ItemID.SpiderFang, 10)
 			.AddTile(TileID.WorkBenches)
 			.Register();

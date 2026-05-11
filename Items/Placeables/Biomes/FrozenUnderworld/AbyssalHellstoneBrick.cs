@@ -35,6 +35,11 @@ namespace MultidimensionMod.Items.Placeables.Biomes.FrozenUnderworld
 			.AddIngredient(ItemID.StoneBlock, 5)
 			.AddTile(TileID.Furnaces)
 			.Register();
-		}
+
+            CreateRecipe()
+            .AddIngredient(ModContent.ItemType<AbyssalHellstoneBrickWall>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+        }
 	}
 }

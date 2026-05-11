@@ -70,6 +70,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 		{
 			CreateRecipe()
 			.AddIngredient(ItemID.FallenStar)
+			.AddIngredient(ItemID.Cloud, 14)
 			.AddRecipeGroup(RecipeGroupID.Wood, 5)
 			.AddTile(TileID.WorkBenches)
 			.Register();

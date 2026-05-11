@@ -17,7 +17,8 @@ namespace MultidimensionMod.NPCs.Critters
 			// DisplayName.SetDefault("Baby Glowmarin");
 			Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.Shark];
 			Main.npcCatchable[NPC.type] = true;
-		}
+            NPCID.Sets.ShimmerTransformToNPC[NPC.type] = NPCID.Shimmerfly;
+        }
 
 		public override void SetDefaults()
 		{

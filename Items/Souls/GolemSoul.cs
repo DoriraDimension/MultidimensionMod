@@ -24,8 +24,8 @@ namespace MultidimensionMod.Items.Souls
 
 		public override void SetDefaults()
 		{
-			Item.width = 40;
-			Item.height = 40;
+			Item.width = 66;
+			Item.height = 66;
 			Item.rare = ModContent.RarityType<GolemSoulRarity>();
 		}
 

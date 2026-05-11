@@ -12,5 +12,7 @@ namespace MultidimensionMod.Sounds
         public static readonly SoundStyle RadianceShot = new("MultidimensionMod/Sounds/Custom/RadianceShot") { PitchVariance = .1f };
 
         public static readonly SoundStyle Gunshot = new("MultidimensionMod/Sounds/Custom/Gunshot") { PitchVariance = .1f };
+
+        public static readonly SoundStyle LakeAmbience = new("MultidimensionMod/Sounds/Custom/LakeDepthsAmbience") { PitchVariance = .1f };
     }
 }

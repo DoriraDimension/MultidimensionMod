@@ -22,8 +22,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 			Item.width = 46;
 			Item.height = 20;
 			Item.useTime = 2;
-			Item.useAnimation = 32;
-			Item.reuseDelay = 41;
+			Item.useAnimation = 26;
+			Item.reuseDelay = 52;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.noMelee = true;
 			Item.knockBack = 0.3f;
@@ -32,7 +32,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 			Item.UseSound = SoundID.Item34;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<GelCloud>();
-			Item.shootSpeed = 30f;
+			Item.shootSpeed = 24f;
 			Item.useAmmo = AmmoID.Gel;
 			Item.consumeAmmoOnLastShotOnly = true;
 		}

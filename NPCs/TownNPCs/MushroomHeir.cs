@@ -5,13 +5,14 @@ using MultidimensionMod.Items.Summons;
 using MultidimensionMod.Items.Critters;
 using MultidimensionMod.Items.Weapons.Melee.Others;
 using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
-using MultidimensionMod.Items.Mushrooms;
+using MultidimensionMod.Items.Materials.Mushrooms;
 using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Common.Globals;
 using MultidimensionMod.NPCs.Bosses.FeudalFungus;
 using MultidimensionMod.Items.Vanity;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Base;
+using MultidimensionMod.Items.Placeables.Biomes.ShroomForest;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
@@ -28,6 +29,7 @@ using MultidimensionMod.NPCs.Friendly;
 using Microsoft.CodeAnalysis;
 using System.IO;
 using Terraria.ModLoader.IO;
+using MultidimensionMod.Common.Globals.NPCs;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -80,7 +82,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.knockBackResist = .5f;
             AnimationType = NPCID.Mechanic;
-            SpawnModBiomes = new int[1] { ModContent.GetInstance<ShroomForest>().Type };
+            SpawnModBiomes = new int[2] { ModContent.GetInstance<ShroomForest>().Type, ModContent.GetInstance<MushStoryBiome>().Type };
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
@@ -106,6 +108,10 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
         public override bool CanTownNPCSpawn(int numTownNPCs)
         {
+            if (DownedSystem.metDapper)
+            {
+                return true;
+            }
             for (int k = 0; k < 255; k++)
             {
                 Player player = Main.player[k];
@@ -752,6 +758,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
         public override void AddShops()
         {
             var npcShop = new NPCShop(Type, ShopName)
+                .Add(new Item(ModContent.ItemType<MyceliumSeeds>()) { shopCustomPrice = Item.buyPrice(copper: 20) })
             .Add(new Item(ModContent.ItemType<TheDapperCap>()) { shopCustomPrice = Item.buyPrice(gold: 2) })
             .Add(new Item(ModContent.ItemType<IntimidatingMushroom>()) { shopCustomPrice = Item.buyPrice(gold: 1) })
             .Add(new Item(ModContent.ItemType<Blue>()) { shopCustomPrice = Item.buyPrice(gold: 18) })

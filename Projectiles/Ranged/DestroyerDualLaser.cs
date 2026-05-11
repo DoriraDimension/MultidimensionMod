@@ -24,14 +24,15 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.hostile = false;
 			Projectile.DamageType = DamageClass.Ranged;
 			Projectile.timeLeft = 600;
-			Projectile.light = 0.6f;
 			Projectile.ignoreWater = true;
 			Projectile.tileCollide = true;
 			Projectile.extraUpdates = 1;
+			Projectile.penetrate = 2;
 		}
 
 		public override void AI()
 		{
+			Lighting.AddLight(Projectile.position, 0.5f, 0f, 0f);
 			Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
 			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
             Projectile.spriteDirection = Projectile.direction;

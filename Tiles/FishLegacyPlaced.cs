@@ -15,7 +15,8 @@ namespace MultidimensionMod.Tiles
 		{
 			Main.tileFrameImportant[Type] = true;
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
-			TileObjectData.newTile.Height = 5;
+            TileObjectData.newTile.Origin = new Point16(2, 2);
+            TileObjectData.newTile.Height = 5;
 			TileObjectData.newTile.Width = 5;
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 16, 16 };
 			TileID.Sets.DisableSmartCursor[Type] = true;

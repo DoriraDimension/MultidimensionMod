@@ -31,6 +31,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath6;
             NPC.knockBackResist = 0.8f;
+            NPC.chaseable = false;
             NPC.value = 1000f;
             NPC.npcSlots = 0.3f;
             Banner = NPC.type;
@@ -82,6 +83,10 @@ namespace MultidimensionMod.NPCs.MushBiomes
                 {
                     NPC.velocity.Y = 0f;
                 }
+            }
+            if (NPC.life < NPC.lifeMax)
+            {
+                NPC.chaseable = true;
             }
         }
 

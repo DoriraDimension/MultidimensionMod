@@ -37,6 +37,15 @@ namespace MultidimensionMod.Items.Placeables.Furniture.VoidMatter
 			.AddIngredient(ModContent.ItemType<DarkMatterClump>(), 5)
 			.AddTile(ModContent.TileType<EmptyKingsFabricatorPlaced>())
 			.Register();
-		}
+
+            CreateRecipe()
+            .AddIngredient(ModContent.ItemType<VoidMatterMassWall>(), 4)
+            .AddTile(ModContent.TileType<EmptyKingsFabricatorPlaced>())
+            .Register();
+
+            CreateRecipe()
+            .AddIngredient(ModContent.ItemType<VoidMatterPlatform>(), 2)
+            .Register();
+        }
 	}
 }

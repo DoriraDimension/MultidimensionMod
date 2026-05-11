@@ -7,6 +7,7 @@ using Terraria.Audio;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.GameContent;
+using MultidimensionMod.Common.Players;
 
 namespace MultidimensionMod.Projectiles.Summon.Sentries
 {
@@ -81,7 +82,7 @@ namespace MultidimensionMod.Projectiles.Summon.Sentries
 				}
 			}
 
-			if (player.dead || !player.active)
+			if (player.dead || !player.active || player.ownedProjectileCounts[ModContent.ProjectileType<NeroConstruct>()] > 1)
 			{
 				Projectile.Kill();
 			}

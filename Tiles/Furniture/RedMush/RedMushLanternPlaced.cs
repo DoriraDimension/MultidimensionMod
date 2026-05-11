@@ -9,6 +9,8 @@ using Terraria.Enums;
 using Terraria.ObjectData;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using Terraria.GameContent.Drawing;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Tiles.Furniture.RedMush
 {
@@ -19,13 +21,12 @@ namespace MultidimensionMod.Tiles.Furniture.RedMush
             Main.tileLighted[Type] = true;
             Main.tileFrameImportant[Type] = true;
             Main.tileLavaDeath[Type] = true;
+            TileID.Sets.MultiTileSway[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
+            TileObjectData.newTile.Origin = new Point16(0, 0);
             TileObjectData.newSubTile.CopyFrom(TileObjectData.newTile);
-            TileObjectData.newTile.WaterDeath = true;
-            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
-            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
-            TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleLineSkip = 2;
+            TileObjectData.newSubTile.LavaDeath = false;
+            TileObjectData.newSubTile.LavaPlacement = LiquidPlacement.Allowed;
             TileObjectData.addTile(Type);
             AddMapEntry(new Color(120, 90, 0));
             AdjTiles = new int[] { TileID.HangingLanterns };
@@ -65,6 +66,18 @@ namespace MultidimensionMod.Tiles.Furniture.RedMush
                 g = 0.0f;
                 b = 0.0f;
             }
+        }
+
+        public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
+        {
+            Tile tile = Main.tile[i, j];
+
+            if (TileObjectData.IsTopLeft(tile))
+            {
+                Main.instance.TilesRenderer.AddSpecialPoint(i, j, TileDrawing.TileCounterType.MultiTileVine);
+            }
+
+            return false;
         }
     }
 }

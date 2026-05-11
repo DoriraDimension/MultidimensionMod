@@ -20,6 +20,7 @@ using Terraria.ID;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader;
 using Terraria.GameContent;
+using MultidimensionMod.Items.Permabuffs;
 
 namespace MultidimensionMod.Common.Globals.NPCs
 {
@@ -27,25 +28,34 @@ namespace MultidimensionMod.Common.Globals.NPCs
     {
         public override void ModifyNPCLoot(NPC NPC, NPCLoot npcLoot)
         {
-            if (!(NPC.type == NPCID.BurningSphere) || !(NPC.type == NPCID.ChaosBall) || !(NPC.type == NPCID.WaterSphere) || !(NPC.type == NPCID.DetonatingBubble) || !(NPC.type == NPCID.ForceBubble) || !(NPC.type == NPCID.DeadlySphere) || !(NPC.type == NPCID.SolarFlare) || !(NPC.type == NPCID.SolarGoop) || !(NPC.type == NPCID.AncientLight) || !(NPC.type == NPCID.AncientDoom) || !(NPC.type == NPCID.WindyBalloon) || !(NPC.type == NPCID.ChaosBallTim) || !(NPC.type == NPCID.VileSpit) || !(NPC.type == NPCID.VileSpitEaterOfWorlds))
+            if (!(NPC.type == NPCID.BurningSphere) || !(NPC.type == NPCID.ChaosBall) || !(NPC.type == NPCID.WaterSphere) || !(NPC.type == NPCID.DetonatingBubble) || !(NPC.type == NPCID.ForceBubble) || 
+                !(NPC.type == NPCID.DeadlySphere) || !(NPC.type == NPCID.SolarFlare) || !(NPC.type == NPCID.SolarGoop) || !(NPC.type == NPCID.AncientLight) || !(NPC.type == NPCID.AncientDoom) || 
+                !(NPC.type == NPCID.WindyBalloon) || !(NPC.type == NPCID.ChaosBallTim) || !(NPC.type == NPCID.VileSpit) || !(NPC.type == NPCID.VileSpitEaterOfWorlds))
             {
                 npcLoot.Add(ItemDropRule.ByCondition(new DimensiumCondition(), ModContent.ItemType<Dimensium>(), 100));
             }
 
             if (NPC.type == NPCID.KingSlime)
             {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.KingSlimePetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RoyalBelt>(), 3));
+                npcLoot.Add(ItemDropRule.Common(ItemID.SlimeStaff, 3));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<KingSlimeSoul>()));
+                npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.EyeofCthulhu)
             {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EyeTendril>(), 1, 3, 5));
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.EyeOfCthulhuPetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EyeSoul>()));
-
+                npcLoot.Add(leadingConditionRule);
             }
 
-            if ((NPC.type == NPCID.DemonEye) || (NPC.type == NPCID.DemonEye2) || (NPC.type == NPCID.PurpleEye) || (NPC.type == NPCID.PurpleEye2) || (NPC.type == NPCID.GreenEye) || (NPC.type == NPCID.GreenEye2) || (NPC.type == NPCID.DialatedEye) || (NPC.type == NPCID.DialatedEye2) || (NPC.type == NPCID.CataractEye) || (NPC.type == NPCID.CataractEye2) || (NPC.type == NPCID.SleepyEye) || (NPC.type == NPCID.SleepyEye2) || (NPC.type == NPCID.DemonEyeOwl) || (NPC.type == NPCID.DemonEyeSpaceship))
+            if ((NPC.type == NPCID.DemonEye) || (NPC.type == NPCID.DemonEye2) || (NPC.type == NPCID.PurpleEye) || (NPC.type == NPCID.PurpleEye2) || (NPC.type == NPCID.GreenEye) || 
+                (NPC.type == NPCID.GreenEye2) || (NPC.type == NPCID.DialatedEye) || (NPC.type == NPCID.DialatedEye2) || (NPC.type == NPCID.CataractEye) || (NPC.type == NPCID.CataractEye2) || 
+                (NPC.type == NPCID.SleepyEye) || (NPC.type == NPCID.SleepyEye2) || (NPC.type == NPCID.DemonEyeOwl) || (NPC.type == NPCID.DemonEyeSpaceship))
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EyeoftheNightwalker>(), 30));
             }
@@ -58,33 +68,48 @@ namespace MultidimensionMod.Common.Globals.NPCs
             if (System.Array.IndexOf(new int[] { NPCID.EaterofWorldsBody, NPCID.EaterofWorldsHead, NPCID.EaterofWorldsTail }, NPC.type) > -1)
             {
                 LeadingConditionRule leadingConditionRule = new(new Conditions.LegacyHack_IsABoss());
+                LeadingConditionRule leadingConditionRule2 = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(leadingConditionRule2.OnSuccess(ItemDropRule.Common(ItemID.EaterOfWorldsPetItem, 10)));
                 leadingConditionRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<WormSoul>()));
                 npcLoot.Add(leadingConditionRule);
+                npcLoot.Add(leadingConditionRule2);
             }
 
             if (NPC.type == NPCID.BrainofCthulhu)
             {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.BrainOfCthulhuPetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BrainSoul>()));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<NeuralWaves>(), 5));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Comprehension>(), 5));
+                npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.QueenBee)
             {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.QueenBeePetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BeeSoul>()));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TerrorNest>(), 10));
+                npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.SkeletronHead)
             {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.SkeletronPetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ItemID.BoneKey, 10000));
                 npcLoot.Add(ItemDropRule.Common(ItemID.Bone, 1, 25, 35));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SkeletonSoul>()));
+                npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.Deerclops)
             {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.DeerclopsPetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DeerSoul>()));
+                npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.WallofFlesh)
@@ -95,101 +120,118 @@ namespace MultidimensionMod.Common.Globals.NPCs
 
             if (NPC.type == NPCID.QueenSlimeBoss)
             {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.QueenSlimePetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<QueenBelt>(), 3));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WomanSlimeSoul>()));
                 npcLoot.Add(ItemDropRule.Common(ItemID.PinkGel, 1, 10, 25));
+                npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.Retinazer || NPC.type == NPCID.Spazmatism)
             {
                 LeadingConditionRule leadingConditionRule = new LeadingConditionRule(new Conditions.MissingTwin());
+                LeadingConditionRule leadingConditionRule2 = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(leadingConditionRule2.OnSuccess(ItemDropRule.Common(ItemID.TwinsPetItem, 10)));
                 leadingConditionRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<TwinSoul>()));
                 npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.TheDestroyer)
             {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.DestroyerPetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MetalWormSoul>()));
+                npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.SkeletronPrime)
             {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.SkeletronPrimePetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PrimeSoul>(), 4));
+                npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.Plantera)
             {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.PlanteraPetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PlantSoul>()));
+                npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.Golem)
             {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.GolemPetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<GolemSoul>()));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<IdolMask>(), 3));
+                npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.HallowBoss) //Empress
             {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.FairyQueenPetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Prismatine>(), 1, 10, 15));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmpressSoul>()));
+                npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.DukeFishron)
             {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.DukeFishronPetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TidalQuartz>(), 1, 10, 15));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DukeSoul>()));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<OldSeaCrown>(), 20));
+                npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.CultistBoss)
             {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.LunaticCultistPetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CultistSoul>()));
+                npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.MoonLordCore)
             {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.MoonLordPetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MoonSoul>()));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Tentacle>(), 3));
+                npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.MartianSaucerCore)
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.CompanionCube, 20));
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.MartianPetItem, 10));
+                npcLoot.Add(ItemDropRule.Common(ItemID.CompanionCube, 30));
+                npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.Penguin)
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.Fish, 20));
+                npcLoot.Add(ItemDropRule.Common(ItemID.Fish, 40));
             }
 
             if (NPC.type == NPCID.FlyingFish)
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.ZephyrFish, 30));
+                npcLoot.Add(ItemDropRule.Common(ItemID.ZephyrFish, 45));
             }
 
             if (NPC.type == NPCID.ZombieEskimo)
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.HandWarmer, 25));
-            }
-
-            if (NPC.type == NPCID.SkeletonArcher)
-            {
-                npcLoot.Add(ItemDropRule.Common(ItemID.EndlessQuiver, 50));
-            }
-
-            if (NPC.type == NPCID.Shark)
-            {
-                npcLoot.Add(ItemDropRule.Common(ItemID.SharkToothNecklace, 12));
+                npcLoot.Add(ItemDropRule.Common(ItemID.HandWarmer, 40));
             }
 
             if (NPC.type == NPCID.UmbrellaSlime)
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.Umbrella, 30));
-            }
-
-            if (NPC.type == NPCID.WyvernHead)
-            {
-                npcLoot.Add(ItemDropRule.Common(ItemID.SkyFracture, 100));
+                npcLoot.Add(ItemDropRule.Common(ItemID.Umbrella, 40));
             }
 
             if (NPC.type == NPCID.SantaNK1)
@@ -199,7 +241,44 @@ namespace MultidimensionMod.Common.Globals.NPCs
 
             if (NPC.type == NPCID.Pumpking)
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.GoodieBag));
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.PumpkingPetItem, 10));
+                npcLoot.Add(ItemDropRule.Common(ItemID.GoodieBag, 1, 1, 3));
+                npcLoot.Add(leadingConditionRule);
+            }
+
+            if (NPC.type == NPCID.IceQueen)
+            {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.IceQueenPetItem, 10));
+                npcLoot.Add(ItemDropRule.Common(ItemID.BluePresent, 1, 1, 3));
+                npcLoot.Add(leadingConditionRule);
+            }
+
+            if (NPC.type == NPCID.Everscream)
+            {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.EverscreamPetItem, 10));
+                npcLoot.Add(leadingConditionRule);
+            }
+
+            if (NPC.type == NPCID.MourningWood)
+            {
+                npcLoot.Add(ItemDropRule.Common(ItemID.GoodieBag, 2));
+            }
+
+            if (NPC.type == NPCID.DD2OgreT2 || NPC.type == NPCID.DD2OgreT3)
+            {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.DD2OgrePetItem, 10));
+                npcLoot.Add(leadingConditionRule);
+            }
+
+            if (NPC.type == NPCID.DD2Betsy)
+            {
+                LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.DD2BetsyPetItem, 10));
+                npcLoot.Add(leadingConditionRule);
             }
 
             if (NPC.type == NPCID.GreenSlime)
@@ -217,7 +296,8 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EyeoftheExplorer>(), 30));
             }
 
-            if ((NPC.type == NPCID.EaterofSouls) || (NPC.type == NPCID.LittleEater) || (NPC.type == NPCID.BigEater) || (NPC.type == NPCID.Crimera) || (NPC.type == NPCID.LittleCrimera) || (NPC.type == NPCID.BigCrimera))
+            if ((NPC.type == NPCID.EaterofSouls) || (NPC.type == NPCID.LittleEater) || (NPC.type == NPCID.BigEater) || 
+                (NPC.type == NPCID.Crimera) || (NPC.type == NPCID.LittleCrimera) || (NPC.type == NPCID.BigCrimera))
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EyeoftheHunter>(), 20));
             }
@@ -227,14 +307,10 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EyeofDesire>(), 20));
             }
 
-            if ((NPC.type == NPCID.WallCreeper) || (NPC.type == NPCID.WallCreeperWall))
+            if ((NPC.type == NPCID.WallCreeper) || (NPC.type == NPCID.WallCreeperWall) || (NPC.type == NPCID.BlackRecluse) || (NPC.type == NPCID.BlackRecluseWall) 
+                || (NPC.type == NPCID.JungleCreeper) || (NPC.type == NPCID.JungleCreeperWall) || (NPC.type == NPCID.BloodCrawler) || (NPC.type == NPCID.BloodCrawlerWall))
             {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SpooderLexicon>(), 50));
-            }
-
-            if ((NPC.type == NPCID.BlackRecluse) || (NPC.type == NPCID.BlackRecluseWall))
-            {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SpiderCurse>(), 20));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EggPouch>(), 20));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SpooderLexicon>(), 50));
             }
 
@@ -249,19 +325,21 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DesertEagle>(), 20));
             }
 
-            if (NPC.type == NPCID.BoneSerpentHead || NPC.type == NPCID.BigPantlessSkeleton || NPC.type == NPCID.SmallPantlessSkeleton || NPC.type == NPCID.PantlessSkeleton || NPC.type == NPCID.BigMisassembledSkeleton || NPC.type == NPCID.SmallMisassembledSkeleton || NPC.type == NPCID.MisassembledSkeleton || NPC.type == NPCID.BigSkeleton || NPC.type == NPCID.SmallSkeleton || NPC.type == NPCID.Skeleton || NPC.type == NPCID.Skeleton || NPC.type == NPCID.BigHeadacheSkeleton || NPC.type == NPCID.SmallHeadacheSkeleton || NPC.type == NPCID.HeadacheSkeleton)
+            if (NPC.type == NPCID.BoneSerpentHead || NPC.type == NPCID.BigPantlessSkeleton || NPC.type == NPCID.SmallPantlessSkeleton || NPC.type == NPCID.PantlessSkeleton || 
+                NPC.type == NPCID.BigMisassembledSkeleton || NPC.type == NPCID.SmallMisassembledSkeleton || NPC.type == NPCID.MisassembledSkeleton || NPC.type == NPCID.BigSkeleton || 
+                NPC.type == NPCID.SmallSkeleton || NPC.type == NPCID.Skeleton || NPC.type == NPCID.Skeleton || NPC.type == NPCID.BigHeadacheSkeleton || NPC.type == NPCID.SmallHeadacheSkeleton || NPC.type == NPCID.HeadacheSkeleton)
             {
                 npcLoot.Add(ItemDropRule.ByCondition(new DownedSkeletronCondition(), ItemID.Bone, 1, 3, 6));
             }
 
             if (NPC.type == NPCID.BigMimicHallow)
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.LightShard, 1, 1, 3));
+                npcLoot.Add(ItemDropRule.Common(ItemID.LightShard, 1, 1, 2));
             }
 
             if ((NPC.type == NPCID.BigMimicCrimson) || (NPC.type == NPCID.BigMimicCorruption))
             {
-                npcLoot.Add(ItemDropRule.Common(ItemID.DarkShard, 1, 1, 3));
+                npcLoot.Add(ItemDropRule.Common(ItemID.DarkShard, 1, 1, 2));
             }
 
             if (NPC.type == NPCID.Harpy || NPC.type == NPCID.WyvernHead)
@@ -314,6 +392,41 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 LeadingConditionRule leadingConditionRule = new LeadingConditionRule(new Conditions.IsHardmode());
                 leadingConditionRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<YtriumStaff>(), 20));
                 npcLoot.Add(leadingConditionRule);
+            }
+
+            if (NPC.type == NPCID.ZombieMerman || NPC.type == NPCID.EyeballFlyingFish)
+            {
+                LeadingConditionRule leadingConditionRule = new LeadingConditionRule(new Conditions.IsHardmode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<AdvancedFishingLicense>(), 20));
+                npcLoot.Add(leadingConditionRule);
+            }
+
+            if (NPC.type == NPCID.BloodEelHead || NPC.type == NPCID.GoblinShark)
+            {
+                LeadingConditionRule leadingConditionRule = new LeadingConditionRule(new Conditions.IsHardmode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<AdvancedFishingLicense>(), 5));
+                npcLoot.Add(leadingConditionRule);
+            }
+
+            if (NPC.type == NPCID.BloodNautilus)
+            {
+                LeadingConditionRule leadingConditionRule = new LeadingConditionRule(new Conditions.IsHardmode());
+                leadingConditionRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<AdvancedFishingLicense>(), 1));
+                npcLoot.Add(leadingConditionRule);
+            }
+
+            if (NPC.type == NPCID.Shark)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EyeoftheFisher>(), 30));
+            }
+
+            if (NPC.type == NPCID.AngryBones || NPC.type == NPCID.ShortBones || NPC.type == NPCID.BigBoned || NPC.type == NPCID.AngryBonesBig
+                 || NPC.type == NPCID.AngryBonesBigMuscle || NPC.type == NPCID.AngryBonesBigHelmet || NPC.type == NPCID.BlueArmoredBones || NPC.type == NPCID.BlueArmoredBonesMace
+                  || NPC.type == NPCID.BlueArmoredBonesNoPants || NPC.type == NPCID.BlueArmoredBonesSword || NPC.type == NPCID.RustyArmoredBonesAxe || NPC.type == NPCID.RustyArmoredBonesFlail
+                   || NPC.type == NPCID.RustyArmoredBonesSword || NPC.type == NPCID.RustyArmoredBonesSwordNoArmor || NPC.type == NPCID.HellArmoredBones || NPC.type == NPCID.HellArmoredBonesSpikeShield
+                    || NPC.type == NPCID.HellArmoredBonesMace || NPC.type == NPCID.HellArmoredBonesSword)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EyeofthePurifier>(), 120));
             }
         }
     }

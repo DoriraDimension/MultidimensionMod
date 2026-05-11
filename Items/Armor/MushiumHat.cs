@@ -55,13 +55,12 @@ namespace MultidimensionMod.Items.Armor
 		{
             player.setBonus = Language.GetTextValue("Mods.MultidimensionMod.SetBonuses.MushiumSet");
 			player.GetModPlayer<MDPlayer>().MushiumSet = true;
+            player.maxTurrets += 1;
             if (player.GetModPlayer<MDPlayer>().IndigoMode)
 			{
 				player.manaRegenBonus += 3;
-                player.ammoCost80 = true;
-                player.GetCritChance(DamageClass.Melee) += 10;
-                player.maxTurrets += 1;
-				player.statDefense -= 4;
+                player.GetCritChance(DamageClass.Generic) += 7;
+				player.statDefense -= 6;
             }
 			else if (!player.GetModPlayer<MDPlayer>().IndigoMode)
 			{

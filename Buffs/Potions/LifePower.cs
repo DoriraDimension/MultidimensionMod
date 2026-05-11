@@ -17,7 +17,7 @@ namespace MultidimensionMod.Buffs.Potions
         {
             player.lifeRegen += 12;
             player.lifeRegenTime += 6;
-            player.moveSpeed -= 0.5f;
+            player.moveSpeed -= 0.25f;
         }
     }
 }

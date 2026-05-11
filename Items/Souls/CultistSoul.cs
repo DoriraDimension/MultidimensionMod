@@ -1,4 +1,5 @@
 ﻿using MultidimensionMod.Rarities.Souls;
+using MultidimensionMod.Common.Systems;
 using Terraria.DataStructures;
 using Terraria;
 using Terraria.ID;
@@ -27,10 +28,30 @@ namespace MultidimensionMod.Items.Souls
 			Item.width = 40;
 			Item.height = 40;
 			Item.rare = ModContent.RarityType<CultistSoulRarity>();
-		}
+            Item.useStyle = ItemUseStyleID.HoldUp;
+            Item.useTime = 20;
+            Item.useAnimation = 20;
+            Item.UseSound = SoundID.Zombie89;
+        }
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
+            if (Common.Systems.MemorySystem.summonedMoonSword)
+            {
+                TooltipLine line = new(Mod, "TTWithSword", Language.GetTextValue("Mods.MultidimensionMod.Items.CultistSoul.TTWithSword"))
+                {
+                    OverrideColor = Color.White
+                };
+                tooltips.Add(line);
+            }
+            else if (!Common.Systems.MemorySystem.summonedMoonSword)
+            {
+                TooltipLine line = new(Mod, "TTNoSword", Language.GetTextValue("Mods.MultidimensionMod.Items.CultistSoul.TTNoSword"))
+                {
+                    OverrideColor = Color.White
+                };
+                tooltips.Add(line);
+            }
             if (Main.keyState.PressingShift())
             {
                 TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.CultistSoul.Lore"))
@@ -47,6 +68,23 @@ namespace MultidimensionMod.Items.Souls
                 tooltips.Add(line);
             }
         }
+
+        public override bool CanUseItem(Player player)
+        {
+            if (MemorySystem.summonedMoonSword)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public override bool? UseItem(Player player)
+        {
+            if (player.ownedProjectileCounts[ModContent.ProjectileType<GreatMoonlightManifest>()] < 1)
+                Projectile.NewProjectile(player.GetSource_FromThis(), player.Center.X, player.Center.Y - 200, 0f, 0f, ModContent.ProjectileType<GreatMoonlightManifest>(), 0, 0f, player.whoAmI);
+            return true;
+        }
+
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
             Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Souls/CultistSoul").Value;

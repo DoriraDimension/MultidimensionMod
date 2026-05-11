@@ -8,7 +8,7 @@ using MultidimensionMod.Items.Weapons.Melee.Swords;
 using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Common.Globals;
 using MultidimensionMod.Projectiles.Ranged;
-using MultidimensionMod.Items.Quest;
+//using MultidimensionMod.Items.Quest;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -19,8 +19,10 @@ using Terraria.GameContent.Personalities;
 using Terraria.Utilities;
 using Terraria.GameContent.Bestiary;
 using Terraria.Audio;
-using MultidimensionMod.Items.Mushrooms;
+using MultidimensionMod.Items.Materials.Mushrooms;
 using MultidimensionMod.Common.Players;
+using MultidimensionMod.Common.Globals.NPCs;
+using MultidimensionMod.Items.Placeables.Plushies;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -97,7 +99,11 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
         public override bool CanTownNPCSpawn(int numTownNPCs)
 		{
-			for (int k = 0; k < 255; k++)
+            if (TownNPCRespawnSystem.metDorira)
+            {
+                return true;
+            }
+            for (int k = 0; k < 255; k++)
 			{
 				Player player = Main.player[k];
 				if (player.active)
@@ -125,39 +131,54 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		{
 			Player player = Main.LocalPlayer;
 			WeightedRandom<string> chat = new WeightedRandom<string>();
-			int Gobfuck = NPC.FindFirstNPC(NPCID.GoblinTinkerer);
-			int BoomBoomMan = NPC.FindFirstNPC(NPCID.Demolitionist);
-			if (Gobfuck >= 0 && Main.rand.NextBool(4))
-			{
-				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GoblinDialogue", Main.npc[Gobfuck].GivenName));
-			}
-			if (BoomBoomMan >= 0 && Main.rand.NextBool(4))
-			{
-				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.DemolitionistDialogue", Main.npc[BoomBoomMan].GivenName));
-			}
-            if (Main.rand.NextBool(8))
+            if (player.name == "Dorira")
             {
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.MushroomDialogue"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.ImposterDialogue"));
+                player.AddBuff(BuffID.Weak, 24000);
+                player.AddBuff(BuffID.BrokenArmor, 24000);
+                player.AddBuff(BuffID.Slow, 24000);
+                player.name = "Kevin";
             }
-            if (Main.hardMode)
-            {
-				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericHardmodeDialogue1"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.YttriumDialogue"));
-            }
-			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue1"));
-			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue2"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue4"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue5"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue6"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue7"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue8"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue9"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue10"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue11"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue12"));
-            if (NPC.downedBoss2)
-            {
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue3"));
+			else
+			{
+                int Gobfuck = NPC.FindFirstNPC(NPCID.GoblinTinkerer);
+                int BoomBoomMan = NPC.FindFirstNPC(NPCID.Demolitionist);
+                if (Gobfuck >= 0 && Main.rand.NextBool(4))
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GoblinDialogue", Main.npc[Gobfuck].GivenName));
+                }
+                if (BoomBoomMan >= 0 && Main.rand.NextBool(4))
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.DemolitionistDialogue", Main.npc[BoomBoomMan].GivenName));
+                }
+                if (Main.rand.NextBool(8))
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.MushroomDialogue"));
+                }
+                if (Main.hardMode)
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericHardmodeDialogue1"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.YttriumDialogue"));
+                }
+                if (MDQuests.DoriraQuests >= 1)
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.SerpentAscendDialogue"));
+                }
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue1"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue2"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue4"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue5"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue6"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue7"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue8"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue9"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue10"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue11"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue12"));
+                if (NPC.downedBoss2)
+                {
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue3"));
+                }
             }
             return chat;
 		}
@@ -219,22 +240,25 @@ namespace MultidimensionMod.NPCs.TownNPCs
 					case 2:
 						if (MDQuests.DoriraQuests == 0)
 						{
-							chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.CassieStart"));
-							int teamStar = player.FindItem(ModContent.ItemType<TeamStar>());
-							if (teamStar >= 0)
+							chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.FlashStart"));
+							int dinner = player.FindItem(ItemID.Mouse);
+							int scales = player.FindItem(ModContent.ItemType<FrostScale>());
+                            int dimen = player.FindItem(ModContent.ItemType<Dimensium>());
+                            if (dinner >= 2 && scales >= 10 && dimen >= 5)
 							{
-								player.inventory[teamStar].stack--;
-								if (player.inventory[teamStar].stack <= 0)
+								player.inventory[dinner].stack -= 2;
+                                player.inventory[scales].stack -= 10;
+                                player.inventory[dimen].stack -= 5;
+								player.inventory[dinner] = new Item();
+                                player.inventory[scales] = new Item();
+                                player.inventory[dimen] = new Item();
+                                player.QuickSpawnItem(source, ModContent.ItemType<CracklingScale>(), 1);
+								Main.npcChatText = FlashDialogue();
+								MDQuests.DoriraQuests++;
+								NPC.SetEventFlagCleared(ref MDQuests.FlashQuest, -1);
+								if (Main.netMode != NetmodeID.SinglePlayer)
 								{
-									player.inventory[teamStar] = new Item();
-									player.QuickSpawnItem(source, ModContent.ItemType<Cassiopeia>(), 1);
-									Main.npcChatText = CassieDialogue();
-									MDQuests.DoriraQuests++;
-									NPC.SetEventFlagCleared(ref MDQuests.CassieQuest, -1);
-									if (Main.netMode != NetmodeID.SinglePlayer)
-									{
-										NetMessage.SendData(MessageID.WorldData);
-									}
+									NetMessage.SendData(MessageID.WorldData);
 								}
 							}
 							else
@@ -270,15 +294,15 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			WeightedRandom<string> chat = new(Main.rand);
 			if (MDQuests.DoriraQuests == 0)
             {
-				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.CassieQuestStart"));
+				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.FlashQuestStart"));
 			}
 			return chat;
 		}
 
-		public static string CassieDialogue()
+		public static string FlashDialogue()
         {
 			WeightedRandom<string> chat = new(Main.rand);
-			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.CassieQuestClear"));
+			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.FlashQuestClear"));
 			return chat;
 		}
 
@@ -286,13 +310,13 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		{
 			var downedSmiley = new Condition("Conditions.DownedSmiley", () => DownedSystem.downedSmiley);
 			var npcShop = new NPCShop(Type, ShopName)
-			.Add(new Item(ModContent.ItemType<DimensionalForgeItem>()) { shopCustomPrice = 10, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
-			.Add(new Item(ModContent.ItemType<IronUndies>()) { shopCustomPrice = 5, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
-			.Add(new Item(ModContent.ItemType<BaitLeaf>()) { shopCustomPrice = 7, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
-			.Add(new Item(ModContent.ItemType<ArchtyrantsFace>()) { shopCustomPrice = 15, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedSkeletron)
+			.Add(new Item(ModContent.ItemType<DimensionalForgeItem>()) { shopCustomPrice = 12, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
+			.Add(new Item(ModContent.ItemType<IronUndies>()) { shopCustomPrice = 8, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
+			.Add(new Item(ModContent.ItemType<BaitLeaf>()) { shopCustomPrice = 12, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
+			.Add(new Item(ModContent.ItemType<ArchtyrantsFace>()) { shopCustomPrice = 17, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedSkeletron)
 			.Add(new Item(ModContent.ItemType<UnknownEmoji>()) { shopCustomPrice = 3, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, downedSmiley)
-			.Add(new Item(ModContent.ItemType<CheliaPlushie>()) { shopCustomPrice = 16, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedPlantera)
-			.Add(new Item(ModContent.ItemType<DataMiner>()) { shopCustomPrice = 40, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMoonLord);
+			.Add(new Item(ModContent.ItemType<CheliaPlushie>()) { shopCustomPrice = 20, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedPlantera)
+			.Add(new Item(ModContent.ItemType<DataMiner>()) { shopCustomPrice = 50, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMoonLord);
 			npcShop.Register();
 		}
 

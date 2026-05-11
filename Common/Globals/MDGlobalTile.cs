@@ -7,6 +7,10 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
+using MultidimensionMod.Tiles.Ores;
+using Terraria.Enums;
+using MultidimensionMod.Items.Potions.Food;
+using MultidimensionMod.Items.Accessories;
 
 namespace MultidimensionMod.Common.Globals
 {
@@ -38,29 +42,54 @@ namespace MultidimensionMod.Common.Globals
             Main.tileMerge[TileID.Ash][TileID.Hellstone] = true;
         }
 
+        public override bool ShakeTree(int x, int y, TreeTypes treeType)
+        {
+            if (treeType == TreeTypes.Mushroom && Main.rand.NextBool(120))
+            {
+                if (Main.rand.NextBool(2))
+                {
+                    Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<SparklyHoneydew>());
+                    return true;
+                }
+                else
+                {
+                    Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<BlackPersimmon>());
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public override void Drop(int i, int j, int type)
         {
+            if (type == TileID.Larva)
+            {
+                if (Main.rand.NextBool(3))
+                {
+                    Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 16, ModContent.ItemType<HiveNugget>());
+                }
+            }
             if (Main.player[Main.myPlayer].GetModPlayer<MDPlayer>().Geodes)
             {
-                if (TileID.Sets.Conversion.Stone[type] && Main.rand.NextBool(100))
+                if (TileID.Sets.Conversion.Stone[type] && !MDSets.Tiles.EbonBlocks[type] && !MDSets.Tiles.CrimBlocks[type] && !MDSets.Tiles.HallowBlocks[type] && Main.rand.NextBool(100))
                 {
                     Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Geode>(), 1, false, 0, false, false);
                 }
             }
             else
-                if (TileID.Sets.Conversion.Stone[type] && Main.rand.NextBool(200))
+                if (TileID.Sets.Conversion.Stone[type] && !MDSets.Tiles.EbonBlocks[type] && !MDSets.Tiles.CrimBlocks[type] && !MDSets.Tiles.HallowBlocks[type] && Main.rand.NextBool(200))
                 {
                     Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Geode>(), 1, false, 0, false, false);
                 }
             if (Main.player[Main.myPlayer].GetModPlayer<MDPlayer>().Geodes && Main.hardMode)
             {
-                if (TileID.Sets.Conversion.Stone[type] && Main.rand.NextBool(100))
+                if (TileID.Sets.Conversion.Stone[type] && !MDSets.Tiles.EbonBlocks[type] && !MDSets.Tiles.CrimBlocks[type] && !MDSets.Tiles.HallowBlocks[type] && Main.rand.NextBool(100))
                 {
                     Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<OmniGeode>(), 1, false, 0, false, false);
                 }
             }
             else
-                if (TileID.Sets.Conversion.Stone[type] && Main.rand.NextBool(200) && Main.hardMode)
+                if (TileID.Sets.Conversion.Stone[type] && !MDSets.Tiles.EbonBlocks[type] && !MDSets.Tiles.CrimBlocks[type] && !MDSets.Tiles.HallowBlocks[type] && !MDSets.Tiles.EbonBlocks[type] && !MDSets.Tiles.CrimBlocks[type] && !MDSets.Tiles.HallowBlocks[type] && Main.rand.NextBool(200) && Main.hardMode)
                 {
                     Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<OmniGeode>(), 1, false, 0, false, false);
                 }

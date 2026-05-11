@@ -9,6 +9,7 @@ using Terraria.ID;
 using Terraria.Enums;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
+using Terraria.GameContent.Drawing;
 
 namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 {
@@ -19,9 +20,12 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
             Main.tileLighted[Type] = true;
             Main.tileFrameImportant[Type] = true;
             Main.tileLavaDeath[Type] = true;
+            TileID.Sets.MultiTileSway[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
+            TileObjectData.newTile.Origin = new Point16(0, 0);
             TileObjectData.newSubTile.CopyFrom(TileObjectData.newTile);
-            TileObjectData.newTile.StyleHorizontal = true;
+            TileObjectData.newSubTile.LavaDeath = false;
+            TileObjectData.newSubTile.LavaPlacement = LiquidPlacement.Allowed;
             TileObjectData.addTile(Type);
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Void Matter Lantern");
@@ -69,5 +73,17 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
                 b = 0.7f;
             }
         }
+        public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
+        {
+            Tile tile = Main.tile[i, j];
+
+            if (TileObjectData.IsTopLeft(tile))
+            {
+                Main.instance.TilesRenderer.AddSpecialPoint(i, j, TileDrawing.TileCounterType.MultiTileVine);
+            }
+
+            return false;
+        }
+
     }
 }

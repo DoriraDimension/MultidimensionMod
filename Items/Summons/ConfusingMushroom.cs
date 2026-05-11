@@ -55,7 +55,7 @@ namespace MultidimensionMod.Items.Summons
 
         public override bool CanUseItem(Player player)
         {
-            if (player.ZoneGlowshroom && player.ZoneRockLayerHeight && !NPC.AnyNPCs(ModContent.NPCType<FeudalFungus>()))
+            if (player.ZoneGlowshroom && !NPC.AnyNPCs(ModContent.NPCType<FeudalFungus>()))
             {
                 return true;
             }

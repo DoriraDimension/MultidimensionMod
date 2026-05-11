@@ -20,7 +20,7 @@ namespace MultidimensionMod.Items.Critters
             Item.maxStack = 9999;
             Item.value = Item.buyPrice(silver: 30);
             Item.rare = ItemRarityID.Blue;
-            Item.bait = 30;
+            Item.bait = 18;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.useTime = Item.useAnimation = 20;
             Item.noUseGraphic = true;

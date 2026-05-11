@@ -32,7 +32,6 @@ namespace MultidimensionMod.Tiles.Furniture.RedMush
             TileObjectData.newTile.WaterDeath = true;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
-            TileObjectData.newTile.StyleLineSkip = 2;
             TileObjectData.addTile(Type);
             AddMapEntry(new Color(120, 90, 0));
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);

@@ -21,7 +21,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.Bestiary;
-using MultidimensionMod.Items.Mushrooms;
+using MultidimensionMod.Items.Materials.Mushrooms;
 using Terraria.GameContent;
 using static Humanizer.In;
 using Terraria.DataStructures;
@@ -113,7 +113,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPC.aiStyle = -1;
             NPC.width = 50;
             NPC.height = 100;
-            NPC.npcSlots = 1f;
+            NPC.npcSlots = 10f;
             NPC.boss = true;
             NPC.noGravity = false;
             NPC.noTileCollide = false;
@@ -121,13 +121,15 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             if (!Main.dedServ)
-                Music = MusicLoader.GetMusicSlot(Mod, "Sounds/Music/Monarch");
-            SpawnModBiomes = new int[1] { ModContent.GetInstance<ShroomForest>().Type };
+            {
+                Music = MultidimensionMod.Instance.GetMusicFromMusicMod("Monarch") ?? MusicID.Boss1;
+            }
+            SpawnModBiomes = new int[2] { ModContent.GetInstance<ShroomForest>().Type, ModContent.GetInstance<MushStoryBiome>().Type };
             NPC.AL().CantHurtDapper = true;
             NPC.BossBar = ModContent.GetInstance<MonarchBossBar>();
             if (Main.getGoodWorld)
             {
-                NPC.scale = 1.3f;
+                NPC.scale = 1.3f; //Increase size by 30% in For the worthy
             }
         }
 
@@ -176,7 +178,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
 
         public override void AI()
         {
-            if (ModContent.GetInstance<MDConfig>().ALTitleCards)
+            if (ModContent.GetInstance<MDConfig>().ALTitleCards) //Display title card upon being spawned
             {
                 if (!TitleCard)
                 {
@@ -187,7 +189,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     }
                 }
             }
-            if (!TheLight && NPC.life < NPC.lifeMax / 2)
+            if (!TheLight && NPC.life < NPC.lifeMax / 2) //Make sure only happens once at half health
             {
                 if (Main.netMode != NetmodeID.MultiplayerClient)
                 {
@@ -195,15 +197,15 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     if (Main.netMode == NetmodeID.Server)
                         ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(status), Color.OrangeRed);
                     else if (Main.netMode == NetmodeID.SinglePlayer)
-                        Main.NewText(Language.GetTextValue(status), Color.OrangeRed);
+                        Main.NewText(Language.GetTextValue(status), Color.OrangeRed); //Display chat message
                 }
                 SoundEngine.PlaySound(Sounds.CustomSounds.RoyalRadianceScream with { Pitch = -0.50f }, NPC.position);
-                TheLight = true;
+                TheLight = true; //Initiate phase 2
             }
             if (NPC.life < NPC.lifeMax / 2)
             {
                 NPC.damage = 33;
-                Lighting.AddLight(NPC.Center, (100 - NPC.alpha) * 0.02f, 0, 0);
+                Lighting.AddLight(NPC.Center, (100 - NPC.alpha) * 0.0085f, 0, 0); //Makes him emit light in phase 2
             }
             NPC.TargetClosest();
 
@@ -214,13 +216,13 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                 FuckYouPatience++;
                 if (FuckYouPatience >= 180)
                 {
-                    AIState = ActionState.FuckYou;
+                    AIState = ActionState.FuckYou; //Switch to despawn AI after 4 seconds
                     FuckYouPatience = 0;
                     NPC.netUpdate = true;
                 }
             }
             else
-                FuckYouPatience = 0;
+                FuckYouPatience = 0; //Reset patience timer
             if (player == null)
             {
                 NPC.TargetClosest();
@@ -236,11 +238,11 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
 
             if (player.dead || !player.active || Vector2.Distance(player.Center, NPC.Center) > 5000)
             {
-                NPC.TargetClosest();
+                NPC.TargetClosest(); //target next player if current target dies
 
                 if (player.dead || !player.active || Vector2.Distance(player.Center, NPC.Center) > 5000)
                 {
-                    if (Main.netMode != NetmodeID.MultiplayerClient)
+                    if (Main.netMode != NetmodeID.MultiplayerClient) //despawn if no suitable target can be found
                         Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<MonarchRUNAWAYPlayerKill>(), 0, 0);
                     NPC.active = false;
                     return;
@@ -249,14 +251,14 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             ShittingMyself++;
             if (ShittingMyself == 300)
             {
-                ShittingMyself = 0;
+                ShittingMyself = 0; //Spawn a poisonous mushroom every 5 seconds and reset timer
                 if (Main.netMode != NetmodeID.MultiplayerClient)
                     Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, new Vector2(0f, 0f), ModContent.ProjectileType<FakeMonarchMushroom>(), 0, 0);
                 NPC.netUpdate = true;
             }
 
             int FrameSpeed = 10;
-            if (distanceToPlayer >= 700 && BaseAI.HitTileOnSide(NPC, 3))
+            if (distanceToPlayer >= 700 && BaseAI.HitTileOnSide(NPC, 3)) //If player is too far away, start running towards them at insane speed
             {
                 AIState = ActionState.Pursuit;
             }
@@ -288,7 +290,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     if (NPC.life <= NPC.lifeMax / 2)
                     {
 
-                        if (AISwitch > 90)
+                        if (AISwitch > 90) //Stay in walk phase for one and a half second, then start attacking
                         {
                             AISwitch = 0;
                             Attacks();
@@ -311,20 +313,19 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     switch (ID)
                     {
                         case 0: //summon minions
-                            int minionCap = 4;
+                            int minionCap = 4; //Maximum allowed amount of minions
                             if (NPC.life <= NPC.lifeMax / 2)
                             {
-                                minionCap = 6;
+                                minionCap = 6; //Cap gets increased in second phase
                             }
                             if (Main.getGoodWorld)
                             {
-                                minionCap = 50;
+                                minionCap = 50; //Allow 50 minions to exist at the same time for the funni in For the worthy
                             }
                             if (NPC.CountNPCS(ModContent.NPCType<RedMushling>()) < minionCap)
                             {
-                                NPC.defense = 20;
+                                NPC.defense = 20; //Increase defense during summon to make up for being an easier target
                                 NPC.velocity.X = 0;
-                                NPC.velocity.Y = 0;
                                 NPC.frame.Y = 540;
                                 SummonTimer++;
                                 if (SummonTimer == 50)
@@ -505,7 +506,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     {
                         NPC.frame.Y = 540;
                     }
-                    if (AreYouSerious == 240)
+                    if (AreYouSerious == 240) //Despawn NPC and spawn the runaway projectile after 4 seconds if player doesn't return into line of sight
                     {
                         AreYouSerious = 0;
                         if (Main.netMode != NetmodeID.MultiplayerClient)
@@ -513,12 +514,13 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                         NPC.active = false;
                         NPC.netUpdate = true;
                     }
-                    else if (AreYouSerious == 240 && Main.getGoodWorld)
+                    else if (AreYouSerious == 240 && Main.getGoodWorld) //Despawn NPC, spawn the runaway projectile and instakill player after 4 seconds if player doesn't return into line of sight
                     {
                         AreYouSerious = 0;
                         player.KillMe(PlayerDeathReason.ByCustomReason(player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.AntiCheese")), 1000.0, 0);
                         NPC.netUpdate = true;
                     }
+                    //Go back to attack AI if player is in line of sight again
                     else if (Collision.CanHit(NPC.position, NPC.width, NPC.height, Main.player[NPC.target].position, Main.player[NPC.target].width, Main.player[NPC.target].height) && internalAI[3] < 180)
                     {
                         AIState = ActionState.Attack;
@@ -551,7 +553,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     break;
             }
 
-            if ((player.Center.Y - NPC.Center.Y) < -200f)
+            if ((player.Center.Y - NPC.Center.Y) < -200f) //Start flying towards the player if they are too far above
             {
                 AIState = ActionState.Fly;
                 NPC.netUpdate = true;
@@ -728,7 +730,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
             NPC.velocity *= velMultiplier;
         }
 
-        public override void BossLoot(ref string name, ref int potionType)
+        public override void BossLoot(ref int potionType)
         {
             potionType = ItemID.LesserHealingPotion;
             DownedSystem.downedMonarch = true;
@@ -741,14 +743,19 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
 
         public override void ModifyNPCLoot(NPCLoot NPCloot)
         {
+            int petChance = 10;
+            if (Main.masterMode)
+            {
+                petChance = 4;
+            }
             LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<Mushmatter>(), 1, 5, 10));
             NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MushroomSoul>()));
             NPCloot.Add(ItemDropRule.BossBag(ModContent.ItemType<MonarchBag>()));
             NPCloot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<MonarchRelic>()));
             NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<MonarchTrophy>(), 10));
-            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusSporeBag>(), 10));
-            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<MushiumBar>(), 10, 1, 2));
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SusSporeBag>(), petChance));
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<MushiumBar>(), 5, 1, 2));
             notExpertRule.OnSuccess(ItemDropRule.OneFromOptions(1, ModContent.ItemType<Musharang>(), ModContent.ItemType<Mushbow>()));
             NPCloot.Add(notExpertRule);
         }

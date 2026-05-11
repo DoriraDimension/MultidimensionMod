@@ -19,13 +19,16 @@ using Terraria.GameContent;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.Graphics.Light;
+using System.Text;
+using System.Linq;
+
 
 namespace MultidimensionMod
 {
 	public class MultidimensionMod : Mod
 	{
 		//Many things here in the mod are made possible by Ancients Awakened, so pay them a visit too!
-		internal static MultidimensionMod Instance;
+		internal static MultidimensionMod Instance => (MultidimensionMod)ModLoader.GetMod("MultidimensionMod");
 
 		internal bool vanillaLoaded = true;
 
@@ -35,24 +38,35 @@ namespace MultidimensionMod
 
         public TradingUI TradingUIElement;
 
+        internal Mod musicMod = null;
+        internal bool MusicAvailable => musicMod is not null;
+
         //Thanks to Lion8cake for the help with the Frozen Underworld ILs.
         public override void Load()
 		{
-			DimensiumEuronen = CustomCurrencyManager.RegisterCurrency(new MDCurrency(ModContent.ItemType<Dimensium>(), 999L, "Dimensium"));
+            musicMod = null;
+            ModLoader.TryGetMod("ALMusic", out musicMod);
+            DimensiumEuronen = CustomCurrencyManager.RegisterCurrency(new MDCurrency(ModContent.ItemType<Dimensium>(), 999L, "Dimensium"));
 			Terraria.IL_Main.DrawUnderworldBackgroudLayer += ILMainDrawUnderworldBackgroundLayer;
             Terraria.IL_Player.UpdateBiomes += NoHeat;
-            Terraria.Graphics.Light.On_TileLightScanner.ApplyHellLight += TileLightScanner_ApplyHellLight;
             SkyManager.Instance["MadnessMoonSky"] = new MadnessMoonSky();
-			Filters.Scene["MultidimensionMod:Madness"] = new Filter(new ScreenShaderData("FilterMiniTower").UseColor(0.8f, 0.6f, 0.2f).UseOpacity(0.5f), EffectPriority.High);
-			base.Load();
+            //SkyManager.Instance["DragonHoardSky"] = new DragonHoardSky();
+            //SkyManager.Instance["ShroudedMireSky"] = new ShroudedMireSky();
+			//SkyManager.Instance["ShroudedMireDaySky"] = new ShroudedMireDaySky();
+            Filters.Scene["MultidimensionMod:Madness"] = new Filter(new ScreenShaderData("FilterMiniTower").UseColor(0.8f, 0.6f, 0.2f).UseOpacity(0.5f), EffectPriority.High);
+			ALLists.LoadLists();
+            base.Load();
         }
 
 		public override void Unload()
         {
+            musicMod = null;
             Terraria.IL_Main.DrawUnderworldBackgroudLayer -= ILMainDrawUnderworldBackgroundLayer;
             Terraria.IL_Player.UpdateBiomes -= NoHeat;
-            Terraria.Graphics.Light.On_TileLightScanner.ApplyHellLight -= TileLightScanner_ApplyHellLight;
+			ALLists.UnloadLists();
         }
+
+        public int? GetMusicFromMusicMod(string songFilename) => MusicAvailable ? MusicLoader.GetMusicSlot(musicMod, "Sounds/Music/" + songFilename) : null;
 
         public override void PostSetupContent()
         {
@@ -282,25 +296,6 @@ namespace MultidimensionMod
             }
         }
         #endregion
-
-        #region Underworld Lighting Removing
-        private void TileLightScanner_ApplyHellLight(Terraria.Graphics.Light.On_TileLightScanner.orig_ApplyHellLight orig, TileLightScanner self, Tile tile, int x, int y, ref Vector3 lightColor)
-        {
-            orig.Invoke(self, tile, x, y, ref lightColor);
-            if (Main.LocalPlayer.InModBiome(ModContent.GetInstance<FrozenUnderworld>()))
-            {
-                if ((!tile.HasTile || !Main.tileNoSunLight[tile.TileType] || ((tile.Slope != 0 || tile.IsHalfBlock) && Main.tile[x, y - 1].LiquidAmount == 0 && Main.tile[x, y + 1].LiquidAmount == 0 && Main.tile[x - 1, y].LiquidAmount == 0 && Main.tile[x + 1, y].LiquidAmount == 0)) && (Main.wallLight[tile.WallType] || tile.WallType == 73 || tile.WallType == 227) && tile.LiquidAmount < 200 && (!tile.IsHalfBlock || Main.tile[x, y - 1].LiquidAmount < 200))
-                {
-                    lightColor = new Vector3(0.06f, 0.06f, 0.06f);
-                }
-                if ((!tile.HasTile || tile.IsHalfBlock || !Main.tileNoSunLight[tile.TileType]) && tile.LiquidAmount < byte.MaxValue)
-                {
-                    lightColor = new Vector3(0.06f, 0.06f, 0.06f);
-                }
-                lightColor = new Vector3(0.06f, 0.06f, 0.06f);
-            }
-        }
-        #endregion
     }
 
     public class MDSystem : ModSystem
@@ -377,4 +372,56 @@ namespace MultidimensionMod
                 TradingUILayer.Update(gameTime);
         }
     }
+
+	/*public class EffectsLoader : ModSystem 
+	{
+
+        public const string ScreenShadersFolderPath = "Shaders/ScreenShaders/";
+        public override void Load()
+        {
+            LoadScreenShaders();
+			SetupShaderProperties();
+        }
+
+		public void SetupShaderProperties()
+        {
+			if (Main.netMode != NetmodeID.Server)
+			{
+
+                Filters.Scene["FogMist"].GetShader().UseImage(ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/FogTexture"), 1, SamplerState.LinearWrap);
+                Filters.Scene["FogMist"].GetShader().UseDirection(new Vector2(1,0)); // also a multiplier of the timer 
+                Filters.Scene["FogMist"].GetShader().UseIntensity(15); // the denisty
+
+
+
+            }
+        }
+
+        public void LoadScreenShaders()
+        {
+            if (Main.netMode != NetmodeID.Server)
+            {
+
+                foreach (string path in Mod.GetFileNames())
+                {
+                    if (!path.StartsWith(ScreenShadersFolderPath) || !path.EndsWith(".xnb"))
+                        continue;
+
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append(path);
+                    sb.Remove(0, ScreenShadersFolderPath.Length);
+                    sb.Replace(".xnb", "");
+                    string shaderName = sb.ToString();
+
+                    Asset<Effect> screen = ModContent.Request<Effect>(Mod.Name + "/" + ScreenShadersFolderPath + shaderName, AssetRequestMode.ImmediateLoad);
+                    Filters.Scene[shaderName] = new Filter(new ScreenShaderData(screen, shaderName + "Pass"), EffectPriority.High);
+                    Filters.Scene[shaderName].Load();
+                }
+            }
+
+        }
+    }*/
+
+
 }
+

@@ -40,12 +40,12 @@ namespace MultidimensionMod.Items.Bags
 
         public override void ModifyItemLoot(ItemLoot Itemloot)
         {
-            //Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<MonarchMask>(), 7));
+            Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<MonarchMask>(), 7));
             Itemloot.Add(ItemDropRule.OneFromOptions(1, ModContent.ItemType<Musharang>(), ModContent.ItemType<Mushbow>()));
             Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<HeartyTruffle>()));
             Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<Mushmatter>(), 1, 5, 10));
             Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<MushiumBar>(), 3, 1, 2));
-            //Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<SusSporeBag>(), 10));
+            Itemloot.Add(ItemDropRule.Common(ModContent.ItemType<SusSporeBag>(), 10));
         }
     }
 }

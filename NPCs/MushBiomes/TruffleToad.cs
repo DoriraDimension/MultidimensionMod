@@ -53,8 +53,10 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.rarity = 2;
+            NPC.chaseable = false;
             Banner = NPC.type;
             BannerItem = ModContent.ItemType<ToadBanner>();
+            ItemID.Sets.KillsToBanner[BannerItem] = 25;
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
@@ -82,6 +84,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             if (NPC.life < NPC.lifeMax)
             {
                 aggro = true;
+                NPC.chaseable = true;
             }
             if (aggro)
             {
@@ -90,6 +93,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                 {
                     AIState = ActionState.Idle;
                     NPC.netUpdate = true;
+                    MotivationToMove = 60;
                 }
                 if (IThinkImStupid >= 2)
                 {
@@ -256,7 +260,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == TileID.MushroomGrass && spawnInfo.Player.ZoneGlowshroom ? 0.03f : 0f;
+            return NPC.downedBoss2 && Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == TileID.MushroomGrass && spawnInfo.Player.ZoneGlowshroom ? 0.03f : 0f;
         }
 
         public override void HitEffect(NPC.HitInfo hit)

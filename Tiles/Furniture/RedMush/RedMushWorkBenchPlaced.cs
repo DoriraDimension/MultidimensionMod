@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Tiles.Furniture.RedMush
 {
@@ -23,6 +24,7 @@ namespace MultidimensionMod.Tiles.Furniture.RedMush
             DustType = ModContent.DustType<MushroomDust>();
             AdjTiles = new int[] { TileID.WorkBenches };
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x1);
+            TileObjectData.newTile.Origin = new Point16(1, 0);
             TileObjectData.newTile.CoordinateHeights = new[] { 18 };
             TileObjectData.addTile(Type);
 

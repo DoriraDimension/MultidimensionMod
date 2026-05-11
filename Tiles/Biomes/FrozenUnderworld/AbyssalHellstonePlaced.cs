@@ -16,7 +16,7 @@ namespace MultidimensionMod.Tiles.Biomes.FrozenUnderworld
 			Main.tileLighted[Type] = true;
 			TileID.Sets.Ore[Type] = true;
 			Main.tileShine2[Type] = true;
-			MinPick = 195;
+			MinPick = 180;
 			AddMapEntry(new Color(60, 99, 181));
 			Main.tileMerge[Type][ModContent.TileType<ColdAsh>()] = true;
 			Main.tileMergeDirt[Type] = true;

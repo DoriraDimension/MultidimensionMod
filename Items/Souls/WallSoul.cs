@@ -35,6 +35,38 @@ namespace MultidimensionMod.Items.Souls
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
+            if (!DownedSystem.listenedToNonsense)
+            {
+                TooltipLine line = new(Mod, "Nonsense", Language.GetTextValue("Mods.MultidimensionMod.Items.WallSoul.Nonsense"))
+                {
+                    OverrideColor = Color.White
+                };
+                tooltips.Add(line);
+            }
+            if (DownedSystem.listenedToNonsense && !DownedSystem.metAdel)
+            {
+                TooltipLine line = new(Mod, "AdelGuidance", Language.GetTextValue("Mods.MultidimensionMod.Items.WallSoul.AdelGuidance"))
+                {
+                    OverrideColor = MDColors.AdelText
+                };
+                tooltips.Add(line);
+            }
+            if (DownedSystem.listenedToNonsense && !DownedSystem.metVertrarius)
+            {
+                TooltipLine line = new(Mod, "VetrariusGuidance", Language.GetTextValue("Mods.MultidimensionMod.Items.WallSoul.VertrariusGuidance"))
+                {
+                    OverrideColor = Color.Orange
+                };
+                tooltips.Add(line);
+            }
+            if (DownedSystem.metAdel && DownedSystem.metVertrarius)
+            {
+                TooltipLine line = new(Mod, "TheyShutUpNow", Language.GetTextValue("Mods.MultidimensionMod.Items.WallSoul.TheyShutUpNow"))
+                {
+                    OverrideColor = Color.White
+                };
+                tooltips.Add(line);
+            }
             if (Main.keyState.PressingShift())
             {
                 TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.WallSoul.Lore"))
@@ -73,11 +105,11 @@ namespace MultidimensionMod.Items.Souls
 
         public override bool? UseItem(Player player)
         {
-            if (player.ZoneHallow && !DownedSystem.metAdel && DownedSystem.listenedToNonsense && !NPC.AnyNPCs(ModContent.NPCType<AdelSpirit>()))
+            if (player.ZoneHallow && !player.ZoneUnderworldHeight && !DownedSystem.metAdel && DownedSystem.listenedToNonsense && !NPC.AnyNPCs(ModContent.NPCType<AdelSpirit>()))
             {
                 NPC.NewNPC(Item.GetSource_FromThis(), (int)player.Center.X + 200, (int)player.Center.Y, ModContent.NPCType<AdelSpirit>());
             }
-            if (player.ZoneUnderworldHeight && !DownedSystem.metVertrarius && DownedSystem.listenedToNonsense && !NPC.AnyNPCs(ModContent.NPCType<VertrariusSpirit>()))
+            if (player.ZoneUnderworldHeight && !player.ZoneHallow && !DownedSystem.metVertrarius && DownedSystem.listenedToNonsense && !NPC.AnyNPCs(ModContent.NPCType<VertrariusSpirit>()))
             {
                 NPC.NewNPC(Item.GetSource_FromThis(), (int)player.Center.X + 200, (int)player.Center.Y, ModContent.NPCType<VertrariusSpirit>());
             }

@@ -17,23 +17,23 @@ namespace MultidimensionMod.Common.Globals
     {
         public static int DoriraQuests = 0;
         public static int ShadeQuests = 0;
-        public static bool CassieQuest;
+        public static bool FlashQuest;
 
         public override void OnWorldLoad()
         {
-            CassieQuest = false;
+            FlashQuest = false;
         }
 
         public override void OnWorldUnload()
         {
-            CassieQuest = false;
+            FlashQuest = false;
         }
 
         public override void SaveWorldData(TagCompound tag)
         {
             var quests = new List<string>();
             //Dorira's quests
-            if (CassieQuest)
+            if (FlashQuest)
                 quests.Add("CassieQuest");
             tag["quests"] = quests;
         }
@@ -41,20 +41,20 @@ namespace MultidimensionMod.Common.Globals
 		public override void LoadWorldData(TagCompound tag)
 		{
 			var quests = tag.GetList<string>("quests");
-			CassieQuest = quests.Contains("CassieQuest");
+			FlashQuest = quests.Contains("CassieQuest");
 		}
 
 		public override void NetSend(BinaryWriter writer)
 		{
 			BitsByte questFlags = default(BitsByte);
-			questFlags[0] = CassieQuest;
+			questFlags[0] = FlashQuest;
             writer.Write(questFlags);
         }
 
 		public override void NetReceive(BinaryReader reader)
 		{
 			BitsByte questFlags = reader.ReadByte();
-			CassieQuest = questFlags[0];
+			FlashQuest = questFlags[0];
 		}
 	}
 }

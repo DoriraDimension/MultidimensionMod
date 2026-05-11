@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Tiles
 {
@@ -14,8 +15,10 @@ namespace MultidimensionMod.Tiles
 		public override void SetStaticDefaults()
 		{
 			Main.tileFrameImportant[Type] = true;
+			Main.tileLighted[Type] = true;
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
-			TileObjectData.newTile.LavaDeath = true;
+            TileObjectData.newTile.Origin = new Point16(1, 3);
+            TileObjectData.newTile.LavaDeath = true;
 			TileObjectData.newTile.Height = 4;
 			TileObjectData.newTile.Width = 2;
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 18 };
@@ -26,7 +29,7 @@ namespace MultidimensionMod.Tiles
 			TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();
 			AddMapEntry(new Color(31, 22, 45), name);
-			DustType = 68;
+			DustType = DustID.BlueCrystalShard;
             RegisterItemDrop(ModContent.ItemType<Glowseed>(), 1);
             RegisterItemDrop(ModContent.ItemType<Glowseed>(), 2);
         }
@@ -60,5 +63,12 @@ namespace MultidimensionMod.Tiles
 			// Return false to stop vanilla draw
 			return false;
 		}
-	}
+
+        public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)   //light colors
+        {
+            r = 0;
+            g = 0.08f;
+            b = 0.15f;
+        }
+    }
 }

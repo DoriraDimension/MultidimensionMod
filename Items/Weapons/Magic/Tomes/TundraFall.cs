@@ -31,7 +31,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.noMelee = true;
             Item.UseSound = SoundID.Item20;
-            Item.knockBack = 2f;
+            Item.knockBack = 0f;
             Item.autoReuse = true;
             Item.value = Item.sellPrice(0, 1, 20, 0);
             Item.rare = ItemRarityID.Blue;

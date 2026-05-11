@@ -7,12 +7,14 @@ using MultidimensionMod.Items.Vanity;
 using MultidimensionMod.NPCs.Bosses.FeudalFungus;
 using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
 using MultidimensionMod.NPCs.Bosses.Smiley;
-using MultidimensionMod.Items.Placeables.MusicBoxes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
+using System;
+using Terraria.Localization;
+using System.Linq;
 
 namespace MultidimensionMod.Common.CrossMod
 {
@@ -32,19 +34,20 @@ namespace MultidimensionMod.Common.CrossMod
                 {
                     ["spawnItems"] = ModContent.ItemType<IntimidatingMushroom>(),
                     ["collectibles"] = new List<int>
-                {
+                    {
                         ModContent.ItemType<MonarchRelic>(),
                         ModContent.ItemType<MonarchTrophy>(),
                         ModContent.ItemType<MonarchMask>(),
-                        ModContent.ItemType<MonarchBox>(),
+                        //ModContent.ItemType<MonarchBox>(),
                         ModContent.ItemType<SusSporeBag>(),
-                },
+                    },
                     ["customPortrait"] = (SpriteBatch sb, Rectangle rect, Color color) =>
                     {
                         Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Common/CrossMod/BossChecklist/MushroomMonarch").Value;
                         Vector2 centered = new(rect.X + (rect.Width / 2) - (texture.Width / 2), rect.Y + (rect.Height / 2) - (texture.Height / 2));
                         sb.Draw(texture, centered, color);
-                    }
+                    },
+                    ["despawnMessage"] = Language.GetOrRegister("Mods.MultidimensionMod.NPCs.MushroomMonarch.BossChecklistIntegration.DespawnMessage").Value,
                 });
                 #endregion
 
@@ -57,7 +60,7 @@ namespace MultidimensionMod.Common.CrossMod
                         ModContent.ItemType<FungusRelic>(),
                         ModContent.ItemType<FungusTrophy>(),
                         ModContent.ItemType<FungusMask>(),
-                        ModContent.ItemType<FungusBox>(),
+                        //ModContent.ItemType<FungusBox>(),
                         ModContent.ItemType<SusGlowsporeBag>()
                 },
                     ["customPortrait"] = (SpriteBatch sb, Rectangle rect, Color color) =>
@@ -65,7 +68,8 @@ namespace MultidimensionMod.Common.CrossMod
                         Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Common/CrossMod/BossChecklist/FeudalFungus").Value;
                         Vector2 centered = new(rect.X + (rect.Width / 2) - (texture.Width / 2), rect.Y + (rect.Height / 2) - (texture.Height / 2));
                         sb.Draw(texture, centered, color);
-                    }
+                    },
+                    ["despawnMessage"] = Language.GetOrRegister("Mods.MultidimensionMod.NPCs.FeudalFungus.BossChecklistIntegration.DespawnMessage").Value,
                 });
                 #endregion
 
@@ -74,18 +78,19 @@ namespace MultidimensionMod.Common.CrossMod
                 {
                     ["spawnItems"] = ModContent.ItemType<UnknownEmoji>(),
                     ["collectibles"] = new List<int>
-                {
+                    {
                         ModContent.ItemType<SmileyRelic>(),
                         ModContent.ItemType<SmileyTrophy>(),
                         ModContent.ItemType<SmileyMask>(),
                         ModContent.ItemType<CuteEmoji>(),
-                },
+                    },
                     ["customPortrait"] = (SpriteBatch sb, Rectangle rect, Color color) =>
                     {
                         Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Common/CrossMod/BossChecklist/Smiley").Value;
                         Vector2 centered = new(rect.X + (rect.Width / 2) - (texture.Width / 2), rect.Y + (rect.Height / 2) - (texture.Height / 2));
                         sb.Draw(texture, centered, color);
-                    }
+                    },
+                    ["despawnMessage"] = Language.GetOrRegister("Mods.MultidimensionMod.NPCs.Smiley.BossChecklistIntegration.DespawnMessage").Value,
                 });
                 #endregion
 
@@ -106,7 +111,8 @@ namespace MultidimensionMod.Common.CrossMod
                 EmpressOfLight = 15f;
                 DukeFishron = 16f;
                 LunaticCultist = 17f;
-                Moonlord = 18f;*/
+                Moonlord = 18f;
+                Fogbound = 19f;*/
             }
         }
     }

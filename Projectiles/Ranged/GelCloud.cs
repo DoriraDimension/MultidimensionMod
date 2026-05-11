@@ -21,7 +21,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 			Projectile.alpha = 255;
 			Projectile.friendly = true;
 			Projectile.penetrate = 3;
-			Projectile.timeLeft = 180;
+			Projectile.timeLeft = 45;
 			Projectile.ignoreWater = false;
 			Projectile.tileCollide = false;
 			Projectile.DamageType = DamageClass.Ranged;
