@@ -203,7 +203,11 @@ namespace MultidimensionMod.NPCs.TownNPCs
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.LollipopDialogue"));
                 Main.npcChatCornerItem = ModContent.ItemType<Pink>();
             }
-			else
+            else if (Main.LocalPlayer.HasItem(ModContent.ItemType<ShadeEye>()))
+            {
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.ShadeItemDialogue"));
+            }
+            else
 			{
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue1"));
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue2"));
@@ -241,10 +245,6 @@ namespace MultidimensionMod.NPCs.TownNPCs
                 if (DownedSystem.downedFungus)
                 {
                     chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.FeudalDialogue"));
-                }
-                if (Main.LocalPlayer.HasItem(ModContent.ItemType<ShadeEye>()))
-                {
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.ShadeItemDialogue"));
                 }
             }
 

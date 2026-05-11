@@ -21,7 +21,6 @@ using Terraria.ModLoader;
 using Terraria.Localization;
 using Terraria.ModLoader.IO;
 using MultidimensionMod.Tiles.Biomes.ShroomForest;
-using rail;
 using MultidimensionMod.Items.Summons;
 using MultidimensionMod.Common.Globals;
 using Terraria.GameContent.Bestiary;

@@ -25,9 +25,7 @@ using Terraria.Graphics.Effects;
 using MultidimensionMod.Items;
 using MultidimensionMod.Items.Permabuffs;
 using MultidimensionMod.Items.Fishing;
-using Humanizer;
 using MultidimensionMod.Items.Fishing.Crates;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace MultidimensionMod.Common.Players
 {
