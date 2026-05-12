@@ -5,6 +5,7 @@ using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
 using Terraria.Localization;
 using MultidimensionMod.Base;
+using MultidimensionMod.Achievements;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -31,7 +32,8 @@ namespace MultidimensionMod.Items.Accessories
 		{
 			if (player.wet && !player.lavaWet && !player.honeyWet && !player.immune)
 			{
-				player.KillMe(PlayerDeathReason.ByCustomReason(player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.Socks")), 1000.0, 0);
+                ModContent.GetInstance<SockAchievement>().WetSocksCondition.Complete();
+                player.KillMe(PlayerDeathReason.ByCustomReason(player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.Socks")), 1000.0, 0);
 			}
 			if (Main.raining && player.ZoneOverworldHeight && Framing.GetTileSafely(player.Center.ToTileCoordinates()).WallType == WallID.None)
 			{

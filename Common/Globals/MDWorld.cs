@@ -17,6 +17,7 @@ using Mono.Cecil;
 using Terraria.Audio;
 using ReLogic.Utilities;
 using MultidimensionMod.Sounds;
+using MultidimensionMod.Achievements;
 
 namespace MultidimensionMod.Common.Globals
 {
@@ -159,6 +160,7 @@ namespace MultidimensionMod.Common.Globals
             }
             if (MadnessMoon && Main.dayTime)
             {
+                ModContent.GetInstance<MadnessAchievement>().MadnessCondition.Complete();
                 MadnessMoon = false;
             }
             if (MadnessMoon && Main.dayTime && Main.hardMode)

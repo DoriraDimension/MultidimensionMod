@@ -7,6 +7,8 @@ using Terraria.ID;
 using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.DataStructures;
+using MultidimensionMod.Achievements;
+using Terraria.ModLoader;
 
 namespace MultidimensionMod.UI
 {
@@ -92,10 +94,10 @@ namespace MultidimensionMod.UI
             int desiredObject = Main.LocalPlayer.FindItem(InputItem.type);
             if (desiredObject >= 0 && Main.LocalPlayer.inventory[desiredObject].stack >= InputStack)
             {
+                ModContent.GetInstance<TarahaAchievement>().TarahaTradeCondition.Complete();
                 Main.LocalPlayer.inventory[desiredObject].stack -= InputStack;
                 if (Main.LocalPlayer.inventory[desiredObject].stack <= 0)
                     Main.LocalPlayer.inventory[desiredObject] = new Item();
-
                 Main.LocalPlayer.QuickSpawnItem(new EntitySource_Misc("Trade"), OutputItem, OutputStack);
             }
         }

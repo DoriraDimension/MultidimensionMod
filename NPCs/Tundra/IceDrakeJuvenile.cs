@@ -15,6 +15,7 @@ using Terraria.DataStructures;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader;
 using Terraria.Audio;
+using MultidimensionMod.Achievements;
 
 namespace MultidimensionMod.NPCs.Tundra
 {
@@ -145,6 +146,7 @@ namespace MultidimensionMod.NPCs.Tundra
             }
 			if (firstButton && Main.LocalPlayer.HasItem(ItemID.RoastedBird) && !isAdoptable)
 			{
+                ModContent.GetInstance<DrakeAchievement>().DrakeFedCondition.Complete();
                 player.inventory[bird].stack--;
                 hasBeenFed = true;
 				SoundEngine.PlaySound(SoundID.NPCDeath13 with { Volume = 0.5f }, NPC.position);

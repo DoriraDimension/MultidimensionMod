@@ -40,7 +40,6 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
                 leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.KingSlimePetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RoyalBelt>(), 3));
-                npcLoot.Add(ItemDropRule.Common(ItemID.SlimeStaff, 3));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<KingSlimeSoul>()));
                 npcLoot.Add(leadingConditionRule);
             }
@@ -202,7 +201,6 @@ namespace MultidimensionMod.Common.Globals.NPCs
                 LeadingConditionRule leadingConditionRule = new(new Conditions.NotMasterMode());
                 leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.MoonLordPetItem, 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MoonSoul>()));
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Tentacle>(), 3));
                 npcLoot.Add(leadingConditionRule);
             }
 

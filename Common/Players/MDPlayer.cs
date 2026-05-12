@@ -26,6 +26,8 @@ using MultidimensionMod.Items;
 using MultidimensionMod.Items.Permabuffs;
 using MultidimensionMod.Items.Fishing;
 using MultidimensionMod.Items.Fishing.Crates;
+using Terraria.WorldBuilding;
+using MultidimensionMod.Achievements;
 
 namespace MultidimensionMod.Common.Players
 {
@@ -104,6 +106,8 @@ namespace MultidimensionMod.Common.Players
         public bool hiveNugget = false;
         public bool EggPouch = false;
         public int EggBirth = 0;
+        public bool Brick = false;
+        public bool SBrick = false;
 
         public override void ResetEffects()
         {
@@ -146,6 +150,8 @@ namespace MultidimensionMod.Common.Players
             AngelBelt = false;
             hiveNugget = false;
             EggPouch = false;
+            Brick = false;
+            SBrick = false;
         }
         public override void UpdateDead()
         {
@@ -466,6 +472,7 @@ namespace MultidimensionMod.Common.Players
             }
             if (currentlyShimmerFishing)
             {
+                ModContent.GetInstance<ShimmerFishAchievement>().ShimmerFishCondition.Complete();
                 itemDrop = ModContent.ItemType<StargazerBass>();
                 if (attempt.common && !attempt.uncommon && !attempt.rare && !attempt.veryrare && !attempt.legendary && Main.rand.NextBool())
                 {
@@ -904,6 +911,16 @@ namespace MultidimensionMod.Common.Players
                     Main.buffNoTimeDisplay[BuffID.Honey] = true;
                 }
             }
+            if (Player.wet && Brick)
+            {
+                Player.maxFallSpeed = 8f;
+                Player.jumpHeight = (int)(Player.jumpHeight * 0.50f);
+            }
+            else if (Player.wet && SBrick)
+            {
+                Player.maxFallSpeed = 13f;
+                Player.jumpHeight = (int)(Player.jumpHeight * 0.50f);
+            }
         }
 
         public override void UpdateBadLifeRegen()
@@ -1016,6 +1033,10 @@ namespace MultidimensionMod.Common.Players
 
         public override void ModifyHitByProjectile(Projectile proj, ref Player.HurtModifiers modifiers)
         {
+            if (Brick)
+            {
+                modifiers.Knockback *= 0.50f;
+            }
             if (ALLists.ReflectionExceptions.TrueForAll(x => proj.type != x) && proj.active && !proj.friendly && proj.hostile && proj.damage > 0)
             {
                 if (SkulkerShell)
@@ -1032,6 +1053,14 @@ namespace MultidimensionMod.Common.Players
                         return;
                     }
                 }
+            }
+        }
+
+        public override void ModifyHitByNPC(NPC npc, ref Player.HurtModifiers modifiers)
+        {
+            if (Brick)
+            {
+                modifiers.Knockback *= 0.50f;
             }
         }
 

@@ -8,6 +8,7 @@ using Terraria.Audio;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using Terraria.Localization;
+using MultidimensionMod.Achievements;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -76,7 +77,8 @@ namespace MultidimensionMod.Items.Accessories
 				 Main.LocalPlayer.AddBuff(BuffID.Obstructed, 6000);
 				 SoundEngine.PlaySound(SoundID.DD2_EtherianPortalIdleLoop, Item.position);
 				 SoundEngine.PlaySound(SoundID.DD2_BetsyDeath, Item.position);
-			 })
+                 ModContent.GetInstance<EyeAchievement>().OmniEyeCondition.Complete();
+             })
 			.AddTile(TileID.DemonAltar)
 			.Register();
 		}
