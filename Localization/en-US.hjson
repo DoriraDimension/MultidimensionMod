@@ -1172,10 +1172,7 @@ Mods: {
 
 			CheliaPlushie: {
 				DisplayName: Chelia Plushie
-				Tooltip:
-					'''
-					A cuddly plushie designed after the second oldest starborn.
-					'''
+				Tooltip: A cuddly plushie designed after the second oldest starborn.
 			}
 
 			CrimsonAltar: {
@@ -4912,6 +4909,16 @@ Mods: {
 				DisplayName: Zet Plushie
 				Tooltip: A cuddly plushie designed after the special agent.
 			}
+
+			StoneDart: {
+				DisplayName: Stone Dart
+				Tooltip: Slow but steady
+			}
+
+			StarfeatherDart: {
+				DisplayName: Starfeather Dart
+				Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -5181,6 +5188,8 @@ Mods: {
 			WarpsandBallGun.DisplayName: Warpsand Ball Gun
 			GildedRejectionProj.DisplayName: Gilded Rejection Proj
 			SpazmicFlame.DisplayName: Spazmic Flame
+			StoneDartProj.DisplayName: Stone Dart Proj
+			StarfeatherDartProj.DisplayName: Starfeather Dart Proj
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability

@@ -1172,11 +1172,7 @@ Mods: {
 
 			CheliaPlushie: {
 				// DisplayName: Chelia Plushie
-				/* Tooltip:
-					'''
-					A cuddly plushie designed after the second oldest starborn.
-					Why is Dorira selling these?
-					''' */
+				// Tooltip: A cuddly plushie designed after the second oldest starborn.
 			}
 
 			CrimsonAltar: {
@@ -4881,36 +4877,46 @@ Mods: {
 
 			AidenPlushie: {
 				// DisplayName: Aiden Plushie
-				// Tooltip: ""
+				// Tooltip: A cuddly plushie designed after the star destroyer.
 			}
 
 			CultissimaPlushie: {
 				// DisplayName: Cultissima Plushie
-				// Tooltip: ""
+				// Tooltip: A cuddly plushie designed after the smartest little cookie.
 			}
 
 			KarvolisPlushie: {
 				// DisplayName: Karvolis Plushie
-				// Tooltip: ""
+				// Tooltip: A cuddly plushie designed after the oldest starborn.
 			}
 
 			KuruPlushie: {
 				// DisplayName: Kuru Plushie
-				// Tooltip: ""
+				// Tooltip: A cuddly plushie designed after the collected fighter.
 			}
 
 			PsyrobnikPlushie: {
 				// DisplayName: Psyrobnik Plushie
-				// Tooltip: ""
+				// Tooltip: A cuddly plushie designed after the robotic mastermind.
 			}
 
 			VeronicaPlushie: {
 				// DisplayName: Veronica Plushie
-				// Tooltip: ""
+				// Tooltip: A cuddly plushie designed after the viral empress.
 			}
 
 			ZetPlushie: {
 				// DisplayName: Zet Plushie
+				// Tooltip: A cuddly plushie designed after the special agent.
+			}
+
+			StoneDart: {
+				// DisplayName: Stone Dart
+				// Tooltip: Slow but steady
+			}
+
+			StarfeatherDart: {
+				// DisplayName: Starfeather Dart
 				// Tooltip: ""
 			}
 		}
@@ -5182,6 +5188,8 @@ Mods: {
 			// WarpsandBallGun.DisplayName: Warpsand Ball Gun
 			// GildedRejectionProj.DisplayName: Gilded Rejection Proj
 			// SpazmicFlame.DisplayName: Spazmic Flame
+			// StoneDartProj.DisplayName: Stone Dart Proj
+			// StarfeatherDartProj.DisplayName: Starfeather Dart Proj
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
