@@ -2,6 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using MultidimensionMod.Tiles.Plushies;
 
 namespace MultidimensionMod.Items.Placeables.Plushies
 {
@@ -14,8 +15,8 @@ namespace MultidimensionMod.Items.Placeables.Plushies
 
 		public override void SetDefaults()
 		{
-			Item.width = 38;
-			Item.height = 54;
+			Item.width = 48;
+			Item.height = 56;
 			Item.maxStack = 1;
 			Item.useTurn = true;
 			Item.autoReuse = true;
@@ -25,7 +26,7 @@ namespace MultidimensionMod.Items.Placeables.Plushies
 			Item.consumable = true;
 			Item.rare = ItemRarityID.Yellow;
 			Item.value = Item.sellPrice(0, 0, 50, 0);
-			Item.createTile = ModContent.TileType<Tiles.CheliaPlushiePlaced>();
+			Item.createTile = ModContent.TileType<CheliaPlushiePlaced>();
 		}
 	}
 }

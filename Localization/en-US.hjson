@@ -1175,7 +1175,6 @@ Mods: {
 				Tooltip:
 					'''
 					A cuddly plushie designed after the second oldest starborn.
-					Why is Dorira selling these?
 					'''
 			}
 
@@ -4878,6 +4877,41 @@ Mods: {
 					Weighs you down while in water
 					'''
 			}
+
+			AidenPlushie: {
+				DisplayName: Aiden Plushie
+				Tooltip: A cuddly plushie designed after the star destroyer.
+			}
+
+			CultissimaPlushie: {
+				DisplayName: Cultissima Plushie
+				Tooltip: A cuddly plushie designed after the smartest little cookie.
+			}
+
+			KarvolisPlushie: {
+				DisplayName: Karvolis Plushie
+				Tooltip: A cuddly plushie designed after the oldest starborn.
+			}
+
+			KuruPlushie: {
+				DisplayName: Kuru Plushie
+				Tooltip: A cuddly plushie designed after the collected fighter.
+			}
+
+			PsyrobnikPlushie: {
+				DisplayName: Psyrobnik Plushie
+				Tooltip: A cuddly plushie designed after the robotic mastermind.
+			}
+
+			VeronicaPlushie: {
+				DisplayName: Veronica Plushie
+				Tooltip: A cuddly plushie designed after the viral empress.
+			}
+
+			ZetPlushie: {
+				DisplayName: Zet Plushie
+				Tooltip: A cuddly plushie designed after the special agent.
+			}
 		}
 
 		SetBonuses: {
@@ -5577,6 +5611,13 @@ Mods: {
 			BogwoodWorkbenchPlaced.MapEntry: Bogwood Work Bench
 			ApocalyptitePlaced.MapEntry: Eschatyte
 			CratePlaced.MapEntry: Crate
+			AidenPlushiePlaced.MapEntry: Aiden Plushie Placed
+			CultissimaPlushiePlaced.MapEntry: Cultissima Plushie Placed
+			KarvolisPlushiePlaced.MapEntry: Karvolis Plushie Placed
+			KuruPlushiePlaced.MapEntry: Kuru Plushie Placed
+			PsyrobnikPlushiePlaced.MapEntry: Psyrobnik Plushie Placed
+			VeronicaPlushiePlaced.MapEntry: Veronica Plushie Placed
+			ZetPlushiePlaced.MapEntry: Zet Plushie Placed
 		}
 
 		DeathMessages: {

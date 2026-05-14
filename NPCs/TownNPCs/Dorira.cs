@@ -315,7 +315,14 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			.Add(new Item(ModContent.ItemType<BaitLeaf>()) { shopCustomPrice = 12, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
 			.Add(new Item(ModContent.ItemType<ArchtyrantsFace>()) { shopCustomPrice = 17, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedSkeletron)
 			.Add(new Item(ModContent.ItemType<UnknownEmoji>()) { shopCustomPrice = 3, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, downedSmiley)
-			.Add(new Item(ModContent.ItemType<CheliaPlushie>()) { shopCustomPrice = 20, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedPlantera)
+            .Add(new Item(ModContent.ItemType<AidenPlushie>()) { shopCustomPrice = 8, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedEowOrBoc)
+            .Add(new Item(ModContent.ItemType<ZetPlushie>()) { shopCustomPrice = 10, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedSkeletron)
+            .Add(new Item(ModContent.ItemType<VeronicaPlushie>()) { shopCustomPrice = 11, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, downedSmiley)
+            .Add(new Item(ModContent.ItemType<KuruPlushie>()) { shopCustomPrice = 14, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.Hardmode)
+            .Add(new Item(ModContent.ItemType<PsyrobnikPlushie>()) { shopCustomPrice = 16, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMechBossAll)
+            .Add(new Item(ModContent.ItemType<CheliaPlushie>()) { shopCustomPrice = 20, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedEmpressOfLight)
+            .Add(new Item(ModContent.ItemType<KarvolisPlushie>()) { shopCustomPrice = 25, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMoonLord)
+            .Add(new Item(ModContent.ItemType<CultissimaPlushie>()) { shopCustomPrice = 30, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMoonLord)
 			.Add(new Item(ModContent.ItemType<DataMiner>()) { shopCustomPrice = 50, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedMoonLord);
 			npcShop.Register();
 		}

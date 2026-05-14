@@ -4878,6 +4878,41 @@ Mods: {
 					Weighs you down while in water
 					''' */
 			}
+
+			AidenPlushie: {
+				// DisplayName: Aiden Plushie
+				// Tooltip: ""
+			}
+
+			CultissimaPlushie: {
+				// DisplayName: Cultissima Plushie
+				// Tooltip: ""
+			}
+
+			KarvolisPlushie: {
+				// DisplayName: Karvolis Plushie
+				// Tooltip: ""
+			}
+
+			KuruPlushie: {
+				// DisplayName: Kuru Plushie
+				// Tooltip: ""
+			}
+
+			PsyrobnikPlushie: {
+				// DisplayName: Psyrobnik Plushie
+				// Tooltip: ""
+			}
+
+			VeronicaPlushie: {
+				// DisplayName: Veronica Plushie
+				// Tooltip: ""
+			}
+
+			ZetPlushie: {
+				// DisplayName: Zet Plushie
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -5577,6 +5612,13 @@ Mods: {
 			// BogwoodWorkbenchPlaced.MapEntry: Bogwood Work Bench
 			// ApocalyptitePlaced.MapEntry: Eschatyte
 			// CratePlaced.MapEntry: Crate
+			// AidenPlushiePlaced.MapEntry: Aiden Plushie Placed
+			// CultissimaPlushiePlaced.MapEntry: Cultissima Plushie Placed
+			// KarvolisPlushiePlaced.MapEntry: Karvolis Plushie Placed
+			// KuruPlushiePlaced.MapEntry: Kuru Plushie Placed
+			// PsyrobnikPlushiePlaced.MapEntry: Psyrobnik Plushie Placed
+			// VeronicaPlushiePlaced.MapEntry: Veronica Plushie Placed
+			// ZetPlushiePlaced.MapEntry: Zet Plushie Placed
 		}
 
 		DeathMessages: {
