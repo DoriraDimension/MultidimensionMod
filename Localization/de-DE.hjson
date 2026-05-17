@@ -4919,6 +4919,46 @@ Mods: {
 				// DisplayName: Starfeather Dart
 				// Tooltip: ""
 			}
+
+			BambooPowder: {
+				// DisplayName: Bamboo Powder
+				// Tooltip: Bamboo from the jungle ground into a fine powder
+			}
+
+			PumpkinSoup: {
+				// DisplayName: Pumpkin Soup
+				// Tooltip: ""
+			}
+
+			GourmetTruffle: {
+				// DisplayName: Gourmet Truffle
+				// Tooltip: ""
+			}
+
+			KiBa: {
+				// DisplayName: Ki Ba
+				// Tooltip: ""
+			}
+
+			RoyalTruffleSoup: {
+				// DisplayName: Royal Truffle Soup
+				// Tooltip: ""
+			}
+
+			Toadstool: {
+				// DisplayName: Toadstool
+				// Tooltip: ""
+			}
+
+			TruffleSoup: {
+				// DisplayName: Truffle Soup
+				// Tooltip: ""
+			}
+
+			WyvernMilk: {
+				// DisplayName: Wyvern Milk
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {

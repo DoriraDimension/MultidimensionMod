@@ -4919,6 +4919,53 @@ Mods: {
 				DisplayName: Starfeather Dart
 				Tooltip: ""
 			}
+
+			BambooPowder: {
+				DisplayName: Bamboo Powder
+				Tooltip: Bamboo from the jungle ground into a fine powder
+			}
+
+			PumpkinSoup: {
+				DisplayName: Pumpkin Soup
+				Tooltip: ""
+			}
+
+			GourmetTruffle: {
+				DisplayName: Gourmet Truffle
+				Tooltip:
+				    '''
+					Rare truffle only found within the scarlet mycelium forest
+					Is often dug up by spore puffers or found sticking to mushroom slimes
+					'''
+			}
+
+			KiBa: {
+				DisplayName: KiBa
+				Tooltip: ""
+			}
+
+			RoyalTruffleSoup: {
+				DisplayName: Royal Truffle Soup
+				Tooltip: ""
+			}
+
+			Toadstool: {
+				DisplayName: Toadstool
+				Tooltip: Fungus
+			}
+
+			TruffleSoup: {
+				DisplayName: Truffle Soup
+				Tooltip: 
+				    '''
+					The larvae and truffle delicously melt within the hovercap juice broth, making for a unique texture
+					'''
+			}
+
+			WyvernMilk: {
+				DisplayName: Wyvern Milk
+				Tooltip: 'Nature always finds a way.'
+			}
 		}
 
 		SetBonuses: {

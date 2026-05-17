@@ -12,6 +12,7 @@ using MultidimensionMod.Base;
 using MultidimensionMod.Items.Critters;
 using MultidimensionMod.Items.Accessories;
 using Terraria.GameContent.ItemDropRules;
+using MultidimensionMod.Items.Potions.Food;
 
 namespace MultidimensionMod.NPCs.MushBiomes
 {
@@ -84,6 +85,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
         public override void ModifyNPCLoot(NPCLoot NPCloot)
         {
             NPCloot.Add(ItemDropRule.Common(ItemID.Gel, 5, 1, 2));
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<GourmetTruffle>(), 50));
         }
 
         public override void FindFrame(int frameHeight)

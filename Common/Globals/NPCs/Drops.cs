@@ -21,6 +21,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader;
 using Terraria.GameContent;
 using MultidimensionMod.Items.Permabuffs;
+using MultidimensionMod.Items.Potions.Food;
 
 namespace MultidimensionMod.Common.Globals.NPCs
 {
@@ -425,6 +426,11 @@ namespace MultidimensionMod.Common.Globals.NPCs
                     || NPC.type == NPCID.HellArmoredBonesMace || NPC.type == NPCID.HellArmoredBonesSword)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EyeofthePurifier>(), 120));
+            }
+
+            if (NPC.type == NPCID.WyvernHead)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WyvernMilk>(), 10));
             }
         }
     }
