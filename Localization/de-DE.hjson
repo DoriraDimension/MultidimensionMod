@@ -4932,11 +4932,15 @@ Mods: {
 
 			GourmetTruffle: {
 				// DisplayName: Gourmet Truffle
-				// Tooltip: ""
+				/* Tooltip:
+					'''
+					Rare truffle only found within the scarlet mycelium forest
+					Is often dug up by spore puffers or found sticking to mushroom slimes
+					''' */
 			}
 
 			KiBa: {
-				// DisplayName: Ki Ba
+				// DisplayName: KiBa
 				// Tooltip: ""
 			}
 
@@ -4947,16 +4951,41 @@ Mods: {
 
 			Toadstool: {
 				// DisplayName: Toadstool
-				// Tooltip: ""
+				// Tooltip: Fungus
 			}
 
 			TruffleSoup: {
 				// DisplayName: Truffle Soup
-				// Tooltip: ""
+				// Tooltip: The larvae and truffle delicously melt within the hovercap juice broth, making for a unique texture
 			}
 
 			WyvernMilk: {
 				// DisplayName: Wyvern Milk
+				// Tooltip: Nature always finds a way.
+			}
+
+			AurealisMead: {
+				// DisplayName: Aurealis Mead
+				// Tooltip: ""
+			}
+
+			BottledDrakeSaliva: {
+				// DisplayName: Bottled Drake Saliva
+				// Tooltip: ""
+			}
+
+			Rimeberry: {
+				// DisplayName: Rimeberry
+				// Tooltip: ""
+			}
+
+			RimeberryAle: {
+				// DisplayName: Rimeberry Ale
+				// Tooltip: ""
+			}
+
+			WinterHoney: {
+				// DisplayName: Winter Honey
 				// Tooltip: ""
 			}
 		}

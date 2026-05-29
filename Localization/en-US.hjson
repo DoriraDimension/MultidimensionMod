@@ -2367,7 +2367,7 @@ Mods: {
 
 			SunrayBrick: {
 				DisplayName: Sunray Brick
-				Tooltip: Brick bomb, its as simple as that
+				Tooltip: Brick bomb, it's as simple as that
 			}
 
 			Comprehension: {
@@ -4917,7 +4917,7 @@ Mods: {
 
 			StarfeatherDart: {
 				DisplayName: Starfeather Dart
-				Tooltip: ""
+				Tooltip: Not affected by gravity and pierces up to 5 times
 			}
 
 			BambooPowder: {
@@ -4933,7 +4933,7 @@ Mods: {
 			GourmetTruffle: {
 				DisplayName: Gourmet Truffle
 				Tooltip:
-				    '''
+					'''
 					Rare truffle only found within the scarlet mycelium forest
 					Is often dug up by spore puffers or found sticking to mushroom slimes
 					'''
@@ -4956,15 +4956,57 @@ Mods: {
 
 			TruffleSoup: {
 				DisplayName: Truffle Soup
-				Tooltip: 
-				    '''
-					The larvae and truffle delicously melt within the hovercap juice broth, making for a unique texture
-					'''
+				Tooltip: The larvae and truffle delicously melt within the hovercap juice broth, making for a unique texture
 			}
 
 			WyvernMilk: {
 				DisplayName: Wyvern Milk
-				Tooltip: 'Nature always finds a way.'
+				Tooltip: Nature always finds a way.
+			}
+
+			AurealisMead: {
+				DisplayName: Aurealis Mead
+				Tooltip:
+				    '''
+					The main event of every viking ritual
+					It is consumed as a small sip by everyone attending from a hollowed out horn,
+					to form eternal bonds with eachother and with the drakes.
+					'''
+			}
+
+			BottledDrakeSaliva: {
+				DisplayName: Bottled Drake Saliva
+				Tooltip:
+				    '''
+					Some might think of this as disgusting, yet in Drakenheim it was like holy water.
+					It's a main ingredient for important rituals.
+					'''
+			}
+
+			Rimeberry: {
+				DisplayName: Rimeberry
+				Tooltip:
+				    '''
+					Sweet berries that are native only to the Drakenheim tundra.
+					Snow layered on top are mixed with excreted fruit juices.
+					'''
+			}
+
+			RimeberryAle: {
+				DisplayName: Rimeberry Ale
+				Tooltip:
+				    '''
+					One of the everyday drinks a viking would consume during and after work.
+					'''
+			}
+
+			WinterHoney: {
+				DisplayName: Winter Honey
+				Tooltip:
+				    '''
+					The honey from yeti bees has a one of a kind texture
+					No wonder it was once wanted by every country even beyond the continent
+					'''
 			}
 		}
 

@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using MultidimensionMod.Items.Critters;
 using System;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,15 +7,15 @@ using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Potions.Food
 {
-    public class TruffleSoup : ModItem
+    public class AurealisMead : ModItem
     {
         public override void SetStaticDefaults()
         {
             //Main.RegisterItemAnimation(Type, new DrawAnimationVertical(int.MaxValue, 3));
             ItemID.Sets.FoodParticleColors[Item.type] = new Color[3] {
-                new Color(56, 40, 34),
-                new Color(150, 35, 50),
-                new Color(110, 50, 25)
+                new Color(247, 240, 200),
+                new Color(208, 186, 118),
+                new Color(167, 137, 97)
             };
             //ItemID.Sets.IsFood[Type] = true;
             Item.ResearchUnlockCount = 5;
@@ -24,17 +23,17 @@ namespace MultidimensionMod.Items.Potions.Food
 
         public override void SetDefaults()
         {
-            Item.DefaultToFood(26, 26, BuffID.WellFed2, 30000, true);
+            Item.DefaultToFood(26, 26, BuffID.WellFed, 12000, true);
             Item.maxStack = 9999;
         }
 
         public override void AddRecipes()
         {
             CreateRecipe()
-            .AddIngredient(ModContent.ItemType<GourmetTruffle>())
-            .AddIngredient(ModContent.ItemType<MushbugBabyItem>())
-            .AddIngredient(ModContent.ItemType<HovercapItem>())
-            .AddTile(TileID.CookingPots)
+            .AddIngredient(ItemID.BottledWater)
+            .AddIngredient(ModContent.ItemType<WinterHoney>())
+            .AddIngredient(ModContent.ItemType<BottledDrakeSaliva>())
+            .AddTile(TileID.Kegs)
             .Register();
         }
     }
