@@ -33,7 +33,7 @@ namespace MultidimensionMod.Items.Fishing
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Fishing/CreationMedaillon_Glow").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Items/Fishing/EternalOroboros_Glow").Value;
             spriteBatch.Draw
             (
                 texture,
