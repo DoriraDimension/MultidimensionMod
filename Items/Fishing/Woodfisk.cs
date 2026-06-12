@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MultidimensionMod.Common.Systems;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -6,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Fishing
 {
-    public class BloomSnail : ModItem
+    public class Woodfisk : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -21,12 +22,12 @@ namespace MultidimensionMod.Items.Fishing
 
         public override bool IsQuestFish() => true;
 
-        public override bool IsAnglerQuestAvailable() => false;
+        public override bool IsAnglerQuestAvailable() => DownedSystem.downedMonarch;
 
         public override void AnglerQuestChat(ref string description, ref string catchLocation)
         {
-            description = Language.GetTextValue("Mods.MultidimensionMod.Items.BloomSnail.QuestDialogue");
-            catchLocation = Language.GetTextValue("Mods.MultidimensionMod.MiscText.HarmonyCatchFishTooltip");
+            description = Language.GetTextValue("Mods.MultidimensionMod.Items.Woodfisk.QuestDialogue");
+            catchLocation = Language.GetTextValue("Mods.MultidimensionMod.MiscText.ForestCatchFishTooltip");
         }
     }
 }

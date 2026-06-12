@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ID;
+using MultidimensionMod.Items.Placeables.Biomes;
 
 namespace MultidimensionMod.Common.Globals.Items
 {
@@ -80,7 +81,7 @@ namespace MultidimensionMod.Common.Globals.Items
 			hermes.AddIngredient(ItemID.Leather, 5);
             hermes.AddIngredient(ItemID.Silk, 10);
             hermes.AddIngredient(ItemID.SwiftnessPotion, 3);
-            //hermes.AddIngredient(ModContent.ItemType<SmolderingShaleplate>(), 20);
+            hermes.AddIngredient(ModContent.ItemType<SmolderingShaleplate>(), 20);
 			hermes.AddTile(TileID.TinkerersWorkbench);
 			hermes.Register();
 
@@ -267,7 +268,7 @@ namespace MultidimensionMod.Common.Globals.Items
 			deep.AddRecipeGroup(RecipeGroupID.IronBar, 8);
 			deep.AddIngredient(ItemID.Obsidian, 20);
             deep.AddIngredient(ItemID.Diamond, 3);
-            //deep.AddIngredient(ModContent.ItemType<SmolderingShaleplate>(), 15);
+            deep.AddIngredient(ModContent.ItemType<SmolderingShaleplate>(), 15);
             deep.AddTile(TileID.Anvils);
 			deep.Register();
 

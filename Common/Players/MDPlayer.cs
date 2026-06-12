@@ -470,6 +470,17 @@ namespace MultidimensionMod.Common.Players
                 itemDrop = ModContent.ItemType<EnergyFish>();
                 return;
             }
+            if (Player.ZonePurity)
+            {
+                if (attempt.questFish == ModContent.ItemType<Woodfisk>())
+                {
+                    if (attempt.uncommon)
+                    {
+                        itemDrop = ModContent.ItemType<Woodfisk>();
+                        return;
+                    }
+                }
+            }
             if (currentlyShimmerFishing)
             {
                 ModContent.GetInstance<ShimmerFishAchievement>().ShimmerFishCondition.Complete();

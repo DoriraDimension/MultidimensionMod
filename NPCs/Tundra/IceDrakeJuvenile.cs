@@ -23,6 +23,7 @@ namespace MultidimensionMod.NPCs.Tundra
 	{
 		public bool hasBeenFed;
 		public bool isAdoptable;
+		public int Satiation = 0;
 
 		public override void SetStaticDefaults()
 		{
@@ -90,6 +91,10 @@ namespace MultidimensionMod.NPCs.Tundra
 					NPC.spriteDirection = 1;
 				}
 			}
+			if (Satiation >= 3)
+			{
+                hasBeenFed = true;
+            }
 		}
 
 		public override bool? CanBeHitByProjectile(Projectile projectile)
@@ -148,7 +153,7 @@ namespace MultidimensionMod.NPCs.Tundra
 			{
                 ModContent.GetInstance<DrakeAchievement>().DrakeFedCondition.Complete();
                 player.inventory[bird].stack--;
-                hasBeenFed = true;
+				Satiation++;
 				SoundEngine.PlaySound(SoundID.NPCDeath13 with { Volume = 0.5f }, NPC.position);
 				int commonDrop = Main.rand.Next(2);
 				int uncommonDrop = Main.rand.Next(2);

@@ -21,7 +21,7 @@ namespace MultidimensionMod.Items.Fishing
 
         public override bool IsQuestFish() => true;
 
-        public override bool IsAnglerQuestAvailable() => Main.hardMode;
+        public override bool IsAnglerQuestAvailable() => false;//Main.hardMode;
 
         public override void AnglerQuestChat(ref string description, ref string catchLocation)
         {

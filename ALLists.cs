@@ -175,11 +175,11 @@ namespace MultidimensionMod
                 ModContent.ItemType<NeroPredatorHead>(),
                 ModContent.ItemType<NeroHammerheadMask>(),
                 ModContent.ItemType<NeroLanternHelm>(),
-                /*ModContent.ItemType<SelfSimilarStarfish>(),
+                ModContent.ItemType<SelfSimilarStarfish>(),
                 ModContent.ItemType<PenroseFish>(),
                 ModContent.ItemType<Pufftail>(),
                 ModContent.ItemType<FishroomMonarch>(),
-                ModContent.ItemType<DragonKoi>(),
+                /*ModContent.ItemType<DragonKoi>(),
                 ModContent.ItemType<JadeArowana>(),
                 ModContent.ItemType<BogfinKoi>(),
                 ModContent.ItemType<Miresquitofish>(),
@@ -187,6 +187,7 @@ namespace MultidimensionMod
                 ModContent.ItemType<BloomSnail>(),
                 ModContent.ItemType<ScrapSearcher>(),
                 ModContent.ItemType<EternalOroboros>(),*/
+                ModContent.ItemType<Woodfisk>()
             };
             #endregion
         }

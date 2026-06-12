@@ -4967,7 +4967,7 @@ Mods: {
 			AurealisMead: {
 				DisplayName: Aurealis Mead
 				Tooltip:
-				    '''
+					'''
 					The main event of every viking ritual
 					It is consumed as a small sip by everyone attending from a hollowed out horn,
 					to form eternal bonds with eachother and with the drakes.
@@ -4977,7 +4977,7 @@ Mods: {
 			BottledDrakeSaliva: {
 				DisplayName: Bottled Drake Saliva
 				Tooltip:
-				    '''
+					'''
 					Some might think of this as disgusting, yet in Drakenheim it was like holy water.
 					It's a main ingredient for important rituals.
 					'''
@@ -4986,7 +4986,7 @@ Mods: {
 			Rimeberry: {
 				DisplayName: Rimeberry
 				Tooltip:
-				    '''
+					'''
 					Sweet berries that are native only to the Drakenheim tundra.
 					Snow layered on top are mixed with excreted fruit juices.
 					'''
@@ -4994,19 +4994,45 @@ Mods: {
 
 			RimeberryAle: {
 				DisplayName: Rimeberry Ale
-				Tooltip:
-				    '''
-					One of the everyday drinks a viking would consume during and after work.
-					'''
+				Tooltip: One of the everyday drinks a viking would consume during and after work.
 			}
 
 			WinterHoney: {
 				DisplayName: Winter Honey
 				Tooltip:
-				    '''
+					'''
 					The honey from yeti bees has a one of a kind texture
 					No wonder it was once wanted by every country even beyond the continent
 					'''
+			}
+
+			FriendshipBracelet: {
+				DisplayName: Friendship Bracelet
+				Tooltip: Increases defense by 4 for every used minion slot
+			}
+
+			Woodfisk: {
+				DisplayName: Wooden Flatfish
+				Tooltip: Caught in Purity
+			}
+
+			SmolderingShaleplate: {
+				DisplayName: Smoldering Shaleplate
+				Tooltip:
+					'''
+					Partially molten shalestone that forms in clusters within superheated pockets
+					Useful material for smelting and forging
+					'''
+			}
+
+			Glimmerstar: {
+				DisplayName: Glimmerstar
+				Tooltip: Conjurs smaller glimmer stars that spiral outwards and inwards
+			}
+
+			TruffleThrow: {
+				DisplayName: Truffle Throw
+				Tooltip: Afungus
 			}
 		}
 
@@ -5279,6 +5305,9 @@ Mods: {
 			SpazmicFlame.DisplayName: Spazmic Flame
 			StoneDartProj.DisplayName: Stone Dart Proj
 			StarfeatherDartProj.DisplayName: Starfeather Dart Proj
+			GlimmerstarProj.DisplayName: Glimmerstar Proj
+			TruffleThrowProj.DisplayName: Truffle Throw Proj
+			GlimmerStar.DisplayName: Glimmer Star
 		}
 
 		"Keybinds.Armor Ability.DisplayName": Armor Ability
@@ -6270,14 +6299,15 @@ Mods: {
 
 		MiscText: {
 			MadnessStart: You feel your mind pierced...
-			AetherCatchFishTooltip: Caught in the Aether
-			RedMushCatchFishTooltip: Caught in the Scarlet Mycelium Forest
-			MireCatchFishTooltip: Caught in the Shrouded Mire
-			InfernoCatchFishTooltip: Caught in the Dragon's Hoard
-			HarmonyCatchFishTooltip: Caught in the Harmony Caverns
-			VoidCatchFishTooltip: Caught in the Void's Edge
-			ScrapyardCatchFishTooltip: Caught in the Scrapyard Shores
-			ScrapyardAndVoidCatchFishRooltip: Caught in the Scrapyard Shores and Void's Edge
+			AetherCatchFishTooltip: Caught in Aether
+			RedMushCatchFishTooltip: Caught in Scarlet Mycelium Forest
+			MireCatchFishTooltip: Caught in Shrouded Mire
+			InfernoCatchFishTooltip: Caught in Dragon's Hoard
+			HarmonyCatchFishTooltip: Caught in Harmony Caverns
+			VoidCatchFishTooltip: Caught in Void's Edge
+			ScrapyardCatchFishTooltip: Caught in Scrapyard Shores
+			ScrapyardAndVoidCatchFishRooltip: Caught in Scrapyard Shores and Void's Edge
+			ForestCatchFishTooltip: Caught in Forest
 
 			Dappercap: {
 				FirstTalk1: I am?
