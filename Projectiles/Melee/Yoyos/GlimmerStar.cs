@@ -29,7 +29,7 @@ namespace MultidimensionMod.Projectiles.Melee.Yoyos
             Projectile.tileCollide = true;
             Projectile.hide = false;
             Projectile.penetrate = 2;
-            Projectile.timeLeft = 240;
+            Projectile.timeLeft = 250;
         }
 
         public override void OnKill(int timeLeft)

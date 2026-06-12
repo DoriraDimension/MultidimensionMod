@@ -93,7 +93,8 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 
 			if (!foundTarget)
 			{
-				Projectile.spriteDirection = player.direction;
+				Projectile.rotation = 0;
+                Projectile.spriteDirection = player.direction;
 			}
 
 			if (player.dead || !player.active)
@@ -111,7 +112,15 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 				Vector2 direction = targetCenter - Projectile.Center;
 				direction.Normalize();
 				Projectile.rotation = (targetCenter - Projectile.Center).ToRotation() + (Projectile.spriteDirection == 1 ? 0 : MathHelper.Pi);
-				if (ballTimer == 150)
+                if (targetCenter.X > Projectile.Center.X)
+                {
+                    Projectile.spriteDirection = 1;
+                }
+                else
+                {
+                    Projectile.spriteDirection = -1;
+                }
+                if (ballTimer == 150)
 				{
 					SoundEngine.PlaySound(SoundID.Item34, player.position);
 					if (Projectile.owner == Main.myPlayer)

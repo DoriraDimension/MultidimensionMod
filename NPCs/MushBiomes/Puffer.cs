@@ -25,7 +25,6 @@ namespace MultidimensionMod.NPCs.MushBiomes
         public override void SetStaticDefaults()
         {
             Main.npcFrameCount[NPC.type] = 9;
-            NPCID.Sets.CountsAsCritter[Type] = true;
             NPCID.Sets.DontDoHardmodeScaling[Type] = true;
             NPCID.Sets.CantTakeLunchMoney[Type] = true;
         }
@@ -36,8 +35,8 @@ namespace MultidimensionMod.NPCs.MushBiomes
             NPC.height = 52;
             NPC.aiStyle = -1;
             NPC.damage = 0;
-            NPC.defense = 1000;
-            NPC.lifeMax = 5;
+            NPC.defense = 100;
+            NPC.lifeMax = 250;
             NPC.HitSound = SoundID.NPCHit10;
             NPC.DeathSound = SoundID.NPCDeath5;
             NPC.knockBackResist = 0.0f;
@@ -47,6 +46,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
             Banner = NPC.type;
             SpawnModBiomes = new int[1] { ModContent.GetInstance<ShroomForest>().Type };
             BannerItem = ModContent.ItemType<PufferBanner>();
+            ItemID.Sets.KillsToBanner[BannerItem] = 25;
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
@@ -55,11 +55,6 @@ namespace MultidimensionMod.NPCs.MushBiomes
             {
                 new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Puffer")
             });
-        }
-
-        public override void OnSpawn(IEntitySource source)
-        {
-            NPC.life = 250;
         }
 
         public enum ActionState

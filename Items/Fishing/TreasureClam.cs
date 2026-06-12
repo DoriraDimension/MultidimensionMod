@@ -7,6 +7,7 @@ using MultidimensionMod.Items.Weapons.Melee.Boomerangs;
 using MultidimensionMod.Items.Weapons.Ranged.Bows;
 using System;
 using Terraria;
+using Terraria.Audio;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -33,6 +34,13 @@ namespace MultidimensionMod.Items.Fishing
         public override bool CanRightClick()
         {
             return true;
+        }
+
+        public override void RightClick(Player player)
+        {
+            SoundEngine.PlaySound(Sounds.CustomSounds.ClamCrack with { PitchVariance = 0.4f }, player.Center);
+            Gore.NewGore(player.GetSource_FromThis(), player.position, player.velocity, ModContent.Find<ModGore>("MultidimensionMod/ClamGore1").Type, 1);
+            Gore.NewGore(player.GetSource_FromThis(), player.position, player.velocity, ModContent.Find<ModGore>("MultidimensionMod/ClamGore2").Type, 1);
         }
 
         public override void ModifyItemLoot(ItemLoot Itemloot)

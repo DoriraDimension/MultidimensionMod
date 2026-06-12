@@ -5014,6 +5014,7 @@ Mods: {
 			Woodfisk: {
 				DisplayName: Wooden Flatfish
 				Tooltip: Caught in Purity
+				QuestDialogue: Hey buddy, my last cutting board somehow broke and now I need a new one. Of course I don't want any old cutting board, this one may be a bit fishy. I heard that around the forest lakes you can find a flat fish made entirely of wood. Probably got hit by some sort of wood Medusa. I don't care how or why, but I want it right now!
 			}
 
 			SmolderingShaleplate: {
@@ -5362,7 +5363,7 @@ Mods: {
 			Dapperbox.DisplayName: Just a regular box
 
 			Dorira: {
-				DisplayName: Dimensional God
+				DisplayName: Administrator
 
 				TownNPCMood: {
 					Content: ok
