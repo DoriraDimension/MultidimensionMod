@@ -3,56 +3,54 @@
   "WorkspaceRootPath": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\weapons\\ranged\\rocketlaunchers\\primussuperlauncher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\weapons\\ranged\\rocketlaunchers\\primussuperlauncher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\ranged\\burstkunaithrown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\ranged\\burstkunaithrown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\weapons\\ranged\\guns\\metalwormgun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\weapons\\ranged\\guns\\metalwormgun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleGravityDebuffBullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\weapons\\ranged\\flamethrowers\\thevulcano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\weapons\\ranged\\flamethrowers\\thevulcano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Pets\\ExampleLightPet\\ExampleLightPetProjectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\weapons\\magic\\staffs\\starrod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\weapons\\magic\\staffs\\starrod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleBullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\potions\\food\\wyvernmilk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\potions\\food\\wyvernmilk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleAdvancedFlailProjectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\potions\\food\\toadstool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\potions\\food\\toadstool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\materials\\manainfusedsandstone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\materials\\manainfusedsandstone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\fishing\\scrapsearcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\fishing\\scrapsearcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\fishing\\penrosefish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\fishing\\penrosefish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\fishing\\eternaloroboros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\fishing\\eternaloroboros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\critters\\babyglowmarinitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\critters\\babyglowmarinitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\bags\\fungusbag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\bags\\fungusbag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\magic\\moonlightwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\magic\\moonlightwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:localization\\en-us.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleJavelinProjectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\ranged\\shradesdemise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\ranged\\shradesdemise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\weapons\\ranged\\others\\burstkunai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\weapons\\ranged\\others\\burstkunai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\AA 1.3 decompiled\\Projectiles\\Javelin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\melee\\swords\\dirtagnanproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\melee\\swords\\dirtagnanproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\ranged\\sunraybrickthrown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\ranged\\sunraybrickthrown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\weapons\\ranged\\others\\sunraybrick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\weapons\\ranged\\others\\sunraybrick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\megaport\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\players\\mdplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,167 +64,180 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1575,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PrimusSuperlauncher.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Ranged\\RocketLaunchers\\PrimusSuperlauncher.cs",
-              "RelativeDocumentMoniker": "Items\\Weapons\\Ranged\\RocketLaunchers\\PrimusSuperlauncher.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Ranged\\RocketLaunchers\\PrimusSuperlauncher.cs",
-              "RelativeToolTip": "Items\\Weapons\\Ranged\\RocketLaunchers\\PrimusSuperlauncher.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAIwEEAAAB1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T18:56:53.944Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MetalWormGun.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Ranged\\Guns\\MetalWormGun.cs",
-              "RelativeDocumentMoniker": "Items\\Weapons\\Ranged\\Guns\\MetalWormGun.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Ranged\\Guns\\MetalWormGun.cs",
-              "RelativeToolTip": "Items\\Weapons\\Ranged\\Guns\\MetalWormGun.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAIwEIAAABmAAAA",
+              "Title": "ExampleGravityDebuffBullet.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleGravityDebuffBullet.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleGravityDebuffBullet.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleGravityDebuffBullet.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleGravityDebuffBullet.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACgAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T18:56:28.439Z",
+              "WhenOpened": "2026-06-13T16:51:20.997Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TheVulcano.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Ranged\\Flamethrowers\\TheVulcano.cs",
-              "RelativeDocumentMoniker": "Items\\Weapons\\Ranged\\Flamethrowers\\TheVulcano.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Ranged\\Flamethrowers\\TheVulcano.cs",
-              "RelativeToolTip": "Items\\Weapons\\Ranged\\Flamethrowers\\TheVulcano.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAwwEIAAABzAAAA",
+              "Title": "ExampleLightPetProjectile.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Pets\\ExampleLightPet\\ExampleLightPetProjectile.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Pets\\ExampleLightPet\\ExampleLightPetProjectile.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Pets\\ExampleLightPet\\ExampleLightPetProjectile.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Pets\\ExampleLightPet\\ExampleLightPetProjectile.cs",
+              "ViewState": "AQIAAIQAAAAAAAAAAAArwB4AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T18:56:10.032Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StarRod.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Magic\\Staffs\\StarRod.cs",
-              "RelativeDocumentMoniker": "Items\\Weapons\\Magic\\Staffs\\StarRod.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Magic\\Staffs\\StarRod.cs",
-              "RelativeToolTip": "Items\\Weapons\\Magic\\Staffs\\StarRod.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAwwFEAAABrAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T18:55:44.377Z",
+              "WhenOpened": "2026-06-13T16:51:06.631Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "WyvernMilk.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\WyvernMilk.cs",
-              "RelativeDocumentMoniker": "Items\\Potions\\Food\\WyvernMilk.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\WyvernMilk.cs",
-              "RelativeToolTip": "Items\\Potions\\Food\\WyvernMilk.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwB8AAABjAAAA",
+              "Title": "ExampleAdvancedFlailProjectile.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleAdvancedFlailProjectile.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleAdvancedFlailProjectile.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleAdvancedFlailProjectile.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleAdvancedFlailProjectile.cs",
+              "ViewState": "AQIAAOQBAAAAAAAAAAAAADIAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T18:55:26.768Z",
+              "WhenOpened": "2026-06-13T16:37:11.478Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Toadstool.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\Toadstool.cs",
-              "RelativeDocumentMoniker": "Items\\Potions\\Food\\Toadstool.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\Toadstool.cs",
-              "RelativeToolTip": "Items\\Potions\\Food\\Toadstool.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwB0AAABXAAAA",
+              "DocumentIndex": 3,
+              "Title": "ExampleBullet.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleBullet.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleBullet.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleBullet.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleBullet.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAAAEMAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T18:55:11.595Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ManaInfusedSandstone.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Materials\\ManaInfusedSandstone.cs",
-              "RelativeDocumentMoniker": "Items\\Materials\\ManaInfusedSandstone.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Materials\\ManaInfusedSandstone.cs",
-              "RelativeToolTip": "Items\\Materials\\ManaInfusedSandstone.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwBwAAABgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T18:54:50.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ScrapSearcher.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Fishing\\ScrapSearcher.cs",
-              "RelativeDocumentMoniker": "Items\\Fishing\\ScrapSearcher.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Fishing\\ScrapSearcher.cs",
-              "RelativeToolTip": "Items\\Fishing\\ScrapSearcher.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAowCMAAABeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T18:54:36.408Z",
+              "WhenOpened": "2026-06-13T15:35:40.727Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "PenroseFish.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Fishing\\PenroseFish.cs",
-              "RelativeDocumentMoniker": "Items\\Fishing\\PenroseFish.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Fishing\\PenroseFish.cs",
-              "RelativeToolTip": "Items\\Fishing\\PenroseFish.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwCMAAABeAAAA",
+              "Title": "ShradesDemise.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Ranged\\ShradesDemise.cs",
+              "RelativeDocumentMoniker": "Projectiles\\Ranged\\ShradesDemise.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Ranged\\ShradesDemise.cs",
+              "RelativeToolTip": "Projectiles\\Ranged\\ShradesDemise.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAwwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T18:54:19.942Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EternalOroboros.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Fishing\\EternalOroboros.cs",
-              "RelativeDocumentMoniker": "Items\\Fishing\\EternalOroboros.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Fishing\\EternalOroboros.cs",
-              "RelativeToolTip": "Items\\Fishing\\EternalOroboros.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwCMAAABXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T18:54:04.88Z",
+              "WhenOpened": "2026-06-13T15:25:16.97Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "BabyGlowmarinItem.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Critters\\BabyGlowmarinItem.cs",
-              "RelativeDocumentMoniker": "Items\\Critters\\BabyGlowmarinItem.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Critters\\BabyGlowmarinItem.cs",
-              "RelativeToolTip": "Items\\Critters\\BabyGlowmarinItem.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwCYAAABfAAAA",
+              "Title": "Javelin.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\AA 1.3 decompiled\\Projectiles\\Javelin.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\AA 1.3 decompiled\\Projectiles\\Javelin.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\AA 1.3 decompiled\\Projectiles\\Javelin.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\AA 1.3 decompiled\\Projectiles\\Javelin.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAArwCsAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T18:53:51.031Z",
+              "WhenOpened": "2026-06-13T15:20:24.514Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "FungusBag.cs",
-              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Bags\\FungusBag.cs",
-              "RelativeDocumentMoniker": "Items\\Bags\\FungusBag.cs",
-              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Bags\\FungusBag.cs",
-              "RelativeToolTip": "Items\\Bags\\FungusBag.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAADYAAABbAAAA",
+              "Title": "DirtagnanProj.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Melee\\Swords\\DirtagnanProj.cs",
+              "RelativeDocumentMoniker": "Projectiles\\Melee\\Swords\\DirtagnanProj.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Melee\\Swords\\DirtagnanProj.cs",
+              "RelativeToolTip": "Projectiles\\Melee\\Swords\\DirtagnanProj.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAmwDoAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T18:53:32.846Z",
+              "WhenOpened": "2026-06-13T14:56:15.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MoonlightWave.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Magic\\MoonlightWave.cs",
+              "RelativeDocumentMoniker": "Projectiles\\Magic\\MoonlightWave.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Magic\\MoonlightWave.cs",
+              "RelativeToolTip": "Projectiles\\Magic\\MoonlightWave.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAcwEkAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T14:38:21.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BurstKunaiThrown.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Ranged\\BurstKunaiThrown.cs",
+              "RelativeDocumentMoniker": "Projectiles\\Ranged\\BurstKunaiThrown.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Ranged\\BurstKunaiThrown.cs",
+              "RelativeToolTip": "Projectiles\\Ranged\\BurstKunaiThrown.cs",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAYwIoAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T14:06:22.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ExampleJavelinProjectile.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleJavelinProjectile.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleJavelinProjectile.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleJavelinProjectile.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Projectiles\\ExampleJavelinProjectile.cs",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAAALUAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T14:11:41.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SunrayBrickThrown.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Ranged\\SunrayBrickThrown.cs",
+              "RelativeDocumentMoniker": "Projectiles\\Ranged\\SunrayBrickThrown.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Ranged\\SunrayBrickThrown.cs",
+              "RelativeToolTip": "Projectiles\\Ranged\\SunrayBrickThrown.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowDEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T13:53:29.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BurstKunai.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Ranged\\Others\\BurstKunai.cs",
+              "RelativeDocumentMoniker": "Items\\Weapons\\Ranged\\Others\\BurstKunai.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Ranged\\Others\\BurstKunai.cs",
+              "RelativeToolTip": "Items\\Weapons\\Ranged\\Others\\BurstKunai.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAA5wCQAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T13:51:35.312Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
+              "Title": "SunrayBrick.cs",
+              "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Ranged\\Others\\SunrayBrick.cs",
+              "RelativeDocumentMoniker": "Items\\Weapons\\Ranged\\Others\\SunrayBrick.cs",
+              "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Ranged\\Others\\SunrayBrick.cs",
+              "RelativeToolTip": "Items\\Weapons\\Ranged\\Others\\SunrayBrick.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T13:41:56.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "MDPlayer.cs",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Players\\MDPlayer.cs",
               "RelativeDocumentMoniker": "Common\\Players\\MDPlayer.cs",
@@ -238,13 +249,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 6,
               "Title": "en-US.hjson",
               "DocumentMoniker": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US.hjson",
               "ToolTip": "C:\\Users\\Megaport\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US.hjson",
               "RelativeToolTip": "Localization\\en-US.hjson",
-              "ViewState": "AQIAAIUTAAAAAAAAAAAkwJgTAAA2AQAA",
+              "ViewState": "AQIAAKkTAAAAAAAAAAAkwLATAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-05-14T17:46:05.377Z",
               "EditorCaption": ""

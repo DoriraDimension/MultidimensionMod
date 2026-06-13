@@ -5035,6 +5035,11 @@ Mods: {
 				// DisplayName: Truffle Throw
 				// Tooltip: Afungus
 			}
+
+			BurstKunai: {
+				// DisplayName: Burst Kunai
+				// Tooltip: Sticks to enemies and explodes after a short delay
+			}
 		}
 
 		SetBonuses: {
@@ -5309,6 +5314,8 @@ Mods: {
 			// GlimmerstarProj.DisplayName: Glimmerstar Proj
 			// TruffleThrowProj.DisplayName: Truffle Throw Proj
 			// GlimmerStar.DisplayName: Glimmer Star
+			// BurstKunaiThrown.DisplayName: Burst Kunai Thrown
+			// BurstKunaiExplosion.DisplayName: Burst Kunai Explosion
 		}
 
 		// "Keybinds.Armor Ability.DisplayName": Armor Ability
