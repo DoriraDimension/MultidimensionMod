@@ -44,8 +44,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			{
 				// Here we despawn the NPC and send a message stating that the NPC has despawned
 				// LegacyMisc.35 is {0) has departed!
-				if (Main.netMode == NetmodeID.SinglePlayer) Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.MiscNPCText.Taraha.Departing", NPC.FullName), 17, 113, 105);
-				else ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.MultidimensionMod.MiscNPCText.Taraha.Departing", NPC.GetFullNetName()), new Color(17, 113, 105));
+				if (Main.netMode == NetmodeID.SinglePlayer) Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.NPCs.MiscText.Taraha.Departing", NPC.FullName), 17, 113, 105);
+				else ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.MultidimensionMod.NPCs.MiscText.Taraha.Departing", NPC.GetFullNetName()), new Color(17, 113, 105));
 				NPC.active = false;
 				NPC.netSkip = -1;
 				NPC.life = 0;
@@ -200,51 +200,51 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
             if (Main.LocalPlayer.HasItem(ModContent.ItemType<Pink>()))
             {
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.LollipopDialogue"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.LollipopDialogue"));
                 Main.npcChatCornerItem = ModContent.ItemType<Pink>();
             }
             else if (Main.LocalPlayer.HasItem(ModContent.ItemType<ShadeEye>()))
             {
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.ShadeItemDialogue"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.ShadeItemDialogue"));
             }
             else
 			{
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue1"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue2"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue3"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue4"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue5"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue6"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue7"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericDialogue8"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.GenericDialogue1"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.GenericDialogue2"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.GenericDialogue3"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.GenericDialogue4"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.GenericDialogue5"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.GenericDialogue6"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.GenericDialogue7"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.GenericDialogue8"));
                 if (Main.hardMode)
                 {
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericHardmodeDialogue1"));
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.GenericHardmodeDialogue2"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.GenericHardmodeDialogue1"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.GenericHardmodeDialogue2"));
                 }
                 if (dor >= 0)
                 {
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.DoriraDialogue"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.DoriraDialogue"));
                 }
                 if (dor >= 0)
                 {
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.DapperDialogue"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.DapperDialogue"));
                 }
                 if (Main.bloodMoon)
                 {
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.BloodMoonDialogue"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.BloodMoonDialogue"));
                 }
                 if (Main.slimeRain)
                 {
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.SlimeRainDialogue"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.SlimeRainDialogue"));
                 }
                 if (DownedSystem.downedSmiley)
                 {
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.SmileyDialogue"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.SmileyDialogue"));
                 }
                 if (DownedSystem.downedFungus)
                 {
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Taraha.FeudalDialogue"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.FeudalDialogue"));
                 }
             }
 

@@ -67,53 +67,53 @@ namespace MultidimensionMod.NPCs.Friendly
                     AdelTimer++;
                     if (AdelTimer == 180)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Adel1"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Adel1"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (AdelTimer == 420)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Adel2"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Adel2"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (AdelTimer == 660)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Adel3"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Adel3"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (AdelTimer == 900)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Adel4"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Adel4"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (AdelTimer == 1140)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Adel5"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Adel5"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (AdelTimer == 1380)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Adel6"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Adel6"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (AdelTimer == 1620)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Adel7"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Adel7"), false, false);
                         Main.combatText[i].lifeTime = 180;
                     }
                     if (AdelTimer == 1870)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Adel8"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Adel8"), false, false);
                         Main.combatText[i].lifeTime = 150;
                         Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ModContent.ItemType<Mythos>(), 1);
                     }
                     if (AdelTimer == 2100)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Adel9"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Adel9"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (AdelTimer == 2340)
                     {
-                        Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Adel10"));
+                        Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Adel10"));
                     }
                     if (AdelTimer >= 2341)
                     {

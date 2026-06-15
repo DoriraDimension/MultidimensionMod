@@ -1,0 +1,187 @@
+MadnessStart: You feel your mind pierced...
+AetherCatchFishTooltip: Caught in Aether
+RedMushCatchFishTooltip: Caught in Scarlet Mycelium Forest
+MireCatchFishTooltip: Caught in Shrouded Mire
+InfernoCatchFishTooltip: Caught in Dragon's Hoard
+HarmonyCatchFishTooltip: Caught in Harmony Caverns
+VoidCatchFishTooltip: Caught in Void's Edge
+ScrapyardCatchFishTooltip: Caught in Scrapyard Shores
+ScrapyardAndVoidCatchFishRooltip: Caught in Scrapyard Shores and Void's Edge
+ForestCatchFishTooltip: Caught in Forest
+
+DeathMessages: {
+	Socks: " died from the pain of wearing wet socks."
+	MonarchHeart: " was turned to mush."
+	AntiCheese: " has been punished for their skill issue."
+	Madness: "'s mind was consumed."
+	Flamescar: " burned their very soul."
+}
+
+SoulConversation: {
+	WallofFlesh: {
+		Arguement1: You sad fool, our downfall was your fault, now look at us, trapped inside this spirit cluster.
+		Arguement2: Only your country sized ego has left us in this situation!
+		Arguement3: You should just have given up, this war was stupid!
+		Arguement4: Says the one demon who only fought in it because he was bored.
+		Arguement5: You leading them was ultimately in our way.
+		Arguement6: In YOUR way?!
+		Arguement7: How about you learn that your land is not the center of the universe!!!
+		Arguement8: Hey, I think someone is listening.
+		Arguement9: Whoever you are, I think you agree with me, my opinion is superior isn't it?
+		Arguement10: DON'T listen to this punk, he is talking nothing but garbage.
+		Arguement11: We will see who they agree with.
+		Arguement12: Seek out the glorious hallowed lands and prove my point.
+		Arguement13: Oooor you make the better choice and look for the Underworld instead.
+		Arguement14: It is up to you but we know you will choose the right way.
+		Arguement15: Ours
+		Arguement16: SHUT UP ALREADY!!!
+		Adel1: Ah...
+		Adel2: These hallowed lands, they are just like home.
+		Adel3: Thank you for taking me here, this fills me with joy.
+		Adel4: You know, I had to be with this entity for too long now.
+		Adel5: I am not interested in any more time together.
+		Adel6: May I ask you to do me a favor?.
+		Adel7: My lord was murdered by the forces of Baaruun and I want to avenge him.
+		Adel8: Take my weapon and let us fight against the unworthy together.
+		Adel9: Go forth and make my race proud!
+		Adel10: Adel's soul fades away into Mythos.
+		Vertrarius1: Ugh, finally
+		Vertrarius2: Took you long enough.
+		Vertrarius3: ...
+		Vertrarius4: It can't be!
+		Vertrarius5: I can sense his soul!
+		Vertrarius6: My friend, I had to hang out with this idiot for so long.
+		Vertrarius7: It was so damn tiring.
+		Vertrarius8: But now I'm free and I can sense someone important down here.
+		Vertrarius9: Would you lend a hand and help me find him?
+		Vertrarius10: Take my sword and let us travel together.
+		Vertrarius11: And while you're at it, kick someone's arse to hell!
+		Vertrarius12: Vertrarius' soul fades away into Vulkanus.
+	}
+
+	Cultist: {
+		MoonSwordSpawn: Great Moonlight has awoken.
+		MoonSword1: Brave human
+		MoonSword2: Embrace me
+		MoonSword3: Bathe in my light
+		MoonSword4: Like he never could
+	}
+}
+
+DropConditions: {
+	DownedSkeletronCondition: Only available after defeating Skeletron
+	RealityCondition: Drops by doing unessecery complicated stuff
+	DimensiumCondition: This item won't appear in the bestiary
+	DownedMoonLordCondition: Only available after defeating Moon Lord
+	MissingGripCondition: Only drops from the last Grip of Chaos
+	DownedMushroomMonarchCondition: Only available after defeating Mushroom Monarch
+	DownedFeudalFungusCondition: Only available after defeating Feudal Fungus
+	DownedSmileyCondition: Only available after defeating Smiley
+}
+
+OtherConditions: {
+	InScarletForest: In the Scarlet Mycelium Forest
+	InShroudedMire: In the Shrouded Mire
+	InDragonsHoard: In the Dragon's Hoard
+	InHarmonyCaverns: In the Harmony Caverns
+}
+
+SpecialTooltips: {
+	Viewer: Hold [Shift] to view lore
+	Listen: Hold [Shift] to listen closer
+	Blooming: Hold [Shift] to read about blooming conditions
+}
+
+GameTips: {
+	MadnessShroomTip: Giving Madness Mushrooms to a true mushroom enthusiast will grant you nice rewards.
+	GeodeTip: Breaking all kinds of stone will reveal hidden Geodes inside, they may even contain ancient relics!
+	RealityShroomTip: A blessing from the Keeper is what you wish for? Try to ask your trusty administrator.
+	IceDrakeTip: Giving juvenile Ice Drakes the Feast of Midas may result in them staying with you.
+	MadnessNightTip: After the defeat of a great evil, madness may awaken at night.
+	MushForestTip: In the scarlet forests not far beyond the journey's beginning, you can find pricey mushrooms. But beware of the consequences.
+	DimensiumTip: Don't know what to do with all those shiny blue crystals? Don't worry, a dimensional traveller will arrive soon enough!
+	VikingTip: Remnants of once proud warriors can be found all across the icy caverns.
+	RahlemTip: The antlion infested desert caves contain remnants of a once proud cult.
+	PitTip: The east of the underworld attracts many demonic warriors, only glory or death awaits them.
+}
+
+WindowTitles: {
+	Space: Press space to live
+	Religion: Bible III, the coming of shroom
+	Madness: Now with a 80% chance to go mad
+	Dump: The nostalgian dumpster
+	BadFlirt: You are the harmony to my discord
+	Drama: Mushroom family drama
+	Watching: HE is always watching
+	Smiley: A smile at night
+}
+
+VanillaTooltipEdits: {
+	DraxDenseBlockTip: Capable of mining Dense Volcanic Rock and Dense Biomatter
+	PicksawChaosCaveTip: Capable of mining Lihzahrd Bricks, Volcanic Rock and Dank Depthstone
+	BlinkrootTip:
+		'''
+		A cave dwelling plant that glows gently in the darkness
+		Knowledgeable cave explorers tend to hold several of these
+		as their insides contain spores that grant a short lived glow effect
+		'''
+	BlinkrootBloomTip:
+		'''
+		The Blinkroot blooming conditions are rather unique, since they do not follow a set pattern.
+		As such it is impossible to predict their blooming state.
+		'''
+	DeathweedTip:
+		'''
+		An intruiging herb that grows only in the most disgusting landscapes
+		It contains strong toxins that make the plant inedible to most species
+		'''
+	DeathweedBloomTip:
+		'''
+		Deathweed will only bloom under the light of a full moon.
+		Due to unknown causes, the herb seems to be forced into bloom by a Blood Moon's light as well.
+		'''
+	FireblossomTip:
+		'''
+		Red plants only found in the ash of the underworld caverns
+		The spicy hot top grants a cozy warming effect when consumed
+		No wonder that demons consume these to dive even more into a hellish feeling from within
+		'''
+	FireblossomBloomTip:
+		'''
+		The flower of this herb will only bloom during sunset, roughly around 3:45 PM to 7:30 PM.
+		It has been observed that the presence of active rain will prevent blooming, even down in the underworld caverns.
+		'''
+	DaybloomTip:
+		'''
+		A common surface plant that is famous amongst many for its recovery effects
+		Giving a sick friend such a flower as seasoning in a soup works wonders
+		'''
+	DaybloomBloomTip: As the name of this herb suggests, it will bloom during the entirety of the day.
+	MoonglowTip:
+		'''
+		A blue glowing plant that thrives in the humidity of the jungle
+		Despite its beautiful glow, the blossom itself is more known for its potent poison
+		Hornets have previously been observed eating these
+		'''
+	MoonglowBloomTip: The Moonglow will only bloom during the night.
+	ShiverthornTip:
+		'''
+		A thorn covered plant found only in the cold environment of the Drakenheim tundra
+		History states that an ancient ancestor of this plant once lived in a warmer environment,
+		a plant known as the Glass Blossom
+		Nowadays it is used for concoctions to cool down one's own body
+		'''
+	ShiverthornBloomTip:
+		'''
+		Shiverthorn are unpredictable when it comes to blooming, as it is entirely random when it will occour.
+		However, unlike many other herbs, it will stay blooming until harvested or withering.
+		'''
+	WaterleafTip:
+		'''
+		A desert herb filled with fresh water it gathered from the air
+		Seen as an invasive species, this plant absorbs all humidity from the air to sustain itself
+		This leads to the environment not being able to recover and remain desolate
+		'''
+	WaterleafBloomTip: Due to the nature of this herb, it will bloom once it starts raining, as the humidity level in the air increases.
+	ShimmerablePostMoonLord: "[c/dd8fb2:Can only be shimmered after the Moon Lord has been defeated]"
+}

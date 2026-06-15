@@ -10,7 +10,7 @@ namespace MultidimensionMod.Common.ItemDropRules.DropConditions
 
         public DownedSkeletronCondition()
         {
-            Description ??= Language.GetOrRegister("Mods.MultidimensionMod.DropConditions.DownedSkeletronCondition");
+            Description ??= Language.GetOrRegister("Mods.MultidimensionMod.MiscText.DropConditions.DownedSkeletronCondition");
         }
 
         public bool CanDrop(DropAttemptInfo info)

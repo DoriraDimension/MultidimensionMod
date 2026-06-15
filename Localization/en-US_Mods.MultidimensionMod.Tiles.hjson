@@ -1,0 +1,108 @@
+VoidMatterDresserPlaced: {
+	ContainerName: Void Matter Dresser
+	MapEntry: Void Matter Dresser
+}
+
+VoidMatterStoragePlaced: {
+	ContainerName: Void Matter Storage
+	MapEntry: Void Matter Storage
+}
+
+AncientBanner.MapEntry: Ancient Banner
+AncientDepiction.MapEntry: Ancient Depiction
+AncientDragonSkullPlaced.MapEntry: Ancient Dragon Skull
+BossTrophy.MapEntry: Trophy
+BrokenAncientDepiction.MapEntry: Broken Ancient Depiction
+CheliaPlushiePlaced.MapEntry: Chelia Plushie
+DimensionalForge.MapEntry: Dimensional Forge
+FishLegacyPlaced.MapEntry: Fish Cleaver Display
+EmptyKingsFabricatorPlaced.MapEntry: Void Fabricator
+VoidMatterBathtubPlaced.MapEntry: Void Matter Bathtub
+VoidMatterBookcasePlaced.MapEntry: Void Matter Bookcase
+VoidMatterCandelabraPlaced.MapEntry: Void Matter Candelabra
+VoidMatterCandlePlaced.MapEntry: Void Matter Candle
+VoidMatterChairPlaced.MapEntry: Void Matter Chair
+VoidMatterChamberPlaced.MapEntry: Void Matter Chamber
+VoidMatterChandelierPlaced.MapEntry: Void Matter Chandelier
+VoidMatterClockPlaced.MapEntry: Void Matter Clock
+VoidMatterDoorClosed.MapEntry: Void Matter Door
+VoidMatterDoorOpen.MapEntry: Void Matter Door
+VoidMatterLampPlaced.MapEntry: Void Matter Lamp
+VoidMatterLanternPlaced.MapEntry: Void Matter Lantern
+VoidMatterPianoPlaced.MapEntry: Void Matter Piano
+VoidMatterSinkPlaced.MapEntry: Void Matter Sink
+VoidMatterSofaPlaced.MapEntry: Void Matter Sofa
+VoidMatterTablePlaced.MapEntry: Void Matter Table
+VoidMatterWorkBenchPlaced.MapEntry: Void Matter Workbench
+MonsterBanner.MapEntry: Banner
+OceanicGlowtree.MapEntry: Oceanic Glowtree
+Dimensium.MapEntry: Dimensium
+PlacedCrimsonAltar.MapEntry: Crimson Altar
+PlacedDemonAltar.MapEntry: Demon Altar
+DimensiumPlaced.MapEntry: Dimensium
+FrostburnSlimeBannerPlaced.MapEntry: Frostburn Slime Banner
+TridentBannerPlaced.MapEntry: Magic Trident Banner
+MonarchTrophyPlaced.MapEntry: Monarch Trophy Placed
+SmileyTrophyPlaced.MapEntry: Smiley Trophy Placed
+TheAncientChaosPlaced.MapEntry: The Ancient Chaos
+RottenMemoryPlaced.MapEntry: Rotten Memory
+RedMushBathtubPlaced.MapEntry: Red Mushroom Bathtub
+RedMushBookcasePlaced.MapEntry: Red Mushroom Bookcase
+RedMushCandelabraPlaced.MapEntry: Red Mushroom Candelabra
+RedMushCandlePlaced.MapEntry: Red Mushroom Candle
+RedMushChestPlaced.MapEntry: Red Mushroom Chest
+RedMushDresserPlaced.MapEntry: Red Mushroom Dresser
+RedMushPianoPlaced.MapEntry: Red Mushroom Piano
+RedMushSofaPlaced.MapEntry: Red Mushroom Sofa
+FungusTrophyPlaced.MapEntry: Feudal Fungus Trophy
+DragonEgg.MapEntry: Dragon Egg
+RazewoodBedPlaced.MapEntry: Razewood Bed
+RazewoodBookshelfPlaced.MapEntry: Razewood Bookshelf
+RazewoodCandelabraPlaced.MapEntry: Razewood Candelabr
+RazewoodCandlePlaced.MapEntry: Razewood Candle
+RazewoodChairPlaced.MapEntry: Razewood Chair
+RazewoodChandelierPlaced.MapEntry: Razewood Chandelier
+RazewoodChestPlaced.MapEntry: Razewood Chest
+RazewoodClockPlaced.MapEntry: Razewood Clock
+RazewoodCouchPlaced.MapEntry: Razewood Sofa
+RazewoodDoorClosed.MapEntry: Razewood Door
+RazewoodDoorOpen.MapEntry: Razewood Door
+RazewoodDresserPlaced.MapEntry: Razewood Dresser
+RazewoodLampPlaced.MapEntry: Razewood Lamp
+RazewoodLanternPlaced.MapEntry: Razewood Lantern
+RazewoodPianoPlaced.MapEntry: Razewood Piano
+RazewoodSinkPlaced.MapEntry: Razewood Sink
+RazewoodTablePlaced.MapEntry: Razewood Table
+RazewoodTubPlaced.MapEntry: Razewood Bathtub
+RazewoodWorkbenchPlaced.MapEntry: Razewood Work Bench
+IncineriteOre.MapEntry: Cinderite Gold
+KingsCapPlaced.MapEntry: Alarmshroom
+AbyssiumOrePlaced.MapEntry: Dreadsoil Ore
+BogwoodBathtubPlaced.MapEntry: Bogwood Bathtub
+BogwoodBedPlaced.MapEntry: Bogwood Bed
+BogwoodBookshelfPlaced.MapEntry: Bogwood Bookshelf
+BogwoodCandelabraPlaced.MapEntry: Bogwood Candelabra
+BogwoodCandlePlaced.MapEntry: Bogwood Candle
+BogwoodChairPlaced.MapEntry: Bogwood Chair
+BogwoodChandelierPlaced.MapEntry: Bogwood Chandelier
+BogwoodChestPlaced.MapEntry: Bogwood Chest
+BogwoodClockPlaced.MapEntry: Bogwood Clock
+BogwoodCouchPlaced.MapEntry: Bogwood Couch
+BogwoodDoorClosed.MapEntry: Bogwood Door
+BogwoodDoorOpen.MapEntry: Bogwood Door
+BogwoodDresserPlaced.MapEntry: Bogwood Dresser
+BogwoodLampPlaced.MapEntry: Bogwood Lamp
+BogwoodLanternPlaced.MapEntry: Bogwood Lantern
+BogwoodPianoPlaced.MapEntry: Bogwood Piano
+BogwoodSinkPlaced.MapEntry: Bogwood Sink
+BogwoodTablePlaced.MapEntry: Bogwood Table
+BogwoodWorkbenchPlaced.MapEntry: Bogwood Work Bench
+ApocalyptitePlaced.MapEntry: Eschatyte
+CratePlaced.MapEntry: Crate
+AidenPlushiePlaced.MapEntry: Aiden Plushie Placed
+CultissimaPlushiePlaced.MapEntry: Cultissima Plushie Placed
+KarvolisPlushiePlaced.MapEntry: Karvolis Plushie Placed
+KuruPlushiePlaced.MapEntry: Kuru Plushie Placed
+PsyrobnikPlushiePlaced.MapEntry: Psyrobnik Plushie Placed
+VeronicaPlushiePlaced.MapEntry: Veronica Plushie Placed
+ZetPlushiePlaced.MapEntry: Zet Plushie Placed

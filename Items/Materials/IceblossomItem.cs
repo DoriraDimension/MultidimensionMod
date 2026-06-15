@@ -47,7 +47,7 @@ namespace MultidimensionMod.Items.Materials
                 }
                 else
                 {
-                    TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Blooming"))
+                    TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Blooming"))
                     {
                         OverrideColor = Color.Gray,
                     };

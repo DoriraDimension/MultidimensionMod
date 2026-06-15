@@ -10,7 +10,7 @@ namespace MultidimensionMod.Common.ItemDropRules.DropConditions
 
         public DownedMoonLordCondition()
         {
-            Description ??= Language.GetOrRegister("Mods.MultidimensionMod.DropConditions.DownedMoonLordCondition");
+            Description ??= Language.GetOrRegister("Mods.MultidimensionMod.MiscText.DropConditions.DownedMoonLordCondition");
         }
 
         public bool CanDrop(DropAttemptInfo info)

@@ -133,7 +133,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			WeightedRandom<string> chat = new WeightedRandom<string>();
             if (player.name == "Dorira")
             {
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.ImposterDialogue"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.ImposterDialogue"));
                 player.AddBuff(BuffID.Weak, 24000);
                 player.AddBuff(BuffID.BrokenArmor, 24000);
                 player.AddBuff(BuffID.Slow, 24000);
@@ -145,39 +145,39 @@ namespace MultidimensionMod.NPCs.TownNPCs
                 int BoomBoomMan = NPC.FindFirstNPC(NPCID.Demolitionist);
                 if (Gobfuck >= 0 && Main.rand.NextBool(4))
                 {
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GoblinDialogue", Main.npc[Gobfuck].GivenName));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.GoblinDialogue", Main.npc[Gobfuck].GivenName));
                 }
                 if (BoomBoomMan >= 0 && Main.rand.NextBool(4))
                 {
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.DemolitionistDialogue", Main.npc[BoomBoomMan].GivenName));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.DemolitionistDialogue", Main.npc[BoomBoomMan].GivenName));
                 }
                 if (Main.rand.NextBool(8))
                 {
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.MushroomDialogue"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.MushroomDialogue"));
                 }
                 if (Main.hardMode)
                 {
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericHardmodeDialogue1"));
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.YttriumDialogue"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.GenericHardmodeDialogue1"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.YttriumDialogue"));
                 }
                 if (MDQuests.DoriraQuests >= 1)
                 {
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.SerpentAscendDialogue"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.SerpentAscendDialogue"));
                 }
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue1"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue2"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue4"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue5"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue6"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue7"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue8"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue9"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue10"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue11"));
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue12"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.GenericDialogue1"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.GenericDialogue2"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.GenericDialogue4"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.GenericDialogue5"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.GenericDialogue6"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.GenericDialogue7"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.GenericDialogue8"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.GenericDialogue9"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.GenericDialogue10"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.GenericDialogue11"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.GenericDialogue12"));
                 if (NPC.downedBoss2)
                 {
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.GenericDialogue3"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.GenericDialogue3"));
                 }
             }
             return chat;
@@ -240,7 +240,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 					case 2:
 						if (MDQuests.DoriraQuests == 0)
 						{
-							chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.FlashStart"));
+							chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.FlashStart"));
 							int dinner = player.FindItem(ItemID.Mouse);
 							int scales = player.FindItem(ModContent.ItemType<FrostScale>());
                             int dimen = player.FindItem(ModContent.ItemType<Dimensium>());
@@ -279,12 +279,12 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		public static string HelpDialogue()
         {
 			WeightedRandom<string> chat = new(Main.rand);
-			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.ColdHellHelp"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.DimensiumHelp"));
-            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.KingsCapHelp"));
+			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.ColdHellHelp"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.DimensiumHelp"));
+            chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.KingsCapHelp"));
             if (Main.rand.NextBool(100))
             {
-                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.TouchGrassHelp"));
+                chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.TouchGrassHelp"));
             }
             return chat;
 		}
@@ -294,7 +294,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			WeightedRandom<string> chat = new(Main.rand);
 			if (MDQuests.DoriraQuests == 0)
             {
-				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.FlashQuestStart"));
+				chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.FlashQuestStart"));
 			}
 			return chat;
 		}
@@ -302,7 +302,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		public static string FlashDialogue()
         {
 			WeightedRandom<string> chat = new(Main.rand);
-			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.FlashQuestClear"));
+			chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Dorira.FlashQuestClear"));
 			return chat;
 		}
 

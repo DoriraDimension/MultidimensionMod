@@ -77,7 +77,7 @@ namespace MultidimensionMod.Items.Souls
             }
             else
             {
-                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Viewer"))
+                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
                 {
                     OverrideColor = Color.Gray,
                 };
@@ -159,71 +159,71 @@ namespace MultidimensionMod.Items.Souls
             {
                 if (ArguementTimer == 120)
                 {
-                    int i = CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Arguement1"), true, false);
+                    int i = CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Arguement1"), true, false);
                     Main.combatText[i].lifeTime = 180;
                 }
                 if (ArguementTimer == 360)
                 {
-                    CombatText.NewText(player.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Arguement2"), true, false);
+                    CombatText.NewText(player.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Arguement2"), true, false);
                 }
                 if (ArguementTimer == 540)
                 {
-                    CombatText.NewText(player.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Arguement3"), true, false);
+                    CombatText.NewText(player.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Arguement3"), true, false);
                 }
                 if (ArguementTimer == 660)
                 {
-                    CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Arguement4"), true, false);
+                    CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Arguement4"), true, false);
                 }
                 if (ArguementTimer == 840)
                 {
-                    CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Arguement5"), true, false);
+                    CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Arguement5"), true, false);
                 }
                 if (ArguementTimer == 960)
                 {
-                    CombatText.NewText(player.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Arguement6"), true, false);
+                    CombatText.NewText(player.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Arguement6"), true, false);
                 }
                 if (ArguementTimer == 1020)
                 {
-                    int i =CombatText.NewText(player.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Arguement7"), true, false);
+                    int i =CombatText.NewText(player.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Arguement7"), true, false);
                     Main.combatText[i].lifeTime = 180;
                 }
                 if (ArguementTimer == 1200)
                 {
-                    CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Arguement8"), true, false);
+                    CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Arguement8"), true, false);
                 }
                 if (ArguementTimer == 1380)
                 {
-                    int i = CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Arguement9"), true, false);
+                    int i = CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Arguement9"), true, false);
                     Main.combatText[i].lifeTime = 180;
                 }
                 if (ArguementTimer == 1560)
                 {
-                    CombatText.NewText(player.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Arguement10"), true, false);
+                    CombatText.NewText(player.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Arguement10"), true, false);
                 }
                 if (ArguementTimer == 1740)
                 {
-                    CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Arguement11"), true, false);
+                    CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Arguement11"), true, false);
                 }
                 if (ArguementTimer == 1920)
                 {
-                    CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Arguement12"), true, false);
+                    CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Arguement12"), true, false);
                 }
                 if (ArguementTimer == 2100)
                 {
-                    int i = CombatText.NewText(player.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Arguement13"), true, false);
+                    int i = CombatText.NewText(player.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Arguement13"), true, false);
                     Main.combatText[i].lifeTime = 180;
                 }
                 if (ArguementTimer == 2340)
                 {
-                    CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Arguement14"), true, false);
+                    CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Arguement14"), true, false);
                 }
                 if (ArguementTimer == 2520)
                 {
-                    CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Arguement15"), true, false);
+                    CombatText.NewText(player.getRect(), MDColors.AdelText, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Arguement15"), true, false);
                 }
                 if (ArguementTimer == 2580)
                 {
-                    CombatText.NewText(player.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Arguement16"), true, false);
+                    CombatText.NewText(player.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Arguement16"), true, false);
                 }
                 if (ArguementTimer >= 2581)
                 {

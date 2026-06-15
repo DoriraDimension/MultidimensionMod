@@ -1,0 +1,54 @@
+FungusAchievement: {
+	FriendlyName: Let there be Light
+	Description: Defeat the Feudal Fungus, psychic master of the glowing mushrooms and highest in the fungal order.
+}
+
+MonarchAchievement: {
+	FriendlyName: Dethroned
+	Description: Defeat the Mushroom Monarch, ruler of the scarlet forest.
+}
+
+DrakeAchievement: {
+	Description: Feed an Ice Drake Juvenile using a roasted bird.
+	FriendlyName: Pacifist
+}
+
+SockAchievement: {
+	Description: Get killed by jumping into water while wearing Socks. Why would you put yourself through such a miserable experience?
+	FriendlyName: Unbearable Suffering
+}
+
+TarahaAchievement: {
+	FriendlyName: Otherworldly Friend
+	Description: Trade an item with Taraha. 'Might be trash to you, but holy relic for other.'
+}
+
+MindAchievement: {
+	FriendlyName: Madman's Lobotomy
+	Description: Defeat an ascended mind that stalks the maddened nights.
+}
+
+SmileyAchievement: {
+	FriendlyName: The White Shadow
+	Description: Defeat Smiley, the dark one stalked by light.
+}
+
+ToadAchievement: {
+	FriendlyName: Croaked Croaker
+	Description: Kill a Truffle Toad within the glowing mushroom biome
+}
+
+ShimmerFishAchievement: {
+	Description: Reel in a catch while fishing in shimmer.
+	FriendlyName: Fishes for Wishes
+}
+
+MadnessAchievement: {
+	Description: Survive the Night of Madness, when madness gazes down to awaken those who shouldn't be.
+	FriendlyName: Sturdy Mind
+}
+
+EyeAchievement: {
+	Description: Obtain an Omni Eye, a cursed relic created through fusion of other magic eyes.
+	FriendlyName: Eye See You
+}

@@ -1,0 +1,214 @@
+BlazingSuffering: {
+	DisplayName: Blazing Suffering
+	Description: Your body is getting incinerated from the inside
+}
+
+DrakePoison: {
+	DisplayName: Drakeblood Poison
+	Description: Toxificated blood is weakening you
+}
+
+Madness: {
+	DisplayName: Madness
+	Description: Your mind is being consumed
+}
+
+DarkRebelsBuff: {
+	DisplayName: Dark Rebel
+	Description: A brave Darkling is aiding you in battle
+}
+
+DrakeBuff: {
+	DisplayName: Tame Ice Drake Juvenile
+	Description: A cute Ice Drake baby is MURDERING YOUR ENEMIES!
+}
+
+FleshrendingTerror: {
+	DisplayName: Terror Bee
+	Description: A malicious hunter is fighting for you
+}
+
+MaskBuff: {
+	DisplayName: Golem Mask
+	Description: A Golem mask is fighting for you
+}
+
+OcramServantBuff: {
+	DisplayName: Forgotten Servant
+	Description: The servant of a long lost time is fighting for you
+}
+
+SandEleBuff: {
+	DisplayName: Lesser Sand Elemental
+	Description: A living ball of sand is fighting for you
+}
+
+IgnaenHeadBuff: {
+	DisplayName: Archtyrant's Head
+	Description: The head of a demonic lord is following you.
+}
+
+SmileyJrBuff: {
+	DisplayName: Smiley Jr
+	Description: You will take care of him now
+}
+
+CalmMind: {
+	DisplayName: Calm Mind
+	Description: Madness has a harder time reaching your mind.
+}
+
+DimensionalShield: {
+	DisplayName: Dimensional Shield
+	Description: Your body is surrounded by a dimensional energy shield.
+}
+
+LifePower: {
+	DisplayName: Life Power
+	Description: You don't feel healthy, you feel SUPER healthy.
+}
+
+OceansBlessing: {
+	DisplayName: Oceans Blessing
+	Description: You can swim and breathe like a resident of the sea.
+}
+
+pap: {
+	DisplayName: lol
+	Description: you are immortal now.
+}
+
+WarriorsHeart: {
+	DisplayName: Warrior's Heart
+	Description: Your heart lusts for battle, meele damage is increased.
+}
+
+CosimaBuff: {
+	DisplayName: Cassiopeia
+	Description: Just hacked herself into your life
+}
+
+MarysWrath: {
+	Description: A ghostly presence is watching you
+	DisplayName: Mary's Wrath
+}
+
+VoidDashCooldown: {
+	DisplayName: Dark Dash Cooldown
+	Description: Dark invincibility is disabled
+}
+
+Nihil: {
+	DisplayName: Nihil
+	Description: Dark energy has disabled defense
+}
+
+ManaBurstCooldown: {
+	DisplayName: Mana Burst Cooldown
+	Description: Cannot unleash mana shockwaves
+}
+
+IndigoInjection: {
+	DisplayName: Indigo Injection
+	Description: The symbiosis floods you with energy
+}
+
+InjectionCooldown: {
+	DisplayName: Injection Cooldown
+	Description: Cannot connect to the stem
+}
+
+PrayerBuff: {
+	DisplayName: Light Prayer
+	Description: The prayer of the mushroom empowers you
+}
+
+FeudalBabBuff: {
+	DisplayName: Feudal Bab
+	Description: Proud representative of the glowing fungi
+}
+
+LightOverload: {
+	DisplayName: Light Overload
+	Description: You are flooded with energy
+}
+
+LightStarved: {
+	DisplayName: Light Starved
+	Description: You yearn for energy
+}
+
+SwapExhaustion: {
+	DisplayName: Swap Exhaustion
+	Description: Can't swap modes
+}
+
+LegPain: {
+	DisplayName: Leg Pain
+	Description: You can't high jump
+}
+
+PotionInfection: {
+	DisplayName: Unhealthy Infection
+	Description: Healing items only heal half their normal amount
+}
+
+TwinPrayerBuff: {
+	DisplayName: Twin Prayer
+	Description: The prayer of the mushrooms empowers you
+}
+
+MonarchBabBuff: {
+	DisplayName: Bab Monarch
+	Description: Does not want to be here right now
+}
+
+Accursed: {
+	DisplayName: Accursed
+	Description: Crazy ghosts haunt you
+}
+
+DimensionalShock: {
+	DisplayName: Dimensional Shock
+	Description: Dimensional Energy disrupts your spirit
+}
+
+InnerEmber: {
+	DisplayName: Inner Ember
+	Description: A small ember in your soul, be sure not to turn it into an inferno
+}
+
+GripMinion: {
+	DisplayName: Claw Companions
+	Description: Flaming and Damp claws fight for you
+}
+
+TheFlash: {
+	DisplayName: The Flash
+	Description: A lovable noodle is keeping you company
+}
+
+MildBurn: {
+	DisplayName: Mild Burn
+	Description: Your skin is irritated, you are less durable
+}
+
+Hazed: {
+	DisplayName: Hazed
+	Description: You are drugged and weak
+}
+
+TidalWhipTag: {
+	DisplayName: Tidal Whip Tag
+	Description: Taggers
+}
+
+VoidArmWhipTag: {
+	DisplayName: Void Arm Whip Tag
+	Description: Taggers
+}
+
+MadnessEmpower: {
+	DisplayName: Madness Frenzy
+	Description: Madness even madder now
+}

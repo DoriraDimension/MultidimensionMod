@@ -203,29 +203,29 @@ namespace MultidimensionMod
             {
                 if (Main.rand.NextBool(10) && Dappercap != -1)
                 {
-                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Dapper1");
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.NPCs.VanillaNPCDialogue.Truffle.Dapper1");
                     if (Main.rand.NextBool(15) && DownedSystem.downedFungus)
-                        chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Dapper2");
+                        chat = Language.GetTextValue("Mods.MultidimensionMod.NPCs.VanillaNPCDialogue.Truffle.Dapper2");
                 }
                 if (Main.rand.NextBool(10))
-                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Umos1");
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.NPCs.VanillaNPCDialogue.Truffle.Umos1");
                 if (Main.rand.NextBool(10))
-                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Umos2");
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.NPCs.VanillaNPCDialogue.Truffle.Umos2");
                 if (Main.rand.NextBool(10))
-                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Umos3");
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.NPCs.VanillaNPCDialogue.Truffle.Umos3");
                 if (Main.rand.NextBool(12) && DownedSystem.downedFungus)
-                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.UmosDead");
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.NPCs.VanillaNPCDialogue.Truffle.UmosDead");
                 if (Main.rand.NextBool(15) && NPC.downedMoonlord)
-                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Unimush1");
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.NPCs.VanillaNPCDialogue.Truffle.Unimush1");
                 if (Main.rand.NextBool(15) && NPC.downedMoonlord)
-                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Unimush2");
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.NPCs.VanillaNPCDialogue.Truffle.Unimush2");
                 if (Main.rand.NextBool(15) && NPC.downedMoonlord)
-                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Truffle.Unimush3");
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.NPCs.VanillaNPCDialogue.Truffle.Unimush3");
             }
             if (npc.type == NPCID.Wizard)
             {
                 if (Main.rand.NextBool(12))
-                    chat = Language.GetTextValue("Mods.MultidimensionMod.VanillaNPCDialogue.Wizard.Carces");
+                    chat = Language.GetTextValue("Mods.MultidimensionMod.NPCs.VanillaNPCDialogue.Wizard.Carces");
             }
         }
 

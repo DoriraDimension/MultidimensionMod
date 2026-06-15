@@ -30,7 +30,7 @@ namespace MultidimensionMod.Items.Souls
         {
             if (Main.keyState.PressingShift())
             {
-                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.WormSoul.Lore"))
+                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.MiscText.WormSoul.Lore"))
                 {
                     OverrideColor = Color.LightGray
                 };

@@ -54,7 +54,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Tomes
             }
             else
             {
-                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Viewer"))
+                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
                 {
                     OverrideColor = Color.Gray,
                 };

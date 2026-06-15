@@ -10,7 +10,7 @@ namespace MultidimensionMod.Common.ItemDropRules.DropConditions
 
         public DimensiumCondition()
         {
-            Description ??= Language.GetOrRegister("Mods.MultidimensionMod.DropConditions.DimensiumCondition");
+            Description ??= Language.GetOrRegister("Mods.MultidimensionMod.MiscText.DropConditions.DimensiumCondition");
         }
 
         public bool CanDrop(DropAttemptInfo info)

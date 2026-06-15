@@ -11,7 +11,7 @@ namespace MultidimensionMod.Common.ItemDropRules.DropConditions
 
         public DownedMushroomMonarchCondition()
         {
-            Description ??= Language.GetOrRegister("Mods.MultidimensionMod.DropConditions.DownedMushroomMonarchCondition");
+            Description ??= Language.GetOrRegister("Mods.MultidimensionMod.MiscText.DropConditions.DownedMushroomMonarchCondition");
         }
 
         public bool CanDrop(DropAttemptInfo info)
@@ -36,7 +36,7 @@ namespace MultidimensionMod.Common.ItemDropRules.DropConditions
 
         public DownedFeudalFungusCondition()
         {
-            Description ??= Language.GetOrRegister("Mods.MultidimensionMod.DropConditions.DownedFeudalFungusCondition");
+            Description ??= Language.GetOrRegister("Mods.MultidimensionMod.MiscText.DropConditions.DownedFeudalFungusCondition");
         }
 
         public bool CanDrop(DropAttemptInfo info)
@@ -61,7 +61,7 @@ namespace MultidimensionMod.Common.ItemDropRules.DropConditions
 
         public DownedSmileyCondition()
         {
-            Description ??= Language.GetOrRegister("Mods.MultidimensionMod.DropConditions.DownedSmileyCondition");
+            Description ??= Language.GetOrRegister("Mods.MultidimensionMod.MiscText.DropConditions.DownedSmileyCondition");
         }
 
         public bool CanDrop(DropAttemptInfo info)

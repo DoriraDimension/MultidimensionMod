@@ -269,7 +269,7 @@ namespace MultidimensionMod.Common.Globals.Items
         {
             if (item.type == ItemID.PickaxeAxe || item.type == ItemID.Drax) //Add tooltip that mentions dense chaos biome blocks being minable with this
             {
-                TooltipLine line = new(Mod, "DraxTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.DraxDenseBlockTip"))
+                TooltipLine line = new(Mod, "DraxTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.DraxDenseBlockTip"))
                 {
                     OverrideColor = Color.White
                 };
@@ -278,7 +278,7 @@ namespace MultidimensionMod.Common.Globals.Items
             if (item.type == ItemID.Picksaw) //Add tooltip that mentions Dank Depthstone and Volcanic Rock being minable with this
             {
                 tooltips.RemoveAll(TooltipLine => TooltipLine.Name.Equals("Tooltip0"));
-                TooltipLine line = new(Mod, "PicksawTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.PicksawChaosCaveTip"))
+                TooltipLine line = new(Mod, "PicksawTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.PicksawChaosCaveTip"))
                 {
                     OverrideColor = Color.White
                 };
@@ -287,7 +287,7 @@ namespace MultidimensionMod.Common.Globals.Items
             //Gives every herb a tooltip that describes what they do more or less vaguely
             if (item.type == ItemID.Blinkroot)
             {
-                TooltipLine line = new(Mod, "BlinkrootTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.BlinkrootTip"))
+                TooltipLine line = new(Mod, "BlinkrootTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.BlinkrootTip"))
                 {
                     OverrideColor = Color.White
                 };
@@ -296,7 +296,7 @@ namespace MultidimensionMod.Common.Globals.Items
                 {
                     if (Main.keyState.PressingShift())
                     {
-                        TooltipLine bloomLine = new(Mod, "BlinkrootBloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.BlinkrootBloomTip"))
+                        TooltipLine bloomLine = new(Mod, "BlinkrootBloomTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.BlinkrootBloomTip"))
                         {
                             OverrideColor = Color.Orange
                         };
@@ -304,7 +304,7 @@ namespace MultidimensionMod.Common.Globals.Items
                     }
                     else
                     {
-                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Blooming"))
+                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Blooming"))
                         {
                             OverrideColor = Color.Gray,
                         };
@@ -314,7 +314,7 @@ namespace MultidimensionMod.Common.Globals.Items
             }
             if (item.type == ItemID.Deathweed)
             {
-                TooltipLine line = new(Mod, "DeathweedTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.DeathweedTip"))
+                TooltipLine line = new(Mod, "DeathweedTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.DeathweedTip"))
                 {
                     OverrideColor = Color.White
                 };
@@ -323,7 +323,7 @@ namespace MultidimensionMod.Common.Globals.Items
                 {
                     if (Main.keyState.PressingShift())
                     {
-                        TooltipLine bloomLine = new(Mod, "DeathweedBloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.DeathweedBloomTip"))
+                        TooltipLine bloomLine = new(Mod, "DeathweedBloomTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.DeathweedBloomTip"))
                         {
                             OverrideColor = Color.Purple
                         };
@@ -331,7 +331,7 @@ namespace MultidimensionMod.Common.Globals.Items
                     }
                     else
                     {
-                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Blooming"))
+                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Blooming"))
                         {
                             OverrideColor = Color.Gray,
                         };
@@ -341,7 +341,7 @@ namespace MultidimensionMod.Common.Globals.Items
             }
             if (item.type == ItemID.Fireblossom)
             {
-                TooltipLine line = new(Mod, "FireblossomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.FireblossomTip"))
+                TooltipLine line = new(Mod, "FireblossomTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.FireblossomTip"))
                 {
                     OverrideColor = Color.White
                 };
@@ -350,7 +350,7 @@ namespace MultidimensionMod.Common.Globals.Items
                 {
                     if (Main.keyState.PressingShift())
                     {
-                        TooltipLine bloomLine = new(Mod, "FireblossomBloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.FireblossomBloomTip"))
+                        TooltipLine bloomLine = new(Mod, "FireblossomBloomTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.FireblossomBloomTip"))
                         {
                             OverrideColor = Color.OrangeRed
                         };
@@ -358,7 +358,7 @@ namespace MultidimensionMod.Common.Globals.Items
                     }
                     else
                     {
-                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Blooming"))
+                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Blooming"))
                         {
                             OverrideColor = Color.Gray,
                         };
@@ -368,7 +368,7 @@ namespace MultidimensionMod.Common.Globals.Items
             }
             if (item.type == ItemID.Daybloom)
             {
-                TooltipLine line = new(Mod, "DaybloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.DaybloomTip"))
+                TooltipLine line = new(Mod, "DaybloomTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.DaybloomTip"))
                 {
                     OverrideColor = Color.White
                 };
@@ -377,7 +377,7 @@ namespace MultidimensionMod.Common.Globals.Items
                 {
                     if (Main.keyState.PressingShift())
                     {
-                        TooltipLine bloomLine = new(Mod, "DaybloomBloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.DaybloomBloomTip"))
+                        TooltipLine bloomLine = new(Mod, "DaybloomBloomTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.DaybloomBloomTip"))
                         {
                             OverrideColor = Color.Yellow
                         };
@@ -385,7 +385,7 @@ namespace MultidimensionMod.Common.Globals.Items
                     }
                     else
                     {
-                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Blooming"))
+                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Blooming"))
                         {
                             OverrideColor = Color.Gray,
                         };
@@ -395,7 +395,7 @@ namespace MultidimensionMod.Common.Globals.Items
             }
             if (item.type == ItemID.Moonglow)
             {
-                TooltipLine line = new(Mod, "MoonglowTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.MoonglowTip"))
+                TooltipLine line = new(Mod, "MoonglowTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.MoonglowTip"))
                 {
                     OverrideColor = Color.White
                 };
@@ -404,7 +404,7 @@ namespace MultidimensionMod.Common.Globals.Items
                 {
                     if (Main.keyState.PressingShift())
                     {
-                        TooltipLine bloomLine = new(Mod, "MoonglowBloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.MoonglowBloomTip"))
+                        TooltipLine bloomLine = new(Mod, "MoonglowBloomTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.MoonglowBloomTip"))
                         {
                             OverrideColor = Color.LightBlue
                         };
@@ -412,7 +412,7 @@ namespace MultidimensionMod.Common.Globals.Items
                     }
                     else
                     {
-                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Blooming"))
+                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Blooming"))
                         {
                             OverrideColor = Color.Gray,
                         };
@@ -422,7 +422,7 @@ namespace MultidimensionMod.Common.Globals.Items
             }
             if (item.type == ItemID.Shiverthorn)
             {
-                TooltipLine line = new(Mod, "ShiverthornTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.ShiverthornTip"))
+                TooltipLine line = new(Mod, "ShiverthornTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.ShiverthornTip"))
                 {
                     OverrideColor = Color.White
                 };
@@ -431,7 +431,7 @@ namespace MultidimensionMod.Common.Globals.Items
                 {
                     if (Main.keyState.PressingShift())
                     {
-                        TooltipLine bloomLine = new(Mod, "ShiverthornBloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.ShiverthornBloomTip"))
+                        TooltipLine bloomLine = new(Mod, "ShiverthornBloomTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.ShiverthornBloomTip"))
                         {
                             OverrideColor = Color.CornflowerBlue
                         };
@@ -439,7 +439,7 @@ namespace MultidimensionMod.Common.Globals.Items
                     }
                     else
                     {
-                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Blooming"))
+                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Blooming"))
                         {
                             OverrideColor = Color.Gray,
                         };
@@ -449,7 +449,7 @@ namespace MultidimensionMod.Common.Globals.Items
             }
             if (item.type == ItemID.Waterleaf)
             {
-                TooltipLine line = new(Mod, "WaterleafTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.WaterleafTip"))
+                TooltipLine line = new(Mod, "WaterleafTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.WaterleafTip"))
                 {
                     OverrideColor = Color.White
                 };
@@ -458,7 +458,7 @@ namespace MultidimensionMod.Common.Globals.Items
                 {
                     if (Main.keyState.PressingShift())
                     {
-                        TooltipLine bloomLine = new(Mod, "ShiverthornBloomTip", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.WaterleafBloomTip"))
+                        TooltipLine bloomLine = new(Mod, "ShiverthornBloomTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.WaterleafBloomTip"))
                         {
                             OverrideColor = Color.DeepSkyBlue
                         };
@@ -466,7 +466,7 @@ namespace MultidimensionMod.Common.Globals.Items
                     }
                     else
                     {
-                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Blooming"))
+                        TooltipLine shiftLine = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Blooming"))
                         {
                             OverrideColor = Color.Gray,
                         };
@@ -479,7 +479,7 @@ namespace MultidimensionMod.Common.Globals.Items
                 if (Main.LocalPlayer.HasInInventory(ModContent.ItemType<MirrorOfOrigin>()))
                 {
 
-                    TooltipLine line = new(Mod, "ShimmerablePostMoonLord", Language.GetTextValue("Mods.MultidimensionMod.VanillaTooltipEdits.ShimmerablePostMoonLord"))
+                    TooltipLine line = new(Mod, "ShimmerablePostMoonLord", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.ShimmerablePostMoonLord"))
                     {
                         OverrideColor = Color.White
                     };

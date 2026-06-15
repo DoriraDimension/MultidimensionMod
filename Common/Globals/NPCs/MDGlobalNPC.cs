@@ -147,7 +147,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.EyeofCthulhu")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.EyeofCthulhu")
                     });
                 }
                 if (npc.type == NPCID.EaterofWorldsHead)
@@ -155,7 +155,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.EaterofWorlds")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.EaterofWorlds")
                     });
                 }
                 if (npc.type == NPCID.BrainofCthulhu)
@@ -163,7 +163,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.BrainofCthulhu")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.BrainofCthulhu")
                     });
                 }
                 if (npc.type == NPCID.SkeletronHead)
@@ -171,7 +171,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Skeletron")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.Skeletron")
                     });
                 }
                 if (npc.type == NPCID.WallofFlesh)
@@ -179,7 +179,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.WallofFlesh")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.WallofFlesh")
                     });
                 }
                 if (npc.type == NPCID.Spazmatism)
@@ -187,7 +187,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Spazmatism")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.Spazmatism")
                     });
                 }
                 if (npc.type == NPCID.Retinazer)
@@ -195,7 +195,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Retinazer")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.Retinazer")
                     });
                 }
                 if (npc.type == NPCID.TheDestroyer)
@@ -203,7 +203,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Destroyer")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.Destroyer")
                     });
                 }
                 if (npc.type == NPCID.SkeletronPrime)
@@ -211,7 +211,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.SkeletronPrime")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.SkeletronPrime")
                     });
                 }
                 if (npc.type == NPCID.Plantera)
@@ -219,7 +219,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Plantera")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.Plantera")
                     });
                 }
                 if (npc.type == NPCID.HallowBoss)
@@ -227,7 +227,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.EmpressofLight")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.EmpressofLight")
                     });
                 }
                 if (npc.type == NPCID.MoonLordCore)
@@ -235,7 +235,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.MoonLord")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.MoonLord")
                     });
                 }
                 if (npc.type == NPCID.WyvernHead)
@@ -243,7 +243,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Wyvern")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.Wyvern")
                     });
                 }
                 if (npc.type == NPCID.Wraith)
@@ -251,7 +251,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Wraith")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.Wraith")
                     });
                 }
                 if (npc.type == NPCID.SeekerHead)
@@ -259,7 +259,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.WorldFeeder")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.WorldFeeder")
                     });
                 }
                 if (npc.type == NPCID.Paladin)
@@ -267,7 +267,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Paladin")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.Paladin")
                     });
                 }
                 if (npc.type == NPCID.ChaosElemental)
@@ -275,7 +275,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.ChaosElemental")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.ChaosElemental")
                     });
                 }
                 if (npc.type == NPCID.VoodooDemon)
@@ -283,7 +283,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.VoodooDemon")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.VoodooDemon")
                     });
                 }
                 if (npc.type == NPCID.UndeadViking)
@@ -291,7 +291,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.UndeadViking")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.UndeadViking")
                     });
                 }
                 if (npc.type == NPCID.Harpy)
@@ -299,7 +299,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Harpy")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.Harpy")
                     });
                 }
                 if (npc.type == NPCID.TacticalSkeleton)
@@ -307,7 +307,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.TacticalSkeleton")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.TacticalSkeleton")
                     });
                 }
                 if (npc.type == NPCID.SkeletonCommando)
@@ -315,7 +315,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.SkeletonCommando")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.SkeletonCommando")
                     });
                 }
                 if (npc.type == NPCID.SkeletonSniper)
@@ -323,7 +323,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.SkeletonSniper")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.SkeletonSniper")
                     });
                 }
                 if (npc.type == NPCID.Demolitionist)
@@ -331,7 +331,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Demolitionist")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.Demolitionist")
                     });
                 }
                 if (npc.type == NPCID.GoblinTinkerer)
@@ -339,7 +339,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.GoblinTinkerer")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.GoblinTinkerer")
                     });
                 }
                 if (npc.type == NPCID.ArmsDealer)
@@ -347,7 +347,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.ArmsDealer")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.ArmsDealer")
                     });
                 }
                 if (npc.type == NPCID.Mechanic)
@@ -355,7 +355,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Mechanic")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.Mechanic")
                     });
                 }
                 if (npc.type == NPCID.Steampunker)
@@ -363,7 +363,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Steampunker")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.Steampunker")
                     });
                 }
                 if (npc.type == NPCID.Cyborg)
@@ -371,7 +371,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Cyborg")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.Cyborg")
                     });
                 }
                 if (npc.type == NPCID.Princess)
@@ -379,7 +379,7 @@ namespace MultidimensionMod
                     bestiaryEntry.Info.RemoveAll(e => e is FlavorTextBestiaryInfoElement);
                     bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
                     {
-                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.VanillaBestiaryEdits.Princess")
+                        new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.VanillaBestiaryEdits.Princess")
                     });
                 }
             }

@@ -68,63 +68,63 @@ namespace MultidimensionMod.NPCs.Friendly
                     VertrariusTimer++;
                     if (VertrariusTimer == 180)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Vertrarius1"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Vertrarius1"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (VertrariusTimer == 420)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Vertrarius2"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Vertrarius2"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (VertrariusTimer == 660)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Vertrarius3"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Vertrarius3"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (VertrariusTimer == 900)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Vertrarius4"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Vertrarius4"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (VertrariusTimer == 1140)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Vertrarius5"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Vertrarius5"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (VertrariusTimer == 1380)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Vertrarius6"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Vertrarius6"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (VertrariusTimer == 1620)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Vertrarius7"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Vertrarius7"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (VertrariusTimer == 1870)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Vertrarius8"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Vertrarius8"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (VertrariusTimer == 2100)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Vertrarius9"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Vertrarius9"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (VertrariusTimer == 2340)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Vertrarius10"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Vertrarius10"), false, false);
                         Main.combatText[i].lifeTime = 150;
                         Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ModContent.ItemType<Vulkanus>(), 1);
                     }
                     if (VertrariusTimer == 2580)
                     {
-                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Vertrarius11"), false, false);
+                        int i = CombatText.NewText(NPC.getRect(), Color.Orange, Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Vertrarius11"), false, false);
                         Main.combatText[i].lifeTime = 150;
                     }
                     if (VertrariusTimer == 2820)
                     {
-                        Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.SoulConversation.WallofFlesh.Vertrarius12"));
+                        Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.MiscText.SoulConversation.WallofFlesh.Vertrarius12"));
                     }
                     if (VertrariusTimer >= 2821)
                     {

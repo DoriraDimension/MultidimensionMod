@@ -1,0 +1,344 @@
+CorrGuy.DisplayName: Infested Abomination
+DecayFly.DisplayName: Decay Fly
+BabyGlowmarin.DisplayName: Baby Glowmarin
+GilaMonster.DisplayName: Gilania
+LesserSandElemental.DisplayName: Lesser Sand Elemental
+Darkling.DisplayName: Darkling
+Ashton.DisplayName: Ashton
+OtherworldlyGlowmarin.DisplayName: Otherworldly Glowmarin
+ParrotLobster.DisplayName: Parrot Lobster
+StormFrontEel.DisplayName: Storm Front Eel
+
+TownDrake: {
+	DisplayName: Ice Drake Juvenile
+	Dialogue1: Sniff Sniff
+	Dialogue2: Shi Shi Shia
+	Dialogue3: grrrrrr
+	Dialogue4: *It stares at you intensely*
+	TheThreat: Mark my words mortal, as they will be the last thing you hear in your worthless life. We will strike when you least expect it.
+	Adoption: You adopted a juvenile Ice Drake, treat it well.
+	Death: Your Drake left, try to find a new one!
+}
+
+IceDrakeJuvenile: {
+	DisplayName: Ice Drake Juvenile
+	FeedingFail: You need Roasted Bird to feed it.
+}
+
+SearedAshton.DisplayName: Seared Ashton
+Dusty.DisplayName: Dusty
+Victim.DisplayName: Victim
+VictimsEye.DisplayName: Victim's Eye
+Madman.DisplayName: Madman
+MadnessBat.DisplayName: Madness Flier
+MadnessBat2.DisplayName: Madness Gazer
+MadnessDog.DisplayName: Starving Madness
+
+Smiley: {
+	DisplayName: Smiley
+
+	BossChecklistIntegration: {
+		SpawnInfo: Use a [i:MultidimensionMod/UnknownEmoji] at night.
+		DespawnMessage: Smiley continues his search for vengeance.
+	}
+}
+
+DoriraTpose.DisplayName: Tposing Dorira
+Dapperbox.DisplayName: Just a regular box
+
+Dorira: {
+	DisplayName: Administrator
+
+	TownNPCMood: {
+		Content: ok
+		NoHome: Uh... you don't happen to possess a room for me where I could stay?
+		FarFromHome: How did I get here?
+		LoveSpace: It's amazing to have so much room, makes it easier to practice with my sword!
+		DislikeCrowded: You know, I really like people around, but not this many.
+		HateCrowded: I hate big groups I hate big groups I hate big groups I hate big groups
+		LoveBiome: The nice warm sun, the soothing waves, it really is lovely here.
+		LikeBiome: I really like it here, all this nature is really nice, but something is still missing.
+		DislikeBiome: I really like to visit caves and play around in them but I rather have sunlight once in a while.
+		HateBiome: I really can't stand this blazing heat, it feels like I'm being incinerated.
+		LoveNPC: Good that you put me near {NPCName}, someone has to be the protector. I'm talking about the others of course, not her. But to be real here, I just can't stand us being seperated for too long.
+		LikeNPC: I really like having {NPCName} around, he is a great source of explosives for my wall bangs.
+		DislikeNPC: No, get {NPCName} away from me, I want to keep my cheated Platinum Coins.
+		HateNPC: I don't know why, but I just hate {NPCName}.
+		LikeNPC_Princess: You know, {NPCName} is pink, small and adorable, how could I NOT love her.
+		Princess_LovesNPC: "{NPCName} is such a nice guy and he can be kinda crazy sometimes, but he always brings cookies so who can complain."
+	}
+}
+
+Taraha: {
+	DisplayName: Interdimensional Trader
+
+	TownNPCMood: {
+		Content: Me always happy!
+		NoHome: Me always happy!
+		FarFromHome: Me always happy!
+		LoveSpace: Me always happy!
+		DislikeCrowded: Me always happy!
+		HateCrowded: Me always happy!
+		LoveBiome: Me always happy!
+		LikeBiome: Me always happy!
+		DislikeBiome: Me always happy!
+		HateBiome: Me always happy!
+		LoveNPC: Me always happy!
+		LikeNPC: Me always happy!
+		DislikeNPC: Me always happy!
+		HateNPC: Me always happy!
+		LikeNPC_Princess: Me always happy!
+		Princess_LovesNPC: I've never seen a visitor like Taraha, how exciting!
+	}
+
+	MiscText: {
+		Arrival: A portal has opened near the center.
+		Departing: The portal has closed, until next time.
+	}
+}
+
+AdelSpirit.DisplayName: Adel von Gunresat
+VertrariusSpirit.DisplayName: Vertrarius von Baaruun
+
+MushroomMonarch: {
+	DisplayName: Mushroom Monarch
+	PowerUp: The scarlet monarch's faded light stirs...
+
+	BossChecklistIntegration: {
+		SpawnInfo: Use a [i:MultidimensionMod/IntimidatingMushroom] near a Sleeping Mushroom in the Scarlet Mycelium Forest. Grow naturally on Scarlet Mycelium or drop from fleeing Spore Puffers.
+		DespawnMessage: The scarlet monarch returns to peace.
+	}
+}
+
+RedMushling.DisplayName: Red Mushling
+
+MushroomHeir: {
+	DisplayName: Mushroom Heir
+
+	TownNPCMood: {
+		Content: I feel pretty funky right now.
+		NoHome: Bro, do you have a couch I can chill on?
+		FarFromHome: Uh, the trip got me pretty far away.
+		LoveSpace: Less people around means less people asking about weird substances.
+		DislikeCrowded: I have noticed people staring at me, it's bothering me. I'd like less people around.
+		HateCrowded: So many people keep asking me about my "stuff", I want to go elsewhere.
+		LoveBiome: Maybe if I stay here, I can see my uncle again!
+		LikeBiome: This magical place is pretty cool, maybe I find some mystical mushrooms here.
+		DislikeBiome: This place is boring as heck.
+		HateBiome: I don't want to be here, get me out of here. This just reminds me too much of my old man.
+		LoveNPC: Oh {NPCName} is so awesome, she throws the most coolio parties ever. I mean the secret VIP ones, not this boring Happy Birthday crap.
+		LikeNPC: It's cool to have another mushroom around, {NPCName} is really chill too.
+		DislikeNPC: I sometimes hear {NPCName} breathing behind my door at night... he is creepy...
+		HateNPC: DUDE! Why is dad here?! This place SUCKS!
+		LikeNPC_Princess: For some weird reason my brain wants to like {NPCName}, but I don't want to.
+		Princess_LovesNPC: "{NPCName} is such a funny little goober, I want to just squeeze him!"
+	}
+
+	MiscText: {
+		FirstTalk1: I am?
+		FirstTalk2: Understood
+		GiveReality: Give the weird mushroom
+		GiveMadness: Give Madness Mushroom
+		GiveHover: Give Hovercaps
+		GiveRare: Give Rare Plant
+	}
+}
+
+AldinGrabberEscape.DisplayName: ???
+AldinGrabber.DisplayName: ???
+
+FeudalFungus: {
+	DisplayName: Feudal Fungus
+	SecondPhaseName: Umos
+	Spawn1: Rethem?
+	Spawn2: Arkem mi ki?
+	Spawn3: ...
+	Spawn4: Teht ruth...
+	Spawn5: Wat her ju dom geru das..?
+	Spawn6: WAT HER JU DOMATU!?
+	SpawnTranslated1: Brother?
+	SpawnTranslated2: What is it?
+	SpawnTranslated3: That ring...
+	SpawnTranslated4: What have you done to him..?
+	SpawnTranslated5: WHAT HAVE YOU DONE!?
+	DefeatSpawn: So we meet again wretch.
+	Transition1: Terl me, wat her ju domatu!
+	Transition2: Focus now!
+	Transition3: Teht ordiko essebri me dam rethem's ruth!
+	Transition4: Do not be afraid, thy vengeance will come soon.
+	Transition5: Listen careful, murderous wretch, thy actions shall be punished.
+	Transition6: By the light of Umos!
+	Transition7: Bew ta loma mi Umos!
+	TransitionTranslated2: This fiend possesses my dear brother's ring!
+	Defeat1: Away!
+	Defeat2: Away with thee!
+	Defeat3: Why art thou not giving up?
+
+	BossChecklistIntegration: {
+		SpawnInfo: Use a [i:MultidimensionMod/ConfusingMushroom] in a Glowing Mushroom cave. Obtained by giving 5 [i:MultidimensionMod/HovercapItem] to the Mushroom Heir.
+		DespawnMessage: Feudal Fungus disappears into the glowing caverns.
+	}
+}
+
+GlowSentry.DisplayName: Empowered Glowing Mushroom
+EvokedMushroot.DisplayName: Evoked Mushroot
+TruffleToad.DisplayName: Truffle Toad
+GlowBomb.DisplayName: Overloaded Glowing Mushroom
+CapBunny.DisplayName: Capped Bunny
+Mushbug.DisplayName: Myceli Bug
+Puffer.DisplayName: Spore Puffer
+ShroomJelly.DisplayName: Mushroom Jelly
+Hovercap.DisplayName: Hovercap
+MushbugBaby.DisplayName: Myceli Larva
+MonarchSlep.DisplayName: Sleeping Mushroom
+DragonClawM.DisplayName: Dragon Claw
+GripOfChaosBlue.DisplayName: Bogheart Grip
+GripOfChaosRed.DisplayName: Magmacore Grip
+HydraClawM.DisplayName: Hydra Claw
+Darkdrifter.DisplayName: Darkdrifter
+SeraphSlug.DisplayName: Seraph Slug
+MireSkulker.DisplayName: Skulker
+DrifterSpawner.DisplayName: Drifter Spawner
+BogFrog.DisplayName: Bog Frog
+MoonMorpho.DisplayName: Moonlit Morpho
+Newt.DisplayName: Newt
+Miresquito.DisplayName: Miresquito
+DepthAngler.DisplayName: Depth Angler
+FogAngler.DisplayName: Fog Angler
+MushSlime.DisplayName: Mushroom Slime
+
+MushroomFollower: {
+	DisplayName: Mushroom Follower
+	Dialogue1: Ooo light, please let me witness your brilliance, am I not worthy?
+	Dialogue2: I'm but a mere shadow in your presence, oh magnificent light!
+	Dialogue3: I pray for our continued safety, for a world without crime.
+	Dialogue4: There are many creatures that break into our sanctuary, but luckily, our light keeps us safe.
+	Dialogue5: The sleeping light, we defend with all our might. The sleeping light, we defend with all our might.
+	Dialogue6: Are you a new member of our group?
+}
+
+MushroomPreacher: {
+	DisplayName: Mushroom Preacher
+	Dialogue1: Greetings traveler, what brings you to our beloved sanctuary? Why not come pray with us, you won't regret it.
+	Dialogue2: Aaa, aren't the glowing caverns just magnificent this time around?
+	Dialogue3: My dear, spread the word of light around, more need to bathe in its glory!
+	Dialogue4: Are you here to see him too? Our glowing royalty. If so, let me teach you the words of light.
+	Dialogue5: The sleeping light, we defend with all our might. Now my fellows, say it with me! The sleeping light, we defend with all our might.
+	Dialogue6: From the darkness, there emerged a spark of light. Soon it created the world, filled it with beings it calls its children. This is us, we who follow its radiance, we who dwell in its warmth.
+	Dialogue7: Even with its height... of power, our beloved light, it was feeling bereft, of its primordial might. With a deep breath, it called forth its 3 most beloved children, tasking them to serve the world and watch over us.
+}
+
+AMindFromBeyond.DisplayName: A Mind from Beyond
+LakeBat.DisplayName: Lil' Terror
+Finfly.DisplayName: Finfly
+Biofeeder.DisplayName: Biofeeder
+Stalker.DisplayName: Stalker
+Mossling.DisplayName: Mossling
+Mosster.DisplayName: Mosster
+Lecharvis.DisplayName: Lecharvis
+Bloatleech.DisplayName: Bloatleech
+Gaster.DisplayName: Mysterious Man
+
+Dialogue: {
+	Dorira: {
+		GoblinDialogue: I came here because I heard the anomalies in this dimension are very bad, {0}'s money sucking service is DEFINITELY one.
+		DemolitionistDialogue: When I go monster hunting, I will always buy {0}'s explosives from now on. Why I need bombs for hunting? You think a raw wall will do the trick? PAH!
+		GenericDialogue1: When you are going to the Underworld, don't run into a wall.
+		GenericDialogue2: serglhw3o85zhp35ognp'gd1312mfgh'dfdlhgftzjmdzinhw''046ihn
+		GenericDialogue3: I've had a weird feeling since a while, its as if everything could go mad any second...
+		GenericDialogue4: Do you know this mod named Awakened Light? Yeah, me neither.
+		GenericDialogue5: Oh yeah, so there was once this guy who was incredibly racist against Goblins. Well I killed him, no hesitation. Okay actually I just simply didn't like that guy.
+		GenericDialogue6: Insert something very interesting here
+		GenericDialogue7: There is fungus among us.
+		GenericDialogue8: I suddenly have the urge to write an entire essay about why people should stop making flying pigs.
+		GenericDialogue9: Keep your safe safe.
+		GenericDialogue10: Do you ever want to start a conversation but everything that comes out is just "the"?
+		GenericDialogue11: The best game design choice ever made was giving the desert furry a secret one-shot attack.
+		GenericDialogue12: I hope I can fix everything somehow...
+		GenericHardmodeDialogue1: Hey just between us two, if you happen to possess a sword made of fish, throw it into some weird liquid. ;)
+		YttriumDialogue: Crabs have grown in power, soon they will oberthrow us and become the dominant species. No but seriously, you should check out those crabs at the ocean.
+		MushroomDialogue: I had a dream where you showed me all of these alchemy mushrooms in a glowing mushroom biome while shopping with me. I think you did that after defeating a weird stone construct powered by solar energy.
+		SerpentAscendDialogue: I heard that in its dying moments, a serpent will ascend to become a wyrm. Maybe it's an act of mercy, an apology from their ancestors for stripping them of their primal forms. Truth or not, it is a beautiful thought to hold onto.
+		ImposterDialogue: Oh hey, that's a cool name you got there, reminds me of someone. Oh? You are feeling weird? You must have eaten something bad.
+		#Below is help dialogue
+		ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
+		DimensiumHelp: You can find Dimensium by doing many different things. Killing, mining, fishing, and so much more.
+		KingsCapHelp: You know that mushroom forest nearby? If you wait long enough, you may find a mushroom that is larger than the others. You may wake it up using a unique fungus only found in that forest.
+		TouchGrassHelp: Go outside
+		#Below is quest dialogue
+		FlashQuestStart: Hey, I thought you could help me out right now, I need some objects for something important. If you were to bring me 10 Frost Scales, 2 mice and around 5 Dimensium that would be great. What do I need them for? Well... I can tell you, if you bring me these things.
+		FlashQuestClear: Thank you so much! With this I could create a magic construct in the image of one I miss alot. Here, you can take him with you for a while, he might be a nice little support.
+		#Below is tpose dialogue
+		Tpose: He seems to be experiencing something real funky.
+	}
+
+	Taraha: {
+		GenericDialogue1: Hello, welcome, trade rarities?
+		GenericDialogue2: *eldritch gibberish*
+		GenericDialogue3: Madness is lurking, be careful.
+		GenericDialogue4: The LIGHT, so bright, so bright!
+		GenericDialogue5: You ask why acorns needed? Taraha has to plant lots of acorns. Taraha wants own woods, big trees, many trees.
+		GenericDialogue6: Has human ever tried finding sparkly soup? Sparkly soup somewhere behind humid place with stingy insects. Need to dig deep.
+		GenericDialogue7: Taraha love this dimension, so much energy, feels comfy.
+		GenericDialogue8: Taraha sees many persons here petting small fluffy creature. Taraha not know why food is being pet.
+		GenericHardmodeDialogue1: Taraha traded wax for superpowerful relic the other day. Funny man thought wax was holy blood from deity.
+		GenericHardmodeDialogue2: Taraha feel so many different signatures around. Why so many people here who don't belong?
+		DoriraDialogue: Dorira, he traded powerful objects for... chocolate...
+		DapperDialogue: Taraha talked to small mushroom boy about mushrooms earlier. Taraha really wanted lollipop but boy didn't want to trade for anything Taraha provided. Taraha is suffering, wants lollipop.
+		BloodMoonDialogue: Taraha will bite hand off if human keeps staring.
+		SlimeRainDialogue: Yum yum, gelatin heaven!
+		ShadeItemDialogue: Shaded eye, Taraha can smell it. Belongs to friend, friend must be very trusty to give you gift like this. Say hello for Taraha when human meet friend.
+		LollipopDialogue: Taraha can feel it. Human has lollipop. Give! Give now!
+		SmileyDialogue: The king, empty, alone, withering...
+		FeudalDialogue: Taraha know Umos, bad influence, he speak nonsense!
+	}
+
+	Dappercap: {
+		FatherDialogue: DAD, GET THE HELL AWAY FROM HERE!
+		UncleDialogue: OMG uncle, hi!
+		ClothTruffleDialogue: So, sometimes I see {0} sneak into {0}'s house at night. You think there is something going on between them?
+		AldinDialogue: I once met this awesome mushroom enthusiast, he was pretty chill and cool. He told me he wanted to find 7 mushrooms to do whatever, probably bend space-time or something. Anyways, he disappeared without a trace and I have not seen him since then.
+		RocketDialogue: So I talked to this guy once who really seemed to like mushrooms, it was a nice conversation until he mentioned he preferred my dad over my uncle. I was like 'DUDE HOW?' and he kept going with how awesome he is. I told him to shroom himself and left him alone with a moldy one, hope the smell unrots his brain.
+		GenericDialogue1: My uncle is so cool, unlike my boring as hell dad. He EVEN GLOWS, can you believe that??
+		GenericDialogue2: Hey between you and me, I'm pretty sure my uncle is a hallucinogenic!!
+		GenericDialogue3: I had this friend of mine named Malcolm, I got several awesome mushrooms from him, but then he suddenly stopped, saying something like "I have to be a better person". Bleh... weirdo.
+		GenericDialogue4: Dem mushromz hit hart todai
+		GenericDialogue6: Sometimes my dad was so annoying that I told him to finally go get some milk.
+		GenericDialogue7: I heard there is a kingdom full of mushroom people, but it's not ruled by a mushroom, do you think it's real?
+		GenericDialogue8: Yo, would be awesome if you were to meet my uncle. If you bring me like, 5 of these Hovercaps, I'm going to give you something that will definitely draw his attention. Why I need those caps? Well I find it really funny to use them as a frisbee.
+		GenericDialogue8B: So, my uncle thought you killed my dad and stole the ring. That is very unfortunate, but tell ME. Did you two have an epic fight? Did you? Did you?
+		#Below is Alch Mushroom dialogue
+		TradeSuccess1: Yo awesome, take these for your work.
+		TradeSuccess2: Thanks, my other contact will really appreciate these!
+		TradeFail1: Idk if you understand the concept of trading but you do indeed need to give me something of interest, this isn't god damn donation central.
+		TradeFail2: Hello? You understand me? You need to give thingie so I give thingie. So GET your ass out unless you need something important.
+		MadnessTrade: HOLY COW! I have no idea where you found this but these mushrooms are EXTREMELY rare. There is only one species in my possession that I could give you for such a beauty.
+		DyeItemTrade: Oh thanks, how did you know I was hungry?
+		GlowTrade: Alright, here ya go bro. I stole this from my dad to sell it but apperantly it belongs to my uncle. Try to give it back so you two can get to know eachother!
+		#Below is first time talk dialogue
+		FirstTalk1: I saw you gave my dad a good thrashing, so I guess you're cool.
+		FirstTalk2: Yes bro, you don't know how much I hate that guy, hope he went to cry in a corner. I'm Deadly Dappercap btw, the deadliest fungus in town, I love to get around and gather some really funky shrooms. Let's say you bring me some valuable things and I'll give you some of them. But if anyone asks, they aren't from me, understood?
+		FirstTalk3: Good to know. So you bring me rare fauna and I give you some pricey fungi, that or you buy them for a Dapper deluxe price.
+		#Below is box dialogue
+		Box: Ey, go away, you are going to reveal my location if you keep talking to me. I will not come out until I know its safe again.
+		#Below is reality shroom event dialogue
+		AldinGrab1: I don't even know this mushroom, thats how rare it must be. It makes me feel weird though, so I'm not sure if I want this. WHAT THE HECK!?
+		AldinGrab2: Well... that was something I guess.
+	}
+
+	VanillaNPCDialogue: {
+		Truffle: {
+			Dapper1: My brother Malcom, always talked about little Dappercap when he visited. But then he eventually stopped showing up, and not even dapper knows where he is now. He just said Malcom was gonna make amends for his crimes.
+			Dapper2: Despite his looks and behavior, Dappercap is the scarlet prince. But even with this title and the respect he gains from it, he ran away and never returned home. Even Umos is in mild distraught by this.
+			Umos1: Our glowing royalty, Umos, he is what keeps us going, that light in the dark. While I don't 100% agree with his ways, he is still our light.
+			Umos2: It is really scary to be granted sentience out of nowhere. I felt lost at first, but then I was guided by a light, it was his light. These are times of peace for my kin, something not many have.
+			Umos3: Many creatures in the dark caverns come to our glowing sanctuaries. Those often bear hostility however, which makes them intruders rather than guests. Somehow Umos sees them as worthy, saying that all deserve salvation.
+			UmosDead: I know you defeated our apostle in battle. I have no grudge against you, it must have been a misunderstanding. He can be very defensive against outsiders.
+			Unimush1: I feel like something is pulling at my mind recently, it makes me very uneasy...
+			Unimush2: Since recently I hear my brother call to me from afar sometimes, but when I look, there is nobody there.
+			Unimush3: My nightmares have gotten worse, I feel like everyone wants to consume me.
+		}
+
+		Wizard.Carces: I once heard of a settlement called Carces. Apperantly it was a humble town that was famous for its so called 'Twin Libraries', which would contain ancient manuscripts. I would love to get my hands on some of those, but sadly the town was burned down many years ago.
+	}
+}

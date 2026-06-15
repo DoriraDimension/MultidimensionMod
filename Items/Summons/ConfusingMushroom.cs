@@ -37,7 +37,7 @@ namespace MultidimensionMod.Items.Summons
         {
             if (Main.keyState.PressingShift())
             {
-                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.ConfusingMushroom.Lore"))
+                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.MiscText.Items.ConfusingMushroom.Lore"))
                 {
                     OverrideColor = Color.LightGray
                 };
