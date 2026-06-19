@@ -26,8 +26,8 @@ namespace MultidimensionMod
         //Shade Item rarity colors
         public static Color ShadeYellow => new(242, 205, 12);
 
-        //Dorira color
-        public static Color DoriraColor => new(18, 279, 247);
+        //Admin's color
+        public static Color AdminColor => new(18, 279, 247);
         #endregion
 
         #region bosses

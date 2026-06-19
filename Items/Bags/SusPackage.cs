@@ -15,6 +15,7 @@ using Terraria.GameContent.Creative;
 using MultidimensionMod.NPCs.MushBiomes;
 using Terraria.DataStructures;
 using MultidimensionMod.NPCs.Corruption;
+using MultidimensionMod.Items.Pets;
 
 namespace MultidimensionMod.Items.Bags
 {
@@ -29,7 +30,7 @@ namespace MultidimensionMod.Items.Bags
 		{
 			Item.width = 26;
 			Item.height = 30;
-			Item.rare = ModContent.RarityType<DoriraRarity>();
+			Item.rare = ModContent.RarityType<AdminRarity>();
 			Item.maxStack = 99;
 		}
 
@@ -51,15 +52,11 @@ namespace MultidimensionMod.Items.Bags
             player.QuickSpawnItem(source, ModContent.ItemType<TheAncientChaos>());
             switch (player.name)
 			{
-				case "Dorira":
-				case "Marco":
-				case "Dorito":
 				case "Karl":
 				case "Silverking":
 				case "They":
 					player.QuickSpawnItem(source, ModContent.ItemType<FishLegacy>());
-					player.QuickSpawnItem(source, ModContent.ItemType<Dimensium>(), 15);
-					player.QuickSpawnItem(source, ModContent.ItemType<DimensionalForgeItem>());
+                    player.QuickSpawnItem(source, ModContent.ItemType<CracklingScale>());
 					break;
 
 				case "Teiteira":

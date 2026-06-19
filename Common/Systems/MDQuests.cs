@@ -15,7 +15,7 @@ namespace MultidimensionMod.Common.Globals
 {
     public class MDQuests : ModSystem
     {
-        public static int DoriraQuests = 0;
+        public static int AdminQuests = 0;
         public static int ShadeQuests = 0;
         public static bool FlashQuest;
 
@@ -32,7 +32,7 @@ namespace MultidimensionMod.Common.Globals
         public override void SaveWorldData(TagCompound tag)
         {
             var quests = new List<string>();
-            //Dorira's quests
+            //Admin's quests
             if (FlashQuest)
                 quests.Add("CassieQuest");
             tag["quests"] = quests;

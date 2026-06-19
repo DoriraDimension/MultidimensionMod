@@ -31,7 +31,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Others
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.knockBack = 2;
 			Item.value = Item.sellPrice(1, 0, 0, 0);
-			Item.rare = ModContent.RarityType<DoriraRarity>();
+			Item.rare = ModContent.RarityType<AdminRarity>();
 			Item.UseSound = SoundID.Item23;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<DataMinerProj>();

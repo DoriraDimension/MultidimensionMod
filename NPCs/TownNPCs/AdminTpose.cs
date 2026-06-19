@@ -9,7 +9,7 @@ using Terraria.Localization;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
-    public class DoriraTpose : ModNPC
+    public class AdminTpose : ModNPC
     {
         public override void SetStaticDefaults()
         {
@@ -38,12 +38,12 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
         public override string GetChat()
         {
-            return Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Dorira.Tpose");
+            return Language.GetTextValue("Mods.MultidimensionMod.Dialogue.Admin.Tpose");
         }
  
         public override void AI()
         {
-            if (NPC.AnyNPCs(ModContent.NPCType<Dorira>()))
+            if (NPC.AnyNPCs(ModContent.NPCType<Admin>()))
             {
                 NPC.active = false;
             }
@@ -63,9 +63,9 @@ namespace MultidimensionMod.NPCs.TownNPCs
                 if (Main.netMode == NetmodeID.Server)
                     NetMessage.SendData(MessageID.WorldData);
 
-                NPC.Transform(ModContent.NPCType<Dorira>());
+                NPC.Transform(ModContent.NPCType<Admin>());
                 NPC.life = NPC.lifeMax;
-                Main.NewText("Dorira has calmed down.", MDColors.DoriraColor);
+                Main.NewText("John God has calmed down.", MDColors.AdminColor);
                 SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Glitch"));
             }
         }

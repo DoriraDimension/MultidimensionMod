@@ -195,7 +195,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		{
 			WeightedRandom<string> chat = new WeightedRandom<string>();
 
-			int dor = NPC.FindFirstNPC(ModContent.NPCType<Dorira>());
+			int dor = NPC.FindFirstNPC(ModContent.NPCType<Admin>());
             int dapper = NPC.FindFirstNPC(ModContent.NPCType<MushroomHeir>());
 
             if (Main.LocalPlayer.HasItem(ModContent.ItemType<Pink>()))
@@ -224,7 +224,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
                 }
                 if (dor >= 0)
                 {
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.DoriraDialogue"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.AdminDialogue"));
                 }
                 if (dor >= 0)
                 {

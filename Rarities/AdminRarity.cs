@@ -3,9 +3,9 @@ using Terraria.ModLoader;
 
 namespace MultidimensionMod.Rarities
 {
-	public class DoriraRarity : ModRarity
+	public class AdminRarity : ModRarity
 	{
-		public override Color RarityColor => MDColors.DoriraColor;
+		public override Color RarityColor => MDColors.AdminColor;
 
 		public override int GetPrefixedRarity(int offset, float valueMult)
 		{

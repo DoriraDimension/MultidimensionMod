@@ -23,7 +23,7 @@ namespace MultidimensionMod.Items.Materials
 			Item.width = 22;
 			Item.height = 24;
 			Item.maxStack = 9999;
-			Item.rare = ModContent.RarityType<DoriraRarity>();
+			Item.rare = ModContent.RarityType<AdminRarity>();
 			Item.useTurn = true;
 			Item.autoReuse = true;
 			Item.useAnimation = 15;

@@ -43,31 +43,7 @@ Smiley: {
 	}
 }
 
-DoriraTpose.DisplayName: Tposing Dorira
 Dapperbox.DisplayName: Just a regular box
-
-Dorira: {
-	DisplayName: Administrator
-
-	TownNPCMood: {
-		Content: ok
-		NoHome: Uh... you don't happen to possess a room for me where I could stay?
-		FarFromHome: How did I get here?
-		LoveSpace: It's amazing to have so much room, makes it easier to practice with my sword!
-		DislikeCrowded: You know, I really like people around, but not this many.
-		HateCrowded: I hate big groups I hate big groups I hate big groups I hate big groups
-		LoveBiome: The nice warm sun, the soothing waves, it really is lovely here.
-		LikeBiome: I really like it here, all this nature is really nice, but something is still missing.
-		DislikeBiome: I really like to visit caves and play around in them but I rather have sunlight once in a while.
-		HateBiome: I really can't stand this blazing heat, it feels like I'm being incinerated.
-		LoveNPC: Good that you put me near {NPCName}, someone has to be the protector. I'm talking about the others of course, not her. But to be real here, I just can't stand us being seperated for too long.
-		LikeNPC: I really like having {NPCName} around, he is a great source of explosives for my wall bangs.
-		DislikeNPC: No, get {NPCName} away from me, I want to keep my cheated Platinum Coins.
-		HateNPC: I don't know why, but I just hate {NPCName}.
-		LikeNPC_Princess: You know, {NPCName} is pink, small and adorable, how could I NOT love her.
-		Princess_LovesNPC: "{NPCName} is such a nice guy and he can be kinda crazy sometimes, but he always brings cookies so who can complain."
-	}
-}
 
 Taraha: {
 	DisplayName: Interdimensional Trader
@@ -240,28 +216,26 @@ Bloatleech.DisplayName: Bloatleech
 Gaster.DisplayName: Mysterious Man
 
 Dialogue: {
-	Dorira: {
-		GoblinDialogue: I came here because I heard the anomalies in this dimension are very bad, {0}'s money sucking service is DEFINITELY one.
-		DemolitionistDialogue: When I go monster hunting, I will always buy {0}'s explosives from now on. Why I need bombs for hunting? You think a raw wall will do the trick? PAH!
-		GenericDialogue1: When you are going to the Underworld, don't run into a wall.
-		GenericDialogue2: serglhw3o85zhp35ognp'gd1312mfgh'dfdlhgftzjmdzinhw''046ihn
-		GenericDialogue3: I've had a weird feeling since a while, its as if everything could go mad any second...
-		GenericDialogue4: Do you know this mod named Awakened Light? Yeah, me neither.
-		GenericDialogue5: Oh yeah, so there was once this guy who was incredibly racist against Goblins. Well I killed him, no hesitation. Okay actually I just simply didn't like that guy.
-		GenericDialogue6: Insert something very interesting here
-		GenericDialogue7: There is fungus among us.
-		GenericDialogue8: I suddenly have the urge to write an entire essay about why people should stop making flying pigs.
-		GenericDialogue9: Keep your safe safe.
-		GenericDialogue10: Do you ever want to start a conversation but everything that comes out is just "the"?
-		GenericDialogue11: The best game design choice ever made was giving the desert furry a secret one-shot attack.
+	Admin: {
+		GoblinDialogue: I'm studying anomalies daily to get a proper grasp on what is happening, {0}'s ability to scam the same person multiple times might be related.
+		GenericDialogue1: It's such a tragedy how easily something can go wrong, even if you don't expect it. Just look at this world, so many problems all at once.
+		GenericDialogue2: Magic Mirrows tend to react weirdly to certain enegies, especially a certain iridescent pink one. I know that a patch of it appeared somewhere on this continent, I just don't remember where exactly.
+		GenericDialogue3: I've had a weird feeling since a while, it's as if everything could go mad any second...
+		GenericDialogue4: Sometimes I ponder if he is still waiting for me... Oh apologies, I was absorbed in thought, do you need anything.
+		GenericDialogue5: I would love to introduce you to the great team of multidimensional heroes that I work with, they are probably pretty busy right now though.
+		GenericDialogue6: Ever had a problem where you became incredibly rich because of frogs and crackers? Well let me tell you about that one time where... What? What's that look supposed to mean, I'm telling the truth!
+		GenericDialogue7: So how is this world? Having fun? Any suggestions for improvement? Haha I'm joking of course, I already spent 48 tries and several millenia to make this one. I also forgot my admin password.
+		GenericDialogue8: I could have sworn that Angel Statue flipped me off one time. What do you mean 'what statue?', it's right over th- Alright I think living for this long has turned my brain to mush.
+		GenericDialogue9: You cannot imagine how badly I want to eat some pizza right now, but this world is too primitive to have invented a pizza oven yet, and mine is out of reach. Maybe I could craft one in my forge?
+		GenericDialogue10: Have you ever questioned what's beyond the stars? What vast world lies out there? Well, if you did, then stop. It's for the better to not know anything.
+		GenericDialogue11: Thanks again for powering that beacon, I couldn't have come here to help without it. What its name is supposed to mean? Of course it means 'Caelis Number-48 Version-01 Data Transfer Beacon'. Though I do prefer to just call them Baby Tower.
 		GenericDialogue12: I hope I can fix everything somehow...
-		GenericHardmodeDialogue1: Hey just between us two, if you happen to possess a sword made of fish, throw it into some weird liquid. ;)
-		YttriumDialogue: Crabs have grown in power, soon they will oberthrow us and become the dominant species. No but seriously, you should check out those crabs at the ocean.
+		GenericHardmodeDialogue1: Just between us two, if you happen to possess a sword made of fish, try throwing it into some weird liquid.
 		MushroomDialogue: I had a dream where you showed me all of these alchemy mushrooms in a glowing mushroom biome while shopping with me. I think you did that after defeating a weird stone construct powered by solar energy.
 		SerpentAscendDialogue: I heard that in its dying moments, a serpent will ascend to become a wyrm. Maybe it's an act of mercy, an apology from their ancestors for stripping them of their primal forms. Truth or not, it is a beautiful thought to hold onto.
 		ImposterDialogue: Oh hey, that's a cool name you got there, reminds me of someone. Oh? You are feeling weird? You must have eaten something bad.
 		#Below is help dialogue
-		ColdHellHelp: The more you travel west in the Underworld, the more I get the feeling the temperature starts sinking, what could this mean?
+		ColdHellHelp: Somewhere in the western edge of the underworld caverns we detected some sort of breach. The most concerning part about it is the fact that energy itself becomes stagnant around that area. It's worth investigating, but we should be careful.
 		DimensiumHelp: You can find Dimensium by doing many different things. Killing, mining, fishing, and so much more.
 		KingsCapHelp: You know that mushroom forest nearby? If you wait long enough, you may find a mushroom that is larger than the others. You may wake it up using a unique fungus only found in that forest.
 		TouchGrassHelp: Go outside
@@ -269,7 +243,7 @@ Dialogue: {
 		FlashQuestStart: Hey, I thought you could help me out right now, I need some objects for something important. If you were to bring me 10 Frost Scales, 2 mice and around 5 Dimensium that would be great. What do I need them for? Well... I can tell you, if you bring me these things.
 		FlashQuestClear: Thank you so much! With this I could create a magic construct in the image of one I miss alot. Here, you can take him with you for a while, he might be a nice little support.
 		#Below is tpose dialogue
-		Tpose: He seems to be experiencing something real funky.
+		Tpose: Help me, I'm stuck.
 	}
 
 	Taraha: {
@@ -283,7 +257,7 @@ Dialogue: {
 		GenericDialogue8: Taraha sees many persons here petting small fluffy creature. Taraha not know why food is being pet.
 		GenericHardmodeDialogue1: Taraha traded wax for superpowerful relic the other day. Funny man thought wax was holy blood from deity.
 		GenericHardmodeDialogue2: Taraha feel so many different signatures around. Why so many people here who don't belong?
-		DoriraDialogue: Dorira, he traded powerful objects for... chocolate...
+		AdminDialogue: "{NPCName} is good friend, traded much with Taraha, always give yummy crystal."
 		DapperDialogue: Taraha talked to small mushroom boy about mushrooms earlier. Taraha really wanted lollipop but boy didn't want to trade for anything Taraha provided. Taraha is suffering, wants lollipop.
 		BloodMoonDialogue: Taraha will bite hand off if human keeps staring.
 		SlimeRainDialogue: Yum yum, gelatin heaven!
@@ -341,4 +315,29 @@ Dialogue: {
 
 		Wizard.Carces: I once heard of a settlement called Carces. Apperantly it was a humble town that was famous for its so called 'Twin Libraries', which would contain ancient manuscripts. I would love to get my hands on some of those, but sadly the town was burned down many years ago.
 	}
+}
+
+AdminTpose.DisplayName: Admin Tpose
+
+Admin: {
+	TownNPCMood: {
+		Princess_LovesNPC: "{NPCName} is such a fascinating person, he always shows me those amazing magic devices he has. One was even able to conjur up plates with heated dough on it."
+		LikeNPC_Princess: The small pink lady, yes {NPCName}. I feel weirdly at ease when I'm around her, so at ease in fact that I accidentily keep telling her things that nobody's supposed to hear.
+		HateNPC: I can't stand being near {NPCName}, he reminds me of long forgotten sins.
+		DislikeNPC: "{NPCName} always wants to discuss spells with me and keeps calling me a fellow wizard. I'm not a magician, I'm a scientist!"
+		LoveNPC: I'm glad that {NPCName} was able to come here too, she is a very valuable member for our cause. I would also not forgive myself if something bad happened since she is personal protection.
+		LikeNPC: I like {NPCName}. She is a great help for some of my experiments, even if she doesn't understand half of it.
+		HateBiome: I should go somewhere else, whenever I have a thought´it gets disrupted by these god damn pixies, they are SO noisy.
+		DislikeBiome: This tundra is such an awful place for my machinery. The energy flow just keeps slowing due to the cold.
+		LikeBiome: Being underground is doing a good job for me. Not many interferences happening to disturb any experiment.
+		LoveBiome: Ahh, the forest, it's so perfect. Beautiful, quiet and perfectly tempered.
+		HateCrowded: I hate how many people are around. It's too reminiscent of the old times.
+		DislikeCrowded: It's starting to get a little full around here
+		LoveSpace: It's really nice having time to think alone sometimes, the large amount of space really contributes.
+		FarFromHome: Not having the ability to teleport by myself is so tedious. My place is SO far away.
+		NoHome: Now that you summoned me, I'm in desperate need of a place to stay, you got anything?
+		Content: I feel alright.
+	}
+
+	DisplayName: Administrator
 }

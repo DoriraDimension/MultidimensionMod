@@ -885,7 +885,7 @@ DimensionalForgeItem: {
 
 FishLegacy: {
 	DisplayName: Legacy of the Fish
-	Tooltip: It is said that the first thing Dorira ever created... was a low quality fish.
+	Tooltip: It is said that the first thing God ever created... was a low quality fish.
 }
 
 EmptyKingsFabricator: {
@@ -1619,11 +1619,8 @@ DataMiner: {
 	Tooltip: Holds out a charged drill that inflicts Dimensional Shock
 	Lore:
 		'''
-		This drill was used by the dimensional god to tear rifts into dimensions.
-		Dorira always wanted his own world and leave his old one behind
-		When this opportunity arose, he did not hesitate
-		Over the course of a long long time, he finally managed to create his very own world after many failed prototypes.
-		Today it is known as Caelis, a energy flooded dimension that attracts all kinds of entities.
+		This drill was once used by the administrator to tear rifts into dimensions
+		He has long put these days behind him to use a less violent approach
 		'''
 }
 

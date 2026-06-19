@@ -25,7 +25,7 @@ namespace MultidimensionMod.Items.Placeables
 			Item.useTime = 10;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
-			Item.rare = ModContent.RarityType<DoriraRarity>();
+			Item.rare = ModContent.RarityType<AdminRarity>();
 			Item.value = Item.sellPrice(0, 0, 20, 0);
 			Item.createTile = ModContent.TileType<DimensionalForge>();
 		}

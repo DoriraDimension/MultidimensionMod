@@ -176,7 +176,7 @@ namespace MultidimensionMod.Common.Globals
 
         public override void PostUpdateNPCs()
         {
-            if (Terraria.NPC.AnyNPCs(ModContent.NPCType<DoriraTpose>()))
+            if (Terraria.NPC.AnyNPCs(ModContent.NPCType<AdminTpose>()))
                 TposeTimer++;
             if (Terraria.NPC.AnyNPCs(ModContent.NPCType<Dapperbox>()))
                 BoxTimer++;
