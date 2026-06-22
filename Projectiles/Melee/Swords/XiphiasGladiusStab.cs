@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using MultidimensionMod.Buffs.Debuffs;
 using Terraria;
 using Terraria.Enums;
 using Terraria.ModLoader;
@@ -109,5 +110,10 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			float collisionPoint = 0f;
 			return Collision.CheckAABBvLineCollision(targetHitbox.TopLeft(), targetHitbox.Size(), start, end, CollisionWidth, ref collisionPoint);
 		}
-	}
+
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            target.AddBuff(ModContent.BuffType<TidalPull>(), 180);
+        }
+    }
 }

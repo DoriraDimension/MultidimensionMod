@@ -44,6 +44,7 @@ namespace MultidimensionMod
 		public bool hazed;
 		public bool mildBurn;
 		public bool MadnessEmpower;
+        public bool TidalPull;
 
 		public override void ResetEffects(NPC npc)
 		{
@@ -55,7 +56,8 @@ namespace MultidimensionMod
 			DimensionalShock = false;
 			hazed = false;
 			mildBurn = false;
-			MadnessEmpower=false;
+			MadnessEmpower = false;
+            TidalPull = false;
 		}
 
 		public int AccursedTimer = 0;
@@ -129,6 +131,14 @@ namespace MultidimensionMod
 			}
 			if (DimensionalShock)
 			{
+                if (npc.lifeRegen > 0)
+                {
+                    npc.lifeRegen = 0;
+                }
+                npc.lifeRegen -= 60;
+            }
+            if (TidalPull)
+            {
                 if (npc.lifeRegen > 0)
                 {
                     npc.lifeRegen = 0;
@@ -404,6 +414,9 @@ namespace MultidimensionMod
 				modifiers.FinalDamage *= .3f;
             if (mildBurn)
                 modifiers.Defense *= .90f;
+            if (TidalPull)
+                if (!npc.boss)
+                    modifiers.Knockback *= 1.25f;
         }
 
         public override void DrawEffects(NPC npc, ref Color drawColor)
@@ -464,6 +477,21 @@ namespace MultidimensionMod
                 if (Main.rand.NextBool(6))
                 {
                     int dust = Dust.NewDust(npc.position - new Vector2(2f, 2f), npc.width, npc.height, ModContent.DustType<AccursedGhost>(), 0, -2, 30, default(Color), 1.0f);
+                }
+            }
+            if (TidalPull)
+            {
+                if (Main.rand.Next(4) < 3)
+                {
+                    int dust = Dust.NewDust(npc.position - new Vector2(2f, 2f), npc.width + 4, npc.height + 4, DustID.Water, npc.velocity.X * 0.4f, npc.velocity.Y * 0.4f, 100, default(Color), 3.5f);
+                    Main.dust[dust].noGravity = true;
+                    Main.dust[dust].velocity *= 1.8f;
+                    Main.dust[dust].velocity.Y -= 0.10f;
+                    Main.dust[dust].velocity.X = Main.rand.NextFloat(-0.30f, 0.30f);
+                    if (Main.rand.NextBool(4))
+                    {
+                        Main.dust[dust].scale *= 0.5f;
+                    }
                 }
             }
             /*if (hazed)

@@ -108,6 +108,7 @@ namespace MultidimensionMod.Common.Players
         public int EggBirth = 0;
         public bool Brick = false;
         public bool SBrick = false;
+        public bool TidalPull = false;
 
         public override void ResetEffects()
         {
@@ -152,6 +153,7 @@ namespace MultidimensionMod.Common.Players
             EggPouch = false;
             Brick = false;
             SBrick = false;
+            TidalPull = false;
         }
         public override void UpdateDead()
         {
@@ -990,6 +992,15 @@ namespace MultidimensionMod.Common.Players
                     Player.lifeRegen = 0;
                 }
             }
+            if (TidalPull) //Tidal Pull debuff
+            {
+                if (Player.lifeRegen > 0)
+                {
+                    Player.lifeRegen = 0;
+                }
+                Player.lifeRegenTime = 0;
+                Player.lifeRegen -= 30;
+            }
         }
 
         public override bool PreKill(double damage, int hitDirection, bool pvp, ref bool playSound, ref bool genGore, ref PlayerDeathReason damageSource)
@@ -1019,6 +1030,21 @@ namespace MultidimensionMod.Common.Players
                     }
                 }
                 Lighting.AddLight(Player.position, 0.1f, 0.2f, 0.7f);
+            }
+            if (TidalPull)
+            {
+                if (Main.rand.Next(4) < 3)
+                {
+                    int dust = Dust.NewDust(Player.position - new Vector2(2f, 2f), Player.width + 4, Player.height + 4, DustID.Water, Player.velocity.X * 0.4f, Player.velocity.Y * 0.4f, 100, default(Color), 3.5f);
+                    Main.dust[dust].noGravity = true;
+                    Main.dust[dust].velocity *= 1.8f;
+                    Main.dust[dust].velocity.Y -= 0.10f;
+                    Main.dust[dust].velocity.X = Main.rand.NextFloat(-0.30f, 0.30f);
+                    if (Main.rand.NextBool(4))
+                    {
+                        Main.dust[dust].scale *= 0.5f;
+                    }
+                }
             }
         }
 
@@ -1064,6 +1090,10 @@ namespace MultidimensionMod.Common.Players
                         return;
                     }
                 }
+            }
+            if (TidalPull)
+            {
+                modifiers.Knockback *= 1.25f;
             }
         }
 

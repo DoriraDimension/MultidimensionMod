@@ -212,3 +212,8 @@ MadnessEmpower: {
 	DisplayName: Madness Frenzy
 	Description: Madness even madder now
 }
+
+TidalPull: {
+	DisplayName: Tidal Pull
+	Description: The wrath of the ocean tears you apart
+}

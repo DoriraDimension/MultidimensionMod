@@ -17,7 +17,6 @@ namespace MultidimensionMod.Buffs.Debuffs
         public override void Update(Player player, ref int buffIndex)
         {
             player.GetModPlayer<MDPlayer>().Blaze = true;
-            player.endurance -= 0.06f;
         }
 
         public override void Update(NPC npc, ref int buffIndex)

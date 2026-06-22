@@ -7,6 +7,7 @@ using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
 using Mono.Cecil;
 using MultidimensionMod.Common.Players;
+using MultidimensionMod.Buffs.Debuffs;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
@@ -44,6 +45,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
                 Velocity *= 15f - Main.rand.NextFloat(5f);
                 Projectile.NewProjectileDirect(Item.GetSource_OnHit(target), player.Center, Velocity, ProjectileID.FlaironBubble, (int)((double)((float)Item.damage) * 0.4), 0f, player.whoAmI);
             }
+            target.AddBuff(ModContent.BuffType<TidalPull>(), 300);
         }
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)

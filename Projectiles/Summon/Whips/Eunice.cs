@@ -31,9 +31,10 @@ namespace MultidimensionMod.Projectiles.Summon.Whips
             player.AddBuff(308, 240);
 			player.MinionAttackTargetNPC = target.whoAmI;
             Projectile.damage = (int)(Projectile.damage * 0.8f);
+            target.AddBuff(ModContent.BuffType<TidalPull>(), 300);
         }
 
-		private void DrawLine(List<Vector2> list)
+        private void DrawLine(List<Vector2> list)
 		{
 			Texture2D texture = TextureAssets.FishingLine.Value;
 			Rectangle frame = texture.Frame();

@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using MultidimensionMod.Buffs.Debuffs;
 
 namespace MultidimensionMod.Projectiles.Ranged
 {
@@ -38,9 +39,11 @@ namespace MultidimensionMod.Projectiles.Ranged
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			target.AddBuff(BuffID.Wet, 300);
-		}
+            target.AddBuff(ModContent.BuffType<TidalPull>(), 300);
 
-		public override void OnKill(int timeLeft)
+        }
+
+        public override void OnKill(int timeLeft)
 		{
 			Collision.HitTiles(Projectile.position + Projectile.velocity, Projectile.velocity, Projectile.width, Projectile.height);
 			SoundEngine.PlaySound(SoundID.Item10, Projectile.position);

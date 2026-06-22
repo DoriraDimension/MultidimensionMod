@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using MultidimensionMod.Buffs.Debuffs;
 
 namespace MultidimensionMod.Projectiles.Magic
 {
@@ -31,6 +32,11 @@ namespace MultidimensionMod.Projectiles.Magic
 				Main.dust[dustIndex].noGravity = true;
 				Main.dust[dustIndex].alpha = 100;
 			}
+		}
+
+		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+		{
+			target.AddBuff(ModContent.BuffType<TidalPull>(), 300);
 		}
 
 		public override void AI()
