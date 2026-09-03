@@ -217,3 +217,8 @@ TidalPull: {
 	DisplayName: Tidal Pull
 	Description: The wrath of the ocean tears you apart
 }
+
+CrimeraMinionBuff: {
+	DisplayName: Evolved Crimera
+	Description: A Crimera will vomit for you
+}

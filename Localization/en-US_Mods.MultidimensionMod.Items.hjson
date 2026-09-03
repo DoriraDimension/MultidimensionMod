@@ -4725,3 +4725,8 @@ BurstKunai: {
 	DisplayName: Burst Kunai
 	Tooltip: Sticks to enemies and explodes after a short delay
 }
+
+CrimsonStaff: {
+	DisplayName: Crimera Staff
+	Tooltip: ""
+}
