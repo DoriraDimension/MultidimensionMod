@@ -1,7 +1,9 @@
-using Microsoft.Xna.Framework;
-using MultidimensionMod.Buffs.Minions;
 using System;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using MultidimensionMod.Buffs.Minions;
 using Terraria;
+using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -163,11 +165,56 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
                 Projectile.GetSource_FromAI(),
                 spawnPosition,
                 velocity,
-                ModContent.ProjectileType<GolemLaser>(),//ModContent.ProjectileType<BloodDroplet>(),
+                ModContent.ProjectileType<BloodDroplet>(),
                 Projectile.damage,
                 Projectile.knockBack,
                 Projectile.owner
             );
+        }
+    }
+
+    internal class BloodDroplet : ModProjectile
+    {
+
+        public override void SetStaticDefaults()
+        {
+
+        }
+
+        public override void SetDefaults()
+        {
+            Projectile.width = 52;
+            Projectile.height = 52;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Summon;
+            Projectile.ignoreWater = true;
+            Projectile.tileCollide = false;
+            Projectile.penetrate = -1;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = -1;
+            Projectile.timeLeft = 60;
+        }
+
+        public override void AI()
+        {
+            if (++Projectile.frameCounter >= 5)
+            {
+                Projectile.frameCounter = 0;
+                Projectile.frame++;
+            }
+        }
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+            var effects = Projectile.spriteDirection == -1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+            int height = texture.Height / 5;
+            int y = height * Projectile.frame;
+            Rectangle rect = new(0, y, texture.Width, height);
+            Vector2 drawOrigin = new(texture.Width / 2, Projectile.height / 2);
+
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, new Rectangle?(rect), Color.White, Projectile.rotation, drawOrigin, Projectile.scale, effects, 0);
+            return false;
         }
     }
 }

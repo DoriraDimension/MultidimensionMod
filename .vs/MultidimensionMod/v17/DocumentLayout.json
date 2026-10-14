@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\weapons\\summon\\crimsonstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\weapons\\summon\\crimsonstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\npcs\\townnpcs\\taraha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:npcs\\townnpcs\\taraha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\weapons\\summon\\eaterstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\weapons\\summon\\eaterstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us_mods.multidimensionmod.npcs.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:localization\\en-us_mods.multidimensionmod.npcs.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\buffs\\minions\\eaterminionbuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:buffs\\minions\\eaterminionbuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\ranged\\burstkunaithrown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\ranged\\burstkunaithrown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\summon\\minions\\eaterminion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,8 +23,20 @@
       "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\summon\\minions\\crimeraminion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\buffs\\minions\\eaterminionbuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:buffs\\minions\\eaterminionbuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\buffs\\minions\\crimeraminionbuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:buffs\\minions\\crimeraminionbuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\weapons\\summon\\eaterstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\weapons\\summon\\eaterstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\weapons\\summon\\crimsonstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\weapons\\summon\\crimsonstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\summon\\minions\\servantofocram2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,11 +54,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Taraha.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\TownNPCs\\Taraha.cs",
+              "RelativeDocumentMoniker": "NPCs\\TownNPCs\\Taraha.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\NPCs\\TownNPCs\\Taraha.cs",
+              "RelativeToolTip": "NPCs\\TownNPCs\\Taraha.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAwwFwAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T22:06:28.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "en-US_Mods.MultidimensionMod.NPCs.hjson",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.NPCs.hjson",
+              "RelativeDocumentMoniker": "Localization\\en-US_Mods.MultidimensionMod.NPCs.hjson",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.NPCs.hjson",
+              "RelativeToolTip": "Localization\\en-US_Mods.MultidimensionMod.NPCs.hjson",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-14T22:06:10.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BurstKunaiThrown.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Ranged\\BurstKunaiThrown.cs",
+              "RelativeDocumentMoniker": "Projectiles\\Ranged\\BurstKunaiThrown.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Ranged\\BurstKunaiThrown.cs",
+              "RelativeToolTip": "Projectiles\\Ranged\\BurstKunaiThrown.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAQwKcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T22:04:36.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "EaterStaff.cs",
               "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Summon\\EaterStaff.cs",
               "RelativeDocumentMoniker": "Items\\Weapons\\Summon\\EaterStaff.cs",
@@ -59,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "CrimsonStaff.cs",
               "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Weapons\\Summon\\CrimsonStaff.cs",
               "RelativeDocumentMoniker": "Items\\Weapons\\Summon\\CrimsonStaff.cs",
@@ -72,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "EaterMinionBuff.cs",
               "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Minions\\EaterMinionBuff.cs",
               "RelativeDocumentMoniker": "Buffs\\Minions\\EaterMinionBuff.cs",
@@ -85,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CrimeraMinionBuff.cs",
               "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Minions\\CrimeraMinionBuff.cs",
               "RelativeDocumentMoniker": "Buffs\\Minions\\CrimeraMinionBuff.cs",
@@ -104,7 +155,7 @@
               "RelativeDocumentMoniker": "Projectiles\\Summon\\Minions\\EaterMinion.cs",
               "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Summon\\Minions\\EaterMinion.cs",
               "RelativeToolTip": "Projectiles\\Summon\\Minions\\EaterMinion.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAH8AAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAEsBAAAAAAAAAAAAAEwBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-14T20:07:58.755Z",
               "EditorCaption": ""
@@ -117,14 +168,14 @@
               "RelativeDocumentMoniker": "Projectiles\\Summon\\Minions\\CrimeraMinion.cs",
               "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Summon\\Minions\\CrimeraMinion.cs",
               "RelativeToolTip": "Projectiles\\Summon\\Minions\\CrimeraMinion.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAAAHkAAABcAAAAAAAAAA==",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAowLQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-14T19:28:40.56Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "ServantofOcram2.cs",
               "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Summon\\Minions\\ServantofOcram2.cs",
               "RelativeDocumentMoniker": "Projectiles\\Summon\\Minions\\ServantofOcram2.cs",
@@ -137,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "OcramServantBuff.cs",
               "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Minions\\OcramServantBuff.cs",
               "RelativeDocumentMoniker": "Buffs\\Minions\\OcramServantBuff.cs",

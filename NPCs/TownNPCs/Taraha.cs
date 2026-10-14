@@ -44,8 +44,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			{
 				// Here we despawn the NPC and send a message stating that the NPC has despawned
 				// LegacyMisc.35 is {0) has departed!
-				if (Main.netMode == NetmodeID.SinglePlayer) Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.NPCs.MiscText.Taraha.MiscText.Departing", NPC.FullName), 17, 113, 105);
-				else ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.MultidimensionMod.NPCs.MiscText.Taraha.MiscText.Departing", NPC.GetFullNetName()), new Color(17, 113, 105));
+				if (Main.netMode == NetmodeID.SinglePlayer) Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Taraha.MiscText.Departing", NPC.FullName), 17, 113, 105);
+				else ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.MultidimensionMod.NPCs.MiscText.Taraha.Departing", NPC.GetFullNetName()), new Color(17, 113, 105));
 				NPC.active = false;
 				NPC.netSkip = -1;
 				NPC.life = 0;
@@ -90,8 +90,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 				spawnTime = double.MaxValue;
 
 				// Annouce that the traveler has spawned in!
-				if (Main.netMode == NetmodeID.SinglePlayer) Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.MiscNPCText.Taraha.MiscText.Arrival", traveler.FullName), 17, 198, 92);
-				else ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.MultidimensionMod.MiscNPCText.Taraha.MiscText.Arrival", traveler.GetFullNetName()), new Color(17, 198, 92));
+				if (Main.netMode == NetmodeID.SinglePlayer) Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Taraha.MiscText.Arrival", traveler.FullName), 17, 198, 92);
+				else ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.MultidimensionMod.NPCs.Taraha.MiscText.Arrival", traveler.GetFullNetName()), new Color(17, 198, 92));
 			}
 		}
 
