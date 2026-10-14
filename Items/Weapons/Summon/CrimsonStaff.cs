@@ -21,7 +21,6 @@ namespace MultidimensionMod.Items.Weapons.Summon
         public override void SetDefaults()
         {
             Item.useStyle = ItemUseStyleID.Swing;
-            Item.shootSpeed = 14f;
             Item.shoot = ModContent.ProjectileType<CrimeraMinion>();
             Item.damage = 20;
             Item.width = 46;

@@ -17,6 +17,22 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
             Main.projPet[Projectile.type] = true;
             ProjectileID.Sets.MinionSacrificable[Projectile.type] = true;
         }
+
+        private NPC GetTarget()
+        {
+            int index = (int)Projectile.ai[2];
+
+            if (index >= 0 && index < Main.maxNPCs)
+            {
+                NPC npc = Main.npc[index];
+
+                if (npc.active && npc.CanBeChasedBy(Projectile))
+                    return npc;
+            }
+
+            return null;
+        }
+
         public override void SetDefaults()
         {
             Projectile.width = 30;
@@ -41,7 +57,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
                 Projectile.timeLeft = 2;
             }
 
-            NPC target = Main.npc[player.MinionAttackTargetNPC];
+            NPC target = GetTarget();
             float maxDetectDistance = 700f;
 
             if (player.MinionAttackTargetNPC >= 0)

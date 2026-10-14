@@ -86,7 +86,7 @@ namespace MultidimensionMod.Projectiles.Ranged
             }
         }
 
-        private const int MaxStickingKunai = 4;
+        private const int MaxStickingKunai = 6;
         private readonly Point[] stickingKunai = new Point[MaxStickingKunai];
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {

@@ -4730,3 +4730,8 @@ CrimsonStaff: {
 	DisplayName: Crimera Staff
 	Tooltip: ""
 }
+
+EaterStaff: {
+	DisplayName: Eater Staff
+	Tooltip: ""
+}

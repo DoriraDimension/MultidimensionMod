@@ -44,8 +44,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			{
 				// Here we despawn the NPC and send a message stating that the NPC has despawned
 				// LegacyMisc.35 is {0) has departed!
-				if (Main.netMode == NetmodeID.SinglePlayer) Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.NPCs.MiscText.Taraha.Departing", NPC.FullName), 17, 113, 105);
-				else ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.MultidimensionMod.NPCs.MiscText.Taraha.Departing", NPC.GetFullNetName()), new Color(17, 113, 105));
+				if (Main.netMode == NetmodeID.SinglePlayer) Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.NPCs.MiscText.Taraha.MiscText.Departing", NPC.FullName), 17, 113, 105);
+				else ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.MultidimensionMod.NPCs.MiscText.Taraha.MiscText.Departing", NPC.GetFullNetName()), new Color(17, 113, 105));
 				NPC.active = false;
 				NPC.netSkip = -1;
 				NPC.life = 0;
@@ -90,8 +90,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
 				spawnTime = double.MaxValue;
 
 				// Annouce that the traveler has spawned in!
-				if (Main.netMode == NetmodeID.SinglePlayer) Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.MiscNPCText.Taraha.Arrival", traveler.FullName), 17, 198, 92);
-				else ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.MultidimensionMod.MiscNPCText.Taraha.Arrival", traveler.GetFullNetName()), new Color(17, 198, 92));
+				if (Main.netMode == NetmodeID.SinglePlayer) Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.MiscNPCText.Taraha.MiscText.Arrival", traveler.FullName), 17, 198, 92);
+				else ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.MultidimensionMod.MiscNPCText.Taraha.MiscText.Arrival", traveler.GetFullNetName()), new Color(17, 198, 92));
 			}
 		}
 
@@ -195,7 +195,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		{
 			WeightedRandom<string> chat = new WeightedRandom<string>();
 
-			int dor = NPC.FindFirstNPC(ModContent.NPCType<Admin>());
+			int ad = NPC.FindFirstNPC(ModContent.NPCType<Admin>());
             int dapper = NPC.FindFirstNPC(ModContent.NPCType<MushroomHeir>());
 
             if (Main.LocalPlayer.HasItem(ModContent.ItemType<Pink>()))
@@ -222,11 +222,11 @@ namespace MultidimensionMod.NPCs.TownNPCs
                     chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.GenericHardmodeDialogue1"));
                     chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.GenericHardmodeDialogue2"));
                 }
-                if (dor >= 0)
+                if (ad >= 0)
                 {
-                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.AdminDialogue"));
+                    chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.AdminDialogue", Main.npc[ad].GivenName));
                 }
-                if (dor >= 0)
+                if (dapper >= 0)
                 {
                     chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.DapperDialogue"));
                 }

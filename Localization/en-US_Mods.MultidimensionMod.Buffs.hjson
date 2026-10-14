@@ -222,3 +222,8 @@ CrimeraMinionBuff: {
 	DisplayName: Evolved Crimera
 	Description: A Crimera will vomit for you
 }
+
+EaterMinionBuff: {
+	DisplayName: Evolved Eater of Souls
+	Description: An Eater of Souls will bite for you.
+}
