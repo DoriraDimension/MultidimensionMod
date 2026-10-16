@@ -195,15 +195,6 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
             Projectile.timeLeft = 60;
         }
 
-        public override void AI()
-        {
-            if (++Projectile.frameCounter >= 5)
-            {
-                Projectile.frameCounter = 0;
-                Projectile.frame++;
-            }
-        }
-
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;

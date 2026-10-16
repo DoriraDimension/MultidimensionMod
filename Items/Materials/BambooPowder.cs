@@ -26,7 +26,8 @@ namespace MultidimensionMod.Items.Materials
         public override void AddRecipes()
         {
             CreateRecipe()
-            .AddIngredient(ItemID.BambooBlock, 2)
+            .AddIngredient(ItemID.Daybloom, 2)
+            .AddIngredient(ItemID.Waterleaf, 2)
             .AddTile(TileID.Bottles)
             .Register();
         }

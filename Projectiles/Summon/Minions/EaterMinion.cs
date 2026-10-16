@@ -224,8 +224,8 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
                         Vector2 toTarget =
                             target.Center - Projectile.Center;
 
-                        // Stay attached for 3 seconds at 60 ticks per second.
-                        if (Timer >= 180f)
+                        // Stay attached for 2 seconds.
+                        if (Timer >= 120f)
                         {
                             State = AttackState.Exploding;
                             Timer = 0f;

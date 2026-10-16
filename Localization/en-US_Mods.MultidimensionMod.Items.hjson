@@ -514,8 +514,8 @@ EnergyFish: {
 }
 
 SusPackage: {
-	DisplayName: Mysterious Gift
-	Tooltip: A weird package that you found next to you, it contains some useful beginner items
+	DisplayName: Box of Stuff
+	Tooltip: A small gift box containing various quirky things
 }
 
 BabyGlowmarinItem: {
@@ -1340,7 +1340,6 @@ UnknownEmoji: {
 		'''
 		A weird smiling pile of dark matter pulsing with energy.
 		Summons Smiley at night
-		Warning, boss is currently unstable in multiplayer.
 		'''
 }
 
@@ -4606,8 +4605,8 @@ StarfeatherDart: {
 }
 
 BambooPowder: {
-	DisplayName: Bamboo Powder
-	Tooltip: Bamboo from the jungle ground into a fine powder
+	DisplayName: Herbal Powder
+	Tooltip: Various herbs ground into a fine powder
 }
 
 PumpkinSoup: {
@@ -4728,10 +4727,32 @@ BurstKunai: {
 
 CrimsonStaff: {
 	DisplayName: Crimera Staff
-	Tooltip: ""
+	Tooltip: Summons an evolved Crimera that showers enemies in blood
 }
 
 EaterStaff: {
-	DisplayName: Eater Staff
+	DisplayName: Eater of Souls Staff
+	Tooltip: Summons an evolved Eater of Souls that latches onto enemies and explodes
+}
+
+AdminNote: {
+	DisplayName: Desperate Letter
 	Tooltip: ""
+	Text:
+		'''
+		Please, whoever finds this letter I have a request.
+		Use the blueprints provided within this package and finish and power this data transfer beacon.
+		I don't know if you can even understand what a transfer beacon is, but I hope the attached blueprints help.
+		I cannot explain more right now.
+		Oh and keep anything else you find in this crate if it seems useful to you.
+		'''
+}
+
+AdminBeacon: {
+	DisplayName: C-N48-V01 DTB
+	Tooltip:
+		'''
+		A highly advanced technological device which seems to be lacking some energy.
+		Needs 10 Dimensium to be powered
+		'''
 }

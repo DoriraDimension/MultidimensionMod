@@ -90,6 +90,7 @@ SpecialTooltips: {
 	Viewer: Hold [Shift] to view lore
 	Listen: Hold [Shift] to listen closer
 	Blooming: Hold [Shift] to read about blooming conditions
+	Reading: Hold [Shift] to read
 }
 
 GameTips: {

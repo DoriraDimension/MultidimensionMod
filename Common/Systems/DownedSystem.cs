@@ -31,6 +31,7 @@ namespace MultidimensionMod.Common.Systems
         public static bool seenFeudalIntro;
         public static bool consumedTheFish;
         public static bool usedLicense;
+        public static bool metAdmin;
 
         public override void OnWorldLoad()
         {
@@ -57,6 +58,7 @@ namespace MultidimensionMod.Common.Systems
             seenFeudalIntro = false;
             consumedTheFish = false;
             usedLicense = false;
+            metAdmin = false;
         }
 
         public override void OnWorldUnload()
@@ -84,6 +86,7 @@ namespace MultidimensionMod.Common.Systems
             seenFeudalIntro = false;
             consumedTheFish = false;
             usedLicense = false;
+            metAdmin = false;
         }
 
         public override void SaveWorldData(TagCompound tag)
@@ -136,6 +139,8 @@ namespace MultidimensionMod.Common.Systems
                 downed.Add("consumedTheFish");
             if (usedLicense)
                 downed.Add("usedLicense");
+            if (metAdmin)
+                downed.Add("metAdmin");
 
             tag["downed"] = downed;
         }
@@ -167,6 +172,7 @@ namespace MultidimensionMod.Common.Systems
             seenFeudalIntro = downed.Contains("seenFeudalIntro");
             consumedTheFish = downed.Contains("consumedTheFish");
             usedLicense = downed.Contains("usedLicense");
+            metAdmin = downed.Contains("metAdmin");
         }
 
         public override void NetSend(BinaryWriter writer)
@@ -201,6 +207,8 @@ namespace MultidimensionMod.Common.Systems
             flags3[4] = seenFeudalIntro;
             flags3[5] = consumedTheFish;
             flags3[6] = usedLicense;
+            flags3[7] = metAdmin;
+            writer.Write(flags3);
         }
 
         public override void NetReceive(BinaryReader reader)
@@ -233,6 +241,7 @@ namespace MultidimensionMod.Common.Systems
             seenFeudalIntro = flags3[4];
             consumedTheFish = flags3[5];
             usedLicense = flags3[6];
+            metAdmin = flags3[7];
         }
     }
 

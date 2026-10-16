@@ -13,7 +13,7 @@ AncientDepiction.MapEntry: Ancient Depiction
 AncientDragonSkullPlaced.MapEntry: Ancient Dragon Skull
 BossTrophy.MapEntry: Trophy
 BrokenAncientDepiction.MapEntry: Broken Ancient Depiction
-CheliaPlushiePlaced.MapEntry: Chelia Plushie
+CheliaPlushiePlaced.MapEntry: Plushie
 DimensionalForge.MapEntry: Dimensional Forge
 FishLegacyPlaced.MapEntry: Fish Cleaver Display
 EmptyKingsFabricatorPlaced.MapEntry: Void Fabricator
@@ -99,10 +99,11 @@ BogwoodTablePlaced.MapEntry: Bogwood Table
 BogwoodWorkbenchPlaced.MapEntry: Bogwood Work Bench
 ApocalyptitePlaced.MapEntry: Eschatyte
 CratePlaced.MapEntry: Crate
-AidenPlushiePlaced.MapEntry: Aiden Plushie Placed
-CultissimaPlushiePlaced.MapEntry: Cultissima Plushie Placed
-KarvolisPlushiePlaced.MapEntry: Karvolis Plushie Placed
-KuruPlushiePlaced.MapEntry: Kuru Plushie Placed
-PsyrobnikPlushiePlaced.MapEntry: Psyrobnik Plushie Placed
-VeronicaPlushiePlaced.MapEntry: Veronica Plushie Placed
-ZetPlushiePlaced.MapEntry: Zet Plushie Placed
+AidenPlushiePlaced.MapEntry: Plushie
+CultissimaPlushiePlaced.MapEntry: Plushie
+KarvolisPlushiePlaced.MapEntry: Plushie
+KuruPlushiePlaced.MapEntry: Plushie
+PsyrobnikPlushiePlaced.MapEntry: Plushie
+VeronicaPlushiePlaced.MapEntry: Plushie
+ZetPlushiePlaced.MapEntry: Plushie
+AdminBeaconPlaced.MapEntry: Caelis Number-48 Version-01 Data Transfer Beacon

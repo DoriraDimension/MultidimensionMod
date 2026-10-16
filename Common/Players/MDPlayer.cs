@@ -28,6 +28,7 @@ using MultidimensionMod.Items.Fishing;
 using MultidimensionMod.Items.Fishing.Crates;
 using Terraria.WorldBuilding;
 using MultidimensionMod.Achievements;
+using MultidimensionMod.Items.Placeables;
 
 namespace MultidimensionMod.Common.Players
 {
@@ -460,7 +461,9 @@ namespace MultidimensionMod.Common.Players
         {
             return new[]
             {
-                new Item (ModContent.ItemType<SusPackage>()) //Gives a starter bag item to a newly created player
+                new Item (ModContent.ItemType<SusPackage>()),
+                new Item (ModContent.ItemType<AdminNote>()),
+                new Item (ModContent.ItemType<AdminBeacon>()),
             };
         }
 

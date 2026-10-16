@@ -244,6 +244,16 @@ Dialogue: {
 		FlashQuestClear: Thank you so much! With this I could create a magic construct in the image of one I miss alot. Here, you can take him with you for a while, he might be a nice little support.
 		#Below is tpose dialogue
 		Tpose: Help me, I'm stuck.
+		#Below is arrival dialogue
+		AdminArrival1: eugh
+		AdminArrival2: Th... thanks, I anticipated a longer waiting time but here we are.
+		AdminArrival3: It doesn't really matter how I am, rather it matters how this world is doing. My name is John God and I'm the creator of this dimension... well, this world, just to make it more understandable for you.
+		AdminArrival4: Yes I know I know, meeting god is all grand and crazy, but there are more important matters to attent to.
+		AdminArrival5: This world is going towards its demise, all because of sudden energy surges that were detected everywhere. I need help figuring out how to stop this or else everything is doomed.
+		AdminArrival6: You seem confused.
+		AdminArrival7: Yes... yes... I apologize, someone as uninvolved as you can't understand this right away. All you need to know for now is that I need someone's help and since you were the one to summon me, you must do for now.
+		AdminArrival8: Well... let's just say there are complications with my "godhood". I'm sorry if that seems untrustworthy, but I cannot provide any more explanations just now.
+		AdminArrival9: Very well, if you don't mind I will occupy one of your dwellings for the time being. I need some space to develop tech after all.
 	}
 
 	Taraha: {
@@ -327,7 +337,7 @@ Admin: {
 		DislikeNPC: "{NPCName} always wants to discuss spells with me and keeps calling me a fellow wizard. I'm not a magician, I'm a scientist!"
 		LoveNPC: I'm glad that {NPCName} was able to come here too, she is a very valuable member for our cause. I would also not forgive myself if something bad happened since she is personal protection.
 		LikeNPC: I like {NPCName}. She is a great help for some of my experiments, even if she doesn't understand half of it.
-		HateBiome: I should go somewhere else, whenever I have a thought´it gets disrupted by these god damn pixies, they are SO noisy.
+		HateBiome: I should go somewhere else, whenever I have a thoughtï¿½it gets disrupted by these god damn pixies, they are SO noisy.
 		DislikeBiome: This tundra is such an awful place for my machinery. The energy flow just keeps slowing due to the cold.
 		LikeBiome: Being underground is doing a good job for me. Not many interferences happening to disturb any experiment.
 		LoveBiome: Ahh, the forest, it's so perfect. Beautiful, quiet and perfectly tempered.
@@ -339,5 +349,19 @@ Admin: {
 		Content: I feel alright.
 	}
 
+	MiscText: {
+		AdminResponse1: ...
+		AdminResponse2: Are you alright?
+		AdminResponse3: Wait really?? That's insane!
+		AdminResponse4: But wait
+		AdminResponse5: I-
+		AdminResponse6: It's just a lot of information all at once.
+		AdminResponse7: But if you are god, why don't do it yourself?
+		AdminResponse8: Well then... if you insist, I will believe this for now.
+		AdminResponse9: Okay?
+	}
+
 	DisplayName: Administrator
 }
+
+AdminArrival.DisplayName: Mysterious Person

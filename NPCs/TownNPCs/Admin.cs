@@ -101,29 +101,6 @@ namespace MultidimensionMod.NPCs.TownNPCs
             return false;
         }
 
-        public override bool CanTownNPCSpawn(int numTownNPCs)
-		{
-            if (TownNPCRespawnSystem.metAdmin)
-            {
-                return true;
-            }
-            for (int k = 0; k < 255; k++)
-			{
-				Player player = Main.player[k];
-				if (player.active)
-				{
-					foreach (Item item in player.inventory)
-					{
-						if (item.type == ModContent.ItemType<Dimensium>())
-						{
-							return true;
-						}
-					}
-				}
-			}
-			return false;
-		}
-
 		public override List<string> SetNPCNameList()
 		{
 			return new List<string>() {

@@ -20,9 +20,9 @@ namespace MultidimensionMod.Items.Weapons.Summon
 
         public override void SetDefaults()
         {
-            Item.useStyle = 1;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.shoot = ModContent.ProjectileType<EaterMinion>();
-            Item.damage = 40;
+            Item.damage = 50;
             Item.width = 32;
             Item.height = 32;
             Item.UseSound = SoundID.Item44;

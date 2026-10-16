@@ -42,12 +42,6 @@ namespace MultidimensionMod.Items.Bags
 		public override void RightClick(Player player)
 		{
 			var source = player.GetSource_OpenItem(Type);
-			player.QuickSpawnItem(source, ItemID.Torch, 10);
-			player.QuickSpawnItem(source, ItemID.RecallPotion, 3);
-			player.QuickSpawnItem(source, ItemID.Rope, 35);
-			player.QuickSpawnItem(source, ItemID.Bomb, 5);
-			player.QuickSpawnItem(source, ItemID.BuilderPotion, 2);
-			player.QuickSpawnItem(source, ItemID.CopperCoin);
 			player.QuickSpawnItem(source, ModContent.ItemType<Socks>());
             player.QuickSpawnItem(source, ModContent.ItemType<TheAncientChaos>());
             switch (player.name)
