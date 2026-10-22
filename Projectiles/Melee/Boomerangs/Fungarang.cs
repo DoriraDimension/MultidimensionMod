@@ -16,7 +16,7 @@ namespace MultidimensionMod.Projectiles.Melee.Boomerangs
         {
             Projectile.width = 40;
             Projectile.height = 40;
-            Projectile.aiStyle = 3;
+            Projectile.aiStyle = ProjAIStyleID.Boomerang;
             Projectile.timeLeft = 3600;
             Projectile.friendly = true;
             Projectile.tileCollide = true;

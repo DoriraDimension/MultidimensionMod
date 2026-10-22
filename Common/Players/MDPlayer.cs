@@ -1,34 +1,35 @@
-﻿using MultidimensionMod.Items.Bags;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework;
+using Mono.Cecil;
+using MultidimensionMod.Achievements;
+using MultidimensionMod.Base;
+using MultidimensionMod.Biomes;
+using MultidimensionMod.Buffs.Ability;
+using MultidimensionMod.Buffs.Cooldowns;
+using MultidimensionMod.Buffs.Debuffs;
+using MultidimensionMod.Dusts;
+using MultidimensionMod.Items;
+using MultidimensionMod.Items.Accessories;
+using MultidimensionMod.Items.Bags;
+using MultidimensionMod.Items.Fishing;
+using MultidimensionMod.Items.Fishing.Crates;
+using MultidimensionMod.Items.Permabuffs;
+using MultidimensionMod.Items.Placeables;
+using MultidimensionMod.Projectiles.Magic;
 using MultidimensionMod.Projectiles.Summon.Minions;
 using MultidimensionMod.Projectiles.Summon.Sentries;
 using MultidimensionMod.Projectiles.Typeless;
-using MultidimensionMod.Projectiles.Magic;
-using MultidimensionMod.Buffs.Cooldowns;
-using MultidimensionMod.Items.Accessories;
-using MultidimensionMod.Buffs.Ability;
-using MultidimensionMod.Base;
-using MultidimensionMod.Dusts;
-using MultidimensionMod.Buffs.Debuffs;
-using MultidimensionMod.Biomes;
-using System;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
+using MultidimensionMod.Utilities;
 using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.GameInput;
-using Terraria.Audio;
-using Terraria.Localization;
-using MultidimensionMod.Utilities;
 using Terraria.Graphics.Effects;
-using MultidimensionMod.Items;
-using MultidimensionMod.Items.Permabuffs;
-using MultidimensionMod.Items.Fishing;
-using MultidimensionMod.Items.Fishing.Crates;
+using Terraria.ID;
+using Terraria.Localization;
+using Terraria.ModLoader;
 using Terraria.WorldBuilding;
-using MultidimensionMod.Achievements;
-using MultidimensionMod.Items.Placeables;
 
 namespace MultidimensionMod.Common.Players
 {
@@ -110,6 +111,10 @@ namespace MultidimensionMod.Common.Players
         public bool Brick = false;
         public bool SBrick = false;
         public bool TidalPull = false;
+        public bool AstralEye = false;
+        public bool CreationMedallionP = false;
+        public int MatterCreationTimer = 0;
+        public Item CreationMedaillon;
 
         public override void ResetEffects()
         {
@@ -155,6 +160,9 @@ namespace MultidimensionMod.Common.Players
             Brick = false;
             SBrick = false;
             TidalPull = false;
+            AstralEye = false;
+            CreationMedallionP = false;
+            MatterCreationTimer = 0;
         }
         public override void UpdateDead()
         {
@@ -180,8 +188,10 @@ namespace MultidimensionMod.Common.Players
             }
             if (Stem)
             {
+                //Check if the player has mana sickness from consuming a mana potion and Indigo Injection is not currently on cooldown
                 if (Player.manaSick && Player.whoAmI == Main.myPlayer && !Player.HasBuff(ModContent.BuffType<InjectionCooldown>()))
                 {
+                    //Inflict Indigo Injection and start cooldown timer
                     Player.AddBuff(ModContent.BuffType<IndigoInjection>(), 360);
                     Player.AddBuff(ModContent.BuffType<InjectionCooldown>(), 12360);
                 }
@@ -190,10 +200,10 @@ namespace MultidimensionMod.Common.Players
 
         public override void PreUpdate()
         {
-
+            //Player has the Heart of the Monarch equipped and potion sickness has run out (Also happens when first spawning after dying or joining a world)
             if (MonarchHeart && !Player.HasBuff(BuffID.PotionSickness) && !Player.dead)
             {
-                int healDividing = 4;
+                int healDividing = 4; //The value we want to divide the damage with
                 firstTickHeal++;
                 if (firstTickHeal == 1) //So it only happens once
                 {
@@ -455,6 +465,14 @@ namespace MultidimensionMod.Common.Players
                 veilReset--;
             }
             #endregion
+            if (AstralEye || CreationMedallionP)
+            {
+                MatterCreationTimer--;
+                if (MatterCreationTimer < 0)
+                {
+                    MatterCreationTimer = 0;
+                }
+            }
         }
 
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
@@ -1106,6 +1124,19 @@ namespace MultidimensionMod.Common.Players
             {
                 modifiers.Knockback *= 0.50f;
             }
+            for (int n = 0; n < 3; n++)
+            {
+                if (AstralEye)
+                {
+                    int boulderDamage = (int)Player.GetBestClassDamage().ApplyTo(40);
+                    Projectile.NewProjectile(Player.GetSource_FromThis(), Player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<DefensiveParticle>(), boulderDamage, 0f, Player.whoAmI, n, 3);
+                }
+                if (CreationMedallionP)
+                {
+                    int starDamage = (int)Player.GetBestClassDamage().ApplyTo(100);
+                    Projectile.NewProjectile(Player.GetSource_FromThis(), Player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<DefensiveParticleA>(), starDamage, 0f, Player.whoAmI, n, 3);
+                }
+            }
         }
 
         public override void OnHitNPCWithProj(Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
@@ -1175,6 +1206,34 @@ namespace MultidimensionMod.Common.Players
                     else if (Main.masterMode)
                     {
                         modeDependantDamage = 230;
+                    }
+
+                    int starDamage = (int)Player.GetBestClassDamage().ApplyTo(modeDependantDamage);
+
+                    Projectile theStar = MDHelper.ProjectileRain(source, Player.Center, 350f, 50f, 550f, 650f, 24f, ProjectileID.StarVeilStar, starDamage, 3f, Player.whoAmI);
+                    if (theStar.whoAmI.WithinBounds(Main.maxProjectiles))
+                    {
+                        theStar.DamageType = DamageClass.Generic;
+                        theStar.ArmorPenetration = 30;
+                        theStar.usesLocalNPCImmunity = true;
+                        theStar.localNPCHitCooldown = 7;
+                    }
+                }
+            }
+            if (CreationMedallionP)
+            {
+                Item item = CreationMedaillon;
+                var source = Player.GetSource_Accessory(item);
+                for (int n = 0; n < 3; n++)
+                {
+                    int modeDependantDamage = 180;
+                    if (Main.expertMode)
+                    {
+                        modeDependantDamage = 250;
+                    }
+                    else if (Main.masterMode)
+                    {
+                        modeDependantDamage = 300;
                     }
 
                     int starDamage = (int)Player.GetBestClassDamage().ApplyTo(modeDependantDamage);
@@ -1262,6 +1321,34 @@ namespace MultidimensionMod.Common.Players
                     else if (Main.masterMode)
                     {
                         modeDependantDamage = 230;
+                    }
+
+                    int starDamage = (int)Player.GetBestClassDamage().ApplyTo(modeDependantDamage);
+
+                    Projectile theStar = MDHelper.ProjectileRain(source, Player.Center, 350f, 50f, 550f, 650f, 24f, ProjectileID.StarVeilStar, starDamage, 3f, Player.whoAmI);
+                    if (theStar.whoAmI.WithinBounds(Main.maxProjectiles))
+                    {
+                        theStar.DamageType = DamageClass.Generic;
+                        theStar.ArmorPenetration = 30;
+                        theStar.usesLocalNPCImmunity = true;
+                        theStar.localNPCHitCooldown = 7;
+                    }
+                }
+            }
+            if (CreationMedallionP)
+            {
+                Item item = CreationMedaillon;
+                var source = Player.GetSource_Accessory(item);
+                for (int n = 0; n < 3; n++)
+                {
+                    int modeDependantDamage = 180;
+                    if (Main.expertMode)
+                    {
+                        modeDependantDamage = 250;
+                    }
+                    else if (Main.masterMode)
+                    {
+                        modeDependantDamage = 300;
                     }
 
                     int starDamage = (int)Player.GetBestClassDamage().ApplyTo(modeDependantDamage);

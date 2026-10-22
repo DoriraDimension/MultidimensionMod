@@ -1,5 +1,4 @@
-﻿using Humanizer;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MultidimensionMod.Common.Systems;
 using MultidimensionMod.Dusts;

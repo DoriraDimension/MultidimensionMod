@@ -175,6 +175,7 @@ namespace MultidimensionMod
                 ModContent.ItemType<NeroPredatorHead>(),
                 ModContent.ItemType<NeroHammerheadMask>(),
                 ModContent.ItemType<NeroLanternHelm>(),
+                ModContent.ItemType<AstralTitansEyeJewelOff>(),
                 ModContent.ItemType<SelfSimilarStarfish>(),
                 ModContent.ItemType<PenroseFish>(),
                 ModContent.ItemType<Pufftail>(),

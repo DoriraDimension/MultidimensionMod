@@ -108,9 +108,9 @@ namespace MultidimensionMod.NPCs.Dungeon
 		{
 			if (DownedSystem.downedSmiley)
 			{
-                return SpawnCondition.OverworldNight.Chance * 0.1f;
+                return SpawnCondition.OverworldNight.Chance * 0.01f;
             }
-			return SpawnCondition.Dungeon.Chance * 0.1f;
+			return SpawnCondition.Dungeon.Chance * 0.05f;
 		}
 
 		public override void ModifyNPCLoot(NPCLoot NPCloot)

@@ -1,11 +1,17 @@
 AstralTitansEyeJewel: {
-	DisplayName: Creation Titan's Eye Jewel
-	Tooltip: Does nothing at the moment
+	DisplayName: Eye of Astronion
+	Tooltip:
+		'''
+		Dealing critical hits releases energy particles that form into matter over time
+		Fully formed matter will seek out enemies to deal damage
+		Being hit will also release particles that form into boulders that will briefly circle you
+		'''
 	Lore:
 		'''
-		One of the creation titan's many crystal eyes that fell off.
-		Scelestians like to keep them as special tokens of good fortune,
-		showing their deep friendship with the titan.
+		One of the creation titan's many crystal eyes that has fallen off,
+		this one keeping its stored energy which was triggered by added Aether Energy.
+		If a Scelestian spots a misfired eye of creation, they tend to leave it alone,
+		since to them it is a bad omen of sickness and misfortune.
 		'''
 }
 
@@ -50,7 +56,13 @@ ColdDesertShield: {
 
 CreationMedaillon: {
 	DisplayName: Creation Medallion
-	Tooltip: Does nothing right now
+	Tooltip:
+		'''
+		Causes origin stars to fall and increases length of invincibility after taking damage
+		Dealing critical hits releases energy particles that form into glimmer needles over time
+		Fully formed matter will seek out enemies to deal damage
+		Being hit will also release particles that form into aether stars that will briefly circle you
+		'''
 	Lore:
 		'''
 		The divine medallion that is only given to high ranked Scelestians.
@@ -205,7 +217,7 @@ HealthyCap: {
 	Tooltip:
 		'''
 		A healthy mushroom filled with healing potion liquid.
-		Increases the amount of HP healed by mushrooms to 40.
+		Increases the amount of health healed by mushrooms to 40.
 		'''
 }
 
@@ -4754,5 +4766,17 @@ AdminBeacon: {
 		'''
 		A highly advanced technological device which seems to be lacking some energy.
 		Needs 10 Dimensium to be powered
+		'''
+}
+
+AstralTitansEyeJewelOff: {
+	DisplayName: Dormant Eye of the Creation Titan
+	Tooltip: Must be doused in energy that can create or change
+	Lore:
+		'''
+		One of the creation titan's many crystal eyes that has fallen off.
+		They tend to release their stored energy during impact, creating new matter in the process.
+		Scelestians like to pick them up and keep them after material harvest as special tokens of good fortune,
+		showing their deep friendship with the titan.
 		'''
 }

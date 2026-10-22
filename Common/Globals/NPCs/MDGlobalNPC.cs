@@ -1,29 +1,32 @@
-﻿using MultidimensionMod.Buffs.Debuffs;
-using MultidimensionMod.Projectiles.Melee.Swords;
-using MultidimensionMod.NPCs.Tundra;
-using MultidimensionMod.NPCs.FU;
-using MultidimensionMod.NPCs.Madness;
-using MultidimensionMod.NPCs.MushBiomes;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using Microsoft.Xna.Framework;
+using MultidimensionMod.Biomes;
+using MultidimensionMod.Buffs.Debuffs;
+using MultidimensionMod.Common.Globals;
+using MultidimensionMod.Common.Players;
+using MultidimensionMod.Dusts;
+using MultidimensionMod.Items.Accessories;
+using MultidimensionMod.Items.Summons;
 //using MultidimensionMod.NPCs.Mire;
 //using MultidimensionMod.NPCs.Inferno;
 using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
-using MultidimensionMod.Biomes;
-using MultidimensionMod.Dusts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.IO;
-using System.Reflection;
-using Microsoft.Xna.Framework;
-using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
-using Terraria.Localization;
-using Terraria.ModLoader.IO;
+using MultidimensionMod.NPCs.FU;
+using MultidimensionMod.NPCs.Madness;
+using MultidimensionMod.NPCs.MushBiomes;
+using MultidimensionMod.NPCs.Tundra;
+using MultidimensionMod.Projectiles.Melee.Swords;
 using MultidimensionMod.Tiles.Biomes.ShroomForest;
-using MultidimensionMod.Items.Summons;
-using MultidimensionMod.Common.Globals;
+using MultidimensionMod.Utilities;
+using Terraria;
 using Terraria.GameContent.Bestiary;
+using Terraria.ID;
+using Terraria.Localization;
+using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
 
 namespace MultidimensionMod
 {
@@ -417,6 +420,44 @@ namespace MultidimensionMod
             if (TidalPull)
                 if (!npc.boss)
                     modifiers.Knockback *= 1.25f;
+
+        }
+
+        public override void OnHitByItem(NPC npc, Player player, Item item, NPC.HitInfo hit, int damageDone)
+        {
+            for (int n = 0; n < 3; n++)
+            {
+                if (player.GetModPlayer<MDPlayer>().AstralEye && hit.Crit)
+                {
+                    int boulderDamage = (int)player.GetBestClassDamage().ApplyTo(40);
+                    Projectile.NewProjectile(npc.GetSource_FromAI(), new Vector2(npc.Center.X + (float)Main.rand.Next(-300, 300), npc.Center.Y + (float)Main.rand.Next(-300, 300)), new Vector2(0, 0), ModContent.ProjectileType<OffensiveParticle>(), boulderDamage, 0, Main.myPlayer);
+                }
+                if (player.GetModPlayer<MDPlayer>().CreationMedallionP && hit.Crit)
+                {
+                    int starDamage = (int)player.GetBestClassDamage().ApplyTo(100);
+                    Projectile.NewProjectile(npc.GetSource_FromAI(), new Vector2(npc.Center.X + (float)Main.rand.Next(-300, 300), npc.Center.Y + (float)Main.rand.Next(-300, 300)), new Vector2(0, 0), ModContent.ProjectileType<OffensiveParticleA>(), starDamage, 0, Main.myPlayer);
+                }
+            }
+        }
+
+        public override void OnHitByProjectile(NPC npc, Projectile projectile, NPC.HitInfo hit, int damageDone)
+        {
+            Player player = Main.player[projectile.owner];
+            for (int n = 0; n < 3; n++)
+            {
+                if (player.GetModPlayer<MDPlayer>().AstralEye && hit.Crit && player.GetModPlayer<MDPlayer>().MatterCreationTimer == 0)
+                {
+                    int boulderDamage = (int)player.GetBestClassDamage().ApplyTo(40);
+                    Projectile.NewProjectile(npc.GetSource_FromAI(), new Vector2(npc.Center.X + (float)Main.rand.Next(-300, 300), npc.Center.Y + (float)Main.rand.Next(-300, 300)), new Vector2(0, 0), ModContent.ProjectileType<OffensiveParticle>(), boulderDamage, 0, Main.myPlayer);
+                    player.GetModPlayer<MDPlayer>().MatterCreationTimer = 60;
+                }
+                if (player.GetModPlayer<MDPlayer>().CreationMedallionP && hit.Crit && player.GetModPlayer<MDPlayer>().MatterCreationTimer == 0)
+                {
+                    int starDamage = (int)player.GetBestClassDamage().ApplyTo(100);
+                    Projectile.NewProjectile(npc.GetSource_FromAI(), new Vector2(npc.Center.X + (float)Main.rand.Next(-300, 300), npc.Center.Y + (float)Main.rand.Next(-300, 300)), new Vector2(0, 0), ModContent.ProjectileType<OffensiveParticleA>(), starDamage, 0, Main.myPlayer);
+                    player.GetModPlayer<MDPlayer>().MatterCreationTimer = 60;
+                }
+            }
         }
 
         public override void DrawEffects(NPC npc, ref Color drawColor)
