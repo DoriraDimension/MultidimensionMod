@@ -46,10 +46,15 @@ namespace MultidimensionMod.Common.Players
         public bool DesireEye = false;
         public bool NightEye = false;
         public bool ExplorerEye = false;
+        public bool FisherEye = false;
+        public bool PureEye = false;
+        public bool OmniAllSee = false;
         public Item EyeoftheHunter;
         public Item EyeoftheNightwalker;
         public Item EyeofDesire;
         public Item EyeoftheExplorer;
+        public Item EyeoftheFisher;
+        public Item EyeofthePurifier;
         public bool Geodes;
         public bool Madness;
         public int MadnessTimer;
@@ -128,6 +133,9 @@ namespace MultidimensionMod.Common.Players
             DesireEye = false;
             NightEye = false;
             ExplorerEye = false;
+            FisherEye = false;
+            PureEye = false;
+            OmniAllSee = false;
             Geodes = false;
             Madness = false;
             DrakePoison = false;
@@ -1033,6 +1041,38 @@ namespace MultidimensionMod.Common.Players
             return true;
         }
 
+        public override void ModifyDrawInfo(ref PlayerDrawSet drawInfo)
+        {
+            if (HunterEye)
+            {
+                drawInfo.colorEyes = new Color(124, 9, 29);
+            }
+            if (ExplorerEye)
+            {
+                drawInfo.colorEyes = new Color(147, 164, 216);
+            }
+            if (DesireEye)
+            {
+                drawInfo.colorEyes = new Color(232, 183, 34);
+            }
+            if (NightEye)
+            {
+                drawInfo.colorEyes = new Color(1, 193, 92);
+            }
+            if (FisherEye)
+            {
+                drawInfo.colorEyes = new Color(21, 21, 21);
+            }
+            if (PureEye)
+            {
+                drawInfo.colorEyes = new Color(247, 118, 168);
+            }
+            if (OmniAllSee)
+            {
+                drawInfo.colorEyes = new Color(101, 6, 112);
+            }
+
+        }
 
         public override void DrawEffects(PlayerDrawSet drawInfo, ref float r, ref float g, ref float b, ref float a, ref bool fullBright)
         {
