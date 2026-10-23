@@ -48,6 +48,7 @@ namespace MultidimensionMod
 		public bool mildBurn;
 		public bool MadnessEmpower;
         public bool TidalPull;
+        public bool IlluminatedBuff;
 
 		public override void ResetEffects(NPC npc)
 		{
@@ -61,6 +62,7 @@ namespace MultidimensionMod
 			mildBurn = false;
 			MadnessEmpower = false;
             TidalPull = false;
+            IlluminatedBuff = false;
 		}
 
 		public int AccursedTimer = 0;
@@ -534,6 +536,10 @@ namespace MultidimensionMod
                         Main.dust[dust].scale *= 0.5f;
                     }
                 }
+            }
+            if (IlluminatedBuff)
+            {
+                Lighting.AddLight(npc.position, 0.05f, 0.2f, 0.8f);
             }
             /*if (hazed)
             {

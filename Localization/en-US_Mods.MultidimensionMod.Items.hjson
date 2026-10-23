@@ -203,12 +203,9 @@ GlowingFungiScarf: {
 	Tooltip:
 		'''
 		You emit blue light
-		You deepen your symbiosis with the mushrooms over time, symbiosis has 3 stages
-		Stage 1: Damage reduction is increased by 5%
-		Stage 2: Damage reduction is decreased by 10%
-		Stage 3: The brightness of your glow is greatly increased and you periodically release mushroom hatchlings
-		Additionally, max life is increased by 20
-		Equipping the Healthy Cap grants the hatchlings weak lifesteal
+		You generate a pulsing field of light that adds 3 tag damage to enemies and makes them glow
+		You periodically release mushroom hatchlings
+		Equipping the [i:MultidimensionMod/HealthyCap] grants the hatchlings weak lifesteal
 		'''
 }
 
@@ -4785,9 +4782,7 @@ ShimmerproofTackleBag: {
 	DisplayName: Shimmerproof Tackle Bag
 	Tooltip:
 		'''
-		Fishing line will never break,
-		decreases chance of bait consumption,
-		increases fishing power by 13
+		Fishing line will never break, decreases chance of bait consumption, increases fishing power by 13
 		Allows fishing in lava and shimmer
 		'''
 }

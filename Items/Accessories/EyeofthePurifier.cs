@@ -50,6 +50,8 @@ namespace MultidimensionMod.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.biomeSight = true;
+            player.GetModPlayer<MDPlayer>().PureEye = true;
+            player.GetModPlayer<MDPlayer>().EyesShouldChange = !hideVisual;
         }
     }
 }

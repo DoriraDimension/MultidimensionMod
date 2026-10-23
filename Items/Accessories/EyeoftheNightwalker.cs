@@ -51,7 +51,8 @@ namespace MultidimensionMod.Items.Accessories
 		{
 			player.nightVision = true;
 			player.GetModPlayer<MDPlayer>().NightEye = true;
-		}
+            player.GetModPlayer<MDPlayer>().EyesShouldChange = !hideVisual;
+        }
 
 		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
 		{

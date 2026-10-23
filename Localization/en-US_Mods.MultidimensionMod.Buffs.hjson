@@ -227,3 +227,13 @@ Pap: {
 	DisplayName: lol
 	Description: you are immortal now
 }
+
+Illuminated: {
+	Description: It's kinda bright
+	DisplayName: Illuminated
+}
+
+SymbiosisTag: {
+	Description: Mods.MultidimensionMod.Buffs.SymbiosisTag.Description
+	DisplayName: Symbiosis Tag
+}

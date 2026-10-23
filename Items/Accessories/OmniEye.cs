@@ -9,6 +9,7 @@ using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using Terraria.Localization;
 using MultidimensionMod.Achievements;
+using MultidimensionMod.Common.Players;
 
 namespace MultidimensionMod.Items.Accessories
 {
@@ -59,6 +60,7 @@ namespace MultidimensionMod.Items.Accessories
 			{
                 player.biomeSight = true;
             }
+			player.GetModPlayer<MDPlayer>().EyesShouldChange = !hideVisual;
 		}
 
 

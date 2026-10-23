@@ -50,6 +50,7 @@ namespace MultidimensionMod.Items.Accessories
 		{
 			player.detectCreature = true;
 			player.GetModPlayer<MDPlayer>().HunterEye = true;
-		}
+            player.GetModPlayer<MDPlayer>().EyesShouldChange = !hideVisual;
+        }
 	}
 }

@@ -6,11 +6,14 @@ using Terraria.Audio;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.GameContent;
+using Terraria.DataStructures;
 
 namespace MultidimensionMod.Projectiles.Summon.Minions
 {
     internal class SymbioHatchling : ModProjectile
     {
+
+        public bool HasHealthyCap = false;
 
         public override void SetStaticDefaults()
         {
@@ -26,6 +29,15 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
             Projectile.DamageType = DamageClass.Summon;
             Projectile.tileCollide = true;
             Projectile.timeLeft = 300;
+        }
+
+        public override void OnSpawn(IEntitySource source)
+        {
+            Player player = Main.player[Projectile.owner];
+            if (player.GetModPlayer<MDPlayer>().Healthy)
+            {
+                HasHealthyCap = true;
+            }
         }
 
         public override void AI()
@@ -113,7 +125,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
         {
             SoundEngine.PlaySound(SoundID.NPCHit1, Projectile.position);
             Player player = Main.player[Projectile.owner];
-            if (player.GetModPlayer<MDPlayer>().Healthy)
+            if (HasHealthyCap)
             {
                 player.Heal(2);
             }
@@ -124,7 +136,7 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
             Player player = Main.player[Projectile.owner];
             Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
             Texture2D glow = ModContent.Request<Texture2D>(Projectile.ModProjectile.Texture + "_Glow").Value;
-            if (player.GetModPlayer<MDPlayer>().Healthy)
+            if (HasHealthyCap)
             {
                 texture = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Summon/Minions/SymbioHatchlingRed").Value;
                 glow = ModContent.Request<Texture2D>("MultidimensionMod/Projectiles/Summon/Minions/SymbioHatchlingRed_Glow").Value;

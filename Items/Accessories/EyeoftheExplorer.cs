@@ -50,6 +50,7 @@ namespace MultidimensionMod.Items.Accessories
 		{
 			player.dangerSense = true;
 			player.GetModPlayer<MDPlayer>().ExplorerEye = true;
-		}
+            player.GetModPlayer<MDPlayer>().EyesShouldChange = !hideVisual;
+        }
 	}
 }

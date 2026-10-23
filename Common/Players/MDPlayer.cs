@@ -55,6 +55,7 @@ namespace MultidimensionMod.Common.Players
         public Item EyeoftheExplorer;
         public Item EyeoftheFisher;
         public Item EyeofthePurifier;
+        public bool EyesShouldChange;
         public bool Geodes;
         public bool Madness;
         public int MadnessTimer;
@@ -72,8 +73,8 @@ namespace MultidimensionMod.Common.Players
         public bool DesertNeck = false;
         public Item DesertNecklace;
         public bool Symbio = false;
-        public int Mario;
         public int GiveBirth;
+        public bool SymbioAuraIsVisible;
         public bool Stem = false;
         public bool manaSick = false;
         public int manaSickTimer;
@@ -120,6 +121,7 @@ namespace MultidimensionMod.Common.Players
         public bool CreationMedallionP = false;
         public int MatterCreationTimer = 0;
         public Item CreationMedaillon;
+        public bool IlluminatedBuff = false;
 
         public override void ResetEffects()
         {
@@ -171,12 +173,12 @@ namespace MultidimensionMod.Common.Players
             AstralEye = false;
             CreationMedallionP = false;
             MatterCreationTimer = 0;
+            IlluminatedBuff = false;
         }
         public override void UpdateDead()
         {
             if (!Symbio)
             {
-                Mario = 0;
                 GiveBirth = 0;
             }
             delayedHealValue = 0;
@@ -187,7 +189,6 @@ namespace MultidimensionMod.Common.Players
    
             if (!Symbio)
             {
-                Mario = 0;
                 GiveBirth = 0;
             }
             if (!MonarchHeart)
@@ -848,26 +849,17 @@ namespace MultidimensionMod.Common.Players
             if (Symbio)
             {
                 int damage = 75;
-                Mario++;
-                if (Mario >= 3000 && Mario < 6000) //Stage 1 initiated
-                {
-                    Player.endurance += 0.05f;
-                }
-                else if (Mario >= 6000 && Mario < 12000) //Stage 2 initiated
-                {
-                    Player.endurance -= 0.10f;
-                }
-                else if (Mario >= 12000) //Stage 3 initiated
-                {
-                    GiveBirth++;
-                    Player.statLifeMax2 += 20;
-                    Mario = 12000;
-                }
+                int hatchlingDamage = (int)Player.GetTotalDamage<SummonDamageClass>().ApplyTo(75); //(int)Player.GetBestClassDamage().ApplyTo(40);
+                GiveBirth++;
                 if (GiveBirth == 240)
                 {
                     SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Blurb"));
                     Projectile.NewProjectile(Player.GetSource_Accessory(new Item(ModContent.ItemType<GlowingFungiScarf>())), Player.Center, new Vector2(0, 0), ModContent.ProjectileType<SymbioHatchling>(), damage, 0f, Player.whoAmI);
                     GiveBirth = 0;
+                }
+                if (Player.ownedProjectileCounts[ModContent.ProjectileType<SymbiosisAura>()] <= 0 && GiveBirth % 120 == 0)
+                {
+                    Projectile.NewProjectile(Player.GetSource_Accessory(new Item(ModContent.ItemType<GlowingFungiScarf>())), Player.Center, new Vector2(0, 0), ModContent.ProjectileType<SymbiosisAura>(), damage, 0f, Player.whoAmI);
                 }
             }
             if (EggPouch)
@@ -1043,35 +1035,37 @@ namespace MultidimensionMod.Common.Players
 
         public override void ModifyDrawInfo(ref PlayerDrawSet drawInfo)
         {
-            if (HunterEye)
+            if (EyesShouldChange)
             {
-                drawInfo.colorEyes = new Color(124, 9, 29);
+                if (HunterEye)
+                {
+                    drawInfo.colorEyes = new Color(124, 9, 29);
+                }
+                if (ExplorerEye)
+                {
+                    drawInfo.colorEyes = new Color(147, 164, 216);
+                }
+                if (DesireEye)
+                {
+                    drawInfo.colorEyes = new Color(232, 183, 34);
+                }
+                if (NightEye)
+                {
+                    drawInfo.colorEyes = new Color(1, 193, 92);
+                }
+                if (FisherEye)
+                {
+                    drawInfo.colorEyes = new Color(21, 21, 21);
+                }
+                if (PureEye)
+                {
+                    drawInfo.colorEyes = new Color(247, 118, 168);
+                }
+                if (OmniAllSee)
+                {
+                    drawInfo.colorEyes = new Color(101, 6, 112);
+                }
             }
-            if (ExplorerEye)
-            {
-                drawInfo.colorEyes = new Color(147, 164, 216);
-            }
-            if (DesireEye)
-            {
-                drawInfo.colorEyes = new Color(232, 183, 34);
-            }
-            if (NightEye)
-            {
-                drawInfo.colorEyes = new Color(1, 193, 92);
-            }
-            if (FisherEye)
-            {
-                drawInfo.colorEyes = new Color(21, 21, 21);
-            }
-            if (PureEye)
-            {
-                drawInfo.colorEyes = new Color(247, 118, 168);
-            }
-            if (OmniAllSee)
-            {
-                drawInfo.colorEyes = new Color(101, 6, 112);
-            }
-
         }
 
         public override void DrawEffects(PlayerDrawSet drawInfo, ref float r, ref float g, ref float b, ref float a, ref bool fullBright)

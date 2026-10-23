@@ -24,6 +24,16 @@ namespace MultidimensionMod.Buffs.Minions
         }
     }
 
+    public class SymbiosisTag : ModBuff
+    {
+        public static readonly int TagDamage = 3;
+
+        public override void SetStaticDefaults()
+        {
+            BuffID.Sets.IsATagBuff[Type] = true;
+        }
+    }
+
     public class ALWhipNPC : GlobalNPC
     {
         public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref NPC.HitModifiers modifiers)

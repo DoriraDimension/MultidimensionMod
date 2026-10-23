@@ -104,7 +104,7 @@ namespace MultidimensionMod.Utilities
             if (magic > best) best = magic;
 
             // Summoner intentionally has a reduction. As the only class with no crit, it tends to have higher raw damage than other classes.
-            float summon = player.GetTotalDamage<SummonDamageClass>().Additive /** BalancingConstants.SummonAllClassScalingFactor*/;
+            float summon = player.GetTotalDamage<SummonDamageClass>().Additive;
             if (summon > best) best = summon;
             // We intentionally don't check whip class, because it inherits 100% from Summon
 
@@ -176,7 +176,7 @@ namespace MultidimensionMod.Utilities
                         Framing.GetTileSafely(tpTileX, tpY).HasUnactuatedTile)
                     {
                         if (canTeleportTo != null && canTeleportTo(tpTileX, tpY) ||
-                            Main.tile[tpTileX, tpY - 1].LiquidType != 2 &&
+                            Main.tile[tpTileX, tpY - 1].LiquidType != LiquidID.Honey &&
                             (Main.tileSolid[Framing.GetTileSafely(tpTileX, tpY).TileType] || Main.tileSolidTop[Framing.GetTileSafely(tpTileX, tpY).TileType]) &&
                             !Collision.SolidTiles(tpTileX - 1, tpTileX + 1, tpY - 4, tpY - 1))
                         {

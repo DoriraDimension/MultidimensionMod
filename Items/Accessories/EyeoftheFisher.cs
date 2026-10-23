@@ -50,6 +50,8 @@ namespace MultidimensionMod.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.sonarPotion = true;
+            player.GetModPlayer<MDPlayer>().FisherEye = true;
+            player.GetModPlayer<MDPlayer>().EyesShouldChange = !hideVisual;
         }
     }
 }

@@ -50,6 +50,7 @@ namespace MultidimensionMod.Items.Accessories
 		{
 			player.findTreasure = true;
 			player.GetModPlayer<MDPlayer>().DesireEye = true;
-		}
+            player.GetModPlayer<MDPlayer>().EyesShouldChange = !hideVisual;
+        }
 	}
 }
