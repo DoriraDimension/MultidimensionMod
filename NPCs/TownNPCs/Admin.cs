@@ -45,7 +45,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			NPCID.Sets.AttackTime[NPC.type] = 90;
 			NPCID.Sets.AttackAverageChance[NPC.type] = 30;
 			NPCID.Sets.HatOffsetY[NPC.type] = 4;
-			NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+			NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers()
 			{
 				Velocity = 1f
 			};

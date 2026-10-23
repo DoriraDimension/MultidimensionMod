@@ -506,7 +506,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     {
                         NPC.frame.Y = 540;
                     }
-                    if (AreYouSerious == 240) //Despawn NPC and spawn the runaway projectile after 4 seconds if player doesn't return into line of sight
+                    if (AreYouSerious == 240 && !Main.getGoodWorld) //Despawn NPC and spawn the runaway projectile after 4 seconds if player doesn't return into line of sight
                     {
                         AreYouSerious = 0;
                         if (Main.netMode != NetmodeID.MultiplayerClient)
@@ -517,7 +517,7 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
                     else if (AreYouSerious == 240 && Main.getGoodWorld) //Despawn NPC, spawn the runaway projectile and instakill player after 4 seconds if player doesn't return into line of sight
                     {
                         AreYouSerious = 0;
-                        player.KillMe(PlayerDeathReason.ByCustomReason(player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.AntiCheese")), 1000.0, 0);
+                        player.KillMe(PlayerDeathReason.ByCustomReason(NetworkText.FromKey("Mods.MultidimensionMod.MiscText.DeathMessages.AntiCheese", player.name)), 1000.0, 0);
                         NPC.netUpdate = true;
                     }
                     //Go back to attack AI if player is in line of sight again

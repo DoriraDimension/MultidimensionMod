@@ -33,8 +33,8 @@ namespace MultidimensionMod.Items.Accessories
 			if (player.wet && !player.lavaWet && !player.honeyWet && !player.immune)
 			{
                 ModContent.GetInstance<SockAchievement>().WetSocksCondition.Complete();
-                player.KillMe(PlayerDeathReason.ByCustomReason(player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.Socks")), 1000.0, 0);
-			}
+                player.KillMe(PlayerDeathReason.ByCustomReason(NetworkText.FromKey("Mods.MultidimensionMod.MiscText.DeathMessages.Socks", player.name)), 1000.0, 0);
+            }
 			if (Main.raining && player.ZoneOverworldHeight && Framing.GetTileSafely(player.Center.ToTileCoordinates()).WallType == WallID.None)
 			{
                 WetFeet++;
@@ -45,7 +45,7 @@ namespace MultidimensionMod.Items.Accessories
             }
 			if (WetFeet >= 300)
 			{
-                player.KillMe(PlayerDeathReason.ByCustomReason(player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.Socks")), 1000.0, 0);
+                player.KillMe(PlayerDeathReason.ByCustomReason(NetworkText.FromKey("Mods.MultidimensionMod.MiscText.DeathMessages.Socks", player.name)), 1000.0, 0);
             }
 			if (!player.active || player.dead)
 			{

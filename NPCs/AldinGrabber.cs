@@ -9,10 +9,6 @@ using Terraria.Localization;
 using Terraria.Audio;
 using MultidimensionMod.Base;
 using Terraria.GameContent.Bestiary;
-using System;
-using static Terraria.GameContent.Animations.IL_Actions.NPCs;
-using Microsoft.Xna.Framework.Graphics;
-using Terraria.GameContent;
 
 namespace MultidimensionMod.NPCs
 {
@@ -21,7 +17,7 @@ namespace MultidimensionMod.NPCs
         public override void SetStaticDefaults()
         {
             Main.npcFrameCount[NPC.type] = 21;
-            NPCID.Sets.NPCBestiaryDrawModifiers value = new(0) { Hide = true };
+            NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers() { Hide = true };
             NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
         }
 

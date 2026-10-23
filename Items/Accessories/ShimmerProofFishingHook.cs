@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Accessories
 {
-    public class ShimmerProofFishingHook : ModItem
+    public class ShimmerproofFishingHook : ModItem
     {
         public override void SetDefaults()
         {
@@ -18,7 +18,7 @@ namespace MultidimensionMod.Items.Accessories
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<MDPlayer>().shimmerProofHook = true;
+            player.GetModPlayer<MDPlayer>().shimmerproofHook = true;
         }
     }
 }

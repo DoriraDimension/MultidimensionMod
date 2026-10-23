@@ -131,7 +131,7 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
                 }
                 if (player.statLife <= 0)
                 {
-                    player.KillMe(PlayerDeathReason.ByCustomReason(player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.Flamescar")), 1000.0, 0);
+                    player.KillMe(PlayerDeathReason.ByCustomReason(NetworkText.FromKey("Mods.MultidimensionMod.MiscText.DeathMessages.Flamescar", player.name)), 1000.0, 0);
                 }
             }
             return true;

@@ -122,7 +122,7 @@ namespace MultidimensionMod.NPCs.Bosses.FeudalFungus
             Main.npcFrameCount[NPC.type] = 1;
             NPCID.Sets.TrailCacheLength[NPC.type] = 8;
             NPCID.Sets.TrailingMode[NPC.type] = 0;
-            var value = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+            var value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
                 Position = new Vector2(0, 40),
                 PortraitPositionYOverride = 20

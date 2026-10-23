@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace MultidimensionMod.Buffs.Potions
 {
-    public class pap : ModBuff
+    public class Pap : ModBuff
     {
         public override void SetStaticDefaults()
         {

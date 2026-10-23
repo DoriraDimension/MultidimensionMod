@@ -24,9 +24,9 @@ namespace MultidimensionMod.Items.Potions
             Item.UseSound = SoundID.Item3;
             Item.maxStack = 1;
             Item.consumable = true;
-            Item.rare = -12;
+            Item.rare = ItemRarityID.Expert;
             Item.value = Item.sellPrice(9999, 100, 100, 100);
-            Item.buffType = ModContent.BuffType<pap>();
+            Item.buffType = ModContent.BuffType<Pap>();
             Item.buffTime = 3600000;
         }
     }

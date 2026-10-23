@@ -96,7 +96,7 @@ namespace MultidimensionMod.Common.Players
         public Item DivineStarBlessing;
         public bool herbBook = false;
         public bool currentlyShimmerFishing = false;
-        public bool shimmerProofHook = false;
+        public bool shimmerproofHook = false;
         #region Custom Sword Swing Fields
         public int swingDir = 1;
         public Vector2 currentArmPosition = Vector2.Zero;
@@ -152,7 +152,7 @@ namespace MultidimensionMod.Common.Players
             SpiderNecklace = false;
             starBless = false;
             herbBook = false;
-            shimmerProofHook = false;
+            shimmerproofHook = false;
             currentlyShimmerFishing = false;
             AngelBelt = false;
             hiveNugget = false;
@@ -1027,9 +1027,9 @@ namespace MultidimensionMod.Common.Players
         public override bool PreKill(double damage, int hitDirection, bool pvp, ref bool playSound, ref bool genGore, ref PlayerDeathReason damageSource)
         {
             if (Madness && damage == 10.0 && hitDirection == 0 && damageSource.SourceOtherIndex == 8)
-                damageSource = PlayerDeathReason.ByCustomReason(Player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.Madness"));
+                damageSource = PlayerDeathReason.ByCustomReason(NetworkText.FromKey("Mods.MultidimensionMod.DeathMessages.Madness", Player.name));
             if (MonarchHeart && damage == 10.0 && hitDirection == 0 && damageSource.SourceOtherIndex == 8)
-                damageSource = PlayerDeathReason.ByCustomReason(Player.name + Language.GetTextValue("Mods.MultidimensionMod.DeathMessages.MonarchHeart"));
+                damageSource = PlayerDeathReason.ByCustomReason(NetworkText.FromKey("Mods.MultidimensionMod.DeathMessages.MonarchHeart", Player.name));
             return true;
         }
 

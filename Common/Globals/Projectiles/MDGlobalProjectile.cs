@@ -30,11 +30,11 @@ namespace MultidimensionMod.Common.Globals.Projectiles
 
         public override bool PreAI(Projectile projectile)
         {
-            if (projectile.owner == Main.myPlayer && (projectile.aiStyle == 61 || projectile.bobber) && projectile.shimmerWet)
+            if (projectile.owner == Main.myPlayer && (projectile.aiStyle == ProjAIStyleID.Bobber || projectile.bobber) && projectile.shimmerWet)
             {
                 Player player = Main.player[projectile.owner];
                 MDPlayer modPlayer = player.GetModPlayer<MDPlayer>();
-                if (modPlayer.shimmerProofHook)
+                if (modPlayer.shimmerproofHook)
                 {
                     player.buffImmune[BuffID.Shimmer] = true;
                     modPlayer.currentlyShimmerFishing = true;
@@ -67,7 +67,7 @@ namespace MultidimensionMod.Common.Globals.Projectiles
                     }
                 }
             }*/
-            if (mdPlayer.shimmerProofHook && (projectile.aiStyle == 61 || projectile.bobber) && projectile.shimmerWet && projectile.ai[1] < 0f)
+            if (mdPlayer.shimmerproofHook && (projectile.aiStyle == ProjAIStyleID.Bobber || projectile.bobber) && projectile.shimmerWet && projectile.ai[1] < 0f)
             {
                 if (Math.Abs(projectile.velocity.Y) <= 0.01f)
                 {

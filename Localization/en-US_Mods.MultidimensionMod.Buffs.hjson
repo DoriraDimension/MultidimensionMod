@@ -73,11 +73,6 @@ OceansBlessing: {
 	Description: You can swim and breathe like a resident of the sea.
 }
 
-pap: {
-	DisplayName: lol
-	Description: you are immortal now.
-}
-
 WarriorsHeart: {
 	DisplayName: Warrior's Heart
 	Description: Your heart lusts for battle, meele damage is increased.
@@ -225,5 +220,10 @@ CrimeraMinionBuff: {
 
 EaterMinionBuff: {
 	DisplayName: Evolved Eater of Souls
-	Description: An Eater of Souls will bite for you.
+	Description: An Eater of Souls will bite for you
+}
+
+Pap: {
+	DisplayName: lol
+	Description: you are immortal now
 }

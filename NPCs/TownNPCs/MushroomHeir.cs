@@ -50,7 +50,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
             NPCID.Sets.AttackTime[NPC.type] = 60;
             NPCID.Sets.AttackAverageChance[NPC.type] = 10;
             NPCID.Sets.HatOffsetY[NPC.type] = 4;
-            NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+            NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
                 Velocity = 1f
             };
@@ -74,7 +74,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
             NPC.friendly = true;
             NPC.width = 24;
             NPC.height = 40;
-            NPC.aiStyle = 7;
+            NPC.aiStyle = NPCAIStyleID.Passive;
             NPC.damage = 25;
             NPC.defense = 999;
             NPC.lifeMax = 100;

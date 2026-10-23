@@ -136,7 +136,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		{
             Main.npcFrameCount[NPC.type] = 9;
             NPCID.Sets.NoTownNPCHappiness[Type] = true;
-            var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+            var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
                 CustomTexturePath = "MultidimensionMod/NPCs/Bestiary/TarahaBestiary",
             };

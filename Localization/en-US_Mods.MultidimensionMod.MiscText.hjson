@@ -10,11 +10,11 @@ ScrapyardAndVoidCatchFishRooltip: Caught in Scrapyard Shores and Void's Edge
 ForestCatchFishTooltip: Caught in Forest
 
 DeathMessages: {
-	Socks: " died from the pain of wearing wet socks."
-	MonarchHeart: " was turned to mush."
-	AntiCheese: " has been punished for their skill issue."
-	Madness: "'s mind was consumed."
-	Flamescar: " burned their very soul."
+	Socks: "{0} died from the pain of wearing wet socks."
+	MonarchHeart: "{0} was turned to mush."
+	AntiCheese: "{0} has been punished for their skill issue."
+	Madness: "{0}'s mind was consumed."
+	Flamescar: "{0} burned their very soul."
 }
 
 SoulConversation: {

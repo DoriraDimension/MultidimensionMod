@@ -142,7 +142,7 @@ namespace MultidimensionMod.NPCs.Bosses.Smiley
         public override void SetStaticDefaults()
 		{
 			Main.npcFrameCount[NPC.type] = 20;
-            var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+            var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
                 CustomTexturePath = "MultidimensionMod/NPCs/Bestiary/SmileyBestiary",
             };
