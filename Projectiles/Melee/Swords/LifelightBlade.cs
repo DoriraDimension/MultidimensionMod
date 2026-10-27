@@ -20,7 +20,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 			Projectile.height = 40;
 			Projectile.friendly = true;
 			Projectile.DamageType = DamageClass.Melee;
-			Projectile.tileCollide = true;
+			Projectile.tileCollide = false;
 			Projectile.penetrate = -1;
 			Projectile.timeLeft = 500;
 		}
@@ -36,6 +36,11 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
         public override void AI()
         {
+			Player player = Main.player[Projectile.owner];
+			if (Projectile.Center.X >= player.Center.X)
+			{
+				Projectile.tileCollide = true;
+			}
 			Projectile.velocity.Y = 30;
 			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2 - MathHelper.PiOver4 * Projectile.spriteDirection;
 		}

@@ -1,25 +1,28 @@
-﻿using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Tiles;
-using MultidimensionMod.Projectiles.Melee.Swords;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Projectiles.Melee.Swords;
+using MultidimensionMod.Tiles;
+using ReLogic.Content;
 using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
 using Terraria.Audio;
 using Terraria.DataStructures;
+using Terraria.GameContent.Creative;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
 	public class Lifelight : ModItem
 	{
-
-		public int Light;
+        private static Asset<Texture2D> Charged;
+        public int Light;
+		public bool Once = false;
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-		}
+            Charged = ModContent.Request<Texture2D>(Texture + "Charged");
+        }
 
 		public override void SetDefaults()
 		{
@@ -59,15 +62,15 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			if (Light >= 10)
             {
 				Light = 10;
-				SoundEngine.PlaySound(SoundID.NPCDeath7, player.position);
-
 			}
-			if (Light == 10)
+			if (Light == 10 && !Once)
             {
-
+                SoundEngine.PlaySound(SoundID.NPCDeath7, player.position);
+                Once = true;
             }
 			if (player.altFunctionUse == 2 && Light == 10)
             {
+				Once = false;
 				Light = 0;
 				Projectile.NewProjectile(player.GetSource_ItemUse(player.HeldItem), player.Center.X, player.Center.Y, 0f, -15f, ModContent.ProjectileType<LifelightSkywards>(), (int)((double)((float)Item.damage) * 1.7), 0f, Main.myPlayer);
 			}
@@ -138,5 +141,12 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			.AddTile(ModContent.TileType<DimensionalForge>())
 			.Register();
 		}
-	}
+
+        public override bool ModifyItemDraw(ref PlayerDrawSet drawInfo, ref DrawData drawData, ref DrawData? coloredDrawData, ref DrawData? glowmaskDrawData)
+        {
+			if (Light == 10)
+                glowmaskDrawData = drawData with { texture = Charged.Value };
+            return true;
+        }
+    }
 }

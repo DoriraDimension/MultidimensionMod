@@ -1,23 +1,27 @@
-﻿using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Projectiles.Magic;
+﻿using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Projectiles.Magic;
+using ReLogic.Content;
 using Terraria;
-using Terraria.ID;
 using Terraria.DataStructures;
-using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 {
 	public class LophiiformesBaculum : ModItem
 	{
 		public int BlastCount = 0;
-		public override void SetStaticDefaults()
+        private static Asset<Texture2D> Glow;
+        public override void SetStaticDefaults()
 		{
 			Item.staff[Item.type] = true;
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-		}
+            Glow = ModContent.Request<Texture2D>(Texture + "_Glow");
+        }
 
 		public override void SetDefaults()
 		{
@@ -40,7 +44,7 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 			Item.crit = 8;
 		}
 
-		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
 			for (int i = 0; i < 4; i++)
 			{
@@ -95,5 +99,11 @@ namespace MultidimensionMod.Items.Weapons.Magic.Staffs
 				0f
 			);
 		}
-	}
+
+        public override bool ModifyItemDraw(ref PlayerDrawSet drawInfo, ref DrawData drawData, ref DrawData? coloredDrawData, ref DrawData? glowmaskDrawData)
+        {
+            glowmaskDrawData = drawData with { texture = Glow.Value, color = Color.White };
+            return true;
+        }
+    }
 }

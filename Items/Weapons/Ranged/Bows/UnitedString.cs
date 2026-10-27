@@ -1,20 +1,23 @@
-﻿using MultidimensionMod.Items.Materials;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Projectiles.Ranged;
 using MultidimensionMod.Tiles;
-using Microsoft.Xna.Framework;
-using Terraria.ID;
+using ReLogic.Content;
 using Terraria;
-using Terraria.ModLoader;
 using Terraria.DataStructures;
-using Microsoft.Xna.Framework.Graphics;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 {
     public class UnitedString : ModItem
     {
+        private static Asset<Texture2D> Glow;
         public override void SetStaticDefaults()
         {
             ItemID.Sets.ItemsThatAllowRepeatedRightClick[Item.type] = true;
+            Glow = ModContent.Request<Texture2D>(Texture + "_Glow");
         }
 
         public override void SetDefaults()
@@ -117,6 +120,12 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
                 SpriteEffects.None,
                 0f
             );
+        }
+
+        public override bool ModifyItemDraw(ref PlayerDrawSet drawInfo, ref DrawData drawData, ref DrawData? coloredDrawData, ref DrawData? glowmaskDrawData)
+        {
+            glowmaskDrawData = drawData with { texture = Glow.Value, color = Color.White };
+            return true;
         }
     }
 }

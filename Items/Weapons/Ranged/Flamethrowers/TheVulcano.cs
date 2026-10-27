@@ -1,16 +1,17 @@
-using MultidimensionMod.Projectiles.Ranged;
-using Terraria;
-using Terraria.ID;
 using Microsoft.Xna.Framework;
-using Terraria.ModLoader;
-using Terraria.DataStructures;
 using Microsoft.Xna.Framework.Graphics;
+using MultidimensionMod.Projectiles.Ranged;
+using ReLogic.Content;
+using Terraria;
+using Terraria.DataStructures;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
 {
     public class TheVulcano : ModItem
     {
-        
+        private static Asset<Texture2D> Glow;
         public override void SetDefaults()
         {
             Item.damage = 35;
@@ -35,6 +36,7 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
         {
             //DisplayName.SetDefault("The Vulcan");
             //Tooltip.SetDefault("Turns Gel into an explosive lob of magma");
+            Glow = ModContent.Request<Texture2D>(Texture + "_Glow");
         }
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
@@ -81,6 +83,12 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Flamethrowers
                 SpriteEffects.None,
                 0f
             );
+        }
+
+        public override bool ModifyItemDraw(ref PlayerDrawSet drawInfo, ref DrawData drawData, ref DrawData? coloredDrawData, ref DrawData? glowmaskDrawData)
+        {
+            glowmaskDrawData = drawData with { texture = Glow.Value, color = Color.White };
+            return true;
         }
     }
 }

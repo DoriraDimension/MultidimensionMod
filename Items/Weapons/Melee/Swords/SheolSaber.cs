@@ -1,20 +1,24 @@
-﻿using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Projectiles.Melee.Swords;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Projectiles.Melee.Swords;
+using ReLogic.Content;
 using Terraria;
+using Terraria.DataStructures;
+using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Swords
 {
 	public class SheolSaber : ModItem
 	{
-		public override void SetStaticDefaults()
+        private static Asset<Texture2D> Glow;
+        public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-		}
+            Glow = ModContent.Request<Texture2D>(Texture + "_Glow");
+        }
 
 		public override void SetDefaults()
 		{
@@ -76,5 +80,11 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 				0f
 			);
 		}
-	}
+
+        public override bool ModifyItemDraw(ref PlayerDrawSet drawInfo, ref DrawData drawData, ref DrawData? coloredDrawData, ref DrawData? glowmaskDrawData)
+        {
+            glowmaskDrawData = drawData with { texture = Glow.Value, color = Color.White };
+            return true;
+        }
+    }
 }

@@ -1,21 +1,24 @@
-﻿using MultidimensionMod.Projectiles.Ranged;
-using Terraria;
-using Microsoft.Xna.Framework;
-using Terraria.ID;
-using Terraria.DataStructures;
-using Terraria.ModLoader;
-using Terraria.Audio;
-using Terraria.GameContent.Creative;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MultidimensionMod.Projectiles.Ranged;
+using ReLogic.Content;
+using Terraria;
+using Terraria.Audio;
+using Terraria.DataStructures;
+using Terraria.GameContent.Creative;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 {
 	public class MetalWormGun : ModItem
 	{
-		public override void SetStaticDefaults()
+        private static Asset<Texture2D> Glow;
+        public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-		}
+            Glow = ModContent.Request<Texture2D>(Texture + "_Glow");
+        }
 
 		public override void SetDefaults()
 		{
@@ -81,6 +84,12 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
                 SpriteEffects.None,
                 0f
             );
+        }
+
+        public override bool ModifyItemDraw(ref PlayerDrawSet drawInfo, ref DrawData drawData, ref DrawData? coloredDrawData, ref DrawData? glowmaskDrawData)
+        {
+            glowmaskDrawData = drawData with { texture = Glow.Value, color = Color.White };
+            return true;
         }
     }
 }

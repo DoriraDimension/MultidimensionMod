@@ -1,29 +1,32 @@
-﻿using MultidimensionMod.Projectiles.Summon.Sentries;
-using MultidimensionMod.Base;
-using MultidimensionMod.Tiles;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using System;
+using Microsoft.Xna.Framework.Graphics;
+using MultidimensionMod.Base;
+using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Projectiles.Summon.Sentries;
+using MultidimensionMod.Tiles;
+using ReLogic.Content;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
-using Terraria.ModLoader;
-using Terraria.Audio;
-using System.Collections.Generic;
 using Terraria.Localization;
-using MultidimensionMod.Items.Materials;
-using Microsoft.Xna.Framework.Graphics;
+using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Summon
 {
     public class EntwinedTalisman : ModItem
     {
+        private static Asset<Texture2D> Glow;
         public static readonly SoundStyle UseSound = new SoundStyle("MultidimensionMod/Sounds/Custom/HallowedCry");
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true;
             ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
+            Glow = ModContent.Request<Texture2D>(Texture + "_Glow");
         }
 
         public override void SetDefaults()
@@ -113,6 +116,12 @@ namespace MultidimensionMod.Items.Weapons.Summon
                 SpriteEffects.None,
                 0f
             );
+        }
+
+        public override bool ModifyItemDraw(ref PlayerDrawSet drawInfo, ref DrawData drawData, ref DrawData? coloredDrawData, ref DrawData? glowmaskDrawData)
+        {
+            glowmaskDrawData = drawData with { texture = Glow.Value, color = Color.White };
+            return true;
         }
     }
 }

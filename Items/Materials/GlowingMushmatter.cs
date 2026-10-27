@@ -42,6 +42,5 @@ namespace MultidimensionMod.Items.Materials
                 0f
             );
         }
-
     }
 }
