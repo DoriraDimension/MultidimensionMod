@@ -79,7 +79,8 @@ DesertNecklace: {
 	Tooltip:
 		'''
 		Increases all damage and crit chance by 4% when in the Desert.
-		Hitting enemies with magic weapons accumulates soulflame
+		Hitting enemies with magic projectiles accumulates soulflame
+		Hitting enemies has a half second cooldown
 		When soulflame is at maximum capacity the next magic hit will be 100% stronger and costs no mana
 		'''
 	Lore:

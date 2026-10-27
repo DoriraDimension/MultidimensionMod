@@ -72,6 +72,7 @@ namespace MultidimensionMod.Common.Players
         public bool DesertNeck = false;
         public int SoulflameCharge = 0;
         public int MaxSoulflame = 100;
+        public int MagicHitCooldown = 0;
         public bool Symbio = false;
         public int GiveBirth;
         public bool SymbioAuraIsVisible;
@@ -496,6 +497,14 @@ namespace MultidimensionMod.Common.Players
                 if (MatterCreationTimer < 0)
                 {
                     MatterCreationTimer = 0;
+                }
+            }
+            if (DesertNeck)
+            {
+                MagicHitCooldown--;
+                if (MagicHitCooldown < 0)
+                {
+                    MagicHitCooldown = 0;
                 }
             }
         }
@@ -1137,14 +1146,6 @@ namespace MultidimensionMod.Common.Players
             {
                 Player.AddBuff(BuffID.RapidHealing, 180);
             }
-            if (DesertNeck)
-            {
-                //Accumulate 10 soulflame charges if a magic damage item hits an enemy
-                if (item.DamageType == DamageClass.Magic)
-                {
-                    SoulflameCharge += 10;
-                }
-            }
         }
 
         public override void OnHitNPCWithProj(Projectile projectile, NPC target, NPC.HitInfo hit, int damageDone)
@@ -1170,10 +1171,10 @@ namespace MultidimensionMod.Common.Players
             if (DesertNeck)
             {
                 //Accumulate 10 soulflame charges if a magic damage projectile hits an enemy
-                if (projectile.DamageType == DamageClass.Magic)
+                if (projectile.DamageType == DamageClass.Magic && MagicHitCooldown == 0)
                 {
                     SoulflameCharge += 10;
-                    Main.NewText($"Necklace: {DesertNeck}, Charge: {SoulflameCharge}");
+                    MagicHitCooldown = 60;
                 }
             }
         }
