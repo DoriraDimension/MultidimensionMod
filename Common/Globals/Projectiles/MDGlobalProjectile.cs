@@ -18,12 +18,20 @@ namespace MultidimensionMod.Common.Globals.Projectiles
     {
         public override bool InstancePerEntity => true;
         public bool CantHurtDapper;
+        public bool IsNecklaceEmpowered = false;
 
         public override void OnSpawn(Projectile projectile, IEntitySource source)
         {
+            Player player = Main.player[projectile.owner];
             if (source is EntitySource_Parent parent && parent.Entity is NPC npc && npc.type == ModContent.NPCType<MushroomHeir>())
             {
                 SoundEngine.PlaySound(Sounds.CustomSounds.Gunshot with { Volume = 0.70f }, projectile.position);
+            }
+            if (player.GetModPlayer<MDPlayer>().SoulflameCharge >= player.GetModPlayer<MDPlayer>().MaxSoulflame && projectile.DamageType == DamageClass.Magic)
+            {
+                SoundEngine.PlaySound(Sounds.CustomSounds.Magic with { Volume = 1.50f }, projectile.position);
+                IsNecklaceEmpowered = true;
+                player.GetModPlayer<MDPlayer>().SoulflameCharge = 0;
             }
             base.OnSpawn(projectile, source);
         }
@@ -87,6 +95,18 @@ namespace MultidimensionMod.Common.Globals.Projectiles
                     projectile.netUpdate = true;
                 }
             }
+            if (IsNecklaceEmpowered)
+            {
+                Lighting.AddLight(projectile.Center, 0f, 0.5f, 0.05f);
+            }
+        }
+
+        public override void ModifyHitNPC(Projectile projectile, NPC target, ref NPC.HitModifiers modifiers)
+        {
+            if (IsNecklaceEmpowered)
+            {
+                modifiers.FinalDamage *= 2f;
+            }
         }
 
         public void ConvertMushDB(int i, int j, int size = 4)
@@ -119,6 +139,15 @@ namespace MultidimensionMod.Common.Globals.Projectiles
                     }
                 }
             }
+        }
+
+        public override Color? GetAlpha(Projectile projectile, Color lightColor)
+        {
+            if (IsNecklaceEmpowered)
+            {
+                return Color.Green;
+            }
+            return null;
         }
 
         public void ConvertMush(int i, int j, int size = 4)

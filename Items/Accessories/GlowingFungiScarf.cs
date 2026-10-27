@@ -122,8 +122,8 @@ namespace MultidimensionMod.Items.Accessories
                 Projectile.Kill();
             }
             float baseScale = 0.5f;
-            float pulseSpeed = 0.08f;
-            float pulseAmount = 0.1f;
+            float pulseSpeed = 0.12f;
+            float pulseAmount = 0.12f;
 
             Projectile.scale = baseScale +
                 MathF.Sin((float)Main.GameUpdateCount * pulseSpeed) * pulseAmount;

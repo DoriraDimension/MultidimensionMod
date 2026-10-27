@@ -75,20 +75,18 @@ CreationMedaillon: {
 }
 
 DesertNecklace: {
-	DisplayName: Desert Necklace
+	DisplayName: Necklace of Rebirth
 	Tooltip:
 		'''
 		Increases all damage and crit chance by 4% when in the Desert.
-		Getting hit will trigger a shockwave that scales with magic damage and ignores 20 defense
-		The initial damage depends on how much mana you had on activation
-		All remaining mana is lost upon triggering this effect
-		Shockwave damage gets doubled upon entering hardmode
-		The shockwave has a 5 second cooldown
+		Hitting enemies with magic weapons accumulates soulflame
+		When soulflame is at maximum capacity the next magic hit will be 100% stronger and costs no mana
 		'''
 	Lore:
 		'''
-		A necklace crafted with mana infused sandstone, its gem only reacts to the dry aura of the desert
-		The barren lands have an aura unlike any other, it makes you wonder what actually caused them to exist
+		An old necklace likely once worn by a member of the Children of Rahlem cult.
+		Its embedded gem reacts faintly to the dry aura of the desert.
+		The barren lands have an aura unlike any other, it makes you wonder what actually caused them to exist.
 		'''
 }
 

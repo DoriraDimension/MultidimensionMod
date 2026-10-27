@@ -16,17 +16,17 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 		{
 			Main.tileFrameImportant[Type] = true;
 			Main.tileNoAttach[Type] = true;
-			TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
+            TileID.Sets.DisableSmartCursor[Type] = true;
+            TileID.Sets.Clock[Type] = true;
+            TileID.Sets.HasOutlines[Type] = true;
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
             TileObjectData.newTile.Origin = new Point16(1, 4);
             TileObjectData.newTile.Height = 5;
 			TileObjectData.newTile.Width = 2;
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 16, 18 };
-			TileID.Sets.DisableSmartCursor[Type] = true;
-			TileID.Sets.Clock[Type] = true;
-			TileID.Sets.HasOutlines[Type] = true;
-			AdjTiles = new int[] { TileID.GrandfatherClocks };
 			TileObjectData.addTile(Type);
-			LocalizedText name = CreateMapEntryName();
+            AdjTiles = new int[] { TileID.GrandfatherClocks };
+            LocalizedText name = CreateMapEntryName();
 			// name.SetDefault("Void Matter Clock");
 			AddMapEntry(new Color(25, 19, 39), name);
 			DustType = ModContent.DustType<DarkDust>();

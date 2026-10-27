@@ -98,11 +98,6 @@ Nihil: {
 	Description: Dark energy has disabled defense
 }
 
-ManaBurstCooldown: {
-	DisplayName: Mana Burst Cooldown
-	Description: Cannot unleash mana shockwaves
-}
-
 IndigoInjection: {
 	DisplayName: Indigo Injection
 	Description: The symbiosis floods you with energy

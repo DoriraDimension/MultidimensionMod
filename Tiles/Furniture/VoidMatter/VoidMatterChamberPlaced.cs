@@ -19,20 +19,20 @@ namespace MultidimensionMod.Tiles.Furniture.VoidMatter
 		public override void SetStaticDefaults()
 		{
 			Main.tileFrameImportant[Type] = true;
-			TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2);
+            TileID.Sets.DisableSmartCursor[Type] = true;
+            TileID.Sets.HasOutlines[Type] = true;
+            TileID.Sets.CanBeSleptIn[Type] = true;
+            TileID.Sets.InteractibleByNPCs[Type] = true;
+            TileID.Sets.IsValidSpawnPoint[Type] = true;
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2);
             TileObjectData.newTile.Origin = new Point16(2, 1);
             TileObjectData.newTile.Height = 2;
 			TileObjectData.newTile.Width = 4;
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
-			TileID.Sets.DisableSmartCursor[Type] = true;
-			TileID.Sets.HasOutlines[Type] = true;
-			TileID.Sets.CanBeSleptIn[Type] = true; 
-			TileID.Sets.InteractibleByNPCs[Type] = true;
-			TileID.Sets.IsValidSpawnPoint[Type] = true;
-			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
-			AdjTiles = new int[] { TileID.Beds };
 			TileObjectData.addTile(Type);
-			LocalizedText name = CreateMapEntryName();
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
+            AdjTiles = new int[] { TileID.Beds };
+            LocalizedText name = CreateMapEntryName();
 			// name.SetDefault("Void Matter Chamber");
 			AddMapEntry(new Color(25, 19, 39), name);
 			DustType = ModContent.DustType<DarkDust>();

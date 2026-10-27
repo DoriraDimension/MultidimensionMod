@@ -69,9 +69,9 @@ namespace MultidimensionMod.Common.Players
         public int firstTickHeal = 0;
         public bool DrakeShield = false;
         public Item DrakescaleShield;
-        public Item ColdDesertShield;
         public bool DesertNeck = false;
-        public Item DesertNecklace;
+        public int SoulflameCharge = 0;
+        public int MaxSoulflame = 100;
         public bool Symbio = false;
         public int GiveBirth;
         public bool SymbioAuraIsVisible;
@@ -172,7 +172,6 @@ namespace MultidimensionMod.Common.Players
             TidalPull = false;
             AstralEye = false;
             CreationMedallionP = false;
-            MatterCreationTimer = 0;
             IlluminatedBuff = false;
         }
         public override void UpdateDead()
@@ -182,6 +181,7 @@ namespace MultidimensionMod.Common.Players
                 GiveBirth = 0;
             }
             delayedHealValue = 0;
+            SoulflameCharge = 0;
         }
 
         public override void UpdateEquips()
@@ -195,6 +195,10 @@ namespace MultidimensionMod.Common.Players
             {
                 delayedHealValue = 0;
             }
+            if (!DesertNeck)
+            {
+                SoulflameCharge = 0;
+            }
             if (Stem)
             {
                 //Check if the player has mana sickness from consuming a mana potion and Indigo Injection is not currently on cooldown
@@ -203,6 +207,18 @@ namespace MultidimensionMod.Common.Players
                     //Inflict Indigo Injection and start cooldown timer
                     Player.AddBuff(ModContent.BuffType<IndigoInjection>(), 360);
                     Player.AddBuff(ModContent.BuffType<InjectionCooldown>(), 12360);
+                }
+            }
+        }
+
+        public override void ModifyManaCost(Item item, ref float reduce, ref float mult)
+        {
+            if (DesertNeck)
+            {
+                //Make magic weapons cost no mana if soulflame is currently full
+                if (SoulflameCharge >= MaxSoulflame)
+                {
+                    mult = 0;
                 }
             }
         }
@@ -1121,25 +1137,64 @@ namespace MultidimensionMod.Common.Players
             {
                 Player.AddBuff(BuffID.RapidHealing, 180);
             }
+            if (DesertNeck)
+            {
+                //Accumulate 10 soulflame charges if a magic damage item hits an enemy
+                if (item.DamageType == DamageClass.Magic)
+                {
+                    SoulflameCharge += 10;
+                }
+            }
         }
 
-        public override void ModifyHitByProjectile(Projectile proj, ref Player.HurtModifiers modifiers)
+        public override void OnHitNPCWithProj(Projectile projectile, NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            Item item = Player.HeldItem;
+            int useTimeSub = item.useTime / 2;
+            if (StarvingLarva)
+            {
+                if (target.life > 0)
+                {
+                    return;
+                }
+                Player.Heal(5); //Heals the player for 5 HP if an enemy dies from a projectile
+            }
+            if (SinnerSet && projectile.CountsAsClass(DamageClass.Magic))
+            {
+                target.AddBuff(BuffID.Frostburn, 120);
+            }
+            if (MushiumSet && !IndigoMode && Player.HasBuff(ModContent.BuffType<LightStarved>()) && !projectile.npcProj && !projectile.trap && target.type != NPCID.TargetDummy)
+            {
+                Player.AddBuff(BuffID.RapidHealing, 180);
+            }
+            if (DesertNeck)
+            {
+                //Accumulate 10 soulflame charges if a magic damage projectile hits an enemy
+                if (projectile.DamageType == DamageClass.Magic)
+                {
+                    SoulflameCharge += 10;
+                    Main.NewText($"Necklace: {DesertNeck}, Charge: {SoulflameCharge}");
+                }
+            }
+        }
+
+        public override void ModifyHitByProjectile(Projectile projectile, ref Player.HurtModifiers modifiers)
         {
             if (Brick)
             {
                 modifiers.Knockback *= 0.50f;
             }
-            if (ALLists.ReflectionExceptions.TrueForAll(x => proj.type != x) && proj.active && !proj.friendly && proj.hostile && proj.damage > 0)
+            if (ALLists.ReflectionExceptions.TrueForAll(x => projectile.type != x) && projectile.active && !projectile.friendly && projectile.hostile && projectile.damage > 0)
             {
                 if (SkulkerShell)
                 {
                     if (Main.rand.NextBool(10))
                     {
-                        proj.hostile = false;
-                        proj.friendly = true;
-                        proj.velocity *= -0.5f;
-                        proj.extraUpdates += 1;
-                        proj.penetrate = 1;
+                        projectile.hostile = false;
+                        projectile.friendly = true;
+                        projectile.velocity *= -0.5f;
+                        projectile.extraUpdates += 1;
+                        projectile.penetrate = 1;
                         modifiers.FinalDamage = modifiers.SourceDamage / 2;
                         SoundEngine.PlaySound(SoundID.Item150, Player.position);
                         return;
@@ -1170,28 +1225,6 @@ namespace MultidimensionMod.Common.Players
                     int starDamage = (int)Player.GetBestClassDamage().ApplyTo(100);
                     Projectile.NewProjectile(Player.GetSource_FromThis(), Player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<DefensiveParticleA>(), starDamage, 0f, Player.whoAmI, n, 3);
                 }
-            }
-        }
-
-        public override void OnHitNPCWithProj(Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
-        {
-            Item item = Player.HeldItem;
-            int useTimeSub = item.useTime / 2;
-            if (StarvingLarva)
-            {
-                if (target.life > 0)
-                {
-                    return;
-                }
-                Player.Heal(5); //Heals the player for 5 HP if an enemy dies from a projectile
-            }
-            if (SinnerSet && proj.CountsAsClass(DamageClass.Magic))
-            {
-                target.AddBuff(BuffID.Frostburn, 120);
-            }
-            if (MushiumSet && !IndigoMode && Player.HasBuff(ModContent.BuffType<LightStarved>()) && !proj.npcProj && !proj.trap && target.type != NPCID.TargetDummy)
-            {
-                Player.AddBuff(BuffID.RapidHealing, 180);
             }
         }
 
@@ -1323,22 +1356,6 @@ namespace MultidimensionMod.Common.Players
                         Item item = DrakescaleShield;
                         Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(Main.rand.Next(-11, 11) * .25f, -7 * .75f), ModContent.ProjectileType<FrostScaleProj>(), scaleDamage, 0f, Player.whoAmI);
                     }
-                }
-            }
-            if (DesertNeck && !Player.HasBuff(ModContent.BuffType<ManaBurstCooldown>()))
-            {
-                int damage = (int)Player.GetBestClassDamage().ApplyTo(Player.statMana / 2);
-                if (Main.hardMode)
-                {
-                    damage = (int)Player.GetBestClassDamage().ApplyTo(Player.statMana);
-                }
-                if (Main.myPlayer == Player.whoAmI)
-                {
-                    Player.AddBuff(ModContent.BuffType<ManaBurstCooldown>(), 420);
-                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/ManaBurst"));
-                    Player.statMana -= Player.statMana;
-                    Item item = DesertNecklace;
-                    Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center, new Vector2(0, 0), ModContent.ProjectileType<ManaShockwave>(), damage, 0f, Player.whoAmI);
                 }
             }
             if (starBless)

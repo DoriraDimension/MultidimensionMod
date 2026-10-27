@@ -274,7 +274,7 @@ namespace MultidimensionMod.Worldgen
                 while(Ycheck<Main.maxTilesY/2)
                 {
                     Ycheck++;
-                    if(Main.tile[X,Ycheck].TileType==59&&Main.tile[X,Ycheck].HasTile)
+                    if(Main.tile[X,Ycheck].TileType== TileID.Mud && Main.tile[X,Ycheck].HasTile)
                     {
                         
                         WorldUtils.Gen(new(X, Ycheck), new Shapes.Circle((int)(WorldGen.genRand.Next(4,13))), Actions.Chain(new GenAction[]
@@ -295,7 +295,7 @@ namespace MultidimensionMod.Worldgen
                 int X = WorldGen.genRand.Next((int)PlaceBiomeX-(int)(biomeRadius),(int)PlaceBiomeX+(int)(biomeRadius));
                 int Y = WorldGen.genRand.Next((int)PlaceBiomeY -(int)(biomeRadius),(int)PlaceBiomeY+(int)(2f*biomeRadius));
                 Tile tile = Main.tile[X, Y];
-                if(tile.HasTile && tile.TileType==59)
+                if(tile.HasTile && tile.TileType== TileID.Mud)
                 {
                     WorldUtils.Gen(new(X, Y), new Shapes.Circle((int)(WorldGen.genRand.Next(10, 16))), Actions.Chain(new GenAction[]
                     {
@@ -395,24 +395,24 @@ namespace MultidimensionMod.Worldgen
                     Tile tileLeft = Main.tile[X - 1, Y];
                     Tile tileRight = Main.tile[X + 1, Y];
                     //myeclium
-                    if (tile.TileType == 0 && (!tileAbove.HasTile || !tileBelow.HasTile || !tileLeft.HasTile || !tileRight.HasTile))
+                    if (tile.TileType == TileID.Dirt && (!tileAbove.HasTile || !tileBelow.HasTile || !tileLeft.HasTile || !tileRight.HasTile))
                     {
                         tile.TileType = (ushort)ModContent.TileType<Mycelium>();
                     }
 
-                    if (tile.TileType == 0 && (tileAbove.TileType == ModContent.TileType<Mycelium>() || tileBelow.TileType == ModContent.TileType<Mycelium>() ||
+                    if (tile.TileType == TileID.Dirt && (tileAbove.TileType == ModContent.TileType<Mycelium>() || tileBelow.TileType == ModContent.TileType<Mycelium>() ||
                     tileLeft.TileType == ModContent.TileType<Mycelium>() || tileRight.TileType == ModContent.TileType<Mycelium>()))
                     {
                         WorldGen.SpreadGrass(X, Y, 0, ModContent.TileType<Mycelium>(), false);
                     }
                     //blue mush idk
-                    if (tile.TileType == 59 && (!tileAbove.HasTile || !tileBelow.HasTile || !tileLeft.HasTile || !tileRight.HasTile))
+                    if (tile.TileType == TileID.Mud && (!tileAbove.HasTile || !tileBelow.HasTile || !tileLeft.HasTile || !tileRight.HasTile))
                     {
                         tile.TileType = (ushort)70;
                     }
 
-                    if (tile.TileType == 59 && (tileAbove.TileType == 70 || tileBelow.TileType == 70 ||
-                    tileLeft.TileType ==70 || tileRight.TileType == 70))
+                    if (tile.TileType == TileID.Mud && (tileAbove.TileType == TileID.MushroomGrass || tileBelow.TileType == TileID.MushroomGrass ||
+                    tileLeft.TileType == TileID.MushroomGrass || tileRight.TileType == TileID.MushroomGrass))
                     {
                         WorldGen.SpreadGrass(X, Y, 59,70, false);
                     }
@@ -429,7 +429,7 @@ namespace MultidimensionMod.Worldgen
                         if (WorldGen.genRand.NextBool(5))
                             WorldGen.TryGrowingTreeByType(5, X, Y-1);
                     }
-                    if (Main.tile[X, Y].TileType == 70)
+                    if (Main.tile[X, Y].TileType == TileID.MushroomGrass)
                     {
                         if (WorldGen.genRand.NextBool(3))
                             WorldGen.GrowTree(X, Y);
@@ -583,7 +583,7 @@ namespace MultidimensionMod.Worldgen
                                 WorldGen.GrowPalmTree(X, Y);
 
                         }
-                        if (Main.tile[X, Y].TileType == 70)
+                        if (Main.tile[X, Y].TileType == TileID.MushroomGrass)
                         {
                             if (WorldGen.genRand.NextBool(3))
                                 WorldGen.GrowTree(X, Y);
@@ -596,7 +596,7 @@ namespace MultidimensionMod.Worldgen
                     for (int Y = (int)PlaceBiomeY -(int)(biomeRadius); Y <= (int)PlaceBiomeY+(int)(2f*biomeRadius); Y++)
                     {
                         
-                        if (Main.tile[X, Y].TileType == 583 || Main.tile[X, Y].TileType == 584 || Main.tile[X, Y].TileType == 585 || Main.tile[X, Y].TileType == 586 || Main.tile[X, Y].TileType == 587 || Main.tile[X, Y].TileType == 588 || Main.tile[X, Y].TileType == 589)
+                        if (Main.tile[X, Y].TileType == TileID.TreeTopaz || Main.tile[X, Y].TileType == TileID.TreeAmethyst || Main.tile[X, Y].TileType == TileID.TreeSapphire || Main.tile[X, Y].TileType == TileID.TreeEmerald || Main.tile[X, Y].TileType == TileID.TreeRuby || Main.tile[X, Y].TileType == TileID.TreeDiamond || Main.tile[X, Y].TileType == TileID.TreeAmber)
                         {   
                             Tile tile = Main.tile[X, Y];
                             tile.HasTile=false;  
@@ -649,7 +649,7 @@ namespace MultidimensionMod.Worldgen
                         }
 
                         Tile tile = Main.tile[X, Y];
-                        if (tile != null && (tile.TileType==mycelium ||tile.TileType==70))
+                        if (tile != null && (tile.TileType==mycelium ||tile.TileType== TileID.MushroomGrass))
                         {
                             for (int v = 0; v < 10; v++)
                                 TileLoader.RandomUpdate(X, Y,tile.TileType);
