@@ -56,6 +56,7 @@ namespace MultidimensionMod.Items.Vanity
     class FungusMaskGlow : PlayerDrawLayer
     {
         public override Position GetDefaultPosition() => new AfterParent(PlayerDrawLayers.Head);
+        public override bool GetDefaultVisibility(PlayerDrawSet drawInfo) => drawInfo.drawPlayer.head == EquipLoader.GetEquipSlot(Mod, nameof(FungusMask), EquipType.Head);
 
         protected override void Draw(ref PlayerDrawSet drawInfo)
         {

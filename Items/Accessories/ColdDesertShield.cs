@@ -39,7 +39,7 @@ namespace MultidimensionMod.Items.Accessories
 				player.statDefense += 4;
             }
             player.GetModPlayer<MDPlayer>().DrakeShield = true;
-            //player.GetModPlayer<MDPlayer>().DesertNeck = true;
+            player.GetModPlayer<MDPlayer>().DesertNeck = true;
 
         }
 

@@ -59,9 +59,11 @@ namespace MultidimensionMod.Items.Accessories
         public override void AddRecipes()
 		{
 			CreateRecipe()
+			.AddIngredient(ItemID.Obsidian, 14)
 			.AddIngredient(ModContent.ItemType<ManaInfusedSandstone>(), 5)
-			.AddIngredient(ItemID.Emerald)
-			.AddTile(TileID.Anvils)
+			.AddIngredient(ItemID.Amber, 2)
+            .AddIngredient(ItemID.Diamond)
+            .AddTile(TileID.Anvils)
 			.Register();
 		}
 	}

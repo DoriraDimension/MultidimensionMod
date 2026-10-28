@@ -1,27 +1,28 @@
-﻿using MultidimensionMod.Items.Accessories;
-using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Items.Potions;
+﻿using MultidimensionMod.Common.ItemDropRules.DropConditions;
+using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Bags;
-using MultidimensionMod.Items.Weapons.Magic.Others;
-using MultidimensionMod.Items.Weapons.Ranged.Guns;
-using MultidimensionMod.Items.Weapons.Ranged.Others;
-using MultidimensionMod.Items.Weapons.Magic.Tomes;
+using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Items.Permabuffs;
+using MultidimensionMod.Items.Pets;
 using MultidimensionMod.Items.Placeables;
-using MultidimensionMod.Items.Weapons.Typeless;
-using MultidimensionMod.Items.Weapons.Summon;
-using MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers;
+using MultidimensionMod.Items.Potions;
+using MultidimensionMod.Items.Potions.Food;
 using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Items.Vanity;
-using MultidimensionMod.Items.Weapons.Melee.Swords;
+using MultidimensionMod.Items.Weapons.Magic.Others;
 using MultidimensionMod.Items.Weapons.Magic.Staffs;
-using MultidimensionMod.Common.ItemDropRules.DropConditions;
+using MultidimensionMod.Items.Weapons.Magic.Tomes;
+using MultidimensionMod.Items.Weapons.Melee.Swords;
+using MultidimensionMod.Items.Weapons.Ranged.Guns;
+using MultidimensionMod.Items.Weapons.Ranged.Others;
+using MultidimensionMod.Items.Weapons.Ranged.RocketLaunchers;
+using MultidimensionMod.Items.Weapons.Summon;
+using MultidimensionMod.Items.Weapons.Typeless;
 using Terraria;
-using Terraria.ID;
-using Terraria.GameContent.ItemDropRules;
-using Terraria.ModLoader;
 using Terraria.GameContent;
-using MultidimensionMod.Items.Permabuffs;
-using MultidimensionMod.Items.Potions.Food;
+using Terraria.GameContent.ItemDropRules;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace MultidimensionMod.Common.Globals.NPCs
 {
@@ -320,7 +321,6 @@ namespace MultidimensionMod.Common.Globals.NPCs
 
             if (NPC.type == NPCID.Vulture)
             {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<KFC>(), 20));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DesertEagle>(), 20));
             }
 
@@ -344,6 +344,7 @@ namespace MultidimensionMod.Common.Globals.NPCs
             if (NPC.type == NPCID.Harpy || NPC.type == NPCID.WyvernHead)
             {
                 npcLoot.Add(ItemDropRule.ByCondition(new DownedMoonLordCondition(), ModContent.ItemType<MoonGeode>(), 8));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<KFC>(), 100));
             }
 
             if (NPC.type == NPCID.SpikedJungleSlime)

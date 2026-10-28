@@ -123,6 +123,7 @@ namespace MultidimensionMod.Common.Players
         public int MatterCreationTimer = 0;
         public Item CreationMedaillon;
         public bool IlluminatedBuff = false;
+        public int TotalMoneyCollectedByKevin = 0;
 
         public override void ResetEffects()
         {

@@ -65,11 +65,9 @@ CreationMedaillon: {
 		'''
 	Lore:
 		'''
-		The divine medallion that is only given to high ranked Scelestians.
-		Like the eye jewel,
-		this is a token of respect towards their titan.
-		The three triangles and eye represent the aspects of Origin, those aspects being mind, soul and body,
-		as well as the deity itself in the center.
+		The divine medallion that is only given to high ranked Scelestians, like the eye jewel, this is a token of respect towards their titan.
+		It depicts Origin, the deity of life, with the eye if creation in the center.
+		The three triangles on its side represent the three aspects of Origin, those being mind, body and soul.
 		Losing or breaking it is seen as a sign of great misfortune.
 		'''
 }
@@ -80,7 +78,7 @@ DesertNecklace: {
 		'''
 		Increases all damage and crit chance by 4% when in the Desert.
 		Hitting enemies with magic projectiles accumulates soulflame
-		Hitting enemies has a half second cooldown
+		Hitting enemies has a 1 second cooldown
 		When soulflame is at maximum capacity the next magic hit will be 100% stronger and costs no mana
 		'''
 	Lore:
@@ -1029,8 +1027,14 @@ DimensionalShieldPotion: {
 }
 
 KFC: {
-	DisplayName: KFC
-	Tooltip: Kevin's Fried Chicken
+	DisplayName: The Pact
+	Tooltip:
+		'''
+		Summons Kevin
+		Gathers money from the ground
+		When he has gathered 5 gold he will drop a chicken nugget
+		Beware, nugget quality may differ from the usual nugget
+		'''
 }
 
 MerfolkPotion: {
@@ -4784,4 +4788,14 @@ ShimmerproofTackleBag: {
 		Fishing line will never break, decreases chance of bait consumption, increases fishing power by 13
 		Allows fishing in lava and shimmer
 		'''
+}
+
+EvilNugget: {
+	DisplayName: Evil Nugget
+	Tooltip: ""
+}
+
+GoldenNugget: {
+	DisplayName: Golden Nugget
+	Tooltip: ""
 }

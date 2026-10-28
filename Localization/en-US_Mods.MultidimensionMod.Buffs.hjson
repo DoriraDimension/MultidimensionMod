@@ -232,3 +232,10 @@ SymbiosisTag: {
 	Description: Mods.MultidimensionMod.Buffs.SymbiosisTag.Description
 	DisplayName: Symbiosis Tag
 }
+
+KFCBuff: {
+	DisplayName: Kevin's Fried Chicken
+	Description: Give him money for food
+	EldritchName: Keaothofhrothe's Fried Chicken?
+	EldritchTooltip: Give him money for cosmic evil
+}
