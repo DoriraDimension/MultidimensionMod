@@ -48,6 +48,7 @@ namespace MultidimensionMod.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
 		{
 			player.GetModPlayer<MDPlayer>().StarvingLarva = true;
-		}
+            player.GetModPlayer<MDPlayer>().UpdateStarvingLarvaBuffUpgrade();
+        }
 	}
 }

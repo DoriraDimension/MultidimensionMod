@@ -8,6 +8,7 @@ using MultidimensionMod.Biomes;
 using MultidimensionMod.Buffs.Ability;
 using MultidimensionMod.Buffs.Cooldowns;
 using MultidimensionMod.Buffs.Debuffs;
+using MultidimensionMod.Buffs.Misc;
 using MultidimensionMod.Dusts;
 using MultidimensionMod.Items;
 using MultidimensionMod.Items.Accessories;
@@ -41,6 +42,8 @@ namespace MultidimensionMod.Common.Players
         public bool SmileyJr = false;
         public bool IgnaenHead = false;
         public bool StarvingLarva = false;
+        private bool FoodBuffUpgradedByStarvingLarva = false;
+        private int LastFoodBuffType = -1;
         public bool Probe = false;
         public Item DiggerEngine;
         public bool HunterEye = false;
@@ -548,6 +551,10 @@ namespace MultidimensionMod.Common.Players
                     }
                 }
             }
+        }
+
+        public override void PostUpdateBuffs()
+        {
         }
 
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
@@ -1552,6 +1559,64 @@ namespace MultidimensionMod.Common.Players
                     Main.dust[dustID].noLight = false;
                     Main.dust[dustID].noGravity = true;
                 }
+            }
+        }
+
+        public void UpdateStarvingLarvaBuffUpgrade()
+        {
+            //Upgrade food buffs to a higher tier upon being received
+            if (StarvingLarva)
+            {
+                int oldBuff = -1;
+                int newBuff = -1;
+
+                if (Player.HasBuff(BuffID.WellFed))
+                {
+                    oldBuff = BuffID.WellFed;
+                    newBuff = BuffID.WellFed2;
+                }
+                else if (Player.HasBuff(BuffID.WellFed2))
+                {
+                    oldBuff = BuffID.WellFed2;
+                    newBuff = BuffID.WellFed3;
+                }
+                else if (Player.HasBuff(BuffID.WellFed3))
+                {
+                    oldBuff = BuffID.WellFed3;
+                    newBuff = ModContent.BuffType<WellFed4>();
+                }
+
+                //No food buff active, don't do anything
+                if (oldBuff == -1)
+                {
+                    FoodBuffUpgradedByStarvingLarva = false;
+                    LastFoodBuffType = -1;
+                    return;
+                }
+
+                if (oldBuff != LastFoodBuffType)
+                {
+                    FoodBuffUpgradedByStarvingLarva = false;
+                    LastFoodBuffType = oldBuff;
+                }
+
+                //Prevent repeated upgrading
+                if (FoodBuffUpgradedByStarvingLarva)
+                    return;
+
+                int index = Player.FindBuffIndex(oldBuff);
+
+                if (index == -1)
+                    return;
+
+                int time = Player.buffTime[index];
+
+                //Clear the received buff to give a higher tier one
+                Player.ClearBuff(oldBuff);
+                Player.AddBuff(newBuff, time);
+
+                FoodBuffUpgradedByStarvingLarva = true;
+                LastFoodBuffType = newBuff;
             }
         }
     }

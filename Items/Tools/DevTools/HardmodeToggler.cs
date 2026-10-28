@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using MultidimensionMod.Common.Globals;
+using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Tools.DevTools
 {
@@ -28,9 +29,13 @@ namespace MultidimensionMod.Items.Tools.DevTools
             if (Main.hardMode)
             {
                 Main.hardMode = false;
+                Main.NewText(Language.GetText("Mods.MultidimensionMod.MiscText.HardmodeOff"));
             }
             else
+            {
                 Main.hardMode = true;
+                Main.NewText(Language.GetText("Mods.MultidimensionMod.MiscText.HardmodeOn"));
+            }
             if (Main.netMode == NetmodeID.Server)
                 NetMessage.SendData(MessageID.WorldData);
 

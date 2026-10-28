@@ -340,7 +340,11 @@ SpiderFangNecklace: {
 
 StarvingLarva: {
 	DisplayName: Starving Larva
-	Tooltip: You recover 5 health for every killed enemy
+	Tooltip:
+		'''
+		Consuming a food item will upgrade the received Well Fed type buff into its next tier
+		You recover 5 health for every killed enemy
+		'''
 	Lore:
 		'''
 		The world devouring worms always hunger for more prey,

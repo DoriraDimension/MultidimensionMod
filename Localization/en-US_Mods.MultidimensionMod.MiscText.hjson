@@ -8,6 +8,8 @@ VoidCatchFishTooltip: Caught in Void's Edge
 ScrapyardCatchFishTooltip: Caught in Scrapyard Shores
 ScrapyardAndVoidCatchFishRooltip: Caught in Scrapyard Shores and Void's Edge
 ForestCatchFishTooltip: Caught in Forest
+HardmodeOn: Hardmode is now enabled
+HardmodeOff: Hardmode is no longer enabled
 
 DeathMessages: {
 	Socks: "{0} died from the pain of wearing wet socks."

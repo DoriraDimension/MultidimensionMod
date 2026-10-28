@@ -239,3 +239,9 @@ KFCBuff: {
 	EldritchName: Keaothofhrothe's Fried Chicken?
 	EldritchTooltip: Give him money for cosmic evil
 }
+
+WellFed4: {
+	DisplayName: Perfectly Satiated
+	Description: Huge improvements to stats
+	DescriptionExpert: Huge improvements to stats and increased life regeneration
+}

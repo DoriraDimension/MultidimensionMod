@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\buffs\\pets\\kfcbuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:buffs\\pets\\kfcbuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\tools\\devtools\\hardmodetoggler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\tools\\devtools\\hardmodetoggler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us_mods.multidimensionmod.misctext.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:localization\\en-us_mods.multidimensionmod.misctext.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\accessories\\starvinglarva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\accessories\\starvinglarva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\players\\mdplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\players\\mdplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\dimensionalrift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\dimensionalrift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us_mods.multidimensionmod.buffs.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:localization\\en-us_mods.multidimensionmod.buffs.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\buffs\\misc\\wellfed4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:buffs\\misc\\wellfed4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us_mods.multidimensionmod.items.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:localization\\en-us_mods.multidimensionmod.items.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\accessories\\desertnecklace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\accessories\\desertnecklace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +46,121 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DimensionalRift.cs",
-              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\DimensionalRift.cs",
-              "RelativeDocumentMoniker": "Projectiles\\DimensionalRift.cs",
-              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\DimensionalRift.cs",
-              "RelativeToolTip": "Projectiles\\DimensionalRift.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAkwCkAAACBAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "KFCBuff.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Pets\\KFCBuff.cs",
+              "RelativeDocumentMoniker": "Buffs\\Pets\\KFCBuff.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Pets\\KFCBuff.cs",
+              "RelativeToolTip": "Buffs\\Pets\\KFCBuff.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-28T21:27:45.144Z",
+              "WhenOpened": "2026-10-28T23:32:24.223Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "en-US_Mods.MultidimensionMod.MiscText.hjson",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.MiscText.hjson",
+              "RelativeDocumentMoniker": "Localization\\en-US_Mods.MultidimensionMod.MiscText.hjson",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.MiscText.hjson",
+              "RelativeToolTip": "Localization\\en-US_Mods.MultidimensionMod.MiscText.hjson",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-28T23:29:36.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HardmodeToggler.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Tools\\DevTools\\HardmodeToggler.cs",
+              "RelativeDocumentMoniker": "Items\\Tools\\DevTools\\HardmodeToggler.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Tools\\DevTools\\HardmodeToggler.cs",
+              "RelativeToolTip": "Items\\Tools\\DevTools\\HardmodeToggler.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA1wB8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T23:29:04.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "en-US_Mods.MultidimensionMod.Buffs.hjson",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.Buffs.hjson",
+              "RelativeDocumentMoniker": "Localization\\en-US_Mods.MultidimensionMod.Buffs.hjson",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.Buffs.hjson",
+              "RelativeToolTip": "Localization\\en-US_Mods.MultidimensionMod.Buffs.hjson",
+              "ViewState": "AgIAAOIAAAAAAAAAAAAAAPUAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-28T23:16:53.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DesertNecklace.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Accessories\\DesertNecklace.cs",
+              "RelativeDocumentMoniker": "Items\\Accessories\\DesertNecklace.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Accessories\\DesertNecklace.cs",
+              "RelativeToolTip": "Items\\Accessories\\DesertNecklace.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwDUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T22:22:52.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WellFed4.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Misc\\WellFed4.cs",
+              "RelativeDocumentMoniker": "Buffs\\Misc\\WellFed4.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Misc\\WellFed4.cs",
+              "RelativeToolTip": "Buffs\\Misc\\WellFed4.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAkwCEAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T22:21:21.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StarvingLarva.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Accessories\\StarvingLarva.cs",
+              "RelativeDocumentMoniker": "Items\\Accessories\\StarvingLarva.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Accessories\\StarvingLarva.cs",
+              "RelativeToolTip": "Items\\Accessories\\StarvingLarva.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwDIAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T22:15:01.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "en-US_Mods.MultidimensionMod.Items.hjson",
               "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.Items.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US_Mods.MultidimensionMod.Items.hjson",
               "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.Items.hjson",
               "RelativeToolTip": "Localization\\en-US_Mods.MultidimensionMod.Items.hjson",
-              "ViewState": "AgIAAPIDAAAAAAAAAAAlwAoEAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAEIBAAAAAAAAAAAowFkBAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-10-27T21:35:53.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "MDPlayer.cs",
               "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Players\\MDPlayer.cs",
               "RelativeDocumentMoniker": "Common\\Players\\MDPlayer.cs",
               "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Players\\MDPlayer.cs",
               "RelativeToolTip": "Common\\Players\\MDPlayer.cs",
-              "ViewState": "AgIAAAICAAAAAAAAAAA4wBICAABLAAAAAAAAAA==",
+              "ViewState": "AgIAABQGAAAAAAAAAAAkwB4GAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-27T20:52:13.747Z",
               "EditorCaption": ""
