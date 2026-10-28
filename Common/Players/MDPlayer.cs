@@ -16,6 +16,7 @@ using MultidimensionMod.Items.Fishing;
 using MultidimensionMod.Items.Fishing.Crates;
 using MultidimensionMod.Items.Permabuffs;
 using MultidimensionMod.Items.Placeables;
+using MultidimensionMod.Projectiles;
 using MultidimensionMod.Projectiles.Magic;
 using MultidimensionMod.Projectiles.Summon.Minions;
 using MultidimensionMod.Projectiles.Summon.Sentries;
@@ -124,6 +125,8 @@ namespace MultidimensionMod.Common.Players
         public Item CreationMedaillon;
         public bool IlluminatedBuff = false;
         public int TotalMoneyCollectedByKevin = 0;
+        private int riftCheckTimer;
+        public bool IsRiftPatchActive = false;
 
         public override void ResetEffects()
         {
@@ -506,6 +509,43 @@ namespace MultidimensionMod.Common.Players
                 if (MagicHitCooldown < 0)
                 {
                     MagicHitCooldown = 0;
+                }
+            }
+        }
+
+        public override void PostUpdate()
+        {
+            Player player = Player;
+
+            if (!player.dead || player.active)
+            {
+                if (player.ZoneOverworldHeight && !IsRiftPatchActive && player.ownedProjectileCounts[ModContent.ProjectileType<DimensionalRift>()] < 1)
+                {
+                    riftCheckTimer++;
+
+                    // Check for rift spawn opportunity every 10 seconds.
+                    if (riftCheckTimer >= 600)
+                    {
+                        int progressionBasedRiftChance = 10000;
+                        if (NPC.downedPlantBoss)
+                        {
+                            progressionBasedRiftChance = 8000;
+                        }
+                        else if (NPC.downedMoonlord)
+                        {
+                            progressionBasedRiftChance = 6000;
+                        }
+
+                        riftCheckTimer = 0;
+                        // 1 in 100 chance per check.
+                        if (Main.netMode != NetmodeID.MultiplayerClient && Main.rand.NextBool(progressionBasedRiftChance))
+                        {
+                            Vector2 spawnPosition = player.Center
+                                + new Vector2(0f, -300f);
+
+                            Projectile.NewProjectile(player.GetSource_FromThis(), spawnPosition, Vector2.Zero, ModContent.ProjectileType<DimensionalRift>(), 0, 0f, player.whoAmI);
+                        }
+                    }
                 }
             }
         }

@@ -23,6 +23,7 @@ using MultidimensionMod.Items.Materials.Mushrooms;
 using MultidimensionMod.Common.Players;
 using MultidimensionMod.Common.Globals.NPCs;
 using MultidimensionMod.Items.Placeables.Plushies;
+using MultidimensionMod.Items;
 
 namespace MultidimensionMod.NPCs.TownNPCs
 {
@@ -295,6 +296,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 			.Add(new Item(ModContent.ItemType<BaitLeaf>()) { shopCustomPrice = 12, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen })
 			.Add(new Item(ModContent.ItemType<ArchtyrantsFace>()) { shopCustomPrice = 17, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedSkeletron)
 			.Add(new Item(ModContent.ItemType<UnknownEmoji>()) { shopCustomPrice = 3, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, downedSmiley)
+            .Add(new Item(ModContent.ItemType<RiftPatch>()) { shopCustomPrice = 20, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.Hardmode)
             .Add(new Item(ModContent.ItemType<AidenPlushie>()) { shopCustomPrice = 8, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedEowOrBoc)
             .Add(new Item(ModContent.ItemType<ZetPlushie>()) { shopCustomPrice = 10, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, Condition.DownedSkeletron)
             .Add(new Item(ModContent.ItemType<VeronicaPlushie>()) { shopCustomPrice = 11, shopSpecialCurrency = MultidimensionMod.DimensiumEuronen }, downedSmiley)

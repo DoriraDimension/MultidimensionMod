@@ -4792,10 +4792,15 @@ ShimmerproofTackleBag: {
 
 EvilNugget: {
 	DisplayName: Evil Nugget
-	Tooltip: ""
+	Tooltip: Major improvements to evil
 }
 
 GoldenNugget: {
 	DisplayName: Golden Nugget
-	Tooltip: ""
+	Tooltip: Major improvements to something
+}
+
+RiftPatch: {
+	DisplayName: Rift Patch
+	Tooltip: Prevents dimensional rifts from spawning when favorited in the inventory
 }
