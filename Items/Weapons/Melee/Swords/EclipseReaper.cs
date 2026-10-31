@@ -59,6 +59,12 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
             }
         }
 
+        public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            target.AddBuff(ModContent.BuffType<Madness>(), 240);
+            target.GetGlobalNPC<MDGlobalNPC>().MadnessCringe = 50;
+        }
+
         public override void AddRecipes()
 		{
 			CreateRecipe()
@@ -69,14 +75,9 @@ namespace MultidimensionMod.Items.Weapons.Melee.Swords
 			.AddIngredient(ModContent.ItemType<Prismatine>(), 2)
 			.AddIngredient(ModContent.ItemType<Blight2>())
 			.AddIngredient(ModContent.ItemType<Dimensium>(), 17)
-			.AddTile(ModContent.TileType<DimensionalForge>())
+            .AddCondition(Language.GetOrRegister("Mods.MultidimensionMod.MiscText.MadnessDriveCondition"), () => RememberAnalysis.AnalysedMadnessDrive && ModContent.GetInstance<DimensionalForgeTileEntity>().IsEquippedWithMadnessDrive)
+            .AddTile(ModContent.TileType<DimensionalForge>())
 			.Register();
 		}
-
-		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
-        {
-            target.AddBuff(ModContent.BuffType<Madness>(), 240);
-			target.GetGlobalNPC<MDGlobalNPC>().MadnessCringe = 50;
-        }
 	}
 }

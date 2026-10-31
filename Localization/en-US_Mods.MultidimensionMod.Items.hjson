@@ -884,12 +884,12 @@ DemonAltar: {
 }
 
 DimensionalForgeItem: {
-	DisplayName: Dimensional Forge
+	DisplayName: Scelestech Forge
 	Tooltip:
 		'''
-		The forge of the Dimensional God, it is able to craft Items with Dimensium.
-		Needs Dimensium as fuel
-		Seems like a great invention but anyone who really knows what dimensional energy is would point out the cheap design.
+		An impressive piece of tech developed by the Administrator during his long lifetime
+		Certain foreign materials must first be analysed by inserting drives containing sampled energy
+		Needs at least basic Dimensium as fuel
 		'''
 }
 
@@ -4807,4 +4807,22 @@ GoldenNugget: {
 RiftPatch: {
 	DisplayName: Rift Patch
 	Tooltip: Prevents dimensional rifts from spawning when favorited in the inventory
+}
+
+MadnessDrive: {
+	DisplayName: Cerebro Drive
+	Tooltip:
+		'''
+		Drive for the Scelestech Forge
+		Unlocks more advanced madness based crafting
+		'''
+}
+
+EmptyDrive: {
+	DisplayName: Empty Drive
+	Tooltip:
+	    '''
+		An empty drive for the Scelestech Forge
+		Can be infused with energy to grant the forge more advanced crafting capabilities
+		'''
 }

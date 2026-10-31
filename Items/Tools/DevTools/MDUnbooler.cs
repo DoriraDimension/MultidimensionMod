@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using MultidimensionMod.Common.Globals;
+using MultidimensionMod.Tiles;
 
 namespace MultidimensionMod.Items.Tools.DevTools
 {
@@ -45,6 +46,7 @@ namespace MultidimensionMod.Items.Tools.DevTools
             DownedSystem.consumedTheFish = false;
             DownedSystem.usedLicense = false;
             DownedSystem.metAdmin = false;
+            RememberAnalysis.AnalysedMadnessDrive = false;
 
             if (Main.netMode == NetmodeID.Server)
                 NetMessage.SendData(MessageID.WorldData);

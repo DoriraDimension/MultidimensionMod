@@ -1,8 +1,10 @@
-﻿using MultidimensionMod.Projectiles.Melee.Flails;
+﻿using System;
 using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Projectiles.Melee.Flails;
 using MultidimensionMod.Tiles;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Melee.Flails
@@ -42,7 +44,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Flails
 				.AddIngredient(ModContent.ItemType<MadnessFragment>(), 10)
 				.AddIngredient(ModContent.ItemType<Blight2>())
 				.AddIngredient(ModContent.ItemType<Dimensium>(), 6)
-				.AddTile(ModContent.TileType<DimensionalForge>())
+                .AddCondition(Language.GetOrRegister("Mods.MultidimensionMod.MiscText.MadnessDriveCondition"), () => RememberAnalysis.AnalysedMadnessDrive && ModContent.GetInstance<DimensionalForgeTileEntity>().IsEquippedWithMadnessDrive)
+                .AddTile(ModContent.TileType<DimensionalForge>())
 				.Register();
 
 			CreateRecipe()
@@ -50,7 +53,8 @@ namespace MultidimensionMod.Items.Weapons.Melee.Flails
 	            .AddIngredient(ModContent.ItemType<MadnessFragment>(), 10)
 	            .AddIngredient(ModContent.ItemType<Blight2>())
 	            .AddIngredient(ModContent.ItemType<Dimensium>(), 6)
-	            .AddTile(ModContent.TileType<DimensionalForge>())
+                .AddCondition(Language.GetOrRegister("Mods.MultidimensionMod.MiscText.MadnessDriveCondition"), () => RememberAnalysis.AnalysedMadnessDrive && ModContent.GetInstance<DimensionalForgeTileEntity>().IsEquippedWithMadnessDrive)
+                .AddTile(ModContent.TileType<DimensionalForge>())
 	            .Register();
 		}
 	}

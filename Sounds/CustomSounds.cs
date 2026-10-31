@@ -18,5 +18,9 @@ namespace MultidimensionMod.Sounds
         public static readonly SoundStyle ClamCrack = new("MultidimensionMod/Sounds/Custom/ClamCrack") { PitchVariance = .1f };
 
         public static readonly SoundStyle Magic = new("MultidimensionMod/Sounds/Custom/Magic") { PitchVariance = .1f };
+
+        public static readonly SoundStyle AnalysisLoop = new("MultidimensionMod/Sounds/Custom/AnalysisLoop") { PitchVariance = 0.0f };
+
+        public static readonly SoundStyle AnalysisDone = new("MultidimensionMod/Sounds/Custom/AnalysisDone") { PitchVariance = .1f };
     }
 }

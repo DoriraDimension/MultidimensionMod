@@ -1,7 +1,10 @@
-﻿using MultidimensionMod.Tiles.Furniture;
+﻿using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Tiles;
+using MultidimensionMod.Tiles.Furniture;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Placeables.Furniture
@@ -47,9 +50,11 @@ namespace MultidimensionMod.Items.Placeables.Furniture
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ModContent.ItemType<Materials.MadnessFragment>(), 20)
-                .AddIngredient(ModContent.ItemType<Materials.Blight2>())
-                .AddTile(TileID.MythrilAnvil)
+                .AddIngredient(ModContent.ItemType<MadnessFragment>(), 20)
+                .AddIngredient(ModContent.ItemType<Blight2>())
+                .AddIngredient(ModContent.ItemType<Dimensium>(), 5)
+                .AddCondition(Language.GetOrRegister("Mods.MultidimensionMod.MiscText.MadnessDriveCondition"), () => RememberAnalysis.AnalysedMadnessDrive && ModContent.GetInstance<DimensionalForgeTileEntity>().IsEquippedWithMadnessDrive)
+                .AddTile(ModContent.TileType<DimensionalForge>())
                 .Register();
         }
     }
