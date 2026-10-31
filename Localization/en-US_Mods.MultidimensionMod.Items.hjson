@@ -4821,8 +4821,13 @@ MadnessDrive: {
 EmptyDrive: {
 	DisplayName: Empty Drive
 	Tooltip:
-	    '''
+		'''
 		An empty drive for the Scelestech Forge
 		Can be infused with energy to grant the forge more advanced crafting capabilities
 		'''
+}
+
+MadnessWings: {
+	DisplayName: Madman Telekinesis
+	Tooltip: Allows flight and slow fall
 }
