@@ -7,6 +7,7 @@ using MultidimensionMod.Biomes;
 using MultidimensionMod.Dusts;
 using MultidimensionMod.Items.Accessories;
 using MultidimensionMod.Items.Drives;
+using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Placeables;
 using MultidimensionMod.Items.Placeables.Biomes.ShroomForest;
 using MultidimensionMod.Sounds;
@@ -25,7 +26,6 @@ namespace MultidimensionMod.Tiles
 {
 	public class DimensionalForge : ModTile
 	{
-		public int StoredDimensionalEnergy;
         public const int Height = 2;
         public const int Width = 3;
         public override void SetStaticDefaults()
@@ -152,6 +152,7 @@ namespace MultidimensionMod.Tiles
         public int AnalyseTimer;
         private ActiveSound AnalysisSound;
         private SlotId AnalysisLoop;
+        public int StoredDimensionalEnergy;
 
         public override bool IsTileValidForEntity(int x, int y)
         {

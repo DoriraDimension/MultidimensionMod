@@ -1,16 +1,19 @@
-﻿using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
+﻿using System;
 using Microsoft.Xna.Framework;
-using MultidimensionMod.Projectiles.Magic;
+using MultidimensionMod.Base;
 using MultidimensionMod.Common.Players;
-using Terraria.DataStructures;
-using Terraria.Audio;
+using MultidimensionMod.Items.Weapons.Typeless;
 using MultidimensionMod.NPCs.TownNPCs;
+using MultidimensionMod.Projectiles.Magic;
+using MultidimensionMod.Projectiles.Ranged;
 using MultidimensionMod.Tiles.Biomes.FrozenUnderworld;
-using System;
 using MultidimensionMod.Tiles.Biomes.ShroomForest;
 using MultidimensionMod.Walls;
+using Terraria;
+using Terraria.Audio;
+using Terraria.DataStructures;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace MultidimensionMod.Common.Globals.Projectiles
 {
@@ -19,6 +22,8 @@ namespace MultidimensionMod.Common.Globals.Projectiles
         public override bool InstancePerEntity => true;
         public bool CantHurtDapper;
         public bool IsNecklaceEmpowered = false;
+        public bool IsDart = false;
+        public int DartItemType;
 
         public override void OnSpawn(Projectile projectile, IEntitySource source)
         {
@@ -33,7 +38,23 @@ namespace MultidimensionMod.Common.Globals.Projectiles
                 IsNecklaceEmpowered = true;
                 player.GetModPlayer<MDPlayer>().SoulflameCharge = 0;
             }
+            if (source is EntitySource_ItemUse_WithAmmo ammoSource)
+            {
+                if (ammoSource.Item.useAmmo == AmmoID.Dart)
+                {
+                    DartItemType = ammoSource.AmmoItemIdUsed;
+                }
+            }
             base.OnSpawn(projectile, source);
+        }
+
+        public override void SetDefaults(Projectile entity)
+        {
+            if (entity.type == ProjectileID.PoisonDart || entity.type == ProjectileID.CursedDart || entity.type == ProjectileID.IchorDart
+                 || entity.type == ProjectileID.CrystalDart || entity.type == ModContent.ProjectileType<StoneDartProj>() || entity.type == ModContent.ProjectileType<StarfeatherDartProj>())
+            {
+                entity.AL().IsDart = true;
+            }
         }
 
         public override bool PreAI(Projectile projectile)
@@ -101,9 +122,21 @@ namespace MultidimensionMod.Common.Globals.Projectiles
             }
         }
 
+        public override void OnKill(Projectile projectile, int timeLeft)
+        {
+            Player player = Main.player[projectile.owner];
+            if (projectile.AL().IsDart && player.GetModPlayer<MDPlayer>().DartKitBoost)
+            {
+                if (projectile.owner == Main.myPlayer && DartItemType > ItemID.None && Main.rand.NextFloat() < .2500f)
+                {
+                    Item.NewItem(projectile.GetSource_DropAsItem(), projectile.Hitbox, DartItemType, 1);
+                }
+            }
+        }
+
         public override void ModifyHitNPC(Projectile projectile, NPC target, ref NPC.HitModifiers modifiers)
         {
-            if (IsNecklaceEmpowered)
+            if (IsNecklaceEmpowered && projectile.DamageType == DamageClass.Magic)
             {
                 modifiers.FinalDamage *= 2f;
             }

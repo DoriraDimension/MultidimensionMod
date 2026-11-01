@@ -176,6 +176,17 @@ namespace MultidimensionMod.Common.Globals.Items
 
         }
 
+        public override void ModifyWeaponDamage(Item item, Player player, ref StatModifier damage)
+        {
+            if (item.useAmmo == AmmoID.Dart)
+            {
+                if (player.GetModPlayer<MDPlayer>().DartKitBoost)
+                {
+                    damage += 0.15f;
+                }
+            }
+        }
+
         public override void UpdateInventory(Item item, Player player)
         {
             if (item.type == ModContent.ItemType<NatureGuide>())

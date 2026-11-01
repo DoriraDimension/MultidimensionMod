@@ -46,6 +46,7 @@ namespace MultidimensionMod.Items.Accessories.Wings
             CreateRecipe()
                 .AddIngredient(ItemID.SoulofFlight, 20)
                 .AddIngredient<Blight2>()
+                .AddIngredient(ModContent.ItemType<Dimensium>(), 10)
                 .AddCondition(Language.GetOrRegister("Mods.MultidimensionMod.MiscText.MadnessDriveCondition"), () => RememberAnalysis.AnalysedMadnessDrive && ModContent.GetInstance<DimensionalForgeTileEntity>().IsEquippedWithMadnessDrive)
                 .AddTile<DimensionalForge>()
                 .Register();

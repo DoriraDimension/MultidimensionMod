@@ -132,6 +132,7 @@ namespace MultidimensionMod.Common.Players
         public int TotalMoneyCollectedByKevin = 0;
         private int riftCheckTimer;
         public bool IsRiftPatchActive = false;
+        public bool DartKitBoost = false;
 
         public override void ResetEffects()
         {
@@ -183,6 +184,7 @@ namespace MultidimensionMod.Common.Players
             AstralEye = false;
             CreationMedallionP = false;
             IlluminatedBuff = false;
+            DartKitBoost = false;
         }
         public override void UpdateDead()
         {

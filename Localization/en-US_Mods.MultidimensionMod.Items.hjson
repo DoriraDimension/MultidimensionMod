@@ -4831,3 +4831,12 @@ MadnessWings: {
 	DisplayName: Madman Telekinesis
 	Tooltip: Allows flight and slow fall
 }
+
+DartKit: {
+	DisplayName: Dart Kit
+	Tooltip:
+		'''
+		Increases dart damage by 15%
+		Darts have a 25% chance to drop themselves on impact
+		'''
+}

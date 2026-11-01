@@ -21,7 +21,7 @@ namespace MultidimensionMod.Items.Ammo
             Item.maxStack = 9999;
             Item.knockBack = 4f;
             Item.value = Item.sellPrice(0, 0, 0, 10);
-            Item.rare = 0;
+            Item.rare = ItemRarityID.White;
             Item.consumable = true;
             Item.shoot = ModContent.ProjectileType<StoneDartProj>();
             Item.shootSpeed = 0.2f;

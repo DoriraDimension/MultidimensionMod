@@ -1,8 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
+using MultidimensionMod.Base;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Audio;
 
 namespace MultidimensionMod.Projectiles.Ranged
 {
@@ -17,6 +18,7 @@ namespace MultidimensionMod.Projectiles.Ranged
             Projectile.aiStyle = -1;
             Projectile.penetrate = 6;
             Projectile.timeLeft = 600;
+            Projectile.AL().IsDart = true;
         }
 
         public override void AI()
