@@ -2089,6 +2089,12 @@ DarkRebels: {
 	Tooltip:
 		'''
 		Calls a brave Darkling to your side, ready to defeat the darkness.
+		Darklings will circle their target until it is neutralized
+		'''
+	Lore:
+		'''
+		Darklings that once fled together with Smiley were all without a home,
+		until they found themselves in this land.
 		Only the bravest Darklings who hide in the dungeon will go outside on their own.
 		'''
 }
@@ -2123,7 +2129,12 @@ MadnessWhip: {
 
 marcO: {
 	DisplayName: Servants of Blight
-	Tooltip: Summons the forgotten servant of the blighted crawler.
+	Tooltip:
+		'''
+		Summons the forgotten servant of the blighted crawler
+		The servants invoke the power of their former master,
+		attacking with lasers and magic scythes
+		'''
 	Lore:
 		'''
 		A long time ago a flying creepy creature roamed the night, with it's servants by it's side.
@@ -2136,13 +2147,8 @@ SandBun: {
 	Tooltip:
 		'''
 		Summons a Lesser Sand Elemental to fight for you
-		People always talk about Sand Cake, but what about Sand Buns?
+		People always talk about sand cake, but what about sand buns?
 		'''
-}
-
-Tentacle: {
-	DisplayName: Celestial Tentacle
-	Tooltip: Throws out 6 Moon lord tentacles at once
 }
 
 TerrorNest: {
@@ -4845,7 +4851,7 @@ AlchemyLicense: {
 	DisplayName: Alchemy License
 	Tooltip:
 		'''
-		Doubles the damage over time from damaging debuffs inflicted on enemies
+		Increases the damage over time from damaging debuffs inflicted on enemies by 50%
 		This excludes madness
 		'''
 }

@@ -34,7 +34,7 @@ namespace MultidimensionMod.Projectiles.Melee.Swords
 
 		public override void AI()
 		{
-			Projectile.rotation += 0.4f * (float)Projectile.direction;
+			Projectile.rotation += 0.4f;
 			Projectile.spriteDirection = Projectile.direction;
 
 			if (Main.rand.NextBool(4))

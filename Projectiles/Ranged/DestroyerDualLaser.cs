@@ -40,7 +40,7 @@ namespace MultidimensionMod.Projectiles.Ranged
 
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
-			target.AddBuff(323, 150);
+			target.AddBuff(BuffID.OnFire3, 150);
 		}
 
         public override bool PreDraw(ref Color lightColor)

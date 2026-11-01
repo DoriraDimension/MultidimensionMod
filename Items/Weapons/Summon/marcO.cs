@@ -22,7 +22,7 @@ namespace MultidimensionMod.Items.Weapons.Summon
 
 		public override void SetDefaults()
 		{
-			Item.damage = 49;
+			Item.damage = 39;
 			Item.DamageType = DamageClass.Summon;
 			Item.knockBack = 1f;
 			Item.mana = 10;

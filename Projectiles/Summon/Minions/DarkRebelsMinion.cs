@@ -1,7 +1,9 @@
-﻿using MultidimensionMod.Buffs.Minions;
+﻿using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
+using MultidimensionMod.Buffs.Minions;
+using MultidimensionMod.Dusts;
+using MultidimensionMod.Projectiles.Magic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -11,7 +13,14 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 
 	public class DarkRebelsMinion : ModProjectile
 	{
-		public override void SetStaticDefaults()
+        private float OrbitAngle;
+        private int AttackTimer;
+        private const float OrbitDistance = 140f;
+        private const float OrbitSpeed = 0.035f;
+        private const int AttackCooldown = 30;
+        private const float ProjectileSpeed = 10f;
+        private int currentTarget = -1;
+        public override void SetStaticDefaults()
 		{
 			// DisplayName.SetDefault("Dark Rebel");
 			Main.projFrames[Projectile.type] = 6;
@@ -89,100 +98,175 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 					else Projectile.velocity.Y += overlapVelocity;
 				}
 			}
-			#endregion
+            #endregion
 
-			#region Find target
-			float distanceFromTarget = 700f;
-			Vector2 targetCenter = Projectile.position;
-			bool foundTarget = false;
+            #region Find target
+            float distanceFromTarget = 700f;
+            Vector2 targetCenter = Projectile.position;
+            bool foundTarget = false;
 
-			if (player.HasMinionAttackTargetNPC)
-			{
-				NPC npc = Main.npc[player.MinionAttackTargetNPC];
-				float between = Vector2.Distance(npc.Center, Projectile.Center);
-				if (between < 2000f)
-				{
-					distanceFromTarget = between;
-					targetCenter = npc.Center;
-					foundTarget = true;
-					Projectile.netUpdate = true;
-				}
-			}
-			if (!foundTarget)
-			{
-				for (int i = 0; i < Main.maxNPCs; i++)
-				{
-					NPC npc = Main.npc[i];
-					if (npc.CanBeChasedBy())
-					{
-						float between = Vector2.Distance(npc.Center, Projectile.Center);
-						bool closest = Vector2.Distance(Projectile.Center, targetCenter) > between;
-						bool inRange = between < distanceFromTarget;
-						bool lineOfSight = Collision.CanHitLine(Projectile.position, Projectile.width, Projectile.height, npc.position, npc.width, npc.height);
-						bool closeThroughWall = between < 100f;
-						if (((closest && inRange) || !foundTarget) && (lineOfSight || closeThroughWall))
-						{
-							distanceFromTarget = between;
-							targetCenter = npc.Center;
-							foundTarget = true;
-							Projectile.netUpdate = true;
-						}
-					}
-				}
-			}
+            // First, try to retain the current target.
+            if (currentTarget >= 0 && currentTarget < Main.maxNPCs)
+            {
+                NPC npc = Main.npc[currentTarget];
 
-			Projectile.friendly = foundTarget;
-			#endregion
+                if (npc.active && npc.CanBeChasedBy())
+                {
+                    float between = Vector2.Distance(npc.Center, Projectile.Center);
 
-			#region Movement
+                    if (between < 2000f)
+                    {
+                        distanceFromTarget = between;
+                        targetCenter = npc.Center;
+                        foundTarget = true;
+                    }
+                }
+            }
 
-			float speed = 8f;
-			float inertia = 20f;
+            // Check manually selected target.
+            if (!foundTarget && player.HasMinionAttackTargetNPC)
+            {
+                NPC npc = Main.npc[player.MinionAttackTargetNPC];
 
-			if (foundTarget)
-			{
-				if (distanceFromTarget > 40f)
-				{
-					Vector2 direction = targetCenter - Projectile.Center;
-					direction.Normalize();
-					direction *= speed;
-					Projectile.velocity = (Projectile.velocity * (inertia - 1) + direction) / inertia;
-				}
-			}
-			else
-			{
-				if (distanceToIdlePosition > 600f)
-				{
-					speed = 16f;
-					inertia = 60f;
-				}
-				else
-				{
-					speed = 4f;
-					inertia = 80f;
-				}
-				if (distanceToIdlePosition > 20f)
-				{
+                if (npc.CanBeChasedBy())
+                {
+                    float between = Vector2.Distance(npc.Center, Projectile.Center);
 
-					vectorToIdlePosition.Normalize();
-					vectorToIdlePosition *= speed;
-					Projectile.velocity = (Projectile.velocity * (inertia - 1) + vectorToIdlePosition) / inertia;
-				}
-				else if (Projectile.velocity == Vector2.Zero)
-				{
-					Projectile.velocity.X = -0.15f;
-					Projectile.velocity.Y = -0.05f;
-				}
+                    if (between < 2000f)
+                    {
+                        distanceFromTarget = between;
+                        targetCenter = npc.Center;
+                        foundTarget = true;
+                    }
+                }
+            }
 
-				if (Projectile.spriteDirection == -1)
-				{
-					Projectile.rotation += MathHelper.Pi;
-				}
-			}
-			#endregion
+            // Search for a new target, requiring line of sight.
+            if (!foundTarget)
+            {
+                for (int i = 0; i < Main.maxNPCs; i++)
+                {
+                    NPC npc = Main.npc[i];
 
-			#region Animation and visuals
-			Projectile.rotation = Projectile.velocity.X * 0.03f;
+                    if (!npc.CanBeChasedBy())
+                        continue;
+
+                    float between = Vector2.Distance(npc.Center, Projectile.Center);
+
+                    bool inRange = between < distanceFromTarget;
+
+                    bool lineOfSight = Collision.CanHitLine(
+                        Projectile.position,
+                        Projectile.width,
+                        Projectile.height,
+                        npc.position,
+                        npc.width,
+                        npc.height
+                    );
+
+                    if (inRange && lineOfSight)
+                    {
+                        distanceFromTarget = between;
+                        targetCenter = npc.Center;
+                        foundTarget = true;
+                        currentTarget = i;
+                    }
+                }
+            }
+
+            if (!foundTarget)
+            {
+                currentTarget = -1;
+            }
+
+            Projectile.friendly = foundTarget;
+            #endregion
+
+            #region Movement
+
+            float speed = 8f;
+            float inertia = 20f;
+
+            if (foundTarget)
+            {
+                // Advance the orbit angle.
+                OrbitAngle += OrbitSpeed;
+
+                // Calculate the desired position around the enemy.
+                Vector2 orbitOffset = new Vector2(
+                    (float)Math.Cos(OrbitAngle),
+                    (float)Math.Sin(OrbitAngle)
+                ) * OrbitDistance;
+
+                Vector2 desiredPosition = targetCenter + orbitOffset;
+
+                Vector2 direction = desiredPosition - Projectile.Center;
+                float distance = direction.Length();
+
+                if (distance > 10f)
+                {
+                    direction.Normalize();
+                    direction *= speed;
+
+                    Projectile.velocity =
+                        (Projectile.velocity * (inertia - 1) + direction) / inertia;
+                }
+                else
+                {
+                    Projectile.velocity *= 0.95f;
+                }
+
+                // Attack timer.
+                AttackTimer++;
+
+                if (AttackTimer >= AttackCooldown)
+                {
+                    AttackTimer = 0;
+
+                    if (Main.myPlayer == Projectile.owner)
+                    {
+                        Vector2 shootDirection = targetCenter - Projectile.Center;
+                        shootDirection.Normalize();
+                        shootDirection *= ProjectileSpeed;
+
+                        Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, shootDirection * 2, ModContent.ProjectileType<DarkRebelsShot>(), Projectile.damage, Projectile.knockBack, Projectile.owner
+                        );
+                    }
+                }
+            }
+            else
+            {
+                AttackTimer = 0;
+
+                if (distanceToIdlePosition > 600f)
+                {
+                    speed = 16f;
+                    inertia = 60f;
+                }
+                else
+                {
+                    speed = 4f;
+                    inertia = 80f;
+                }
+
+                if (distanceToIdlePosition > 20f)
+                {
+                    vectorToIdlePosition.Normalize();
+                    vectorToIdlePosition *= speed;
+
+                    Projectile.velocity =
+                        (Projectile.velocity * (inertia - 1) + vectorToIdlePosition) / inertia;
+                }
+                else if (Projectile.velocity == Vector2.Zero)
+                {
+                    Projectile.velocity.X = -0.15f;
+                    Projectile.velocity.Y = -0.05f;
+                }
+            }
+            #endregion
+
+            #region Animation and visuals
+            Projectile.rotation = Projectile.velocity.X * 0.03f;
 
 			int frameSpeed = 8;
 			Projectile.frameCounter++;
@@ -210,4 +294,53 @@ namespace MultidimensionMod.Projectiles.Summon.Minions
 			#endregion
 		}
 	}
+
+    internal class DarkRebelsShot : ModProjectile
+    {
+        public override string Texture => "MultidimensionMod/Projectiles/NoTexture";
+
+        public override void SetStaticDefaults()
+        {
+        }
+
+        public override void SetDefaults()
+        {
+            Projectile.width = 18;
+            Projectile.height = 18;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Summon;
+            Projectile.ignoreWater = true;
+            Projectile.tileCollide = false;
+            Projectile.timeLeft = 240;
+        }
+
+        public override void OnKill(int timeLeft)
+        {
+
+            for (int i = 0; i < 50; i++)
+            {
+                int dustIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<VoidDustG>(), 0f, 0f, 100, default(Color), 2f);
+                Main.dust[dustIndex].velocity *= 1.4f;
+                Main.dust[dustIndex].noGravity = true;
+                int dustIndex2 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<VoidDustM>(), 0f, 0f, 100, default(Color), 2f);
+                Main.dust[dustIndex2].velocity *= 1.4f;
+                Main.dust[dustIndex2].noGravity = true;
+            }
+        }
+
+        public override void AI()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                int num = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<VoidDustG>(), Projectile.velocity.X * 0.30f, Projectile.velocity.Y * 0.30f, 200, default(Color), 3f);
+                Main.dust[num].noGravity = true;
+                Main.dust[num].velocity.X *= 0.15f;
+                Main.dust[num].velocity.Y *= 0.35f;
+                int num2 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<VoidDustM>(), Projectile.velocity.X * 0.30f, Projectile.velocity.Y * 0.30f, 200, default(Color), 3f);
+                Main.dust[num2].noGravity = true;
+                Main.dust[num2].velocity.X *= 0.15f;
+                Main.dust[num2].velocity.Y *= 0.35f;
+            }
+        }
+    }
 }

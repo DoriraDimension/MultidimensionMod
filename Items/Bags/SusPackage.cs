@@ -83,7 +83,6 @@ namespace MultidimensionMod.Items.Bags
 					break;
 
 				case "Darkrage":
-					player.QuickSpawnItem(source, ModContent.ItemType<DrakeCrystal>());
 					player.QuickSpawnItem(source, ModContent.ItemType<FrostScale>(), 14);
 					player.QuickSpawnItem(source, ItemID.LihzahrdBanner);
 					break;

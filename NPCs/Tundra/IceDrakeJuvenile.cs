@@ -165,7 +165,7 @@ namespace MultidimensionMod.NPCs.Tundra
 					}
 					if (uncommonDrop == 1)
 					{
-						Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ModContent.ItemType<DrakeCrystal>(), 1);
+						//Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ModContent.ItemType<DrakeCrystal>(), 1);
 					}
 					return;
 				}
