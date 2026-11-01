@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 using Microsoft.Xna.Framework;
 using MultidimensionMod.Biomes;
 using MultidimensionMod.Buffs.Debuffs;
@@ -49,8 +50,10 @@ namespace MultidimensionMod
 		public bool MadnessEmpower;
         public bool TidalPull;
         public bool IlluminatedBuff;
+        public int DebuffTimer;
+        private readonly Dictionary<int, int> DebuffOwner = new();
 
-		public override void ResetEffects(NPC npc)
+        public override void ResetEffects(NPC npc)
 		{
 			Blaze = false;
 			Madness = false;
@@ -85,8 +88,17 @@ namespace MultidimensionMod
 			}
 		}
 
-		public override void UpdateLifeRegen(NPC npc, ref int damage)
+        public override void PostAI(NPC npc)
+        {
+            if (DebuffTimer > 0)
+            {
+                DebuffTimer--;
+            }
+        }
+
+        public override void UpdateLifeRegen(NPC npc, ref int damage)
 		{
+            Player player = Main.LocalPlayer;
 			if (Blaze)
 			{
 				if (npc.lifeRegen > 0)
@@ -94,7 +106,8 @@ namespace MultidimensionMod
 					npc.lifeRegen = 0;
 				}
 				npc.lifeRegen -= 50;
-			}
+                damage = 10;
+            }
 			if (Madness)
 			{
 				MadnessTimer++;
@@ -112,7 +125,8 @@ namespace MultidimensionMod
 					MadnessCringe = 50; //Maximum damage the debuff can do
 				}
 				npc.lifeRegen -= MadnessCringe;
-			}
+                damage = (MadnessCringe / 10);
+            }
 			if (!Madness)
 			{
 				MadnessTimer = 0;
@@ -127,13 +141,15 @@ namespace MultidimensionMod
 						npc.lifeRegen = 0;
 					}
 					npc.lifeRegen -= 24;
-				}
+                    damage = 6;
+                }
 				if (npc.lifeRegen > 0)
 				{
 					npc.lifeRegen = 0;
 				}
 				npc.lifeRegen -= 16;
-			}
+                damage = 4;
+            }
 			if (DimensionalShock)
 			{
                 if (npc.lifeRegen > 0)
@@ -141,6 +157,7 @@ namespace MultidimensionMod
                     npc.lifeRegen = 0;
                 }
                 npc.lifeRegen -= 60;
+                damage = 10;
             }
             if (TidalPull)
             {
@@ -148,9 +165,18 @@ namespace MultidimensionMod
                 {
                     npc.lifeRegen = 0;
                 }
-                npc.lifeRegen -= 60;
+                npc.lifeRegen -= 30;
+                damage = 5;
             }
-		}
+            if (DebuffTimer > 0)
+            {
+                if (player.GetModPlayer<MDPlayer>().AlchLicense && npc.lifeRegen < 0)
+                {
+                    npc.lifeRegen = (int)((float)npc.lifeRegen * 1.50f);
+                    damage = Math.Abs(npc.lifeRegen / 6);
+                }
+            }
+        }
 
 		//Here we rewrite bestiary entries for vanilla enemies to fall in line with our own lore
         public override void SetBestiary(NPC npc, BestiaryDatabase database, BestiaryEntry bestiaryEntry)
@@ -563,7 +589,7 @@ namespace MultidimensionMod
             }*/
         }
 
-		public override Color? GetAlpha(NPC npc, Color drawColor)
+        public override Color? GetAlpha(NPC npc, Color drawColor)
 		{
 			if (Nihil)
 			{
@@ -676,5 +702,13 @@ namespace MultidimensionMod
                 }
             }*/
         }
-	}
+
+        public void DebuffTimeSetter(NPC npc, Player player, int time)
+        {
+            if (DebuffTimer <= 0)
+            {
+                DebuffTimer = time;
+            }
+        }
+    }
 }

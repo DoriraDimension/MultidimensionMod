@@ -4840,3 +4840,12 @@ DartKit: {
 		Darts have a 25% chance to drop themselves on impact
 		'''
 }
+
+AlchemyLicense: {
+	DisplayName: Alchemy License
+	Tooltip:
+		'''
+		Doubles the damage over time from damaging debuffs inflicted on enemies
+		This excludes madness
+		'''
+}

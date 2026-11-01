@@ -133,6 +133,7 @@ namespace MultidimensionMod.Common.Players
         private int riftCheckTimer;
         public bool IsRiftPatchActive = false;
         public bool DartKitBoost = false;
+        public bool AlchLicense = false;
 
         public override void ResetEffects()
         {
@@ -185,6 +186,7 @@ namespace MultidimensionMod.Common.Players
             CreationMedallionP = false;
             IlluminatedBuff = false;
             DartKitBoost = false;
+            AlchLicense = false;
         }
         public override void UpdateDead()
         {
@@ -1198,6 +1200,10 @@ namespace MultidimensionMod.Common.Players
             {
                 Player.AddBuff(BuffID.RapidHealing, 180);
             }
+            if (AlchLicense)
+            {
+                target.GetGlobalNPC<MDGlobalNPC>().DebuffTimeSetter(target, Player, 600);
+            }
         }
 
         public override void OnHitNPCWithProj(Projectile projectile, NPC target, NPC.HitInfo hit, int damageDone)
@@ -1228,6 +1234,11 @@ namespace MultidimensionMod.Common.Players
                     SoulflameCharge += 10;
                     MagicHitCooldown = 60;
                 }
+            }
+            Player player = Main.player[projectile.owner];
+            if (AlchLicense)
+            {
+                target.GetGlobalNPC<MDGlobalNPC>().DebuffTimeSetter(target, player, 600);
             }
         }
 
