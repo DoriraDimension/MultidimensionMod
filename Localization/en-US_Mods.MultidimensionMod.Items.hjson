@@ -4855,3 +4855,8 @@ AlchemyLicense: {
 		This excludes madness
 		'''
 }
+
+DimensiumBrick: {
+	Tooltip: ""
+	DisplayName: Dimensium Brick
+}

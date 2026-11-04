@@ -5,6 +5,8 @@ using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
 using Terraria.Localization;
+using Terraria.Audio;
+using MultidimensionMod.Sounds;
 
 
 namespace MultidimensionMod.Items.Summons
@@ -35,6 +37,10 @@ namespace MultidimensionMod.Items.Summons
         public override bool? UseItem(Player player)
         {
             MDWorld.Monday = true;
+            if (Main.zenithWorld)
+            {
+                SoundEngine.PlaySound(CustomSounds.MONDAYISMYFAVORITEDAYOFTHEWEEK, player.position);
+            }
             return true;
         }
 

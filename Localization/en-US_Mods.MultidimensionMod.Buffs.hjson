@@ -229,7 +229,7 @@ Illuminated: {
 }
 
 SymbiosisTag: {
-	Description: Mods.MultidimensionMod.Buffs.SymbiosisTag.Description
+	Description: Taggers
 	DisplayName: Symbiosis Tag
 }
 

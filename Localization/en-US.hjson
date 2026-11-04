@@ -99,7 +99,7 @@ Mods: {
 				Increases whip range by 40%
 				Increases movement speed by 15% and defense by 10 when submerged in liquid
 				Press the Armor Ability hotkey to place a Nero Construct at the cursor position
-				Press the hotkey again will remove the construct
+				Pressing the hotkey again will remove the construct
 				'''
 			SinnerSet:
 				'''

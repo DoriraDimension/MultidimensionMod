@@ -1,16 +1,17 @@
-﻿using MultidimensionMod.Tiles.Biomes.FrozenUnderworld;
-using MultidimensionMod.Tiles;
+﻿using MultidimensionMod.Common.Players;
+using MultidimensionMod.Items.Accessories;
+using MultidimensionMod.Items.Materials;
+using MultidimensionMod.Items.Potions.Food;
 using MultidimensionMod.Items.Weapons.Typeless;
-using MultidimensionMod.Common.Players;
+using MultidimensionMod.Tiles;
+using MultidimensionMod.Tiles.Biomes.FrozenUnderworld;
 using MultidimensionMod.Tiles.Biomes.ShroomForest;
+using MultidimensionMod.Tiles.Ores;
 using Terraria;
+using Terraria.DataStructures;
+using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.DataStructures;
-using MultidimensionMod.Tiles.Ores;
-using Terraria.Enums;
-using MultidimensionMod.Items.Potions.Food;
-using MultidimensionMod.Items.Accessories;
 
 namespace MultidimensionMod.Common.Globals
 {
@@ -24,7 +25,6 @@ namespace MultidimensionMod.Common.Globals
             {
                 WorldGen.PlaceTile(i, j - 1, ModContent.TileType<Iceblossom>(), mute: true);
             }
-
             if (type == TileID.Grass || type == TileID.JungleGrass || type == TileID.CorruptGrass || type == TileID.CorruptJungleGrass || type == TileID.CrimsonGrass || type == TileID.CrimsonJungleGrass || type == TileID.MushroomGrass || type == ModContent.TileType<Mycelium>() || type == TileID.HallowedGrass)
             {
                 if (MDWorld.MadnessMoon)
@@ -32,6 +32,44 @@ namespace MultidimensionMod.Common.Globals
                     if (Main.rand.NextBool(1500))
                     {
                         WorldGen.PlaceTile(i, j - 1, ModContent.TileType<MadnessShroomPlaced>(), mute: true);
+                    }
+                }
+            }
+            if (type == TileID.Stone)
+            {
+                int attachDirection = Main.rand.Next(4);
+                for (int k = 0; k < 4; k++)
+                {
+                    int direction = (attachDirection + k) % 4;
+
+                    int iridulX = i;
+                    int iridulY = j;
+
+                    switch (direction)
+                    {
+                        case 0: // Above
+                            iridulY--;
+                            break;
+
+                        case 1: // Below
+                            iridulY++;
+                            break;
+
+                        case 2: // Left
+                            iridulX--;
+                            break;
+
+                        case 3: // Right
+                            iridulX++;
+                            break;
+                    }
+                    if (IsNearShimmer(i, j, 30) && WorldGen.InWorld(iridulX, iridulY) && !Main.tile[iridulX, iridulY].HasTile && (!Main.tile[i - 1, j].HasTile && !Main.tile[i - 1, j].LeftSlope 
+                        || !Main.tile[i + 1, j].HasTile && !Main.tile[i - 1, j].RightSlope || !Main.tile[i, j - 1].HasTile && !Main.tile[i - 1, j].TopSlope || !Main.tile[i, j + 1].HasTile && !Main.tile[i - 1, j].BottomSlope))
+                    {
+                        if (Main.rand.NextBool(1000))
+                        {
+                            WorldGen.PlaceTile(iridulX, iridulY, ModContent.TileType<IridulPlaced>(), mute: true);
+                        }
                     }
                 }
             }
@@ -178,6 +216,29 @@ namespace MultidimensionMod.Common.Globals
                     Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<FairyGeode>(), 1, false, 0, false, false);
                 }
             return;
+        }
+
+        private bool IsNearShimmer(int i, int j, int range)
+        {
+            for (int x = -range; x <= range; x++)
+            {
+                for (int y = -range; y <= range; y++)
+                {
+                    int checkX = i + x;
+                    int checkY = j + y;
+
+                    if (!WorldGen.InWorld(checkX, checkY))
+                        continue;
+
+                    Tile tile = Main.tile[checkX, checkY];
+
+                    if (tile.LiquidAmount > 0 && tile.LiquidType == LiquidID.Shimmer)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
     }
 }
