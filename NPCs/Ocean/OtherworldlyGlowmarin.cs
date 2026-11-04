@@ -58,7 +58,7 @@ namespace MultidimensionMod.NPCs.Ocean
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
-			return !spawnInfo.PlayerSafe && Main.hardMode && NPC.downedMechBossAny ? SpawnCondition.OceanMonster.Chance * 0.18f : 0f;
+			return !spawnInfo.PlayerSafe && Main.hardMode ? SpawnCondition.OceanMonster.Chance * 0.18f : 0f;
 		}
 
 		public override void HitEffect(NPC.HitInfo hit)

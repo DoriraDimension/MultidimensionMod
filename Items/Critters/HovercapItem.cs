@@ -30,4 +30,29 @@ namespace MultidimensionMod.Items.Critters
             Item.makeNPC = ModContent.NPCType<Hovercap>();
         }
     }
+
+    public class GoldHovercapItem : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            Item.ResearchUnlockCount = 3;
+        }
+
+        public override void SetDefaults()
+        {
+            Item.width = 32;
+            Item.height = 24;
+            Item.maxStack = 9999;
+            Item.value = Item.buyPrice(gold: 10);
+            Item.rare = ItemRarityID.Orange;
+            Item.bait = 50;
+            Item.useStyle = ItemUseStyleID.Swing;
+            Item.useTime = Item.useAnimation = 20;
+            Item.noUseGraphic = true;
+            Item.noMelee = true;
+            Item.consumable = true;
+            Item.autoReuse = true;
+            Item.makeNPC = ModContent.NPCType<GoldHovercap>();
+        }
+    }
 }

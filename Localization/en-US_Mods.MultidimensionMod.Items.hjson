@@ -4860,3 +4860,18 @@ DimensiumBrick: {
 	Tooltip: ""
 	DisplayName: Dimensium Brick
 }
+
+GoldBabyGlowmarinItem: {
+	DisplayName: Gold Baby Glowmarin
+	Tooltip: ""
+}
+
+GoldHovercapItem: {
+	DisplayName: Gold Hovercap
+	Tooltip: ""
+}
+
+GoldMushbugBabyItem: {
+	DisplayName: Gold Myceli Larva
+	Tooltip: ""
+}
