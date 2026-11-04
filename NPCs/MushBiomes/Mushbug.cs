@@ -1,18 +1,19 @@
-using MultidimensionMod.Biomes;
-using MultidimensionMod.Base;
-using MultidimensionMod.Items.Placeables.Banners;
-using MultidimensionMod.Tiles.Biomes.ShroomForest;
 using System;
-using Terraria;
-using Terraria.ID;
 using Microsoft.Xna.Framework;
-using Terraria.ModLoader;
-using Terraria.Audio;
-using Terraria.GameContent.Bestiary;
-using Terraria.DataStructures;
 using Microsoft.Xna.Framework.Graphics;
+using MultidimensionMod.Base;
+using MultidimensionMod.Biomes;
 using MultidimensionMod.Items.Materials.Mushrooms;
+using MultidimensionMod.Items.Placeables.Banners;
 using MultidimensionMod.Items.Weapons.Magic.Staffs;
+using MultidimensionMod.Tiles.Biomes.ShroomForest;
+using Terraria;
+using Terraria.Audio;
+using Terraria.DataStructures;
+using Terraria.GameContent.Bestiary;
+using Terraria.GameContent.UI;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace MultidimensionMod.NPCs.MushBiomes
 {
@@ -134,6 +135,11 @@ namespace MultidimensionMod.NPCs.MushBiomes
             if (NPC.life < NPC.lifeMax||Main.hardMode)
             {
                 NPC.chaseable = true;
+                if (AIState != ActionState.Kill)
+                {
+                    SoundEngine.PlaySound(SoundID.Zombie76, NPC.position);
+                    EmoteBubble.NewBubble(1, new WorldUIAnchor(NPC), 120);
+                }
                 AIState = ActionState.Kill;
             }
             switch (AIState)
@@ -160,7 +166,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                         AIState = ActionState.Roam;
                         NPC.netUpdate = true;
                     }
-                    if (distanceToPlayer < 400) //Start walking towards player when close enough
+                    if (distanceToPlayer < 100) //Start walking towards player when close enough
                     {
                         AIState = ActionState.Curious;
                     }
