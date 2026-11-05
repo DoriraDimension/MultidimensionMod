@@ -32,6 +32,8 @@ namespace MultidimensionMod.Common.Systems
         public static bool consumedTheFish;
         public static bool usedLicense;
         public static bool metAdmin;
+        public static bool gottenShadeEye;
+        public static bool survivedMadness;
 
         public override void OnWorldLoad()
         {
@@ -59,6 +61,8 @@ namespace MultidimensionMod.Common.Systems
             consumedTheFish = false;
             usedLicense = false;
             metAdmin = false;
+            gottenShadeEye = false;
+            survivedMadness = false;
         }
 
         public override void OnWorldUnload()
@@ -87,6 +91,8 @@ namespace MultidimensionMod.Common.Systems
             consumedTheFish = false;
             usedLicense = false;
             metAdmin = false;
+            gottenShadeEye = false;
+            survivedMadness = false;
         }
 
         public override void SaveWorldData(TagCompound tag)
@@ -141,6 +147,10 @@ namespace MultidimensionMod.Common.Systems
                 downed.Add("usedLicense");
             if (metAdmin)
                 downed.Add("metAdmin");
+            if (gottenShadeEye)
+                downed.Add("gottenShadeEye");
+            if (survivedMadness)
+                downed.Add("survivedMadness");
 
             tag["downed"] = downed;
         }
@@ -173,6 +183,8 @@ namespace MultidimensionMod.Common.Systems
             consumedTheFish = downed.Contains("consumedTheFish");
             usedLicense = downed.Contains("usedLicense");
             metAdmin = downed.Contains("metAdmin");
+            gottenShadeEye = downed.Contains("gottenShadeEye");
+            survivedMadness = downed.Contains("survivedMadness");
         }
 
         public override void NetSend(BinaryWriter writer)
@@ -209,6 +221,11 @@ namespace MultidimensionMod.Common.Systems
             flags3[6] = usedLicense;
             flags3[7] = metAdmin;
             writer.Write(flags3);
+
+            var flags4 = new BitsByte();
+            flags4[0] = gottenShadeEye;
+            flags4[1] = survivedMadness;
+            writer.Write(flags3);
         }
 
         public override void NetReceive(BinaryReader reader)
@@ -242,6 +259,10 @@ namespace MultidimensionMod.Common.Systems
             consumedTheFish = flags3[5];
             usedLicense = flags3[6];
             metAdmin = flags3[7];
+
+            BitsByte flags4 = reader.ReadByte();
+            gottenShadeEye = flags4[0];
+            survivedMadness = flags4[1];
         }
     }
 

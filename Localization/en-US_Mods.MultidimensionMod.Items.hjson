@@ -609,13 +609,13 @@ IceblossomItem: {
 }
 
 MadnessFragment: {
-	DisplayName: Fragment of Madness
+	DisplayName: Noetic Amber
 	Tooltip: ""
 	Lore:
 		'''
-		Madness-soaked piece of flesh, it still hasn't lost its mind burning capabilities.
-		Only a gaze touched being may carry this through the night,
-		always remembering that face.
+		A piece of crystalized thought, trapped inside a layer of madness.
+		Gazing into it for too long will tear apart what makes you sane.
+		Whatever remains inside, it still remember that face.
 		'''
 }
 
@@ -2376,13 +2376,16 @@ Cassiopeia: {
 }
 
 MadnessShroom: {
-	DisplayName: Madness Mushroom
-	Tooltip:
+	DisplayName: Madman's Brain
+	Tooltip: Dappercap might be interested in this
+	Lore:
 		'''
-		Weird mushrooms that only grow while madness visits.
-		Their cap contains madness inducing juices that can be used for medicine.
-		Handle with extreme caution!
-		Dappercap might be interested in this
+		These weird mushrooms only grow while madness stalks the night.
+		Why mushrooms can be affected by madness is a strange thing,
+		since they do not possess a mind of their own.
+		Maybe it is somehow related to their similarities to animal cells.
+		Their cap contains madness inducing juices that can be used for medicine,
+		but only if handled with care and caution!
 		'''
 }
 

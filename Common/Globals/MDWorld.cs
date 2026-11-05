@@ -1,23 +1,26 @@
-﻿using MultidimensionMod.Biomes;
-using MultidimensionMod.Common.Systems;
-using MultidimensionMod.NPCs.TownNPCs;
-using MultidimensionMod.Walls;
-using MultidimensionMod.Base;
-using System;
-using System.IO;
+﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using Microsoft.Xna.Framework;
-using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
-using Terraria.Chat;
-using Terraria.Localization;
-using Terraria.ModLoader.IO;
 using Mono.Cecil;
-using Terraria.Audio;
-using ReLogic.Utilities;
-using MultidimensionMod.Sounds;
 using MultidimensionMod.Achievements;
+using MultidimensionMod.Base;
+using MultidimensionMod.Biomes;
+using MultidimensionMod.Common.Systems;
+using MultidimensionMod.Items;
+using MultidimensionMod.NPCs.Madness;
+using MultidimensionMod.NPCs.TownNPCs;
+using MultidimensionMod.Sounds;
+using MultidimensionMod.Utilities;
+using MultidimensionMod.Walls;
+using ReLogic.Utilities;
+using Terraria;
+using Terraria.Audio;
+using Terraria.Chat;
+using Terraria.ID;
+using Terraria.Localization;
+using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
 
 namespace MultidimensionMod.Common.Globals
 {
@@ -31,6 +34,22 @@ namespace MultidimensionMod.Common.Globals
         private ActiveSound DripSound;
         private SlotId DripLoop;
         public static bool Monday = false;
+        public override void PreUpdateWorld()
+        {
+            Player player = Main.LocalPlayer;
+            float progress = MDHelper.GetNightProgress();
+            if (MadnessMoon && player.InModBiome<MadnessMoon>() && Main.hardMode)
+            {
+                if (!Main.dayTime && progress == 0.33f)
+                {
+                    NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<AMindFromBeyond>());
+                }
+                else if (!Main.dayTime && progress == 0.66f)
+                {
+                    NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<AMindFromBeyond>());
+                }
+            }
+        }
         public override void PostUpdateWorld()
         {
             #region Frozen Underworld ashstorm loop
@@ -163,9 +182,14 @@ namespace MultidimensionMod.Common.Globals
                 ModContent.GetInstance<MadnessAchievement>().MadnessCondition.Complete();
                 MadnessMoon = false;
             }
-            if (MadnessMoon && Main.dayTime && Main.hardMode)
+            if (MadnessMoon && player.InModBiome<MadnessMoon>() && Main.time == 32399)
             {
-                //Drops Light Depreived Eye
+                DownedSystem.survivedMadness = true;
+                if (Main.hardMode && !DownedSystem.gottenShadeEye)
+                {
+                    player.QuickSpawnItem(player.GetSource_GiftOrReward(), ModContent.ItemType<ShadeEye>());
+                    DownedSystem.gottenShadeEye = true;
+                }
             }
             #endregion
             if (Main.dayTime && Main.time == 0)

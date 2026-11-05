@@ -46,6 +46,7 @@ namespace MultidimensionMod.Items.Tools.DevTools
             DownedSystem.consumedTheFish = false;
             DownedSystem.usedLicense = false;
             DownedSystem.metAdmin = false;
+            DownedSystem.gottenShadeEye = false;
             RememberAnalysis.AnalysedMadnessDrive = false;
 
             if (Main.netMode == NetmodeID.Server)

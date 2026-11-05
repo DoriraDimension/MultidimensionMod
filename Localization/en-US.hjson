@@ -157,5 +157,7 @@ Mods: {
 				ConfigGameplay: Gameplay changes
 			}
 		}
+
+		BossChecklistIntegration.NightofMadness.EntryName: Nightof Madness
 	}
 }

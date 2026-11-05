@@ -99,7 +99,7 @@ namespace MultidimensionMod.Biomes
 					white2.B = (byte)(white2.B * num65);
 					white2.A = (byte)(white2.A * num65);
 					Texture2D moonTexture = ModContent.Request<Texture2D>("MultidimensionMod/Backgrounds/" + eyeTexture).Value;
-					spriteBatch.Draw(moonTexture, new Vector2(num23, num24 + Main.moonModY), new Rectangle?(new Rectangle(0, 0, moonTexture.Width, moonTexture.Width)), white2 * opacity * moonAlpha, rotation2, new Vector2(moonTexture.Width / 2, moonTexture.Width / 2), num25, SpriteEffects.None, 0f);
+                    spriteBatch.Draw(moonTexture, new Vector2(num23, num24 + Main.moonModY), new Rectangle?(new Rectangle(0, 0, moonTexture.Width, moonTexture.Width)), white2 * opacity * moonAlpha, rotation2, new Vector2(moonTexture.Width / 2, moonTexture.Width / 2), num25, SpriteEffects.None, 0f);
 				}
 			}
 		}

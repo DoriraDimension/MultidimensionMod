@@ -619,14 +619,12 @@ namespace MultidimensionMod
 			if (spawnInfo.Player.InModBiome<MadnessMoon>() && !spawnInfo.Player.ZoneTowerNebula && !spawnInfo.Player.ZoneTowerSolar && !spawnInfo.Player.ZoneTowerStardust && !spawnInfo.Player.ZoneTowerVortex)
             {
 				pool.Clear();
-				pool.Add(ModContent.NPCType<MadnessBat>(), 1.0f);
-				pool.Add(ModContent.NPCType<MadnessDog>(), 1.0f);
-				pool.Add(ModContent.NPCType<Madman>(), 1.0f);
+				pool.Add(ModContent.NPCType<MadnessBat>(), MDHelper.GetNightProgress() * 1.5f);
+				pool.Add(ModContent.NPCType<MadnessDog>(), MDHelper.GetNightProgress() * 1.5f);
+				pool.Add(ModContent.NPCType<Madman>(), MDHelper.GetNightProgress() * 1.5f);
 				if (Main.hardMode)
                 {
-					pool.Add(ModContent.NPCType<MadnessBat2>(), 1.0f);
-					if(ModContent.GetInstance<MadnessBrainSpawnSystem>().CanBrainSpawn)
-						pool.Add(ModContent.NPCType<AMindFromBeyond>(), 0.02f);
+					pool.Add(ModContent.NPCType<MadnessBat2>(), MDHelper.GetNightProgress() * 1.5f);
 				}
 			}
             if (spawnInfo.Player.InModBiome<ShroomForest>() && !spawnInfo.Player.ZoneTowerNebula && !spawnInfo.Player.ZoneTowerSolar && !spawnInfo.Player.ZoneTowerStardust && !spawnInfo.Player.ZoneTowerVortex)

@@ -1,20 +1,24 @@
-﻿using MultidimensionMod.Common.Systems;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using MultidimensionMod.Base;
+using MultidimensionMod.Common.Systems;
+using MultidimensionMod.Items;
+using MultidimensionMod.Items.Materials;
 using MultidimensionMod.Items.Pets;
-using MultidimensionMod.Items.Summons;
-using MultidimensionMod.Items.Placeables.Trophies;
 using MultidimensionMod.Items.Placeables.Relics;
+using MultidimensionMod.Items.Placeables.Trophies;
+using MultidimensionMod.Items.Summons;
 using MultidimensionMod.Items.Vanity;
 using MultidimensionMod.NPCs.Bosses.FeudalFungus;
 using MultidimensionMod.NPCs.Bosses.MushroomMonarch;
 using MultidimensionMod.NPCs.Bosses.Smiley;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System.Collections.Generic;
+using MultidimensionMod.NPCs.Madness;
 using Terraria;
-using Terraria.ModLoader;
-using System;
 using Terraria.Localization;
-using System.Linq;
+using Terraria.ModLoader;
 
 namespace MultidimensionMod.Common.CrossMod
 {
@@ -26,6 +30,7 @@ namespace MultidimensionMod.Common.CrossMod
         }
         private static void PerformBossChecklistSupport()
         {
+            Mod MusicMod = MultidimensionMod.Instance.musicMod;
             MultidimensionMod mod = ModContent.GetInstance<MultidimensionMod>();
             if (ModLoader.TryGetMod("BossChecklist", out Mod bossChecklist))
             {
@@ -38,7 +43,7 @@ namespace MultidimensionMod.Common.CrossMod
                         ModContent.ItemType<MonarchRelic>(),
                         ModContent.ItemType<MonarchTrophy>(),
                         ModContent.ItemType<MonarchMask>(),
-                        //ModContent.ItemType<MonarchBox>(),
+                        MusicMod.Find<ModItem>("MonarchBox").Type,
                         ModContent.ItemType<SusSporeBag>(),
                     },
                     ["customPortrait"] = (SpriteBatch sb, Rectangle rect, Color color) =>
@@ -60,7 +65,7 @@ namespace MultidimensionMod.Common.CrossMod
                         ModContent.ItemType<FungusRelic>(),
                         ModContent.ItemType<FungusTrophy>(),
                         ModContent.ItemType<FungusMask>(),
-                        //ModContent.ItemType<FungusBox>(),
+                        MusicMod.Find<ModItem>("FungusBox").Type,
                         ModContent.ItemType<SusGlowsporeBag>()
                 },
                     ["customPortrait"] = (SpriteBatch sb, Rectangle rect, Color color) =>
@@ -73,6 +78,36 @@ namespace MultidimensionMod.Common.CrossMod
                 });
                 #endregion
 
+                #region Night of Madness
+                bossChecklist.Call("LogEvent", mod, "NightofMadness", 3.1f, () => DownedSystem.survivedMadness, new List<int>()
+                    {
+                        ModContent.NPCType<Madman>(),
+                        ModContent.NPCType<MadnessDog>(),
+                        ModContent.NPCType<MadnessBat>(),
+                        ModContent.NPCType<MadnessBat2>(),
+                        ModContent.NPCType<AMindFromBeyond>()
+                    }, new Dictionary<string, object>()
+                    {
+                        ["spawnItems"] = ModContent.ItemType<MadnessCaller>(),
+                        ["collectibles"] = new List<int>
+                        {
+                            //ModContent.ItemType<MindBeyondRelic>(),
+                            ModContent.ItemType<MadnessFragment>(),
+                            ModContent.ItemType<Blight2>(),
+                            MusicMod.Find<ModItem>("MadnessBox").Type,
+                            ModContent.ItemType<ShadeEye>()
+                        },
+                        ["availability"] = () => NPC.downedBoss2,
+                        ["customPortrait"] = (SpriteBatch sb, Rectangle rect, Color color) =>
+                        {
+                            Texture2D texture = ModContent.Request<Texture2D>("MultidimensionMod/Common/CrossMod/BossChecklist/MadnessMoon").Value;
+                            Vector2 centered = new(rect.X + (rect.Width / 2) - (texture.Width / 2), rect.Y + (rect.Height / 2) - (texture.Height / 2));
+                            sb.Draw(texture, centered, color);
+                        },
+                        ["overrideHeadTextures"] = "MultidimensionMod/Biomes/MadnessIcon"
+                    });
+                #endregion
+
                 #region Smile man
                 bossChecklist.Call("LogBoss", mod, nameof(Smiley), 5.5f, () => DownedSystem.downedSmiley, ModContent.NPCType<Smiley>(), new Dictionary<string, object>()
                 {
@@ -83,6 +118,7 @@ namespace MultidimensionMod.Common.CrossMod
                         ModContent.ItemType<SmileyTrophy>(),
                         ModContent.ItemType<SmileyMask>(),
                         ModContent.ItemType<CuteEmoji>(),
+                        //MusicMod.Find<ModItem>("SmileyBox").Type,
                     },
                     ["customPortrait"] = (SpriteBatch sb, Rectangle rect, Color color) =>
                     {

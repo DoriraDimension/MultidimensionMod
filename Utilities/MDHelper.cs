@@ -268,5 +268,15 @@ namespace MultidimensionMod.Utilities
 
         public static bool WithinBounds(this int index, int cap) => index >= 0 && index < cap;
 
+        /// <summary>
+        ///Retrieves the current progress of the night
+        public static float GetNightProgress()
+        {
+            if (Main.dayTime)
+                return 0f;
+
+            return MathHelper.Clamp((float)(Main.time / 32400.0), 0f, 1f);
+        }
+
     }
 }

@@ -91,7 +91,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
         public override bool CheckDead()
         {
             MDWorld.TposeTimer = 0;
-            Main.NewText("John God's mind got trapped in the cosmos.", Color.Red.R, Color.Red.G, Color.Red.B);
+            Main.NewText("Avaeris's mind got trapped in the cosmos.", Color.Red.R, Color.Red.G, Color.Red.B);
             SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/Glitch"));
             NPC.SetDefaults(ModContent.NPCType<AdminTpose>());
             NPC.life = 1;
@@ -105,7 +105,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		public override List<string> SetNPCNameList()
 		{
 			return new List<string>() {
-				"John God"
+				"Avaeris"
 			};
 		}
 
@@ -113,7 +113,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 		{
 			Player player = Main.LocalPlayer;
 			WeightedRandom<string> chat = new WeightedRandom<string>();
-            if (player.name == "John God")
+            if (player.name == "Avaeris")
             {
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Admin.ImposterDialogue"));
                 player.AddBuff(BuffID.Weak, 24000);

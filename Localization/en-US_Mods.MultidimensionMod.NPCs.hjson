@@ -267,7 +267,7 @@ Dialogue: {
 		GenericDialogue8: Taraha sees many persons here petting small fluffy creature. Taraha not know why food is being pet.
 		GenericHardmodeDialogue1: Taraha traded wax for superpowerful relic the other day. Funny man thought wax was holy blood from deity.
 		GenericHardmodeDialogue2: Taraha feel so many different signatures around. Why so many people here who don't belong?
-		AdminDialogue: "{NPCName} is good friend, traded much with Taraha, always give yummy crystal."
+		AdminDialogue: "{0} is good friend, traded much with Taraha, always give yummy crystal."
 		DapperDialogue: Taraha talked to small mushroom boy about mushrooms earlier. Taraha really wanted lollipop but boy didn't want to trade for anything Taraha provided. Taraha is suffering, wants lollipop.
 		BloodMoonDialogue: Taraha will bite hand off if human keeps staring.
 		SlimeRainDialogue: Yum yum, gelatin heaven!
