@@ -337,7 +337,7 @@ Admin: {
 		DislikeNPC: "{NPCName} always wants to discuss spells with me and keeps calling me a fellow wizard. I'm not a magician, I'm a scientist!"
 		LoveNPC: I'm glad that {NPCName} was able to come here too, she is a very valuable member for our cause. I would also not forgive myself if something bad happened since she is personal protection.
 		LikeNPC: I like {NPCName}. She is a great help for some of my experiments, even if she doesn't understand half of it.
-		HateBiome: I should go somewhere else, whenever I have a thought�it gets disrupted by these god damn pixies, they are SO noisy.
+		HateBiome: I should go somewhere else, whenever I have a thought it gets disrupted by these god damn pixies, they are SO noisy.
 		DislikeBiome: This tundra is such an awful place for my machinery. The energy flow just keeps slowing due to the cold.
 		LikeBiome: Being underground is doing a good job for me. Not many interferences happening to disturb any experiment.
 		LoveBiome: Ahh, the forest, it's so perfect. Beautiful, quiet and perfectly tempered.
@@ -368,3 +368,10 @@ AdminArrival.DisplayName: Mysterious Person
 GoldBabyGlowmarin.DisplayName: Gold Baby Glowmarin
 GoldHovercap.DisplayName: Gold Hovercap
 GoldMushbugBaby.DisplayName: Gold Myceli Larva
+
+TownBug: {
+	DisplayName: Myceli Bug
+	Dialogue1: Chirp Chirp
+	Dialogue2: *Rustles elytra*
+	Dialogue3: Chirp
+}

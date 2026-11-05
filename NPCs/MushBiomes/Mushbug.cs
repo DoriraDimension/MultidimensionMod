@@ -168,6 +168,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
                     }
                     if (distanceToPlayer < 100) //Start walking towards player when close enough
                     {
+                        EmoteBubble.NewBubble(87, new WorldUIAnchor(NPC), 60);
                         AIState = ActionState.Curious;
                     }
                     NPC.frame.Y = 170;
@@ -202,8 +203,9 @@ namespace MultidimensionMod.NPCs.MushBiomes
                         AIState = ActionState.Idle;
                         NPC.netUpdate = true;
                     }
-                    if (distanceToPlayer < 400) //Walk towards player if close enough
+                    if (distanceToPlayer < 100) //Walk towards player if close enough
                     {
+                        EmoteBubble.NewBubble(87, new WorldUIAnchor(NPC), 60);
                         AIState = ActionState.Curious;
                         NPC.netUpdate = true;
                     }

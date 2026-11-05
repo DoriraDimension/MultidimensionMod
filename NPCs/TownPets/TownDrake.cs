@@ -24,10 +24,19 @@ namespace MultidimensionMod.NPCs.TownPets
             NPCID.Sets.ExtraFramesCount[Type] = 0;
             NPCID.Sets.AttackFrameCount[Type] = 0;
             NPCID.Sets.ExtraTextureCount[Type] = 0;
-            NPCID.Sets.HatOffsetY[Type] = NPCID.Sets.HatOffsetY[NPCID.TownDog];
-            NPCID.Sets.NPCFramingGroup[Type] = NPCID.Sets.NPCFramingGroup[NPCID.TownDog];
+            NPCID.Sets.HatOffsetY[Type] = -2;
+            NPCID.Sets.NPCFramingGroup[Type] = 8;
             NPCID.Sets.IsTownPet[Type] = true;
-            NPCID.Sets.NoTownNPCHappiness[Type] = true;
+            NPCID.Sets.TownNPCBestiaryPriority.Add(Type);
+            NPCID.Sets.PlayerDistanceWhilePetting[Type] = 25;
+            NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Shimmer] = true;
+            NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Confused] = true;
+            NPCID.Sets.DangerDetectRange[Type] = 250;
+            NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new()
+            {
+                Velocity = 0.25f,
+            };
+            NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, drawModifiers);
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
@@ -41,15 +50,18 @@ namespace MultidimensionMod.NPCs.TownPets
 
         public override void SetDefaults()
         {
-            NPC.CloneDefaults(NPCID.TownDog);
-
-            AIType = NPCID.TownDog;
-            NPC.lifeMax = 400;
-            NPC.defense = 15;
-            NPC.HitSound = SoundID.NPCHit1;
-            NPC.DeathSound = SoundID.NPCDeath1;
+            NPC.townNPC = true;
+            NPC.friendly = true;
             NPC.width = 36;
             NPC.height = 32;
+            NPC.aiStyle = NPCAIStyleID.Passive;
+            NPC.damage = 10;
+            NPC.defense = 15;
+            NPC.lifeMax = 250;
+            NPC.HitSound = SoundID.NPCHit1;
+            NPC.DeathSound = SoundID.NPCDeath6;
+            NPC.knockBackResist = 0.5f;
+            NPC.housingCategory = 1;
         }
 
         public override string GetChat()

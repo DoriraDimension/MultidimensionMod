@@ -145,7 +145,7 @@ namespace MultidimensionMod.NPCs.Tundra
             //Makes the Drake drop an item upon feeding it
             Player player = Main.LocalPlayer;
             int bird = player.FindItem(ItemID.RoastedBird);
-            if (firstButton && !Main.LocalPlayer.HasItem(ItemID.RoastedBird))
+            if (firstButton && !Main.LocalPlayer.HasItem(ItemID.RoastedBird) && !Main.LocalPlayer.HasItem(ItemID.GoldenDelight))
 			{
                 Main.NewText(Language.GetTextValue("Mods.MultidimensionMod.NPCs.IceDrakeJuvenile.FeedingFail"), 50, 125, 255);
             }

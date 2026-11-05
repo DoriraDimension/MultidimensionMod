@@ -296,6 +296,11 @@ namespace MultidimensionMod
             }
         }
         #endregion
+
+        internal enum MessageType : byte
+        {
+            TownPetUnlockOrExchange,
+        }
     }
 
     public class MDSystem : ModSystem

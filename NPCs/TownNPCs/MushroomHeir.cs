@@ -760,6 +760,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
             var npcShop = new NPCShop(Type, ShopName)
                 .Add(new Item(ModContent.ItemType<MyceliumSeeds>()) { shopCustomPrice = Item.buyPrice(copper: 20) })
             .Add(new Item(ModContent.ItemType<TheDapperCap>()) { shopCustomPrice = Item.buyPrice(gold: 2) })
+            .Add(new Item(ModContent.ItemType<TownBugLicense>()) { shopCustomPrice = Item.buyPrice(gold: 5) }, Condition.Hardmode)
             .Add(new Item(ModContent.ItemType<IntimidatingMushroom>()) { shopCustomPrice = Item.buyPrice(gold: 1) })
             .Add(new Item(ModContent.ItemType<Blue>()) { shopCustomPrice = Item.buyPrice(gold: 18) })
             .Add(new Item(ModContent.ItemType<Brown>()) { shopCustomPrice = Item.buyPrice(gold: 18) })

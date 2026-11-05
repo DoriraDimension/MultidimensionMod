@@ -4875,3 +4875,15 @@ GoldMushbugBabyItem: {
 	DisplayName: Gold Myceli Larva
 	Tooltip: ""
 }
+
+TownBugLicense: {
+	DisplayName: Myceli Bug License
+	Tooltip:
+		'''
+		Use to adopt a myceli bug for your town
+		Already have a myceli bug?
+		Use additional licenses to activate the Pet Exchange Program!
+		Find the perfect fit for you and your bug!
+		'''
+	UsedTownBugLicense: The license teleports away to the myceli bug delivery service...
+}
