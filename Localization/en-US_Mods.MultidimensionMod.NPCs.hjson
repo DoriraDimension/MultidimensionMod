@@ -375,3 +375,5 @@ TownBug: {
 	Dialogue2: *Rustles elytra*
 	Dialogue3: Chirp
 }
+
+CapZombie.DisplayName: Cap Zombie

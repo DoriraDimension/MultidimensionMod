@@ -632,12 +632,15 @@ namespace MultidimensionMod
             if (spawnInfo.Player.InModBiome<ShroomForest>() && !spawnInfo.Player.ZoneTowerNebula && !spawnInfo.Player.ZoneTowerSolar && !spawnInfo.Player.ZoneTowerStardust && !spawnInfo.Player.ZoneTowerVortex)
             {
                 pool.Clear();
-                pool.Add(ModContent.NPCType<CapBunny>(), 0.5f);
-                pool.Add(ModContent.NPCType<Mushbug>(), 0.35f);
-                pool.Add(ModContent.NPCType<MushbugBaby>(), 0.30f);
-                pool.Add(ModContent.NPCType<Puffer>(), 0.25f);
+                if (Main.dayTime)
+                {
+                    pool.Add(ModContent.NPCType<CapBunny>(), 0.5f);
+                    pool.Add(ModContent.NPCType<Puffer>(), 0.25f);
+                    pool.Add(ModContent.NPCType<Mushbug>(), 0.35f);
+                    pool.Add(ModContent.NPCType<MushbugBaby>(), 0.30f);
+                    pool.Add(ModContent.NPCType<MushSlime>(), 0.40f);
+                }
                 pool.Add(ModContent.NPCType<Hovercap>(), 0.35f);
-                pool.Add(ModContent.NPCType<MushSlime>(), 0.40f);
                 if (spawnInfo.Player.FindItem(ModContent.ItemType<IntimidatingMushroom>()) > 0)
 				{
                     if ((Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<MyceliumSandPlaced>() || Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<Mycelium>()) && !NPC.AnyNPCs(ModContent.NPCType<MonarchSlep>()) && !NPC.AnyNPCs(ModContent.NPCType<MushroomMonarch>()) && spawnInfo.Player.InModBiome(ModContent.GetInstance<ShroomForest>()))
@@ -647,6 +650,26 @@ namespace MultidimensionMod
 				{
                     if ((Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<MyceliumSandPlaced>() || Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].TileType == ModContent.TileType<Mycelium>()) && !NPC.AnyNPCs(ModContent.NPCType<MonarchSlep>()) && !NPC.AnyNPCs(ModContent.NPCType<MushroomMonarch>()) && spawnInfo.Player.InModBiome(ModContent.GetInstance<ShroomForest>()))
                         pool.Add(ModContent.NPCType<MonarchSlep>(), 0.12f);
+                }
+                if (!Main.dayTime)
+                {
+                    pool.Add(NPCID.DemonEye, 0.4f);
+                    pool.Add(NPCID.DemonEye2, 0.4f);
+                    pool.Add(NPCID.PurpleEye, 0.4f);
+                    pool.Add(NPCID.PurpleEye2, 0.4f);
+                    pool.Add(NPCID.GreenEye, 0.4f);
+                    pool.Add(NPCID.GreenEye2, 0.4f);
+                    pool.Add(NPCID.DialatedEye, 0.4f);
+                    pool.Add(NPCID.DialatedEye2, 0.4f);
+                    pool.Add(NPCID.CataractEye, 0.4f);
+                    pool.Add(NPCID.CataractEye2, 0.4f);
+                    pool.Add(NPCID.SleepyEye, 0.4f);
+                    pool.Add(NPCID.SleepyEye2, 0.4f);
+                    if (Main.halloween)
+                    {
+                        pool.Add(NPCID.DemonEyeOwl, 0.2f);
+                        pool.Add(NPCID.DemonEyeSpaceship, 0.2f);
+                    }
                 }
             }
             /*if (spawnInfo.Player.InModBiome<TheDragonHoard>() && !spawnInfo.Player.ZoneTowerNebula && !spawnInfo.Player.ZoneTowerSolar && !spawnInfo.Player.ZoneTowerStardust && !spawnInfo.Player.ZoneTowerVortex)
