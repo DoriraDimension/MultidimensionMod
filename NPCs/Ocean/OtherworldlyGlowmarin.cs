@@ -33,7 +33,7 @@ namespace MultidimensionMod.NPCs.Ocean
 			NPC.DeathSound = SoundID.NPCDeath1;
 			NPC.value = Item.buyPrice(0, 0, 0, 11);
 			NPC.knockBackResist = 0.3f;
-			NPC.aiStyle = 16;
+			NPC.aiStyle = NPCAIStyleID.Piranha;
 			AIType = NPCID.Shark;
 			AnimationType = NPCID.Shark;
 			Banner = NPC.type;

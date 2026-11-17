@@ -63,11 +63,6 @@ DimensionalShield: {
 	Description: Your body is surrounded by a dimensional energy shield.
 }
 
-LifePower: {
-	DisplayName: Life Power
-	Description: You don't feel healthy, you feel SUPER healthy.
-}
-
 OceansBlessing: {
 	DisplayName: Oceans Blessing
 	Description: You can swim and breathe like a resident of the sea.
@@ -244,4 +239,74 @@ WellFed4: {
 	DisplayName: Perfectly Satiated
 	Description: Huge improvements to stats
 	DescriptionExpert: Huge improvements to stats and increased life regeneration
+}
+
+WyvernMilkBuff: {
+	Description: Unnatural vitality regenerates your wounds
+	DisplayName: Wyrmway Regeneration
+}
+
+ToadstoolBuff: {
+	DisplayName: Toad's Leap
+	Description: Slightly increased jump strength
+}
+
+EvilNuggetBuff: {
+	DisplayName: Kevin's Misfortune
+	Description: You seem to be pretty unlucky
+}
+
+EvilNuggetBuff2: {
+	DisplayName: Kevin's Mishap
+	Description: You seem to be devoid of luck
+}
+
+GoldenNuggetBuff: {
+	DisplayName: Kevin's Fortune
+	Description: You are so lucky
+}
+
+RoyalTruffleSoupBuff: {
+	Description: Immune system and mind strengthen by mushrooms
+	DisplayName: Superior Truffle Vitality
+}
+
+TruffleSoupBuff: {
+	DisplayName: Truffle Vitality
+	Description: Immune system strengthened by red mushrooms
+}
+
+BottledDrakeSalivaBuff: {
+	DisplayName: Saliva Coat
+	Description: Hot surfaces mean nothing to you... until the saliva dries off...
+}
+
+AurealisMeadBuff: {
+	DisplayName: Blessing of the Drakes
+	Description: Weakness is not a concept to you
+}
+
+MirrorberryBuff: {
+	DisplayName: Mirrorberry Buff
+	Description: You are reflective... somehow... projectiles may be reflected
+}
+
+ScalyMeatballsBuff: {
+	DisplayName: Scaly Meatballs Buff
+	Description: Foreign scales cover your body, projectile resistance increased
+}
+
+SpineKebabBuff: {
+	DisplayName: Spine Kebab Buff
+	Description: Your spine is twice as sturdy, reduced knockback and wind resistance
+}
+
+GhostPepperBuff: {
+	DisplayName: Spicy Agility
+	Description: The spice makes you run faster
+}
+
+CrystalCrunchBuff: {
+	DisplayName: Crystal Boost
+	Description: Crystal weapons are stronger
 }

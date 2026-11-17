@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MultidimensionMod.Buffs.Potions;
 using System;
 using Terraria;
 using Terraria.DataStructures;
@@ -23,8 +24,20 @@ namespace MultidimensionMod.Items.Potions.Food
 
         public override void SetDefaults()
         {
-            Item.DefaultToFood(28, 48, BuffID.WellFed, 12000, true);
+            Item.DefaultToFood(28, 48, ModContent.BuffType<WyvernMilkBuff>(), 600, true);
             Item.maxStack = 9999;
+            Item.rare = ItemRarityID.LightRed;
+        }
+
+        public override void OnConsumeItem(Player player)
+        {
+                for (int i = player.buffType.Length - 1; i >= 0; i--)
+            {
+                if (player.buffType[i] > 0 && Main.debuff[player.buffType[i]])
+                {
+                    player.DelBuff(i);
+                }
+            }
         }
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)

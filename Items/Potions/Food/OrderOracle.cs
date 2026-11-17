@@ -11,14 +11,14 @@ namespace MultidimensionMod.Items.Potions.Food
     {
         public override void SetStaticDefaults()
         {
-            //Main.RegisterItemAnimation(Type, new DrawAnimationVertical(int.MaxValue, 3));
+            Main.RegisterItemAnimation(Type, new DrawAnimationVertical(int.MaxValue, 3));
             ItemID.Sets.FoodParticleColors[Item.type] = new Color[4] {
                 new Color(124, 120, 178),
                 new Color(50, 54, 109),
                 new Color(114, 71, 91),
                 new Color(56, 27, 46)
             };
-            //ItemID.Sets.IsFood[Type] = true;
+            ItemID.Sets.IsFood[Type] = true;
             Item.ResearchUnlockCount = 5;
         }
 

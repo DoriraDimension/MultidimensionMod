@@ -11,12 +11,12 @@ namespace MultidimensionMod.Items.Potions.Food
     {
         public override void SetStaticDefaults()
         {
-            //Main.RegisterItemAnimation(Type, new DrawAnimationVertical(int.MaxValue, 3));
+            Main.RegisterItemAnimation(Type, new DrawAnimationVertical(int.MaxValue, 3));
             ItemID.Sets.FoodParticleColors[Item.type] = new Color[2] {
                 new Color(75, 72, 97),
                 new Color(31, 25, 43)
             };
-            //ItemID.Sets.IsFood[Type] = true;
+            ItemID.Sets.IsFood[Type] = true;
             Item.ResearchUnlockCount = 5;
             ItemID.Sets.ShimmerTransformToItem[Type] = ItemID.Ambrosia;
         }

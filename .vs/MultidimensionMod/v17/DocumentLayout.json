@@ -3,36 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\globals\\npcs\\mdglobalnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\globals\\npcs\\mdglobalnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\potions\\food\\scalymeatballs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\potions\\food\\scalymeatballs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\globals\\mdworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\globals\\mdworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\potions\\food\\spinekebab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\potions\\food\\spinekebab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\systems\\downedsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\systems\\downedsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\players\\mdplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\players\\mdplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\utilities\\mdhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:utilities\\mdhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\buffs\\potions\\dimensionalshield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:buffs\\potions\\dimensionalshield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\summons\\plantmurderstarterset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\summons\\plantmurderstarterset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\materials\\madnessshroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\materials\\madnessshroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\materials\\madnessfragment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\materials\\madnessfragment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us_mods.multidimensionmod.buffs.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:localization\\en-us_mods.multidimensionmod.buffs.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us_mods.multidimensionmod.items.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:localization\\en-us_mods.multidimensionmod.items.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\potions\\food\\whitemeatimmunizing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\potions\\food\\whitemeatimmunizing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\potions\\food\\whitemeatenchanted.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\potions\\food\\whitemeatenchanted.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\potions\\food\\rimeberryale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\potions\\food\\rimeberryale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\potions\\food\\rimeberry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\potions\\food\\rimeberry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\potions\\food\\mirrorberry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\potions\\food\\mirrorberry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\potions\\food\\ghostpepper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\potions\\food\\ghostpepper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\items\\potions\\food\\crystalcrunch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:items\\potions\\food\\crystalcrunch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +62,168 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DownedSystem.cs",
-              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Systems\\DownedSystem.cs",
-              "RelativeDocumentMoniker": "Common\\Systems\\DownedSystem.cs",
-              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Systems\\DownedSystem.cs",
-              "RelativeToolTip": "Common\\Systems\\DownedSystem.cs",
-              "ViewState": "AgIAAOIAAAAAAAAAAAAYwAABAAAMAAAAAAAAAA==",
+              "Title": "MDPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Players\\MDPlayer.cs",
+              "RelativeDocumentMoniker": "Common\\Players\\MDPlayer.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Players\\MDPlayer.cs",
+              "RelativeToolTip": "Common\\Players\\MDPlayer.cs",
+              "ViewState": "AgIAAOYEAAAAAAAAAAA0wBkFAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-05T16:10:35.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlantMurderStarterSet.cs",
-              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Summons\\PlantMurderStarterSet.cs",
-              "RelativeDocumentMoniker": "Items\\Summons\\PlantMurderStarterSet.cs",
-              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Summons\\PlantMurderStarterSet.cs",
-              "RelativeToolTip": "Items\\Summons\\PlantMurderStarterSet.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCQAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-05T16:02:11.908Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MDWorld.cs",
-              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\MDWorld.cs",
-              "RelativeDocumentMoniker": "Common\\Globals\\MDWorld.cs",
-              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\MDWorld.cs",
-              "RelativeToolTip": "Common\\Globals\\MDWorld.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAWwCgAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-05T15:56:15.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MDGlobalNPC.cs",
-              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\NPCs\\MDGlobalNPC.cs",
-              "RelativeDocumentMoniker": "Common\\Globals\\NPCs\\MDGlobalNPC.cs",
-              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\NPCs\\MDGlobalNPC.cs",
-              "RelativeToolTip": "Common\\Globals\\NPCs\\MDGlobalNPC.cs",
-              "ViewState": "AgIAAFoCAAAAAAAAAAAjwHICAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-05T15:52:45.318Z",
+              "WhenOpened": "2026-11-16T22:32:36.03Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MDHelper.cs",
-              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Utilities\\MDHelper.cs",
-              "RelativeDocumentMoniker": "Utilities\\MDHelper.cs",
-              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Utilities\\MDHelper.cs",
-              "RelativeToolTip": "Utilities\\MDHelper.cs",
-              "ViewState": "AgIAAPkAAAAAAAAAAAAjwA8BAAA2AAAAAAAAAA==",
+              "Title": "DimensionalShield.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Potions\\DimensionalShield.cs",
+              "RelativeDocumentMoniker": "Buffs\\Potions\\DimensionalShield.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Potions\\DimensionalShield.cs",
+              "RelativeToolTip": "Buffs\\Potions\\DimensionalShield.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-05T15:48:31.054Z",
+              "WhenOpened": "2026-11-16T01:15:04.433Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "MadnessFragment.cs",
-              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Materials\\MadnessFragment.cs",
-              "RelativeDocumentMoniker": "Items\\Materials\\MadnessFragment.cs",
-              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Materials\\MadnessFragment.cs",
-              "RelativeToolTip": "Items\\Materials\\MadnessFragment.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBoAAAAIAAAAAAAAAA==",
+              "Title": "WhiteMeatImmunizing.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\WhiteMeatImmunizing.cs",
+              "RelativeDocumentMoniker": "Items\\Potions\\Food\\WhiteMeatImmunizing.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\WhiteMeatImmunizing.cs",
+              "RelativeToolTip": "Items\\Potions\\Food\\WhiteMeatImmunizing.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-05T15:37:49.763Z",
+              "WhenOpened": "2026-11-16T01:14:06.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WhiteMeatEnchanted.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\WhiteMeatEnchanted.cs",
+              "RelativeDocumentMoniker": "Items\\Potions\\Food\\WhiteMeatEnchanted.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\WhiteMeatEnchanted.cs",
+              "RelativeToolTip": "Items\\Potions\\Food\\WhiteMeatEnchanted.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T01:14:04.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SpineKebab.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\SpineKebab.cs",
+              "RelativeDocumentMoniker": "Items\\Potions\\Food\\SpineKebab.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\SpineKebab.cs",
+              "RelativeToolTip": "Items\\Potions\\Food\\SpineKebab.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T01:13:53.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ScalyMeatballs.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\ScalyMeatballs.cs",
+              "RelativeDocumentMoniker": "Items\\Potions\\Food\\ScalyMeatballs.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\ScalyMeatballs.cs",
+              "RelativeToolTip": "Items\\Potions\\Food\\ScalyMeatballs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T01:13:49.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RimeberryAle.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\RimeberryAle.cs",
+              "RelativeDocumentMoniker": "Items\\Potions\\Food\\RimeberryAle.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\RimeberryAle.cs",
+              "RelativeToolTip": "Items\\Potions\\Food\\RimeberryAle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T01:13:42.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Rimeberry.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\Rimeberry.cs",
+              "RelativeDocumentMoniker": "Items\\Potions\\Food\\Rimeberry.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\Rimeberry.cs",
+              "RelativeToolTip": "Items\\Potions\\Food\\Rimeberry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T01:13:40.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Mirrorberry.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\Mirrorberry.cs",
+              "RelativeDocumentMoniker": "Items\\Potions\\Food\\Mirrorberry.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\Mirrorberry.cs",
+              "RelativeToolTip": "Items\\Potions\\Food\\Mirrorberry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T01:13:32.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GhostPepper.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\GhostPepper.cs",
+              "RelativeDocumentMoniker": "Items\\Potions\\Food\\GhostPepper.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\GhostPepper.cs",
+              "RelativeToolTip": "Items\\Potions\\Food\\GhostPepper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T01:13:24.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CrystalCrunch.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\CrystalCrunch.cs",
+              "RelativeDocumentMoniker": "Items\\Potions\\Food\\CrystalCrunch.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Potions\\Food\\CrystalCrunch.cs",
+              "RelativeToolTip": "Items\\Potions\\Food\\CrystalCrunch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T01:13:17.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "en-US_Mods.MultidimensionMod.Buffs.hjson",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.Buffs.hjson",
+              "RelativeDocumentMoniker": "Localization\\en-US_Mods.MultidimensionMod.Buffs.hjson",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.Buffs.hjson",
+              "RelativeToolTip": "Localization\\en-US_Mods.MultidimensionMod.Buffs.hjson",
+              "ViewState": "AgIAAAIBAAAAAAAAAAAAAB0BAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-11-16T01:32:38.648Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "MadnessShroom.cs",
-              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Materials\\MadnessShroom.cs",
-              "RelativeDocumentMoniker": "Items\\Materials\\MadnessShroom.cs",
-              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Items\\Materials\\MadnessShroom.cs",
-              "RelativeToolTip": "Items\\Materials\\MadnessShroom.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAB1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-05T15:37:45.088Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "en-US_Mods.MultidimensionMod.Items.hjson",
               "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.Items.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US_Mods.MultidimensionMod.Items.hjson",
               "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.Items.hjson",
               "RelativeToolTip": "Localization\\en-US_Mods.MultidimensionMod.Items.hjson",
-              "ViewState": "AgIAADgJAAAAAAAAAAAtwFEJAABDAAAAAAAAAA==",
+              "ViewState": "AgIAADYSAAAAAAAAAAAEwEASAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-11-05T12:30:11.24Z",
+              "WhenOpened": "2026-11-08T20:09:20.627Z",
               "EditorCaption": ""
             }
           ]

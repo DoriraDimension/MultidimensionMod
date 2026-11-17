@@ -16,6 +16,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader;
 using Terraria.Audio;
 using MultidimensionMod.Achievements;
+using MultidimensionMod.Items.Potions.Food;
 
 namespace MultidimensionMod.NPCs.Tundra
 {
@@ -157,6 +158,10 @@ namespace MultidimensionMod.NPCs.Tundra
 				SoundEngine.PlaySound(SoundID.NPCDeath13 with { Volume = 0.5f }, NPC.position);
 				int commonDrop = Main.rand.Next(2);
 				int uncommonDrop = Main.rand.Next(2);
+				if (Main.rand.NextBool(3))
+				{
+                    Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ModContent.ItemType<BottledDrakeSaliva>(), 1);
+                }
 				if (Main.rand.NextFloat() < .0500f)
 				{
 					if (uncommonDrop == 0)

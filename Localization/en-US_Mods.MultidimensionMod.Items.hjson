@@ -1046,15 +1046,6 @@ MerfolkPotion: {
 	Tooltip: Grants the ability to swim and breathe underwater.
 }
 
-PotionofLife: {
-	DisplayName: Potion of Life
-	Tooltip:
-		'''
-		Greatly increases life regeneration
-		Reduces movement speed by 25%
-		'''
-}
-
 Rambam: {
 	DisplayName: Fricking overpowered super hyper mega ultra extreme hacker potion of absolute death limited edition
 	Tooltip: If you buy now, you get nothing for free.
@@ -4650,22 +4641,38 @@ KiBa: {
 
 RoyalTruffleSoup: {
 	DisplayName: Royal Truffle Soup
-	Tooltip: ""
+	Tooltip:
+		'''
+		Grants immunity to Poisoned and Unhealthy Infection
+		Increases mana regeneration speed
+		'''
 }
 
 Toadstool: {
 	DisplayName: Toadstool
-	Tooltip: Fungus
+	Tooltip:
+		'''
+		Grants a jump height and speed boost
+		'Toadstool? Better than Stepstool!'
+		'''
 }
 
 TruffleSoup: {
 	DisplayName: Truffle Soup
-	Tooltip: The larvae and truffle delicously melt within the hovercap juice broth, making for a unique texture
+	Tooltip:
+		'''
+		The larvae and truffle delicously melt within the hovercap juice broth, making for a unique texture
+		Grants immunity to Poisoned and Unhealthy Infection
+		'''
 }
 
 WyvernMilk: {
 	DisplayName: Wyvern Milk
-	Tooltip: Nature always finds a way.
+	Tooltip:
+		'''
+		Removes all debuffs and grants a short burst of life regeneration
+		'Nature always knows the way.'
+		'''
 }
 
 AurealisMead: {
@@ -4675,6 +4682,7 @@ AurealisMead: {
 		The main event of every viking ritual
 		It is consumed as a small sip by everyone attending from a hollowed out horn,
 		to form eternal bonds with eachother and with the drakes.
+		Reduces damaging debuff duration by 20%
 		'''
 }
 
@@ -4684,6 +4692,7 @@ BottledDrakeSaliva: {
 		'''
 		Some might think of this as disgusting, yet in Drakenheim it was like holy water.
 		It's a main ingredient for important rituals.
+		It prevents burning blocks from damaging you
 		'''
 }
 
@@ -4698,7 +4707,10 @@ Rimeberry: {
 
 RimeberryAle: {
 	DisplayName: Rimeberry Ale
-	Tooltip: One of the everyday drinks a viking would consume during and after work.
+	Tooltip:
+		'''
+		One of the everyday drinks a viking would consume during and after work.
+		'''
 }
 
 WinterHoney: {
@@ -4805,12 +4817,20 @@ ShimmerproofTackleBag: {
 
 EvilNugget: {
 	DisplayName: Evil Nugget
-	Tooltip: Major improvements to evil
+	Tooltip:
+		'''
+		Kevin maybe grants you his fortune
+		'Caution: may contain mischief.'
+		'''
 }
 
 GoldenNugget: {
 	DisplayName: Golden Nugget
-	Tooltip: Major improvements to something
+	Tooltip:
+		'''
+		Kevin grants you his fortune
+		'Caution: may contain happiness.'
+		'''
 }
 
 RiftPatch: {
@@ -4889,4 +4909,92 @@ TownBugLicense: {
 		Find the perfect fit for you and your bug!
 		'''
 	UsedTownBugLicense: The license teleports away to the myceli bug delivery service...
+}
+
+CoralCandy: {
+	DisplayName: Coral Candy
+	Tooltip:
+		'''
+		Replenishes air when consumed underwater
+		'I couldn't think of a funny oneliner for this one.'
+		'''
+}
+
+ScalyMeatballs: {
+	DisplayName: Scaly Meatballs
+	Tooltip:
+		'''
+		Grants a 5% projectile resistance
+		'Balls of steel!'
+		'''
+}
+
+SpineKebab: {
+	DisplayName: Spine Kebab
+	Tooltip:
+		'''
+		Increases knockback resistance
+		'Puts some backbone into you.'
+		'''
+}
+
+CrystalCrunch: {
+	DisplayName: Crystal Crunch
+	Tooltip:
+		'''
+		A famous snack from Gunresat, increases the damage of certain crystal weapons
+		Also increases damage of the Lightstream Mythos
+		'Crumbles like candy, goes down like glass.'
+		'''
+}
+
+GhostPepper: {
+	DisplayName: Ghost Pepper
+	Tooltip:
+		'''
+		Increases top speed and acceleration
+		'Not even the pepper survived the spice.'
+		'''
+}
+
+Mirrorberry: {
+	DisplayName: Mirrorberry
+	Tooltip:
+		'''
+		A foreign berry with a perfect reflecting silvery surface
+		Temporarily gain reflective properties, occasionally reflecting projectiles back at enemies
+		'''
+	Lore:
+		'''
+		These berries originate from a world plunged in darkness
+		Thus its reflective surface provides it a way to be seen by creatures with bioluminescence
+		'''
+}
+
+WhiteMeat: {
+	DisplayName: White Meat
+	Tooltip:
+		'''
+		Delicious meat from a parrot lobster
+		Can be eaten raw as a small snack
+		'''
+}
+
+WhiteMeatEnchanted: {
+	DisplayName: Enchanted White Meat
+	Tooltip:
+		'''
+		White lobster meat that has been cured with glowing mushmatter and stardust
+		Increases maximum mana
+		'''
+}
+
+WhiteMeatImmunizing: {
+	DisplayName: Immunizing White Meat
+	Tooltip:
+		'''
+		White lobster meat that has been carefully doused in 
+		Grants a large variety of debuff immunities
+		'Immunity to dying not included.'
+		'''
 }

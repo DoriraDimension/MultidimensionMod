@@ -13,6 +13,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.UI;
 using MultidimensionMod.Items.Materials.Mushrooms;
+using MultidimensionMod.Items.Potions.Food;
 
 namespace MultidimensionMod.UI
 {
@@ -57,6 +58,8 @@ namespace MultidimensionMod.UI
                 int pad = 40;
                 BgSprite.Append(new TradingPanelUI(new Item(ItemID.Deathweed, 3), new Item(ModContent.ItemType<CalmingPills>()), 3));
                 BgSprite.Append(new TradingPanelUI(new Item(ItemID.BeeWax), new Item(ItemID.FallenStar)) { Top = new StyleDimension(pad, 0) });
+                pad += 40;
+                BgSprite.Append(new TradingPanelUI(new Item(ModContent.ItemType<Rimeberry>(), 4), new Item(ModContent.ItemType<Mirrorberry>()), 4) { Top = new StyleDimension(pad, 0) });
                 pad += 40;
                 BgSprite.Append(new TradingPanelUI(new Item(ItemID.Acorn, 15), new Item(ModContent.ItemType<MadnessCaller>()), 15) { Top = new StyleDimension(pad, 0) });
                 pad += 40;

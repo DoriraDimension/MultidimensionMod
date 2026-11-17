@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using MultidimensionMod.Buffs.Potions;
 using System;
 using Terraria;
 using Terraria.DataStructures;
@@ -11,19 +12,19 @@ namespace MultidimensionMod.Items.Potions.Food
     {
         public override void SetStaticDefaults()
         {
-            //Main.RegisterItemAnimation(Type, new DrawAnimationVertical(int.MaxValue, 3));
-            ItemID.Sets.FoodParticleColors[Item.type] = new Color[2] {
-                new Color(118, 107, 111),
-                new Color(82, 65, 63)
+            Main.RegisterItemAnimation(Type, new DrawAnimationVertical(int.MaxValue, 3));
+            ItemID.Sets.FoodParticleColors[Item.type] = new Color[3] {
+                new Color(225, 249, 181),
+                new Color(203, 179, 73),
+                new Color(102, 77, 14)
             };
-            //ItemID.Sets.IsFood[Type] = true;
+            ItemID.Sets.IsFood[Type] = true;
             Item.ResearchUnlockCount = 5;
-            ItemID.Sets.ShimmerTransformToItem[Type] = ItemID.Ambrosia;
         }
 
         public override void SetDefaults()
         {
-            Item.DefaultToFood(22, 24, BuffID.WellFed, 12000);
+            Item.DefaultToFood(22, 24, ModContent.BuffType<GoldenNuggetBuff>(), 18000);
             Item.maxStack = 9999;
             Item.rare = ItemRarityID.Yellow;
         }

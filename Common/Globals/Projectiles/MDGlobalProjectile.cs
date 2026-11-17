@@ -136,9 +136,20 @@ namespace MultidimensionMod.Common.Globals.Projectiles
 
         public override void ModifyHitNPC(Projectile projectile, NPC target, ref NPC.HitModifiers modifiers)
         {
+            Player player = Main.player[projectile.owner];
             if (IsNecklaceEmpowered && projectile.DamageType == DamageClass.Magic)
             {
                 modifiers.FinalDamage *= 2f;
+            }
+            if (player.GetModPlayer<MDPlayer>().CrystalBoost)
+            {
+                if (projectile.type == ProjectileID.CrystalBullet || projectile.type == ProjectileID.CrystalDart || projectile.type == ProjectileID.CrystalPulse
+                     || projectile.type == ProjectileID.CrystalVileShardHead || projectile.type == ProjectileID.CrystalVileShardShaft || projectile.type == ProjectileID.CrystalLeafShot
+                      || projectile.type == ProjectileID.RainbowCrystalExplosion || projectile.type == ProjectileID.CrystalStorm || projectile.type == ModContent.ProjectileType<PrismShards>() || projectile.type == ModContent.ProjectileType<MythosStaff>() || projectile.type == ModContent.ProjectileType<MythosRing>()
+                       || projectile.type == ModContent.ProjectileType<MythosRing2>())
+                {
+                    modifiers.FinalDamage *= (int)(double)1.10f;
+                }
             }
         }
 

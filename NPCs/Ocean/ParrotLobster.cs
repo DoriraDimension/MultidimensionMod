@@ -6,6 +6,7 @@ using Terraria.ModLoader.Utilities;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader;
 using Terraria.GameContent.Bestiary;
+using MultidimensionMod.Items.Potions.Food;
 
 namespace MultidimensionMod.NPCs.Ocean
 {
@@ -29,7 +30,7 @@ namespace MultidimensionMod.NPCs.Ocean
 			NPC.DeathSound = SoundID.NPCDeath48;
 			NPC.value = Item.buyPrice(0, 0, 0, 78);
 			NPC.knockBackResist = 0.3f;
-			NPC.aiStyle = 3;
+			NPC.aiStyle = NPCAIStyleID.Fighter;
 			AIType = NPCID.WalkingAntlion;
 			AnimationType = NPCID.WalkingAntlion;
 			Banner = NPC.type;
@@ -48,7 +49,8 @@ namespace MultidimensionMod.NPCs.Ocean
 		public override void ModifyNPCLoot(NPCLoot NPCloot)
 		{
 			NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<LobsterClaw>(), 10));
-		}
+            NPCloot.Add(ItemDropRule.Common(ModContent.ItemType<WhiteMeat>(), 1, 1, 2));
+        }
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{

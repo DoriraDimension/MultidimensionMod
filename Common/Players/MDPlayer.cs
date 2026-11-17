@@ -121,8 +121,6 @@ namespace MultidimensionMod.Common.Players
         public bool hiveNugget = false;
         public bool EggPouch = false;
         public int EggBirth = 0;
-        public bool Brick = false;
-        public bool SBrick = false;
         public bool TidalPull = false;
         public bool AstralEye = false;
         public bool CreationMedallionP = false;
@@ -134,6 +132,13 @@ namespace MultidimensionMod.Common.Players
         public bool IsRiftPatchActive = false;
         public bool DartKitBoost = false;
         public bool AlchLicense = false;
+        public bool DrakeMead = false;
+        public float DrakeMeadTicker = 0;
+        public bool MeatballProjResist = false;
+        public bool SpineKBResist = false;
+        public bool BerryReflection = false;
+        public bool GPepperSpeed = false;
+        public bool CrystalBoost = false;
 
         public override void ResetEffects()
         {
@@ -179,14 +184,18 @@ namespace MultidimensionMod.Common.Players
             AngelBelt = false;
             hiveNugget = false;
             EggPouch = false;
-            Brick = false;
-            SBrick = false;
             TidalPull = false;
             AstralEye = false;
             CreationMedallionP = false;
             IlluminatedBuff = false;
             DartKitBoost = false;
             AlchLicense = false;
+            DrakeMead = false;
+            MeatballProjResist = false;
+            SpineKBResist = false;
+            BerryReflection = false;
+            GPepperSpeed = false;
+            CrystalBoost = false;
         }
         public override void UpdateDead()
         {
@@ -1024,15 +1033,22 @@ namespace MultidimensionMod.Common.Players
                     Main.buffNoTimeDisplay[BuffID.Honey] = true;
                 }
             }
-            if (Player.wet && Brick)
+            if (DrakeMead)
             {
-                Player.maxFallSpeed = 8f;
-                Player.jumpHeight = (int)(Player.jumpHeight * 0.50f);
-            }
-            else if (Player.wet && SBrick)
-            {
-                Player.maxFallSpeed = 13f;
-                Player.jumpHeight = (int)(Player.jumpHeight * 0.50f);
+                DrakeMeadTicker += 0.25f;
+                if (DrakeMeadTicker >= 1f)
+                {
+                    if (Main.myPlayer == Player.whoAmI)
+                    {
+                        for (int i = 0; i < Player.MaxBuffs; i++)
+                        {
+                            int buffID = Player.buffType[i];
+                            if (Player.buffTime[i] > 2 && Main.debuff[Player.buffType[i]])
+                                Player.buffTime[i]--;
+                        }
+                    }
+                    DrakeMeadTicker = 0f;
+                }
             }
         }
 
@@ -1244,10 +1260,6 @@ namespace MultidimensionMod.Common.Players
 
         public override void ModifyHitByProjectile(Projectile projectile, ref Player.HurtModifiers modifiers)
         {
-            if (Brick)
-            {
-                modifiers.Knockback *= 0.50f;
-            }
             if (ALLists.ReflectionExceptions.TrueForAll(x => projectile.type != x) && projectile.active && !projectile.friendly && projectile.hostile && projectile.damage > 0)
             {
                 if (SkulkerShell)
@@ -1264,19 +1276,37 @@ namespace MultidimensionMod.Common.Players
                         return;
                     }
                 }
+                if (BerryReflection)
+                {
+                    if (Main.rand.NextBool(5))
+                    {
+                        projectile.hostile = false;
+                        projectile.friendly = true;
+                        projectile.velocity *= -0.5f;
+                        projectile.extraUpdates += 1;
+                        projectile.penetrate = 1;
+                        projectile.damage /= 3;
+                        SoundEngine.PlaySound(SoundID.Item150, Player.position);
+                        return;
+                    }
+                }
             }
             if (TidalPull)
             {
                 modifiers.Knockback *= 1.25f;
             }
+            if (MeatballProjResist)
+            {
+                modifiers.FinalDamage *= 0.90f;
+            }
+            if (SpineKBResist)
+            {
+                modifiers.Knockback *= 0.50f;
+            }
         }
 
         public override void ModifyHitByNPC(NPC npc, ref Player.HurtModifiers modifiers)
         {
-            if (Brick)
-            {
-                modifiers.Knockback *= 0.50f;
-            }
             for (int n = 0; n < 3; n++)
             {
                 if (AstralEye)
@@ -1289,6 +1319,10 @@ namespace MultidimensionMod.Common.Players
                     int starDamage = (int)Player.GetBestClassDamage().ApplyTo(100);
                     Projectile.NewProjectile(Player.GetSource_FromThis(), Player.Center, new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-5, -3)), ModContent.ProjectileType<DefensiveParticleA>(), starDamage, 0f, Player.whoAmI, n, 3);
                 }
+            }
+            if (SpineKBResist)
+            {
+                modifiers.Knockback *= 0.50f;
             }
         }
 
@@ -1533,6 +1567,15 @@ namespace MultidimensionMod.Common.Players
                 }
             }
             #endregion
+        }
+
+        public override void PostUpdateRunSpeeds()
+        {
+            if (GPepperSpeed)
+            {
+                Player.runAcceleration *= 1.15f;
+                Player.maxRunSpeed *= 1.20f;
+            }
         }
 
         public override void ProcessTriggers(TriggersSet triggersSet)
