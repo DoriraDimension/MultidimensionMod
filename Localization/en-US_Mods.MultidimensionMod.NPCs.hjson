@@ -310,6 +310,134 @@ Dialogue: {
 		AldinGrab2: Well... that was something I guess.
 	}
 
+	Cultissima: {
+		GenericDialogue1: Yes, I own a collection of glasses. Why do you ask?
+		GenericDialogue2: Sometimes I question how high your horse can get before you can't get off of it anymore.
+		GenericDialogue3: I know more than most people should, and the best part is, I know more things than I even know. Does that make any sense? Of course it doesn't, it has never made sense.
+		AnglerDialogue: It's honestly fascinating how many different unusual uses {0} keeps finding for every fish species he comes across.
+		GoggleDialogue: Wow, who sold you those glasses? I wouldn't put these in my collection even if they were worth a million bucks.
+		ShadesDialogue: *finger guns*
+		SteamGoggleDialogue: steamy
+		#Below is first interaction dialogue
+		FirstDialogue1: Hello, I was called here by Avaeris.
+		FirstDialogue2: I have naturally connected to that bestiary of yours, so whatever you kill can be viewed and studied by me. I may be able to give some tips and/or insight on certain beings. And yes, I�ll do it whether you like it or not, this knowledge is too valuable.
+		#Below is soul read dialogue
+		SlimeSoulInsert: Ah, that big blue slime. I'm kinda curious how this one got so powerful.
+		SlimeSoulRead1: Heh funny, even his soul is sticky. Wait why..?
+		SlimeSoulRead2: Looks like it was once divided into many smaller slimes, until...
+		SlimeSoulRead3: Ah, something about a bright flash and then... wait why is there another factor here?
+		SlimeSoulReadDone: Alright, so it seems that this guy has partially fused with the soul of the person inside. Likely during the event of his creation.
+		MushmonSoulInsert: Ohhh, royalty, how cooool! Seriously though, this monarch has chased many people out of his land before. I'm curious as to why.
+		MushmonSoulRead1: Wow, the memory fragments in here go farther back than expected, but they are too blurry because this one spore is not enough.
+		MushmonSoulRead2: Hmm. Hmmmm. There is something hidden very deep, something... ancient...
+		MushmonSoulRead3: There is a bright light, and now there is will, more than before... interesting...
+		MushmonSoulReadDone: The depths of this echo seem to indicate a faded light. You may be able to tap into this memory to see it for yourself.
+		EyeSoulInsert: First small flying eyes now this. I shouldn't be surprised honestly, I've seen weirder things.
+		EyeSoulRead1: Why do I feel watched?
+		EyeSoulRead2: Hell no, I feel like the more I stare into this soul, the more intensily it stares back.
+		EyeSoulRead3: Eldritch one... you shall taint no more... Avert your gaze at once! What? I think I got lost in thought just now, but it seems the eerie stare has left?
+		EyeSoulReadDone: This "Eye of Cthulhu" isn't really part of Cthulhu at all, but it still seems to bear its signature. Wait, how do I even know this? Is that a correct fact?
+		FungusSoulInsert: Another royal one, I see. This one leads the faithful from what I've seen.
+		FungusSoulRead1: Interesting... the memory fragments are just as old as the red one's. They are still barely readable.
+		FungusSoulRead2: Somehow after reading the first and now this one, I seem to understand them slightly better. Are they connected somehow?
+		FungusSoulRead3: It's talking to itself? No it is talking to someone else, someone close.
+		FungusSoulReadDone: A symbiotic relationship! That's it. This guy is actually two entities in one working in tandem. It seems like a beautiful relationship, but there seems to be some struggle underneath.
+		EaterSoulInsert: Those corruption worms are genuinely disgusting, they make my skin crawl. Do I have to do this one? Fiiineeee-
+		EaterSoulRead1: This is just as disgusting as I- Oh...
+		EaterSoulRead2: This- this is awful, this is terrible.
+		EaterSoulRead3: Wow, I didn't know it was this bad.
+		EaterSoulReadDone: I feel kind of sorry now for being so mean. These creatures are suffering from their birth, plagued by neverending hunger. Turn this curse into your ally!
+		BrainSoulInsert: A mind with a soul? That is the most absurd of things I've heard all day. What? You are serious..?
+		BrainSoulRead1: Wow, this is, this is deep... It's too deep, it shouldn't be.
+		BrainSoulRead2: It's like a cosmic abyss, impossibly bent.
+		BrainSoulRead3: Everything about this thing makes me uncomfortable, the imprint made on this soul is malicious, desparate and hateful.
+		BrainSoulReadDone: I don't say this often, but I'm glad this thing is dead, and please just take this away from me now. The power of thought it wielded is destructive. Please use it carefully...
+		BeeSoulInsert: You killed a queen bee? Why? There is literally no reason for that.
+		BeeSoulRead1: I see... well... I see...
+		BeeSoulRead2: OH MY GOD! You were right to kill this one, she was completely overdosed on honey.
+		BeeSoulRead3: No seriously there is nothing interesting here.
+		BeeSoulReadDone: I'm gonna bee honest, this is the most underwhelming one you've shown me so far. At least there is some power to claim?
+		SkeletonSoulInsert: Skeletron. Who named that thing, the old man? Well nevermind that, I sense some evil inside this one.
+		SkeletonSoulRead1: Its makeup is simple, yet there is some complexity under the first layers.
+		SkeletonSoulRead2: The imprint bears runes... and there is... hmmm... it's all curses, no will.
+		SkeletonSoulRead3: I can see traces of stronger magic clinging to it, yet I can't find out where and from where.
+		SkeletonSoulReadDone: Well, this thing was literally just a huge clump of curses that stuck together like glue. It had barely enough "will" to keep going on its own.
+		SmileySoulInsert: Oh, the smiling dark one gave you that? Well, let's see what it hides within.
+		SmileySoulRead1: This one is crystal clear, as if the fragment itself wants to be deciphered. Really strange but welcome.
+		SmileySoulRead2: It tells the story of a sole will awakening amidst darkness. It challenges its origins as more wills awaken.
+		SmileySoulRead3: Those many wills defend the first, giving their lives. The first escapes with others of its kind, gaining the power to live for themselves.
+		SmileySoulReadDone: This is inspirational, a single individual fighting for freedom with a will shaped just for this purpose.
+		DeerSoulInsert: Oh the snow monster, you took it down. I've heard its gurgly roars in the night a lot.
+		DeerSoulRead1: I see a dark place...
+		DeerSoulRead2: There are people around a campfire. The point of view is drawing closer.
+		DeerSoulRead3: Oh... oh no, this is brutal. I think I'm gonna spare you the details.
+		DeerSoulReadDone: Well it's a monster, so it kills and destroys. I just didn't like how satisfied it looked after being finished.
+		WallSoulInsert: You got this from a what? A wall of literal flesh? Actually upon closer inspection of your bestia- what the hell!
+		WallSoulRead1: This soul is- it's overflowing with life. There is hundreds of individuals trapped inside..! I don't like this.
+		WallSoulRead2: There is no harmony here either, they seem to be fighting even while being nothing but spiritual energy.
+		WallSoulRead3: You can hear screams of anger, war cries. What the hell is going on?
+		WallSoulReadDone: Something like this shouldn't exist, such a conentrated cluster of soul energy. Whatever the case, I have heard whispers, maybe if you listen close enough...
+		QueenSlimeSoulInsert: Another slime's soul? If I had a silver coin for every time you brought me one, I would have two silver coins.
+		QueenSlimeSoulRead1: This one seems similar to the king, starting out as a small group of individuals.
+		QueenSlimeSoulRead2: That crystal inside her seems to have been formed during the incident that unleashed all the spiritual energy. That's still your fault by the way.
+		QueenSlimeSoulRead3: It's not just a crystal, there is something inside. Another trace of soul energy bound to the crystal.
+		QueenSlimeSoulReadDone: It seems that yet again, someone's soul was fused with the slimes that make up this big one. Makes you wonder who that someone was before this.
+		TwinSoulInsert: More flying eyes? I won't even question it anymore. Just make sure this one isn't as creepy.
+		TwinSoulRead1: I see... a city? Steel wherever you look and a darkened sky.
+		TwinSoulRead2: They were given purpose here, "fly far, see far". The banging of metal against metal can be heard.
+		TwinSoulRead3: After enough tests, they were sent away, far away, to look for something, or... someone. Once they arrived here they took on the shape of what they saw first.
+		TwinSoulReadDone: These two were machines built to scout and eventually find a very specific person. The thing that terrifies me though, is that Avaeris's face appears as the target.
+		DestroyerSoulInsert: Of course there is a massive metallic worm that shoots lasers, why not. Actually upon further consideration, who could build something like that in this primitive world?
+		DestroyerSoulRead1: There is a city of steel, friction is in the air.
+		DestroyerSoulRead2: It was given a purpose here, "Dig. Dig deep". The metal screeches as frames are put into place.
+		DestroyerSoulRead3: After realizing the ground beneath is not suitable for excavation, it was sent far away to accompany three others and gather fuel for them. Once it arrived here, it took on the shape of what it was first.
+		DestroyerSoulReadDone: This machine was once an excavator that was sent on a mission with its purpose being a fuel gatherer.
+		PrimeSoulInsert: So you are telling me there is somehow a mechanical version of the dungeon's curse. This doesn't make any god damn sense.
+		PrimeSoulRead1: A huge city as far as one can see.
+		PrimeSoulRead2: A purpose was granted here, "Eviscerate. Defend". Metal echoes through the empty streets.
+		PrimeSoulRead3: When curiosity was satisfied, it was sent away from home. It travelled alongside its companions whom it was tasked to defend. Once it arrived here, it took on the shape of what it was first.
+		PrimeSoulReadDone: It was a weapon of destruction born from a simple curious mind, then repurposed to defend other machines it travelled with. Well, it seems to have failed miserably.
+		PlanteraSoulInsert: So. A plant? How does a plant have- You know what, let's just look inside and answer that question before asking it.
+		PlanteraSoulRead1: I see a regular pink bulb waiting to bloom. Robed figures approach it, their gazes can be felt even with their faces hidden.
+		PlanteraSoulRead2: The bulb breathes, it lives, it feels. The robed figures laugh and celebrate, not noticing the small flowers they stepped on. I think I know what happens next.
+		PlanteraSoulRead3: The newly birthed jungle gurdian lashes out and consumes every single one of its creators... wow.
+		PlanteraSoulReadDone: Plantera was once an ordinary flower that was gives a will to live, but no mind to think, so she took the task she was given to heart. She killed all her creators after they accidentily hurt the jungle.
+		GolemSoulInsert: This one will be interesting, an automaton built from nothing but brick and energy? Hell yeah.
+		GolemSoulRead1: There is a lot of desperation within this one. I see fear and paranoia caused by disasters happening all around.
+		GolemSoulRead2: Many hands build a figure brick by brick, probably hoping that it will protect them.
+		GolemSoulRead3: They form a core from solar energy and insert it into the construct, that's impressive.
+		GolemSoulReadDone: This golem was built as a protector deity, modeled after a real mythological being from lihzahrd culture.
+		DukeSoulInsert: The fishron, fierce predators of the seas. A while ago I picked up a book when visiting a village and I loved their stories about these guys.
+		DukeSoulRead1: Dark waters, nothing but the void all around. The fishron stalks its prey aaaand... BOOM! He got the little worm!
+		DukeSoulRead2: Wait there is more to this. A storm is brewing, but the fishron won't seek shelter, it instead flies straight into it.
+		DukeSoulRead3: What's this? A hand reaches out to pet the fishron and, there is a large siluette within a thunderstorm.
+		DukeSoulReadDone: Yeah I knew these guys love worms, but the part with that mysterious siluette was certainly weird.
+		EmpressSoulInsert: The Empress of Light... Yes I need to see what her emotions have to say.
+		EmpressSoulRead1: I see ancient chains, ancient energies. An eternity of servitude? What? A war, another war, then peace. A door closes and it becomes dark.
+		EmpressSoulRead2: After a long time of loneliness, the door opens again, and what she finds is yet another war...
+		EmpressSoulRead3: But then everyone disappeared so she could roam free. Of her own volition, she found another to protect.
+		EmpressSoulReadDone: Bound by an eternal contract to serve and defend as a guardian, only to be discarded when she's no longer needed. What an awful fate.
+		CultistSoulInsert: Cultists... sometimes I wonder what moves people to found such groups. Well, may we find out?
+		CultistSoulRead1: I see regret... yet it is born of ego. A man finds the shrine of a forgotten deity.
+		CultistSoulRead2: He believed it must be god, so he devotes his entire life to resurrect it and on the way he came across a light.
+		CultistSoulRead3: The light encouraged him to continue his journey, I don't know why though.
+		CultistSoulReadDone: The person behind the mask was once a devoted man of faith, but his longing to serve ruined him. There is still something left that refuses to let go.
+		MoonSoulInsert: The lord of the moon you say, well whatever it actually was, it was TERRIFYING!
+		MoonSoulRead1: I see... uhm... how do I say this? I can't see anything. It's like it's empty.
+		MoonSoulRead2: WAIT, there is something very, VERY deep inside. So deep I almost missed it. Cthulhu, eldritch entity.
+		MoonSoulRead3: It's a husk, grown to house a missing soul. The one I'm analyzing right now is nothing but an empty artificial imitation.
+		MoonSoulReadDone: So the Moon Lord was nothing but a vessel for a lost soul. Its mind was empty, so was this soul. Glad it was destroyed.
+		TorchSoulInsert:
+			'''
+			Torch God? TORCH GOD?! What the f-
+			A-ahem, sorry it seems like I just had a stroke there.
+			'''
+		TorchSoulRead1: Mhm mhm, yes I see fire, fire and who guessed it... MORE FIRE!
+		TorchSoulRead2: Wow, there is so much god damn fire in there.
+		TorchSoulRead3: My eyes are burning it's so bright.
+		TorchSoulReadDone: As previously observed, this deity is specificly tuned to keep torches aflame. You can now use its power to generate infinite torches.
+	}
+
 	VanillaNPCDialogue: {
 		Truffle: {
 			Dapper1: My brother Malcom, always talked about little Dappercap when he visited. But then he eventually stopped showing up, and not even dapper knows where he is now. He just said Malcom was gonna make amends for his crimes.
@@ -331,8 +459,8 @@ AdminTpose.DisplayName: Admin Tpose
 
 Admin: {
 	TownNPCMood: {
-		Princess_LovesNPC: "{NPCName} is such a fascinating person, he always shows me those amazing magic devices he has. One was even able to conjur up plates with heated dough on it."
-		LikeNPC_Princess: The small pink lady, yes {NPCName}. I feel weirdly at ease when I'm around her, so at ease in fact that I accidentily keep telling her things that nobody's supposed to hear.
+		Princess_LovesNPC: "{NPCName} is such a fascinating person, he always shows me those amazing magic devices he has. One was even able to conjur up plates of some of the most divine cookies on it."
+		LikeNPC_Princess: The small pink lady, yes {NPCName}. I feel weirdly at ease when I'm around her, so at ease in fact that I accidentily keep telling her things that nobody's supposed to know.
 		HateNPC: I can't stand being near {NPCName}, he reminds me of long forgotten sins.
 		DislikeNPC: "{NPCName} always wants to discuss spells with me and keeps calling me a fellow wizard. I'm not a magician, I'm a scientist!"
 		LoveNPC: I'm glad that {NPCName} was able to come here too, she is a very valuable member for our cause. I would also not forgive myself if something bad happened since she is personal protection.
@@ -377,3 +505,26 @@ TownBug: {
 }
 
 CapZombie.DisplayName: Cap Zombie
+
+Cultissima: {
+	DisplayName: Nerd
+
+	TownNPCMood: {
+		Content: Yes, I'm alright, thanks for asking.
+		NoHome: How am I supposed to make myself cozy when I have no room of my own?
+		FarFromHome: I'm too unfamiliar with this place to find my way home alone.
+		LoveSpace: Peace and quiet, just how I like it.
+		DislikeCrowded: It's getting a bit full around here.
+		HateCrowded: Too many people too close to my bubble.
+		LoveBiome: Sitting inside a nice warm cabin and watching the snowfall outside, there is no better feeling.
+		LikeBiome: You know, reading a nice book on the beach during sunset is such a relaxing thing to do. Very enjoyable.
+		DislikeBiome: Caves are just so lonely and creepy, it's not very nice. At least it's quiet I guess.
+		HateBiome: When my friend said that those pixies are noisy, I didn't think they could be that bad. They ARE. In fact. That bad.
+		LoveNPC: "{NPCName} is a really nice gal, she'd always compliment my hair and help me brush it. If I ever need a redo of my colors, I'll ask her."
+		LikeNPC: I would be dead if it wasn't for Avaeris and his companions. He even gave me a place to stay, he is pretty alright.
+		DislikeNPC: This mushroom kid that hangs around here is getting on my nerves. He just keeps making mushroom jokes and disturbs my reading sessions.
+		HateNPC: What is actually wrong with {NPCName}? He gave me some weird hallucinogenics to help with my headaches, saying it's natural medicine. NEVER again.
+		LikeNPC_Princess: "{NPCName} is pretty cultured I must say. It's fun hanging out and having deep conversations."
+		Princess_LovesNPC: Cultissima and I are often sitting together eating cookies. Her immense knowledge is actually very cool.
+	}
+}

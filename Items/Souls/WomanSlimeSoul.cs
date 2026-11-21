@@ -11,9 +11,9 @@ using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Souls
 {
-	public class WomanSlimeSoul : ModItem
+	public class WomanSlimeSoul : SoulItem
 	{
-		public override void SetStaticDefaults()
+        public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(7, 7));
@@ -28,24 +28,35 @@ namespace MultidimensionMod.Items.Souls
 			Item.height = 48;
 			Item.rare = ModContent.RarityType<WomanSlimeSoulRarity>();
 		}
+        public override bool CanUseItem(Player player)
+        {
+            if (Synched)
+                return true;
+            else
+                return false;
+        }
+
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            if (Main.keyState.PressingShift())
+            if (Synched)
             {
-                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.MiscText.WomanSlimeSoul.Lore"))
+                if (Main.keyState.PressingShift())
                 {
-                    OverrideColor = Color.LightGray
-                };
-                tooltips.Add(line);
-            }
-            else
-            {
-                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.SpecialTooltips.Viewer"))
+                    TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.WomanSlimeSoul.Lore"))
+                    {
+                        OverrideColor = Color.LightGray
+                    };
+                    tooltips.Add(line);
+                }
+                else
                 {
-                    OverrideColor = Color.Gray,
-                };
-                tooltips.Add(line);
+                    TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
+                    {
+                        OverrideColor = Color.Gray,
+                    };
+                    tooltips.Add(line);
+                }
             }
         }
 
@@ -57,5 +68,13 @@ namespace MultidimensionMod.Items.Souls
             Vector2 origin = frame.Size() / 2f;
             spriteBatch.Draw(texture, Item.Center - Main.screenPosition, frame, Color.White, rotation, origin, scale, SpriteEffects.None, 0f);
         }
+
+        public override string InsertDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.QueenSlimeSoulInsert");
+
+        public override string SynchingDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.QueenSlimeSoulRead1");
+        public override string SynchingDialogue2 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.QueenSlimeSoulRead2");
+        public override string SynchingDialogue3 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.QueenSlimeSoulRead3");
+
+        public override string SynchingEndDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.QueenSlimeSoulReadDone");
     }
 }

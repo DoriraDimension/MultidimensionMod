@@ -9,9 +9,9 @@ using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Souls
 {
-	public class EmpressSoul : ModItem
+	public class EmpressSoul : SoulItem
 	{
-		public override void SetStaticDefaults()
+        public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
@@ -24,24 +24,35 @@ namespace MultidimensionMod.Items.Souls
 			Item.height = 38;
 			Item.rare = ModContent.RarityType<EmpressSoulRarity>();
 		}
+        public override bool CanUseItem(Player player)
+        {
+            if (Synched)
+                return true;
+            else
+                return false;
+        }
+
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            if (Main.keyState.PressingShift())
+            if (Synched)
             {
-                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.EmpressSoul.Lore"))
+                if (Main.keyState.PressingShift())
                 {
-                    OverrideColor = Color.LightGray
-                };
-                tooltips.Add(line);
-            }
-            else
-            {
-                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
+                    TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.EmpressSoul.Lore"))
+                    {
+                        OverrideColor = Color.LightGray
+                    };
+                    tooltips.Add(line);
+                }
+                else
                 {
-                    OverrideColor = Color.Gray,
-                };
-                tooltips.Add(line);
+                    TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
+                    {
+                        OverrideColor = Color.Gray,
+                    };
+                    tooltips.Add(line);
+                }
             }
         }
 
@@ -49,5 +60,13 @@ namespace MultidimensionMod.Items.Souls
         {
             return MDColors.Rainbow;
         }
+
+        public override string InsertDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.EmpressSoulInsert");
+
+        public override string SynchingDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.EmpressSoulRead1");
+        public override string SynchingDialogue2 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.EmpressSoulRead2");
+        public override string SynchingDialogue3 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.EmpressSoulRead3");
+
+        public override string SynchingEndDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.EmpressSoulReadDone");
     }
 }

@@ -13,9 +13,9 @@ using System.Collections.Generic;
 
 namespace MultidimensionMod.Items.Souls
 {
-	public class WallSoul : ModItem
+	public class WallSoul : SoulItem
 	{
-		public override void SetStaticDefaults()
+        public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
@@ -35,53 +35,56 @@ namespace MultidimensionMod.Items.Souls
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            if (!DownedSystem.listenedToNonsense)
+            if (Synched)
             {
-                TooltipLine line = new(Mod, "Nonsense", Language.GetTextValue("Mods.MultidimensionMod.Items.WallSoul.Nonsense"))
+                if (!DownedSystem.listenedToNonsense)
                 {
-                    OverrideColor = Color.White
-                };
-                tooltips.Add(line);
-            }
-            if (DownedSystem.listenedToNonsense && !DownedSystem.metAdel)
-            {
-                TooltipLine line = new(Mod, "AdelGuidance", Language.GetTextValue("Mods.MultidimensionMod.Items.WallSoul.AdelGuidance"))
+                    TooltipLine line = new(Mod, "Nonsense", Language.GetTextValue("Mods.MultidimensionMod.Items.WallSoul.Nonsense"))
+                    {
+                        OverrideColor = Color.White
+                    };
+                    tooltips.Add(line);
+                }
+                if (DownedSystem.listenedToNonsense && !DownedSystem.metAdel)
                 {
-                    OverrideColor = MDColors.AdelText
-                };
-                tooltips.Add(line);
-            }
-            if (DownedSystem.listenedToNonsense && !DownedSystem.metVertrarius)
-            {
-                TooltipLine line = new(Mod, "VetrariusGuidance", Language.GetTextValue("Mods.MultidimensionMod.Items.WallSoul.VertrariusGuidance"))
+                    TooltipLine line = new(Mod, "AdelGuidance", Language.GetTextValue("Mods.MultidimensionMod.Items.WallSoul.AdelGuidance"))
+                    {
+                        OverrideColor = MDColors.AdelText
+                    };
+                    tooltips.Add(line);
+                }
+                if (DownedSystem.listenedToNonsense && !DownedSystem.metVertrarius)
                 {
-                    OverrideColor = Color.Orange
-                };
-                tooltips.Add(line);
-            }
-            if (DownedSystem.metAdel && DownedSystem.metVertrarius)
-            {
-                TooltipLine line = new(Mod, "TheyShutUpNow", Language.GetTextValue("Mods.MultidimensionMod.Items.WallSoul.TheyShutUpNow"))
+                    TooltipLine line = new(Mod, "VetrariusGuidance", Language.GetTextValue("Mods.MultidimensionMod.Items.WallSoul.VertrariusGuidance"))
+                    {
+                        OverrideColor = Color.Orange
+                    };
+                    tooltips.Add(line);
+                }
+                if (DownedSystem.metAdel && DownedSystem.metVertrarius)
                 {
-                    OverrideColor = Color.White
-                };
-                tooltips.Add(line);
-            }
-            if (Main.keyState.PressingShift())
-            {
-                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.WallSoul.Lore"))
+                    TooltipLine line = new(Mod, "TheyShutUpNow", Language.GetTextValue("Mods.MultidimensionMod.Items.WallSoul.TheyShutUpNow"))
+                    {
+                        OverrideColor = Color.White
+                    };
+                    tooltips.Add(line);
+                }
+                if (Main.keyState.PressingShift())
                 {
-                    OverrideColor = Color.LightGray
-                };
-                tooltips.Add(line);
-            }
-            else
-            {
-                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
+                    TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.WallSoul.Lore"))
+                    {
+                        OverrideColor = Color.LightGray
+                    };
+                    tooltips.Add(line);
+                }
+                else
                 {
-                    OverrideColor = Color.Gray,
-                };
-                tooltips.Add(line);
+                    TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
+                    {
+                        OverrideColor = Color.Gray,
+                    };
+                    tooltips.Add(line);
+                }
             }
         }
 
@@ -96,11 +99,11 @@ namespace MultidimensionMod.Items.Souls
 
         public override bool CanUseItem(Player player)
         {
-            if (DownedSystem.metAdel && DownedSystem.metVertrarius)
+            if (!DownedSystem.metAdel && !DownedSystem.metVertrarius && Synched)
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
 
         public override bool? UseItem(Player player)
@@ -136,7 +139,15 @@ namespace MultidimensionMod.Items.Souls
 				0f
 			);
 		}
-	}
+
+        public override string InsertDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.WallSoulInsert");
+
+        public override string SynchingDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.WallSoulRead1");
+        public override string SynchingDialogue2 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.WallSoulRead2");
+        public override string SynchingDialogue3 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.WallSoulRead3");
+
+        public override string SynchingEndDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.WallSoulReadDone");
+    }
 
 	public class Arguement : ModProjectile
 	{

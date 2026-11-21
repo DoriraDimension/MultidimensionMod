@@ -11,9 +11,9 @@ using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Souls
 {
-	public class EyeSoul : ModItem
+	public class EyeSoul : SoulItem
 	{
-		public override void SetStaticDefaults()
+        public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(7, 12));
@@ -29,23 +29,34 @@ namespace MultidimensionMod.Items.Souls
 			Item.rare = ModContent.RarityType<EyeSoulRarity>();
 		}
 
+        public override bool CanUseItem(Player player)
+        {
+            if (Synched)
+                return true;
+            else
+                return false;
+        }
+
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            if (Main.keyState.PressingShift())
+            if (Synched)
             {
-                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.EyeSoul.Lore"))
+                if (Main.keyState.PressingShift())
                 {
-                    OverrideColor = Color.LightGray
-                };
-                tooltips.Add(line);
-            }
-            else
-            {
-                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
+                    TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.EyeSoul.Lore"))
+                    {
+                        OverrideColor = Color.LightGray
+                    };
+                    tooltips.Add(line);
+                }
+                else
                 {
-                    OverrideColor = Color.Gray,
-                };
-                tooltips.Add(line);
+                    TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
+                    {
+                        OverrideColor = Color.Gray,
+                    };
+                    tooltips.Add(line);
+                }
             }
         }
 
@@ -57,5 +68,13 @@ namespace MultidimensionMod.Items.Souls
             Vector2 origin = frame.Size() / 2f;
             spriteBatch.Draw(texture, Item.Center - Main.screenPosition, frame, Color.White, rotation, origin, scale, SpriteEffects.None, 0f);
         }
+
+        public override string InsertDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.EyeSoulInsert");
+
+        public override string SynchingDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.EyeSoulRead1");
+        public override string SynchingDialogue2 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.EyeSoulRead2");
+        public override string SynchingDialogue3 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.EyeSoulRead3");
+
+        public override string SynchingEndDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.EyeSoulReadDone");
     }
 }

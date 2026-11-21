@@ -18,9 +18,9 @@ using System;
 
 namespace MultidimensionMod.Items.Souls
 {
-	public class CultistSoul : ModItem
+	public class CultistSoul : SoulItem
 	{
-		public override void SetStaticDefaults()
+        public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(7, 8));
@@ -42,46 +42,49 @@ namespace MultidimensionMod.Items.Souls
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            if (Common.Systems.MemorySystem.summonedMoonSword)
+            if (Synched)
             {
-                TooltipLine line = new(Mod, "TTWithSword", Language.GetTextValue("Mods.MultidimensionMod.Items.CultistSoul.TTWithSword"))
+                if (Common.Systems.MemorySystem.summonedMoonSword)
                 {
-                    OverrideColor = Color.White
-                };
-                tooltips.Add(line);
-            }
-            else if (!Common.Systems.MemorySystem.summonedMoonSword)
-            {
-                TooltipLine line = new(Mod, "TTNoSword", Language.GetTextValue("Mods.MultidimensionMod.Items.CultistSoul.TTNoSword"))
+                    TooltipLine line = new(Mod, "TTWithSword", Language.GetTextValue("Mods.MultidimensionMod.Items.CultistSoul.TTWithSword"))
+                    {
+                        OverrideColor = Color.White
+                    };
+                    tooltips.Add(line);
+                }
+                else if (!Common.Systems.MemorySystem.summonedMoonSword)
                 {
-                    OverrideColor = Color.White
-                };
-                tooltips.Add(line);
-            }
-            if (Main.keyState.PressingShift())
-            {
-                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.CultistSoul.Lore"))
+                    TooltipLine line = new(Mod, "TTNoSword", Language.GetTextValue("Mods.MultidimensionMod.Items.CultistSoul.TTNoSword"))
+                    {
+                        OverrideColor = Color.White
+                    };
+                    tooltips.Add(line);
+                }
+                if (Main.keyState.PressingShift())
                 {
-                };
-                tooltips.Add(line);
-            }
-            else
-            {
-                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
+                    TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.CultistSoul.Lore"))
+                    {
+                    };
+                    tooltips.Add(line);
+                }
+                else
                 {
-                    OverrideColor = Color.Gray,
-                };
-                tooltips.Add(line);
+                    TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
+                    {
+                        OverrideColor = Color.Gray,
+                    };
+                    tooltips.Add(line);
+                }
             }
         }
 
         public override bool CanUseItem(Player player)
         {
-            if (MemorySystem.summonedMoonSword)
+            if (!MemorySystem.summonedMoonSword && Synched)
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
 
         public override bool? UseItem(Player player)
@@ -99,7 +102,13 @@ namespace MultidimensionMod.Items.Souls
             Vector2 origin = frame.Size() / 2f;
             spriteBatch.Draw(texture, Item.Center - Main.screenPosition, frame, Color.White, rotation, origin, scale, SpriteEffects.None, 0f);
         }
+        public override string InsertDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.CultistSoulInsert");
 
+        public override string SynchingDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.CultistSoulRead1");
+        public override string SynchingDialogue2 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.CultistSoulRead2");
+        public override string SynchingDialogue3 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.CultistSoulRead3");
+
+        public override string SynchingEndDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.CultistSoulReadDone");
     }
 
     internal class GreatMoonlightManifest : ModProjectile

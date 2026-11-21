@@ -1206,7 +1206,8 @@ PlantSoul: {
 		A plant that was brought to life by an experiment about granting life to inanimate objects.
 		She was granted a soul and the will to live and a simple task: "Protect the Jungle".
 		Without a mind of her own she could not process higher thought, so nothing but this task mattered.
-		It is unknown who created her and where they went.
+		Unfortunate to the one's creating her, that task was more important than them.
+		So after they accidentily flattened many of the surrounding flowers, they were consumed without leaving a single trace.
 		'''
 }
 
@@ -4707,10 +4708,7 @@ Rimeberry: {
 
 RimeberryAle: {
 	DisplayName: Rimeberry Ale
-	Tooltip:
-		'''
-		One of the everyday drinks a viking would consume during and after work.
-		'''
+	Tooltip: One of the everyday drinks a viking would consume during and after work.
 }
 
 WinterHoney: {
@@ -4996,5 +4994,15 @@ WhiteMeatImmunizing: {
 		White lobster meat that has been carefully doused in 
 		Grants a large variety of debuff immunities
 		'Immunity to dying not included.'
+		'''
+}
+
+TorchSoul: {
+	DisplayName: Soulecho of the Torch God
+	Tooltip: Places torches without being consumed
+	Lore:
+		'''
+		Holy shite mate, torching around town in our specil-
+		ahhhhhhhhhhhhhhhhhhh  godlore
 		'''
 }

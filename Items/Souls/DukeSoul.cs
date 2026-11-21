@@ -10,9 +10,9 @@ using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Souls
 {
-	public class DukeSoul : ModItem
+	public class DukeSoul : SoulItem
 	{
-		public override void SetStaticDefaults()
+        public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
@@ -26,24 +26,35 @@ namespace MultidimensionMod.Items.Souls
 			Item.rare = ModContent.RarityType<DukeSoulRarity>();
 		}
 
-        public override void ModifyTooltips(List<TooltipLine> tooltips)
+		public override void ModifyTooltips(List<TooltipLine> tooltips)
+		{
+			if (Synched)
+			{
+				if (Main.keyState.PressingShift())
+				{
+					TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.DukeSoul.Lore"))
+					{
+						OverrideColor = Color.LightGray
+					};
+					tooltips.Add(line);
+				}
+				else
+				{
+					TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
+					{
+						OverrideColor = Color.Gray,
+					};
+					tooltips.Add(line);
+				}
+			}
+        }
+
+        public override bool CanUseItem(Player player)
         {
-            if (Main.keyState.PressingShift())
-            {
-                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.DukeSoul.Lore"))
-                {
-                    OverrideColor = Color.LightGray
-                };
-                tooltips.Add(line);
-            }
+            if (Synched)
+                return true;
             else
-            {
-                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
-                {
-                    OverrideColor = Color.Gray,
-                };
-                tooltips.Add(line);
-            }
+                return false;
         }
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
@@ -66,5 +77,13 @@ namespace MultidimensionMod.Items.Souls
 				0f
 			);
 		}
-	}
+
+        public override string InsertDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.DukeSoulInsert");
+
+        public override string SynchingDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.DukeSoulRead1");
+        public override string SynchingDialogue2 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.DukeSoulRead2");
+        public override string SynchingDialogue3 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.DukeSoulRead3");
+
+        public override string SynchingEndDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.DukeSoulReadDone");
+    }
 }

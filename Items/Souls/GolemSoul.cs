@@ -11,9 +11,9 @@ using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Souls
 {
-	public class GolemSoul : ModItem
+	public class GolemSoul : SoulItem
 	{
-		public override void SetStaticDefaults()
+        public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(7, 8));
@@ -31,22 +31,33 @@ namespace MultidimensionMod.Items.Souls
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            if (Main.keyState.PressingShift())
+            if (Synched)
             {
-                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.GolemSoul.Lore"))
+                if (Main.keyState.PressingShift())
                 {
-                    OverrideColor = Color.LightGray
-                };
-                tooltips.Add(line);
+                    TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.GolemSoul.Lore"))
+                    {
+                        OverrideColor = Color.LightGray
+                    };
+                    tooltips.Add(line);
+                }
+                else
+                {
+                    TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
+                    {
+                        OverrideColor = Color.Gray,
+                    };
+                    tooltips.Add(line);
+                }
             }
+        }
+
+        public override bool CanUseItem(Player player)
+        {
+            if (Synched)
+                return true;
             else
-            {
-                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
-                {
-                    OverrideColor = Color.Gray,
-                };
-                tooltips.Add(line);
-            }
+                return false;
         }
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
@@ -57,5 +68,13 @@ namespace MultidimensionMod.Items.Souls
             Vector2 origin = frame.Size() / 2f;
             spriteBatch.Draw(texture, Item.Center - Main.screenPosition, frame, Color.White, rotation, origin, scale, SpriteEffects.None, 0f);
         }
+
+        public override string InsertDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.GolemSoulInsert");
+
+        public override string SynchingDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.GolemSoulRead1");
+        public override string SynchingDialogue2 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.GolemSoulRead2");
+        public override string SynchingDialogue3 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.GolemSoulRead3");
+
+        public override string SynchingEndDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.GolemSoulReadDone");
     }
 }

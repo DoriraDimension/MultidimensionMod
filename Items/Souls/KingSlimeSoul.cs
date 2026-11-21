@@ -1,25 +1,22 @@
-﻿using MultidimensionMod.Rarities.Souls;
-using Terraria.DataStructures;
-using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
-using Microsoft.Xna.Framework.Graphics;
+﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using System.Collections.Generic;
+using Microsoft.Xna.Framework.Graphics;
+using MultidimensionMod.Rarities.Souls;
+using Terraria;
+using Terraria.DataStructures;
+using Terraria.GameContent.Creative;
+using Terraria.ID;
 using Terraria.Localization;
+using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
 
 namespace MultidimensionMod.Items.Souls
 {
-	public class KingSlimeSoul : ModItem
+	public class KingSlimeSoul : SoulItem
 	{
-		public override void SetStaticDefaults()
+        public override void SetStaticDefaults()
 		{
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(7, 5));
-			ItemID.Sets.AnimatesAsSoul[Item.type] = true;
-			ItemID.Sets.ItemIconPulse[Item.type] = true;
-			ItemID.Sets.ItemNoGravity[Item.type] = true;
 		}
 
 		public override void SetDefaults()
@@ -27,26 +24,41 @@ namespace MultidimensionMod.Items.Souls
 			Item.width = 22;
 			Item.height = 36;
 			Item.rare = ModContent.RarityType<KingSlimeSoulRarity>();
-		}
+            Item.useStyle = ItemUseStyleID.HoldUp;
+            Item.useTime = 30;
+            Item.useAnimation = 30;
+
+        }
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            if (Main.keyState.PressingShift())
+            if (Synched)
             {
-                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.KingSlimeSoul.Lore"))
+                if (Main.keyState.PressingShift())
                 {
-                    OverrideColor = Color.LightGray
-                };
-                tooltips.Add(line);
+                    TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.KingSlimeSoul.Lore"))
+                    {
+                        OverrideColor = Color.LightGray
+                    };
+                    tooltips.Add(line);
+                }
+                else
+                {
+                    TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
+                    {
+                        OverrideColor = Color.Gray,
+                    };
+                    tooltips.Add(line);
+                }
             }
+        }
+
+        public override bool CanUseItem(Player player)
+        {
+            if (Synched)
+                return true;
             else
-            {
-                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
-                {
-                    OverrideColor = Color.Gray,
-                };
-                tooltips.Add(line);
-            }
+                return false;
         }
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
@@ -57,5 +69,13 @@ namespace MultidimensionMod.Items.Souls
             Vector2 origin = frame.Size() / 2f;
             spriteBatch.Draw(texture, Item.Center - Main.screenPosition, frame, Color.White, rotation, origin, scale, SpriteEffects.None, 0f);
         }
+
+        public override string InsertDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.SlimeSoulInsert");
+
+        public override string SynchingDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.SlimeSoulRead1");
+        public override string SynchingDialogue2 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.SlimeSoulRead2");
+        public override string SynchingDialogue3 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.SlimeSoulRead3");
+
+        public override string SynchingEndDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.SlimeSoulReadDone");
     }
 }

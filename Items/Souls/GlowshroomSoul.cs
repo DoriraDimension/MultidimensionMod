@@ -18,7 +18,7 @@ using MultidimensionMod.Items.Placeables;
 
 namespace MultidimensionMod.Items.Souls
 {
-    public class GlowshroomSoul : ModItem
+    public class GlowshroomSoul : SoulItem
     {
         public static readonly SoundStyle UseSound = new SoundStyle("MultidimensionMod/Sounds/Custom/HallowedCry");
         public override void SetStaticDefaults()
@@ -41,37 +41,40 @@ namespace MultidimensionMod.Items.Souls
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            if (MemorySystem.seenMemory)
+            if (Synched)
             {
-                TooltipLine line = new(Mod, "MemorySeen", Language.GetTextValue("Mods.MultidimensionMod.Items.GlowshroomSoul.MemorySeen"))
+                if (MemorySystem.seenMemory)
                 {
-                    OverrideColor = Color.White,
-                };
-                tooltips.Add(line);
-            }
-            else
-            {
-                TooltipLine line = new(Mod, "MemoryNotSeen", Language.GetTextValue("Mods.MultidimensionMod.Items.GlowshroomSoul.MemoryNotSeen"))
+                    TooltipLine line = new(Mod, "MemorySeen", Language.GetTextValue("Mods.MultidimensionMod.Items.GlowshroomSoul.MemorySeen"))
+                    {
+                        OverrideColor = Color.White,
+                    };
+                    tooltips.Add(line);
+                }
+                else
                 {
-                    OverrideColor = Color.White,
-                };
-                tooltips.Add(line);
-            }
-            if (Main.keyState.PressingShift())
-            {
-                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.GlowshroomSoul.Lore"))
+                    TooltipLine line = new(Mod, "MemoryNotSeen", Language.GetTextValue("Mods.MultidimensionMod.Items.GlowshroomSoul.MemoryNotSeen"))
+                    {
+                        OverrideColor = Color.White,
+                    };
+                    tooltips.Add(line);
+                }
+                if (Main.keyState.PressingShift())
                 {
-                    OverrideColor = Color.LightGray
-                };
-                tooltips.Add(line);
-            }
-            else
-            {
-                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
+                    TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.GlowshroomSoul.Lore"))
+                    {
+                        OverrideColor = Color.LightGray
+                    };
+                    tooltips.Add(line);
+                }
+                else
                 {
-                    OverrideColor = Color.Gray,
-                };
-                tooltips.Add(line);
+                    TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
+                    {
+                        OverrideColor = Color.Gray,
+                    };
+                    tooltips.Add(line);
+                }
             }
         }
 
@@ -111,6 +114,14 @@ namespace MultidimensionMod.Items.Souls
                 0f
             );
         }
+
+        public override string InsertDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.FungusSoulInsert");
+
+        public override string SynchingDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.FungusSoulRead1");
+        public override string SynchingDialogue2 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.FungusSoulRead2");
+        public override string SynchingDialogue3 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.FungusSoulRead3");
+
+        public override string SynchingEndDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.FungusSoulReadDone");
     }
 
     public class FungusMemory : ModProjectile

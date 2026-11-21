@@ -56,7 +56,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 	            .SetBiomeAffection<UndergroundBiome>(AffectionLevel.Like)
 				.SetBiomeAffection<SnowBiome>(AffectionLevel.Dislike)
 				.SetBiomeAffection<HallowBiome>(AffectionLevel.Hate)
-				//.SetNPCAffection(ModContent.NPCType<Cultissima>(), AffectionLevel.Love)
+				.SetNPCAffection(ModContent.NPCType<Cultissima>(), AffectionLevel.Love)
 				.SetNPCAffection(NPCID.Mechanic, AffectionLevel.Like) 
 	            .SetNPCAffection(NPCID.Wizard, AffectionLevel.Dislike) 
 	            .SetNPCAffection(NPCID.Cyborg, AffectionLevel.Hate)

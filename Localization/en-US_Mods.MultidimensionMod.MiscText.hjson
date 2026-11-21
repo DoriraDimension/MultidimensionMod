@@ -13,6 +13,10 @@ HardmodeOff: Hardmode is no longer enabled
 MadnessDriveCondition: Must be equipped with an analysed Cerebro Drive
 Analysing: Sample analysis started
 AnalysisDone: Analysis completed, new recipes unlocked.
+SoulSynchText: Soul Synchronization
+PlaceSoultext: If you got a powerful soul with you, show it to me. I'm just as curious as you are.
+SynchDone: Synched
+SynchStart: Let's go
 
 DeathMessages: {
 	Socks: "{0} died from the pain of wearing wet socks."
@@ -115,7 +119,6 @@ WindowTitles: {
 	Space: Press space to live
 	Religion: Bible III, the coming of shroom
 	Madness: Now with a 80% chance to go mad
-	Dump: The nostalgian dumpster
 	BadFlirt: You are the harmony to my discord
 	Drama: Mushroom family drama
 	Watching: HE is always watching

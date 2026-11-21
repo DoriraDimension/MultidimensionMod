@@ -10,9 +10,9 @@ using Terraria.Localization;
 
 namespace MultidimensionMod.Items.Souls
 {
-	public class SmileySoulshard : ModItem
+	public class SmileySoulshard : SoulItem
 	{
-		public override void SetStaticDefaults()
+        public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
@@ -25,24 +25,35 @@ namespace MultidimensionMod.Items.Souls
 			Item.height = 36;
 			Item.rare = ModContent.RarityType<SmileySoulRarity>();
 		}
+
+        public override bool CanUseItem(Player player)
+        {
+            if (Synched)
+                return true;
+            else
+                return false;
+        }
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            if (Main.keyState.PressingShift())
-            {
-                TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.SmileySoulshard.Lore"))
-                {
-                    OverrideColor = Color.LightGray
-                };
-                tooltips.Add(line);
-            }
-            else
-            {
-                TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
-                {
-                    OverrideColor = Color.Gray,
-                };
-                tooltips.Add(line);
-            }
+			if (Synched)
+			{
+				if (Main.keyState.PressingShift())
+				{
+					TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.SmileySoulshard.Lore"))
+					{
+						OverrideColor = Color.LightGray
+					};
+					tooltips.Add(line);
+				}
+				else
+				{
+					TooltipLine line = new(Mod, "HoldShift", Language.GetTextValue("Mods.MultidimensionMod.MiscText.SpecialTooltips.Viewer"))
+					{
+						OverrideColor = Color.Gray,
+					};
+					tooltips.Add(line);
+				}
+			}
         }
 
 
@@ -66,5 +77,13 @@ namespace MultidimensionMod.Items.Souls
 				0f
 			);
 		}
-	}
+
+        public override string InsertDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.SmileySoulInsert");
+
+        public override string SynchingDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.SmileySoulRead1");
+        public override string SynchingDialogue2 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.SmileySoulRead2");
+        public override string SynchingDialogue3 => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.SmileySoulRead3");
+
+        public override string SynchingEndDialogue => Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.SmileySoulReadDone");
+    }
 }

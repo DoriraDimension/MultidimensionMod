@@ -197,7 +197,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
 			int ad = NPC.FindFirstNPC(ModContent.NPCType<Admin>());
             int dapper = NPC.FindFirstNPC(ModContent.NPCType<MushroomHeir>());
-
+            Main.npcChatCornerItem = 0;
             if (Main.LocalPlayer.HasItem(ModContent.ItemType<Pink>()))
             {
                 chat.Add(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Taraha.LollipopDialogue"));
