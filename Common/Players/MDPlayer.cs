@@ -143,6 +143,12 @@ namespace MultidimensionMod.Common.Players
         private bool WasTorchGodActive;
         private bool awaitingTorchGodReward;
         private int torchGodRewardCheckTimer;
+        public bool HellfireAdd = false;
+        public float HellfireHeat;
+        public float HellfireHeatMax = 5f;
+        public bool WasRocketFlying = false;
+        public bool FairyAdd = false;
+        public bool WasFastRunning = false;
 
         public override void ResetEffects()
         {
@@ -200,6 +206,8 @@ namespace MultidimensionMod.Common.Players
             BerryReflection = false;
             GPepperSpeed = false;
             CrystalBoost = false;
+            HellfireAdd = false;
+            FairyAdd = false;
         }
         public override void UpdateDead()
         {
@@ -534,6 +542,10 @@ namespace MultidimensionMod.Common.Players
                     MagicHitCooldown = 0;
                 }
             }
+            if (FairyAdd)
+            {
+                WasFastRunning = Math.Abs(Player.velocity.X) >= Player.accRunSpeed * 1.8f;
+            }
         }
 
         public override void PostUpdate()
@@ -571,10 +583,7 @@ namespace MultidimensionMod.Common.Players
                     }
                 }
             }
-            if (Player.happyFunTorchTime && !WasTorchGodActive)
-            {
-
-            }
+            //Drop Torch God soul when receiving Torch God's Blessing
             if (!Player.happyFunTorchTime && WasTorchGodActive)
             {
                 awaitingTorchGodReward = true;
@@ -598,6 +607,32 @@ namespace MultidimensionMod.Common.Players
                         awaitingTorchGodReward = false;
                     }
                 }
+            }
+            if (HellfireAdd)
+            {
+                //Hellfire Treads build up heat as you run
+                if (Math.Abs(player.velocity.X) >= player.accRunSpeed)
+                {
+                    HellfireHeat += 0.050f;
+                }
+                //Cap heat so you can't burn yourself alive in the hubris of your own making
+                if (HellfireHeat >= 5f && !Main.zenithWorld)
+                {
+                    HellfireHeat = 5f;
+                }
+                //Add burning debuff for 3 seconds continuously until the player expends heat. Only works in zenith worlds where the cap doesn't exist.
+                else if (HellfireHeat > 5f)
+                {
+                    player.AddBuff(BuffID.Burning, 180);
+                }
+                //Expend all built up heat for an upwards boost
+                bool rocketFlying = player.rocketFrame;
+                if (HellfireAdd && rocketFlying && !WasRocketFlying)
+                {
+                    player.velocity.Y -= HellfireHeat * 2f;
+                    HellfireHeat = 0f;
+                }
+                WasRocketFlying = rocketFlying;
             }
         }
 
@@ -1082,6 +1117,15 @@ namespace MultidimensionMod.Common.Players
                     }
                     DrakeMeadTicker = 0f;
                 }
+            }
+        }
+
+        public override void OnExtraJumpStarted(ExtraJump jump, ref bool playSound)
+        {
+            Main.NewText($"FairyAdd: {FairyAdd} | WasFastRunning: {WasFastRunning}");
+            if (FairyAdd && WasFastRunning)
+            {
+                Projectile.NewProjectile(Player.GetSource_FromThis(), Player.Center, new Vector2(0, 3), ModContent.ProjectileType<FairyDustCloud>(), 0, 0f, Player.whoAmI);
             }
         }
 

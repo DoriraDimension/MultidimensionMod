@@ -43,7 +43,7 @@ namespace MultidimensionMod.Projectiles.Magic
             for (int e = 0; e < Main.maxNPCs; e++)
             {
                 NPC npc = Main.npc[e];
-                if (rectangle.Intersects(npc.Hitbox))
+                if (rectangle.Intersects(npc.Hitbox) && !npc.friendly)
                 {
                     npc.AddBuff(BuffID.Frostburn, 360);
                 }

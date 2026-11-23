@@ -128,6 +128,17 @@ WindowTitles: {
 VanillaTooltipEdits: {
 	DraxDenseBlockTip: Capable of mining Dense Volcanic Rock and Dense Biomatter
 	PicksawChaosCaveTip: Capable of mining Lihzahrd Bricks, Volcanic Rock and Dank Depthstone
+	HellfireTreadsTip:
+		'''
+		Running super fast generates heat within you
+		Going into a rocket flight will expend heat to boost upwards momentum
+		The boost scales with how much heat was generated
+		'''
+	FairyBootsTip:
+		'''
+		Running super fast into a double jump shoots fairy dust downwards
+		Fairy dust inflicts Sparkly Lungs, dealing damage over time
+		'''
 	BlinkrootTip:
 		'''
 		A cave dwelling plant that glows gently in the darkness

@@ -310,3 +310,8 @@ CrystalCrunchBuff: {
 	DisplayName: Crystal Boost
 	Description: Crystal weapons are stronger
 }
+
+SparklyLungs: {
+	DisplayName: Sparkly Lungs
+	Description: Mods.MultidimensionMod.Buffs.SparklyLungs.Description
+}

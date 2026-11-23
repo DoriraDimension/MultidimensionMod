@@ -200,6 +200,27 @@ namespace MultidimensionMod.Common.Globals.Items
             }
         }
 
+        public override void UpdateAccessory(Item item, Player player, bool hideVisual)
+        {
+            if (item.type == ItemID.HellfireTreads)
+            {
+                player.GetModPlayer<MDPlayer>().HellfireAdd = true;
+            }
+            if (item.type == ItemID.FairyBoots)
+            {
+                player.GetModPlayer<MDPlayer>().FairyAdd = true;
+            }
+        }
+
+        public override void UpdateVanity(Item item, Player player)
+        {
+            if (item.type == ItemID.FlowerBoots || item.type == ItemID.FairyBoots)
+            {
+                player.flowerBoots = true;
+                player.DoBootsEffect(player.DoBootsEffect_PlaceFlowersOnTile);
+            }     
+        }
+
         public override void ModifyItemLoot(Item item, ItemLoot itemLoot)
         {
             //Adds Awakened Light herbs to the Herb Bag loot pool
@@ -290,6 +311,24 @@ namespace MultidimensionMod.Common.Globals.Items
             {
                 tooltips.RemoveAll(TooltipLine => TooltipLine.Name.Equals("Tooltip0"));
                 TooltipLine line = new(Mod, "PicksawTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.PicksawChaosCaveTip"))
+                {
+                    OverrideColor = Color.White
+                };
+                tooltips.Add(line);
+            }
+            if (item.type == ItemID.HellfireTreads) //Add tooltip that mentions its newly added effect
+            {
+                tooltips.RemoveAll(TooltipLine => TooltipLine.Name.Equals("Tooltip0"));
+                TooltipLine line = new(Mod, "HellfireTreadsTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.HellfireTreadsTip"))
+                {
+                    OverrideColor = Color.White
+                };
+                tooltips.Add(line);
+            }
+            if (item.type == ItemID.FairyBoots) //Add tooltip that mentions its newly added effect
+            {
+                tooltips.RemoveAll(TooltipLine => TooltipLine.Name.Equals("Tooltip0"));
+                TooltipLine line = new(Mod, "FairyBootsTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.FairyBootsTip"))
                 {
                     OverrideColor = Color.White
                 };

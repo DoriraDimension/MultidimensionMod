@@ -52,6 +52,7 @@ namespace MultidimensionMod
         public bool IlluminatedBuff;
         public int DebuffTimer;
         private readonly Dictionary<int, int> DebuffOwner = new();
+        public bool SparkleLungs;
 
         public override void ResetEffects(NPC npc)
 		{
@@ -66,7 +67,9 @@ namespace MultidimensionMod
 			MadnessEmpower = false;
             TidalPull = false;
             IlluminatedBuff = false;
-		}
+            SparkleLungs = false;
+
+        }
 
 		public int AccursedTimer = 0;
 
@@ -167,6 +170,14 @@ namespace MultidimensionMod
                 }
                 npc.lifeRegen -= 30;
                 damage = 5;
+            }
+            if (SparkleLungs)
+            {
+                if (npc.lifeRegen > 0)
+                {
+                    npc.lifeRegen = 0;
+                }
+                npc.lifeRegen -= 15;
             }
             if (DebuffTimer > 0)
             {
