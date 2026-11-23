@@ -18,6 +18,7 @@ namespace MultidimensionMod.NPCs.Critters
     {
         public override void SetStaticDefaults()
         {
+            ContentSamples.NpcBestiaryRarityStars[Type] = 3;
             NPCID.Sets.CountsAsCritter[Type] = true;
             NPCID.Sets.DontDoHardmodeScaling[Type] = true;
             NPCID.Sets.TakesDamageFromHostilesWithoutBeingFriendly[Type] = true;

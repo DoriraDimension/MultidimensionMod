@@ -134,6 +134,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
 
 		public override void SetStaticDefaults()
 		{
+            ContentSamples.NpcBestiaryRarityStars[Type] = 3;
             Main.npcFrameCount[NPC.type] = 9;
             NPCID.Sets.NoTownNPCHappiness[Type] = true;
             var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers()

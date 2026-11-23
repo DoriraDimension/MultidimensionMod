@@ -22,6 +22,7 @@ namespace MultidimensionMod.NPCs.Madness
         int AmbushTimer = 0;
         public override void SetStaticDefaults()
         {
+            ContentSamples.NpcBestiaryRarityStars[Type] = 3;
             Main.npcFrameCount[NPC.type] = 8;
         }
         public override void SetDefaults()

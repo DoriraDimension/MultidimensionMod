@@ -17,6 +17,7 @@ namespace MultidimensionMod.NPCs.Friendly
     {
         public override void SetStaticDefaults()
         {
+            ContentSamples.NpcBestiaryRarityStars[Type] = 3;
             Main.npcFrameCount[NPC.type] = 2;
             var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {

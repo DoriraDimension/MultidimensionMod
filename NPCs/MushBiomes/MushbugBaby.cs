@@ -14,6 +14,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
     {
         public override void SetStaticDefaults()
         {
+            ContentSamples.NpcBestiaryRarityStars[Type] = 1;
             Main.npcFrameCount[Type] = 4;
             NPCID.Sets.CountsAsCritter[Type] = true;
             NPCID.Sets.DontDoHardmodeScaling[Type] = true;
@@ -91,6 +92,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
     {
         public override void SetStaticDefaults()
         {
+            ContentSamples.NpcBestiaryRarityStars[Type] = 5;
             Main.npcFrameCount[Type] = 4;
             NPCID.Sets.CountsAsCritter[Type] = true;
             NPCID.Sets.DontDoHardmodeScaling[Type] = true;
@@ -119,10 +121,10 @@ namespace MultidimensionMod.NPCs.MushBiomes
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
-            /*bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.MyceliLarva")
-            });*/
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.GoldMyceliLarva")
+            });
         }
 
         public override void AI()

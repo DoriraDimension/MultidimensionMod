@@ -22,8 +22,10 @@ namespace MultidimensionMod.NPCs.MushBiomes
 {
     public class Puffer : ModNPC
     {
+        public bool HasGivenTruffle = false;
         public override void SetStaticDefaults()
         {
+            ContentSamples.NpcBestiaryRarityStars[Type] = 3;
             Main.npcFrameCount[NPC.type] = 9;
             NPCID.Sets.DontDoHardmodeScaling[Type] = true;
             NPCID.Sets.CantTakeLunchMoney[Type] = true;
@@ -188,8 +190,11 @@ namespace MultidimensionMod.NPCs.MushBiomes
                         Gwah = 0;
                         if (Main.rand.NextBool(10))
                             Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ModContent.ItemType<IntimidatingMushroom>(), 1);
-                        if (Main.rand.NextBool(20))
+                        if (Main.rand.NextBool(20) && !HasGivenTruffle)
+                        {
                             Item.NewItem(new EntitySource_Loot(NPC), NPC.position, NPC.Size, ModContent.ItemType<GourmetTruffle>(), 1);
+                            HasGivenTruffle = true;
+                        }
                         AIState = ActionState.Runaway;
                         NPC.netUpdate = true;
                     }

@@ -41,8 +41,8 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 		{
-			float speedX2 = velocity.X * 1.0f;
-			float speedY2 = velocity.Y * 1.0f;
+			float speedX2 = velocity.X * 1.5f;
+			float speedY2 = velocity.Y * 1.5f;
 			int nah = Projectile.NewProjectile(source, position.X, position.Y, velocity.X, velocity.Y, type, damage, knockback, player.whoAmI);
 			Main.projectile[nah].noDropItem = true;
 
@@ -50,11 +50,11 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
             {
 				float rotation = MathHelper.ToRadians(15);
 
-				position += Vector2.Normalize(velocity) * 45f;
+				Vector2 speed = new Vector2(speedX2, speedY2);
 
 				for (int i = 0; i < 2; i++)
 				{
-					Vector2 perturbedSpeed = velocity.RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (2 - 1))) * .2f;
+					Vector2 perturbedSpeed = speed.RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (2 - 1))) * .2f;
 					Projectile.NewProjectile(source, position, perturbedSpeed, ModContent.ProjectileType<TideArrowProj>(), damage, knockback, player.whoAmI);
 				}
 				return false;

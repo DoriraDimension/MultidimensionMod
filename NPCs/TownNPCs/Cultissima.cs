@@ -36,6 +36,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
         }*/
         public override void SetStaticDefaults()
         {
+            ContentSamples.NpcBestiaryRarityStars[Type] = 3;
             Main.npcFrameCount[NPC.type] = 1;
             NPCID.Sets.ExtraFramesCount[NPC.type] = 0;
             NPCID.Sets.AttackFrameCount[NPC.type] = 0;

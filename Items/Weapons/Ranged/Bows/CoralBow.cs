@@ -40,9 +40,9 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Bows
         {
 			if (Shots == 4)
             {
-				float speedX2 = velocity.X * 0.5f;
-				float speedY2 = velocity.Y * 0.5f;
-				Projectile.NewProjectile(source, position.X, position.Y, speedX2, speedY2, ModContent.ProjectileType<TideArrowProj>(), (int)((double)damage * 0.5), knockback, player.whoAmI);
+				float speedX2 = velocity.X * 1.2f;
+				float speedY2 = velocity.Y * 1.2f;
+				Projectile.NewProjectile(source, position.X, position.Y, speedX2, speedY2, ModContent.ProjectileType<CoralArrowProj>(), (int)((double)damage * 1.5), knockback, player.whoAmI);
 			}
 			return true;
 

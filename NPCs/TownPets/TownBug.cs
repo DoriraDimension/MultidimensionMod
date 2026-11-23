@@ -22,6 +22,7 @@ namespace MultidimensionMod.NPCs.TownPets
     {
         public override void SetStaticDefaults()
         {
+            ContentSamples.NpcBestiaryRarityStars[Type] = 3;
             Main.npcFrameCount[Type] = 6;
             NPCID.Sets.ExtraFramesCount[Type] = 0;
             NPCID.Sets.AttackFrameCount[Type] = 0;
@@ -36,7 +37,7 @@ namespace MultidimensionMod.NPCs.TownPets
             NPCID.Sets.DangerDetectRange[Type] = 250;
             NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new()
             {
-                Velocity = 0.25f,
+                Velocity = 1f,
             };
             NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, drawModifiers);
         }

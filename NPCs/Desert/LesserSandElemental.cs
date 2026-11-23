@@ -14,8 +14,9 @@ namespace MultidimensionMod.NPCs.Desert
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Lesser Sand Elemental");
-			Main.npcFrameCount[NPC.type] = 5;
+            ContentSamples.NpcBestiaryRarityStars[Type] = 2;
+            // DisplayName.SetDefault("Lesser Sand Elemental");
+            Main.npcFrameCount[NPC.type] = 5;
 		}
 
 		public override void SetDefaults()

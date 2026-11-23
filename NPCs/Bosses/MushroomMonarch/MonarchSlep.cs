@@ -18,6 +18,8 @@ namespace MultidimensionMod.NPCs.Bosses.MushroomMonarch
         {
             //DisplayName.SetDefault("Very Large Mushroom");
             Main.npcFrameCount[NPC.type] = 15;
+            NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers() { Hide = true };
+            NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
         }
 
         public override void SetDefaults()

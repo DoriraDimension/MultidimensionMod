@@ -10,7 +10,8 @@ namespace MultidimensionMod.NPCs.Corruption
 	{
 		public override void SetStaticDefaults()
 		{
-			Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.Bee];
+            ContentSamples.NpcBestiaryRarityStars[Type] = 2;
+            Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.Bee];
 		}
 
 		public override void SetDefaults()

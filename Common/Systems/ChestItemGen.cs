@@ -11,15 +11,11 @@ using Terraria.UI;
 
 namespace MultidimensionMod.Common.Systems
 {
-    // This class showcases adding additional items to vanilla chests.
-    // This example simply adds additional items. More complex logic would likely be required for other scenarios.
-    // If this code is confusing, please learn about "for loops" and the "continue" and "break" keywords: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/jump-statements
     public class FrozenChestItemGen : ModSystem
     {
         public override void PostWorldGen()
         {
             // Place some additional items in Frozen Chests:
-            // These are the 3 new items we will place.
             int[] itemsToPlaceInFrozenChests = { ModContent.ItemType<VikingBattleaxe>(), ModContent.ItemType<BorealGreatbow>(), ModContent.ItemType<VikingPolearm>() };
             // This variable will help cycle through the items so that different Frozen Chests get different items
             int itemsToPlaceInFrozenChestsChoice = 0;
@@ -80,8 +76,9 @@ namespace MultidimensionMod.Common.Systems
         public override void PostWorldGen()
         {
             int itemsPlaced = 0;
+            int scarsPlaced = 0;
             int maxItems = 4;
-            bool flamescarPlaced = false;
+            int maxScars = 3;
             // Loop over all the chests
             for (int chestIndex = 0; chestIndex < Main.maxChests; chestIndex++)
             {
@@ -91,16 +88,12 @@ namespace MultidimensionMod.Common.Systems
                     continue;
                 }
                 Tile chestTile = Main.tile[chest.x, chest.y];
-                // We need to check if the current chest is the Frozen Chest. We need to check that it exists and has the TileType and TileFrameX values corresponding to the Frozen Chest.
-                // If you look at the sprite for Chests by extracting Tiles_21.xnb, you'll see that the 12th chest is the Frozen Chest. Since we are counting from 0, this is where 11 comes from. 36 comes from the width of each tile including padding. An alternate approach is to check the wiki and looking for the "Internal Tile ID" section in the infobox: https://terraria.wiki.gg/wiki/Frozen_Chest
                 if (chestTile.TileType == TileID.Containers2 && chestTile.TileFrameX == 10 * 36)
                 {
-                    // Next we need to find the first empty slot for our item
                     for (int inventoryIndex = 0; inventoryIndex < Chest.maxItems; inventoryIndex++)
                     {
                         if (chest.item[inventoryIndex].type == ItemID.None)
                         {
-                            // Place the item
                             chest.item[inventoryIndex].SetDefaults(ModContent.ItemType<BrokenAncientDepictionItem>());
                             itemsPlaced++;
                             break;
@@ -123,18 +116,19 @@ namespace MultidimensionMod.Common.Systems
                 Tile chestTile = Main.tile[chest.x, chest.y];
                 if (chestTile.TileType == TileID.Containers2 && chestTile.TileFrameX == 10 * 36)
                 {
-                    // Next we need to find the first empty slot for our item
                     for (int inventoryIndex = 0; inventoryIndex < Chest.maxItems; inventoryIndex++)
                     {
                         if (chest.item[inventoryIndex].type == ItemID.None)
                         {
-                            if (!flamescarPlaced)
-                            {
-                                chest.item[inventoryIndex].SetDefaults(ModContent.ItemType<AwakenedArchbird>());
-                                flamescarPlaced = true;
-                            }
+                            chest.item[inventoryIndex].SetDefaults(ModContent.ItemType<AwakenedArchbird>());
+                            scarsPlaced++;
+                            break;
                         }
                     }
+                }
+                if (scarsPlaced >= maxScars)
+                {
+                    break;
                 }
             }
         }

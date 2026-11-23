@@ -227,6 +227,7 @@ namespace MultidimensionMod.Common.Players
                 //Check if the player has mana sickness from consuming a mana potion and Indigo Injection is not currently on cooldown
                 if (Player.manaSick && Player.whoAmI == Main.myPlayer && !Player.HasBuff(ModContent.BuffType<InjectionCooldown>()))
                 {
+                    SoundEngine.PlaySound(new("MultidimensionMod/Sounds/Custom/StemActivate"));
                     //Inflict Indigo Injection and start cooldown timer
                     Player.AddBuff(ModContent.BuffType<IndigoInjection>(), 360);
                     Player.AddBuff(ModContent.BuffType<InjectionCooldown>(), 12360);

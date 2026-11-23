@@ -16,7 +16,8 @@ namespace MultidimensionMod.NPCs.MushBiomes
 	{
 		public override void SetStaticDefaults()
 		{
-			//DisplayName.SetDefault("Mushroom Jelly");
+            ContentSamples.NpcBestiaryRarityStars[Type] = 3;
+            //DisplayName.SetDefault("Mushroom Jelly");
             Main.npcFrameCount[NPC.type] = 11;
 		}
 

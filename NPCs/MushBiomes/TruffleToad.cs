@@ -22,6 +22,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
         {
             //DisplayName.SetDefault("Truffle Toad");
             Main.npcFrameCount[NPC.type] = 16;
+            ContentSamples.NpcBestiaryRarityStars[Type] = 4;
         }
 
         public enum ActionState

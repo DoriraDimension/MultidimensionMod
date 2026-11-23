@@ -14,8 +14,9 @@ namespace MultidimensionMod.NPCs.Critters
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Baby Glowmarin");
-			Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.Shark];
+            ContentSamples.NpcBestiaryRarityStars[Type] = 3;
+            // DisplayName.SetDefault("Baby Glowmarin");
+            Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.Shark];
 			Main.npcCatchable[NPC.type] = true;
             NPCID.Sets.ShimmerTransformToNPC[NPC.type] = NPCID.Shimmerfly;
         }
@@ -100,6 +101,7 @@ namespace MultidimensionMod.NPCs.Critters
     {
         public override void SetStaticDefaults()
         {
+            ContentSamples.NpcBestiaryRarityStars[Type] = 5;
             Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.Shark];
             Main.npcCatchable[NPC.type] = true;
             NPCID.Sets.ShimmerTransformToNPC[NPC.type] = NPCID.Shimmerfly;
@@ -129,11 +131,11 @@ namespace MultidimensionMod.NPCs.Critters
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
-            /*bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
-                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.BabyGlowmarin")
-            });*/
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.GoldBabyGlowmarin")
+            });
         }
 
         public override void AI()

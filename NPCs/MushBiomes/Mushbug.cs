@@ -21,7 +21,8 @@ namespace MultidimensionMod.NPCs.MushBiomes
 	{
 		public override void SetStaticDefaults()
 		{
-			//DisplayName.SetDefault("Mushbug");
+            ContentSamples.NpcBestiaryRarityStars[Type] = 2;
+            //DisplayName.SetDefault("Mushbug");
             Main.npcFrameCount[NPC.type] = 6;
 		}
 

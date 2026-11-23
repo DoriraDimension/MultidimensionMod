@@ -73,7 +73,7 @@ CreationMedaillon: {
 }
 
 DesertNecklace: {
-	DisplayName: Necklace of Rebirth
+	DisplayName: Necklace of the Spirit Sun
 	Tooltip:
 		'''
 		Increases all damage and crit chance by 4% when in the Desert.
@@ -1236,7 +1236,7 @@ SkeletonSoul: {
 }
 
 SmileySoulshard: {
-	DisplayName: Smiley Soulshard
+	DisplayName: Soulecho of Brilliant Darkness
 	Tooltip: The echo of a powerful soul flows through this shard.
 	Lore:
 		'''
@@ -1936,7 +1936,7 @@ BlackDragonBow: {
 
 CoralBow: {
 	DisplayName: Coral Bow
-	Tooltip: Shoots a Tide Arrow every 5th shot
+	Tooltip: Shoots a Coral Arrow every fifth shot that dealsmore damage
 }
 
 DarkshotBow: {
@@ -2694,7 +2694,7 @@ Musharang: {
 	DisplayName: Monarcharang
 	Tooltip:
 		'''
-		Every 4th throw imbues the weapon with your life
+		Every fourth throw imbues the weapon with your life
 		Imbued projectiles deal more damage and are faster
 		'''
 }
@@ -3010,7 +3010,7 @@ RoyalFungarang: {
 	DisplayName: Royal Fungarang
 	Tooltip:
 		'''
-		Every 4th throw imbues the weapon with your life
+		Every fourth throw imbues the weapon with your life
 		Imbued projectiles deal more damage and are faster
 		If you had 100 mana during the throw, 
 		the weapon will be boosted further and you lose that amount of mana

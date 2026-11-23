@@ -31,32 +31,6 @@ namespace MultidimensionMod.Common.Globals.Items
 			anklet.AddTile(TileID.LivingLoom);
 			anklet.Register();
 
-			Recipe blizzard = Recipe.Create(ItemID.BlizzardinaBottle);
-			blizzard.AddIngredient(ItemID.Bottle);
-			blizzard.AddIngredient(ItemID.SnowBlock, 50);
-			blizzard.AddIngredient(ModContent.ItemType<FrostScale>(), 6);
-			blizzard.AddIngredient(ItemID.FlinxFur, 9);
-            //blizzard.AddIngredient(ModContent.ItemType<Abyssium>(), 10);
-            blizzard.AddTile(TileID.Bottles);
-			blizzard.Register();
-
-			Recipe sandstorm = Recipe.Create(ItemID.SandstorminaBottle);
-			sandstorm.AddIngredient(ItemID.Bottle);
-			sandstorm.AddRecipeGroup(RecipeGroupID.Sand, 50);
-			sandstorm.AddIngredient(ModContent.ItemType<ManaInfusedSandstone>(), 6);
-			sandstorm.AddIngredient(ItemID.AntlionMandible, 21);
-            //sandstorm.AddIngredient(ModContent.ItemType<Incinerite>(), 10);
-            sandstorm.AddTile(TileID.Bottles);
-			sandstorm.Register();
-
-			Recipe cloud = Recipe.Create(ItemID.CloudinaBottle);
-			cloud.AddIngredient(ItemID.Bottle);
-			cloud.AddIngredient(ItemID.Cloud, 50);
-			cloud.AddIngredient(ItemID.Feather, 8);
-            cloud.AddRecipeGroup(EvilSample, 5);
-			cloud.AddTile(TileID.Bottles);
-			cloud.Register();
-
 			Recipe climbClaw = Recipe.Create(ItemID.ClimbingClaws); 
 			climbClaw.AddRecipeGroup(RecipeGroupID.IronBar, 10);
 			climbClaw.AddIngredient(ItemID.Spike, 3);

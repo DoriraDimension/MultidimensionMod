@@ -17,6 +17,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
     {
         public override void SetStaticDefaults()
         {
+            ContentSamples.NpcBestiaryRarityStars[Type] = 1;
             NPCID.Sets.CountsAsCritter[Type] = true;
             NPCID.Sets.DontDoHardmodeScaling[Type] = true;
             NPCID.Sets.TakesDamageFromHostilesWithoutBeingFriendly[Type] = true;
@@ -138,6 +139,7 @@ namespace MultidimensionMod.NPCs.MushBiomes
     {
         public override void SetStaticDefaults()
         {
+            ContentSamples.NpcBestiaryRarityStars[Type] = 5;
             NPCID.Sets.CountsAsCritter[Type] = true;
             NPCID.Sets.DontDoHardmodeScaling[Type] = true;
             NPCID.Sets.TakesDamageFromHostilesWithoutBeingFriendly[Type] = true;
@@ -165,10 +167,10 @@ namespace MultidimensionMod.NPCs.MushBiomes
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
-            /*bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Hovercap")
-            });*/
+                new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.GoldHovercap")
+            });
         }
 
         public int RocketTimer = 0;

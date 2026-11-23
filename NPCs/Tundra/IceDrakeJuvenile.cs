@@ -28,7 +28,8 @@ namespace MultidimensionMod.NPCs.Tundra
 
 		public override void SetStaticDefaults()
 		{
-			Main.npcFrameCount[NPC.type] = 14;
+            ContentSamples.NpcBestiaryRarityStars[Type] = 3;
+            Main.npcFrameCount[NPC.type] = 14;
 			NPCID.Sets.ActsLikeTownNPC[Type] = true;
             NPCID.Sets.NoTownNPCHappiness[Type] = true;
         }

@@ -38,7 +38,8 @@ namespace MultidimensionMod.NPCs.TownNPCs
         }*/
         public override void SetStaticDefaults()
 		{
-			Main.npcFrameCount[NPC.type] = 23;
+            ContentSamples.NpcBestiaryRarityStars[Type] = 2;
+            Main.npcFrameCount[NPC.type] = 23;
 			NPCID.Sets.ExtraFramesCount[NPC.type] = 9;
 			NPCID.Sets.AttackFrameCount[NPC.type] = 4;
 			NPCID.Sets.DangerDetectRange[NPC.type] = 700;
@@ -83,7 +84,7 @@ namespace MultidimensionMod.NPCs.TownNPCs
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
                 new FlavorTextBestiaryInfoElement("Mods.MultidimensionMod.Bestiary.Admin")
             });
         }

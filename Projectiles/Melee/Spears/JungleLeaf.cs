@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using System.Linq.Expressions;
 
 namespace MultidimensionMod.Projectiles.Melee.Spears
 {
@@ -22,6 +23,7 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 			Projectile.ignoreWater = true;
 			Projectile.tileCollide = false;
 			Projectile.penetrate = -1;
+			Projectile.timeLeft = 60;
 		}
 
 		public override void OnKill(int timeLeft)
@@ -31,8 +33,8 @@ namespace MultidimensionMod.Projectiles.Melee.Spears
 
 		public override void AI()
 		{
-			if (Projectile.timeLeft > 60)
-				Projectile.timeLeft = 60;
+			if (Projectile.timeLeft < 30)
+				Projectile.alpha += 8;
 
 			Projectile.direction = Projectile.spriteDirection = Projectile.velocity.X > 0f ? 1 : -1;
 			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;

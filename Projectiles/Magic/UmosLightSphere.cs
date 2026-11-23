@@ -37,6 +37,7 @@ namespace MultidimensionMod.Projectiles.Magic
 
         public override void AI()
         {
+            Lighting.AddLight(Projectile.position, 0f, 0.5f, 0.1f);
             Player player = Main.player[Projectile.owner];
             Freeze++;
             if (Freeze >= 20 && Freeze <= 89)

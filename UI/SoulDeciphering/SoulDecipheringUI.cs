@@ -1,12 +1,14 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Terraria;
-using Terraria.GameContent.UI.Elements;
-using Terraria.UI;
-using Terraria.ModLoader;
-using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Common.Systems;
+using MultidimensionMod.Items.Souls;
+using Terraria;
+using Terraria.Audio;
+using Terraria.GameContent.UI.Elements;
+using Terraria.ID;
 using Terraria.Localization;
+using Terraria.ModLoader;
+using Terraria.UI;
 
 namespace MultidimensionMod.UI.SoulDeciphering
 {
@@ -109,7 +111,10 @@ namespace MultidimensionMod.UI.SoulDeciphering
             decipherButton.BorderColor = Color.DarkSeaGreen;
 
             decipherButton.OnLeftClick += DecipherButtonClicked;
-
+            decipherButton.OnMouseOver += (evt, listeningElement) =>
+            {
+                SoundEngine.PlaySound(SoundID.MenuTick);
+            };
             mainPanel.Append(decipherButton);
 
             //Button to close UI
@@ -123,7 +128,10 @@ namespace MultidimensionMod.UI.SoulDeciphering
             closeButton.BackgroundColor = Color.SeaGreen;
             closeButton.BorderColor = Color.DarkSeaGreen;
             closeButton.OnLeftClick += CloseButtonClicked;
-
+            closeButton.OnMouseOver += (evt, listeningElement) =>
+            {
+                SoundEngine.PlaySound(SoundID.MenuTick);
+            };
             mainPanel.Append(closeButton);
         }
 
@@ -185,8 +193,9 @@ namespace MultidimensionMod.UI.SoulDeciphering
             // Finish Synch
             if (soul.SynchProgress >= soul.SynchDuration)
             {
-                soul.SynchProgress =
-                    soul.SynchDuration;
+                //SoundEngine.PlaySound(new SoundStyle("MultidimensionMod/Sounds/Custom/SynchFinish"));
+                SoundEngine.PlaySound(SoundID.ResearchComplete);
+                soul.SynchProgress = soul.SynchDuration;
                 portrait.PlayFinishing();
                 soul.Synched = true;
 
@@ -232,11 +241,22 @@ namespace MultidimensionMod.UI.SoulDeciphering
             if (dialogue.Length > 0)
             {
                 dialogueText.SetText(dialogue);
+                PlayDialogueSound();
             }
+        }
+
+        private void PlayDialogueSound()
+        {
+            //int sound = Main.rand.Next(1, 4);
+
+            //SoundEngine.PlaySound(new SoundStyle($"MultidimensionMod/Sounds/Custom/Hm{sound}"));
+            SoundEngine.PlaySound(SoundID.Item108);
         }
 
         private void DecipherButtonClicked(UIMouseEvent evt, UIElement listeningElement)
         {
+            //SoundEngine.PlaySound(new SoundStyle("MultidimensionMod/Sounds/Custom/SynchStart"));
+            SoundEngine.PlaySound(SoundID.DoubleJump);
             currentDialogueStage = -1;
             SoulItem soul = soulSlot.Soul;
 
@@ -259,7 +279,7 @@ namespace MultidimensionMod.UI.SoulDeciphering
         public void BeginSession()
         {
             studyAnimationStarted = false;
-
+            SoundEngine.PlaySound(SoundID.MenuOpen);
             portrait.PlayTalking();
         }
 

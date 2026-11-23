@@ -19,7 +19,8 @@ namespace MultidimensionMod.NPCs.Madness
 	{
 		public override void SetStaticDefaults()
 		{
-			Main.npcFrameCount[NPC.type] = 7;
+            ContentSamples.NpcBestiaryRarityStars[Type] = 2;
+            Main.npcFrameCount[NPC.type] = 7;
 		}
 
 		public override void SetDefaults()

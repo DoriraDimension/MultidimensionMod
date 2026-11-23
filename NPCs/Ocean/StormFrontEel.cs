@@ -17,7 +17,8 @@ namespace MultidimensionMod.NPCs.Ocean
 	{
 		public override void SetStaticDefaults()
 		{
-			Main.npcFrameCount[NPC.type] = 5;
+            ContentSamples.NpcBestiaryRarityStars[Type] = 4;
+            Main.npcFrameCount[NPC.type] = 5;
 		}
 
 		public override void SetDefaults()

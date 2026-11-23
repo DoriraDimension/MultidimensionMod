@@ -19,7 +19,8 @@ namespace MultidimensionMod.NPCs.Corruption
 	{
 		public override void SetStaticDefaults()
 		{
-			Main.npcFrameCount[NPC.type] = 8;
+            ContentSamples.NpcBestiaryRarityStars[Type] = 3;
+            Main.npcFrameCount[NPC.type] = 8;
 		}
 
         public enum ActionState
