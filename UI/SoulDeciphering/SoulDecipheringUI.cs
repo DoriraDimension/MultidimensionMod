@@ -156,7 +156,7 @@ namespace MultidimensionMod.UI.SoulDeciphering
                 return;
             }
 
-            // Already Synched
+            //Already Synched
             if (soul.Synched)
             {
                 dialogueText.SetText(soul.SynchingEndDialogue);
@@ -166,18 +166,25 @@ namespace MultidimensionMod.UI.SoulDeciphering
                 return;
             }
 
-            // Not currently Synch
+            //Not currently Synching
             if (soul.SynchProgress <= 0)
             {
                 studyAnimationStarted = false;
                 portrait.PlayIdle();
 
-                dialogueText.SetText(soul.InsertDialogue);
-                progressText.SetText(Language.GetTextValue("Mods.MultidimensionMod.MiscText.SynchStart"));
-                return;
+                if (soul.RequiresHardmodeToDecipher && !Main.hardMode)
+                {
+                    dialogueText.SetText(Language.GetTextValue("Mods.MultidimensionMod.NPCs.Dialogue.Cultissima.TorchSoulCannot"));
+                }
+                else
+                {
+                    dialogueText.SetText(soul.InsertDialogue);
+                    progressText.SetText(Language.GetTextValue("Mods.MultidimensionMod.MiscText.SynchStart"));
+                }
+                    return;
             }
 
-            // Currently Synch
+            //Currently Synching
             if (!studyAnimationStarted)
             {
                 portrait.PlayStudying();
@@ -256,11 +263,14 @@ namespace MultidimensionMod.UI.SoulDeciphering
         private void DecipherButtonClicked(UIMouseEvent evt, UIElement listeningElement)
         {
             //SoundEngine.PlaySound(new SoundStyle("MultidimensionMod/Sounds/Custom/SynchStart"));
+            SoulItem soul = soulSlot.Soul;
             SoundEngine.PlaySound(SoundID.DoubleJump);
             currentDialogueStage = -1;
-            SoulItem soul = soulSlot.Soul;
 
             if (soul == null)
+                return;
+
+            if (soul.RequiresHardmodeToDecipher && !Main.hardMode)
                 return;
 
             if (soul.Synched)

@@ -4999,7 +4999,8 @@ WhiteMeatImmunizing: {
 
 TorchSoul: {
 	DisplayName: Soulecho of the Torch God
-	Tooltip: Places torches without being consumed
+	Tooltip: ""
+	TooltipE: Places torches without being consumed
 	Lore:
 		'''
 		Holy shite mate, torching around town in our specil-

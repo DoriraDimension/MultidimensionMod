@@ -436,6 +436,7 @@ Dialogue: {
 		TorchSoulRead2: Wow, there is so much god damn fire in there.
 		TorchSoulRead3: My eyes are burning it's so bright.
 		TorchSoulReadDone: As previously observed, this deity is specificly tuned to keep torches aflame. You can now use its power to generate infinite torches.
+		TorchSoulCannot: I'm sorry but this one won't let me look inside. Maybe it wants you to do something first?
 	}
 
 	VanillaNPCDialogue: {

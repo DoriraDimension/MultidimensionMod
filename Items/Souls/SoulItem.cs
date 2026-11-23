@@ -17,6 +17,7 @@ namespace MultidimensionMod.Items.Souls
         public bool Synched = false;
         public int SynchProgress;
         public int SynchDuration = 1800;
+        public virtual bool RequiresHardmodeToDecipher => false;
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;

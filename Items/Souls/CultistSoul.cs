@@ -44,7 +44,7 @@ namespace MultidimensionMod.Items.Souls
         {
             if (Synched)
             {
-                if (Common.Systems.MemorySystem.summonedMoonSword)
+                if (MemorySystem.summonedMoonSword)
                 {
                     TooltipLine line = new(Mod, "TTWithSword", Language.GetTextValue("Mods.MultidimensionMod.Items.CultistSoul.TTWithSword"))
                     {
@@ -52,7 +52,7 @@ namespace MultidimensionMod.Items.Souls
                     };
                     tooltips.Add(line);
                 }
-                else if (!Common.Systems.MemorySystem.summonedMoonSword)
+                else if (!MemorySystem.summonedMoonSword)
                 {
                     TooltipLine line = new(Mod, "TTNoSword", Language.GetTextValue("Mods.MultidimensionMod.Items.CultistSoul.TTNoSword"))
                     {

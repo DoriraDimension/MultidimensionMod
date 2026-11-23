@@ -18,6 +18,7 @@ using MultidimensionMod.Items.Fishing;
 using MultidimensionMod.Items.Fishing.Crates;
 using MultidimensionMod.Items.Permabuffs;
 using MultidimensionMod.Items.Placeables;
+using MultidimensionMod.Items.Souls;
 using MultidimensionMod.Projectiles;
 using MultidimensionMod.Projectiles.Magic;
 using MultidimensionMod.Projectiles.Summon.Minions;
@@ -139,6 +140,9 @@ namespace MultidimensionMod.Common.Players
         public bool BerryReflection = false;
         public bool GPepperSpeed = false;
         public bool CrystalBoost = false;
+        private bool WasTorchGodActive;
+        private bool awaitingTorchGodReward;
+        private int torchGodRewardCheckTimer;
 
         public override void ResetEffects()
         {
@@ -564,6 +568,34 @@ namespace MultidimensionMod.Common.Players
 
                             Projectile.NewProjectile(player.GetSource_FromThis(), spawnPosition, Vector2.Zero, ModContent.ProjectileType<DimensionalRift>(), 0, 0f, player.whoAmI);
                         }
+                    }
+                }
+            }
+            if (Player.happyFunTorchTime && !WasTorchGodActive)
+            {
+
+            }
+            if (!Player.happyFunTorchTime && WasTorchGodActive)
+            {
+                awaitingTorchGodReward = true;
+                torchGodRewardCheckTimer = 600;
+            }
+            WasTorchGodActive = Player.happyFunTorchTime;
+            if (awaitingTorchGodReward)
+            {
+                if (player.HasItem(ItemID.TorchGodsFavor))
+                {
+                    awaitingTorchGodReward = false;
+                    Main.NewText("Torch God completed!");
+                    Player.QuickSpawnItem(Player.GetSource_FromThis(), ModContent.ItemType<TorchSoul>(), 1);
+                }
+                else
+                {
+                    torchGodRewardCheckTimer--;
+
+                    if (torchGodRewardCheckTimer <= 0)
+                    {
+                        awaitingTorchGodReward = false;
                     }
                 }
             }

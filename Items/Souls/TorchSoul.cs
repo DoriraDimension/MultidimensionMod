@@ -26,12 +26,20 @@ namespace MultidimensionMod.Items.Souls
             Item.rare = ItemRarityID.Master;
             Item.DefaultToTorch(TileID.Torches, 0, false);
             Item.consumable = false;
+            Item.maxStack = 1;
         }
+
+        public override bool RequiresHardmodeToDecipher => true;
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
             if (Synched)
             {
+                TooltipLine lineE = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.TorchSoul.TooltipE"))
+                {
+                    OverrideColor = Color.LightGray
+                };
+                tooltips.Add(lineE);
                 if (Main.keyState.PressingShift())
                 {
                     TooltipLine line = new(Mod, "Lore", Language.GetTextValue("Mods.MultidimensionMod.Items.TorchSoul.Lore"))
