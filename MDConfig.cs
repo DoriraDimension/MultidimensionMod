@@ -27,6 +27,18 @@ namespace MultidimensionMod
         [DefaultValue(true)]
         public bool NPCItemSelling { get; set; }
 
+        [DefaultValue(true)]
+        [ReloadRequired]
+        public bool ReTierHandgun { get; set; }
+
+        [DefaultValue(true)]
+        [ReloadRequired]
+        public bool BootAccessoryAdditions { get; set; }
+
+        [DefaultValue(true)]
+        [ReloadRequired]
+        public bool NewItemRecipes { get; set; }
+
 
     }
 }

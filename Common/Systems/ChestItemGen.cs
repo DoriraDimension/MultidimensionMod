@@ -1,11 +1,12 @@
 ﻿using MultidimensionMod.Items.Materials;
-using MultidimensionMod.Items.Weapons.Ranged.Bows;
-using MultidimensionMod.Items.Weapons.Melee.Spears;
-using MultidimensionMod.Items.Tools;
 using MultidimensionMod.Items.Placeables;
+using MultidimensionMod.Items.Tools;
+using MultidimensionMod.Items.Weapons.Melee.Spears;
 using MultidimensionMod.Items.Weapons.Melee.Swords;
-using Terraria.ID;
+using MultidimensionMod.Items.Weapons.Ranged.Bows;
+using MultidimensionMod.Items.Weapons.Ranged.Guns;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.UI;
 
@@ -129,6 +130,38 @@ namespace MultidimensionMod.Common.Systems
                 if (scarsPlaced >= maxScars)
                 {
                     break;
+                }
+            }
+        }
+    }
+
+    public class ReplaceHandgunWithBoneShottie : ModSystem
+    {
+
+        public override void PostWorldGen()
+        {
+            if (ModContent.GetInstance<MDConfig>().ReTierHandgun)
+            {
+                for (int i = 0; i < Main.maxChests; i++)
+                {
+
+                    Chest chest = Main.chest[i];
+                    if (chest == null)
+                        continue;
+
+                    Tile chestTile = Main.tile[chest.x, chest.y];
+
+                    if (chestTile.TileType == TileID.Containers && chestTile.TileFrameX == 2 * 36)
+                    {
+
+                        for (int j = 0; j < Chest.maxItems; j++)
+                        {
+                            if (chest.item[j].type == ItemID.Handgun)
+                            {
+                                chest.item[j].SetDefaults(ModContent.ItemType<BoneShottie>());
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -1,11 +1,13 @@
-﻿using Terraria;
-using Microsoft.Xna.Framework;
-using Terraria.ID;
-using Terraria.DataStructures;
-using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
-using Terraria.Audio;
+﻿using Microsoft.Xna.Framework;
 using MultidimensionMod.Projectiles.Ranged;
+using MultidimensionMod.Tiles;
+using Terraria;
+using Terraria.Audio;
+using Terraria.DataStructures;
+using Terraria.GameContent.Creative;
+using Terraria.ID;
+using Terraria.Localization;
+using Terraria.ModLoader;
 
 namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 {
@@ -51,5 +53,14 @@ namespace MultidimensionMod.Items.Weapons.Ranged.Guns
 			}
 			return false;
 		}
-	}
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddIngredient(ItemID.Bone, 25)
+            .AddCondition(Language.GetOrRegister("Mods.MultidimensionMod.MiscText.NoHandgunReTier"), () => !ModContent.GetInstance<MDConfig>().ReTierHandgun)
+            .AddTile(TileID.Anvils)
+            .Register();
+        }
+    }
 }

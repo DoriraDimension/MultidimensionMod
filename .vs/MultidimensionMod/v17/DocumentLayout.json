@@ -3,36 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\typeless\\fairydustcloud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\typeless\\fairydustcloud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:localization\\en-us.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\magic\\freezeaura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\magic\\freezeaura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\globals\\items\\recipes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\globals\\items\\recipes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\globals\\npcs\\mdglobalnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\globals\\npcs\\mdglobalnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\players\\mdplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\players\\mdplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\buffs\\debuffs\\sparklylungs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:buffs\\debuffs\\sparklylungs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\buffs\\debuffs\\blazingsuffering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:buffs\\debuffs\\blazingsuffering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\projectiles\\typeless\\impacttreadsimpact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:projectiles\\typeless\\impacttreadsimpact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\mdconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:mdconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\globals\\items\\mdglobalitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\globals\\items\\mdglobalitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\globals\\npcs\\mdglobaltownnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\globals\\npcs\\mdglobaltownnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\common\\systems\\chestitemgen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:common\\systems\\chestitemgen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us_mods.multidimensionmod.misctext.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -41,9 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us_mods.multidimensionmod.items.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|solutionrelative:localization\\en-us_mods.multidimensionmod.items.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\theha\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Items\\Accessories\\ExampleBoots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC94074-D639-4A0E-811D-32B04CD4B629}|MultidimensionMod.csproj|c:\\users\\theha\\documents\\my games\\terraria\\tmodloader\\modsources\\multidimensionmod\\localization\\en-us_mods.multidimensionmod.npcs.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -61,141 +50,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MDGlobalNPC.cs",
-              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\NPCs\\MDGlobalNPC.cs",
-              "RelativeDocumentMoniker": "Common\\Globals\\NPCs\\MDGlobalNPC.cs",
-              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\NPCs\\MDGlobalNPC.cs",
-              "RelativeToolTip": "Common\\Globals\\NPCs\\MDGlobalNPC.cs",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAlwLMAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Recipes.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\Items\\Recipes.cs",
+              "RelativeDocumentMoniker": "Common\\Globals\\Items\\Recipes.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\Items\\Recipes.cs",
+              "RelativeToolTip": "Common\\Globals\\Items\\Recipes.cs",
+              "ViewState": "AgIAADECAAAAAAAAAAAcwLUEAABxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T22:47:12.432Z",
+              "WhenOpened": "2026-11-24T15:32:10.566Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "SparklyLungs.cs",
-              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Debuffs\\SparklyLungs.cs",
-              "RelativeDocumentMoniker": "Buffs\\Debuffs\\SparklyLungs.cs",
-              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Debuffs\\SparklyLungs.cs",
-              "RelativeToolTip": "Buffs\\Debuffs\\SparklyLungs.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "MDGlobalTownNPC.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\NPCs\\MDGlobalTownNPC.cs",
+              "RelativeDocumentMoniker": "Common\\Globals\\NPCs\\MDGlobalTownNPC.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\NPCs\\MDGlobalTownNPC.cs",
+              "RelativeToolTip": "Common\\Globals\\NPCs\\MDGlobalTownNPC.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAApwCEAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T22:47:09.334Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BlazingSuffering.cs",
-              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Debuffs\\BlazingSuffering.cs",
-              "RelativeDocumentMoniker": "Buffs\\Debuffs\\BlazingSuffering.cs",
-              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Buffs\\Debuffs\\BlazingSuffering.cs",
-              "RelativeToolTip": "Buffs\\Debuffs\\BlazingSuffering.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T22:46:06.031Z",
+              "WhenOpened": "2026-11-24T15:31:16.057Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FairyDustCloud.cs",
-              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Typeless\\FairyDustCloud.cs",
-              "RelativeDocumentMoniker": "Projectiles\\Typeless\\FairyDustCloud.cs",
-              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Typeless\\FairyDustCloud.cs",
-              "RelativeToolTip": "Projectiles\\Typeless\\FairyDustCloud.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAwwCoAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T22:38:31.2Z",
+              "Title": "en-US.hjson",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US.hjson",
+              "RelativeDocumentMoniker": "Localization\\en-US.hjson",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US.hjson",
+              "RelativeToolTip": "Localization\\en-US.hjson",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAAKQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-11-24T15:22:15.305Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FreezeAura.cs",
-              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Magic\\FreezeAura.cs",
-              "RelativeDocumentMoniker": "Projectiles\\Magic\\FreezeAura.cs",
-              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Magic\\FreezeAura.cs",
-              "RelativeToolTip": "Projectiles\\Magic\\FreezeAura.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAwwC0AAAA0AAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ChestItemGen.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Systems\\ChestItemGen.cs",
+              "RelativeDocumentMoniker": "Common\\Systems\\ChestItemGen.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Systems\\ChestItemGen.cs",
+              "RelativeToolTip": "Common\\Systems\\ChestItemGen.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAAwKQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T22:37:09.662Z",
+              "WhenOpened": "2026-11-24T15:18:05.381Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ImpactTreadsImpact.cs",
-              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Typeless\\ImpactTreadsImpact.cs",
-              "RelativeDocumentMoniker": "Projectiles\\Typeless\\ImpactTreadsImpact.cs",
-              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Projectiles\\Typeless\\ImpactTreadsImpact.cs",
-              "RelativeToolTip": "Projectiles\\Typeless\\ImpactTreadsImpact.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "MDConfig.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MDConfig.cs",
+              "RelativeDocumentMoniker": "MDConfig.cs",
+              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\MDConfig.cs",
+              "RelativeToolTip": "MDConfig.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAwwCcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T22:36:19.875Z",
+              "WhenOpened": "2026-11-24T15:09:45.356Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MDPlayer.cs",
-              "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Players\\MDPlayer.cs",
-              "RelativeDocumentMoniker": "Common\\Players\\MDPlayer.cs",
-              "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Players\\MDPlayer.cs",
-              "RelativeToolTip": "Common\\Players\\MDPlayer.cs",
-              "ViewState": "AgIAABoBAAAAAAAAAAAMwCICAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T20:33:37.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ExampleBoots.cs",
-              "DocumentMoniker": "C:\\Users\\theha\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Items\\Accessories\\ExampleBoots.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Items\\Accessories\\ExampleBoots.cs",
-              "ToolTip": "C:\\Users\\theha\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Items\\Accessories\\ExampleBoots.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Desktop\\Other Mod Sources\\ExampleMod\\Content\\Items\\Accessories\\ExampleBoots.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAMwB0AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T20:28:54.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "MDGlobalItem.cs",
               "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\Items\\MDGlobalItem.cs",
               "RelativeDocumentMoniker": "Common\\Globals\\Items\\MDGlobalItem.cs",
               "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Common\\Globals\\Items\\MDGlobalItem.cs",
               "RelativeToolTip": "Common\\Globals\\Items\\MDGlobalItem.cs",
-              "ViewState": "AgIAAL0AAAAAAAAAAAA5wNIAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAIwNUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T20:08:17.214Z",
+              "WhenOpened": "2026-11-24T15:09:35.358Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "en-US_Mods.MultidimensionMod.MiscText.hjson",
               "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.MiscText.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US_Mods.MultidimensionMod.MiscText.hjson",
               "ToolTip": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.MiscText.hjson",
               "RelativeToolTip": "Localization\\en-US_Mods.MultidimensionMod.MiscText.hjson",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAAIsAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-11-17T03:18:46.952Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "en-US_Mods.MultidimensionMod.Bestiary.hjson",
               "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.Bestiary.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US_Mods.MultidimensionMod.Bestiary.hjson",
@@ -203,12 +153,11 @@
               "RelativeToolTip": "Localization\\en-US_Mods.MultidimensionMod.Bestiary.hjson",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAACdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-11-18T00:06:14.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-18T00:06:14.138Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "en-US_Mods.MultidimensionMod.Items.hjson",
               "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.Items.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US_Mods.MultidimensionMod.Items.hjson",
@@ -216,12 +165,11 @@
               "RelativeToolTip": "Localization\\en-US_Mods.MultidimensionMod.Items.hjson",
               "ViewState": "AgIAAHMTAAAAAAAAAAAAAIoTAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-11-08T20:09:20.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T20:09:20.627Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
               "Title": "en-US_Mods.MultidimensionMod.NPCs.hjson",
               "DocumentMoniker": "C:\\Users\\theha\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MultidimensionMod\\Localization\\en-US_Mods.MultidimensionMod.NPCs.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US_Mods.MultidimensionMod.NPCs.hjson",
@@ -229,8 +177,7 @@
               "RelativeToolTip": "Localization\\en-US_Mods.MultidimensionMod.NPCs.hjson",
               "ViewState": "AgIAAJkBAAAAAAAAAAAkwLYBAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-11-17T02:41:07.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-17T02:41:07.794Z"
             }
           ]
         }

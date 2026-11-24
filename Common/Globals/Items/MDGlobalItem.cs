@@ -89,7 +89,7 @@ namespace MultidimensionMod.Common.Globals.Items
 			{
 				item.UseSound = SoundID.Item103;
 			}
-			if (item.type == ItemID.Handgun) //Nerfs Handgun as it was re-tiered
+			if (item.type == ItemID.Handgun && ModContent.GetInstance<MDConfig>().ReTierHandgun) //Nerfs Handgun as it was re-tiered
 			{
 				item.damage = 19;
 				item.useTime = 20;
@@ -202,13 +202,16 @@ namespace MultidimensionMod.Common.Globals.Items
 
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
-            if (item.type == ItemID.HellfireTreads)
+            if (ModContent.GetInstance<MDConfig>().BootAccessoryAdditions)
             {
-                player.GetModPlayer<MDPlayer>().HellfireAdd = true;
-            }
-            if (item.type == ItemID.FairyBoots)
-            {
-                player.GetModPlayer<MDPlayer>().FairyAdd = true;
+                if (item.type == ItemID.HellfireTreads)
+                {
+                    player.GetModPlayer<MDPlayer>().HellfireAdd = true;
+                }
+                if (item.type == ItemID.FairyBoots)
+                {
+                    player.GetModPlayer<MDPlayer>().FairyAdd = true;
+                }
             }
         }
 

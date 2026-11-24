@@ -149,6 +149,21 @@ Mods: {
 					Label: Vanilla Bestiary Rewrite
 					Tooltip: Rewrites various vanilla Bestiary entries to fit into Awakened Light lore.
 				}
+
+				ReTierHandgun: {
+					Label: Re-Tier Handgun
+					Tooltip: Re-Tiers the Handgun to the Arms Dealer's shop and puts anmother weapon in its place inside locked gold chests.
+				}
+
+				BootAccessoryAdditions: {
+					Label: Boot Accessory Additions
+					Tooltip: Gives new effects to Hellfire Treads, Fairy Boots, Flurry Boots and Sailfish Boots.
+				}
+
+				NewItemRecipes: {
+					Label: New Item Recipes
+					Tooltip: Adds new recipes for various vanilla items.
+				}
 			}
 
 			Headers: {
@@ -158,6 +173,6 @@ Mods: {
 			}
 		}
 
-		BossChecklistIntegration.NightofMadness.EntryName: Nightof Madness
+		BossChecklistIntegration.NightofMadness.EntryName: Night of Madness
 	}
 }

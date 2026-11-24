@@ -17,6 +17,7 @@ SoulSynchText: Soul Synchronization
 PlaceSoultext: If you got a powerful soul with you, show it to me. I'm just as curious as you are.
 SynchDone: Synched
 SynchStart: Let's go
+NoHandgunReTier: With Handgun re-tier config disabled
 
 DeathMessages: {
 	Socks: "{0} died from the pain of wearing wet socks."

@@ -26,10 +26,13 @@ namespace MultidimensionMod
         {
             if (shop.NpcType == NPCID.ArmsDealer)
             {
-                shop.Add(new Item(ItemID.Handgun)
+                if (ModContent.GetInstance<MDConfig>().ReTierHandgun)
                 {
-                    shopCustomPrice = Item.buyPrice(0, 10, 0, 0)
-                }, Condition.DownedEowOrBoc);
+                    shop.Add(new Item(ItemID.Handgun)
+                    {
+                        shopCustomPrice = Item.buyPrice(0, 10, 0, 0)
+                    }, Condition.DownedEowOrBoc);
+                }
             }
             if (shop.NpcType == NPCID.SkeletonMerchant)
             {
