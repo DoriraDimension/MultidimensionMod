@@ -18,6 +18,7 @@ PlaceSoultext: If you got a powerful soul with you, show it to me. I'm just as c
 SynchDone: Synched
 SynchStart: Let's go
 NoHandgunReTier: With Handgun re-tier config disabled
+EnabledBootsCondition: With boot accessory additions enabled
 
 DeathMessages: {
 	Socks: "{0} died from the pain of wearing wet socks."
@@ -140,6 +141,8 @@ VanillaTooltipEdits: {
 		Running super fast into a double jump shoots fairy dust downwards
 		Fairy dust inflicts Sparkly Lungs, dealing damage over time
 		'''
+	FlurryBootsTip: The wearer can run even faster on snow
+	SailfishBootsTip: The wearer can run and fall even faster underwater
 	BlinkrootTip:
 		'''
 		A cave dwelling plant that glows gently in the darkness

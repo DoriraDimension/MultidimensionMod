@@ -5007,3 +5007,13 @@ TorchSoul: {
 		ahhhhhhhhhhhhhhhhhhh  godlore
 		'''
 }
+
+TrueHermesBoots: {
+	DisplayName: True Hermes Boots
+	Tooltip:
+		'''
+		Allows flight and slow fall
+		The wearer can run super fast and even faster on snow, sand and underwater
+		Fall faster in water
+		'''
+}

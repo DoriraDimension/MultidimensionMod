@@ -212,6 +212,14 @@ namespace MultidimensionMod.Common.Globals.Items
                 {
                     player.GetModPlayer<MDPlayer>().FairyAdd = true;
                 }
+                if (item.type == ItemID.FlurryBoots)
+                {
+                    player.GetModPlayer<MDPlayer>().FlurryAdd = true;
+                }
+                if (item.type == ItemID.SailfishBoots)
+                {
+                    player.GetModPlayer<MDPlayer>().SailfishAdd = true;
+                }
             }
         }
 
@@ -319,7 +327,7 @@ namespace MultidimensionMod.Common.Globals.Items
                 };
                 tooltips.Add(line);
             }
-            if (item.type == ItemID.HellfireTreads) //Add tooltip that mentions its newly added effect
+            if (item.type == ItemID.HellfireTreads && ModContent.GetInstance<MDConfig>().BootAccessoryAdditions) //Add tooltip that mentions its newly added effect
             {
                 tooltips.RemoveAll(TooltipLine => TooltipLine.Name.Equals("Tooltip0"));
                 TooltipLine line = new(Mod, "HellfireTreadsTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.HellfireTreadsTip"))
@@ -328,10 +336,28 @@ namespace MultidimensionMod.Common.Globals.Items
                 };
                 tooltips.Add(line);
             }
-            if (item.type == ItemID.FairyBoots) //Add tooltip that mentions its newly added effect
+            if (item.type == ItemID.FairyBoots && ModContent.GetInstance<MDConfig>().BootAccessoryAdditions) //Add tooltip that mentions its newly added effect
             {
                 tooltips.RemoveAll(TooltipLine => TooltipLine.Name.Equals("Tooltip0"));
                 TooltipLine line = new(Mod, "FairyBootsTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.FairyBootsTip"))
+                {
+                    OverrideColor = Color.White
+                };
+                tooltips.Add(line);
+            }
+            if (item.type == ItemID.FlurryBoots && ModContent.GetInstance<MDConfig>().BootAccessoryAdditions) //Add tooltip that mentions its newly added effect
+            {
+                tooltips.RemoveAll(TooltipLine => TooltipLine.Name.Equals("Tooltip0"));
+                TooltipLine line = new(Mod, "FlurryBootsTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.FlurryBootsTip"))
+                {
+                    OverrideColor = Color.White
+                };
+                tooltips.Add(line);
+            }
+            if (item.type == ItemID.SailfishBoots && ModContent.GetInstance<MDConfig>().BootAccessoryAdditions) //Add tooltip that mentions its newly added effect
+            {
+                tooltips.RemoveAll(TooltipLine => TooltipLine.Name.Equals("Tooltip0"));
+                TooltipLine line = new(Mod, "SailfishBootsTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.SailfishBootsTip"))
                 {
                     OverrideColor = Color.White
                 };

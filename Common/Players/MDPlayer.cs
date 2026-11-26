@@ -149,6 +149,8 @@ namespace MultidimensionMod.Common.Players
         public bool WasRocketFlying = false;
         public bool FairyAdd = false;
         public bool WasFastRunning = false;
+        public bool FlurryAdd = false;
+        public bool SailfishAdd = true;
 
         public override void ResetEffects()
         {
@@ -208,6 +210,8 @@ namespace MultidimensionMod.Common.Players
             CrystalBoost = false;
             HellfireAdd = false;
             FairyAdd = false;
+            FlurryAdd = false;
+            SailfishAdd = false;
         }
         public override void UpdateDead()
         {
@@ -1118,11 +1122,25 @@ namespace MultidimensionMod.Common.Players
                     DrakeMeadTicker = 0f;
                 }
             }
+            if (Player.wet && SailfishAdd)
+            {
+                Player.maxFallSpeed = 8f;
+                Player.accRunSpeed *= 1.50f;
+            }
+            if (FlurryAdd)
+            {
+                Tile? floorTile = Player.GetFloorTile((int)(Player.Center.X / 16f), (int)(Player.Bottom.Y / 16f));
+                if (floorTile != null && floorTile.Value.TileType == TileID.SnowBlock)
+                {
+                    Player.accRunSpeed *= 1.75f;
+                    Player.runAcceleration *= 1.75f;
+                }
+            }
         }
 
         public override void OnExtraJumpStarted(ExtraJump jump, ref bool playSound)
         {
-            Main.NewText($"FairyAdd: {FairyAdd} | WasFastRunning: {WasFastRunning}");
+            //Spawn a fairy dust cloud when going into a double jump out of a fast run
             if (FairyAdd && WasFastRunning)
             {
                 Projectile.NewProjectile(Player.GetSource_FromThis(), Player.Center, new Vector2(0, 3), ModContent.ProjectileType<FairyDustCloud>(), 0, 0f, Player.whoAmI);
@@ -1207,6 +1225,7 @@ namespace MultidimensionMod.Common.Players
 
         public override void ModifyDrawInfo(ref PlayerDrawSet drawInfo)
         {
+            //Change player eye color depending on eye accessory worn
             if (EyesShouldChange)
             {
                 if (HunterEye)
