@@ -78,8 +78,8 @@ DesertNecklace: {
 		'''
 		Increases all damage and crit chance by 4% when in the Desert.
 		Hitting enemies with magic projectiles accumulates soulflame
-		Hitting enemies has a 1 second cooldown
-		When soulflame is at maximum capacity the next magic hit will be 100% stronger and costs no mana
+		Accumulation has a 1 second cooldown
+		When soulflame is at maximum capacity the next magic hit will be 100% stronger and cost no mana
 		'''
 	Lore:
 		'''
@@ -3001,8 +3001,8 @@ ToadLeg: {
 		The severed leg of a Truffle Toad, now freed from its restraints,
 		it grants a powerful leap
 		Double tap up to leap
-		You cannot do another leap for 30 seconds
-		Negates fall damage
+		You cannot do another leap for 10 seconds
+		Increases fall resistance
 		'''
 }
 
@@ -3954,7 +3954,7 @@ ImpactTreads: {
 	Tooltip:
 		'''
 		Allows flight, negates fall damage and grants immunity to fire blocks
-		Increases fall speed and maximum fall speed by 15%
+		Increases fall speed and maximum fall speed by 60%
 		Increases defense by 6 while falling fast
 		Falling fast enough and hitting the ground will create a short lived shockwave
 		'''
@@ -5015,5 +5015,28 @@ TrueHermesBoots: {
 		Allows flight and slow fall
 		The wearer can run super fast and even faster on snow, sand and underwater
 		Fall faster in water
+		'''
+}
+
+FrocketSlammer: {
+	DisplayName: Frocket Slammer
+	Tooltip:
+		'''
+		Allows flight, negates fall damage and grants immunity to fire blocks
+		Grants a powerful leap when double tapping up that has a 10 seconds cooldown
+		Increases fall speed and maximum fall speed by 60%
+		Increases defense by 6 while falling fast
+		Falling fast enough and hitting the ground will create a short lived spore shockwave
+		'''
+}
+
+GlowingAmphibianBoots: {
+	DisplayName: Glowing Amphibian Boots
+	Tooltip:
+		'''
+		Increases jump speed and allows auto-jump
+		Increases fall resistance
+		The wearer can run and fall even faster underwater
+		Grants a powerful leap when double tapping up that has a 10 seconds cooldown
 		'''
 }

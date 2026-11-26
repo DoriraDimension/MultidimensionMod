@@ -20,13 +20,18 @@ namespace MultidimensionMod.Items.Accessories
             player.fireWalk = true;
             player.noFallDmg = true;
             player.rocketBoots = 2;
-            player.maxFallSpeed *= 1.3f;
-            player.GetModPlayer<MDPlayer>().impactTreads = true;
+            player.maxFallSpeed *= 1.6f;
+            player.GetModPlayer<MDPlayer>().ImpactTreads = true;
         }
 
         public override void UpdateVanity(Player player)
         {
             player.vanityRocketBoots = 1;
+        }
+
+        public override bool CanAccessoryBeEquippedWith(Item equippedItem, Item incomingItem, Player player)
+        {
+            return incomingItem.type != ModContent.ItemType<FrocketSlammer>();
         }
 
         public override void AddRecipes()

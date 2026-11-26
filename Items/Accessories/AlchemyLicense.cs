@@ -1,4 +1,4 @@
-﻿using MultidimensionMod.Common.Players;
+﻿/*using MultidimensionMod.Common.Players;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -20,4 +20,4 @@ namespace MultidimensionMod.Items.Accessories
             player.GetModPlayer<MDPlayer>().AlchLicense = true;
         }
     }
-}
+}*/

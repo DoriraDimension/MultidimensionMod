@@ -100,8 +100,9 @@ namespace MultidimensionMod.Common.Players
         public bool chaosClaw = false;
         public bool GripMinion = false;
         public bool SkulkerShell = false;
-        public bool impactTreads = false;
-        public bool impactSpeedReached = false;
+        public bool ImpactTreads = false;
+        public bool ImpactSpeedReached = false;
+        public bool ImpactReady = false;
         public bool FogLantern = false;
         public float FogProgress = 0f;
         public float FogLanternThreshold = 0.7f;
@@ -150,7 +151,9 @@ namespace MultidimensionMod.Common.Players
         public bool FairyAdd = false;
         public bool WasFastRunning = false;
         public bool FlurryAdd = false;
-        public bool SailfishAdd = true;
+        public bool SailfishAdd = false;
+        public bool Frocket = false;
+        public bool GABoots = false;
 
         public override void ResetEffects()
         {
@@ -186,7 +189,7 @@ namespace MultidimensionMod.Common.Players
             chaosClaw = false;
             GripMinion = false;
             SkulkerShell = false;
-            impactTreads = false;
+            ImpactTreads = false;
             FogLantern = false;
             SpiderNecklace = false;
             starBless = false;
@@ -212,6 +215,8 @@ namespace MultidimensionMod.Common.Players
             FairyAdd = false;
             FlurryAdd = false;
             SailfishAdd = false;
+            Frocket = false;
+            GABoots = false;
         }
         public override void UpdateDead()
         {
@@ -225,7 +230,6 @@ namespace MultidimensionMod.Common.Players
 
         public override void UpdateEquips()
         {
-   
             if (!Symbio)
             {
                 GiveBirth = 0;
@@ -248,6 +252,10 @@ namespace MultidimensionMod.Common.Players
                     Player.AddBuff(ModContent.BuffType<IndigoInjection>(), 360);
                     Player.AddBuff(ModContent.BuffType<InjectionCooldown>(), 12360);
                 }
+            }
+            if (GABoots)
+            {
+                Player.accRunSpeed = 6f;
             }
         }
 
@@ -637,6 +645,21 @@ namespace MultidimensionMod.Common.Players
                     HellfireHeat = 0f;
                 }
                 WasRocketFlying = rocketFlying;
+            }
+            bool onGround = Collision.SolidCollision(Player.position + new Vector2(0, Player.height), Player.width, 2, true);
+            if (ImpactTreads && ImpactReady && onGround)
+            {
+                int damage = 40;
+                SoundEngine.PlaySound(SoundID.NPCDeath14, Player.position);
+                Projectile.NewProjectile(Player.GetSource_Accessory(new Item(ModContent.ItemType<ImpactTreads>())), Player.Center.X, Player.Center.Y + 10, 0f, 0f, ModContent.ProjectileType<ImpactTreadsImpact>(), damage, 0f, Player.whoAmI);
+                ImpactReady = false;
+            }
+            if (Frocket && ImpactReady && onGround)
+            {
+                int damage = 70;
+                SoundEngine.PlaySound(SoundID.NPCDeath14, Player.position);
+                Projectile.NewProjectile(Player.GetSource_Accessory(new Item(ModContent.ItemType<FrocketSlammer>())), Player.Center.X, Player.Center.Y + 10, 0f, 0f, ModContent.ProjectileType<FrocketSlammerImpact>(), damage, 0f, Player.whoAmI);
+                ImpactReady = false;
             }
         }
 
@@ -1033,22 +1056,17 @@ namespace MultidimensionMod.Common.Players
                     EggBirth = 0;
                 }
             }
-            if (impactTreads)
+            if (ImpactTreads)
             {
-                Player.maxFallSpeed *= (float)1.15;
-                //Take away effects and projectile spawn ability when going slower than desired, when on a mount, using a hook or being pulled by the Wall of Flesh's tongue
-                if (Player.pulley || Player.mount.Active || Player.grappling[0] != -1 || Player.tongued || Player.velocity.Y < 14.5f)
-                {
-                    impactSpeedReached = false;
-                }
                 if (Player.velocity.Y >= 14.5f)
                 {
-                    impactSpeedReached = true;
+                    ImpactSpeedReached = true;
+                    ImpactReady = true;
                     Player.statDefense += 6;
                 }
                 //Start spawning flame dust and emit light upon reaching desired speed.
                 //Enable ability to spawn impact projectile as well.
-                if (impactSpeedReached)
+                if (ImpactSpeedReached)
                 {
                     if (Main.rand.Next(4) < 3)
                     {
@@ -1063,12 +1081,40 @@ namespace MultidimensionMod.Common.Players
                         }
                     }
                     Lighting.AddLight(Player.position, 0.3f, 0.2f, 0.2f);
-                    if (Player.oldVelocity.Y == Player.velocity.Y)
+                    if (Player.pulley || Player.mount.Active || Player.grappling[0] != -1 || Player.tongued || (Player.velocity.Y < 14.5f && Player.velocity.Y != 0f))
                     {
-                        int damage = 40;
-                        SoundEngine.PlaySound(SoundID.NPCDeath14, Player.position);
-                        Projectile.NewProjectile(Player.GetSource_Accessory(new Item(ModContent.ItemType<ImpactTreads>())), Player.Center.X, Player.Center.Y + 10, 0, 0, ModContent.ProjectileType<ImpactTreadsImpact>(), damage, 0f, Player.whoAmI);
-                        impactSpeedReached = false;
+                        ImpactSpeedReached = false;
+                        ImpactReady = false;
+                    }
+                }
+            }
+            if (Frocket)
+            {
+                if (Player.velocity.Y >= 14.5f)
+                {
+                    ImpactSpeedReached = true;
+                    ImpactReady = true;
+                    Player.statDefense += 6;
+                }
+                if (ImpactSpeedReached)
+                {
+                    if (Main.rand.Next(4) < 3)
+                    {
+                        int dust = Dust.NewDust(Player.position - new Vector2(2f, 2f), Player.width + 4, Player.height + 4, DustID.GlowingMushroom, Player.velocity.X * 0.4f, Player.velocity.Y * 0.4f, 100, default(Color), 3.5f);
+                        Main.dust[dust].noGravity = true;
+                        Main.dust[dust].velocity *= 1.8f;
+                        Main.dust[dust].velocity.Y -= 0.5f;
+                        if (Main.rand.NextBool(4))
+                        {
+                            Main.dust[dust].noGravity = false;
+                            Main.dust[dust].scale *= 0.5f;
+                        }
+                    }
+                    Lighting.AddLight(Player.position, 0.1f, 0.2f, 0.3f);
+                    if (Player.pulley || Player.mount.Active || Player.grappling[0] != -1 || Player.tongued || (Player.velocity.Y < 14.5f && Player.velocity.Y != 0f))
+                    {
+                        ImpactSpeedReached = false;
+                        ImpactReady = false;
                     }
                 }
             }

@@ -354,7 +354,7 @@ namespace MultidimensionMod.Common.Globals.Items
                 };
                 tooltips.Add(line);
             }
-            if (item.type == ItemID.SailfishBoots && ModContent.GetInstance<MDConfig>().BootAccessoryAdditions) //Add tooltip that mentions its newly added effect
+            if ((item.type == ItemID.SailfishBoots || item.type ==  ItemID.AmphibianBoots) && ModContent.GetInstance<MDConfig>().BootAccessoryAdditions) //Add tooltip that mentions its newly added effect
             {
                 tooltips.RemoveAll(TooltipLine => TooltipLine.Name.Equals("Tooltip0"));
                 TooltipLine line = new(Mod, "SailfishBootsTip", Language.GetTextValue("Mods.MultidimensionMod.MiscText.VanillaTooltipEdits.SailfishBootsTip"))
