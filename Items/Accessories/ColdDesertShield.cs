@@ -30,13 +30,7 @@ namespace MultidimensionMod.Items.Accessories
 			if (player.ZoneSnow || player.ZoneDesert)
 			{
 				player.GetDamage(DamageClass.Generic) += 0.04f;
-				player.GetCritChance(DamageClass.Generic) += 4;
 				player.statDefense += 3;
-				player.endurance += 0.04f;
-            }
-			if (player.statLife <= player.statLifeMax2 * 0.5)
-			{
-				player.statDefense += 4;
             }
             player.GetModPlayer<MDPlayer>().DrakeShield = true;
             player.GetModPlayer<MDPlayer>().DesertNeck = true;

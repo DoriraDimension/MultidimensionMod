@@ -40,17 +40,14 @@ BlackRoseScarf: {
 }
 
 ColdDesertShield: {
-	DisplayName: Cold Desert Shield
+	DisplayName: Sunbird Scaleshield
 	Tooltip:
 		'''
-		Increases all damage and crit chance by 4%, increases defense by 6 and damage reduction by 4% when in the Desert or Snow biome.
-		Increases defense by 4 when under 50% life
+		Increases all damage by 4% and defense by 3 when in the Desert or Snow biome.
 		Getting hit will release frost scales that linger on the ground for a short time
-		Getting hit while mana is completely full will trigger a shockwave that scales with magic damage and ignores 20 defense
-		The initial damage depends on your maximum mana
-		All mana is lost upon triggering this effect
-		Shockwave damage gets doubled upon entering hardmode
-		The shockwave has a 5 second cooldown
+		Hitting enemies with magic projectiles accumulates soulflame
+		Accumulation has a 1 second cooldown
+		When soulflame is at maximum capacity the next magic hit will be 100% stronger and cost no mana
 		'''
 }
 
@@ -76,7 +73,7 @@ DesertNecklace: {
 	DisplayName: Necklace of the Spirit Sun
 	Tooltip:
 		'''
-		Increases all damage and crit chance by 4% when in the Desert.
+		Increases all damage by 4% when in the Desert.
 		Hitting enemies with magic projectiles accumulates soulflame
 		Accumulation has a 1 second cooldown
 		When soulflame is at maximum capacity the next magic hit will be 100% stronger and cost no mana
@@ -104,7 +101,7 @@ DrakescaleShield: {
 	DisplayName: Drakescale Shield
 	Tooltip:
 		'''
-		Increases defense by 4 and damage reduction by 4% when in the Snow biome
+		Increases defense by 4 when in the Snow biome
 		Getting hit will release frost scales that linger on the ground for a short time
 		'''
 	Lore:
@@ -202,7 +199,7 @@ GlowingFungiScarf: {
 		You emit blue light
 		You generate a pulsing field of light that adds 3 tag damage to enemies and makes them glow
 		You periodically release mushroom hatchlings
-		Equipping the [i:MultidimensionMod/HealthyCap] grants the hatchlings weak lifesteal
+		Equipping the [i:MultidimensionMod/HealthyCap] Healthy Cap or any of its upgrades grants the hatchlings weak lifesteal
 		'''
 }
 
@@ -5038,5 +5035,15 @@ GlowingAmphibianBoots: {
 		Increases fall resistance
 		The wearer can run and fall even faster underwater
 		Grants a powerful leap when double tapping up that has a 10 seconds cooldown
+		'''
+}
+
+HoneyMushroom: {
+	DisplayName: Honey Mushroom
+	Tooltip:
+	    '''
+		Increases the amount of health healed by mushrooms to 100
+		Grants the honey buff while not moving and not using weapons
+		You can walk on honey blocks and swim through honey without being slowed down
 		'''
 }

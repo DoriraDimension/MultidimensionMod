@@ -154,6 +154,7 @@ namespace MultidimensionMod.Common.Players
         public bool SailfishAdd = false;
         public bool Frocket = false;
         public bool GABoots = false;
+        public bool HoneyHealthy = false;
 
         public override void ResetEffects()
         {
@@ -217,6 +218,7 @@ namespace MultidimensionMod.Common.Players
             SailfishAdd = false;
             Frocket = false;
             GABoots = false;
+            HoneyHealthy = false;
         }
         public override void UpdateDead()
         {
@@ -1470,11 +1472,15 @@ namespace MultidimensionMod.Common.Players
 
         public override void GetHealLife(Item item, bool quickHeal, ref int healValue)
         {
-            if (item.type == ItemID.Mushroom && Player.GetModPlayer<MDPlayer>().Healthy)
+            if (item.type == ItemID.Mushroom && Healthy)
             {
                 healValue = 40; //Makes Mushrooms heal more HP when the Healthy Cap accessory is equipped
             }
-            else if (item.type == ItemID.Mushroom && !Player.GetModPlayer<MDPlayer>().Healthy)
+            else if (item.type == ItemID.Mushroom && HoneyHealthy)
+            {
+                healValue = 100; //Makes Mushrooms heal more HP when the Honey Mushroom accessory is equipped
+            }
+            else
             {
                 healValue = 15;
             }
